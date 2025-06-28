@@ -1,16 +1,9 @@
 # To-Do list
 * Add all portraits... sighs...
-	- Susie's covered-eye portraits
-	- ~~Ralsei~~
-	- ~~Noelle~~
-	- Berdly
-	- ~~Lancer~~
-	- ~~Queen~~
-	- King
-	- ~~Toriel~~ (have to make gifs for her regular and church clothes)
-	- Asgore
-	- Tenna? i forget if this idiot had separate sprites
-	- Girl who else. My sieve memory
+	* Asgore
+	* Ralsei's ch4 bloodstained sprites [fond smile]
+		* The bloodstains are stored separately from the actual face sprites.. gonna have to figure out which versions need bloodying... might be better to just add alt versions of those than make alt versions of Every Single Portrait
+	* I think I got everyone else...?
 * Clean up home page once we have an idea of how to present the damn thing lmao
 * Add credits page? Or add a credits section to each page.
 
