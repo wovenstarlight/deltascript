@@ -311,3 +311,62 @@ class DialogueOptionPanel extends HTMLElement {
 }
 customElements.define("d-option-panel", DialogueOptionPanel);
 // #endregion
+
+
+
+// #region Setting up page functionality
+/** Sets compact mode for all dialogue elements.
+ * @param {boolean} compact `true` to enable compact mode; `false` otherwise.
+ */
+function setAllCompact(compact) {
+	compact ? document.body.classList.add("compact") : document.body.classList.remove("compact");
+	document.querySelectorAll("d-box, d-choices").forEach(box => {
+		box.compact = compact;
+	});
+}
+
+/** Adding all event handlers to page elements. */
+function setUp() {
+	// Menu
+	document.getElementById("openmenu").addEventListener("click", () => {
+		document.getElementById("menucontents").toggleAttribute("hidden");
+	})
+
+	// Compact mode
+	document.getElementById("toggle-compact").addEventListener("change", e => {
+		setAllCompact(e.currentTarget.checked);
+		localStorage.setItem("compactMode", e.currentTarget.checked ? "on" : "");
+	});
+	// Autofill on initial load
+	if (localStorage.getItem("compactMode")?.length) {
+		// Compact mode has been set to ON
+		setAllCompact(true);
+		document.getElementById("toggle-compact").checked = true;
+	}
+
+	// Dyslexic-friendly font
+	document.getElementById("toggle-opendyslexic").addEventListener("change", e => {
+		if (e.currentTarget.checked) document.body.classList.add("dyslexic");
+		else document.body.classList.remove("dyslexic");
+
+		localStorage.setItem("dyslexicMode", e.currentTarget.checked ? "on" : "");
+	});
+	// Autofill on initial load
+	if (localStorage.getItem("dyslexicMode")?.length) {
+		// Dyslexic mode has been set to ON
+		document.body.classList.add("dyslexic");
+	}
+
+	document.getElementById("open-choices").addEventListener("click", () => {
+		document.querySelectorAll("d-choices").forEach(menu => menu.forced = true);
+		document.querySelectorAll("d-option-panel").forEach(panel => {
+			panel.collapsed = false;
+			panel.forced = true;
+		});
+	})
+}
+
+// Run setup once page elements have loaded
+if (document.readyState !== 'loading') setUp();
+else document.addEventListener('DOMContentLoaded', setUp);
+// #endregion
