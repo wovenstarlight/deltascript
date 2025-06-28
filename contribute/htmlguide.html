@@ -1,0 +1,125 @@
+---
+title: HTML Guide
+---
+<section class="d-section" id="elements">
+	<table id="guide">
+		<thead>
+			<tr>
+				<th>Element</th>
+				<th>Description</th>
+				<th>Attributes</th>
+				<th>Children</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>d-box</td>
+				<td>Text box</td>
+				<td><ul>
+					<li><code>theme = light | dark</code>: Changes the border. If not provided, defaults to <code>light</code>.</li>
+					<li>If small dialogue, then optionally <code>place</code>; may have one or more of the following values, separated by spaces
+						<ul>
+							<li><code>right</code> (default), <code>left</code>, or <code>center-x</code></li>
+							<li><code>bottom</code> (default), <code>top</code>, or <code>center-y</code></li>
+							<li><code>center</code> (shorthand for <code>center-x center-y</code>)</li>
+						</ul>
+					</li>
+				</ul></td>
+				<td><ul>
+					<li>If dialogue: either <code>d-sprite</code> or <code>d-speaker</code></li>
+					<li>At least 1 <code>d-text</code></li>
+					<li>If including small dialogue: <code>d-box</code></li>
+				</ul></td>
+			</tr>
+			<tr>
+				<td>d-speaker</td>
+				<td>Speaker label</td>
+				<td>None</td>
+				<td>Plaintext label (e.g. <code>Susie</code>)</td>
+			</tr>
+			<tr>
+				<td>d-sprite</td>
+				<td>Speaker label with sprite</td>
+				<td><ul>
+					<li><code>speaker</code>: Plaintext label</li>
+					<li><code>variant</code>: If speaker has multiple portrait sets, path to specific portrait set</li>
+					<li><code>emotion</code>: The code for this specific portrait</li>
+				</ul></td>
+				<td>
+					None
+				</td>
+			</tr>
+			<tr>
+				<td>d-text</td>
+				<td>A line of text</td>
+				<td><ul>
+					<li><code>asterisk</code>: To include a <code>*</code> before the text</li>
+				</ul></td>
+				<td>Plaintext</td>
+			</tr>
+			<tr>
+				<td>d-choices</td>
+				<td>Choice menu</td>
+				<td><ul>
+					<li><code>theme = light | dark</code>: Changes the border. See <code>d-box</code> above for more.</li>
+					<li><code>class = shift-right | shift-left</code>: For offsetting the heart when the L/R options are too long</li>
+					<li><code>offset</code>: The amount to offset the heart by, in <code>%</code></li>
+				</ul></td>
+				<td>
+					<code>d-option</code>
+				</td>
+			</tr>
+			<tr>
+				<td>d-option</td>
+				<td>Option for choice menu</td>
+				<td><ul>
+					<li><code>index = 0 | 1 | 2 | 3</code>: Placement of option (corresponds to left/right/top/bottom)</li>
+					<li><code>text</code>: Option text. Replace instances of <code>#</code> with the following:
+					<ul>
+						<li><code>\s</code> for a linebreak between words</li>
+						<li><code>\b</code> for a linebreak within a word</li>
+						<li><code>\h</code> to hide the next character</li>
+					</ul></li>
+					<li><code>conditional</code>: For when an option only appears under specific conditions</li>
+				</ul></td>
+				<td>None</td>
+			</tr>
+			<tr>
+				<td>d-option-panel</td>
+				<td>Output of a certain choice</td>
+				<td><ul>
+					<li><code>index = 0 | 1 | 2 | 3</code>: Corresponding option's index</li>
+					<li><code>theme = light | dark</code>: Changes the border. See <code>d-box</code> above for more.</li>
+				</ul></td>
+				<td>
+					Pretty much anything. <code>d-box</code>, <code>d-choices</code>, <code>d-option-panel</code>, <code>p.note</code>...
+				</td>
+			</tr>
+			<tr>
+				<td><code>&lt;p class="note"&gt;</code> (a.k.a. <code>p.note</code>)</td>
+				<td>Annotation</td>
+				<td>None</td>
+				<td>Text</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+
+<style>
+	#guide {
+		border-collapse: collapse;
+		th, td {
+			padding: 0.2em 0.5em;
+			border: thin solid;
+		}
+		td:first-child { font-family: monospace }
+		code {
+			border: thin solid rgb(from currentColor r g b / 0.3);
+			border-radius: 0.2em;
+			background-color: var(--black);
+			padding: 0.1em 0.2em;
+			margin-inline: 0.2em;
+			display: inline-block;
+		}
+	}
+</style>

@@ -1,0 +1,458 @@
+---
+title: Examples
+---
+<section class="d-section" id="basic">
+	<h2>Standard dialogue</h2>
+
+	{% highlight html -%}
+<d-box theme="light">
+	<d-sprite speaker="Susie" variant="eyes" emotion="2"></d-sprite>
+	<d-text asterisk>Y'know, just... committin'... crimes.</d-text>
+</d-box>
+<d-box theme="light">
+	<d-sprite speaker="Susie" variant="eyes" emotion="A"></d-sprite>
+	<d-text asterisk>Just gonna do some crimes and go to... jail.</d-text>
+</d-box>
+<d-box theme="light">
+	<d-sprite speaker="Susie" variant="eyes" emotion="H"></d-sprite>
+	<d-text asterisk>Forever.</d-text>
+</d-box>
+<d-box theme="light">
+	<d-sprite speaker="Susie" variant="eyes" emotion="5"></d-sprite>
+	<d-text asterisk>It sucks.</d-text>
+</d-box>
+	{%- endhighlight %}
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="eyes" emotion="2"></d-sprite>
+		<d-text asterisk>Y'know, just... committin'... crimes.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="eyes" emotion="A"></d-sprite>
+		<d-text asterisk>Just gonna do some crimes and go to... jail.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="eyes" emotion="H"></d-sprite>
+		<d-text asterisk>Forever.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="eyes" emotion="5"></d-sprite>
+		<d-text asterisk>It sucks.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="special">
+	<h2>Special features</h2>
+
+	<h3>No sprites</h3>
+	
+	<h4>With speaker, but no sprite</h4>
+
+	{% highlight html -%}
+<d-box theme="dark">
+	<d-speaker>Rudinn</d-speaker>
+	<d-text asterisk>'ey boss! We're just reminiscing about fighting you!</d-text>
+</d-box>
+	{%- endhighlight %}
+
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>'ey boss! We're just reminiscing about fighting you!</d-text>
+	</d-box>
+
+	<h4>Narration (no speaker)</h4>
+
+	{% highlight html -%}
+<d-box theme="dark">
+	<d-text asterisk>You couldn't find<br /><br />your hand.</d-text>
+</d-box>
+	{%- endhighlight %}
+
+	<d-box theme="dark">
+		<d-text asterisk>You couldn't find<br /><br />your hand.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Special colors and multiple text lines</h3>
+	<p class="note">Colors include <span class="red">red</span>, <span class="blue">blue</span>, <span class="yellow">yellow</span>, <span class="green">green</span>, <span class="purple">purple</span>, <span class="maroon">maroon</span>, and <span class="orange">orange</span>.</p>
+
+	<p class="note">Note how each new asterisk-prefixed line uses a new <code>d-text</code> element!</p>
+
+	{% highlight html -%}
+<d-box theme="dark">
+	<d-sprite speaker="Ralsei" variant="hood" emotion="0"></d-sprite>
+	<d-text asterisk>Welcome.</d-text>
+	<d-text asterisk>I am the <span class="yellow">Prince</span> of this <span class="yellow">Kingdom</span>...</d-text>
+</d-box>
+	{%- endhighlight %}
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hood" emotion="0"></d-sprite>
+		<d-text asterisk>Welcome.</d-text>
+		<d-text asterisk>I am the <span class="yellow">Prince</span> of this <span class="yellow">Kingdom</span>...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>With smaller additions</h3>
+
+	{% highlight html -%}
+<d-box theme="dark">
+	<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+	<d-text asterisk>Go outside and play, Peachboy!</d-text>
+
+	<d-box>
+		<d-sprite speaker="Queen" emotion="12"></d-sprite>
+		<d-text>Peachboy Peachboy</d-text>
+	</d-box>
+</d-box>
+	{%- endhighlight %}
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Go outside and play, Peachboy!</d-text>
+
+		<d-box>
+			<d-sprite speaker="Queen" emotion="12"></d-sprite>
+			<d-text>Peachboy Peachboy</d-text>
+		</d-box>
+	</d-box>
+
+
+	{% highlight html -%}
+<d-box>
+	<d-box place="top left">
+		<d-sprite speaker="Rudy" emotion="4"></d-sprite>
+		<d-text>(Kris will sing swears.)</d-text>
+	</d-box>
+	<d-box place="center">
+		<d-sprite speaker="Noelle" emotion="17"></d-sprite>
+		<d-text>(Kris will sing swears.)</d-text>
+	</d-box>
+	<d-box>	<!-- Defaults to "bottom right" -->
+		<d-sprite speaker="Toriel" emotion="5"></d-sprite>
+		<d-text>(Kris will sing swears.)</d-text>
+	</d-box>
+</d-box>
+	{%- endhighlight %}
+
+	<d-box>
+		<d-box place="top left">
+			<d-sprite speaker="Rudy" emotion="4"></d-sprite>
+			<d-text>(Kris will sing swears.)</d-text>
+		</d-box>
+		<d-box place="center">
+			<d-sprite speaker="Noelle" emotion="17"></d-sprite>
+			<d-text>(Kris will sing swears.)</d-text>
+		</d-box>
+		<d-box>
+			<d-sprite speaker="Toriel" emotion="5"></d-sprite>
+			<d-text>(Kris will sing swears.)</d-text>
+		</d-box>
+	</d-box>
+</section>
+
+<section class="d-section" id="choices">
+	<h2>Choice menus</h2>
+
+	{% highlight html -%}
+<d-choices theme="dark">
+	<d-option index="0" text="Option 1"></d-option>
+	<d-option index="1" text="Option 2"></d-option>
+	<d-option index="2" text="Option 3" conditional></d-option>
+</d-choices>
+
+<d-option-panel index="0">
+	<d-box>
+		<d-text asterisk>Option 1's text goes here.</d-text>
+	</d-box>
+	<d-box>
+		<d-text asterisk>A <code>d-option-panel</code> can include basically anything.</d-text>
+		<d-text asterisk>Even another choice menu!</d-text>
+	</d-box>
+</d-option-panel>
+
+<d-option-panel index="1">
+	<d-box>
+		<d-text asterisk>Option 2's text goes here.</d-text>
+	</d-box>
+</d-option-panel>
+
+<d-option-panel index="2">
+	<p class="note">Available upon [insert condition here].</p>
+	
+	<d-box>
+		<d-text>The asterisk up there next to "Option 3" means it's available only under certain conditions.</d-text>
+	</d-box>
+</d-option-panel>
+	{%- endhighlight %}
+
+	<d-choices theme="dark">
+		<d-option index="0" text="Option 1"></d-option>
+		<d-option index="1" text="Option 2"></d-option>
+		<d-option index="2" text="Option 3" conditional></d-option>
+	</d-choices>
+
+	<d-option-panel index="0">
+		<d-box>
+			<d-text asterisk>Option 1's text goes here.</d-text>
+		</d-box>
+		<d-box>
+			<d-text asterisk>A <code>d-option-panel</code> can include basically anything.</d-text>
+			<d-text asterisk>Even another choice menu!</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<d-option-panel index="1">
+		<d-box>
+			<d-text asterisk>Option 2's text goes here.</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<d-option-panel index="2">
+		<p class="note">Available upon [insert condition here].</p>
+		
+		<d-box>
+			<d-text>The asterisk up there next to "Option 3" means it's available only under certain conditions.</d-text>
+		</d-box>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="full">
+	<h2>Talking to Rudy</h2>
+	<p class="note">(A full-length example.)</p>
+
+	<h3>Greeting</h3>
+	<h4>First interaction</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="2"></d-sprite>
+		<d-text asterisk>Well jingle my goshdarn bells! Looks like Krismas came early!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="1"></d-sprite>
+		<d-text asterisk>Alright, Kris. Just gimme the straight shot.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="2"></d-sprite>
+		<d-text asterisk>Why you here?</d-text>
+		<d-text asterisk>Did your mom make you come here?</d-text>
+	</d-box>
+	<d-choices theme="light">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0">
+		<d-box>
+			<d-sprite speaker="Rudy" emotion="2"></d-sprite>
+			<d-text asterisk>Hahaha, that's what I thought!</d-text>
+			<d-text asterisk>She's a PEACH, huh...?</d-text>
+		</d-box>
+		<d-box>
+			<d-sprite speaker="Rudy" emotion="7"></d-sprite>
+			<d-text asterisk>Fuzzy n' sweet on the outside, a total NUT on the inside!</d-text>
+		</d-box>
+		<d-box>
+			<d-sprite speaker="Rudy" emotion="0"></d-sprite>
+			<d-text asterisk>Oh, your dad? Yeah, he's a real fruit himself too.</d-text>
+		</d-box>
+		<d-box>
+			<d-sprite speaker="Rudy" emotion="7"></d-sprite>
+			<d-text asterisk>Which one? I dunno, probably a hairy one... like a kiwi.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1">
+		<d-box>
+			<d-sprite speaker="Rudy" emotion="1"></d-sprite>
+			<d-text asterisk>Really?</d-text>
+			<d-text asterisk>You've grown up a lot, Kris.</d-text>
+		</d-box>
+		<d-box>
+			<d-sprite speaker="Rudy" emotion="4"></d-sprite>
+			<d-text asterisk>I'm proud of you.</d-text>
+		</d-box>
+		<d-box>
+			<d-sprite speaker="Rudy" emotion="5"></d-sprite>
+			<d-text asterisk>Wasn't too long ago you were just the creepy kid next door.</d-text>
+		</d-box>
+		<d-box>
+			<d-sprite speaker="Rudy" emotion="7"></d-sprite>
+			<d-text asterisk>Now you're the creepy kid right in front of me!</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-box>
+		<d-sprite speaker="Rudy" emotion="7"></d-sprite>
+		<d-text asterisk>Hahahaha!!!</d-text>
+	</d-box>
+	<d-box>
+		<d-sprite speaker="Rudy" emotion="0"></d-sprite>
+		<d-text asterisk>Okay, okay, seriously, you wanna chat or something?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h4>Subsequent interactions</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="0"></d-sprite>
+		<d-text asterisk>Hey, Kris, you wanna chat or something?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="2"></d-sprite>
+		<d-text asterisk>Don't worry, there's no way you can bore me right now!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Questions</h3>
+	<d-choices theme="light">
+		<d-option index="0" text="Noelle"></d-option>
+		<d-option index="1" text="Family"></d-option>
+		<d-option index="2" text="Illness"></d-option>
+		<d-option index="3" text="Nothing"></d-option>
+	</d-choices>
+
+	<d-option-panel index="0">
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="4"></d-sprite>
+			<d-text asterisk>She's a sweetheart, isn't she, Kris?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="0"></d-sprite>
+			<d-text asterisk>Smart, kind, sweet... couldn't ask for a better daughter.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="5"></d-sprite>
+			<d-text asterisk>I just wish she wasn't so... defenseless.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="1"></d-sprite>
+			<d-text asterisk>Scary movies, bugs, Santa Claus... everything scares her.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="5"></d-sprite>
+			<d-text asterisk>And when it happens, she freezes like a deer in headlights.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="0"></d-sprite>
+			<d-text asterisk>Remember she used to even be afraid of humans under the bed?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="7"></d-sprite>
+			<d-text asterisk>(Kris, it was NOT nice of you to hide under there, by the way!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="1"></d-sprite>
+			<d-text asterisk>... anyhow, that's what's tough about being in here, Kris.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="4"></d-sprite>
+			<d-text asterisk>Not what's going on with me.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="5"></d-sprite>
+			<d-text asterisk>Just that... in the meantime, I can't be there to protect her.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="3"></d-sprite>
+			<d-text asterisk>Keep an eye out for her, OK?</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1">
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="3"></d-sprite>
+			<d-text asterisk>Kris, even if we've grown apart, we still love your family.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="4"></d-sprite>
+			<d-text asterisk>After all, me and Asgore were college pals, right?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="1"></d-sprite>
+			<d-text asterisk>Oh hey... now that Asriel's off to college.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="2"></d-sprite>
+			<d-text asterisk>Y'think he's doing any CRAZY parties, like me and your dad?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="3"></d-sprite>
+			<d-text asterisk>Heh, I'm just pulling your leg. Your dad was no party animal.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="7"></d-sprite>
+			<d-text asterisk>Your MOTHER on the other hand...! Whoo!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="4"></d-sprite>
+			<d-text asterisk>She'd alway fuss about going, but once the party started.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="7"></d-sprite>
+			<d-text asterisk>Yikes, man!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="7"></d-sprite>
+			<d-text asterisk>Once she hit me clear across the room with a key lime pie!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="2"></d-sprite>
+			<d-text asterisk>I got smashed into the snack table and toppled everything!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="7"></d-sprite>
+			<d-text asterisk>Tasty pie though. Couldn't complain.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2">
+		<d-box theme="light" asterisk>
+			<d-sprite speaker="Rudy" emotion="1"></d-sprite>
+			<d-text asterisk>... So, why am I in here...?</d-text>
+		</d-box>
+		<d-box theme="light" asterisk>
+			<d-sprite speaker="Rudy" emotion="4"></d-sprite>
+			<d-text asterisk>Well, they found some crap, so it's just some tests.</d-text>
+		</d-box>
+		<d-box theme="light" asterisk>
+			<d-sprite speaker="Rudy" emotion="3"></d-sprite>
+			<d-text asterisk>Yeah, it's no big deal. Nothing a Holiday can't handle.</d-text>
+		</d-box>
+		<d-box theme="light" asterisk>
+			<d-sprite speaker="Rudy" emotion="4"></d-sprite>
+			<d-text asterisk>I'll be outta here in a jiff, then I can go back to, I dunno...</d-text>
+		</d-box>
+		<d-box theme="light" asterisk>
+			<d-sprite speaker="Rudy" emotion="2"></d-sprite>
+			<d-text asterisk>Yelling at you for getting tangled in our light display.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="3">
+		<d-box theme="light" asterisk>
+			<d-sprite speaker="Rudy" emotion="2"></d-sprite>
+			<d-text asterisk>Then what the hell're you here for, Kris!? To gawk!?</d-text>
+		</d-box>
+		<d-box theme="light" asterisk>
+			<d-sprite speaker="Rudy" emotion="7"></d-sprite>
+			<d-text asterisk>You thought this was the zoo or something!? C'mon!</d-text>
+		</d-box>
+	</d-option-panel>
+</section>
+
+
+<style>
+figure.highlight { margin: calc(var(--border-width) + 1em) 0 }
+:is(h2, h3, h4, p) + figure.highlight { margin-block-start: 0 }
+:not(pre) > code, pre {
+	border: thin solid rgb(from var(--gray) r g b / 0.5);
+	border-radius: 0.25em;
+	background-color: var(--black);
+}
+:not(pre) > code { padding: 0 0.2em }
+pre {
+	padding: 0.5em 1em;
+	overflow-x: scroll;
+}
+.nt { color: #6eadff }
+.na { color: #7be7eb }
+.s { color: #beffa7 }
+.c { color: var(--gray) }
+</style>
