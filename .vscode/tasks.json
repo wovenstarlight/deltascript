@@ -1,0 +1,104 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Serve site",
+			"type": "shell",
+			"command": "bundle",
+			"args": [
+				"exec",
+				"jekyll",
+				"serve",
+				// {
+				// 	"value": "${input:configFiles}",
+				// 	"quoting": "escape"
+				// },
+				"${input:unpublishedFlag}",
+				"${input:incrementalFlag}",
+				"${input:liveReloadFlag}"
+			],
+			"group":{
+				"kind": "test",
+				"isDefault": true
+			}
+		},
+		// {
+		// 	"label": "Build site",
+		// 	"type": "shell",
+		// 	"command": "bundle",
+		// 	"group": {
+		// 		"kind": "build",
+		// 		"isDefault": true
+		// 	},
+		// 	"args": [
+		// 		"exec",
+		// 		"jekyll",
+		// 		"build"
+		// 	]
+		// }
+	],
+	"inputs": [
+		// {
+		// 	"type": "pickString",
+		// 	"id": "configFiles",
+		// 	"description": "Enable development features?",
+		// 	"options": [
+		// 		{
+		// 			"label": "Yes",
+		// 			"value": "--config _config.yml,_config_dev.yml"
+		// 		},
+		// 		{
+		// 			"label": "No",
+		// 			"value": ""
+		// 		}
+		// 	]
+		// },
+		{
+			"type": "pickString",
+			"id": "liveReloadFlag",
+			"description": "Reload page automatically on file save?",
+			"options": [
+				{
+					"label": "Yes",
+					"value": "--livereload"
+				},
+				{
+					"label": "No",
+					"value": ""
+				}
+			]
+		},
+		{
+			"type": "pickString",
+			"id": "unpublishedFlag",
+			"description": "Include posts and pages marked as unpublished?",
+			"options": [
+				{
+					"label": "Yes",
+					"value": "--unpublished"
+				},
+				{
+					"label": "No",
+					"value": ""
+				}
+			]
+		},
+		{
+			"type": "pickString",
+			"id": "incrementalFlag",
+			"description": "Rebuild only changed pages instead of whole site on file save?",
+			"options": [
+				{
+					"label": "Yes",
+					"value": "--incremental"
+				},
+				{
+					"label": "No",
+					"value": ""
+				}
+			]
+		}
+	]
+}
