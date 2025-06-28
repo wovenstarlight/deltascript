@@ -79,6 +79,7 @@ class DialogueSprite extends HTMLElement {
 			}${emotion ? `/${emotionToIndex(emotion)}` : ""
 			}.${
 				(speaker === "Toriel" && [0, 1, 2, 6, 7, 9].includes(emotionToIndex(emotion)))
+				|| (speaker === "Asgore" && [0, 1, 2, 3, 4, 6].includes(emotionToIndex(emotion)))
 				|| (speaker === "Susie" && emotionToIndex(emotion) === 11)
 				? "gif"	// `gif` in certain cases
 				: "png"	// `png` otherwise
