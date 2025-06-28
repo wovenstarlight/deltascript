@@ -457,7 +457,7 @@ d-choices {
 		align-items: center;
 		position: relative;
 
-		&:not(:state(forced)):not(:has(d-option:hover), :focus-within, :has([aria-expanded="true"])) {
+		&:not(:has(d-option:hover), :focus-within, :has([aria-expanded="true"])) {
 			&::after {
 				content: "";
 				background: url("../assets/images/heart.png") center / contain no-repeat;
@@ -552,7 +552,7 @@ d-option {
 	}
 
 	/* Hide the hearts/highlights when choices are forced open */
-	d-choices:state(forced) &:not(:hover, :focus, [aria-expanded=true]) {
+	d-choices:state(forced) &:not(:hover, :focus) {
 		color: var(--white);
 		&::before { content: unset }
 	}
