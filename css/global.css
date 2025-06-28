@@ -105,3 +105,107 @@ hr {
 .queen { color: #00a2e8 }
 /* #endregion */
 /* #endregion */
+
+/* #region Accessibility */
+#skip {
+	/* Placement */
+	position: fixed;
+	top: calc(var(--border-width) + 0.5em);
+	left: 50%;
+	transform: translate(-50%);
+	/* Display */
+	border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width) / var(--border-width);
+	background-color: var(--black);
+	line-height: 1;
+	text-decoration: none;
+	z-index: 5;
+
+	&:hover, &:focus-within { color: var(--yellow) }
+
+	&:not(:hover, :focus-within) { /* Place it above visible screen */
+		transform: translate(-50%, calc(-100% - (2 * var(--border-width) + 1em)));
+	}
+}
+.visually-hidden {
+	position: fixed;
+	top: -2em;
+	left: 0;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+/* Settings */
+#menu {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 5;
+	padding: min(0.75em, 2vmax);
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: flex-end;
+	width: calc(100vw - 3em);
+	max-width: 15em;
+}
+#openmenu {
+	color: inherit;
+	font: inherit;
+	border: none;
+	padding: 0;
+	/* background-color: transparent; */
+	width: fit-content;
+	height: fit-content;
+	cursor: pointer;
+
+	&:is(:hover, :focus) .inactive, &:not(:hover, :focus) .active { display: none }
+	img {
+		display: block;
+		height: 3em;
+	}
+}
+#menucontents {
+	margin: var(--border-width) calc(var(--border-width) - 0.25em);
+	background-color: var(--black);
+	border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width) / var(--border-width);
+
+	a, label, button {
+		display: block;
+		padding: 0.25em 1em;
+		background-color: transparent;
+		border: none;
+		color: inherit;
+		font: inherit;
+		text-decoration: none;
+		position: relative;
+
+		&:hover, &:focus-within {
+			color: var(--yellow);
+			cursor: pointer;
+		}
+
+		&::before {
+			content: "";
+			--size: 0.6em;
+			width: var(--size);
+			height: var(--size);
+			background: url("../assets/images/heart.png") center / contain no-repeat;
+			background-size: contain;
+			position: absolute;
+			right: 100%;
+			margin-inline-end: -1.25ch;
+			top: 0.9ch;
+		}
+
+		&:not(:hover)::before { content: unset }
+	}
+
+	label.toggle {
+		display: grid;
+		grid-template-columns: 1fr 3ch;
+		gap: 3ch;
+
+		&::after { content: "OFF" }
+		&:has(input:checked)::after { content: "ON" }
+	}
+}
+/* #endregion */
