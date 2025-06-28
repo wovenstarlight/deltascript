@@ -339,9 +339,26 @@ d-box, d-choices {
 	}
 
 	&:state(compact) {
-		margin: 0 1em;
+		margin: 0 0 0 min(1em, 3vw);
 		gap: 0 0.5ch;
 		align-items: baseline;
+
+		/* On smaller screens, stack dialogue instead */
+		@media (max-width: 30em) {
+			display: flex;
+			flex-direction: column;
+
+			/* ...but only main dialogue! if there are boxes with only small dialogue, leave them alone. */
+			&:has(d-text) {
+				padding-inline-start: 3vw;
+				& > d-speaker, & > d-sprite d-speaker {
+					position: relative;
+					left: -3vw;
+				}
+			}
+
+			d-text ~ d-box { padding-inline-start: 3ch }
+		}
 	}
 }
 d-box {
