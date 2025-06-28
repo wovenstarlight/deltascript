@@ -46,7 +46,7 @@ title: Examples
 
 	<h3>No sprites</h3>
 	
-	<h4>With speaker, but no sprite</h4>
+	<h4>With speaker</h4>
 
 	{% highlight html -%}
 <d-box theme="dark">
@@ -95,7 +95,7 @@ title: Examples
 
 	<hr>
 
-	<h3>With smaller additions</h3>
+	<h3>With smaller dialogue additions</h3>
 
 	{% highlight html -%}
 <d-box theme="dark">
@@ -150,6 +150,40 @@ title: Examples
 			<d-sprite speaker="Toriel" emotion="5"></d-sprite>
 			<d-text>(Kris will sing swears.)</d-text>
 		</d-box>
+	</d-box>
+
+	<hr>
+
+	<h3>Inline speaker icons</h3>
+
+	{% highlight html -%}
+<d-box theme="dark">
+	<d-speaker>Sweet Cap'n Cakes</d-speaker>
+	<d-text asterisk="Sweet">I'm Sweet.</d-text>
+	<d-text asterisk="Cap'n">The ladies call me Cap'n!</d-text>	<!-- will also accept "Capn" i.e. no apostrophe -->
+	<d-text asterisk="K_K">K_K!</d-text>				<!-- will also accept "KK" i.e. no underscore -->
+</d-box>
+
+<d-box theme="dark">
+	<d-speaker>Clover</d-speaker>
+	<d-text asterisk="Happy">Heyy~! It's my birthday today~!</d-text>	<!-- will also accept "Nice" -->
+	<d-text asterisk="Mad">And you didn't even SAY HELLO!?</d-text>		<!-- will also accept "Mean" -->
+	<d-text asterisk="Sad">That's fine, actually...</d-text>		<!-- will also accept "Shy" -->
+</d-box>
+	{%- endhighlight %}
+
+	<d-box theme="dark">
+		<d-speaker>Sweet Cap'n Cakes</d-speaker>
+		<d-text asterisk="Sweet">I'm Sweet.</d-text>
+		<d-text asterisk="Cap'n">The ladies call me Cap'n!</d-text>
+		<d-text asterisk="K_K">K_K!</d-text>
+	</d-box>
+
+	<d-box theme="dark">
+		<d-speaker>Clover</d-speaker>
+		<d-text asterisk="Happy">Heyy~! It's my birthday today~!</d-text>
+		<d-text asterisk="Mad">And you didn't even SAY HELLO!?</d-text>
+		<d-text asterisk="Sad">That's fine, actually...</d-text>
 	</d-box>
 </section>
 
