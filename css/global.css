@@ -1,0 +1,107 @@
+/* #region Constants and globals */
+* { box-sizing: border-box }
+/* Font initialization */
+@font-face {
+	font-family: "DeltaFont";
+	src: url("../assets/fonts/UTDR_Monospace.ttf");
+}
+@font-face {
+	font-family: "OpenDyslexic";
+	src: url("../assets/fonts/OpenDyslexicMono-Regular.otf");
+}
+:root { /* Global colors and font */
+	background-color: black;
+	color: white;
+	font-size: 1.25em;
+
+	--maxwidth: 992px;
+
+	--red: #ff0000;
+	--blue: #0000ff;
+	--yellow: #ffff00;
+	--green: #00ff00;
+	--white: #fff;
+	--black: #000;
+	--purple: #800080;
+	--maroon: #800000;
+	--orange: #ffa040;
+	/* Custom */
+	--gray: #aaa;
+	--lightyellow: #ffff80;
+
+	/* Disable anti-aliasing to get that pixel look on all images
+	Retrieved from https://forum.squarespace.com/topic/240034-how-to-disable-anti-aliasing-site-wide-for-pixel-art/ */
+	image-rendering: optimizeSpeed;				/* STOP SMOOTHING, GIVE ME SPEED	*/
+	image-rendering: -moz-crisp-edges;			/* Firefox							*/
+	image-rendering: -o-crisp-edges;			/* Opera							*/
+	image-rendering: -webkit-optimize-contrast;	/* Chrome (and eventually Safari)	*/
+	image-rendering: pixelated;					/* Universal support since 2021		*/
+	image-rendering: optimize-contrast;			/* CSS3 Proposed					*/
+	-ms-interpolation-mode: nearest-neighbor;	/* IE8+								*/
+}
+h1, h2, h3, h4, h5, h6 { font-weight: normal }
+h2, h3, h4, h5, h6 {
+	margin-block: 0.7em;
+	&:first-child { margin-block-start: 0 }
+	--adjacent-spacing: calc(var(--border-width) + 0.3em);
+
+	body:not(.compact) :is(d-box, d-choices) + & { margin-block-start: var(--adjacent-spacing) }
+	body:not(.compact) &:has(+ d-box, + d-choices) { margin-block-end: var(--adjacent-spacing) }
+}
+p, ul { /* General text */
+	margin-block: 0.5em;
+}
+a { /* Global links */
+	color: var(--white);
+	text-decoration: 0.1em solid underline;
+
+	/* Yellow on hover */
+	&:hover, &:focus-within { color: var(--lightyellow); }
+}
+hr {
+	border-color: var(--gray);
+	margin-block: 1em;
+	--adjacent-spacing: calc(var(--border-width) + 1em);
+
+	body:not(.compact) :is(d-box, d-choices) + & {
+		margin-block-start: var(--adjacent-spacing);
+	}
+	body:not(.compact) &:has(+ d-box, + d-choices) {
+		margin-block-end: var(--adjacent-spacing);
+	}
+}
+/* #region Color-specific classes */
+.cR, .red { color: var(--red) }
+.cB, .blue { color: var(--blue) }
+.cY, .yellow { color: var(--yellow) }
+.cG, .green { color: var(--green) }
+.cW, .white { color: var(--white) }
+.cX, .black { color: var(--black) }
+.cP, .purple { color: var(--purple) } /* unused */
+.cM, .maroon { color: var(--maroon) } /* unused */
+.cO, .orange { color: var(--orange) }
+.cA { color: --#00aeff }
+.cs { color: --#ff80ff }
+.cv { color: --#80ff80 } /* unused */
+.gray { color: var(--gray) }
+.lightyellow { color: var(--lightyellow) }
+/* Health bar colors */
+.health.kris { color: #01ffff }
+.health.susie { color: #ff00ff }
+.health.ralsei { color: #01ff00 }
+.health.noelle { color: #ffff00 }
+/* Menu portait colors */
+.menu.kris { color: #00a2e8 }
+.menu.susie { color: #ea79c8 }
+.menu.ralsei { color: #b5e61d }
+.menu.noelle { color: #ffff00 } /*same as health bar*/
+/* Picked off their Dark World sprites */
+.kris { color: #75fbed }
+.susie { color: #f883d7 }
+.ralsei { color: #4dcc8e }
+.noelle { color: #ffce32 } /* actually this one is Light World */
+.berdly { color: #46b3fb }
+.lancer, .king { color: #78ade1 } /* lightened for readability from #406080 */
+.queen { color: #00a2e8 }
+/* #endregion */
+/* #endregion */
