@@ -281,7 +281,7 @@ body {
 	h1, .d-section {
 		background-color: rgb(from var(--black) r g b / 0.6);
 		backdrop-filter: blur(5px);
-		padding: 1em;
+		padding: 1em min(1em, 3vw);
 	}
 
 	h1 {
@@ -329,12 +329,19 @@ d-box, d-choices {
 		line-height: 1;
 		min-height: 3.5em;
 		width: 17.3em;
-		max-width: 100%;
+		max-width: calc(100% - 3 * var(--border-width));
 		background-color: var(--black);
 		border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width) / var(--border-width);
 
 		&[theme=dark] {
 			border-image-source: url("../assets/images/textbox/dark.gif");
+		}
+
+		@media (max-width: 30em) {
+			font-size: 1em;
+
+			/* For boxes with small dialogues, add spacing so dialogue doesn't overlap. ...too much, at least. */
+			&:has(d-box) { min-height: 4.5em }
 		}
 	}
 
