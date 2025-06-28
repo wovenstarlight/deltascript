@@ -136,6 +136,18 @@ hr {
 	margin: 0;
 	padding: 0;
 }
+#back404 {
+	width: calc(100% - (2 * var(--border-width)));
+	margin: var(--border-width);
+	border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width) / var(--border-width);
+	background-color: var(--black);
+	color: var(--white);
+	font: inherit;
+	text-align: center;
+	cursor: pointer;
+
+	&:hover, &:focus { color: var(--yellow) }
+}
 /* Settings */
 #menu {
 	position: fixed;
