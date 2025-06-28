@@ -1,0 +1,22 @@
+<aside id="menu">
+	<button id="openmenu">
+		<span class="visually-hidden">Config</span>
+		<img src="{{ '/assets/images/config/1.png' | relative_url }}" alt="" aria-hidden="true" class="inactive" />
+		<img src="{{ '/assets/images/config/0.png' | relative_url }}" alt="" aria-hidden="true" class="active" />
+	</button>
+	<section class="d-section" id="menucontents" hidden>
+		<a href="#top">Back to top</a>
+
+		<label for="toggle-compact" class="toggle">
+			<input type="checkbox" id="toggle-compact" class="visually-hidden">
+			Compact mode
+		</label>
+
+		<label for="toggle-opendyslexic" class="toggle">
+			<input type="checkbox" id="toggle-opendyslexic" class="visually-hidden">
+			Use dyslexia-friendly font
+		</label>
+
+		<button id="open-choices">Show all choices</button>
+	</section>
+</aside>

@@ -1,0 +1,15 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		{%- if page.title and page.url != "/" %}
+			{{- page.title | append: " | " | append: site.title -}}
+		{%- else -%}
+			{{- site.title -}}
+		{%- endif -%}
+	</title>
+	<link rel="stylesheet" href="{{ 'css/global.css' | relative_url }}">
+	<script>const BASE_URL = "{{ site.baseurl }}";</script>
+	<script src="{{ 'js/global.js' | relative_url }}"></script>
+	<link rel="shortcut icon" href="{{  '/assets/images/logo-heart.png' | relative_url }}" type="image/x-icon">
+</head>
