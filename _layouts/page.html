@@ -1,6 +1,16 @@
 ---
 layout: default
 ---
-<h1 {%- if page.hide_title %} class="visually-hidden" {%- endif %}>{{ page.title }}</h1>
+<header class="d-section">
+	<h1 {%- if page.hide_title %} class="visually-hidden" {%- endif %}>{{ page.title }}</h1>
+
+	{%- if page.credits %}
+	<div id="pagecred">{{ page.credits }}</div>
+	{%- endif %}
+
+	{%- if page.description %}
+	<div id="pagedesc">{{ page.description }}</div>
+	{%- endif %}
+</header>
 
 {{ content }}
