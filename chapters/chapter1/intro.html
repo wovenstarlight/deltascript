@@ -1,0 +1,419 @@
+---
+title: Chapter 1 Intro
+description: >
+  <p>The start of the game!</p>
+sources: >
+  Chapter 1's <a href="https://code.deltarune.wiki/ch1/gml_object_device_contact_step_0" class="code">gml_Object_DEVICE_CONTACT_Step_0</a>, <a href="https://code.deltarune.wiki/ch1/gml_object_obj_krisroom_create_0">gml_Object_obj_krisroom_Create_0</a>, and <a href="https://code.deltarune.wiki/ch1/gml_object_obj_krisroom_step_0">gml_Object_obj_krisroom_Step_0</a>.
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+---
+<section class="d-section" id="vesselcreation">
+	<h2>Vessel creation</h2>
+
+	<p class="note">The screen is black.</p>
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>ARE YOU THERE?</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>ARE WE CONNECTED?</d-text>
+	</d-box>
+	
+	<p class="note">A red SOUL appears at the center of the screen.</p>
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>EXCELLENT.</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>TRULY EXCELLENT.</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>NOW.</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>WE MAY BEGIN.</d-text>
+	</d-box>
+
+	<p class="note">The SOUL disappears. A rippling purple background appears, similar to the Dark Fountains' texture.</p>
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>FIRST.</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>YOU MUST CREATE A VESSEL.</d-text>
+	</d-box>
+
+	<d-box theme="plain" id="selection">
+		<d-speaker>Voice</d-speaker>
+		<d-text>SELECT THE HEAD THAT YOU PREFER.</d-text>
+	</d-box>
+
+	<p class="note">A selection of heads appears, the SOUL hovering over the currently-selected one.</p>
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>SELECT THE TORSO THAT YOU PREFER.</d-text>
+	</d-box>
+
+	<p class="note">A selection of torsos appears, all wearing striped clothing, with the SOUL and your chosen head hovering over the currently-selected one.</p>
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>SELECT THE LEGS THAT YOU PREFER.</d-text>
+	</d-box>
+
+	<p class="note">A selection of legs appears, almost all identical, with the SOUL and your chosen head/torso hovering over the currently-selected pair.</p>
+	
+	<p class="note">Upon selection, the fully-assembled body appears under the dialogue.</p>
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>THIS IS YOUR BODY.</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>DO YOU ACCEPT IT?</d-text>
+	</d-box>
+
+	<d-choices theme="plain">
+		<d-option index="0" text="YES"></d-option>
+		<d-option index="1" text="NO"></d-option>
+	</d-choices>
+
+	<d-option-panel index="0">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1">
+		<p class="note">The sequence repeats from <a href="#selection">body part selection</a> onwards.</p>
+	</d-option-panel>
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>EXCELLENT.</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>YOU HAVE CREATED A WONDERFUL FORM.</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>NOW.</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>LET US SHAPE ITS MIND AS YOUR OWN.</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>WHAT IS ITS FAVORITE FOOD?</d-text>
+	</d-box>
+
+	<p class="note">The following options are presented:</p>
+	<ul class="note">
+		<li>SWEET</li>
+		<li>SOFT</li>
+		<li>SOUR</li>
+		<li>SALTY</li>
+		<li>PAIN</li>
+		<li>COLD</li>
+	</ul>
+	<!-- sets global.flag[903] -->
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>YOUR FAVORITE BLOOD TYPE?</d-text>
+	</d-box>
+
+	<p class="note">The following options are presented:</p>
+	<ul class="note">
+		<li>A</li>
+		<li>AB</li>
+		<li>B</li>
+		<li>C</li>
+		<li>D</li>
+	</ul>
+	<!-- sets global.flag[904] -->
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>WHAT COLOR DOES IT LIKE MOST?</d-text>
+	</d-box>
+
+	<p class="note">The following options are presented:</p>
+	<ul class="note">
+		<li>RED</li>
+		<li>BLUE</li>
+		<li>GREEN</li>
+		<li>CYAN</li>
+	</ul>
+	<!-- sets global.flag[905] -->
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>PLEASE GIVE IT A GIFT.</d-text>
+	</d-box>
+
+	<p class="note">The following options are presented:</p>
+	<ul class="note">
+		<li>KINDNESS</li>
+		<li>MIND</li>
+		<li>AMBITION</li>
+		<li>BRAVERY</li>
+		<li>VOICE</li>
+	</ul>
+	<!-- sets global.flag[909] as 1 - choice_index -->
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>HOW DO YOU FEEL ABOUT YOUR CREATION? (IT WILL NOT HEAR.)</d-text>
+	</d-box>
+
+	<p class="note">The following options are presented:</p>
+	<ul class="note">
+		<li>LOVE</li>
+		<li>HOPE</li>
+		<li>DISGUST</li>
+		<li>FEAR</li>
+	</ul>
+	<!-- sets global.flag[906] -->
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>HAVE YOU ANSWERED HONESTLY?</d-text>
+	</d-box>
+
+	<p class="note">The following options are presented:</p>
+	<ul class="note">
+		<li>YES</li>
+		<li>NO</li>
+	</ul>
+	<!-- sets global.flag[907] -->
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>YOU ACKNOWLEDGE THE POSSIBILITY OF PAIN AND SEIZURE.</d-text>
+	</d-box>
+
+	<p class="note">The following options are presented:</p>
+	<ul class="note">
+		<li>YES</li>
+		<li>NO</li>
+	</ul>
+	<!-- sets global.flag[908] -->
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>UNDERSTOOD.</d-text>
+	</d-box>
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>NAME YOUR VESSEL.</d-text>
+	</d-box>
+
+	<p class="note">A keyboard is presented.</p>
+	<!-- sets global.name -->
+
+	<hr>
+
+	<h3>If entering the name "GASTER"</h3>
+
+	<p class="note">The game restarts.</p>
+
+	<!-- FOUND = 1 || 2 -->
+	<h3>If entering any of the names "SUSIE", "NOELLE", "KRIS", "TORIEL", "ASRIEL", "ASGORE", "SANS", "PAPYRUS", "ALPHYS", "UNDYNE", "RUDY", "BERDLY", "CATTY", "CATTI", "BRATTY", "GERSON", "JOCKINGTON", or "QC"</h3>
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>AN INTERESTING COINCIDENCE.</d-text>
+	</d-box>
+
+	<h3>Otherwise</h3>
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>WE CALLED IT "[NAME]."</d-text>
+	</d-box>
+
+	<hr>
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>AND WHAT ABOUT THE CREATOR?</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>YOUR OWN NAME.</d-text>
+	</d-box>
+
+	<p class="note">A keyboard is presented.</p>
+	<!-- sets global.truename -->
+
+	<hr>
+
+	<h3>If entering the name "GASTER"</h3>
+	<p class="note">The game quits.</p>
+
+	<!-- FOUND = 2 -->
+	<h3>If entering any of the names "SUSIE", "NOELLE", or "KRIS"</h3>
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>"[TRUE NAME]."</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>YOU ARE ABOUT TO MEET SOMEONE</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>VERY, VERY WONDERFUL.</d-text>
+	</d-box>
+
+	<!-- FOUND = 1 -->
+	<h3>If entering any of the names "TORIEL", "ASRIEL", "ASGORE", "SANS", "PAPYRUS", "ALPHYS", "UNDYNE", "RUDY", "BERDLY", "CATTY", "CATTI", "BRATTY", "GERSON", "JOCKINGTON", or "QC"</h3>
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>"[TRUE NAME]."</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>HOW INTERESTING.</d-text>
+	</d-box>
+
+	<h3>If entering the same name that you gave the Vessel</h3>
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>"[TRUE NAME]."</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>OF COURSE</d-text>
+		<d-text>OF COURSE.</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>OF COURSE THEY ARE THE SAME.</d-text>
+	</d-box>
+
+	<h3>Otherwise</h3>
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>"[TRUE NAME]."</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>EXCELLENT.</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>TRULY EXCELLENT.</d-text>
+	</d-box>
+
+	<hr>
+
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>"[TRUE NAME]."</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>THANK YOU FOR YOUR TIME.</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>YOUR ANSWERS</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Voice</d-speaker>
+		<d-text>YOUR WONDERFUL CREATION</d-text>
+	</d-box>
+
+	<p class="note">The screen goes black. The music cuts out.</p>
+
+	<d-box theme="plain">
+		<d-speaker>Other voice</d-speaker>
+		<d-text>Will now be discarded.</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Other voice</d-speaker>
+		<d-text>No one can choose who they are in this world.</d-text>
+	</d-box>
+
+	<p class="note">The screen begins to turn white.</p>
+
+	<d-box theme="plain">
+		<d-speaker>Other voice</d-speaker>
+		<d-text>Your name is</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="wakeup">
+	<h2>Waking up</h2>
+	
+	<p class="note">Kris's room displays, with Kris in bed and Toriel standing at the center.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="1"></d-sprite>
+		<d-text asterisk>KRIS!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="1"></d-sprite>
+		<d-text asterisk>Kris, if you do not wake up, we will be late for school!</d-text>
+	</d-box>
+
+	<p class="note">Toriel opens the curtains.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>I will wait outside for you, alright?</d-text>
+	</d-box>
+
+	<p class="note">Toriel leaves the room. After a moment, Kris gets out of bed.</p>
+</section>
+
+<section class="d-section" id="leavehouse">
+	<h2>Leaving the house</h2>
+
+	<p class="note">Kris leaves the house to find the car in the driveway and Toriel standing next to the driver's side door. Toriel turns towards them.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="2"></d-sprite>
+		<d-text asterisk>Kris! There you are! We might still be able to make it!</d-text>
+	</d-box>
+
+	<p class="note">As the following dialogue plays, Kris and Toriel get into the car, which then drives off.</p>
+
+	<d-box theme="plain">
+		<d-speaker>Toriel</d-speaker>
+		<d-text asterisk>Kris... It is a beautiful day today, is it not?</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Toriel</d-speaker>
+		<d-text asterisk>I hope it stays this way when ASRIEL visits next week.</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Toriel</d-speaker>
+		<d-text asterisk>But I wonder...</d-text>
+		<d-text asterisk>After the excitement of university...</d-text>
+	</d-box>
+	<d-box theme="plain">
+		<d-speaker>Toriel</d-speaker>
+		<d-text asterisk>Will he still enjoy coming home to this little town...?</d-text>
+	</d-box>
+
+	<p class="note">The screen flashes white, then fades to reveal Hometown's streets. The car drives past several Hometown residents, some of whom wave as it goes past.</p>
+
+	<p class="note">At the school, Toriel parks the car and gets out along with Kris. Toriel takes Kris's hand (Kris ducks their head) and walks them into the school. At the branching corridors, she hugs them. Kris walks left toward their classroom; after a moment,  Toriel walks offscreen to the right towards hers.</p>
+</section>
