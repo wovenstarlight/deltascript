@@ -254,7 +254,7 @@ body {
 	padding-inline: calc(1em + ((100vw - var(--maxwidth)) / 2));
 	padding-block: 0.5em;
 	background-color: var(--black);
-	a { color: var(--white) }
+
 	a:not(:hover, :focus) { text-decoration: none }
 }
 /* Header */
