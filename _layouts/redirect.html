@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Redirecting&hellip; | {{ site.title }}</title>
+	<link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
+	<meta http-equiv="refresh" content="0; url={{ page.redirect_to | absolute_url }}">
+	<meta name="robots" content="noindex">
+</head>
+<body>
+	<script>window.location="{{ page.redirect_to | absolute_url }}"</script>
+	<h1>Redirecting&hellip;</h1>
+	<a href="{{ page.redirect_to | absolute_url }}">Click here if you are not redirected.</a>
+</body>
+</html>
