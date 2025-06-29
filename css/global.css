@@ -681,10 +681,6 @@ d-option-panel {
 	}
 	padding: 0.1em;
 
-	.selection-label {
-		color: var(--gray);
-	}
-
 	/* Expanded mode: hide collapsed panels, and labels when panels aren't forced */
 	d-choices:not(:state(compact)) ~ &:state(collapsed),
 	d-choices:not(:state(compact)) ~ &:not(:state(forced)) .selection-label,
@@ -693,5 +689,13 @@ d-option-panel {
 	d-choices:state(compact) ~ & .selection-label {
 		display: none;
 	}
+
+	.selection-label {
+		color: var(--gray);
+	}
+
+	/* First child will always be selection-label */
+	& > :nth-child(2):not(d-box, d-choices) { margin-block-start: 0 }
+	& > :last-child:not(d-box, d-choices) { margin-block-end: 0 }
 }
 /* #endregion */
