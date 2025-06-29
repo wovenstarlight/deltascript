@@ -53,6 +53,7 @@ p, ul { /* General text */
 	&:first-child { margin-block-start: 0 }
 	&:last-child { margin-block-end: 0 }
 }
+p:empty { min-height: 1em }
 a { /* Global links */
 	color: var(--white);
 	text-decoration: 0.1em solid underline;
