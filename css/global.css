@@ -354,6 +354,15 @@ d-box, d-choices {
 			border-image-source: url("../assets/images/textbox/dark.gif");
 		}
 
+		&[theme=plain] {
+			border-image: unset;
+			box-shadow:
+				0 0
+				var(--border-width)	/* blur a lot */
+				calc(0.5 * var(--border-width))	/* spread out a bit */
+				var(--black);
+		}
+
 		@media (max-width: 30em) {
 			font-size: 1em;
 
