@@ -11,6 +11,11 @@ layout: default
 	{%- if page.description %}
 	<div id="pagedesc">{{ page.description }}</div>
 	{%- endif %}
+
+	{%- if page.sources %}
+	<div id="pagesrc">
+		<p>Sources: {{ page.sources }}</p></div>
+	{%- endif %}
 </header>
 
 {{ content }}
