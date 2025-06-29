@@ -390,39 +390,44 @@ d-box {
 		position: relative;
 	}
 
-	&:not(:state(compact)) & {
-		position: absolute;
-		font-size: 0.6em;
-		/* Reset full-size features */
-		background-color: transparent;
-		border-image: unset;
-		margin: 0;
-		width: max-content;
-		height: unset;
-		/* Center content */
-		align-items: center;
+	&:not(:state(compact)) {
+		/* Align text towards start */
+		grid-template-rows: auto auto 1fr;
+		
+		d-box {
+			position: absolute;
+			font-size: 0.6em;
+			/* Reset full-size features */
+			background-color: transparent;
+			border-image: unset;
+			margin: 0;
+			width: max-content;
+			height: unset;
+			/* Center content */
+			align-items: center;
 
-		d-text:first-of-type { margin-block-start: 0.5em }
+			d-text:first-of-type { margin-block-start: 0.5em }
 
-		/* Specify placements (defaulting to bottom right) */
-		&:not([place]), &:not([place~=bottom], [place~=top]),
-		&[place~=bottom] { bottom: -0.6em }
-		&:not([place]), &:not([place~=right], [place~=left]),
-		&[place~=right] { right: 0 }
-		&[place~=top] { top: -0.6em }
-		&[place~=left] { left: 0 }
-		&[place~=center-x] {
-			left: 50%;
-			transform: translateX(-50%);
-		}
-		&[place~=center-y] {
-			top: 50%;
-			transform: translateY(-50%);
-		}
-		&[place~=center] {
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
+			/* Specify placements (defaulting to bottom right) */
+			&:not([place]), &:not([place~=bottom], [place~=top]),
+			&[place~=bottom] { bottom: -0.6em }
+			&:not([place]), &:not([place~=right], [place~=left]),
+			&[place~=right] { right: 0 }
+			&[place~=top] { top: -0.6em }
+			&[place~=left] { left: 0 }
+			&[place~=center-x] {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			&[place~=center-y] {
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&[place~=center] {
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
 		}
 	}
 
