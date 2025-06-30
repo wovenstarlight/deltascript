@@ -87,8 +87,8 @@ hr {
 .cM, .maroon { color: var(--maroon) } /* unused */
 .cO, .orange { color: var(--orange) }
 .cA { color: --#00aeff }
-.cs { color: --#ff80ff }
-.cv { color: --#80ff80 } /* unused */
+.cS { color: --#ff80ff }
+.cV { color: --#80ff80 } /* unused */
 .gray { color: var(--gray) }
 .lightyellow { color: var(--lightyellow) }
 /* Health bar colors */
