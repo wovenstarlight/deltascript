@@ -14,7 +14,13 @@ layout: default
 
 	{%- if page.sources %}
 	<div id="pagesrc">
-		<p>Sources: {{ page.sources }}</p></div>
+		<p>Sources:</p>
+		<ul>
+			{%- for source in page.sources %}
+			<li><a href="{{ source.url }}">{{ source.name }}</a></li>
+			{%- endfor %}
+		</ul>
+	</div>
 	{%- endif %}
 </header>
 
