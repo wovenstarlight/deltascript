@@ -565,7 +565,8 @@ d-choices {
 		align-items: center;
 		position: relative;
 
-		&:not(:has(d-option:hover), :focus-within, :has([aria-expanded="true"])) {
+		&:not(:has(d-option:hover), :focus-within, :has([aria-expanded="true"])),
+		&[noninteractive] {
 			&::after {
 				content: "";
 				background: url("../assets/images/heart.png") center / contain no-repeat;
@@ -583,7 +584,6 @@ d-choices {
 	}
 
 	d-option {
-		display: block;
 		width: fit-content;
 		position: relative;
 
@@ -636,34 +636,39 @@ d-choices {
 }
 d-option {
 	display: block;
-	cursor: pointer;
-	/* Heart-shaped hover indicator */
-	position: relative;
 
-	&:hover, &:focus,
-	&[aria-expanded=true] {
-		color: var(--yellow);
-	}
-	&::before {
-		content: "";
-		background: center / contain no-repeat;
-		width: var(--size);
-		height: var(--size);
-		position: absolute;
-		left: -0.1em;
-		top: calc(50% - (0.6 * var(--size)));
-		--size: 0.6em;
-	}
-	&:is(:hover, :focus)::before,
-	&[aria-expanded=true]::before {
-		background-image: url("../assets/images/heart.png");
+	d-choices:not([noninteractive]) & {
+		cursor: pointer;
+		/* Heart-shaped hover indicator */
+		position: relative;
+
+		&:hover, &:focus,
+		&[aria-expanded=true] {
+			color: var(--yellow);
+		}
+		&::before {
+			content: "";
+			background: center / contain no-repeat;
+			width: var(--size);
+			height: var(--size);
+			position: absolute;
+			left: -0.1em;
+			top: calc(50% - (0.6 * var(--size)));
+			--size: 0.6em;
+		}
+		&:is(:hover, :focus)::before,
+		&[aria-expanded=true]::before {
+			background-image: url("../assets/images/heart.png");
+		}
+
+		/* Hide the hearts/highlights when choices are forced open */
+		d-choices:state(forced) &:not(:hover, :focus) {
+			color: var(--white);
+			&::before { content: unset }
+		}
 	}
 
-	/* Hide the hearts/highlights when choices are forced open */
-	d-choices:state(forced) &:not(:hover, :focus) {
-		color: var(--white);
-		&::before { content: unset }
-	}
+	d-choices[noninteractive] & { cursor: not-allowed }
 
 	:not(d-choices) > & {
 		border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width) / calc(0.75 * var(--border-width)) var(--border-width);

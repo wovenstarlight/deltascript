@@ -122,6 +122,10 @@ class DialogueChoices extends HTMLElement {
 		 * @type {DialogueChoicesOption[]}
 		 */
 		this.options = [];
+		/** `true` if this menu's options are linked to panels.
+		 * @type {boolean}
+		 */
+		this.isInteractive = true;
 	}
 
 	get forced() {
@@ -143,7 +147,7 @@ class DialogueChoices extends HTMLElement {
 			this._internals.states.add("compact");
 			// Move all options adjacent to their panels
 			this.options.forEach(option => {
-				option.tabIndex = 0;
+				if (this.isInteractive) option.tabIndex = 0;
 				let panel = this.nextElementSibling;
 				while (panel.tagName.startsWith("D-OPTION") && panel.getAttribute("index") !== option.getAttribute("index"))
 					panel = panel.nextElementSibling;
@@ -155,9 +159,9 @@ class DialogueChoices extends HTMLElement {
 			// Move all options back into this menu
 			this.options.forEach(option => {
 				this.append(option);
-				option.tabIndex = option.getAttribute("aria-expanded") === "true" ? 0 : -1;
+				if (this.isInteractive) option.tabIndex = option.getAttribute("aria-expanded") === "true" ? 0 : -1;
 			});
-			if (!this.options.find(opt => opt.tabIndex === 0)) this.options[0].tabIndex = 0;
+			if (this.isInteractive && !this.options.find(opt => opt.tabIndex === 0)) this.options[0].tabIndex = 0;
 		}
 	}
 
@@ -167,6 +171,7 @@ class DialogueChoices extends HTMLElement {
 		if (this.getAttribute("offset") !== null) {
 			this.setAttribute("style", `--offset: ${this.getAttribute("offset")}`);
 		}
+		this.isInteractive = this.getAttribute("noninteractive") === null;
 	}
 }
 customElements.define("d-choices", DialogueChoices);
@@ -197,45 +202,47 @@ class DialogueChoicesOption extends HTMLElement {
 		this.menu = this.parentElement;
 		this.menu.options.push(this);
 
-		// Set up ARIA features: Tab
-		this.id = getChoiceId(this.menu, this, "option");	// Set ID
-		this.setAttribute("role", "tab");	// Mark as tab
-		this.setAttribute("aria-controls", getChoiceId(this.menu, this, "panel"));	// Mark the panel this tab controls
-		// aria-expanded is handled entirely by the corresponding tab panel
-		// Make the first option in this menu tabbable;
-		// or, in compact mode, make them all tabbable
-		this.tabIndex = this.menu.compact || this.getAttribute("index") === "0" ? 0 : -1;
-		this.addEventListener("keydown", e => {	// Enable keyboard nav of the tablist
-			if (this.menu.compact) return;
-			// Only run when in non-compact mode
-			if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
-				e.preventDefault();
-				this.tabIndex = -1;
-				const focusTarget = e.key === "ArrowRight"
-					? this.nextElementSibling ?? this.parentElement.firstElementChild
-					: this.previousElementSibling ?? this.parentElement.lastElementChild;
-				focusTarget.tabIndex = 0;
-				focusTarget.focus();
-			}
-		});
-		/** Open the panel this tab controls. */
-		const openTab = () => {
-			// Close other panels
-			this.menu.options.forEach(el => {
-				const panel = document.getElementById(el.getAttribute("aria-controls"));
-				panel.collapsed = true;
-				panel.forced = false;
+		if (this.menu.isInteractive) {	// interactive option
+			// Set up ARIA features: Tab
+			this.id = getChoiceId(this.menu, this, "option");	// Set ID
+			this.setAttribute("role", "tab");	// Mark as tab
+			this.setAttribute("aria-controls", getChoiceId(this.menu, this, "panel"));	// Mark the panel this tab controls
+			// aria-expanded is handled entirely by the corresponding tab panel
+			// Make the first option in this menu tabbable;
+			// or, in compact mode, make them all tabbable
+			this.tabIndex = this.menu.compact || this.getAttribute("index") === "0" ? 0 : -1;
+			this.addEventListener("keydown", e => {	// Enable keyboard nav of the tablist
+				if (this.menu.compact) return;
+				// Only run when in non-compact mode
+				if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+					e.preventDefault();
+					this.tabIndex = -1;
+					const focusTarget = e.key === "ArrowRight"
+						? this.nextElementSibling ?? this.parentElement.firstElementChild
+						: this.previousElementSibling ?? this.parentElement.lastElementChild;
+					focusTarget.tabIndex = 0;
+					focusTarget.focus();
+				}
 			});
-			// Open this panel
-			document.querySelector(`#${this.getAttribute("aria-controls")}`).collapsed = false;
-		}
-		this.addEventListener("click", openTab);
-		this.addEventListener("keydown", e => {
-			if (e.key === "Enter" || e.key === " ") {
-				e.preventDefault();
-				openTab();
+			/** Open the panel this tab controls. */
+			const openTab = () => {
+				// Close other panels
+				this.menu.options.forEach(el => {
+					const panel = document.getElementById(el.getAttribute("aria-controls"));
+					panel.collapsed = true;
+					panel.forced = false;
+				});
+				// Open this panel
+				document.querySelector(`#${this.getAttribute("aria-controls")}`).collapsed = false;
 			}
-		});
+			this.addEventListener("click", openTab);
+			this.addEventListener("keydown", e => {
+				if (e.key === "Enter" || e.key === " ") {
+					e.preventDefault();
+					openTab();
+				}
+			});
+		}
 
 		// Add actual text label
 		this.innerHTML = this.getAttribute("text")
