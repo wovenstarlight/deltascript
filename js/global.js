@@ -76,17 +76,18 @@ class DialogueSprite extends HTMLElement {
 			: speaker === "Toriel" ? "home"		// ...home clothes for Toriel
 			: speaker === "Rouxls" ? "nohat"	// ...hatless for Rouxls
 			: "" )								// ...no variants for all others
-		const emotion = this.getAttribute("emotion");
+		const emotion = this.getAttribute("emotion"),
+			emotionIndex = emotionToIndex(emotion);
 		this.innerHTML =
 			`<d-speaker>${speaker}</d-speaker>
 			<img
 				src="${BASE_URL}/assets/images/faces/${speaker.toLowerCase()
 			}${variant.length ? `/${variant}` : ""
-			}${emotion ? `/${emotionToIndex(emotion)}` : ""
+			}${emotion ? `/${emotionIndex}` : ""
 			}.${
-				(speaker === "Toriel" && [0, 1, 2, 6, 7, 9].includes(emotionToIndex(emotion)))
-				|| (speaker === "Asgore" && [0, 1, 2, 3, 4, 6].includes(emotionToIndex(emotion)))
-				|| (speaker === "Susie" && emotionToIndex(emotion) === 11)
+				(speaker === "Toriel" && [0, 1, 2, 6, 7, 9].includes(emotionIndex))
+				|| (speaker === "Asgore" && [0, 1, 2, 3, 4, 6].includes(emotionIndex))
+				|| (speaker === "Susie" && emotionIndex === 11)
 				? "gif"	// `gif` in certain cases
 				: "png"	// `png` otherwise
 			}"
