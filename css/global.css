@@ -172,8 +172,6 @@ header.d-section:has(h1.visually-hidden:only-child) {
 	display: flex;
 	flex-direction: column-reverse;
 	align-items: flex-end;
-	width: calc(100vw - 3em);
-	max-width: 15em;
 }
 #openmenu {
 	color: inherit;
@@ -192,6 +190,8 @@ header.d-section:has(h1.visually-hidden:only-child) {
 	}
 }
 #menucontents {
+	width: calc(100vw - 3em);
+	max-width: 15em;
 	margin: var(--border-width) calc(var(--border-width) - 0.25em);
 	background-color: var(--black);
 	border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width) / var(--border-width);
