@@ -178,7 +178,7 @@ header.d-section:has(h1.visually-hidden:only-child) {
 	font: inherit;
 	border: none;
 	padding: 0;
-	/* background-color: transparent; */
+	background-color: transparent;
 	width: fit-content;
 	height: fit-content;
 	cursor: pointer;
