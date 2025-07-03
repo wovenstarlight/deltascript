@@ -1,9 +1,16 @@
 /* #region Constants and globals */
-* { box-sizing: border-box }
+* {
+	box-sizing: border-box;
+	text-underline-offset: 0.1em;
+}
 /* Font initialization */
 @font-face {
 	font-family: "DeltaFont";
-	src: url("../assets/fonts/UTDR_Monospace.ttf");
+	src: url("../assets/fonts/fnt_main.otf");
+}
+@font-face {
+	font-family: "DeltaFont Tiny";
+	src: url("../assets/fonts/fnt_noelletiny.otf");
 }
 @font-face {
 	font-family: "OpenDyslexic";
@@ -12,7 +19,6 @@
 :root { /* Global colors and font */
 	background-color: black;
 	color: white;
-	font-size: 1.25em;
 
 	--maxwidth: 992px;
 
@@ -238,12 +244,12 @@ body {
 	background: var(--black) url("../assets/images/bg.png") center repeat fixed;
 	color: var(--white);
 	/* Font */
-	font-family: "DeltaFont", "Courier New", Courier, monospace;
-	/* font-synthesis: none; Prevent false-bolding */
-	--border-width: 1rem;
+	--font: "DeltaFont", "Courier New", Courier, monospace;
+	font-family: var(--font);
+	--border-width: 1.2rem;
 
 	&.dyslexic {
-		font-family: "OpenDyslexic", "DeltaFont", "Courier New", Courier, monospace;
+		font-family: "OpenDyslexic", var(--font);
 		font-size: 0.875em;
 		--border-width: 2em;
 	}
@@ -313,7 +319,6 @@ body {
 #pagesrc a[href^="https://code.deltarune.wiki"] {
 	font-family: "Courier New", Courier, monospace;
 	font-weight: bold;
-	font-size: 0.8em;
 	&:not(:hover, :focus) { text-decoration: none }
 }
 /* Footer */
@@ -351,10 +356,10 @@ d-box, d-choices {
 		:is(d-box, d-choices, d-option-panel) + & { margin-block-start: calc((2 * var(--border-width)) + 0.2em) }
 
 		padding: 0.1em 0.2em;
-		font-size: 1.3em;
+		font-size: 1.2em;
 		line-height: 1;
-		min-height: 3.5em;
-		width: 17.3em;
+		min-height: 4.5em;
+		width: 22.4em;
 		max-width: calc(100% - 3 * var(--border-width));
 		background-color: var(--black);
 		border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width) / var(--border-width);
@@ -480,7 +485,7 @@ d-sprite {
 	}
 
 	img {
-		--size: 3em;
+		--size: 4em;
 		width: var(--size);
 		height: var(--size);
 		object-fit: contain;
@@ -499,7 +504,12 @@ d-speaker {
 }
 d-text {
 	grid-column: 2;
-	line-height: 1.1;
+	line-height: 1.4;
+
+	&[small] {
+		font-family: "DeltaFont Tiny", var(--font);
+		max-width: 55%;
+	}
 
 	&[asterisk] {
 		padding-inline-start: 2ch;
