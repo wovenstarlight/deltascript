@@ -69,13 +69,19 @@ class DialogueSprite extends HTMLElement {
 
 	connectedCallback() {
 		const speaker = this.getAttribute("speaker");
-		const variant = this.getAttribute("variant");
+		const variant = this.getAttribute("variant") ??	// Use provided variant, or default to...
+			( speaker === "Susie" ? "eyes"		// ...eyes-exposed for Susie
+			: speaker === "Ralsei" ? "nohat"	// ...hatless for Ralsei
+			: speaker === "Berdly" ? "light"	// ...Light World for Berdly
+			: speaker === "Toriel" ? "home"		// ...home clothes for Toriel
+			: speaker === "Rouxls" ? "nohat"	// ...hatless for Rouxls
+			: "" )								// ...no variants for all others
 		const emotion = this.getAttribute("emotion");
 		this.innerHTML =
 			`<d-speaker>${speaker}</d-speaker>
 			<img
 				src="${BASE_URL}/assets/images/faces/${speaker.toLowerCase()
-			}${variant ? `/${variant}` : ""
+			}${variant.length ? `/${variant}` : ""
 			}${emotion ? `/${emotionToIndex(emotion)}` : ""
 			}.${
 				(speaker === "Toriel" && [0, 1, 2, 6, 7, 9].includes(emotionToIndex(emotion)))
@@ -84,10 +90,10 @@ class DialogueSprite extends HTMLElement {
 				? "gif"	// `gif` in certain cases
 				: "png"	// `png` otherwise
 			}"
-				alt="${speaker}${variant && emotion ? ` (${variant}, ver.${emotion})`
+				alt="${speaker}${variant.length && emotion ? ` (${variant}, ver.${emotion})`
 				: emotion ? ` (ver.${emotion})`
-					: variant ? ` (${variant})`
-						: ""
+				: variant.length ? ` (${variant})`
+				: ""
 			}"
 			>`;
 	}
