@@ -320,6 +320,8 @@ body {
 	font-family: "Courier New", Courier, monospace;
 	font-weight: bold;
 	&:not(:hover, :focus) { text-decoration: none }
+	word-break: break-word;
+	text-underline-offset: auto;
 }
 /* Footer */
 #sitefoot {
