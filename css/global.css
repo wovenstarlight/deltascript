@@ -568,6 +568,8 @@ d-choices {
 		align-items: center;
 		position: relative;
 
+		/* Heart-shaped selector icon
+		To be displayed when none of the options are being considered or selected */
 		&:not(:has(d-option:hover), :focus-within, :has([aria-expanded="true"])),
 		&[noninteractive] {
 			&::after {
@@ -586,6 +588,7 @@ d-choices {
 		}
 	}
 
+	/* Option sizing WITHIN a menu (fullsize mode) */
 	d-option {
 		width: fit-content;
 		position: relative;
@@ -618,20 +621,16 @@ d-choices {
 			align-self: flex-end;
 			bottom: -0.2em;
 		}
+	}
 
-		/* Heart-shaped hover indicator */
-		&::before {
-			left: -1.75ch;
-			top: 0.15em;
-		}
+	/* Forced line break */
+	.break { display: block }
 
-		.break { display: block }
-
-		.conditional {
-			position: absolute;
-			left: calc(100% + 0.2em);
-			top: 0;
-		}
+	/* Asterisk marker */
+	.conditional {
+		position: absolute;
+		left: calc(100% + 0.2em);
+		top: 0;
 	}
 
 	/* In compact mode, all the options get moved alongside their tabs; hide the resulting empty menu */
@@ -640,7 +639,9 @@ d-choices {
 d-option {
 	display: block;
 
-	d-choices:not([noninteractive]) & {
+	/* Selectable options */
+	d-choices:not([noninteractive]) &,
+	:not(d-choices) > &:has(+ d-option-panel) {
 		cursor: pointer;
 		/* Heart-shaped hover indicator */
 		position: relative;
@@ -663,21 +664,33 @@ d-option {
 		&[aria-expanded=true]::before {
 			background-image: url("../assets/images/heart.png");
 		}
-
-		/* Hide the hearts/highlights when choices are forced open */
-		d-choices:state(forced) &:not(:hover, :focus) {
-			color: var(--white);
-			&::before { content: unset }
-		}
 	}
 
-	d-choices[noninteractive] & { cursor: not-allowed }
+	/* Adjust placement of heart-shaped hover indicator inside choice menus */
+	d-choices:not([noninteractive]) &::before {
+		left: -1.75ch;
+		top: 0.15em;
+	}
 
+	/* Hide the hearts/highlights when choices are forced open */
+	d-choices:state(forced) &:not(:hover, :focus) {
+		color: var(--white);
+		&::before { content: unset }
+	}
+
+	/* Non-selectable options */
+	d-choices[noninteractive] &,
+	/* Options with no linked panels */
+	:not(d-choices) > &:not(:has(+ d-option-panel)) {
+		cursor: not-allowed;
+	}
+
+	/* Compact mode */
 	:not(d-choices) > & {
 		border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width) / calc(0.75 * var(--border-width)) var(--border-width);
 		/* Spacing */
 		margin: var(--border-width);
-		& + d-option-panel + d-option { margin-block-start: calc(var(--border-width) + 0.5em) }
+		& + d-option, & + d-option-panel + d-option { margin-block-start: calc(var(--border-width) + 0.5em) }
 		/* Heart-shaped hover indicator */
 		padding-inline-start: 1em;
 		&::before { --size: 0.6em }
@@ -687,6 +700,7 @@ d-option {
 		}
 	}
 
+	/* Asterisk marker */
 	.conditional {
 		color: var(--gray);
 		padding: 0.5em;
