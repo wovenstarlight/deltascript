@@ -512,12 +512,12 @@ d-text {
 	grid-column: 2;
 	line-height: 1.4;
 
-	&[small] {
+	&[font=tiny] {
 		font-family: "DeltaFont Tiny", var(--font);
 		max-width: 55%;
 	}
 
-	&[sans] {
+	&[font=sans] {
 		font-family: "DeltaFont Comic Sans", var(--font);
 	}
 
