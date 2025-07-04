@@ -27,6 +27,7 @@
 :root { /* Global colors and font */
 	background-color: black;
 	color: white;
+	line-height: 1.5;
 
 	--maxwidth: 992px;
 
@@ -65,8 +66,10 @@ h2, h3, h4, h5, h6 {
 h2 { font-size: 2em }
 h3 { font-size: 1.6em }
 h4 { font-size: 1.3em }
-p, ul { /* General text */
-	margin-block: 0.5em;
+/* General text */
+p, ul { margin-block: 0.5em }
+li { margin-block: 0.2em }
+p, ul, li {
 	&:first-child { margin-block-start: 0 }
 	&:last-child { margin-block-end: 0 }
 }
@@ -191,22 +194,23 @@ header.d-section:has(h1.visually-hidden:only-child) {
 	height: fit-content;
 	cursor: pointer;
 
-	&:is(:hover, :focus) .inactive, &:not(:hover, :focus) .active { display: none }
+	&:is(:hover, :focus) .inactive, &:has(+ #menucontents:not([hidden])) .inactive,
+	&:not(:hover, :focus, &:has(+ #menucontents:not([hidden]))) .active { display: none }
 	img {
 		display: block;
-		height: 3em;
+		height: 4em;
 	}
 }
 #menucontents {
 	width: calc(100vw - 3em);
-	max-width: 15em;
+	max-width: 17em;
 	margin: var(--border-width) calc(var(--border-width) - 0.25em);
 	background-color: var(--black);
 	border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width) / var(--border-width);
 
 	a, label, button {
 		display: block;
-		padding: 0.25em 1em;
+		padding: 0.5em 1em;
 		background-color: transparent;
 		border: none;
 		color: inherit;
@@ -221,15 +225,15 @@ header.d-section:has(h1.visually-hidden:only-child) {
 
 		&::before {
 			content: "";
-			--size: 0.6em;
+			--size: 0.75em;
 			width: var(--size);
 			height: var(--size);
 			background: url("../assets/images/heart.png") center / contain no-repeat;
 			background-size: contain;
 			position: absolute;
 			right: 100%;
-			margin-inline-end: -1.25ch;
-			top: 0.9ch;
+			margin-inline-end: -0.95ch;
+			top: 0.85em;
 		}
 
 		&:not(:hover)::before { content: unset }
@@ -577,7 +581,7 @@ d-text {
 		&::before {
 			position: absolute;
 			left: 0;
-			top: 0;
+			top: 0.15em;
 			content: "";
 			color: transparent;
 			width: 1em;
@@ -624,20 +628,20 @@ d-choices {
 		/* Heart-shaped selector icon
 		To be displayed when none of the options are being considered or selected */
 		&:not(:has(d-option:hover), :focus-within, :has([aria-expanded="true"])),
-		&[noninteractive] {
+		&[noninteractive], &:state(forced):not(:has(d-option:hover), :focus-within) {
 			&::after {
 				content: "";
 				background: url("../assets/images/heart.png") center / contain no-repeat;
 				width: var(--size);
 				height: var(--size);
 				position: absolute;
-				left: 7.425em;
-				top: 1.3em;
-				--size: 0.6em;
+				left: 9em;
+				top: 1.7em;
+				--size: 0.75em;
 			}
 
-			&.shift-right::after { left: calc(7.425em + var(--offset)) }
-			&.shift-left::after { left: calc(7.425em - var(--offset)) }
+			&.shift-right::after { left: calc(9em + var(--offset)) }
+			&.shift-left::after { left: calc(9em - var(--offset)) }
 		}
 	}
 
@@ -709,9 +713,9 @@ d-option {
 			width: var(--size);
 			height: var(--size);
 			position: absolute;
-			left: -0.1em;
-			top: calc(50% - (0.6 * var(--size)));
-			--size: 0.6em;
+			left: -0.2em;
+			top: calc(50% - (0.5 * var(--size)));
+			--size: 0.75em;
 		}
 		&:is(:hover, :focus)::before,
 		&[aria-expanded=true]::before {
@@ -722,7 +726,7 @@ d-option {
 	/* Adjust placement of heart-shaped hover indicator inside choice menus */
 	d-choices:not([noninteractive]) &::before {
 		left: -1.75ch;
-		top: 0.15em;
+		top: 0.05em;
 	}
 
 	/* Hide the hearts/highlights when choices are forced open */
