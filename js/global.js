@@ -43,7 +43,6 @@ class DialogueSpeaker extends HTMLElement {
 			case "Noelle":
 			case "Kris":
 			case "Lancer":
-			case "Queen":
 				this.classList.add(this.innerText.toLowerCase());
 				break;
 			default:
