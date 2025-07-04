@@ -13,6 +13,10 @@
 	src: url("../assets/fonts/fnt_noelletiny.otf");
 }
 @font-face {
+	font-family: "DeltaFont Comic Sans";
+	src: url("../assets/fonts/fnt_comicsans.otf");
+}
+@font-face {
 	font-family: "OpenDyslexic";
 	src: url("../assets/fonts/OpenDyslexicMono-Regular.otf");
 }
@@ -511,6 +515,10 @@ d-text {
 	&[small] {
 		font-family: "DeltaFont Tiny", var(--font);
 		max-width: 55%;
+	}
+
+	&[sans] {
+		font-family: "DeltaFont Comic Sans", var(--font);
 	}
 
 	&[asterisk] {
