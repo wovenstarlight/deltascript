@@ -160,6 +160,7 @@ header.d-section:has(h1.visually-hidden:only-child) {
 	font-size: 1em;
 	margin: 0 !important;
 	padding: 0 !important;
+	white-space: pre; /* Prevent text wrapping into visibility */
 }
 #back404 {
 	width: calc(100% - (2 * var(--border-width)));
