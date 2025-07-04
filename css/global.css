@@ -564,12 +564,12 @@ d-text {
 		}
 	}
 
-	&[asterisk="Sweet"],
-	&[asterisk="Cap'n"], &[asterisk="Capn"],
-	&[asterisk="K_K"], &[asterisk="KK"],
-	&[asterisk="Happy"], &[asterisk="Nice"],
-	&[asterisk="Mad"], &[asterisk="Mean"],
-	&[asterisk="Sad"], &[asterisk="Shy"] {
+	&[asterisk="Sweet" i],
+	&[asterisk="Cap'n" i], &[asterisk="Capn" i],
+	&[asterisk="K_K" i], &[asterisk="KK" i],
+	&[asterisk="Happy" i], &[asterisk="Nice" i],
+	&[asterisk="Mad" i], &[asterisk="Mean" i],
+	&[asterisk="Sad" i], &[asterisk="Shy" i] {
 		position: relative;
 		padding-inline-start: 1.25em;
 		text-indent: unset;
@@ -586,27 +586,27 @@ d-text {
 		}
 	}
 
-	&:is([asterisk="Sweet"])::before {
+	&:is([asterisk="Sweet" i])::before {
 		background-image: url("../assets/images/faces/sweetcapncakes/sweet.gif");
 		content: "(Sweet)";
 	}
-	&:is([asterisk="Cap'n"], [asterisk="Capn"])::before {
+	&:is([asterisk="Cap'n" i], [asterisk="Capn" i])::before {
 		background-image: url("../assets/images/faces/sweetcapncakes/capn.gif");
 		content: "(Cap'n)";
 	}
-	&:is([asterisk="K_K"], [asterisk="KK"])::before {
+	&:is([asterisk="K_K" i], [asterisk="KK" i])::before {
 		background-image: url("../assets/images/faces/sweetcapncakes/kk.gif");
 		content: "(K_K)";
 	}
-	&:is([asterisk="Happy"], [asterisk="Nice"])::before {
+	&:is([asterisk="Happy" i], [asterisk="Nice" i])::before {
 		background-image: url("../assets/images/faces/clover/happy.png");
 		content: "(Nice)";
 	}
-	&:is([asterisk="Mad"], [asterisk="Mean"])::before {
+	&:is([asterisk="Mad" i], [asterisk="Mean" i])::before {
 		background-image: url("../assets/images/faces/clover/mad.png");
 		content: "(Mean)";
 	}
-	&:is([asterisk="Sad"], [asterisk="Shy"])::before {
+	&:is([asterisk="Sad" i], [asterisk="Shy" i])::before {
 		background-image: url("../assets/images/faces/clover/sad.png");
 		content: "(Shy)";
 	}
