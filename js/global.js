@@ -19,6 +19,12 @@ class DialogueBox extends HTMLElement {
 			this._internals.states.delete("compact");
 		}
 	}
+
+	connectedCallback() {
+		if (this.getAttribute("theme") === "combat" && this.getAttribute("width") !== null) {
+			this.setAttribute("style", `--mywidth: ${this.getAttribute("width")}em`);
+		}
+	}
 }
 customElements.define("d-box", DialogueBox);
 

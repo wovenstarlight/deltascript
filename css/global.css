@@ -17,6 +17,10 @@
 	src: url("../assets/fonts/fnt_comicsans.otf");
 }
 @font-face {
+	font-family: "DeltaFont Combat";
+	src: url("../assets/fonts/fnt_dotumche.otf");
+}
+@font-face {
 	font-family: "OpenDyslexic";
 	src: url("../assets/fonts/OpenDyslexicMono-Regular.otf");
 }
@@ -372,6 +376,31 @@ d-box, d-choices {
 
 		&[theme=dark] {
 			border-image-source: url("../assets/images/textbox/dark.gif");
+		}
+
+		&[theme=combat] {
+			border-image: url("../assets/images/textbox/bubble.png") 6 / 0.375em / 0.375em;
+			background-color: var(--white);
+			color: var(--black);
+			font-family: "DeltaFont Combat", var(--font);
+			font-size: 1em;
+			width: var(--mywidth, 22.4em);
+			display: flex;
+			flex-direction: column;
+
+			d-speaker {
+				color: #966200;
+				display: block;
+				margin-block-end: 0.4em;
+
+				&.kris { color: #3b4380 } /* blended for readability from too-dark DW hair #0b0b3b and too-light DW shadow #6a7bc4 */
+				&.susie { color: #88176a }
+				&.ralsei { color: #38705e }
+				&.noelle { color: #b15d34 } /* darkened for readability from LW skintone #d87d50*/
+				&.berdly { color: #36394b }
+				&.lancer, &.king { color: #406080 }
+				&.queen { color: #1263bc }
+			}
 		}
 
 		&[theme=plain] {
