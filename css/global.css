@@ -378,6 +378,10 @@ d-box, d-choices {
 			border-image-source: url("../assets/images/textbox/dark.gif");
 		}
 
+		&[theme=plain] {
+			border-image-source: url("../assets/images/textbox/plain.png");
+		}
+
 		&[theme=combat] {
 			border-image: url("../assets/images/textbox/bubble.png") 6 / 0.375em / 0.375em;
 			background-color: var(--white);
@@ -403,7 +407,7 @@ d-box, d-choices {
 			}
 		}
 
-		&[theme=plain] {
+		&[theme=fade] {
 			border-image: unset;
 			box-shadow:
 				0 0
