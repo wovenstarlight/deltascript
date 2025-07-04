@@ -12,4 +12,18 @@
 	<script>const BASE_URL = "{{ site.baseurl }}";</script>
 	<script src="{{ 'js/global.js' | relative_url }}"></script>
 	<link rel="shortcut icon" href="{{  '/assets/images/logo-heart.png' | relative_url }}" type="image/x-icon">
+
+	{%- if site.environment == "development" %}
+	<script>
+	// Helpers for figuring out portrait indexes
+	// alpha to numeric for checking the /assets/images/faces folder manually
+	function alphaToNumeric(...chars) {
+		return chars.map(char => "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".indexOf(char));
+	}
+	// numeric to alpha for converting the global.fe values to a \En command
+	function numericToAlpha(...nums) {
+		return nums.map(num => "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".charAt(num));
+	}
+	</script>
+	{%- endif %}
 </head>

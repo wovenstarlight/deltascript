@@ -11,10 +11,10 @@
 				"exec",
 				"jekyll",
 				"serve",
-				// {
-				// 	"value": "${input:configFiles}",
-				// 	"quoting": "escape"
-				// },
+				{
+					"value": "${input:configFiles}",
+					"quoting": "escape"
+				},
 				"${input:unpublishedFlag}",
 				"${input:incrementalFlag}",
 				"${input:liveReloadFlag}"
@@ -40,21 +40,21 @@
 		// }
 	],
 	"inputs": [
-		// {
-		// 	"type": "pickString",
-		// 	"id": "configFiles",
-		// 	"description": "Enable development features?",
-		// 	"options": [
-		// 		{
-		// 			"label": "Yes",
-		// 			"value": "--config _config.yml,_config_dev.yml"
-		// 		},
-		// 		{
-		// 			"label": "No",
-		// 			"value": ""
-		// 		}
-		// 	]
-		// },
+		{
+			"type": "pickString",
+			"id": "configFiles",
+			"description": "Enable development features?",
+			"options": [
+				{
+					"label": "Yes",
+					"value": "--config _config.yml,_config_dev.yml"
+				},
+				{
+					"label": "No",
+					"value": ""
+				}
+			]
+		},
 		{
 			"type": "pickString",
 			"id": "liveReloadFlag",
