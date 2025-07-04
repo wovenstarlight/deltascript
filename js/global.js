@@ -367,6 +367,7 @@ function setUp() {
 		document.getElementById("toggle-compact").checked = true;
 	}
 
+	/*
 	// Dyslexic-friendly font
 	document.getElementById("toggle-opendyslexic").addEventListener("change", e => {
 		if (e.currentTarget.checked) document.body.classList.add("dyslexic");
@@ -379,6 +380,7 @@ function setUp() {
 		// Dyslexic mode has been set to ON
 		document.body.classList.add("dyslexic");
 	}
+	*/
 
 	document.getElementById("open-choices").addEventListener("click", () => {
 		document.querySelectorAll("d-choices").forEach(menu => menu.forced = true);
