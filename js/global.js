@@ -239,6 +239,8 @@ class DialogueChoicesOption extends HTMLElement {
 			});
 			/** Open the panel this tab controls. */
 			const openTab = () => {
+				// Unforce this menu
+				this.menu.forced = false;
 				// Close other panels
 				this.menu.options.forEach(el => {
 					const panel = document.getElementById(el.getAttribute("aria-controls"));
