@@ -18,6 +18,9 @@ sources:
   -
     url: "https://code.deltarune.wiki/ch1/gml_object_obj_schoollobbycutscene_step_0"
     name: gml_Object_obj_schoollobbycutscene_Step_0
+  -
+    url: "https://code.deltarune.wiki/ch1/gml_object_obj_readable_room1_other_10"
+    name: gml_Object_obj_readable_room1_Other_10
 credits: >
   <p>Compiled by wovenstarlight.</p>
 ---
@@ -698,6 +701,22 @@ credits: >
 <section class="d-section" id="corridor">
 	<h2>Entering the corridor</h2>
 
+	<h3>Before partnering with Susie</h3>
+	<p>If you interact with the classroom door in an attempt to leave, before speaking to Noelle and getting assigned Susie as your partner.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Alphys" emotion="1"></d-sprite>
+		<d-text asterisk>Um, Kris, the hope is that you...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Alphys" emotion="0"></d-sprite>
+		<d-text asterisk>... choose someone in the class?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>After partnering with Susie</h3>
+
 	<p class="note">Kris enters the hallway and sees Susie pull out and eat the missing chalk. She turns and walks back towards the class, then stops when she notices them.</p>
 
 	<d-box theme="light">
@@ -898,13 +917,13 @@ credits: >
 		<d-text asterisk>Let's go, freak.</d-text>
 	</d-box>
 
-	<p class="note">Susie heads towards the supply closet. Kris stands up and can follow after her.</p>
+	<p class="note">Susie heads up towards the supply closet. Kris stands up and control is returned to the player.</p>
 
-	<p class="note">At the north corridor, Susie stops to speak to you.</p>
+	<p class="note">Susie stops in the top corridor to speak to you.</p>
 
 	<hr>
 
-	<h3>If you walked</h3>
+	<h4>If you walked</h4>
 	<p>Also plays if you ran (by holding the CANCEL button) less than a certain amount.</p>
 	<!-- if I'm understanding it right, crossing 3px at once adds 1 to the "ran" counter? this triggers if ran < 15 -->
 
@@ -923,7 +942,7 @@ credits: >
 
 	<hr>
 
-	<h3>If you ran</h3>
+	<h4>If you ran</h4>
 	<p>Specifically, if you ran more than a certain amount.</p>
 	<!-- ran >= 15 -->
 
@@ -945,6 +964,98 @@ credits: >
 	<d-box theme="light">
 		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
 		<d-text asterisk>C'mon, freak.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="exploring">
+	<h2>Exploring the corridors</h2>
+	<p>Wandering around before following Susie to the supply closet.</p>
+
+	<h3>Alphys's classroom door</h3>
+	<d-box theme="light">
+		<d-text asterisk>(You look through the frosted window.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(A blurry yellow object is teaching a bunch of blurry bored-looking objects.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Water fountain</h3>
+	
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-text asterisk>(You drank from the water fountain.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="1"></d-sprite>
+		<d-text asterisk>Heheh, people put their mouth on that, ya know.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="9"></d-sprite>
+		<d-text asterisk>That wasn't ENCOURAGEMENT, dumbass!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>East corridor</h3>
+	<p>Walking past the water fountain towards Toriel's classroom.</p>
+
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Kris...?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>What, realized the baby classroom was a better fit for you?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Hey, actually, I should come with you.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="1"></d-sprite>
+		<d-text asterisk>Maybe I'll find a better partner in there.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>... nah, actually, let's not.</d-text>
+	</d-box>
+	
+	<h4>Subsequent times</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Wrong way, Kris.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>South corridor</h3>
+	<p>Walking towards the school doors.</p>
+
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Kris...? You just gonna skip school...?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>What, am I supposed to snitch on YOU?</d-text>
+		<d-text asterisk>That'd be rich, huh?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>... nah, I wouldn't.</d-text>
+		<d-text asterisk>Get back here.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Kris, if you skip school, your mom'll have a heart attack.</d-text>
 	</d-box>
 </section>
 
