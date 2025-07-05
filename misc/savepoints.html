@@ -34,6 +34,16 @@ sources:
     # url: "https://code.deltarune.wiki/ch3/gml_object_obj_savepoint_other_10"
     name: gml_Object_obj_savepoint_Other_10
     note: for save point text
+  -
+    specifier: Chapter 4
+    # url: "https://code.deltarune.wiki/ch4/gml_globalscript_scr_roomname"
+    name: gml_GlobalScript_scr_roomname
+    note: for save point names
+  -
+    specifier: Chapter 4
+    # url: "https://code.deltarune.wiki/ch4/gml_object_obj_savepoint_other_10"
+    name: gml_Object_obj_savepoint_Other_10
+    note: for save point text
 ---
 {% comment %}
 Room IDs retrieved from scr_get_room_list() in gml_GlobalScript_scr_get_room_by_id.gml
@@ -41,7 +51,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 	- Chapter 1: offset by 10281
 	- Chapter 2: offset by 20010
 	- Chapter 3: offset by. Um I'm not sure it's either 29999 or 30001
-	- Chapter 4: offset by 39999 or 40001 >:(
+	- Chapter 4: offset by 39999 or 40000 or 40001 >:(
 {% endcomment -%}
 
 
@@ -63,6 +73,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<h3>Eye Puzzle</h3>
 	<p>Comes after the puzzle with the wobbly things that each shoot three bullets as you pass.</p>
+	<p>Only plays upon first interaction after entering this room.</p>
 
 	<h4>If Kris's HP is below max</h4>
 	<d-box theme="dark">
@@ -227,6 +238,8 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 	</d-box>
 
 	<h4>After retrieving the Card Kingdom residents and before visiting the Cyber World</h4>
+	<p>Only plays upon first interaction after entering this room.</p>
+
 	<d-box theme="dark">
 		<d-text asterisk>The castle town has transformed from the power of friendship.</d-text>
 	</d-box>
@@ -599,4 +612,162 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 	</d-box>
 </section>
 
-{% comment %} TODO: Chapter 4 {% endcomment %}
+<section class="d-section" id="chapter4">
+	<h2>Chapter 4</h2>
+
+	<h3>First interaction with a Light World save point</h3>
+	<p>There are three save points in the Light World - one in Kris's room, one in Noelle's kitchen, and one near QC's Diner. This only plays the first time you interact with one of them.</p>
+
+	<d-box theme="light">
+		<d-text asterisk>(You could barely see it. A patch of sunlight that shouldn't be there.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(It felt different in your hand. And you knew what it was.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>My Castle Town</h3>
+	<p>This narration does not play on the Weird Route.</p>
+
+	<h4>If you didn't recruit everyone in previous chapters</h4>
+	<p>Missing any of the Darkners from Card Kingdom, Cyber World, or TV World.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(Once again you find yourself in a familiar town.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You are filled with the power of conspicuously normal music.)</d-text>
+	</d-box>
+
+	<h4>If you recruited everyone in previous chapters</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Funky music emerges from the cafe and fills the town.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You are filled with the power of funky town.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Dark Sanctuary - Atrium</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(The scent of glass and incense.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(A certain power steels within you.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Dark Sanctuary - Lower Left</h3>
+	<p>Only plays upon first interaction overall, regardless of whether you exit and reenter the room.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(A glass tapestry rings above you. Strangely, no matter how you turn to look...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... its perspective never changes.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Dark Sanctuary - Lower Right</h3>
+	<p>This narration does not play on the Weird Route.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(The old man's existence made you imagine Ralsei with a beard.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You are filled with the power of conceptual bearded Ralsei.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Dark Sanctuary - Study</h3>
+
+	<h4>First time overall</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(The hearth glows brightly, pressing the night's chill away.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You are filled with a certain power.)</d-text>
+	</d-box>
+
+	<h4>Subsequent times, if you know about the axe</h4>
+	<!-- And if you haven't moved on to the 2nd Sanctuary but if you have then that. Y'know. Makes it impossible to use this save point -->
+	<p>This narration does not play on the Weird Route.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(The hearth glows brightly, lighting up the mural above it...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... You are filled with the power of checkable murals.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Dark Sanctuary - Library</h3>
+	<p>Only plays upon first interaction overall. Does not play on the Weird Route.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(Stacks of books, with characters that cannot be read...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You are filled with the power of not actually reading the text.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Dark Sanctuary - Small Piano</h3>
+	<p>Only plays upon first interaction overall.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(Down the corridor, darkness lies in wait...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Shining only in your own eyes, the light defies it.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>2nd Sanctuary - Atrium</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(The lighting has changed.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>2nd Sanctuary - Floor</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(The lighting has changed.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(But the power that fills you, has not.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>2nd Sanctuary - Study</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(The fire has run empty. In its place...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... a stale glow, which offers no warmth.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>3rd Sanctuary</h3>
+	<p>Only plays upon first interaction overall.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(All around you, blue glass glitters like crystals.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(As you approach it, the glowing light shines through them...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... creating a prism only you can see.)</d-text>
+	</d-box>
+</section>
