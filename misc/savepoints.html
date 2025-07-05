@@ -14,6 +14,16 @@ sources:
     url: "https://code.deltarune.wiki/ch1/gml_object_obj_savepoint_other_10"
     name: gml_Object_obj_savepoint_Other_10
     note: for save point text
+  -
+    specifier: Chapter 2
+    url: "https://code.deltarune.wiki/ch2/gml_globalscript_scr_roomname"
+    name: gml_GlobalScript_scr_roomname
+    note: for save point names
+  -
+    specifier: Chapter 2
+    url: "https://code.deltarune.wiki/ch2/gml_object_obj_savepoint_other_10"
+    name: gml_Object_obj_savepoint_Other_10
+    note: for save point text
 ---
 {% comment %}
 Room IDs retrieved from scr_get_room_list() in gml_GlobalScript_scr_get_room_by_id.gml
@@ -192,7 +202,229 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 	</d-box>
 </section>
 
-{% comment %} TODO: Chapter 2 {% endcomment %}
+<section class="d-section" id="chapter2">
+	<h2>Chapter 2</h2>
+
+	<h3 id="ch2castletown">Castle Town</h3>
+
+	<h4>Before retrieving the Card Kingdom residents</h4>
+	<!-- The original "power of this place"/"power of fluffy boys" lines from Chapter 1 are left over here, but there's no save point before the Card Kingdom transformation is triggered so it never plays -->
+	<d-box theme="dark">
+		<d-text asterisk>You look upon the castle you first saw yesterday...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of immediate nostalgia.</d-text>
+	</d-box>
+
+	<h4>After retrieving the Card Kingdom residents and before visiting the Cyber World</h4>
+	<d-box theme="dark">
+		<d-text asterisk>The castle town has transformed from the power of friendship.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of friendship-based architecture.</d-text>
+	</d-box>
+
+	<h4>After returning from the Cyber World</h4>
+	<p>This narration changes on the Weird Route; <a href="#ch2weirdroute">see below</a> for the altered text.</p>
+
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-text asterisk>(You touched the light...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You thought about how you <span class="red">can't go back to the Cyber World</span> anymore.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You considered this carefully!)</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-text asterisk>After a long day, the town has grown once again.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with a certain power...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Cyber Field - Entrance</h3>
+
+	<h4>If you haven't reached Cyber City yet</h4>
+	<d-box theme="dark">
+		<d-text asterisk>A green field extends before you... And, in the distance, a city shines brightly.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of a new adventure.</d-text>
+	</d-box>
+
+	<h4>If you've entered Cyber City before</h4>
+	<d-box theme="dark">
+		<d-text asterisk>A green field extends before you... You've seen this already.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of pointless backtracking.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Cyber Field - Arcade Machine</h3>
+
+	<d-box theme="dark">
+		<d-text asterisk>The game is wrecked. You are filled with the power of videogame violence.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Cyber Field - Music Shop</h3>
+
+	<d-box theme="dark">
+		<d-text asterisk>Crash! Boom! Bang! There's a terrific noise coming from the building nearby...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of noise music.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Cyber City - Entrance</h3>
+
+	<h4>If Kris is alone</h4>
+	<d-box theme="dark">
+		<d-text asterisk>You have neither fluffy boys nor mean girls with you now.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>Reluctantly, you are filled with the power from the cat sign.</d-text>
+	</d-box>
+
+	<h4>If Noelle is in the party</h4>
+	<d-box theme="dark">
+		<d-text asterisk>Noelle is with you now.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are still filled with the power from the cat sign.</d-text>
+	</d-box>
+
+	<h4>If Susie and Ralsei are in the party</h4>
+	<d-box theme="dark">
+		<d-text asterisk>You are mostly filled with the power of fluffy boys and mean girls.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The cat sign still comprises about one percent of it.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Cyber City - First Alleyway</h3>
+
+	<h4>If Noelle is in the party</h4>
+	<d-box theme="dark">
+		<d-text asterisk>Noelle has joined your party.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of not knowing what a sugarplum is.</d-text>
+	</d-box>
+
+	<h4>If Noelle is not in the party</h4>
+	<p>But Susie and Ralsei are!</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>Noelle is no longer in your party. All of you are filled with the power...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>Of not knowing what a sugarplum is.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Cyber City - Music Shop</h3>
+
+	<h4>If you haven't entered Queen's Mansion yet</h4>
+	<d-box theme="dark">
+		<d-text asterisk>Energetic music wafts from the boxes.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of musical bagels.</d-text>
+	</d-box>
+
+	<h4>If you've been to Queen's Mansion before</h4>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of silence.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Cyber City - Second Alleyway</h3>
+	<d-box theme="dark">
+		<d-text asterisk>After defeating Berdly, a certain scent hangs in the air...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of chicken nuggets.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Queen's Mansion - Guest Hall</h3>
+	<d-box theme="dark">
+		<d-text asterisk>You have escaped from your second personalized room of the day.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of vacation homes.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Queen's Mansion - Entrance</h3>
+	<d-box theme="dark">
+		<d-text asterisk>Looking at these legs fills you with a certain power.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Queen's Mansion - 3F</h3>
+	<d-box theme="dark">
+		<d-text asterisk>Susie has gone into a book hole with Berdly.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of book holes.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Queen's Mansion - Acid Tunnel</h3>
+	<d-box theme="dark">
+		<d-text asterisk>Everyone is together, but the wind blows coldly...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with a certain power.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ch2weirdroute">Weird Route differences</h3>
+
+	<h4>Beginning</h4>
+	<p>At the start of the Weird Route, as early as freezing the tutorial Virovirokun, all save point narration disappears. You only get the save menu with no accompanying commentary.</p>
+
+	<h4>After forcefield puzzle</h4>
+	<p>Up until you first enter Queen's Mansion, if Noelle is in the party, any save point will display the following narration:</p>
+	<d-box theme="dark">
+		<d-text asterisk>You and Noelle were filled with power.</d-text>
+	</d-box>
+
+	<h4>Castle Town, after scaring Noelle in the hospital</h4>
+	<p>This accompanies the <a href="#ch2castletown">Castle Town save point</a> after you've closed the Cyber World's Dark Fountain, and overrides the normal text associated with it, including the warning about not being able to return.</p>
+
+	<p>Precondition: In the hospital, when Kris joins Noelle outside Rudy's room, you must scare Noelle by stepping towards her (moving right) thrice.</p>
+	<!-- Triggers when sideb is in phase 4, i.e. when global.plot[915] === 20 -->
+
+	<d-box theme="dark">
+		<d-text asterisk>After a long day, you have returned to the castle town.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>But, you still feel the power in your hands...</d-text>
+	</d-box>
+</section>
 
 {% comment %} TODO: Chapter 3 {% endcomment %}
 
