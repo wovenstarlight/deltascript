@@ -20,7 +20,7 @@ credits: >
 				<td>d-box</td>
 				<td>Text box</td>
 				<td><ul>
-					<li><code>theme = light | dark</code>: Changes the border. If not provided, defaults to <code>light</code>.</li>
+					<li><code>theme = light | dark | blur | plain</code>: Changes the border. If not provided, defaults to <code>light</code>. (Usually you'll just need light/dark. Blur is for text appearing with no border, like the Game Over text or the Vessel Creation's intro. Plain is for when you need a hard edge but no border; this is mostly just available as a fallback.)</li>
 					<li>If small dialogue, then optionally <code>place</code>; may have one or more of the following values, separated by spaces
 						<ul>
 							<li><code>right</code> (default), <code>left</code>, or <code>center-x</code></li>
@@ -78,7 +78,7 @@ credits: >
 				<td>d-choices</td>
 				<td>Choice menu</td>
 				<td><ul>
-					<li><code>theme = light | dark</code>: Changes the border. See <code>d-box</code> above for more.</li>
+					<li><code>theme = light | dark | ...</code>: Changes the border. See <code>d-box</code> above for more.</li>
 					<li><code>class = shift-right | shift-left</code>: For offsetting the heart when the L/R options are too long</li>
 					<li><code>offset</code>: The amount to offset the heart by, in <code>%</code></li>
 					<li><code>noninteractive</code>: If options change nothing, use this attribute and don't include <code>d-option-panel</code>s afterwards</li>
@@ -109,7 +109,7 @@ credits: >
 				<td>Output of a certain choice</td>
 				<td><ul>
 					<li><code>index = 0 | 1 | 2 | 3</code>: Corresponding option's index</li>
-					<li><code>theme = light | dark</code>: Changes the border. See <code>d-box</code> above for more.</li>
+					<li><code>theme = light | dark | ...</code>: Changes the border. See <code>d-box</code> above for more.</li>
 				</ul></td>
 				<td>
 					Pretty much anything. <code>d-box</code>, <code>d-choices</code>, <code>d-option-panel</code>, <code>p.note</code>...
@@ -119,7 +119,7 @@ credits: >
 				<td><code>&lt;p class="note"&gt;</code> (a.k.a. <code>p.note</code>)</td>
 				<td>Annotation</td>
 				<td>None</td>
-				<td>Text</td>
+				<td>Text. Used for clarifying conditions or actions that happen between dialogue.</td>
 			</tr>
 		</tbody>
 	</table>
