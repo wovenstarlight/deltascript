@@ -552,7 +552,7 @@ d-text {
 
 	&[font=tiny] {
 		font-family: "DeltaFont Tiny", var(--font);
-		max-width: 55%;
+		max-width: 61%;
 	}
 
 	&[font=sans] {
