@@ -17,7 +17,14 @@ layout: default
 		<p>Sources:</p>
 		<ul>
 			{%- for source in page.sources %}
-			<li><a href="{{ source.url }}">{{ source.name }}</a></li>
+			<li>
+				<a href="{{ source.url }}">{{ source.name }}</a>
+				{%- if source.specifier != null or source.note != null %} ({% endif -%}
+				{{- source.specifier -}}
+				{%- if source.specifier != null and source.note != null %}, {% endif -%}
+				{{- source.note -}}
+				{%- if source.specifier != null or source.note != null %}){% endif -%}
+			</li>
 			{%- endfor %}
 		</ul>
 	</div>
