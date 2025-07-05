@@ -36,18 +36,21 @@ class DialogueSpeaker extends HTMLElement {
 	}
 
 	connectedCallback() {
-		// Add the corresponding color class where possible
-		switch (this.innerText) {
-			case "Susie":
-			case "Ralsei":
-			case "Noelle":
-			case "Kris":
-			case "Lancer":
-				this.classList.add(this.innerText.toLowerCase());
-				break;
-			default:
-				break;
-		}
+		// setTimeout used to force innerText to be parsed before this is run
+		setTimeout(() => {
+			// Add the corresponding color class where possible
+			switch (this.innerText) {
+				case "Susie":
+				case "Ralsei":
+				case "Noelle":
+				case "Kris":
+				case "Lancer":
+					this.classList.add(this.innerText.toLowerCase());
+					break;
+				default:
+					break;
+			}
+		}, 0);
 	}
 }
 customElements.define("d-speaker", DialogueSpeaker);
