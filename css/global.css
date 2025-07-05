@@ -369,6 +369,8 @@ d-box, d-choices {
 		 * Increase spacing between neighboring boxes to account for border outset */
 		margin: var(--border-width) calc(1.5 * var(--border-width));
 		:is(d-box, d-choices, d-option-panel) + & { margin-block-start: calc((2 * var(--border-width)) + 0.2em) }
+		:is(p, ul) + & { margin-block-start: calc(var(--border-width) + 0.5em) }
+		&:has(+ h2, + h3, + h4, + h5, + h6) { margin-block-end: calc(var(--border-width) + 1em) }
 
 		padding: 0.1em 0.2em;
 		font-size: 1.2em;
