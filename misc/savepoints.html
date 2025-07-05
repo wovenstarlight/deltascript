@@ -24,6 +24,16 @@ sources:
     url: "https://code.deltarune.wiki/ch2/gml_object_obj_savepoint_other_10"
     name: gml_Object_obj_savepoint_Other_10
     note: for save point text
+  -
+    specifier: Chapter 3
+    # url: "https://code.deltarune.wiki/ch3/gml_globalscript_scr_roomname"
+    name: gml_GlobalScript_scr_roomname
+    note: for save point names
+  -
+    specifier: Chapter 3
+    # url: "https://code.deltarune.wiki/ch3/gml_object_obj_savepoint_other_10"
+    name: gml_Object_obj_savepoint_Other_10
+    note: for save point text
 ---
 {% comment %}
 Room IDs retrieved from scr_get_room_list() in gml_GlobalScript_scr_get_room_by_id.gml
@@ -78,7 +88,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 	</d-box>
 
 	<h4>If Kris's HP is at max</h4>
-	
+
 	<d-box theme="dark">
 		<d-text asterisk>You bathed your body in the light.</d-text>
 	</d-box>
@@ -426,6 +436,167 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 	</d-box>
 </section>
 
-{% comment %} TODO: Chapter 3 {% endcomment %}
+<section class="d-section" id="chapter3">
+	<h2>Chapter 3</h2>
+
+	<!-- Again, repeated code from Chapter 2 for the Castle Town save point, but it doesn't trigger because you can't go there in this chapter! -->
+
+	<h3>Dark World</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(A stale wind... you stifle a sneeze.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You are filled with the power of not sneezing.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>TV World - Before the Show</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(You hear the audience whispering in awe at your presence.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You are filled with the power of undeserved fame.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Green Room</h3>
+
+	<h4>After Board 1 (Desert Board)</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Stars ripple on the walls like soft music.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You're filled with the power of relaxation.)</d-text>
+	</d-box>
+
+	<h4>After Board 2 (Island Board)</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(The star pattern scrolls in an endless pattern...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You're filled with the power of tessellation.)</d-text>
+	</d-box>
+
+	<h4>After the Doom Board</h4>
+	<!-- actually it's plot >= 280, once mike has abandoned tenna -->
+	<d-box theme="dark">
+		<d-text asterisk>(After the performance, when all the actors have gone home...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You feel a sense of emptiness.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Cold Place</h3>
+
+	<h4>Before the Doom Board</h4>
+	<!-- actually it's plot < 280, before mike has abandoned tenna -->
+	<d-box theme="dark">
+		<d-text asterisk>(A draft blows, and you feel the cold night's presence.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Still, this never bothered you. In fact...)</d-text>
+	</d-box>
+
+	<h4>After the Doom Board</h4>
+	<!-- actually it's plot >= 280, once mike has abandoned tenna -->
+	<d-box theme="dark">
+		<d-text asterisk>(The wind blows fiercely, as if it fears the night itself.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(The final act draws near.)</d-text>
+	</d-box>
+
+	<h4>After fighting Tenna</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Your hand lingers in the bright light.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(The light, which only you can see...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(A strange calm washes over you.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>TV World - Goulden Sam</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(You are greeted by yet another prisonlike location.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You question why your adventures feature so many of these.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>TV World - Concert</h3>
+
+	<!-- TXX -->
+	<h4>If you destroyed the Shadowguys's contracts</h4>
+	<p>Can be overridden if Shadowguy was LOST after destroying the contracts. See below.</p>
+	<p></p>
+	<p class="note">Shadowguys are playing saxophones on stage.</p>
+	<p class="note">The crowd is present if less than 5 Darkners have been LOST in the TV World.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(You hear a jazz concert only consisting of saxophones.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You are filled with the power of everyone playing a solo at once.)</d-text>
+	</d-box>
+
+	<!-- FXX -->
+	<h4>(UNUSED) If you haven't destroyed the Shadowguys's contracts</h4>
+	<p>Included for completion, but in any case where it would play, it gets overriden by the two following sections' narration.</p>
+	<p></p>
+	<p class="note">The crowd is present if less than 5 Darkners have been LOST in the TV World.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's a concert, but everyone that would play is working.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You are vicariously filled with the power of all work and no play.)</d-text>
+	</d-box>
+
+	<!-- XFT -->
+	<h4>If you haven't destroyed the Shadowguys's contracts or Shadowguy has been LOST, and less than 5 Darkners (including Shadowguy) have been LOST</h4>
+	<p>Also plays if you've destroyed the Shadowguys's contracts before they were LOST.</p>
+	<p></p>
+	<p class="note">The performers are absent, but the crowd is present.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's a concert, but no one is here to play.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You are filled with the power of a crowd cheering for noone.)</d-text>
+	</d-box>
+
+	<!-- XFF -->
+	<h4>If 5 or more TV World Darkners (including Shadowguy) have been LOST</h4>
+	<p>Also plays if you've destroyed the Shadowguys's contracts before they were LOST.</p>
+	<p></p>
+	<p class="note">Both performers and crowd are absent.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's a concert, but no one has shown up.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You question if a concert can be a concert if no one is there.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>TV World - Cooking Show</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(The incense of hot snacks and spicy flavors assaults you.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You are filled with the power of the primal invention of fire.)</d-text>
+	</d-box>
+</section>
 
 {% comment %} TODO: Chapter 4 {% endcomment %}
