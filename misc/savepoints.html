@@ -1,0 +1,199 @@
+---
+title: Save points
+description: >
+  <p>Narration that accompanies save points.</p>
+  <p>Save points not listed here have no additional text accompanying the save menu.</p>
+sources:
+  -
+    specifier: Chapter 1
+    url: "https://code.deltarune.wiki/ch1/gml_globalscript_scr_roomname"
+    name: gml_GlobalScript_scr_roomname
+    note: for save point names
+  -
+    specifier: Chapter 1
+    url: "https://code.deltarune.wiki/ch1/gml_object_obj_savepoint_other_10"
+    name: gml_Object_obj_savepoint_Other_10
+    note: for save point text
+---
+{% comment %}
+Room IDs retrieved from scr_get_room_list() in gml_GlobalScript_scr_get_room_by_id.gml
+Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs gathered above, offset by the following values (subtract this from the IDs in scr_get_room_list() to find the correct value for scr_roomname)
+	- Chapter 1: offset by 10281
+	- Chapter 2: offset by 20010
+	- Chapter 3: offset by. Um I'm not sure it's either 29999 or 30001
+	- Chapter 4: offset by 39999 or 40001 >:(
+{% endcomment -%}
+
+
+
+<section class="d-section" id="chapter1">
+	<h2>Chapter 1</h2>
+
+	<h3>??????</h3>
+
+	<d-box theme="dark">
+		<d-text asterisk>At times, you see it flickering.</d-text>
+		<d-text asterisk>The light only you can see.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>By second nature, you reach out, and...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Eye Puzzle</h3>
+	<p>Comes after the puzzle with the wobbly things that each shoot three bullets as you pass.</p>
+
+	<h4>If Kris's HP is below max</h4>
+	<d-box theme="dark">
+		<d-text asterisk>You bathed your body in the light.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>A power shines within you, breaking through the darkness.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The pain you had melted away...</d-text>
+		<d-text asterisk>(HP fully restored.)</d-text>
+	</d-box>
+
+	<h4>If Kris's HP is below 30</h4>
+	<p>The "spores" don't do enough damage to lower Kris's HP this much unless you reenter the room and get hit multiple times.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>For some reason, you punished yourself with the spores.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The light relieves you...</d-text>
+		<d-text asterisk>(HP fully restored.)</d-text>
+	</d-box>
+
+	<h4>If Kris's HP is at max</h4>
+	
+	<d-box theme="dark">
+		<d-text asterisk>You bathed your body in the light.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>A power shines within you, breaking through the darkness.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>Any pain you may have had melted away...</d-text>
+		<d-text asterisk>(HP fully restored.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Castle Town</h3>
+
+	<h4>Before Ralsei joins the party</h4>
+	<d-box theme="dark">
+		<d-text asterisk>In front of you, a castle looms beneath the empty town.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>A black geyser emerges from it, piercing endlessly into the sky.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The power of this place shines within you.</d-text>
+	</d-box>
+
+	<h4>After Ralsei joins the party</h4>
+
+	<d-box theme="dark">
+		<d-text asterisk>Ralsei, the lonely prince, is now your ally.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The power of fluffy boys shines within you.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Field - Great Door</h3>
+
+	<h4>Before Susie "joins" the party</h4>
+	<d-box theme="dark">
+		<d-text asterisk>With the door closed behind you, your adventure will truly begin...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The power of adventure shines within you.</d-text>
+	</d-box>
+
+	<h4>After Susie "joins" the party</h4>
+	<d-box theme="dark">
+		<d-text asterisk>The door is still closed.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The power of backtracking shines within you.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Field - Seam's Shop</h3>
+
+	<h4>If Susie is in the party</h4>
+	<d-box theme="dark">
+		<d-text asterisk>Susie, the violet tormentor, is now your ally.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The power of mean girls shines within you.</d-text>
+	</d-box>
+
+	<h4>If Susie is not in the party</h4>
+	<d-box theme="dark">
+		<d-text asterisk>Susie, the violet tormentor, left your party immediately.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The power of mean girls does not shine within you.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Field - Great Board</h3>
+
+	<h4>Picked Susie's team name</h4>
+	<d-box theme="dark">
+		<d-text asterisk>The power of The $!$? Squad shines within you.</d-text>
+	</d-box>
+
+	<h4>Picked Lancer's team name</h4>
+	<d-box theme="dark">
+		<d-text asterisk>The power of The Lancer Fan Club shines within you.</d-text>
+	</d-box>
+
+	<h4>Picked Ralsei's team name</h4>
+	<d-box theme="dark">
+		<d-text asterisk>The power of The Fun Gang shines within you.</d-text>
+	</d-box>
+
+	<h4>Error</h4>
+	<p class="note">Displays if your team name choice wasn't stored properly.</p>
+	<d-box theme="dark">
+		<d-text asterisk>The power of failing to name your team shines within you.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Forest - Entrance</h3>
+
+	<d-box theme="dark">
+		<d-text asterisk>The blocky foliage grows thick above your head...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The power of the forest shines within you.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Forest - Bake Sale</h3>
+
+	<d-box theme="dark">
+		<d-text asterisk>In the heart of the woods, a bake sale stands quietly.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The power of reoccurring bake sales shines within you.</d-text>
+	</d-box>
+</section>
+
+{% comment %} TODO: Chapter 2 {% endcomment %}
+
+{% comment %} TODO: Chapter 3 {% endcomment %}
+
+{% comment %} TODO: Chapter 4 {% endcomment %}
