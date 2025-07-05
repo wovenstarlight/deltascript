@@ -53,7 +53,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* Southwest - Graveyard
 		* Far south - Bunker
 		* QUESTION: where to put interactions that happen in the streets... do the streets themselves need pages.
-			* by "interactions in the streets" i mean things like. sans outside the grocery store. rain kid playing in the puddles. the milk sicko being like Damn your family is messy as hell
+			* by "interactions in the streets" i mean things like. sans outside the grocery store. rain kid playing in the puddles. the milk sicko being like "Damn your family is messy as hell" in chapter 4
 			* could put them under the building they're closest to...? But what if they're like. Not directly related to the building. I'm thinking about chapter 2 undyne "handling" the traffic jam next to the library. That wasn't involved with any nearby building
 	* Dark Worlds
 		* `/cardkingdom` - Chapter 1 dark world
@@ -73,3 +73,11 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* `/chapter5`
 	* `/chapter6`
 	* `/chapter7`
+* Miscellaneous pages... `/misc`
+	* `/items` - Consumables, key items, etc. Descriptions, usage text and reactions from the party members. Shop descriptions too, if we can find them? Light World equivalents also get listed, either alongside the Dark World items or in a separate section/page (with equivalents crosslinking to each other).
+	* `/equipment` - Weapons and armor. Descriptions, reactions from the party members, shop descriptions. LW/DW equivalents.
+	* `/combat` - Encounters... Check descriptions, ACT descriptions, etc. This is probably gonna have a ton of subpages, I'd guess one for every potential enemy. At the very least, the big story-critical encounters (e.g. all boss fights) would need their own subpages which the `/chapters` pages could then link to.
+	* `/savepoints` - Youuuu guessed it. Save point text. The power of X fills you and all that.
+	* Maybe something for general menu text...?
+	* AH... TITLES... the whole, Level 1 Dark Knight stuff.
+	* Oh also. Death messages. Hello again ch3 Voice
