@@ -43,16 +43,8 @@
 	/* Custom */
 	--gray: #aaa;
 	--lightyellow: #ffff80;
-
-	/* Disable anti-aliasing to get that pixel look on all images
-	Retrieved from https://forum.squarespace.com/topic/240034-how-to-disable-anti-aliasing-site-wide-for-pixel-art/ */
-	image-rendering: optimizeSpeed;				/* STOP SMOOTHING, GIVE ME SPEED	*/
-	image-rendering: -moz-crisp-edges;			/* Firefox							*/
-	image-rendering: -o-crisp-edges;			/* Opera							*/
-	image-rendering: -webkit-optimize-contrast;	/* Chrome (and eventually Safari)	*/
-	image-rendering: pixelated;					/* Universal support since 2021		*/
-	image-rendering: optimize-contrast;			/* CSS3 Proposed					*/
-	-ms-interpolation-mode: nearest-neighbor;	/* IE8+								*/
+	/* Don't smooth pixels */
+	image-rendering: pixelated;
 }
 h1, h2, h3, h4, h5, h6 { font-weight: normal }
 h2, h3, h4, h5, h6 {
