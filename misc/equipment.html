@@ -1,0 +1,302 @@
+---
+title: Equipment
+description: >
+  <p>Names, descriptions, and reactions to weapons and armor equippable by the party members.</p>
+# Want to get stuff from the latest chapter because that'll also have all the equipment from previous chapters
+sources:
+  -
+    specifier: Chapter 4
+    # url: "https://code.deltarune.wiki/ch4/gml_globalscript_scr_weaponinfo"
+    name: gml_GlobalScript_scr_weaponinfo
+  -
+    specifier: Chapter 4
+    # url: "https://code.deltarune.wiki/ch4/gml_globalscript_scr_armorinfo"
+    name: gml_GlobalScript_scr_armorinfo
+  -
+    specifier: Chapter 4
+    # url: "https://code.deltarune.wiki/ch4/gml_object_obj_darkcontroller_step_0"
+    name: gml_Object_obj_darkcontroller_Step_0
+---
+{% comment %}
+The value of global.submenu controls which editor you're in:
+	- 12 is weapon slot
+	- 13 is armor slot 1
+	- 14 is armor slot 2
+
+weaponchar#temp/armorchar#temp = 1 if the character corresponding to # can equip this weapon/armor, and 0 if not
+wwho is who you're trying to equip the weapon/armor to
+"#" and wwho use the same 1-4 <=> Kris/Susie/Ralsei/Noelle ordering as always
+{% endcomment -%}
+
+
+
+<section class="d-section" id="swords">
+	<h2>Kris's swords</h2>
+
+	<h3>Wood Blade</h3>
+
+	<h4>Description</h4>
+	<d-box theme="equipmenu">
+		<d-text>A wooden practice blade with a carbon-reinforced core.</d-text>
+	</d-box>
+
+	<h4>Reactions</h4>
+	<p>When trying to equip to other party members.</p>
+
+	<h5>Susie</h5>
+	<h6>Before Ralsei first joins the party</h6>
+	<d-box theme="equipreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... You have a SWORD!?</d-text>
+	</d-box>
+
+	<h6>After Ralsei first joins the party</h6>
+	<d-box theme="equipreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>What's this!? A CHOPSTICK?</d-text>
+	</d-box>
+
+	<h5>Ralsei</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>That's yours, Kris...</d-text>
+	</d-box>
+
+	<h5>Noelle</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(It has bite marks...)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3>Spookysword</h3>
+
+	<h4>Description</h4>
+	<d-box theme="equipmenu">
+		<d-text>A black-and-orange sword with a bat hilt.</d-text>
+	</d-box>
+
+	<h4>Reactions</h4>
+
+	<h5>Susie</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Ugh, it's too small!</d-text>
+	</d-box>
+
+	<h5>Ralsei</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Oh, it's too scary!</d-text>
+	</d-box>
+
+	<h5>Noelle</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(It's kinda cool...)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3>Trefoil</h3>
+	<p>Unused, but included for completion.</p>
+
+	<h4>Description</h4>
+	<d-box theme="equipmenu">
+		<d-text>Mossy rapier with a clover emblem.</d-text>
+		<d-text>Increases $ found by 5%.</d-text>
+	</d-box>
+
+	<h4>Reactions</h4>
+
+	<h5>Susie</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>That tacky thing? No!</d-text>
+	</d-box>
+
+	<h5>Ralsei</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Not my shade of green...</d-text>
+	</d-box>
+
+	<h5>Noelle</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Okay! ...? What do you mean, unused!?</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3>Twisted Sword</h3>
+
+	<h4>Description</h4>
+	<d-box theme="equipmenu">
+		<d-text>A strange blade</d-text>
+	</d-box>
+
+	<h4>Reactions</h4>
+
+	<h5>Susie</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... uhh, looks bad.</d-text>
+	</d-box>
+
+	<h5>Ralsei</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It's like a spiral.</d-text>
+	</d-box>
+
+	<h5>Noelle</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>It's... kind of scary...</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3>Bounce Blade</h3>
+
+	<h4>Description</h4>
+	<d-box theme="equipmenu">
+		<d-text>A pink saber with a rubber blade.</d-text>
+		<d-text>Weak, but increases defence.</d-text>
+	</d-box>
+
+	<h4>Reactions</h4>
+
+	<h5>Susie</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>What is this, rubber?</d-text>
+	</d-box>
+
+	<h5>Ralsei</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Soft and squishy!</d-text>
+	</d-box>
+
+	<h5>Noelle</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>S-stop thwacking me!</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3>Mecha Saber</h3>
+
+	<h4>Description</h4>
+	<d-box theme="equipmenu">
+		<d-text>The blade extends when you press the hilt. CHA-CHK!</d-text>
+	</d-box>
+
+	<h4>Reactions</h4>
+
+	<h5>Susie</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>*chk chk chk chk* Nah.</d-text>
+	</d-box>
+
+	<h5>Ralsei</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>You'd look cool holding it, Kris!</d-text>
+	</d-box>
+
+	<h5>Noelle</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>*chk* A-AHH! Scared myself...</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3>Saber 10</h3>
+
+	<h4>Description</h4>
+	<d-box theme="equipmenu">
+		<d-text>A saber made of 10 cactus needles.</d-text>
+		<d-text>Fortunately, can deal more than 10 damage.</d-text>
+	</d-box>
+
+	<h4>Reactions</h4>
+
+	<h5>Susie</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Nah, I'd snap it.</d-text>
+	</d-box>
+
+	<h5>Ralsei</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>You want to... pierce my ears...?</d-text>
+	</d-box>
+
+	<h5>Noelle</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(I'm not against using it, but...)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3>Winglade</h3>
+
+	<h4>Description</h4>
+	<d-box theme="equipmenu">
+		<d-text>A majestic sword with a white feathered hilt.</d-text>
+		<d-text>Slightly increases money won.</d-text>
+	</d-box>
+
+	<h4>Reactions</h4>
+
+	<h5>Susie</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Don't make me sneeze!</d-text>
+	</d-box>
+
+	<h5>Ralsei</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Th-that tickles!</d-text>
+	</d-box>
+
+	<h5>Noelle</h5>
+	<d-box theme="equipreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>... whose feather is this?</d-text>
+	</d-box>
+</section>
+
+{% comment %} TODO: Susie's axes {% endcomment %}
+
+{% comment %} TODO: Ralsei's scarves {% endcomment %}
+
+{% comment %} TODO: Noelle's rings {% endcomment %}
+
+{% comment %} TODO: Other weapons {% endcomment %}
+
+{% comment %} TODO: Armors {% endcomment %}
