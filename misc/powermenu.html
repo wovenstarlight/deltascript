@@ -1,7 +1,6 @@
 GATHERED THE DATA!! just gotta figure out how to format this as an HTML page
 
 All chars get Attack, Defense, Magic, Custom stat 1, Custom stat 2, Guts. Any custom stat slot not being used displays as ???
-In ch2, level is 2 at start; changes to 3 after fountain is sealed. this number "falselv" replaces the ~1 in the ch2 level strings
 sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 
 gotta add each character's SPELLS section also... pull names/costs from gml_GlobalScript_scr_spellinfo
@@ -10,15 +9,28 @@ or do we want to save that for a separate page...?
 <section class="d-section" id="kris">
 	<h2>Kris</h2>
 
-	<h3 id="kris-1">Chapter 1</h3>
-	<p class="note">Before ralsei joins party</p>
-	<p>LV1 Human#Body contains a#human SOUL.</p>
+	<h3 id="kris1">Chapter 1</h3>
 
-	<p class="note">after ralsei joins party</p>
-	<p>LV1 Leader#Commands the party#with various ACTs.</p>
+	<h4>Title</h4>
+	<h5>Initial</h5>
+	<d-box theme="powertitle">
+		<d-text>LV1 Human</d-text>
+		<d-text>Body contains a<span class="break"></span> human SOUL.</d-text>
+	</d-box>
 
-	<p class="note">if inspected all four beds</p>
-	<p>LV1 Bed Inspector#Inspects all beds#inexplicably.</p>
+	<h5>After Ralsei joins the party</h5>
+	<d-box theme="powertitle">
+		<d-text>LV1 Leader</d-text>
+		<d-text>Commands the party<span class="break"></span> with various ACTs.</d-text>
+	</d-box>
+
+	<h5>After inspecting all 4 beds in Hathy's room in Card Castle</h5>
+	<d-box theme="powertitle">
+		<d-text>LV1 Bed Inspector</d-text>
+		<d-text>Inspects all beds<span class="break"></span> inexplicably.</d-text>
+	</d-box>
+
+	<h4>Stats</h4>
 
 	<p>2% chance of "Dog: [spr_dog_sleep]"; 98% chance of ???</p>
 	<p>???</p>
@@ -26,22 +38,43 @@ or do we want to save that for a separate page...?
 
 	<hr>
 
-	<h3 id="kris-2">Chapter 2</h3>
+	<h3 id="kris2">Chapter 2</h3>
 
-	<p class="note">default</p>
-	<p>LV~1 Leader#Commands the party#with various ACTs.</p>
+	<h4>Title</h4>
+	<p>The LV value is 2 at the start of the chapter and changes to 3 after the Cyber World's Dark Fountain is sealed. It is represented by a "#" in this section.</p>
 
-	<p class="note">after others learn to act</p>
-	<p>LV~1 Tactician#Commands the party#by ACTs. Sometimes.</p>
+	<h5>Initial</h5>
+	<d-box theme="powertitle">
+		<d-text>LV2 Leader</d-text>
+		<d-text>Commands the party<span class="break"></span> with various ACTs.</d-text>
+	</d-box>
 
-	<p class="note">inspected all beds</p>
-	<p>LV~1 Bed Inspector#Inspects all beds#inexplicably.</p>
+	<h5>After Susie and Ralsei learn S-Action/R-Action</h5>
+	<d-box theme="powertitle">
+		<d-text>LV# Tactician</d-text>
+		<d-text>Commands the party<span class="break"></span> by ACTs. Sometimes.</d-text>
+	</d-box>
 
-	<p class="note">got ch2 moss</p>
-	<p>LV~1 Moss Finder#Basic moss-finding#abilities.</p>
+	<h5>After inspecting all beds in Castle Town and Noelle's bed in Queen's Mansion</h5>
+	<p>Requires you to continue a save file from Chapter 1 while possessing the Bed Inspector title.</p>
+	<d-box theme="powertitle">
+		<d-text>LV# Bed Inspector</d-text>
+		<d-text>Inspects all beds<span class="break"></span> inexplicably.</d-text>
+	</d-box>
 
-	<p class="note">made any progress on weird route, even just killing the first virovirokun</p>
-	<p>LV~1 Leader#Commands.</p>
+	<h5>After finding the moss in Cyber City</h5>
+	<d-box theme="powertitle">
+		<d-text>LV# Moss Finder</d-text>
+		<d-text>Basic moss-finding<span class="break"></span> abilities.</d-text>
+	</d-box>
+
+	<h5>After starting the Weird Route</h5>
+	<d-box theme="powertitle">
+		<d-text>LV# Leader</d-text>
+		<d-text>Commands.</d-text>
+	</d-box>
+
+	<h4>Stats</h4>
 
 	<p>96% chance of ???; 4% chance of "Dog: [spr_dog_sleep]"</p>
 	<p>???</p>
@@ -49,28 +82,52 @@ or do we want to save that for a separate page...?
 
 	<hr>
 
-	<h3 id="kris-3">Chapter 3</h3>
+	<h3 id="kris3">Chapter 3</h3>
 
-	<p class="note">default</p>
-	<p>LV3 Tactician#Commands the party#by ACTs.</p>
+	<h4>Title</h4>
 
-	<p class="note">After escaping Tenna</p>
-	<p>LV3 Director#Moves the actors#around.</p>
+	<h5>Initial</h5>
+	<d-box theme="powertitle">
+		<d-text>LV3 Tactician</d-text>
+		<d-text>Commands the party<span class="break"></span> by ACTs.</d-text>
+	</d-box>
 
-	<p class="note">got ch3 moss</p>
-	<p>LV3 Moss Mystery#Intermediate moss#skills.</p>
+	<h5>After escaping Tenna</h5>
+	<d-box theme="powertitle">
+		<d-text>LV3 Director</d-text>
+		<d-text>Moves the actors<span class="break"></span> around.</d-text>
+	</d-box>
 
-	<p class="note">if got ice key on sword route board 1</p>
-	<p>LV3 Blazer#Specializes in#sword attacks.</p>
+	<h5>After finding the moss on Board 2</h5>
+	<d-box theme="powertitle">
+		<d-text>LV3 Moss Mystery</d-text>
+		<d-text>Intermediate moss<span class="break"></span> skills.</d-text>
+	</d-box>
 
-	<p class="note">if got shelter key on sword route board 2</p>
-	<p>LV3 Ice Blazer#Specializes in#sword attacks.</p>
+	<h5>After finishing Sword Route's Board 1</h5>
+	<d-box theme="powertitle">
+		<d-text>LV3 Blazer</d-text>
+		<d-text>Specializes in<span class="break"></span> sword attacks.</d-text>
+	</d-box>
 
-	<p class="note">if beat mantle holder on sword route board 3</p>
-	<p>LV3 Sheath#Breath quickens#around swords.</p>
+	<h5>After finishing Sword Route's Board 2</h5>
+	<d-box theme="powertitle">
+		<d-text>LV3 Ice Blazer</d-text>
+		<d-text>Specializes in<span class="break"></span> sword attacks.</d-text>
+	</d-box>
 
-	<p class="note">if has ch3 egg</p>
-	<p>LV3 Enjoying#the youthful#days.</p>
+	<h5>After beating the Shadow Mantle Holder</h5>
+	<d-box theme="powertitle">
+		<d-text>LV3 Sheath</d-text>
+		<d-text>Breath quickens<span class="break"></span> around swords.</d-text>
+	</d-box>
+
+	<h5>After finding the Egg</h5>
+	<d-box theme="powertitle">
+		<d-text>LV3 Enjoying<span class="break"></span> the youthful<span class="break"></span> days.</d-text>
+	</d-box>
+
+	<h4>Stats</h4>
 
 	<p>96% chance of ???; 4% chance of "Dog: [spr_dog_sleep]"</p>
 	<p>If made any kills on sword route, *: Sword route kill count, clamped to 0 and 9999; otherwise ???</p>
@@ -78,16 +135,29 @@ or do we want to save that for a separate page...?
 
 	<hr>
 
-	<h3 id="kris-4">Chapter 4</h3>
+	<h3 id="kris4">Chapter 4</h3>
 
-	<p class="note">default</p>
-	<p>LV4 Dark Hero#Carries out fate#with the blade.</p>
+	<h4>Title</h4>
 
-	<p class="note">if got all mosses (ch1-4)</p>
-	<p>LV4 Moss Most#Munched the most#moist mosses.</p>
+	<h5>Initial</h5>
+	<d-box theme="powertitle">
+		<d-text>LV4 Dark Hero</d-text>
+		<d-text>Carries out fate<span class="break"></span> with the blade.</d-text>
+	</d-box>
 
-	<p class="note">if on weird route</p>
-	<p>LV4 Dark Bead#Broken off,#but still locked.</p>
+	<h5>After finding all moss in this and previous chapters</h5>
+	<d-box theme="powertitle">
+		<d-text>LV4 Moss Most</d-text>
+		<d-text>Munched the most<span class="break"></span> moist mosses.</d-text>
+	</d-box>
+
+	<h5>If on the Weird Route</h5>
+	<d-box theme="powertitle">
+		<d-text>LV4 Dark Bead</d-text>
+		<d-text>Broken off,<span class="break"></span> but still locked.</d-text>
+	</d-box>
+
+	<h4>Stats</h4>
 
 	<p>???</p>
 	<p>4% chance of "Dog: [spr_dog_sleeping]"; otherwise, Slain: # or Purify: # if you've encountered the titan spawn; otherwise ???</p>
@@ -98,12 +168,22 @@ or do we want to save that for a separate page...?
 <section class="d-section" id="susie">
 	<h2>Susie</h2>
 
-	<h3 id="susie-1">Chapter 1</h3>
-	<p class="note">before sparing lancer</p>
-	<p>LV1 Mean Girl#Won't do anything#but fight.</p>
+	<h3 id="susie1">Chapter 1</h3>
 
-	<p class="note">after sparing lancer</p>
-	<p>LV1 Dark Knight#Does damage using#dark energy.</p>
+	<h4>Title</h4>
+	<h5>Initial</h5>
+	<d-box theme="powertitle">
+		<d-text>LV1 Mean Girl</d-text>
+		<d-text>Won't do anything<span class="break"></span> but fight.</d-text>
+	</d-box>
+
+	<h5>After sparing Lancer</h5>
+	<d-box theme="powertitle">
+		<d-text>LV1 Dark Knight</d-text>
+		<d-text>Does damage using<span class="break"></span> dark energy.</d-text>
+	</d-box>
+
+	<h4>Stats</h4>
 
 	<p>Rudeness: 100 before sparing Lancer; 99 after sparing Lancer</p>
 	<p>Crudeness: 100 if not picked $!$? Squad as team name; 101 if you did</p>
@@ -111,16 +191,30 @@ or do we want to save that for a separate page...?
 
 	<hr>
 
-	<h3 id="susie-2">Chapter 2</h3>
+	<h3 id="susie2">Chapter 2</h3>
 
-	<p class="note">default</p>
-	<p>LV~1 Dark Knight#Does damage using#dark energy.</p>
+	<h4>Title</h4>
+	<p>The LV value is 2 at the start of the chapter and changes to 3 after the Cyber World's Dark Fountain is sealed. It is represented by a "#" in this section.</p>
 
-	<p class="note">after ralsei teaches susie healing</p>
-	<p>LV~1 Healing Master#Can use ultimate#healing. (Losers!)</p>
+	<h5>Initial</h5>
+	<d-box theme="powertitle">
+		<d-text>LV# Dark Knight</d-text>
+		<d-text>Does damage using<span class="break"></span> dark energy.</d-text>
+	</d-box>
 
-	<p class="note">if susie had moss with kris</p>
-	<p>LV~1 Moss Enjoyer#Supports those#that find moss.</p>
+	<h5>After Ralsei teaches Susie healing</h5>
+	<d-box theme="powertitle">
+		<d-text>LV# Healing Master</d-text>
+		<d-text>Can use ultimate<span class="break"></span> healing. (Losers!)</d-text>
+	</d-box>
+
+	<h5>If you find the moss with Susie in the party</h5>
+	<d-box theme="powertitle">
+		<d-text>LV# Moss Enjoyer</d-text>
+		<d-text>Supports those<span class="break"></span> that find moss.</d-text>
+	</d-box>
+
+	<h4>Stats</h4>
 
 	<p>Rudeness: 89</p>
 	<p>Purple: Yes</p>
@@ -128,13 +222,23 @@ or do we want to save that for a separate page...?
 
 	<hr>
 
-	<h3 id="susie-3">Chapter 3</h3>
+	<h3 id="susie3">Chapter 3</h3>
 
-	<p class="note">default</p>
-	<p>LV3 Dark Knight#Does damage using#dark energy.</p>
+	<h4>Title</h4>
 
-	<p class="note">after escaped tenna</p>
-	<p>LV3 Dark Actor#Participates in#occult ACTs.</p>
+	<h5>Initial</h5>
+	<d-box theme="powertitle">
+		<d-text>LV3 Dark Knight</d-text>
+		<d-text>Does damage using<span class="break"></span> dark energy.</d-text>
+	</d-box>
+
+	<h5>After escaping Tenna</h5>
+	<d-box theme="powertitle">
+		<d-text>LV3 Dark Actor</d-text>
+		<d-text>Participates in<span class="break"></span> occult ACTs.</d-text>
+	</d-box>
+
+	<h4>Stats</h4>
 
 	<p>Rudeness: 100</p>
 	<p>Plucked: # of times grass plucked, clamped to 0 and 99; if 0, instead shows ???</p>
@@ -142,13 +246,23 @@ or do we want to save that for a separate page...?
 
 	<hr>
 
-	<h3 id="susie-4">Chapter 4</h3>
+	<h3 id="susie4">Chapter 4</h3>
 
-	<p class="note">default</p>
-	<p>LV4 Dark Hero#Carries out fate#with the blade.</p>
+	<h4>Title</h4>
 
-	<p class="note">if justice axe has been obtained</p>
-	<p>LV4 Axe of Justice#Faces fate#with the blade.</p>
+	<h5>Initial</h5>
+	<d-box theme="powertitle">
+		<d-text>LV4 Dark Hero</d-text>
+		<d-text>Carries out fate<span class="break"></span> with the blade.</d-text>
+	</d-box>
+
+	<h5>After obtaining the Justice Axe</h5>
+	<d-box theme="powertitle">
+		<d-text>LV4 Axe of Justice</d-text>
+		<d-text>Faces fate<span class="break"></span> with the blade.</d-text>
+	</d-box>
+
+	<h4>Stats</h4>
 
 	<p>Rudeness: 100</p>
 	<p>Healcount calculated by formula (5 times Susie.Magic) + 15 + (2 times (ultrahealuses capped at 15)), or if won against Gerson then (10 times Susie.Magic) + (2 times (ultrahealuses capped at 15)); this stat displays as ??? if healcount is 0, otherwise Healing: healcount</p>
@@ -159,15 +273,28 @@ or do we want to save that for a separate page...?
 <section class="d-section" id="ralsei">
 	<h2>Ralsei</h2>
 
-	<h3 id="ralsei-1">Chapter 1</h3>
-	<p class="note">start</p>
-	<p>LV1 Lonely Prince#Dark-World being.#Has no subjects.</p>
+	<h3 id="ralsei1">Chapter 1</h3>
 
-	<p class="note">equipped ragger</p>
-	<p>LV1 Prickly Prince#Deals damage with#his rugged scarf.</p>
+	<h4>Title</h4>
+	<h5>Initial</h5>
+	<d-box theme="powertitle">
+		<d-text>LV1 Lonely Prince</d-text>
+		<d-text>Dark-World being.<span class="break"></span> Has no subjects.</d-text>
+	</d-box>
 
-	<p class="note">equipped Dainty Scarf</p>
-	<p>LV1 Fluffy Prince#Weak, but has nice#healing powers.</p>
+	<h5>While Ragger is equipped</h5>
+	<d-box theme="powertitle">
+		<d-text>LV1 Prickly Prince</d-text>
+		<d-text>Deals damage with<span class="break"></span> his rugged scarf.</d-text>
+	</d-box>
+
+	<h5>While Dainty Scarf is equipped</h5>
+	<d-box theme="powertitle">
+		<d-text>LV1 Fluffy Prince</d-text>
+		<d-text>Weak, but has nice<span class="break"></span> healing powers.</d-text>
+	</d-box>
+
+	<h4>Stats</h4>
 
 	<p>98% chance of Kindness: 100; 2% chance of Dogness: 1</p>
 	<p>Fluffiness: 1 (2 if equipped Dainty Scarf)</p>
@@ -175,22 +302,42 @@ or do we want to save that for a separate page...?
 
 	<hr>
 
-	<h3 id="ralsei-2">Chapter 2</h3>
+	<h3 id="ralsei2">Chapter 2</h3>
 
-	<p class="note">default</p>
-	<p>LV~1 Dark Prince#Dark-World being.#Has friends now.</p>
+	<h4>Title</h4>
+	<p>The LV value is 2 at the start of the chapter and changes to 3 after the Cyber World's Dark Fountain is sealed. It is represented by a "#" in this section.</p>
 
-	<p class="note">if kris hugged ralsei during photo</p>
-	<p>LV~1 Hug Prince#Receives and#gives many hugs.</p>
+	<h5>Initial</h5>
+	<d-box theme="powertitle">
+		<d-text>LV# Dark Prince</d-text>
+		<d-text>Dark-World being.<span class="break"></span> Has friends now.</d-text>
+	</d-box>
 
-	<p class="note">if kris made peace sign during photo</p>
-	<p>LV~1 Pose Prince#Poses for photos#at times.</p>
+	<h5>If Kris hugged Ralsei during the photo</h5>
+	<d-box theme="powertitle">
+		<d-text>LV# Hug Prince</d-text>
+		<d-text>Receives and<span class="break"></span> gives many hugs.</d-text>
+	</d-box>
 
-	<p class="note">if kris made rude gesture during photo</p>
-	<p>LV~1 Rude Prince#Friends with a#rude gesturer.</p>
+	<h5>If Kris made a peace sign during the photo</h5>
+	<d-box theme="powertitle">
+		<d-text>LV# Pose Prince</d-text>
+		<d-text>Poses for photos<span class="break"></span> at times.</d-text>
+	</d-box>
 
-	<p class="note">if kris didn't pose during photo</p>
-	<p>LV~1 Blank Prince#Doesn't even#have a photo.</p>
+	<h5>If Kris made a rude gesture during the photo</h5>
+	<d-box theme="powertitle">
+		<d-text>LV# Rude Prince</d-text>
+		<d-text>Friends with a<span class="break"></span> rude gesturer.</d-text>
+	</d-box>
+
+	<h5>If Kris didn't pose for the photo</h5>
+	<d-box theme="powertitle">
+		<d-text>LV# Blank Prince</d-text>
+		<d-text>Doesn't even<span class="break"></span> have a photo.</d-text>
+	</d-box>
+
+	<h4>Stats</h4>
 
 	<p>Sweetness: 97</p>
 	<p>Fluffiness: 2</p>
@@ -198,22 +345,41 @@ or do we want to save that for a separate page...?
 
 	<hr>
 
-	<h3 id="ralsei-3">Chapter 3</h3>
+	<h3 id="ralsei3">Chapter 3</h3>
 
-	<p class="note">default</p>
-	<p>LV3 Dark Prince#Dark-World being.#Has friends, but...</p>
+	<h4>Title</h4>
 
-	<p class="note">after escaped tenna</p>
-	<p>LV3 Dark Actor#Has issues with#method acting.</p>
+	<h5>Initial</h5>
+	<d-box theme="powertitle">
+		<d-text>LV3 Dark Prince</d-text>
+		<d-text>Dark-World being.<span class="break"></span> Has friends, but...</d-text>
+	</d-box>
 
-	<p class="note">post second shooting minigame, before ralsei takes off costume</p>
-	<p>LV3 Horse#Is a horse.</p>
+	<h5>After escaping Tenna</h5>
+	<d-box theme="powertitle">
+		<d-text>LV3 Dark Actor</d-text>
+		<d-text>Has issues with<span class="break"></span> method acting.</d-text>
+	</d-box>
 
-	<p class="note">after ralsei takes off costume</p>
-	<p>LV3 Ex-Horse#Was a horse at#some point.</p>
+	<h5>After the second cowboy minigame, while Ralsei's still wearing the horse costume</h5>
+	<d-box theme="powertitle">
+		<d-text>LV3 Horse</d-text>
+		<d-text>Is a horse.</d-text>
+	</d-box>
 
-	<p class="note">after fighting tenna</p>
-	<p>LV3 Dark Prince#Dark-World being.#Has friends.</p>
+	<h5>After Ralsei takes off the horse costume</h5>
+	<d-box theme="powertitle">
+		<d-text>LV3 Ex-Horse</d-text>
+		<d-text>Was a horse at<span class="break"></span> some point.</d-text>
+	</d-box>
+
+	<h5>After fighting Tenna</h5>
+	<d-box theme="powertitle">
+		<d-text>LV3 Dark Prince</d-text>
+		<d-text>Dark-World being.<span class="break"></span> Has friends.</d-text>
+	</d-box>
+
+	<h4>Stats</h4>
 
 	<p>Carried: # of times Ralsei got picked up, clamped to 0 and 99; if 0, instead shows ???</p>
 	<p>Fluffiness: 1</p>
@@ -221,13 +387,23 @@ or do we want to save that for a separate page...?
 
 	<hr>
 
-	<h3 id="ralsei-4">Chapter 4</h3>
+	<h3 id="ralsei4">Chapter 4</h3>
 
-	<p class="note">default</p>
-	<p>LV4 Dark Hero#Records and faces#the fate.</p>
+	<h4>Title</h4>
 
-	<p class="note">if in room_dw_church_bookcase and you've seen ralsei's stool form</p>
-	<p>LV4 Stool Boy#Boy with stool#like abilities.</p>
+	<h5>Initial</h5>
+	<d-box theme="powertitle">
+		<d-text>LV4 Dark Hero</d-text>
+		<d-text>Records and faces<span class="break"></span> the fate.</d-text>
+	</d-box>
+
+	<h5>While in the bookshelf room outside the old man's study, after Ralsei executes Magical Stool Forme R</h5>
+	<d-box theme="powertitle">
+		<d-text>LV4 Stool Boy</d-text>
+		<d-text>Boy with stool<span class="break"></span> like abilities.</d-text>
+	</d-box>
+
+	<h4>Stats</h4>
 
 	<p>???</p>
 	<p>Fluffiness: 1</p>
@@ -238,19 +414,35 @@ or do we want to save that for a separate page...?
 <section class="d-section" id="noelle">
 	<h2>Noelle</h2>
 
-	<h3 id="noelle-2">Chapter 2</h3>
+	<h3 id="noelle2">Chapter 2</h3>
 
-	<p class="note">default</p>
-	<p>LV1 Snowcaster#Might be able to#use some cool moves.</p>
+	<h4>Title</h4>
 
-	<p class="note">if used iceshock at least once</p>
-	<p>LV~1 Frostmancer#Freezes the enemy.</p>
+	<h5>Initial</h5>
+	<d-box theme="powertitle">
+		<d-text>LV1 Snowcaster</d-text>
+		<d-text>Might be able to<span class="break"></span> use some cool moves.</d-text>
+	</d-box>
 
-	<p class="note">if equipped thornring</p>
-	<p>LV~1 Ice Trancer#Receives pain to#become stronger.</p>
+	<h5>After using IceShock for the first time</h5>
+	<d-box theme="powertitle">
+		<d-text>LV2 Frostmancer</d-text>
+		<d-text>Freezes the enemy.</d-text>
+	</d-box>
 
-	<p class="note">if noelle present for kris eating moss, and no weird route progress made</p>
-	<p>LV~1 Moss Neutral#Neither chaotic nor#lawful to moss.</p>
+	<h5>While ThornRing is equipped</h5>
+	<d-box theme="powertitle">
+		<d-text>LV2 Ice Trancer</d-text>
+		<d-text>Receives pain to<span class="break"></span> become stronger.</d-text>
+	</d-box>
+
+	<h5>If you find the moss while Noelle is in the party, and you aren't on the Weird Route</h5>
+	<d-box theme="powertitle">
+		<d-text>LV2 Moss Neutral</d-text>
+		<d-text>Neither chaotic nor<span class="break"></span> lawful to moss.</d-text>
+	</d-box>
+
+	<h4>Stats</h4>
 
 	<p>Coldness: minimum 47, increases by 7 for each use of IceShock up to a maximum of 100</p>
 	<p>Boldness: formula is -12 + ((global.plot - 70) * 3), clamped at 100 but it never gets that high</p>
