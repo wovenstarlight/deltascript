@@ -388,17 +388,17 @@ d-box, d-choices {
 			border-image-source: url("../assets/images/textbox/dark.gif");
 		}
 
-		&[theme=plain], &[theme=equipmenu] {
+		&[theme=plain], &[theme=objmenu] {
 			border-image-source: url("../assets/images/textbox/plain.png");
 		}
 
-		&[theme^=equip] { width: 26.4em }
+		&[theme^=obj] { width: 26.4em }
 
-		&[theme^=equip], &[theme^=power] {
+		&[theme^=obj], &[theme^=power] {
 			font-family: "DeltaFont Condensed", var(--font);
 		}
 
-		&[theme=equipreact] {
+		&[theme=objreact] {
 			display: flex;
 			align-items: center;
 			border-image-source: url("../assets/images/textbox/plain.png");
