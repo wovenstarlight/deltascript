@@ -467,6 +467,9 @@ d-box, d-choices {
 			/* For boxes with small dialogues, add spacing so dialogue doesn't overlap. ...too much, at least. */
 			&:has(d-box) { min-height: 4.5em }
 		}
+
+		/* Forced line break */
+		.break { display: block }
 	}
 
 	&:state(compact) {
@@ -720,9 +723,6 @@ d-choices {
 			bottom: -0.2em;
 		}
 	}
-
-	/* Forced line break */
-	.break { display: block }
 
 	/* Asterisk marker */
 	.conditional {
