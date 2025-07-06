@@ -384,7 +384,7 @@ d-box, d-choices {
 		background-color: var(--black);
 		border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width) / var(--border-width);
 
-		&[theme=dark] {
+		&[theme=dark], &[theme^=power] {
 			border-image-source: url("../assets/images/textbox/dark.gif");
 		}
 
@@ -392,8 +392,9 @@ d-box, d-choices {
 			border-image-source: url("../assets/images/textbox/plain.png");
 		}
 
-		&[theme=equipmenu], &[theme=equipreact] {
-			width: 26.4em;
+		&[theme^=equip] { width: 26.4em }
+
+		&[theme^=equip], &[theme^=power] {
 			font-family: "DeltaFont Condensed", var(--font);
 		}
 
@@ -426,6 +427,8 @@ d-box, d-choices {
 
 			d-text { margin-inline-start: 1ch }
 		}
+
+		&[theme=powertitle] { width: 11em }
 
 		&[theme=combat] {
 			border-image: url("../assets/images/textbox/bubble.png") 6 / 0.375em / 0.375em;
