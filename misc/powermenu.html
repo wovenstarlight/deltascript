@@ -1,0 +1,271 @@
+GATHERED THE DATA!! just gotta figure out how to format this as an HTML page
+
+All chars get Attack, Defense, Magic, Custom stat 1, Custom stat 2, Guts. Any custom stat slot not being used displays as ???
+In ch2, level is 2 at start; changes to 3 after fountain is sealed. this number "falselv" replaces the ~1 in the ch2 level strings
+sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
+
+gotta add each character's SPELLS section also... pull names/costs from gml_GlobalScript_scr_spellinfo
+
+<section class="d-section" id="kris">
+	<h2>Kris</h2>
+
+	<h3 id="kris-1">Chapter 1</h3>
+	<p class="note">Before ralsei joins party</p>
+	<p>LV1 Human#Body contains a#human SOUL.</p>
+
+	<p class="note">after ralsei joins party</p>
+	<p>LV1 Leader#Commands the party#with various ACTs.</p>
+
+	<p class="note">if inspected all four beds</p>
+	<p>LV1 Bed Inspector#Inspects all beds#inexplicably.</p>
+
+	<p>2% chance of "Dog: [spr_dog_sleep]"; 98% chance of ???</p>
+	<p>???</p>
+	<p>Guts: 1</p>
+
+	<hr>
+
+	<h3 id="kris-2">Chapter 2</h3>
+
+	<p class="note">default</p>
+	<p>LV~1 Leader#Commands the party#with various ACTs.</p>
+
+	<p class="note">after others learn to act</p>
+	<p>LV~1 Tactician#Commands the party#by ACTs. Sometimes.</p>
+
+	<p class="note">inspected all beds</p>
+	<p>LV~1 Bed Inspector#Inspects all beds#inexplicably.</p>
+
+	<p class="note">got ch2 moss</p>
+	<p>LV~1 Moss Finder#Basic moss-finding#abilities.</p>
+
+	<p class="note">made any progress on weird route, even just killing the first virovirokun</p>
+	<p>LV~1 Leader#Commands.</p>
+
+	<p>97% chance of ???; 3% chance of "Dog: [spr_dog_sleep]"</p>
+	<p>???</p>
+	<p>Guts: 2</p>
+
+	<hr>
+
+	<h3 id="kris-3">Chapter 3</h3>
+
+	<p class="note">default</p>
+	<p>LV3 Tactician#Commands the party#by ACTs.</p>
+
+	<p class="note">After escaping Tenna</p>
+	<p>LV3 Director#Moves the actors#around.</p>
+
+	<p class="note">got ch3 moss</p>
+	<p>LV3 Moss Mystery#Intermediate moss#skills.</p>
+
+	<p class="note">if got ice key on sword route board 1</p>
+	<p>LV3 Blazer#Specializes in#sword attacks.</p>
+
+	<p class="note">if got shelter key on sword route board 2</p>
+	<p>LV3 Ice Blazer#Specializes in#sword attacks.</p>
+
+	<p class="note">if beat mantle holder on sword route board 3</p>
+	<p>LV3 Sheath#Breath quickens#around swords.</p>
+
+	<p class="note">if has ch3 egg</p>
+	<p>LV3 Enjoying#the youthful#days.</p>
+
+	<p>97% chance of ???; 3% chance of "Dog: [spr_dog_sleep]"</p>
+	<p>If made any kills on sword route, *: Sword route kill count, clamped to 0 and 9999; otherwise ???</p>
+	<p>Guts: 2</p>
+
+	<hr>
+
+	<h3 id="kris-4">Chapter 4</h3>
+
+	<p class="note">default</p>
+	<p>LV4 Dark Hero#Carries out fate#with the blade.</p>
+
+	<p class="note">if got all mosses (ch1-4)</p>
+	<p>LV4 Moss Most#Munched the most#moist mosses.</p>
+
+	<p class="note">if on weird route</p>
+	<p>LV4 Dark Bead#Broken off,#but still locked.</p>
+
+	<p>???</p>
+	<p>3% chance of "Dog: [spr_dog_sleeping]"; otherwise, Slain: # or Purify: # if you've encountered the titan spawn; otherwise ???</p>
+	<p>Guts: 3</p>
+</section>
+
+
+<section class="d-section" id="susie">
+	<h2>Susie</h2>
+
+	<h3 id="susie-1">Chapter 1</h3>
+	<p class="note">before sparing lancer</p>
+	<p>LV1 Mean Girl#Won't do anything#but fight.</p>
+
+	<p class="note">after sparing lancer</p>
+	<p>LV1 Dark Knight#Does damage using#dark energy.</p>
+
+	<p>Rudeness: 100 before sparing Lancer; 99 after sparing Lancer</p>
+	<p>Crudeness: 100 if not picked $!$? Squad as team name; 101 if you did</p>
+	<p>Guts: 2</p>
+
+	<hr>
+
+	<h3 id="susie-2">Chapter 2</h3>
+
+	<p class="note">default</p>
+	<p>LV~1 Dark Knight#Does damage using#dark energy.</p>
+
+	<p class="note">after ralsei teaches susie healing</p>
+	<p>LV~1 Healing Master#Can use ultimate#healing. (Losers!)</p>
+
+	<p class="note">if susie had moss with kris</p>
+	<p>LV~1 Moss Enjoyer#Supports those#that find moss.</p>
+
+	<p>Rudeness: 89</p>
+	<p>Purple: Yes</p>
+	<p>Guts: 2</p>
+
+	<hr>
+
+	<h3 id="susie-3">Chapter 3</h3>
+
+	<p class="note">default</p>
+	<p>LV3 Dark Knight#Does damage using#dark energy.</p>
+
+	<p class="note">after escaped tenna</p>
+	<p>LV3 Dark Actor#Participates in#occult ACTs.</p>
+
+	<p>Rudeness: 100</p>
+	<p>Plucked: # of times grass plucked, clamped to 0 and 99; if 0, instead shows ???</p>
+	<p>Guts: 3</p>
+
+	<hr>
+
+	<h3 id="susie-4">Chapter 4</h3>
+
+	<p class="note">default</p>
+	<p>LV4 Dark Hero#Carries out fate#with the blade.</p>
+
+	<p class="note">if justice axe has been obtained</p>
+	<p>LV4 Axe of Justice#Faces fate#with the blade.</p>
+
+	<p>Rudeness: 100</p>
+	<p>Healcount calculated by formula (5 times Susie.Magic) + 15 + (2 times (ultrahealuses capped at 15)), or if won against Gerson then (10 times Susie.Magic) + (2 times (ultrahealuses capped at 15)); this stat displays as ??? if healcount is 0, otherwise Healing: healcount</p>
+	<p>Guts: 4</p>
+</section>
+
+
+<section class="d-section" id="ralsei">
+	<h2>Ralsei</h2>
+
+	<h3 id="ralsei-1">Chapter 1</h3>
+	<p class="note">start</p>
+	<p>LV1 Lonely Prince#Dark-World being.#Has no subjects.</p>
+
+	<p class="note">equipped ragger</p>
+	<p>LV1 Prickly Prince#Deals damage with#his rugged scarf.</p>
+
+	<p class="note">equipped Dainty Scarf</p>
+	<p>LV1 Fluffy Prince#Weak, but has nice#healing powers.</p>
+
+	<p>98% chance of Kindness: 100; 2% chance of Dogness: 1</p>
+	<p>Fluffiness: 1 (2 if equipped Dainty Scarf)</p>
+	<p>Guts: 0</p>
+
+	<hr>
+
+	<h3 id="ralsei-2">Chapter 2</h3>
+
+	<p class="note">default</p>
+	<p>LV~1 Dark Prince#Dark-World being.#Has friends now.</p>
+
+	<p class="note">if kris hugged ralsei during photo</p>
+	<p>LV~1 Hug Prince#Receives and#gives many hugs.</p>
+
+	<p class="note">if kris made peace sign during photo</p>
+	<p>LV~1 Pose Prince#Poses for photos#at times.</p>
+
+	<p class="note">if kris made rude gesture during photo</p>
+	<p>LV~1 Rude Prince#Friends with a#rude gesturer.</p>
+
+	<p class="note">if kris didn't pose during photo</p>
+	<p>LV~1 Blank Prince#Doesn't even#have a photo.</p>
+
+	<p>Sweetness: 97</p>
+	<p>Fluffiness: 2</p>
+	<p>Guts: 0</p>
+
+	<hr>
+
+	<h3 id="ralsei-3">Chapter 3</h3>
+
+	<p class="note">default</p>
+	<p>LV3 Dark Prince#Dark-World being.#Has friends, but...</p>
+
+	<p class="note">after escaped tenna</p>
+	<p>LV3 Dark Actor#Has issues with#method acting.</p>
+
+	<p class="note">post second shooting minigame, before ralsei takes off costume</p>
+	<p>LV3 Horse#Is a horse.</p>
+
+	<p class="note">after ralsei takes off costume</p>
+	<p>LV3 Ex-Horse#Was a horse at#some point.</p>
+
+	<p class="note">after fighting tenna</p>
+	<p>LV3 Dark Prince#Dark-World being.#Has friends.</p>
+
+	<p>Carried: # of times Ralsei got picked up, clamped to 0 and 99; if 0, instead shows ???</p>
+	<p>Fluffiness: 1</p>
+	<p>Guts: 1</p>
+
+	<hr>
+
+	<h3 id="ralsei-4">Chapter 4</h3>
+
+	<p class="note">default</p>
+	<p>LV4 Dark Hero#Records and faces#the fate.</p>
+
+	<p class="note">if in room_dw_church_bookcase and you've seen ralsei's stool form</p>
+	<p>LV4 Stool Boy#Boy with stool#like abilities.</p>
+
+	<p>???</p>
+	<p>Fluffiness: 1</p>
+	<p>Guts: 0</p>
+</section>
+
+
+<section class="d-section" id="noelle">
+	<h2>Noelle</h2>
+
+	<h3 id="noelle-2">Chapter 2</h3>
+
+	<p class="note">default</p>
+	<p>LV1 Snowcaster#Might be able to#use some cool moves.</p>
+
+	<p class="note">if used iceshock at least once</p>
+	<p>LV~1 Frostmancer#Freezes the enemy.</p>
+
+	<p class="note">if equipped thornring</p>
+	<p>LV~1 Ice Trancer#Receives pain to#become stronger.</p>
+
+	<p class="note">if noelle present for kris eating moss, and no weird route progress made</p>
+	<p>LV~1 Moss Neutral#Neither chaotic nor#lawful to moss.</p>
+
+	<p>Coldness: minimum 47, increases by 7 for each use of IceShock up to a maximum of 100</p>
+	<p>Boldness: formula is -12 + ((global.plot - 70) * 3), clamped at 100 but it never gets that high</p>
+	<ul>
+		<li>starts at -12</li>
+		<li>-6 after first mouse puzzle</li>
+		<li>3 after berdly statue first seen</li>
+		<li>9 after second mouse puzzle</li>
+		<li>12 after third mouse puzzle</li>
+		<li>15 after fighting berdly with noelle</li>
+		<li>18 after "car game"(?)</li>
+		<li>33 after beating spamton</li>
+		<li>48 after leaving car</li>
+		<li>60 after DECEMBER</li>
+		<li>63 after full party together</li>
+		<li>75 after captured by queen</li>
+	</ul>
+	<p>Guts: 0</p>
+</section>
