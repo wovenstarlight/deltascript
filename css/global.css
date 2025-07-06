@@ -9,6 +9,10 @@
 	src: url("../assets/fonts/fnt_main.otf");
 }
 @font-face {
+	font-family: "DeltaFont Condensed";
+	src: url("../assets/fonts/fnt_main_condensed.otf");
+}
+@font-face {
 	font-family: "DeltaFont Tiny";
 	src: url("../assets/fonts/fnt_noelletiny.otf");
 }
@@ -384,8 +388,43 @@ d-box, d-choices {
 			border-image-source: url("../assets/images/textbox/dark.gif");
 		}
 
-		&[theme=plain] {
+		&[theme=plain], &[theme=equipmenu] {
 			border-image-source: url("../assets/images/textbox/plain.png");
+		}
+
+		&[theme=equipmenu], &[theme=equipreact] {
+			width: 26.4em;
+			font-family: "DeltaFont Condensed", var(--font);
+		}
+
+		&[theme=equipreact] {
+			display: flex;
+			align-items: center;
+			border-image-source: url("../assets/images/textbox/plain.png");
+			min-height: unset;
+			padding: 0;
+
+			d-speaker {
+				display: block;
+				font-size: 0;
+
+				&::before {
+					content: "";
+					display: block;
+					margin: -0.5rem 0;
+					--size: 2rem;
+					width: var(--size);
+					height: var(--size);
+					background: center / contain no-repeat;
+				}
+
+				&.kris::before { background-image: url("../assets/images/faces/kris/battle.png") }
+				&.susie::before { background-image: url("../assets/images/faces/susie/battle.png") }
+				&.ralsei::before { background-image: url("../assets/images/faces/ralsei/battle.png") }
+				&.noelle::before { background-image: url("../assets/images/faces/noelle/battle.png") }
+			}
+
+			d-text { margin-inline-start: 1ch }
 		}
 
 		&[theme=combat] {
