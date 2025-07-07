@@ -74,7 +74,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* `/chapter6`
 	* `/chapter7`
 * Miscellaneous pages... `/misc`
-	* `/items` - Consumables, key items, etc. Descriptions, usage text and reactions from the party members. Shop descriptions too, if we can find them? Light World equivalents also get listed, either alongside the Dark World items or in a separate section/page (with equivalents crosslinking to each other).
+	* `/darkitems` - Consumables, key items, etc. Descriptions, usage text and reactions from the party members. Shop descriptions too, if we can find them?
+	* ~~`/lightitems` - Light World items. Crosslink to Dark World equivalents.~~ DONE up to Chapter 4
 	* ~~`/equipment` - Weapons and armor. Descriptions, reactions from the party members, shop descriptions. LW/DW equivalents.~~ DONE up to Chapter 4
 	* `/combat` - Encounters... Check descriptions, ACT descriptions, etc. This is probably gonna have a ton of subpages, I'd guess one for every potential enemy. At the very least, the big story-critical encounters (e.g. all boss fights) would need their own subpages which the `/chapters` pages could then link to.
 	* ~~`/savepoints` - Youuuu guessed it. Save point text. The power of X fills you and all that.~~ DONE up to Chapter 4

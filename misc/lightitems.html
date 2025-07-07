@@ -1,0 +1,771 @@
+---
+title: Light World items
+description: >
+  <p>Descriptions and usage/drop text for Light World items.</p>
+sources:
+  -
+    name: gml_GlobalScript_scr_litemname
+    chapters: [1, 2, 3, 4]
+    note: Names
+  -
+    name: gml_GlobalScript_scr_litemdesc
+    chapters: [1, 2, 3, 4]
+    note: INFO text
+  -
+    name: gml_GlobalScript_scr_litemuseb
+    chapters: [1, 2, 3, 4]
+    note: USE text
+  -
+    name: gml_GlobalScript_scr_lrecoitem
+    chapters: [1, 2, 3, 4]
+    note: Bandage's healing message
+  -
+    name: gml_Object_obj_overworldc_Step_0
+    chapters: [1, 2, 3, 4]
+    note: DROP text
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [1, 2, 3, 4]
+    note: Ball of Junk's DROP warning
+---
+
+<section class="d-section" id="shared">
+	<h2>Shared text</h2>
+	<p>Text that's identical for all items, unless specified otherwise in their sections.</p>
+
+	<h3>Dropping an item</h3>
+	<h4>Normal</h4>
+	<d-box theme="light">
+		<d-text asterisk>The [ITEM] was thrown away.</d-text>
+	</d-box>
+
+	<h4>Rare messages</h4>
+	<p>There is a 4 in 30 chance that the normal drop text will be overridden by one of the following messages:</p>
+
+	<d-box theme="light">
+		<d-text asterisk>You bid a quiet farewell to the [ITEM].</d-text>
+	</d-box>
+
+	<d-box theme="light">
+		<d-text asterisk>You put the [ITEM] on the ground and gave it a little pat.</d-text>
+	</d-box>
+
+	<d-box theme="light">
+		<d-text asterisk>You threw the [ITEM] on the ground like the piece of trash it is.</d-text>
+	</d-box>
+
+	<d-box theme="light">
+		<d-text asterisk>You abandoned the [ITEM].</d-text>
+	</d-box>
+
+	<h4>Attempting to drop a weapon</h4>
+	<p>During Chapter 4.</p>
+	<d-box theme="light">
+		<d-text asterisk>(Recently, seems like weapons can't be thrown away so easily.)</d-text>
+	</d-box>
+</section>
+
+
+<section class="d-section" id="hotchocolate"> <!-- id 1 -->
+	<h2>Hot Chocolate</h2>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Hot Chocolate" - Topped with home-made marshmallows in the shape of bunnies.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>You drank the hot chocolate.</d-text>
+		<d-text asterisk>It tasted wonderful.</d-text>
+		<d-text asterisk>Your throat tightened...</d-text>
+	</d-box>
+</section>
+
+
+<section class="d-section" id="pencil"> <!-- id 2 -->
+	<h2>Pencil</h2>
+	<p>Light World equivalent of the <a href="{{ '/misc/equipment#woodblade' | relative_url }}">Wood Blade</a>.</p>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Pencil" - Weapon 1 AT</d-text>
+		<d-text asterisk>Mightier than a sword?</d-text>
+		<d-text asterisk>Maybe equal at best.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>You equipped the Pencil.</d-text>
+	</d-box>
+	<p class="note">The Pencil switches places with the previously equipped weapon.</p>
+</section>
+
+
+<section class="d-section" id="bandage"> <!-- id 3 -->
+	<h2>Bandage</h2>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Bandage" - Heals 10 HP</d-text>
+		<d-text asterisk>It has cartoon characters on it.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<p class="note">The Bandage is removed from the inventory and replaced by the previously equipped armor.</p>
+
+	<h4>If Kris's HP was 18 or less</h4>
+	<d-box theme="light">
+		<d-text asterisk>You re-applied the bandage.</d-text>
+		<d-text asterisk>You recovered 1 HP!</d-text>
+	</d-box>
+	<p class="note">Kris's HP goes up by one.</p>
+
+	<h4>If Kris's HP was at 19 or higher</h4>
+	<d-box theme="light">
+		<d-text asterisk>You re-applied the bandage.</d-text>
+		<d-text asterisk>Your HP was maxed out.</d-text>
+	</d-box>
+</section>
+
+
+<section class="d-section" id="bouquet"> <!-- id 4 -->
+	<h2>Bouquet</h2>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Bouquet" - A bouquet of beautiful flowers in many colors.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>Perhaps it could be offered to someone.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>You held out the flowers.</d-text>
+		<d-text asterisk>A floral scent fills the air.</d-text>
+		<d-text asterisk>Nothing happened.</d-text>
+	</d-box>
+</section>
+
+
+<section class="d-section" id="ballofjunk"> <!-- id 5 -->
+	<h2>Ball of Junk</h2>
+	<p>Light World equivalent of your Dark World inventory.</p>
+
+	<h3>Info</h3>
+	<h4>During Chapter 1</h4>
+	<d-box theme="light">
+		<d-text asterisk>"Ball of Junk" - A small ball of accumulated things.</d-text>
+	</d-box>
+	<p class="note">If you have Dark Candy in your Dark World inventory, the following text also plays:</p>
+	<d-box theme="light">
+		<d-text asterisk>It smells like scratch'n'sniff marshmallow stickers.</d-text>
+	</d-box>
+
+	<h4>Chapter 2 onwards</h4>
+	<d-box theme="light">
+		<d-text asterisk>"Ball of Junk" - A small ball of accumulated things in your pocket.</d-text>
+	</d-box>
+	<p class="note">If you have Dark Candy in your Dark World inventory, the following text also plays:</p>
+	<d-box theme="light">
+		<d-text asterisk>It smells like scratch'n'sniff marshmallow stickers.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>You looked at the junk ball in admiration.</d-text>
+		<d-text asterisk>Nothing happened.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Drop</h3>
+	<h4>During Chapter 1</h4>
+	<d-box theme="light">
+		<d-text asterisk>You really didn't want to throw it away.</d-text>
+	</d-box>
+	<h4>Chapter 2 onwards</h4>
+	<d-box theme="light">
+		<d-text asterisk>You took it from your pocket.</d-text>
+		<d-text asterisk>You have a <span class="yellow">very, very, bad feeling</span> about throwing it away.</d-text>
+	</d-box>
+	<hr>
+	<d-box theme="light">
+		<d-text asterisk>Throw it away anyway?</d-text>
+	</d-box>
+	<d-choices theme="light">
+		<d-option index="0" text="No"></d-option>
+		<d-option index="1" text="Yes"></d-option>
+	</d-choices>
+	<d-option-panel index="0">
+		<d-box theme="light">
+			<d-text asterisk>You felt a feeling of relief.</d-text>
+		</d-box>
+		<p class="note">The Ball of Junk remains in your inventory.</p>
+	</d-option-panel>
+	<d-option-panel index="1">
+		<d-box theme="light">
+			<d-text asterisk>Hand shaking, you dropped the ball of junk on the ground.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-text asterisk>It broke into pieces.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-text asterisk>You felt bitter.</d-text>
+		</d-box>
+		<p class="note">The Ball of Junk is removed from your inventory. Your Dark World inventory is emptied.</p>
+	</d-option-panel>
+</section>
+
+
+<section class="d-section" id="halloweenpencil"> <!-- id 6 -->
+	<h2>Halloween Pencil</h2>
+	<p>Light World equivalent of the <a href="{{ '/misc/equipment#spookysword' | relative_url }}">Spookysword</a>.</p>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Halloween Pencil" - Weapon 1 AT</d-text>
+		<d-text asterisk>Orange with black bats on it.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>You equipped the Halloween Pencil.</d-text>
+	</d-box>
+	<p class="note">The Halloween Pencil switches places with the previously equipped weapon.</p>
+</section>
+
+
+<section class="d-section" id="luckypencil"> <!-- id 7 -->
+	<h2>Lucky Pencil</h2>
+	<p>Unused item that's not available in the playable game, but included for completion. Light World equivalent of the <a href="{{ '/misc/equipment#trefoil' | relative_url }}">Trefoil</a>.</p>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Lucky Pencil" - Weapon 1 AT</d-text>
+		<d-text asterisk>Covered in green clovers and rainbows.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>You equipped the Lucky Pencil.</d-text>
+	</d-box>
+	<p class="note">The Lucky Pencil switches places with the previously equipped weapon.</p>
+</section>
+
+
+<section class="d-section" id="egg"> <!-- id 8 -->
+	<h2>Egg</h2>
+	<p>Light World equivalent of the <a href="{{ '/misc/darkitems#egg' | relative_url }}">Egg (Dark World)</a>.</p>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Egg" - Not too important, not too unimportant.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>You used the Egg.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Drop</h3>
+	<d-box theme="light">
+		<d-text asterisk>What Egg?</d-text>
+	</d-box>
+	<p class="note">The Egg is removed from the inventory.</p>
+</section>
+
+
+<section class="d-section" id="cards"> <!-- id 9 -->
+	<h2>Cards</h2>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Cards" - The Jack of Spades, and the Rules Card.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>You held the cards.</d-text>
+		<d-text asterisk>They felt flimsy between your fingers.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Drop</h3>
+	<d-box theme="light">
+		<d-text asterisk>(You fumbled and caught them. You can't throw these away!)</d-text>
+	</d-box>
+	<p class="note">The Cards remain in your inventory.</p>
+</section>
+
+
+<section class="d-section" id="boxofheartcandy"> <!-- id 10 -->
+	<h2>Box of Heart Candy</h2>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Box of Heart Candy" - It's not yours. Will that stop you?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<h4>If standing near Alphys</h4>
+	<d-box theme="light">
+		<d-text asterisk>(You could give Alphys the chocolate if you talk to her.)</d-text>
+	</d-box>
+	<p class="note">The Box remains in your inventory.</p>
+
+	<h4>If standing near Sans</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Sans" emotion="0"></d-sprite>
+		<d-text asterisk>what? a heart shaped box of chocolates?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Sans" emotion="3"></d-sprite>
+		<d-text asterisk>oh, i get it.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Sans" emotion="2"></d-sprite>
+		<d-text asterisk>heh.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Sans" emotion="2"></d-sprite>
+		<d-text asterisk>wow.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Sans" emotion="0"></d-sprite>
+		<d-text asterisk>you're really...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Sans" emotion="0"></d-sprite>
+		<d-text asterisk>hm.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Sans" emotion="1"></d-sprite>
+		<d-text asterisk>alright, alright.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Sans" emotion="0"></d-sprite>
+		<d-text asterisk>... okay.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Sans" emotion="3"></d-sprite>
+		<d-text asterisk>you wanna make a return on these, don't you?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Sans" emotion="5"></d-sprite>
+		<d-text asterisk>okay, okay, no need to break my heart.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Sans" emotion="0"></d-sprite>
+		<d-text asterisk>here's five dollars.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(You traded the chocolates for 5 dollars.)</d-text>
+	</d-box>
+	<p class="note">The Box is removed from your inventory.</p>
+
+	<h4>If Susie is with Kris</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="eyes" emotion="7"></d-sprite>
+		<d-text asterisk>Woah, Kris, where the hell'd you get that?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="eyes" emotion="6"></d-sprite>
+		<d-text asterisk>... someone gave it to you?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="eyes" emotion="Y"></d-sprite>
+		<d-text asterisk>HAHAHA!! YEAH RIGHT!!! You stole it, didn't you!?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="eyes" emotion="2"></d-sprite>
+		<d-text asterisk>Well, c'mon!! Let's eat it and hide the evidence!!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(You and Susie shared the heart-shaped box of candies.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Both of you had a feeling in your chest...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" variant="eyes" emotion="C"></d-sprite>
+		<d-text asterisk>Ow, my stomach...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(... that you shouldn't have eaten all of it.)</d-text>
+	</d-box>
+	<p class="note">The Box is removed from your inventory.</p>
+
+	<h4>If Susie is not with Kris</h4>
+	<d-box theme="light">
+		<d-text asterisk>(You unhesitatingly devoured the box of heart shaped candies.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Your guts are being destroyed.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(You accept this destruction as part of life...)</d-text>
+	</d-box>
+	<p class="note">The Box is removed from your inventory.</p>
+</section>
+
+
+<section class="d-section" id="glass"> <!-- id 11 -->
+	<h2>Glass</h2>
+	<p>Light World equivalent of the <a href="{{ '/misc/darkitems#shadowcrystal' | relative_url }}">Shadow Crystal</a>.</p>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>There is a small shard of something in your pocket.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>It feels like glass, but...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<h4>Chapter 1</h4>
+	<h5>First time</h5>
+	<d-box theme="light">
+		<d-text asterisk>You looked through the glass.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>For some strange reason, for just a brief moment...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>You thought you saw through your hand.</d-text>
+	</d-box>
+
+	<h5>Second time</h5>
+	<d-box theme="light">
+		<d-text asterisk>You looked through the glass.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>... but nothing happened.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="light">
+		<d-text asterisk>It doesn't seem very useful.</d-text>
+	</d-box>
+
+	<h4>Chapter 2</h4>
+
+	<h5>First usage while Susie is with Kris</h5>
+	<d-box theme="light">
+		<d-text asterisk>You looked through the glass.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>For some strange reason, for just a brief moment...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>You thought you saw Susie glaring at you, coldly...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>But when you moved the glass away,</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>You see her looking at you, smiling and making a rude gesture.</d-text>
+	</d-box>
+
+	<h5>First usage while Susie isn't with Kris and if you haven't used the Glass in Chapter 1</h5>
+	<d-box theme="light">
+		<d-text asterisk>You looked through the glass.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>For some strange reason, for just a brief moment...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>You thought you saw through your hand.</d-text>
+	</d-box>
+
+	<h5>First usage while Susie isn't with Kris and if you've used the Glass at least once in Chapter 1</h5>
+	<d-box theme="light">
+		<d-text asterisk>You looked through the glass.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>... but nothing happened.</d-text>
+	</d-box>
+
+	<h5>Otherwise</h5>
+	<d-box theme="light">
+		<d-text asterisk>It doesn't seem very useful.</d-text>
+	</d-box>
+
+	<h4>Chapter 3</h4>
+	<p>Unused, as you can't go to the Light World in Chapter 3 and therefore the Glass is inaccessible.</p>
+
+	<h5>First time</h5>
+	<d-box theme="light">
+		<d-text asterisk>You held the crystal up to your eye.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>For some strange reason, for just a brief moment...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>You thought you saw Undyne frozen in ice.</d-text>
+	</d-box>
+
+	<h5>Second time</h5>
+	<d-box theme="light">
+		<d-text asterisk>You looked through the glass.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>... but nothing happened.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="light">
+		<d-text asterisk>It doesn't seem very useful.</d-text>
+	</d-box>
+
+	<h4>Chapter 4</h4>
+	<h5>First time when at/inside the Holiday residence</h5>
+	<p>This includes the front courtyard along with all rooms accessible by Kris (not the SOUL, so excluding Rudy & Carol's bedroom and the basement).</p>
+
+	<d-box theme="light">
+		<d-text asterisk>You looked through the glass.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>For some strange reason, for just a brief moment...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>You thought you saw Noelle close against you, whispering.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>You put the glass to your ear...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>... of course, that didn't do anything...</d-text>
+	</d-box>
+
+	<h5>Otherwise</h5>
+	<d-box theme="light">
+		<d-text asterisk>It doesn't seem very useful.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Attempting to drop</h3>
+	<p class="note">The Glass remains in your inventory.</p>
+
+	<h4>During Chapters 1-3</h4>
+	<d-box theme="light">
+		<d-text asterisk>(You didn't quite understand why...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(But, the thought of discarding it felt very wrong.)</d-text>
+	</d-box>
+
+	<h4>During Chapter 4</h4>
+	<d-box theme="light">
+		<d-text asterisk>(For some reason you felt like if you throw it away...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(It would be like throwing away someone's... ???)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... But you didn't fully understand it.)</d-text>
+	</d-box>
+</section>
+
+
+<section class="d-section" id="eraser"> <!-- id 12 -->
+	<h2>Eraser</h2>
+	<p>Light World equivalent of the <a href="{{ '/misc/equipment#bounceblade' | relative_url }}">Bounce Blade</a>.</p>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Eraser" - Weapon 1 AT</d-text>
+		<d-text asterisk>Pink, it bounces when thrown on the ground.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>You equipped the Eraser.</d-text>
+	</d-box>
+	<p class="note">The Eraser switches places with the previously equipped weapon.</p>
+</section>
+
+
+<section class="d-section" id="mechanicalpencil"> <!-- id 13 -->
+	<h2>Mechanical Pencil</h2>
+	<p>Light World equivalent of the <a href="{{ '/misc/equipment#mechasaber' | relative_url }}">Mecha Saber</a>.</p>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Mechanical Pencil" - 1 AT</d-text>
+		<d-text asterisk>It's tempting to click it repeatedly.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>You equipped the Mech. Pencil.</d-text>
+	</d-box>
+	<p class="note">The Mechanical Pencil switches places with the previously equipped weapon.</p>
+</section>
+
+
+<section class="d-section" id="wristwatch"> <!-- id 14 -->
+	<h2>Wristwatch</h2>
+	<p>Light World equivalent of the <a href="{{ '/misc/equipment#silverwatch' | relative_url }}">Silver Watch</a>.</p>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Wristwatch" - Armor 1 DF</d-text>
+		<d-text asterisk>Maybe an expensive antique.</d-text>
+		<d-text asterisk>Stuck before half past noon.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<p>Not accounted for in the code. The Watch can't be unequipped in Chapter 2 and Kris returns it to Noelle by the start of Chapter 4, so you're not supposed to be able to (re-)equip this.</p>
+</section>
+
+
+<section class="d-section" id="holidaypencil"> <!-- id 15 -->
+	<h2>Holiday Pencil</h2>
+	<p>Light World equivalent of the <a href="{{ '/misc/equipment#jingleblade' | relative_url }}">Jingle Blade</a>.</p>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Holiday Pencil" - 1 AT</d-text>
+		<d-text asterisk>A festive candycane pencil.</d-text>
+		<d-text asterisk>Do not eat.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>You equipped the Holiday Pencil.</d-text>
+	</d-box>
+	<p class="note">The Holiday Pencil switches places with the previously equipped weapon.</p>
+</section>
+
+
+<section class="d-section" id="cactusneedle"> <!-- id 16 -->
+	<h2>Cactus Needle</h2>
+	<p>Light World equivalent of the <a href="{{ '/misc/equipment#saber10' | relative_url }}">Saber 10</a>.</p>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"CactusNeedle" - 2 AT</d-text>
+		<d-text asterisk>Ouch! ... It's somewhat sentimental in a way.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>You equipped the CactusNeedle.</d-text>
+	</d-box>
+	<p class="note">The CactusNeedle switches places with the previously equipped weapon.</p>
+</section>
+
+
+<section class="d-section" id="blackshard"> <!-- id 17 -->
+	<h2>Black Shard</h2>
+	<p>Light World equivalent of the <a href="{{ '/misc/equipment#blackshard' | relative_url }}">Black Shard (Dark World)</a>.</p>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"BlackShard" - A small chip of extremely hard glass.</d-text>
+		<d-text asterisk>Oddly, it's nearly opaque.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>You equipped the BlackShard.</d-text>
+	</d-box>
+	<p class="note">The BlackShard switches places with the previously equipped weapon.</p>
+</section>
+
+
+<section class="d-section" id="quillpen"> <!-- id 18 -->
+	<h2>Quill Pen</h2>
+	<p>Light World equivalent of the <a href="{{ '/misc/equipment#winglade' | relative_url }}">Winglade</a>.</p>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"QuillPen" - 1 AT</d-text>
+		<d-text asterisk>A pen fashioned from a white feather.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>You equipped the QuillPen.</d-text>
+	</d-box>
+	<p class="note">The QuillPen switches places with the previously equipped weapon.</p>
+</section>
+
+
+
+<section class="d-section">
+	<h2>Fallbacks</h2>
+
+	<h3>Standard fallback</h3>
+
+	<h4>Info</h4>
+	<d-box theme="light">
+		<d-text asterisk>Your eyesight became blurry.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Item ID 0</h3>
+	<p>No such item exists in the code; this is presumably here for testing purposes.</p>
+
+	<h4>Info</h4>
+	<d-box theme="light">
+		<d-text asterisk>Your heartbeat quickened.</d-text>
+	</d-box>
+
+	<h4>Use</h4>
+	<d-box theme="light">
+		<d-text asterisk>You grasped at nothing.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Unequippable item</h3>
+	<p>Available in Chapter 4. If Kris has the Light World equivalent of a weapon they can't equip, this message plays upon attempting to use the item.</p>
+
+	<d-box theme="light">
+		<d-text asterisk>For some reason you couldn't equip it.</d-text>
+	</d-box>
+</section>
