@@ -166,16 +166,14 @@ sources:
 	<d-box theme="light">
 		<d-text asterisk>"Ball of Junk" - A small ball of accumulated things.</d-text>
 	</d-box>
-	<p class="note">If you have Dark Candy in your Dark World inventory, the following text also plays:</p>
-	<d-box theme="light">
-		<d-text asterisk>It smells like scratch'n'sniff marshmallow stickers.</d-text>
-	</d-box>
 
 	<h4>Chapter 2 onwards</h4>
 	<d-box theme="light">
 		<d-text asterisk>"Ball of Junk" - A small ball of accumulated things in your pocket.</d-text>
 	</d-box>
-	<p class="note">If you have Dark Candy in your Dark World inventory, the following text also plays:</p>
+
+	<h4>Dark Candy/Darker Candy addition</h4>
+	<p class="note">In all chapters, if you have Dark Candy/Darker Candy in your Dark World inventory, this plays after the first line of narration:</p>
 	<d-box theme="light">
 		<d-text asterisk>It smells like scratch'n'sniff marshmallow stickers.</d-text>
 	</d-box>
@@ -739,6 +737,7 @@ sources:
 	<h2>Fallbacks</h2>
 
 	<h3>Standard fallback</h3>
+	<p>Plays when an item's ID isn't accounted for in the code.</p>
 
 	<h4>Info</h4>
 	<d-box theme="light">
@@ -747,8 +746,8 @@ sources:
 
 	<hr>
 
-	<h3>Item ID 0</h3>
-	<p>No such item exists in the code; this is presumably here for testing purposes.</p>
+	<h3>Default item</h3>
+	<p>Plays when the unused item ID 0 is provided, probably for testing purposes.</p>
 
 	<h4>Info</h4>
 	<d-box theme="light">
