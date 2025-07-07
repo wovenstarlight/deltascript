@@ -331,13 +331,14 @@ body {
 	color: var(--gray);
 	font-size: 0.9em;
 }
-#pagesrc a[href^="https://code.deltarune.wiki"],
 #pagesrc .code {
 	font-family: "Courier New", Courier, monospace;
 	font-weight: bold;
-	&:not(:hover, :focus) { text-decoration: none }
 	word-break: break-word;
-	text-underline-offset: auto;
+}
+#pagesrc a:not([href]) {
+	text-decoration-style: dotted;
+	cursor: not-allowed;
 }
 /* Footer */
 #sitefoot {

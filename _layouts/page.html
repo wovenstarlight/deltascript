@@ -17,15 +17,7 @@ layout: default
 		<p>Sources:</p>
 		<ul>
 			{%- for source in page.sources %}
-			<li>
-				{%- if source.specifier != null %}{{ source.specifier }} - {% endif -%}
-				{%- if source.url != null -%}
-					<a href="{{ source.url }}">{{ source.name }}</a>
-				{%- else -%}
-					<span class="code">{{ source.name }}</span>
-				{%- endif -%}
-				{%- if source.note != null %} ({{- source.note -}}){% endif -%}
-			</li>
+			{% include code_source.html src=source %}
 			{%- endfor %}
 		</ul>
 	</div>

@@ -171,12 +171,12 @@ credits: >
 
 sources:
   -
-    url: "https://code.deltarune.wiki/ch1/gml_globalscript_script_name_here" # code.deltarune.wiki keeps all URLs lowercase
     name: gml_GlobalScript_script_name_here
+    chapters: [1, 2, ...]
   -
-    url: "https://code.deltarune.wiki/"
-    name: More list items with URL/name pairings; each item is indicated by a hyphen. Indentation is very important - keep it consistent!
+    name: More list items with name/chapter pairings; each item is indicated by a hyphen. Indentation is very important - keep it consistent!
+    url: [1]
   -
-    url: "https://code.deltarune.wiki/"
     name: Add all the files you reference, including for character actions during cutscenes.
+    url: [4]
 ```
