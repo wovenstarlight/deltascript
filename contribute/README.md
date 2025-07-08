@@ -154,6 +154,7 @@ Other global variables you'll spot in the code:
 	* There's a helper function for this: `scr_havechar(n)` checks if the character corresponding to the number `n` is in any of the `global.char` slots, i.e. it checks if a character's currently in the party. `scr_havechar(3)` would be checking if you have Ralsei with you. If this function returns 0, that means the character's NOT in the party, while 1 means they ARE in the party.
 	* `scr_getchar(n)` adds the character corresponding to `n` in the first available party slot.
 	* `scr_losechar()`, as I understand it, removes all but the first party member. Simplifies party cleanup when Susie and Ralsei both run off and leave Kris alone.
+* `scr_get_input_name(n)` gives the platform-specific names for the CONFIRM/CANCEL/MENU buttons. `scr_get_input_name(4)` gives `[Z]`, `scr_get_input_name(5)` gives `[X]`, and `scr_get_input_name(6)` gives `[C]`.
 
 ## Page creation
 There's a page template located at [template.html](./template.html)! Replace the fields, rename the file, move it to the path you want it to be available at on the site, and you're good to go.
