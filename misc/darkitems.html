@@ -1,0 +1,3008 @@
+---
+title: Dark World items
+description: >
+  <p>Descriptions and usage/toss text for Dark World items.</p>
+  <p>Usage lists reactions when the item is used on a specific party member in the overworld, unless specified otherwise. Additional reactions from characters on whom the item is not being used occur only if that character is also in the party at time of use.</p>
+  <p>Usage messages including "[Character]" can substitute the names "Kris"/"Susie"/"Ralsei"/"Noelle", depending on who the item was used on.</p>
+  <p>Any heal amounts listed on this page are the base values, not adjusted by heal-buffing equipment like the Blue Ribbon.</p>
+sources:
+  -
+    name: gml_GlobalScript_scr_itemnamelist
+    chapters: [1, 2, 3, 4]
+  -
+    name: gml_GlobalScript_scr_itemdesc
+    chapters: [1]
+    note: overworld descriptions
+  -
+    name: gml_GlobalScript_scr_itemdesc_single
+    chapters: [2, 3, 4]
+    note: overworld descriptions
+  -
+    name: gml_GlobalScript_scr_iteminfo
+    chapters: [1, 2, 3, 4]
+    note: combat descriptions
+  -
+    name: gml_GlobalScript_scr_keyitemiteminfo
+    chapters: [1, 2, 3, 4]
+  -
+    name: gml_GlobalScript_scr_itemuse
+    chapters: [1, 2, 3, 4]
+    note: overworld usage messages/effects
+  -
+    name: gml_GlobalScript_scr_spelltext
+    chapters: [1, 2, 3, 4]
+    note: combat usage messages/effects
+  -
+    name: gml_GlobalScript_scr_spell
+    chapters: [1, 2, 3, 4]
+    note: combat usage effects
+  -
+    name: gml_GlobalScript_scr_itemdesc_oldtype
+    chapters: [1]
+    note: fallback text and beta item menu
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+---
+<section class="d-section" id="darkcandy"> <!-- id 1 -->
+	<h2>Dark Candy</h2>
+	<p>Turns into <a href="#darkercandy">Darker Candy</a> from Chapter 4 onwards.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Heals 40 HP. A red-and-black star<span class="break"></span> that tastes like marshmallows.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 40HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 40 HP.</p>
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Yeahh!! That's good!</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Yummy!!! Marshmallows!!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hey, feed ME!!!</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Oh, it's... sticky?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the DARK CANDY!</d-text>
+	</d-box>
+	<p class="note">Heals 40 HP.</p>
+</section>
+
+
+<section class="d-section" id="darkercandy"> <!-- id 1 -->
+	<h2>Darker Candy</h2>
+	<p>The developed form of <a href="#darkcandy">Dark Candy</a>.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A candy that has grown sweeter with time.</d-text>
+		<d-text>Said to taste like toasted marshmallow. +120HP</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 120HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 120 HP.</p>
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Yeahh!! That's good!</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Yummy!!! Marshmallows!!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hey, feed ME!!!</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Oh, it's... sticky?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the DARKER CANDY!</d-text>
+	</d-box>
+	<p class="note">Heals 120 HP.</p>
+</section>
+
+
+<section class="d-section" id="revivemint"> <!-- id 2 -->
+	<h2>Revive Mint</h2>
+	<p>Appears as "ReviveMint" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Heals a fallen ally to MAX HP.</d-text>
+		<d-text>A minty green crystal.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heal<span class="break"></span> Downed<span class="break"></span> Ally</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals for 50% of max HP.</p>
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I'm ALIVE!!!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>(You weren't dead)</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Ah, I'm refreshed!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>(Don't look it)</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Mints? I love mints!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<p class="note">Revives a downed party member at max HP, or heals a non-downed party member for 50% HP.</p>
+	<h4>Chapter 1</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the REVIVE MINT!</d-text>
+	</d-box>
+	<h4>Chapter 2 onwards</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the REVIVEMINT!</d-text>
+	</d-box>
+</section>
+
+
+<section class="d-section" id="glowshard"> <!-- id 3 -->
+	<h2>Glowshard</h2>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<h5>Chapter 1</h5>
+	<d-box theme="objmenu">
+		<d-text>A shimmering shard.</d-text>
+		<d-text>Its use is unknown.</d-text>
+	</d-box>
+
+	<h5>Chapter 2 onwards</h5>
+	<d-box theme="objmenu">
+		<d-text>A shimmering shard.</d-text>
+		<d-text>Its value increases each Chapter.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Sell<span class="break"></span> at<span class="break"></span> shops</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Nothing happens.</p>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the GLOWSHARD!</d-text>
+	</d-box>
+
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But nothing happened...</d-text>
+	</d-box>
+	<p class="note">The Glowshard remains in the inventory.</p>
+
+	<h4>Against Rudinn</h4>
+	<p>When the encounter includes any Rudinns as enemies. (Doesn't include Rudinn Rangers.)</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn became enraptured!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The GLOWSHARD disappeared!</d-text>
+	</d-box>
+	<p class="note">Rudinn gains 100% <span class="yellow">Mercy</span>. The Glowshard is removed from the inventory.</p>
+</section>
+
+
+<section class="d-section" id="manual"> <!-- id 4 -->
+	<h2>Manual</h2>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Ralsei's handmade book full of<span class="break"></span> various tips and tricks.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Read<span class="break"></span> out of<span class="break"></span> battle</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(You tried to read the manual, but it was so dense it made your head spin...)</d-text>
+	</d-box>
+	<p class="note">The Manual remains in the inventory.</p>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<p class="note">In all cases, the Manual remains in the inventory after use.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] read the MANUAL!</d-text>
+	</d-box>
+
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But nothing happened...</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<h4>Against Rudinn</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn was <span class="blue">bored to tears</span>!</d-text>
+	</d-box>
+	<p class="note">Rudinn becomes <span class="blue">Tired</span>.</p>
+
+	<h4>Against Hathy</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Hathy listened politely!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<h4>Against Clover</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover became sentimental!</d-text>
+	</d-box>
+	<p class="note">On the first use only, Clover gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
+
+
+<section class="d-section" id="brokencakeunused"> <!-- id 5 -->
+	<h2>Broken Cake</h2>
+	<p>Unused item that's not available in the playable game, but included for completion. The in-game <a href="#brokencake">Broken Cake</a> is a Key Item and not a regular consumable.</p>
+	<p>Appears as "BrokenCake" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Though broken, it seethes with power.</d-text>
+		<d-text>A master smith could fix it.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 20HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 20 HP.</p>
+
+	<p>No reactions were included in the code.</p>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the BROKEN CAKE!</d-text>
+	</d-box>
+	<p class="note">Heals 20 HP.</p>
+</section>
+
+
+<section class="d-section" id="topcake"> <!-- id 6 -->
+	<h2>Top Cake</h2>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>This cake will make your taste buds<span class="break"></span> spin! Heals 160 HP to the team.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> team<span class="break"></span> 160HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals all party members for 160 HP.</p>
+
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Mmm, seconds!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Whoops.</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Happy birthday! Haha!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the TOPCAKE!</d-text>
+	</d-box>
+	<p class="note">Heals all party members for 160 HP.</p>
+</section>
+
+
+<section class="d-section" id="spincake"> <!-- id 7 -->
+	<h2>Spin Cake</h2>
+	<p>Appears as "SpinCake" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<h5>Chapter 1</h5>
+	<d-box theme="objmenu">
+		<d-text>A pastry in the shape of a top.</d-text>
+		<d-text>Heals 80 HP to the team.</d-text>
+	</d-box>
+	<h5>Chapter 2 onwards</h5>
+	<d-box theme="objmenu">
+		<d-text>A pastry in the shape of a top.</d-text>
+		<d-text>Heals 140 HP to the team.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<h5>Chapter 1</h5>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> team<span class="break"></span> 80HP</d-text>
+	</d-box>
+	<h5>Chapter 2 onwards</h5>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> team<span class="break"></span> 140HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals all party members for 80 HP (Chapter 1) / 140 HP (Chapter 2 onwards).</p>
+
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I'm dizzy.</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Mmm, thank you!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>My eyes are spinning...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the SPINCAKE!</d-text>
+	</d-box>
+	<p class="note">Heals all party members for 80 HP (Chapter 1) / 140 HP (Chapter 2 onwards).</p>
+</section>
+
+
+<section class="d-section" id="darkburger"> <!-- id 8 -->
+	<h2>Darkburger</h2>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A mysterious black burger made of...</d-text>
+		<d-text>Hey, this is just burnt! +70HP</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 70HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 70 HP.</p>
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Cooked to perfection!</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>A bit burnt...?</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<p class="note">Heals 20 HP instead of the usual amount.</p>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>I-is this real meat...?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the DARKBURGER!</d-text>
+	</d-box>
+	<p class="note">Heals 70 HP.</p>
+</section>
+
+
+<section class="d-section" id="lancercookie"> <!-- id 9 -->
+	<h2>Lancer Cookie</h2>
+	<p>Appears as "LancerCookie" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<h5>Chapter 1</h5>
+	<d-box theme="objmenu">
+		<d-text>A cookie shaped like Lancer's face.</d-text>
+		<d-text>Maybe not a cookie. Heals 5 HP?</d-text>
+	</d-box>
+	<h5>Chapter 2 onwards</h5>
+	<d-box theme="objmenu">
+		<d-text>A cookie shaped like Lancer's face.</d-text>
+		<d-text>Maybe not a cookie. Heals 1 HP?</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 50HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 4 HP (Chapter 1) / 1 HP (Chapter 2 onwards).</p>
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Mmm... face</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>(uncomfortable)</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Umm, what is this? It's cute...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the LANCERCOOKIE!</d-text>
+	</d-box>
+	<p class="note">Heals 50 HP.</p>
+</section>
+
+
+<section class="d-section" id="gigasalad"> <!-- id 10 -->
+	<h2>Giga Salad</h2>
+	<p>Unused. Appears as "GigaSalad" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>An enormous salad... but, it's just<span class="break"></span> lettuce, so it's worthless. +4HP</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 4HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 4 HP.</p>
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Why this!?</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Let's be healthy!</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<p class="note">Heals 90 HP instead of the usual amount.</p>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Something to graze on!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the GIGASALAD!</d-text>
+	</d-box>
+	<p class="note">Heals 4 HP.</p>
+</section>
+
+
+<section class="d-section" id="clubssandwich"> <!-- id 11 -->
+	<h2>Clubs Sandwich</h2>
+	<p>Appears as "Clubswich" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<h5>Chapter 1</h5>
+	<d-box theme="objmenu">
+		<d-text>A sandwich that can be split into 3.</d-text>
+		<d-text>Heals 30 HP to the team.</d-text>
+	</d-box>
+	<h5>Chapter 2 onwards</h5>
+	<d-box theme="objmenu">
+		<d-text>A sandwich that can be split into 3.</d-text>
+		<d-text>Heals 70 HP to the team.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> team<span class="break"></span> 30HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals all party members for 30 HP (Chapter 1) / 70 HP (Chapter 2 onwards).</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Quit hogging!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>(It's cut evenly...)</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(Kris took two thirds of it...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the CLUBS SANDWICH!</d-text>
+	</d-box>
+	<p class="note">Heals all party members for 30 HP (Chapter 1) / 70 HP (Chapter 2 onwards).</p>
+</section>
+
+
+<section class="d-section" id="heartsdonut"> <!-- id 12 -->
+	<h2>Hearts Donut</h2>
+	<p>Appears as "HeartsDonut" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Hearts, don't it!? It's filled with<span class="break"></span> divisive, clotty red jam. +??HP</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Healing<span class="break"></span> varies</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<h4>Kris</h4>
+	<p class="note">Heals 20 HP.</p>
+
+	<h4>Susie</h4>
+	<p class="note">Heals 80 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Mmm, blood!</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<p class="note">Heals 50 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Aah, sticky...</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<p class="note">Heals 30 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Mmm... what!? It's blood!?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the HEARTS DONUT!</d-text>
+	</d-box>
+	<h4>Chapter 1</h4>
+	<p class="note">Heals Kris for 10 HP, Susie for 90 HP, and Ralsei for 60 HP.</p>
+	<h4>Chapter 2 onwards</h4>
+	<p class="note">Heals the same amount as in the overworld.</p>
+</section>
+
+
+<section class="d-section" id="chocodiamond"> <!-- id 13 -->
+	<h2>Choco Diamond</h2>
+	<p>Appears as "ChocDiamond" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>It's quite small, but some<span class="break"></span> people REALLY like it. +??HP</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Healing<span class="break"></span> varies</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<h4>Kris</h4>
+	<p class="note">Heals 80 HP.</p>
+
+	<h4>Susie</h4>
+	<p class="note">Heals 20 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>THAT'S it?</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<p class="note">Heals 50 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Aww, thanks, Kris!</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<p class="note">Heals Kris and Noelle for 35 HP each.</p>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Umm, it's ok, Kris, I'll share...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the CHOCO DIAMOND!</d-text>
+	</d-box>
+	<h4>Chapter 1</h4>
+	<p class="note">Heals Kris for 80 HP, Susie for 30 HP, and Ralsei for 30 HP.</p>
+	<h4>Chapter 2 onwards</h4>
+	<p class="note">Heals the same amount as in the overworld.</p>
+</section>
+
+
+<section class="d-section" id="favoritesandwich"> <!-- id 14 -->
+	<h2>Favorite Sandwich</h2>
+	<p>Unused. Appears as "FavSandwich" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>You'd think it tastes perfect.</d-text>
+		<d-text>Heals 500HP.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> ALL HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 500 HP.</p>
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>(It's SO good!)</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>K-Kris!? I...</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(Huh? I didn't know Kris liked this flavor.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the FAV SANDWICH!</d-text>
+	</d-box>
+	<p class="note">Heals 500 HP.</p>
+</section>
+
+
+<section class="d-section" id="rouxlsroux"> <!-- id 15 -->
+	<h2>Rouxls Roux</h2>
+	<p>Appears as "RouxlsRoux" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A dark roux with a delicate aroma.</d-text>
+		<d-text>Also... has worms in it. +50HP</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 50 HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 50 HP.</p>
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Cool, it's wriggling.</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Yum, is this spaghetti?</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Tastes like... jumprope?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<h4>Chapter 1</h4>
+	<p>Note typo in "ROULXS".</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the ROULXS ROUX!</d-text>
+	</d-box>
+	<p class="note">Heals 60 HP.</p>
+	<h4>Chapter 2 onwards</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the ROUXLS ROUX!</d-text>
+	</d-box>
+	<p class="note">Heals 50 HP.</p>
+</section>
+
+
+<section class="d-section" id="cdbagel"> <!-- id 16 -->
+	<h2>CD Bagel</h2>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A bagel with a reflective inside.</d-text>
+		<d-text>Makes music with each bite. +80HP</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 80 HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 80 HP. Plays a unique sound for each character when consumed.</p>
+	<h4>Kris</h4>
+	<p class="note">Piano notes.</p>
+
+	<h4>Susie</h4>
+	<p class="note">Electric guitar note.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>It's got crunch.</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<p class="note">String/wind instrument(?) notes.</p>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>How elegant!</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<p class="note">High-pitched notes, like a twinkling SFX.</p>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>What a nice song...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the CD BAGEL!</d-text>
+	</d-box>
+	<p class="note">Heals 80 HP.</p>
+</section>
+
+
+<section class="d-section" id="mannequin"> <!-- id 17 -->
+	<h2>Mannequin</h2>
+	<p>Unused. An item version of the <a href="{{ '/misc/equipment#mannequin' | relative_url }}">Mannequin (armor)</a>.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>It's a mannequin with the clothes<span class="break"></span> permanently attached. Useless</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Useless</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Attempted usage (Overworld)</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(The clothes are stuck to the doll...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(There's no way you can use this.)</d-text>
+	</d-box>
+	<p class="note">The Mannequin remains in the inventory.</p>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the CLOTHESDOLL!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... but nothing happened!</d-text>
+	</d-box>
+	<p class="note">The Mannequin remains in the inventory.</p>
+</section>
+
+
+<section class="d-section" id="kristea"> <!-- id 18 -->
+	<h2>Kris Tea</h2>
+	<p>Available only in Chapter 2; turns into <a href="#rottentea">Rotten Tea</a> from Chapter 3 onwards.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>It's own-flavored tea.</d-text>
+		<d-text>The flavor just says "Kris."</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Healing<span class="break"></span> varies</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<h4>Kris</h4>
+	<p class="note">Heals 10 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>(No reaction?)</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(... no reaction?)</d-text>
+	</d-box>
+
+	<h4>Susie</h4>
+	<p class="note">Heals 120 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hell yeah, apple juice!!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Don't drink so fast!!</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<p class="note">Heals 120 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Tastes like blueberries!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Huh? Really?</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<p class="note">Heals 70 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Tastes like cinnamon! (What is this aftertaste...?)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the KRIS TEA!</d-text>
+	</d-box>
+	<p class="note">Heals the same amount as in the overworld, except for Kris, who is healed for 40 HP instead of 10.</p>
+</section>
+
+
+<section class="d-section" id="noelletea"> <!-- id 19 -->
+	<h2>Noelle Tea</h2>
+	<p>Available only in Chapter 2; turns into <a href="#rottentea">Rotten Tea</a> from Chapter 3 onwards.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>It's own-flavored tea.</d-text>
+		<d-text>The flavor just says "Noelle."</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Healing<span class="break"></span> varies</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<h4>Kris</h4>
+	<p class="note">Heals 70 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>(... do they like it?)</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>(They're drinking it...)</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(Umm, do they like it or not...?)</d-text>
+	</d-box>
+
+	<h4>Susie</h4>
+	<p class="note">Heals 120 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hell yeah, eggnog!!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>D-don't drink so fast!</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<p class="note">Heals 50 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It's soft and sweet.</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<p class="note">Heals 10 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>... this is just water! You're pranking me, right?!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the NOELLE TEA!</d-text>
+	</d-box>
+	<p class="note">Heals the same amount as in the overworld, except for Noelle, who is healed for 40 HP instead of 10.</p>
+</section>
+
+
+<section class="d-section" id="ralseitea"> <!-- id 20 -->
+	<h2>Ralsei Tea</h2>
+	<p>Available only in Chapter 2; turns into <a href="#rottentea">Rotten Tea</a> from Chapter 3 onwards.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>It's own-flavored tea.</d-text>
+		<d-text>The flavor just says "Ralsei."</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Healing<span class="break"></span> varies</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<h4>Kris</h4>
+	<p class="note">Heals 60 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>(No reaction?)</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>(I'm happy!)</d-text>
+	</d-box>
+
+	<h4>Susie</h4>
+	<p class="note">Heals 120 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hey, it's like marshmallows!!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>D-don't drink so fast!</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<p class="note">Heals 10 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Um... isn't this water?</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<p class="note">Heals 50 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>There's nothing in here!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the RALSEI TEA!</d-text>
+	</d-box>
+	<p class="note">Heals the same amount as in the overworld, except for Ralsei, who is healed for 40 HP instead of 10.</p>
+</section>
+
+
+<section class="d-section" id="susietea"> <!-- id 21 -->
+	<h2>Susie Tea</h2>
+	<p>Available only in Chapter 2; turns into <a href="#rottentea">Rotten Tea</a> from Chapter 3 onwards.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>It's own-flavored tea.</d-text>
+		<d-text>The flavor just says "Susie."</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Healing<span class="break"></span> varies</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<h4>Kris</h4>
+	<p class="note">Heals 120 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>STOP LOOKING AT ME!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>(They seem into it)</d-text>
+	</d-box>
+
+	<h4>Susie</h4>
+	<p class="note">Heals 10 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... this is tea?</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<p class="note">Heals 120 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It's grape juice!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Huh, really?</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<p class="note">Heals 400 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(Wonder if they sell this in gallons?)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the SUSIE TEA!</d-text>
+	</d-box>
+	<p class="note">Heals the same amount as in the overworld, except for Susie, who is healed for 40 HP instead of 10.</p>
+</section>
+
+
+<section class="d-section" id="rottentea"> <!-- ids 18-21, chapter 3 onwards -->
+	<h2>Rotten Tea</h2>
+	<p>The transformed version of <a href="#kristea">Kris</a>/<a href="#susietea">Susie</a>/<a href="#ralseitea">Ralsei</a>/<a href="#noelletea">Noelle Tea</a> from Chapter 3 onwards. Appears as "RottenTea" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A tea that has deteriorated after a short while due to its poor craftsmanship. +10HP</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 10HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 10 HP.</p>
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Yuck.</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Um?</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>No flavor... anymore.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the ROTTEN TEA!</d-text>
+	</d-box>
+	<p class="note">Heals 10 HP.</p>
+</section>
+
+
+<section class="d-section" id="ddburger"> <!-- id 22 -->
+	<h2>DD-Burger</h2>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>It's the Double-Dark-Burger.</d-text>
+		<d-text>It'll take two bites to finish!</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 60HP 2x</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 60 HP. Upon usage, is replaced in the inventory by a regular Darkburger.</p>
+
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>C'mon, gimme the rest!</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>M-maybe give Susie the rest?</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<p class="note">Heals 20 HP instead of the usual amount.</p>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Th... there's MORE!?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the DD-BURGER!</d-text>
+	</d-box>
+	<p class="note">Heals 60 HP.</p>
+</section>
+
+
+<section class="d-section" id="lightcandy"> <!-- id 23 -->
+	<h2>Light Candy</h2>
+	<p>Appears as "LightCandy" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>White candy with a chalky texture.</d-text>
+		<d-text>It'll recover 120HP.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 120HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 120 HP.</p>
+
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hey, this rules!</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Nice and chalky.</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(I-isn't this the chalk I gave her?)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the LIGHTCANDY!</d-text>
+	</d-box>
+	<p class="note">Heals 120 HP.</p>
+</section>
+
+
+<section class="d-section" id="butlerjuice"> <!-- id 24 -->
+	<h2>Butler Juice</h2>
+	<p>Appears as "ButJuice" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>It's short for ButlerJuice.</d-text>
+		<d-text>It changes color with temperature.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 100HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 100 HP.</p>
+
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hell'd you call this!?</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>I made this.</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>B-Brainfreeze! ... kidding!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the BUTJUICE!</d-text>
+	</d-box>
+	<p class="note">Heals 100 HP.</p>
+</section>
+
+
+<section class="d-section" id="spaghetticode"> <!-- id 25 -->
+	<h2>Spaghetti Code</h2>
+	<p>Appears as "SpagettiCode" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Spaghetti woven by master coders, made<span class="break"></span> of macarons and ribbons. +30HP to all.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> team<span class="break"></span> 30HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals all party members for 30 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I'm NOT wearing it.</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>How sweet!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Reminds me of one of my sweaters.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the SPAGHETTICODE!</d-text>
+	</d-box>
+	<p class="note">Heals all party members for 30 HP.</p>
+</section>
+
+
+<section class="d-section" id="javacookie"> <!-- id 26 -->
+	<h2>Java Cookie</h2>
+	<p>Unused. Appears as "JavaCookie" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A coffee-and-chocolate flavored cookie.</d-text>
+		<d-text>Words spark out when you bite it.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Healing<span class="break"></span> varies</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 90 HP.</p>
+
+	<h4>Kris</h4>
+	<p class="note">Heals 100 HP instead of the usual amount.</p>
+
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>It says GUTS!</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It says Fluffy...</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>I... I can't read these symbols...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the JAVACOOKIE!</d-text>
+	</d-box>
+	<p class="note">Heals 90 HP, except for Kris, who is healed for 100 HP.</p>
+</section>
+
+
+<section class="d-section" id="tensionbit"> <!-- id 27 -->
+	<h2>Tension Bit</h2>
+	<p>Appears as "TensionBit" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Raises TP by 32% in battle.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Raises<span class="break"></span> TP<span class="break"></span> 32%</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(You felt tense.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... try using it in battle.)</d-text>
+	</d-box>
+	<p class="note">The Tension Bit remains in the inventory.</p>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the TENSIONBIT!</d-text>
+		<d-text asterisk>Tension raised up earlier.</d-text>
+	</d-box>
+	<p class="note">32% TP is added to TP Gauge.</p>
+</section>
+
+
+<section class="d-section" id="tensiongem"> <!-- id 28 -->
+	<h2>Tension Gem</h2>
+	<p>Appears as "TensionGem" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Raises TP by 50% in battle.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Raises<span class="break"></span> TP<span class="break"></span> 50%</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(You felt tense.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... try using it in battle.)</d-text>
+	</d-box>
+	<p class="note">The Tension Gem remains in the inventory.</p>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the TENSIONGEM!</d-text>
+	</d-box>
+	<p class="note">50% TP is added to TP Gauge.</p>
+</section>
+
+
+<section class="d-section" id="tensionmax"> <!-- id 29 -->
+	<h2>Tension Max</h2>
+	<p>Appears as "TensionMax" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Raises TP to full in battle.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Raises<span class="break"></span> TP<span class="break"></span> Max</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(You felt tense.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... try using it in battle.)</d-text>
+	</d-box>
+	<p class="note">The Tension Max remains in the inventory.</p>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the TENSIONMAX!</d-text>
+	</d-box>
+	<p class="note">TP Gauge is filled to 100%.</p>
+</section>
+
+
+<section class="d-section" id="revivedust"> <!-- id 30 -->
+	<h2>Revive Dust</h2>
+	<p>Appears as "ReviveDust" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A minty powder that revives all<span class="break"></span> fallen party members to 25% HP.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Revives<span class="break"></span> team<span class="break"></span> 25%</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals all party members for 10 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Don't throw dust at me!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It's minty!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>What are you sprinkling?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the REVIVEDUST!</d-text>
+	</d-box>
+	<p class="note">Revives all downed party members at 25% HP, and heals non-downed party members for 10 HP.</p>
+</section>
+
+
+<section class="d-section" id="revivebrite"> <!-- id 31 -->
+	<h2>Revive Brite</h2>
+	<p>Unused. Appears as "ReviveBrite" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A breakable mint that revives all<span class="break"></span> fallen party members to 100% HP.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Revives<span class="break"></span> team<span class="break"></span> 100%</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals all party members for 50 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Don't throw mints at me!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It's minty!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>What are you throwing?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the REVIVEBRIGHT!</d-text>
+	</d-box>
+	<p class="note">Revives all downed party members at max HP, and heals non-downed party members for 50 HP.</p>
+</section>
+
+
+<section class="d-section" id="spoison"> <!-- id 32 -->
+	<h2>S.POISON</h2>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A strange concoction made of<span class="break"></span> colorful squares. Will poison you.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Hurts<span class="break"></span> party<span class="break"></span> member</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Deals 20 damage, leaving the target at a minimum of 1 HP.</p>
+
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Ugh! ...tastes good?</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Ow... er, thanks, Kris!</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<p class="note">Nothing happens (no HP healed or damage dealt).</p>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(I'll... just pretend to drink it...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] administered S.POISON!</d-text>
+	</d-box>
+	<p class="note">Heals 40 HP, then slowly deals 60 damage (1 per second), leaving the target at a minimum of 1 HP.</p>
+</section>
+
+
+<section class="d-section" id="dogdollar"> <!-- id 33 -->
+	<h2>Dog Dollar</h2>
+	<p>Appears as "DogDollar" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A dollar with a certain dog on it.</d-text>
+		<d-text>Its value decreases each Chapter.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Not<span class="break"></span> so<span class="break"></span> useful</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Where'd this come from?)</d-text>
+	</d-box>
+	<p class="note">The Dog Dollar remains in the inventory.</p>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] admired DOGDOLLAR!</d-text>
+	</d-box>
+	<p class="note">The Dog Dollar remains in the inventory.</p>
+</section>
+
+
+<section class="d-section" id="tvdinner"> <!-- id 34 -->
+	<h2>TV Dinner</h2>
+	<p>Appears as "TVDinner" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<h5>Save slot 1</h5>
+	<d-box theme="objmenu">
+		<d-text>A TV-shaped premade meal. It even has<span class="break"></span> a giant crumb of your favorite pie.</d-text>
+	</d-box>
+	<h5>Save slot 2</h5>
+	<d-box theme="objmenu">
+		<d-text>A TV-shaped premade meal. The TV's pointy<span class="break"></span> nose is used as a cone for the ice cream.</d-text>
+	</d-box>
+	<h5>Save slot 3</h5>
+	<d-box theme="objmenu">
+		<d-text>A TV-shaped premade meal. Unfortunately,<span class="break"></span> the vegan steak seems to be a normal shape.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 100HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 100 HP.</p>
+
+	<h4>Kris</h4>
+	<h5>Save slot 1</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>What are you, a unicorn? Faha.</d-text>
+	</d-box>
+
+	<h4>Susie</h4>
+	<h5>Save slot 1</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Butterscotch, nice!</d-text>
+	</d-box>
+	<h5>Save slot 2</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Ack, it's leaking!</d-text>
+	</d-box>
+	<h5>Save slot 3</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... obviously isn't real blood.</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<h5>Save slot 1</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Wow, what a nice flavor!</d-text>
+	</d-box>
+	<h5>Save slot 2</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Look at my long nose!</d-text>
+	</d-box>
+	<h5>Save slot 3</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Rare? I ate a rare item?</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<h5>Save slot 1</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Mmm, butterscotch!</d-text>
+	</d-box>
+	<h5>Save slot 2</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>"Brain freeze is for the weak!"</d-text>
+	</d-box>
+	<h5>Save slot 3</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>I can hardly tell it's not, um, real blood.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the TVDINNER!</d-text>
+	</d-box>
+	<p class="note">Heals 100 HP.</p>
+</section>
+
+
+<section class="d-section" id="pipis"> <!-- id 35 -->
+	<h2>Pipis</h2>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A certain person's special "???"</d-text>
+		<d-text>Cannot be used in battle.</d-text>
+	</d-box>
+	<h5>Chapter 3 progression</h5>
+	<p class="note">Description goes through the following stages over time.</p>
+	<h6>Second stage</h6>
+	<d-box theme="objmenu">
+		<d-text>A certain person's special "???"</d-text>
+		<d-text>It's now tweeting.</d-text>
+	</d-box>
+	<h6>Third stage</h6>
+	<d-box theme="objmenu">
+		<d-text>A certain person's special "???"</d-text>
+		<d-text>It's now making a clucking noise.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Does<span class="break"></span> nothing</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<h4>Kris</h4>
+	<p class="note">Heals 100 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Huh?</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Where'd it go?</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Kris! (I wanted that...)</d-text>
+	</d-box>
+
+	<h4>Susie</h4>
+	<p class="note">The Pipis remains in the inventory.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hell no.</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<p class="note">The Pipis remains in the inventory.</p>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Is... that, um, nutritious?</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<p class="note">The Pipis remains in the inventory.</p>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>C... Can we keep it?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the PIPIS!</d-text>
+	</d-box>
+	<p class="note">The Pipis remains in the inventory.</p>
+</section>
+
+
+<section class="d-section" id="flatsoda"> <!-- id 36 -->
+	<h2>Flat Soda</h2>
+	<p>Appears as "FlatSoda" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Flat soda someone already took<span class="break"></span> a big sip from. Recovers 20HP</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 20HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 20 HP.</p>
+
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Fine, I'll finish it.</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Aw, you saved me half?</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(Whatever, it's just Kris's...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the FLATSODA!</d-text>
+	</d-box>
+	<p class="note">Heals 20 HP.</p>
+</section>
+
+
+<section class="d-section" id="tvslop"> <!-- id 37 -->
+	<h2>TV Slop</h2>
+	<p>Appears as "TVSlop" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Some sort of bland cafeteria food.</d-text>
+		<d-text>The ice cream cone is soggy and saggy.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 80HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 80 HP.</p>
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Like my old school.</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Is this legal?</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Here, I refreezed it!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the TVSLOP!</d-text>
+	</d-box>
+	<p class="note">Heals 80 HP.</p>
+</section>
+
+
+<section class="d-section" id="execbuffet"> <!-- id 38 -->
+	<h2>Exec Buffet</h2>
+	<p>Appears as "ExecBuffet" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A dinner for cushy TV executives.</d-text>
+		<d-text>The blue "caviar" is unforgettable.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> team<span class="break"></span> 100HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals all party members for 100 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Rich people eat THIS?</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>P... pinky up!</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Caviar AGAIN?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the EXECBUFFET!</d-text>
+	</d-box>
+	<p class="note">Heals all party members for 100 HP.</p>
+</section>
+
+
+<section class="d-section" id="deluxedinner"> <!-- id 39 -->
+	<h2>Deluxe Dinner</h2>
+	<p>Appears as "DeluxeDinner" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A TV Dinner for high-ranking contestants.</d-text>
+		<d-text>Comes with detachable antennas. +140 HP.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 140HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 140 HP.</p>
+
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Look, I'm a roach.</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>I'm a comfy caterpillar!</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>I'm, um, an alien?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the DELUXEDINNER!</d-text>
+	</d-box>
+	<p class="note">Heals 140 HP.</p>
+</section>
+
+
+<section class="d-section" id="ancientsweet"> <!-- id 60 -->
+	<h2>Ancient Sweet</h2>
+	<p>Appears as "AncientSweet" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A chocolatey cone etched with arcane<span class="break"></span> glyphs. Only Kris can eat it. +400 HP.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Kris only<span class="break"></span> +400</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<h4>Kris</h4>
+	<p class="note">Heals 400 HP.</p>
+
+	<h4>Susie</h4>
+	<p class="note">Heals 40 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Ugh! How old is this?!</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<p class="note">Heals 40 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Aww Kris, y-your favorite...</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<p class="note">Heals 40 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>I'd... I'd rather eat meat...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the ANCIENTSWEET!</d-text>
+	</d-box>
+	<p class="note">Heals Kris for 400 HP or other party members for 40 HP.</p>
+</section>
+
+
+<section class="d-section" id="rhapsotea"> <!-- id 61 -->
+	<h2>Rhapsotea</h2>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A smooth, silvery drink. It sounds like<span class="break"></span> whispered singing as it's poured. +115 HP.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 115HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 115 HP.</p>
+
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Sounds kinda like Noelle.</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>... the hymn of the prophecy.</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(... Kris would never join choir...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the RHAPSOTEA!</d-text>
+	</d-box>
+	<p class="note">Heals 115 HP.</p>
+</section>
+
+
+<section class="d-section" id="scarlixir"> <!-- id 62 -->
+	<h2>Scarlixir</h2>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A red brew with a sickeningly fruity taste. Recovers 160 HP.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> 160HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 160 HP.</p>
+
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hell yeah! Cheers!</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Y-yuck! Er, mmm, medicine?</d-text>
+	</d-box>
+
+	<h4>Noelle</h4>
+	<p class="note">Instead of the usual amount, heals Noelle for 155 HP and Kris for 5 HP.</p>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>... fine, you can have the LAST DROP.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the SCARLIXIR!</d-text>
+	</d-box>
+	<p class="note">Heals the same amount as in the overworld. Notably, heal-buffing items like the Blue Ribbon don't buff Kris's 5 HP gain when the Scarlixir is used on Noelle.</p>
+</section>
+
+
+<section class="d-section" id="bittertear"> <!-- id 63 -->
+	<h2>Bitter Tear</h2>
+	<p>Appears as "BitterTear" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Bitter water that fell in droplets from the sky. Recovers all HP.</d-text>
+	</d-box>
+
+	<h4>In battle</h4>
+	<d-box theme="objbattle">
+		<d-text>Heals<span class="break"></span> All HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (overworld)</h3>
+	<p class="note">Heals 100% HP.</p>
+
+	<h4>Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... Isn't that rain?</d-text>
+	</d-box>
+
+	<h4>Ralsei</h4>
+	<p class="note">Ralsei is silent.</p>
+
+	<h4>Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>It's like when we ate snow.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage (in battle)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the BITTERTEAR!</d-text>
+	</d-box>
+	<p class="note">Heals 100% HP.</p>
+</section>
+
+
+<section class="d-section" id="cellphone"> <!-- key item id 1; offset by 300 for regular item ID -->
+	<h2>Cell Phone</h2>
+	<p>Key item. See <a href="{{ '/misc/phone' | relative_url }}">Cell Phone</a>.</p>
+</section>
+
+
+<section class="d-section" id="egg"> <!-- key item id 2 -->
+	<h2>Egg</h2>
+	<p>Key item. Dark World equivalent of the <a href="{{ '/misc/lightitems#egg' | relative_url }}">Egg (Light World)</a>.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>Not too important, not too unimportant.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(You used the Egg.)</d-text>
+	</d-box>
+	<p class="note">The Egg remains in your inventory.</p>
+</section>
+
+
+<section class="d-section" id="brokencake"> <!-- key item id 3 -->
+	<h2>Broken Cake</h2>
+	<p>Key item. Appears as "BrokenCake" in-game.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>Though broken, it seethes with power.</d-text>
+		<d-text>A master smith could fix it.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<p class="note">This Key Item cannot be used via the item menu.</p>
+</section>
+
+
+<section class="d-section" id="brokenkeya"> <!-- key item id 4 -->
+	<h2>Broken Key A</h2>
+	<p>Key item.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>It's the top part of a key.</d-text>
+		<d-text>A smith could fix all three parts.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<p class="note">This Key Item cannot be used via the item menu.</p>
+</section>
+
+
+<section class="d-section" id="doorkey"> <!-- key item id 5 -->
+	<h2>Door Key</h2>
+	<p>Key item.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>The key to a mysterious cell.</d-text>
+		<d-text>Something feels strange about it.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<p class="note">This Key Item cannot be used via the item menu.</p>
+</section>
+
+
+<section class="d-section" id="brokenkeyb"> <!-- key item id 6 -->
+	<h2>Broken Key B</h2>
+	<p>Key item.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>It's the middle part of a key.</d-text>
+		<d-text>A smith could fix all three parts.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<p class="note">This Key Item cannot be used via the item menu.</p>
+</section>
+
+
+<section class="d-section" id="brokenkeyc"> <!-- key item id 7 -->
+	<h2>Broken Key C</h2>
+	<p>Key item.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>It's the bottom part of a key.</d-text>
+		<d-text>A smith could fix all three parts.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<p class="note">This Key Item cannot be used via the item menu.</p>
+</section>
+
+
+<section class="d-section" id="lancer"> <!-- key item id 8 -->
+	<h2>Lancer</h2>
+	<p>Key item.</p>
+
+	<h3>Description</h3>
+
+	<h4>Chapter 2</h4>
+
+	<h5>Initial</h5>
+	<d-box theme="objmenu">
+		<d-text>Hohoho! I'm a tough boy!</d-text>
+		<d-text>Treat me like one of your ITEMS!</d-text>
+	</d-box>
+
+	<h5>After entering Cyber World</h5>
+	<d-box theme="objmenu">
+		<d-text>Hohoho! ROUXLS jumped out of your<span class="break"></span> pocket! How dadcrobatic! (Lesser)</d-text>
+	</d-box>
+
+	<h5>After playing the arcade game</h5>
+	<d-box theme="objmenu">
+		<d-text>Hohoho! That game looked fun!</d-text>
+		<d-text>Let me be the stool next!</d-text>
+	</d-box>
+
+	<h5>After fighting Sweet Cap'n Cakes</h5>
+	<d-box theme="objmenu">
+		<d-text>Sounded like milk out there. Splat!</d-text>
+		<d-text>Were you three osmosing without me!?</d-text>
+	</d-box>
+
+	<h5>After entering Cyber City</h5>
+	<d-box theme="objmenu">
+		<d-text>We fell! But don't worry. I'm a strong boy.</d-text>
+		<d-text>I won't be trounced by a mere bounce!</d-text>
+	</d-box>
+
+	<h5>After Susie and Ralsei split off</h5>
+	<d-box theme="objmenu">
+		<d-text>Split up? We'll solve this mystery fast!</d-text>
+		<d-text>You? You can be the un-talking dog.</d-text>
+	</d-box>
+
+	<h5>After Noelle joins the party</h5>
+	<d-box theme="objmenu">
+		<d-text>Ho-ho! A soft cream is following you!</d-text>
+		<d-text>Can we make them a bad guy?</d-text>
+	</d-box>
+
+	<h5>After seeing the Berdly statue</h5>
+	<d-box theme="objmenu">
+		<d-text>That golden statue... Could it be...</d-text>
+		<d-text>The illusory nipple technique!?</d-text>
+	</d-box>
+
+	<h5>After getting a shoe sample from an Addison</h5>
+	<d-box theme="objmenu">
+		<d-text>Wow! Thanks for the free sample!</d-text>
+		<d-text>I couldn't eat another bite!!</d-text>
+	</d-box>
+
+	<h5>After fighting Berdly with Noelle</h5>
+	<d-box theme="objmenu">
+		<d-text>The bluebird of crappiness.</d-text>
+		<d-text>Fly high, bluebird. Fly high.</d-text>
+	</d-box>
+
+	<h5>After fighting Spamton</h5>
+	<d-box theme="objmenu">
+		<d-text>Did I miss something? I was doing my calisthetics. Stay handsome.</d-text>
+	</d-box>
+
+	<h5>After Queen's car cutscene</h5>
+	<d-box theme="objmenu">
+		<d-text>Hey! Thanks for the tape! I was hungry!</d-text>
+		<d-text>Push my tummy to hear a cool song!</d-text>
+	</d-box>
+
+	<h5>After being sent to your room in Queen's mansion</h5>
+	<d-box theme="objmenu">
+		<d-text>Hoho! It's me, Lancer! Release me and<span class="break"></span> I will release you!</d-text>
+	</d-box>
+
+	<h5>On the Weird Route, after freezing the Trash Zone encounters</h5>
+	<d-box theme="objmenu">
+		<d-text>(Innocent boys are fast asleep.)</d-text>
+	</d-box>
+
+	<h5>On the Weird Route, after entering Queen's mansion</h5>
+	<d-box theme="objmenu">
+		<d-text>A stone statue.</d-text>
+		<d-text>Strangely, it looks like Lancer...</d-text>
+	</d-box>
+
+	<h5>After sealing Cyber World's Dark Fountain</h5>
+	<d-box theme="objmenu">
+		<d-text>Hoho! What a terrific boy's adventure.</d-text>
+		<d-text>Time to kick off my feet and relax...</d-text>
+	</d-box>
+
+	<h5>In the Top Bakery</h5>
+	<d-box theme="objmenu">
+		<d-text>Oo la la! Who is that handsome<span class="break"></span> mustachioed boy! I think I'm in love!</d-text>
+	</d-box>
+
+	<h5>On the second floor of Ralsei's castle, or in Lancer's room</h5>
+	<d-box theme="objmenu">
+		<d-text>(huff, puff) There, I got back into your<span class="break"></span> pocket! Now you can use my power!</d-text>
+	</d-box>
+
+	<h4>Chapter 3</h4>
+
+	<h5>When one Lancer is obtained via the Ball Machine</h5>
+	<d-box theme="objmenu">
+		<d-text>Ho ho ho!</d-text>
+		<d-text>Enjoy my prescence for a single room!</d-text>
+	</d-box>
+
+	<h5>When multiple Lancers have been obtained via the Ball Machine</h5>
+	<d-box theme="objmenu">
+		<d-text>The best thing about me is that<span class="break"></span> I'm the only one!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<h4>Standard</h4>
+	<p class="note">Lancer's trademark "splat" SFX plays.</p>
+
+	<h4>Chapter 2 only</h4>
+	<h5>After Queen's car cutscene in Chapter 2</h5>
+	<p class="note">The track <a href="https://deltarune.wiki/w/Cool_Mixtape">"Cool Mixtape"</a> replaces the current soundtrack while the Item menu is open.</p>
+
+	<h5>After being sent to your room in Queen's mansion</h5>
+	<p class="note">Lancer is removed from the Key Items; he emerges from Kris's pockets and appears in the overworld.</p>
+
+	<h5>On the Weird Route, after entering Queen's mansion</h5>
+	<p class="note">The petrification SFX plays.</p>
+</section>
+
+
+<section class="d-section" id="rouxlskaard"> <!-- key item id 9 -->
+	<h2>Rouxls Kaard</h2>
+	<p>Key item.</p>
+
+	<h3>Description</h3>
+
+	<h4>Chapter 2</h4>
+
+	<h5>Initial</h5>
+	<d-box theme="objmenu">
+		<d-text>Thou gazeth upon a man most handsometh.</d-text>
+		<d-text class="hideoverflow">This daringst genius, adoredeth beyondth all hey let me speakst</d-text>
+	</d-box>
+
+	<h5>After sealing Cyber World's Dark Fountain</h5>
+	<d-box theme="objmenu">
+		<d-text>Oh, milord! Tis I, your humblest servante,<span class="break"></span> righte here where I never lefteth!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<p class="note">This Key Item cannot be used via the item menu.</p>
+</section>
+
+
+<section class="d-section" id="emptydisk"> <!-- key item id 10 -->
+	<h2>Empty Disk</h2>
+	<p>Key item. Appears as "EmptyDisk" in-game.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A data disk from a strange machine.</d-text>
+		<d-text>Didn't someone want this?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<p class="note">This Key Item cannot be used via the item menu.</p>
+</section>
+
+
+<section class="d-section" id="loadeddisk"> <!-- key item id 11 -->
+	<h2>Loaded Disk</h2>
+	<p>Key item. Appears as "LoadedDisk" in-game.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A strange disk. You can feel it<span class="break"></span> smiling in your hand.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<p class="note">This Key Item cannot be used via the item menu.</p>
+</section>
+
+
+<section class="d-section" id="keygen"> <!-- key item id 12 -->
+	<h2>KeyGen</h2>
+	<p>Key item.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A shady-looking program that can<span class="break"></span> open certain doors.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<p class="note">This Key Item cannot be used via the item menu.</p>
+</section>
+
+
+<section class="d-section" id="shadowcrystal"> <!-- key item id 13 -->
+	<h2>Shadow Crystal</h2>
+	<p>Key item. Appears as "ShadowCrystal" in-game. The Dark World equivalent of the <a href="{{ '/misc/lightitems#glass' | relative_url }}">Glass</a>.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A sharp shadow moves like water in the hand.</d-text>
+		<d-text>You have collected [#].</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+
+	<h4>Chapter 1</h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-text asterisk>You held the crystal up to your eye.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>For some strange reason, for just a brief moment...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You thought you saw toys strewn on the floor.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>...but, it must've just been your imagination.</d-text>
+	</d-box>
+
+	<h5>Second time</h5>
+	<d-box theme="dark">
+		<d-text asterisk>You held the crystal up to your eye.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>... but nothing happened.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-text asterisk>It doesn't seem very useful.</d-text>
+	</d-box>
+
+
+	<h4>Chapter 2</h4>
+	<h5>First time in the Cyber World</h5>
+	<d-box theme="dark">
+		<d-text asterisk>You held the crystal up to your eye.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>For some strange reason, for just a brief moment...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You thought you saw the computer lab.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>...but, it must've just been your imagination.</d-text>
+	</d-box>
+
+	<h5>Second time in the Cyber World, or first time in Castle Town</h5>
+	<p>If used twice in the Cyber World, then this is skipped for the first usage in Castle Town.</p>
+	<d-box theme="dark">
+		<d-text asterisk>You held the crystal up to your eye.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>... but nothing happened.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-text asterisk>It doesn't seem very useful.</d-text>
+	</d-box>
+
+
+	<h4>Chapter 3</h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-text asterisk>You held the crystal up to your eye.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>For some strange reason, for just a brief moment...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You thought you saw the television get smashed to pieces.</d-text>
+	</d-box>
+
+	<h5>Second time</h5>
+	<d-box theme="dark">
+		<d-text asterisk>You held the crystal up to your eye.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>... but nothing happened.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-text asterisk>It doesn't seem very useful.</d-text>
+	</d-box>
+
+
+	<h4>Chapter 4</h4>
+	<h5>When in a room with a prophecy panel</h5>
+	<d-box theme="dark">
+		<d-text asterisk>You held the crystal up to your eye.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>For some strange reason, no matter how you look...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The prophecy's text does not warp in the crystal's lens.</d-text>
+	</d-box>
+	<h5>When in the room with the Final Prophecy</h5>
+	<d-box theme="dark">
+		<d-text asterisk>You held the crystal up to your eye.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>For some strange reason...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The prophecy's text does not warp in the crystal's lens.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You shook the crystal...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>However, nothing changed.</d-text>
+	</d-box>
+	
+	<h5>First time in the Dark Sanctuary, with no prophecy in room</h5>
+	<p>Limited to the 1st Sanctuary only; does not play in the 2nd/3rd Sanctuaries.</p>
+	<d-box theme="dark">
+		<d-text asterisk>You held the crystal up to your eye.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>For some strange reason, for just a brief moment...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You thought you saw the lobby of the church.</d-text>
+	</d-box>
+
+	<h5>First time outside the Dark Sanctuary, with no prophecy in room</h5>
+	<p>Uses the Glass's usual first line instead of the Crystal's, for whatever reason.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>You looked through the glass.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>... but nothing happened.</d-text>
+	</d-box>
+	
+	<h5>Otherwise</h5>
+	<d-box theme="dark">
+		<d-text asterisk>It doesn't seem very useful.</d-text>
+	</d-box>
+</section>
+
+
+<section class="d-section" id="starwalker"> <!-- key item id 14 -->
+	<h2>Starwalker</h2>
+	<p>Key item.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>The original<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(Starwalker)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<p class="note">This Key Item cannot be used via the item menu.</p>
+</section>
+
+
+<section class="d-section" id="purecrystal"> <!-- key item id 15 -->
+	<h2>Pure Crystal</h2>
+	<p>Key item. Appears as "PureCrystal" in-game.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>The shadow purified by the cat</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<p class="note">This Key Item cannot be used via the item menu.</p>
+</section>
+
+
+<section class="d-section" id="oddcontroller"> <!-- key item id 16 -->
+	<h2>Odd Controller</h2>
+	<p>Key item. Appears as "OddController" in-game.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A gamepad no one wanted to use.</d-text>
+		<d-text>The buttons are an ugly pink and yellow.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<p class="note">This Key Item cannot be used via the item menu.</p>
+</section>
+
+
+<section class="d-section" id="backstagepass"> <!-- key item id 17 -->
+	<h2>Backstage Pass</h2>
+	<p>Key item. Unused. Appears as "BackstagePass" in-game.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A pass for big shots allowed backstage.</d-text>
+		<d-text>Show it to Ramb in front of the door.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<p class="note">This Key Item cannot be used via the item menu.</p>
+</section>
+
+
+<section class="d-section" id="tripticket"> <!-- key item id 18 -->
+	<h2>Trip Ticket</h2>
+	<p>Key item. Appears as "TripTicket" in-game.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A ticket to nowhere. It shows a map<span class="break"></span> pointing to the left of a red X...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<p class="note">This Key Item cannot be used via the item menu.</p>
+</section>
+
+
+<section class="d-section" id="lancercontroller"> <!-- key item id 19 -->
+	<h2>Lancer Controller</h2>
+	<p>Key item. Appears as "LancerCon" / "LancerConX2" / "LancerConX3" in-game.</p>
+
+	<h3>Description</h3>
+	<h4>Single</h4>
+	<d-box theme="objmenu">
+		<d-text>Lancer's controller. It's covered in dirt.</d-text>
+	</d-box>
+	<h4>Multiple</h4>
+	<d-box theme="objmenu">
+		<d-text>Lancer's controllers. They're covered in dirt.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<p class="note">This Key Item cannot be used via the item menu.</p>
+</section>
+
+
+<section class="d-section" id="sheetmusic"> <!-- key item id 30 -->
+	<h2>Sheet Music</h2>
+	<p>Key item. Appears as "SheetMusic" in-game.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>Music that Susie attempted to transcribe.</d-text>
+		<d-text>USE it to read it.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a bit hard to read the characters, but it looks like this...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<img class="fullheight fullwidth center" src="{{ '/assets/images/story/sheetmusic_0.png' | relative_url }}" alt="●⬁●⬃⬊⬇⮕●●⬁●⬋⮕⬊⬇⬋⬋⬋⬋⬋●" />
+	</d-box>
+	<d-box theme="dark">
+		<img class="fullheight fullwidth center" src="{{ '/assets/images/story/sheetmusic_1.png' | relative_url }}" alt="⬊⮕⇦●●⬁⬊⬇⬋⬋⬋⬋⬋⬅⬉⬆⬉" />
+	</d-box>
+	<d-box theme="dark">
+		<img class="fullheight fullwidth center" src="{{ '/assets/images/story/sheetmusic_2.png' | relative_url }}" alt="⬅⬋⬊●⬁●⬃⬊⬇⮕●⬂⇩⇨○" />
+	</d-box>
+</section>
+
+
+<section class="d-section" id="claimbclaws"> <!-- key item id 31 -->
+	<h2>Claimb Claws</h2>
+	<p>Key item. Appears as "ClaimbClaws" in-game.</p>
+
+	<h3>Description</h3>
+	<d-box theme="objmenu">
+		<d-text>Claws so small they conveniently can't<span class="break"></span> be seen. Use them to climb up obvious walls.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Usage</h3>
+	<p class="note">This Key Item cannot be used via the item menu.</p>
+</section>
+
+
+<section class="d-section" id="special">
+	<h2>Special messages</h2>
+	<p>These play only under special circumstances.</p>
+
+	<h3 id="hammerofjustice">Using items in the Hammer of Justice encounter (Chapter 4)</h3>
+	<p>Begins with the standard "[character] used [ITEM]" message for each item. For the <a href="#tensionbit">Tension Bit</a> specifically, its usual second line "Tension raised up earlier." gets overriden by the "stolen" line.</p>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie used the [ITEM]!</d-text>
+		<d-text asterisk>... but it was stolen!</d-text>
+	</d-box>
+	
+	<hr>
+
+	<h3>Old item format</h3>
+	<p>Eloquently named "itemdesc_oldtype", the below text is from what appears to be a beta version of the item menu.</p>
+
+	<h4 id="fallbacks">Fallbacks</h4>
+	<h5 id="iteminvalid">Invalid item ID</h5>
+	<p>Plays when an item's ID isn't accounted for in the code.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It could not be.</d-text>
+	</d-box>
+
+	<h5 id="item0">Default (null) item</h5>
+	<p>Plays when the unused item ID 0 is provided, probably for testing purposes.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>An emptiness filled your hands.</d-text>
+	</d-box>
+
+	<h4 id="darkcandybeta">Dark Candy (beta version)</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>"Dark Candy" - Heals 60 HP</d-text>
+		<d-text asterisk>Black and red star that<span class="break"></span>  tastes like marshmallows.</d-text>
+	</d-box>
+
+	<h4 id="lifedew">Life Dew</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>"Life Dew" - Revive Ally (Weak)</d-text>
+		<d-text asterisk>Glowing dew...</d-text>
+		<d-text asterisk>It refreshes your SOUL.</d-text>
+	</d-box>
+</section>

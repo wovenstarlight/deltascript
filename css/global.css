@@ -389,11 +389,11 @@ d-box, d-choices {
 			border-image-source: url("../assets/images/textbox/dark.gif");
 		}
 
-		&[theme=plain], &[theme=objmenu] {
+		&[theme=plain], &[theme^=obj], &[theme=battlemenu] {
 			border-image-source: url("../assets/images/textbox/plain.png");
 		}
 
-		&[theme^=obj] { width: 26.4em }
+		&[theme^=obj], &[theme=battlemenu] { width: 26.4em }
 
 		&[theme^=obj], &[theme^=power] {
 			font-family: "DeltaFont Condensed", var(--font);
@@ -402,8 +402,8 @@ d-box, d-choices {
 		&[theme=objreact] {
 			display: flex;
 			align-items: center;
-			border-image-source: url("../assets/images/textbox/plain.png");
 			min-height: unset;
+			width: 28.4em;
 			padding: 0;
 
 			d-speaker {
@@ -428,6 +428,8 @@ d-box, d-choices {
 
 			d-text { margin-inline-start: 1ch }
 		}
+
+		&[theme=objbattle] { width: 5.4em }
 
 		&[theme=powertitle] { width: 11em }
 
@@ -465,6 +467,12 @@ d-box, d-choices {
 				var(--black);
 		}
 
+		&.hideoverflow {
+			white-space: pre;
+			max-width: 100%;
+			overflow: hidden;
+		}
+
 		@media (max-width: 30em) {
 			font-size: 1em;
 
@@ -474,6 +482,19 @@ d-box, d-choices {
 
 		/* Forced line break */
 		.break { display: block }
+
+		img:is(.fullheight, .fullwidth) { display: block}
+		img.fullheight {
+			height: 100%;
+			grid-row: 1 / span 3;
+		}
+		img.fullwidth {
+			width: 100%;
+			grid-column: 1 / span 2;
+			
+			&.center { justify-self: center }
+		}
+		img.fullwidth.fullheight { object-fit: contain }
 	}
 
 	&:state(compact) {
