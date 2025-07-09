@@ -435,13 +435,13 @@ d-box, d-choices {
 
 		&[theme=powertitle] { width: 11em }
 
-		&[theme=combat] {
+		&[theme=battletalk] {
 			border-image: url("../assets/images/textbox/bubble.png") 6 / 0.375em / 0.375em;
 			background-color: var(--white);
 			color: var(--black);
 			font-family: "DeltaFont Combat", var(--font);
 			font-size: 1em;
-			width: var(--mywidth, 22.4em);
+			width: fit-content;
 			display: flex;
 			flex-direction: column;
 
