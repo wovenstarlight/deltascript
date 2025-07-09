@@ -108,11 +108,44 @@ hr {
 .cP, .purple { color: var(--purple) } /* unused */
 .cM, .maroon { color: var(--maroon) } /* unused */
 .cO, .orange { color: var(--orange) }
-.cA { color: --#00aeff }
-.cS { color: --#ff80ff }
-.cV { color: --#80ff80 } /* unused */
+.cA { color: #00aeff }
+.cS { color: #ff80ff }
+.cV { color: #80ff80 } /* unused */
 .gray { color: var(--gray) }
 .lightyellow { color: var(--lightyellow) }
+
+[theme=dark], [theme=objbattle], [theme=battlemenu] {
+	.cR, .red,
+	.cB, .blue,
+	.cY, .yellow,
+	.cG, .green,
+	.cW, .white,
+	.cX, .black,
+	.cP, .purple,
+	.cM, .maroon,
+	.cO, .orange,
+	.cA, .cS, .cV,
+	.gray, .lightyellow {
+		background: linear-gradient(color-mix(in srgb, var(--white), var(--mycolor) var(--strength, 20%)), var(--mycolor));
+		background-clip: text;
+		color: transparent;
+		filter: drop-shadow(1px 1px rgb(from var(--mycolor) r g b / 0.4));
+	}
+	.cR, .red { --mycolor: var(--red) }
+	.cB, .blue { --mycolor: var(--blue) }
+	.cY, .yellow { --mycolor: var(--yellow); --strength: 20% }
+	.cG, .green { --mycolor: var(--green) }
+	.cW, .white { --mycolor: var(--white) }
+	.cX, .black { --mycolor: var(--black) }
+	.cP, .purple { --mycolor: var(--purple) } /* unused */
+	.cM, .maroon { --mycolor: var(--maroon) } /* unused */
+	.cO, .orange { --mycolor: var(--orange) }
+	.cA { --mycolor: #00aeff }
+	.cS { --mycolor: #ff80ff }
+	.cV { --mycolor: #80ff80 } /* unused */
+	.gray { --mycolor: var(--gray) }
+	.lightyellow { --mycolor: var(--lightyellow) }
+}
 /* Health bar colors */
 .health.kris { color: #01ffff }
 .health.susie { color: #ff00ff }
