@@ -1,0 +1,242 @@
+---
+title: Rudinn Encounter Dialogue
+description: >
+  <p>Flavor text and dialogue for battles against Rudinn.</p>
+sources:
+  -
+    name: gml_Object_obj_diamondenemy_Step_0
+    chapters: [1]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [1]
+    note: initial flavor text
+  -
+    name: gml_GlobalScript_obj_chaseenemy_Create_0
+    chapters: [1]
+    note: location of unused Rabbick encounter
+  -
+    name: gml_GlobalScript_scr_spelltext
+    chapters: [1]
+    note: Glowshard usage
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+---
+<section class="d-section" id="flavortext">
+	<h2>Flavor text</h2>
+
+	<h3>Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn is glimmering plainly.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn has no strong opinions one way or the other.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn thinks about elaborate stones.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn dislikes its boss, but doesn't care enough to quit.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like jewelry.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Initial encounter</h3>
+	<h4>Solo</h4>
+	<h5>First time</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn drew near!</d-text>
+	</d-box>
+	<h5>Second time, and fourth time onwards</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>A different Rudinn from last time drew near!</d-text>
+	</d-box>
+	<h5>Third time</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Assumedly another different Rudinn appeared!</d-text>
+	</d-box>
+
+	<h4>With another Rudinn</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>A necklace of Rudinns blocks your path.</d-text>
+	</d-box>
+
+	<h4>With Hathy</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn and Hathy blocked the way!</d-text>
+	</d-box>
+
+	<h4>With Jigsawry and Hathy</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smorgasboard.</d-text>
+	</d-box>
+
+	<h4>With Hathy and another Rudinn</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Various guys appeared!</d-text>
+	</d-box>
+
+	<h4>With Rabbick</h4>
+	<p>Unused. Appears to be intended for an unimplemented encounter in the room where <a href="{{ '/misc/combat/clover' | relative_url }}">Clover</a> is first encountered.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rabbick slithered in the way!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn is starting to fall asleep.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn's luster begins to fade.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Spareable</h3>
+	<p>Unused. (Got assigned to the wrong variable, whoops.)</p> <!-- global.msg instead of global.battlemsg, if you were wondering -->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn is alright with not fighting.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Check</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>RUDINN - AT 6 DF 0</d-text>
+		<d-text asterisk>This ambivalent diamond isn't any girl's best friend.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Convince</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Rudinn to quit fighting.</d-text>
+		<d-text asterisk>It was utterly swayed.</d-text>
+	</d-box>
+	<p class="note">Rudinn gains 100% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3>Lecture</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You lectured the enemies on the importance of kindness.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The enemies became <span class="blue">TIRED</span>...</d-text>
+	</d-box>
+	<p class="note">All enemies become <span class="blue">Tired</span>.</p>
+
+	<hr>
+
+	<h3>Warning</h3>
+	<p class="note">Susie's attacks will miss from now on.</p>
+
+	<h4>When against a lone Rudinn</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei warned Rudinn about Susie.</d-text>
+		<d-text asterisk>The enemy went on guard...</d-text>
+	</d-box>
+
+	<h4>When against multiple enemies</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei warned the enemies about Susie.</d-text>
+		<d-text asterisk>Everyone went on guard.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Using Glowshard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the GLOWSHARD!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn became enraptured!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The GLOWSHARD disappeared!</d-text>
+	</d-box>
+	<p class="note">All Rudinns gain 100% <span class="yellow">Mercy</span>. The Glowshard is removed from the inventory.</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+
+	<h3>Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text>Long live<span class="break"></span> the guy<span class="break"></span> who pays us!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text>Shine,<span class="break"></span> shine</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text>I'm just a<span class="break"></span> normal<span class="break"></span> person.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text>Face my<span class="break"></span> Diamond<span class="break"></span> Cutter!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Convince</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text>Yeah I<span class="break"></span> guess that<span class="break"></span> makes<span class="break"></span> sense.</d-text>
+	</d-box>
+
+	<h4>First attempt (Unused)</h4>
+	<p>It appears Convince was intended to work only on the second try; this is the dialogue and response for what would've been the first try.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text>You kidding?<span class="break"></span> I can't quit.<span class="break"></span> Stopping you<span class="break"></span> is my job!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Really?</d-text>
+		<d-text asterisk>What do you spend your money on?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text>I'm a normal<span class="break"></span> person.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text>I spend all<span class="break"></span> my money on<span class="break"></span> RENT and<span class="break"></span> MYSTIC GEMs.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>(Kris, let's try CONVINCING them again...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Lecture</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text>(Yawn)...<span class="break"></span> What? OK...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Unused</h3>
+	<p>Possibly intended for the second, successful use of Convince.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text>Alright,<span class="break"></span> you convinced<span class="break"></span> me!!</d-text>
+	</d-box>
+</section>
