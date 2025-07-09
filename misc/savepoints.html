@@ -16,12 +16,8 @@ credits: >
   <p>Compiled by wovenstarlight.</p>
 ---
 {% comment %}
-Room IDs retrieved from scr_get_room_list() in gml_GlobalScript_scr_get_room_by_id.gml
-Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs gathered above, offset by the following values (subtract this from the IDs in scr_get_room_list() to find the correct value for scr_roomname)
-	- Chapter 1: offset by 10281
-	- Chapter 2: offset by 20010
-	- Chapter 3: offset by. Um I'm not sure it's either 29999 or 30001
-	- Chapter 4: offset by 39999 or 40000 or 40001 >:( OR 40003 FOR MIKE ZONE? DUDE.
+Room IDs are based on their index in the game files; helper function getRoom() is available in the head.html include if you'd like to check other room IDs for yourself
+Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs gathered above
 {% endcomment -%}
 
 
@@ -29,7 +25,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 <section class="d-section" id="chapter1">
 	<h2>Chapter 1</h2>
 
-	<h3>??????</h3>
+	<h3>??????</h3> <!-- id/room name: 35/room_dark1a -->
 
 	<d-box theme="dark">
 		<d-text asterisk>At times, you see it flickering.</d-text>
@@ -41,9 +37,22 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Eye Puzzle</h3>
+	<h3>Eye Puzzle</h3> <!-- 40/room_dark_eyepuzzle -->
 	<p>Comes after the puzzle with the wobbly things that each shoot three bullets as you pass.</p>
 	<p>Only plays upon first interaction after entering this room.</p>
+
+	<h4>If Kris's HP is at max</h4>
+
+	<d-box theme="dark">
+		<d-text asterisk>You bathed your body in the light.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>A power shines within you, breaking through the darkness.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>Any pain you may have had melted away...</d-text>
+		<d-text asterisk>(HP fully restored.)</d-text>
+	</d-box>
 
 	<h4>If Kris's HP is below max</h4>
 	<d-box theme="dark">
@@ -68,22 +77,9 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 		<d-text asterisk>(HP fully restored.)</d-text>
 	</d-box>
 
-	<h4>If Kris's HP is at max</h4>
-
-	<d-box theme="dark">
-		<d-text asterisk>You bathed your body in the light.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-text asterisk>A power shines within you, breaking through the darkness.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-text asterisk>Any pain you may have had melted away...</d-text>
-		<d-text asterisk>(HP fully restored.)</d-text>
-	</d-box>
-
 	<hr>
 
-	<h3>Castle Town</h3>
+	<h3>Castle Town</h3> <!-- 45/room_castle_town -->
 
 	<h4>Before Ralsei joins the party</h4>
 	<d-box theme="dark">
@@ -107,7 +103,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Field - Great Door</h3>
+	<h3>Field - Great Door</h3> <!-- 49/room_field_start -->
 
 	<h4>Before Susie "joins" the party</h4>
 	<d-box theme="dark">
@@ -127,7 +123,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Field - Seam's Shop</h3>
+	<h3>Field - Seam's Shop</h3> <!-- 59/room_field_shop1 -->
 
 	<h4>If Susie is in the party</h4>
 	<d-box theme="dark">
@@ -147,7 +143,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Field - Great Board</h3>
+	<h3>Field - Great Board</h3> <!-- 68/room_field_checkers3 -->
 
 	<h4>Picked Susie's team name</h4>
 	<d-box theme="dark">
@@ -172,7 +168,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Forest - Entrance</h3>
+	<h3>Forest - Entrance</h3> <!-- 73/room_forest_savepoint1 -->
 
 	<d-box theme="dark">
 		<d-text asterisk>The blocky foliage grows thick above your head...</d-text>
@@ -183,7 +179,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Forest - Bake Sale</h3>
+	<h3>Forest - Bake Sale</h3> <!-- 82/room_forest_savepoint2 -->
 
 	<d-box theme="dark">
 		<d-text asterisk>In the heart of the woods, a bake sale stands quietly.</d-text>
@@ -198,7 +194,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<h3 id="ch2castletown">Castle Town</h3>
 
-	<h4>Before retrieving the Card Kingdom residents</h4>
+	<h4>Before retrieving the Card Kingdom residents</h4> <!-- 61/room_dw_castle_area_2 -->
 	<!-- The original "power of this place"/"power of fluffy boys" lines from Chapter 1 are left over here, but there's no save point before the Card Kingdom transformation is triggered so it never plays -->
 	<d-box theme="dark">
 		<d-text asterisk>You look upon the castle you first saw yesterday...</d-text>
@@ -207,7 +203,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 		<d-text asterisk>You are filled with the power of immediate nostalgia.</d-text>
 	</d-box>
 
-	<h4>After retrieving the Card Kingdom residents and before visiting the Cyber World</h4>
+	<h4>After retrieving the Card Kingdom residents and before visiting the Cyber World</h4> <!-- 62/room_dw_castle_area_2_transformed -->
 	<p>Only plays upon first interaction after entering this room.</p>
 
 	<d-box theme="dark">
@@ -217,7 +213,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 		<d-text asterisk>You are filled with the power of friendship-based architecture.</d-text>
 	</d-box>
 
-	<h4>After returning from the Cyber World</h4>
+	<h4>After returning from the Cyber World</h4> <!-- 62/room_dw_castle_area_2_transformed -->
 	<p>This narration changes on the Weird Route; <a href="#ch2weirdroute">see below</a> for the altered text.</p>
 
 	<h5>First time</h5>
@@ -241,7 +237,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Cyber Field - Entrance</h3>
+	<h3>Cyber Field - Entrance</h3> <!-- 78/room_dw_cyber_savepoint -->
 
 	<h4>If you haven't reached Cyber City yet</h4>
 	<d-box theme="dark">
@@ -261,7 +257,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Cyber Field - Arcade Machine</h3>
+	<h3>Cyber Field - Arcade Machine</h3> <!-- 83/room_dw_cyber_queen_boxing -->
 
 	<d-box theme="dark">
 		<d-text asterisk>The game is wrecked. You are filled with the power of videogame violence.</d-text>
@@ -269,7 +265,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Cyber Field - Music Shop</h3>
+	<h3>Cyber Field - Music Shop</h3> <!-- 89/room_dw_cyber_musical_shop -->
 
 	<d-box theme="dark">
 		<d-text asterisk>Crash! Boom! Bang! There's a terrific noise coming from the building nearby...</d-text>
@@ -280,7 +276,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Cyber City - Entrance</h3>
+	<h3>Cyber City - Entrance</h3> <!-- 112/room_dw_city_entrance -->
 
 	<h4>If Kris is alone</h4>
 	<d-box theme="dark">
@@ -308,7 +304,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Cyber City - First Alleyway</h3>
+	<h3>Cyber City - First Alleyway</h3> <!-- 115/room_dw_city_hacker -->
 
 	<h4>If Noelle is in the party</h4>
 	<d-box theme="dark">
@@ -330,7 +326,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Cyber City - Music Shop</h3>
+	<h3>Cyber City - Music Shop</h3> <!-- 121/room_dw_city_savepoint -->
 
 	<h4>If you haven't entered Queen's Mansion yet</h4>
 	<d-box theme="dark">
@@ -347,7 +343,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Cyber City - Second Alleyway</h3>
+	<h3>Cyber City - Second Alleyway</h3> <!-- 128/room_dw_city_berdly -->
 	<d-box theme="dark">
 		<d-text asterisk>After defeating Berdly, a certain scent hangs in the air...</d-text>
 	</d-box>
@@ -357,7 +353,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Queen's Mansion - Guest Hall</h3>
+	<h3>Queen's Mansion - Guest Hall</h3> <!-- 152/room_dw_mansion_lightner_hallway -->
 	<d-box theme="dark">
 		<d-text asterisk>You have escaped from your second personalized room of the day.</d-text>
 	</d-box>
@@ -367,14 +363,14 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Queen's Mansion - Entrance</h3>
+	<h3>Queen's Mansion - Entrance</h3> <!-- 157/room_dw_mansion_entrance -->
 	<d-box theme="dark">
 		<d-text asterisk>Looking at these legs fills you with a certain power.</d-text>
 	</d-box>
 
 	<hr>
 
-	<h3>Queen's Mansion - 3F</h3>
+	<h3>Queen's Mansion - 3F</h3> <!-- 187/room_dw_mansion_east_3f -->
 	<d-box theme="dark">
 		<d-text asterisk>Susie has gone into a book hole with Berdly.</d-text>
 	</d-box>
@@ -384,7 +380,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Queen's Mansion - Acid Tunnel</h3>
+	<h3>Queen's Mansion - Acid Tunnel</h3> <!-- 193/room_dw_mansion_acid_tunnel_exit -->
 	<d-box theme="dark">
 		<d-text asterisk>Everyone is together, but the wind blows coldly...</d-text>
 	</d-box>
@@ -405,10 +401,8 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 		<d-text asterisk>You and Noelle were filled with power.</d-text>
 	</d-box>
 
-	<h4>Castle Town, after scaring Noelle in the hospital</h4>
-	<p>This accompanies the <a href="#ch2castletown">Castle Town save point</a> after you've closed the Cyber World's Dark Fountain, and overrides the normal text associated with it, including the warning about not being able to return.</p>
-
-	<p>Precondition: In the hospital, when Kris joins Noelle outside Rudy's room, you must scare Noelle by stepping towards her (moving right) thrice.</p>
+	<h4>Castle Town, after scaring Noelle in the hospital</h4> <!-- 62/room_dw_castle_area_2_transformed -->
+	<p>Occurs after you've closed the Cyber World's Dark Fountain and scared Noelle in the hospital by stepping towards her (moving right) thrice. Overrides all text normally associated with the <a href="#ch2castletown">Castle Town save point</a>, including the warning about not being able to return to Cyber World.</p>
 	<!-- Triggers when sideb is in phase 4, i.e. when global.plot[915] === 20 -->
 
 	<d-box theme="dark">
@@ -424,7 +418,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<!-- Again, repeated code from Chapter 2 for the Castle Town save point, but it doesn't trigger because you can't go there in this chapter! -->
 
-	<h3>Dark World</h3>
+	<h3>Dark World</h3> <!-- 98/room_dw_couch_overworld_intro -->
 	<d-box theme="dark">
 		<d-text asterisk>(A stale wind... you stifle a sneeze.)</d-text>
 	</d-box>
@@ -434,7 +428,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>TV World - Before the Show</h3>
+	<h3>TV World - Before the Show</h3> <!-- 194/room_dw_tv_curtain -->
 	<d-box theme="dark">
 		<d-text asterisk>(You hear the audience whispering in awe at your presence.)</d-text>
 	</d-box>
@@ -444,7 +438,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Green Room</h3>
+	<h3>Green Room</h3> <!-- 135/room_dw_green_room -->
 
 	<h4>After Board 1 (Desert Board)</h4>
 	<d-box theme="dark">
@@ -473,7 +467,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Cold Place</h3>
+	<h3>Cold Place</h3> <!-- 109/room_dw_snow_zone -->
 
 	<h4>Before the Doom Board</h4>
 	<!-- actually it's plot < 280, before mike has abandoned tenna -->
@@ -506,7 +500,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>TV World - Goulden Sam</h3>
+	<h3>TV World - Goulden Sam</h3> <!-- 177/room_dw_b3bs_jail1 -->
 	<d-box theme="dark">
 		<d-text asterisk>(You are greeted by yet another prisonlike location.)</d-text>
 	</d-box>
@@ -516,7 +510,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>TV World - Concert</h3>
+	<h3>TV World - Concert</h3> <!-- 208/room_dw_teevie_rhythm -->
 
 	<!-- TXX -->
 	<h4>If you destroyed the Shadowguys's contracts</h4>
@@ -573,7 +567,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>TV World - Cooking Show</h3>
+	<h3>TV World - Cooking Show</h3> <!-- 213/room_dw_teevie_chef -->
 	<d-box theme="dark">
 		<d-text asterisk>(The incense of hot snacks and spicy flavors assaults you.)</d-text>
 	</d-box>
@@ -585,8 +579,8 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 <section class="d-section" id="chapter4">
 	<h2>Chapter 4</h2>
 
-	<h3>First interaction with a Light World save point</h3>
-	<p>There are three save points in the Light World - one in Kris's room, one in Noelle's kitchen, and one near QC's Diner. This only plays the first time you interact with one of them.</p>
+	<h3>First interaction with a Light World save point</h3> <!-- 15/room_krisroom, 24/room_town_mid, 49/room_lw_noellehouse_kitchen -->
+	<p>There are three save points in the Light World - one in Kris's room, one near QC's Diner, and one in Noelle's kitchen. This only plays the first time you interact with one of them.</p>
 
 	<d-box theme="light">
 		<d-text asterisk>(You could barely see it. A patch of sunlight that shouldn't be there.)</d-text>
@@ -597,7 +591,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>My Castle Town</h3>
+	<h3>My Castle Town</h3> <!-- 65/room_dw_castle_town -->
 	<p>This narration does not play on the Weird Route.</p>
 
 	<h4>If you didn't recruit everyone in previous chapters</h4>
@@ -620,7 +614,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Dark Sanctuary - Atrium</h3>
+	<h3>Dark Sanctuary - Atrium</h3> <!-- 108/room_dw_church_intro1 -->
 	<d-box theme="dark">
 		<d-text asterisk>(The scent of glass and incense.)</d-text>
 	</d-box>
@@ -630,7 +624,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Dark Sanctuary - Lower Left</h3>
+	<h3>Dark Sanctuary - Lower Left</h3> <!-- 177/room_dw_church_savepoint -->
 	<p>Only plays upon first interaction overall, regardless of whether you exit and reenter the room.</p>
 
 	<d-box theme="dark">
@@ -642,7 +636,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Dark Sanctuary - Lower Right</h3>
+	<h3>Dark Sanctuary - Lower Right</h3> <!-- 227/room_dw_church_ripplepuzzle_postgers -->
 	<p>This narration does not play on the Weird Route.</p>
 
 	<d-box theme="dark">
@@ -654,7 +648,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Dark Sanctuary - Study</h3>
+	<h3>Dark Sanctuary - Study</h3> <!-- 115/room_dw_church_gersonstudy -->
 
 	<h4>First time overall</h4>
 	<d-box theme="dark">
@@ -665,7 +659,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 	</d-box>
 
 	<h4>First time after learning about the axe</h4>
-	<!-- And if you haven't moved on to the 2nd Sanctuary but if you have then that. Y'know. Makes it impossible to use this save point -->
+	<!-- And if you haven't moved on to the 2nd Sanctuary, but if you have, then that. Y'know. Makes it impossible to use this save point -->
 	<p>This narration does not play on the Weird Route.</p>
 
 	<d-box theme="dark">
@@ -677,7 +671,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Dark Sanctuary - Library</h3>
+	<h3>Dark Sanctuary - Library</h3> <!-- 219/room_dw_church_nwconnect -->
 	<p>Only plays upon first interaction overall. Does not play on the Weird Route.</p>
 
 	<d-box theme="dark">
@@ -689,7 +683,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Dark Sanctuary - Small Piano</h3>
+	<h3>Dark Sanctuary - Small Piano</h3> <!-- 218/room_dw_church_pianopuzzle -->
 	<p>Only plays upon first interaction overall.</p>
 
 	<d-box theme="dark">
@@ -701,14 +695,14 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>2nd Sanctuary - Atrium</h3>
+	<h3>2nd Sanctuary - Atrium</h3> <!-- 247/room_dw_churchb_staircaseintro -->
 	<d-box theme="dark">
 		<d-text asterisk>(The lighting has changed.)</d-text>
 	</d-box>
 
 	<hr>
 
-	<h3>2nd Sanctuary - Floor</h3>
+	<h3>2nd Sanctuary - Floor</h3> <!-- 251/room_dw_churchb_savepoint -->
 	<d-box theme="dark">
 		<d-text asterisk>(The lighting has changed.)</d-text>
 	</d-box>
@@ -718,7 +712,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>2nd Sanctuary - Study</h3>
+	<h3>2nd Sanctuary - Study</h3> <!-- 257/room_dw_churchb_gersonstudy -->
 	<d-box theme="dark">
 		<d-text asterisk>(The fire has run empty. In its place...)</d-text>
 	</d-box>
@@ -728,7 +722,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>3rd Sanctuary</h3>
+	<h3>3rd Sanctuary</h3> <!-- 270/room_dw_churchc_superprophecies -->
 	<p>Only plays upon first interaction overall.</p>
 
 	<d-box theme="dark">
