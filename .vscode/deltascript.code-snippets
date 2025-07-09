@@ -1,0 +1,195 @@
+{
+	// Documentation: https://code.visualstudio.com/docs/editor/userdefinedsnippets
+
+	// #region Narration
+	"Text box (Light World)": {
+		"scope": "html,liquid",
+		"prefix": ["box-light", "narration-light"],
+		"body": [
+			"<d-box theme=\"light\">",
+			"\t<d-text asterisk>$0</d-text>",
+			"</d-box>"
+		]
+	},
+	"Text box (Dark World)": {
+		"scope": "html,liquid",
+		"prefix": ["box-dark", "narration-dark"],
+		"body": [
+			"<d-box theme=\"dark\">",
+			"\t<d-text asterisk>$0</d-text>",
+			"</d-box>"
+		]
+	},
+	// #endregion
+
+	// #region Dialogue
+	"Dialogue box (speaker)": {
+		"scope": "html,liquid",
+		"prefix": ["box-speaker", "dialogue-speaker"],
+		"body": [
+			"<d-box theme=\"${1|dark,light,plain,fade|}\">",
+			"\t<d-speaker>${2|Susie,Ralsei,Noelle,Lancer,Kris|}</d-speaker>",
+			"\t<d-text asterisk>$0</d-text>",
+			"</d-box>"
+		]
+	},
+	"Dialogue box (sprite)": {
+		"scope": "html,liquid",
+		"prefix": ["box-sprite", "dialogue-sprite"],
+		"body": [
+			"<d-box theme=\"${1|dark,light,plain,fade|}\">",
+			"\t<d-sprite speaker=\"${2|Susie,Ralsei,Noelle,Lancer,Kris|}\" emotion=\"${3|0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z|}\"></d-speaker>",
+			"\t<d-text asterisk>$0</d-text>",
+			"</d-box>"
+		]
+	},
+	// #endregion
+
+	// #region Object (items, equipment)
+	"Object description (overworld)": {
+		"scope": "html,liquid",
+		"prefix": "object-menu",
+		"body": [
+			"<d-box theme=\"objmenu\">",
+			"\t<d-text>$0</d-text>",
+			"</d-box>"
+		]
+	},
+	"Object description (in battle)": {
+		"scope": "html,liquid",
+		"prefix": "object-battle",
+		"body": [
+			"<d-box theme=\"objbattle\">",
+			"\t<d-text>$0</d-text>",
+			"</d-box>"
+		]
+	},
+	"Object reaction": {
+		"scope": "html,liquid",
+		"prefix": "object-reaction",
+		"body": [
+			"<d-box theme=\"objreact\">",
+			"\t<d-speaker>${1|Susie,Ralsei,Noelle,Kris|}</d-speaker>",
+			"\t<d-text>$0</d-text>",
+			"</d-box>"
+		]
+	},
+	// #endregion
+
+	// #region Battle
+	"Battle narration": {
+		"scope": "html,liquid",
+		"prefix": "battle-menu",
+		"body": [
+			"<d-box theme=\"battlemenu\">",
+			"\t<d-text asterisk>$0</d-text>",
+			"</d-box>"
+		]
+	},
+	// #endregion
+
+	// #region Choices
+	"Choices (2 options)": {
+		"scope": "html,liquid",
+		"prefix": "choices-2",
+		"body": [
+			"<d-choices theme=\"${1|dark,light,plain,fade|}\">",
+			"\t<d-option index=\"0\" text=\"$2\"></d-text>",
+			"\t<d-option index=\"1\" text=\"$3\"></d-text>",
+			"</d-choices>"
+		]
+	},
+	"Choices (3 options)": {
+		"scope": "html,liquid",
+		"prefix": "choices-3",
+		"body": [
+			"<d-choices theme=\"${1|dark,light,plain,fade|}\">",
+			"\t<d-option index=\"0\" text=\"$2\"></d-text>",
+			"\t<d-option index=\"1\" text=\"$3\"></d-text>",
+			"\t<d-option index=\"2\" text=\"$4\"></d-text>",
+			"</d-choices>"
+		]
+	},
+	"Choices (4 options)": {
+		"scope": "html,liquid",
+		"prefix": "choices-4",
+		"body": [
+			"<d-choices theme=\"${1|dark,light,plain,fade|}\">",
+			"\t<d-option index=\"0\" text=\"$2\"></d-text>",
+			"\t<d-option index=\"1\" text=\"$3\"></d-text>",
+			"\t<d-option index=\"2\" text=\"$4\"></d-text>",
+			"\t<d-option index=\"3\" text=\"$5\"></d-text>",
+			"</d-choices>"
+		]
+	},
+	"Choice outcomes (2 options)": {
+		"scope": "html,liquid",
+		"prefix": "panel-2",
+		"body": [
+			"<d-option-panel index=\"0\" theme=\"${1|dark,light,plain,fade|}\">",
+			"\t$2",
+			"</d-option-panel>",
+			"<d-option-panel index=\"1\" theme=\"${1|dark,light,plain,fade|}\">",
+			"\t$3",
+			"</d-option-panel>",
+		]
+	},
+	"Choice outcomes (3 options)": {
+		"scope": "html,liquid",
+		"prefix": "panel-3",
+		"body": [
+			"<d-option-panel index=\"0\" theme=\"${1|dark,light,plain,fade|}\">",
+			"\t$2",
+			"</d-option-panel>",
+			"<d-option-panel index=\"1\" theme=\"${1|dark,light,plain,fade|}\">",
+			"\t$3",
+			"</d-option-panel>",
+			"<d-option-panel index=\"2\" theme=\"${1|dark,light,plain,fade|}\">",
+			"\t$4",
+			"</d-option-panel>",
+		]
+	},
+	"Choice outcomes (4 options)": {
+		"scope": "html,liquid",
+		"prefix": "panel-4",
+		"body": [
+			"<d-option-panel index=\"0\" theme=\"${1|dark,light,plain,fade|}\">",
+			"\t$2",
+			"</d-option-panel>",
+			"<d-option-panel index=\"1\" theme=\"${1|dark,light,plain,fade|}\">",
+			"\t$3",
+			"</d-option-panel>",
+			"<d-option-panel index=\"2\" theme=\"${1|dark,light,plain,fade|}\">",
+			"\t$4",
+			"</d-option-panel>",
+			"<d-option-panel index=\"3\" theme=\"${1|dark,light,plain,fade|}\">",
+			"\t$5",
+			"</d-option-panel>",
+		]
+	},
+	// #endregion
+
+	// #region Editing
+	"Text splitter (asterisk)": {
+		"scope": "html,liquid",
+		"prefix": "split-asterisk",
+		"body": [
+			"</d-text>",
+			"<d-text asterisk>"
+		]
+	},
+	"Text splitter (plain)": {
+		"scope": "html,liquid",
+		"prefix": "split-plain",
+		"body": [
+			"</d-text>",
+			"<d-text>"
+		]
+	},
+	"Note": {
+		"scope": "html,liquid",
+		"prefix": "note",
+		"body": "<p class=\"note\">$0</p>"
+	},
+	// #endregion
+}
