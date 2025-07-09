@@ -363,6 +363,8 @@ body {
 	body:not(.compact) &:has(+ d-box, + d-choices, + d-option-panel) { margin-block-end: var(--adjacent-spacing) }
 	&:first-child, .selection-label + & { margin-block-start: 0 }
 	&:last-child { margin-block-end: 0 }
+
+	a:not(:hover, :focus) { color: inherit }
 }
 /* #endregion */
 
