@@ -1,0 +1,975 @@
+---
+title: Dummy encounter
+description: >
+  <p>Flavor text for the tutorial battle against Ralsei's dummy. (No dialogue, since the Dummy doesn't talk.)</p>
+  <p>Includes quite a few variations where the only thing that changes is the sprite. Compact mode users, take note!</p>
+sources:
+  -
+    name: gml_Object_obj_dummyenemy_Step_0
+    chapters: [1]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1]
+    note: ACTs
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [1]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_dummyenemy_Draw_0
+    chapters: [1]
+    note: manual setting of Tired
+credits: >
+  <p>Compiled by YOUR_NAME_HERE.</p>
+---
+{% comment %}
+plot
+- 1 when instructed to FIGHT
+- 2 for DEFEND
+- 3 for MAGIC
+- 4 for ACT
+- 5 for SPARE
+
+global.charaction[i] is:
+- 1 if FIGHTing
+- 2 if ACTing
+- 4 if using ITEM
+- 10 if DEFENDing
+global.charspecial[i] is 100 when SPARING?
+
+god this page is messy as hell. feel free to clean it up
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>Initial encounter</h2>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>See that <span class="red">HEART</span>, Kris?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>That's your <span class="red">SOUL</span>, the culmination of your being!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="B"></d-sprite>
+		<d-text asterisk>Within, it holds your WILL... your COMPASSION...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>... and the FATE of the world.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="B"></d-sprite>
+		<d-text asterisk>If it gets hit, you and your friends will lose HP.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>If everyone's HP reaches 0, we'll lose the battle.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>So, please take care to avoid the enemy's attack.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Ready?</d-text>
+		<d-text asterisk>Let's try dodging!</d-text>
+	</d-box>
+
+	<p class="note">The Dummy attacks, after which the encounter proceeds to <a href="#afterdodging">Turn 2</a>.</p>
+</section>
+
+<section class="d-section" id="turn2">
+	<h2>Turn 2</h2>
+
+	<h3>If Kris took no damage</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Great job, Kris!</d-text>
+		<d-text asterisk>You're a natural!</d-text>
+	</d-box>
+	<h3>If Kris took damage</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Ouch, it's OK, Kris! You're still learning!</d-text>
+	</d-box>
+
+	<hr>
+
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Anyhow, after the enemy attacks, it's our turn, Kris!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>First, I'll teach you how to <span class="yellow">FIGHT</span> (<img class="inline" src="{{ '/assets/images/story/battlebutton/fight.png' | relative_url }}" alt="FIGHT icon">&nbsp; ).</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Though <span class="yellow">FIGHTing</span> is unnecessary in this world...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>There's no harm in a thorough lesson!</d-text>
+	</d-box>
+	<!-- This very first go-around uses the "Let's try fighting" text but with three spaces after the FIGHT icon instead of 1. That's the only difference -->
+
+	<p class="note">From here on, the player's actions determine what dialogue you proceed to. Ideally, you'd proceed to the <a href="#fight">FIGHT aftermath</a>.</p>
+</section>
+
+<section class="d-section" id="neutral">
+	<h2>Neutral</h2>
+	<p>Displays after any dialogue from Ralsei, depending on what he's last asked you to try.</p>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>Let's try FIGHTing!<br>&nbsp; (<img src="{{ '/assets/images/story/battlebutton/fight.png' | relative_url }}" alt="FIGHT icon"> &nbsp; )</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Let's try DEFENDing!<br>&nbsp; (<img src="{{ '/assets/images/story/battlebutton/defend.png' | relative_url }}" alt="DEFEND icon"> &nbsp; )</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Let's try SPELLs!<br>&nbsp; (<img src="{{ '/assets/images/story/battlebutton/magic.png' | relative_url }}" alt="MAGIC icon"> &nbsp; )</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Let's ACT!<br>&nbsp; (<img src="{{ '/assets/images/story/battlebutton/act.png' | relative_url }}" alt="ACT icon"> &nbsp; )</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Let's SPARE!<br>&nbsp; (<img src="{{ '/assets/images/story/battlebutton/spare.png' | relative_url }}" alt="SPARE icon"> &nbsp; )</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="fight">
+	<h2>Fighting</h2>
+
+	<h3>When instructed to FIGHT</h3>
+
+	<h4>If Kris dealt more than 50 damage</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>W-wow, Kris!</d-text>
+		<d-text asterisk>That was an amazing attack!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Have you done this before or something...?</d-text>
+	</d-box>
+
+	<h4>If Kris dealt 50 damage or less</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Good job, Kris!</d-text>
+		<d-text asterisk>By the way, you'll do more damage...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+	<d-text asterisk>Pressing [CONFIRM] when the cursor enters the box on the left!</d-text>
+	</d-box>
+
+	<h4>If Kris has missed 6-9 times before</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>Kris!</d-text>
+		<d-text asterisk>You did it!!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>(I was really just about at my limit...)</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<h4>If you haven't DEFENDed before</h4>
+	<p class="note">Proceeds to the <a href="#defendintro">DEFEND introduction</a>.</p>
+	<h4>If you have DEFENDed before</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Kris, if you didn't notice, when you DEFENDED before -</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>The big orange TP bar on the left filled up a bit!</d-text>
+	</d-box>
+	<p class="note">Proceeds to the <a href="#magicintro">MAGIC introduction</a>.</p>
+
+	<hr>
+
+	<h3>FIGHTing again</h3>
+
+	<h4>Second time</h4>
+	<p>As in, second use of FIGHT overall.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Ummm... Kris?</d-text>
+		<d-text asterisk>You don't need to hit it anymore.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>I already know you're great at attacking!</d-text>
+	</d-box>
+
+	<h4>Third time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>U-umm, Kris... H-How do I put this...?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Kris, seeing you, um, attack an effigy of myself...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>... Kris, are you trying to say something?</d-text>
+	</d-box>
+
+	<h4>Fourth time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Ah, Kris... I... um, I think I understand.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>W-well, if... during our adventure,</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="7"></d-sprite>
+		<d-text asterisk>... if you want to hit me, that's OK, too!</d-text>
+	</d-box>
+
+	<h4>Fifth time</h4>
+	<p class="note">The fight <a href="#endearlyfight">ends early</a>.</p>
+
+	<hr>
+
+	<h3>Missing</h3>
+	<p>If you choose FIGHT, but then fail to hit [CONFIRM] while the cursor is in the hit box.</p>
+
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>Oh, sorry, Kris!</d-text>
+		<d-text asterisk>I forgot to mention!</d-text>
+		<d-text asterisk>When you're ATTACKing...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Press [CONFIRM] again when the cursor goes in the box!</d-text>
+	</d-box>
+
+	<h4>Second time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>It's OK, Kris!</d-text>
+		<d-text asterisk>You'll get it!</d-text>
+		<d-text asterisk>Try again!</d-text>
+	</d-box>
+
+	<h4>Third time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Press [CONFIRM] when the white rectangle's in the blue box!</d-text>
+	</d-box>
+
+	<h4>Fourth time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Ummm... you can press [CONFIRM] a lot, if it helps!</d-text>
+	</d-box>
+
+	<h4>Fifth time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Kris...</d-text>
+		<d-text asterisk>Please try to press [CONFIRM].</d-text>
+	</d-box>
+
+	<h4>Sixth time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Ummm, Kris?</d-text>
+		<d-text asterisk>Can you see the white rectangle?</d-text>
+	</d-box>
+
+	<h4>Seventh time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>You know rectangles?</d-text>
+		<d-text asterisk>They're like messed-up squares?</d-text>
+	</d-box>
+
+	<h4>Eighth time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="9"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<h4>Ninth time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Umm, perhaps we should try something else?</d-text>
+	</d-box>
+	<h5>If you haven't DEFENDed before</h5>
+	<p class="note">Instead of FIGHTing, the neutral flavor text asks you to try <a href="#defend">DEFENDing</a>.</p>
+	<h5>If you have DEFENDed before</h5>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Kris, if you didn't notice, when you DEFENDED before -</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>The big orange TP bar on the left filled up a bit!</d-text>
+	</d-box>
+	<p class="note">Proceeds to the <a href="#magicintro">MAGIC introduction</a>.</p>
+
+	<h4>Tenth time</h4>
+	<p class="note">The fight <a href="#endearlypeace">ends early</a>.</p>
+</section>
+
+<section class="d-section" id="defend">
+	<h2>Defending</h2>
+
+	<h3 id="defendintro">Introduction</h3>
+
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>OK, next let's try DEFENDING. (<img class="inline" src="{{ '/assets/images/story/battlebutton/defend.png' | relative_url }}" alt="DEFEND icon"> &nbsp; )</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Simply (<img class="inline" src="{{ '/assets/images/story/battlebutton/defend.png' | relative_url }}" alt="DEFEND icon">&nbsp; ), and the enemy's attack will hurt you less...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Not only that, but you'll also gather <span class="yellow">TP</span>!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>(Watch the orange big bar on the left! I'll explain it next!)</d-text>
+	</d-box>
+
+	<h4 id="defendintrodummy">If your last action was hugging the Dummy</h4>
+	<p>Dialogue is almost identical to the above, but using sprite 8 throughout and with a slight typo at the end.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>OK, next let's try DEFENDING. (<img class="inline" src="{{ '/assets/images/story/battlebutton/defend.png' | relative_url }}" alt="DEFEND icon"> &nbsp; )</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Simply (<img class="inline" src="{{ '/assets/images/story/battlebutton/defend.png' | relative_url }}" alt="DEFEND icon">&nbsp; ), and the enemy's attack will hurt you less...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Not only that, but you'll also gather <span class="yellow">TP</span>!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>(Watch the orange big bar on the left! I'll explain it next!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>When instructed to DEFEND</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Great job, Kris!</d-text>
+		<d-text asterisk>Now that you've gathered TP -</d-text>
+	</d-box>
+	<p class="note">Proceeds to the <a href="#magicintro">MAGIC introduction</a>.</p>
+
+	<hr>
+
+	<h3>When instructed to do something else</h3>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>That's DEFENDING, Kris.</d-text>
+		<d-text asterisk>You'll recover TP and take less damage.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>You should learn to ATTACK first, though.</d-text>
+	</d-box>
+
+	<h4>Second time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Gee, Kris!</d-text>
+		<d-text asterisk>You sure are good at defending!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>I'm not attacking, you, though, so...</d-text>
+		<d-text asterisk>No need to defend!</d-text>
+	</d-box>
+
+	<h4>Third time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Ummm...</d-text>
+		<d-text asterisk>Kris?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>There are no bullets, and you can't use TP...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>So, umm, maybe you could stop defending?</d-text>
+	</d-box>
+
+	<h4>Fourth time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="9"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<h4>Fifth time</h4>
+	<p class="note">The battle <a href="#endearlypeace">ends early</a>.</p>
+</section>
+
+<section class="d-section" id="magic">
+	<h2>Using a spell</h2>
+
+	<h3 id="magicintro">Introduction</h3>
+	<p class="note">The Dummy is automatically made <span class="blue">Tired</span>.</p>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>How about spending that TP on one of my <span class="yellow">SPELLs</span>?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If you succesfully hit the Dummy before; have DEFENDed before and missed 9 times; or, have DEFENDed before and hugged the Dummy when instructed to FIGHT</h5>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Because you hit the enemy enough, it got <span class="blue">TIRED</span>.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Now, if I use my <span class="yellow">PACIFY</span> spell on it...</d-text>
+	</d-box>
+	<h5>If you haven't successfully hit the Dummy before</h5>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>If you had, um, hit the enemy, it'd be TIRED now.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>In that case, we use my <span class="yellow">PACIFY</span> spell on it...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If you DEFENDed for the first time only after being instructed to</h5>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>It'll fall asleep, and we'll win peacefully!</d-text>
+	</d-box>
+	<h5>Otherwise</h5>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>It'll fall asleep, and we'll win peacefully!</d-text>
+	</d-box>
+
+	<h4>Hug Dummy variant</h4>
+	<p>If your previous actions included DEFENDING and then hugging the Dummy when instructed to FIGHT, the MAGIC introduction has text identical to the above but instead using sprite 8 throughout: <img src="{{ '/assets/images/faces/ralsei/hat/8.png' | relative_url }}" alt="Ralsei (hat, ver.8)" style="width: 4em; vertical-align: top;"></p>
+
+	<hr>
+
+	<h3>When asked to use MAGIC</h3>
+	<h4>If you used Pacify</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Great, Kris! We would have won the battle by now!</d-text>
+	</d-box>
+	<h4>If you used Heal Prayer</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Great, Kris! A healing spell works too!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Now I have just a little more to teach you!</d-text>
+	</d-box>
+	<p class="note">Proceeds to the <a href="actintro">ACT introduction</a>.</p>
+
+	<hr>
+
+	<h3>Refusing to use MAGIC</h3>
+	<p>If you use commands other than MAGIC when prompted to have Ralsei cast Pacify.</p>
+
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Kris, wouldn't you rather learn about <span class="yellow">SPELLs</span>?</d-text>
+	</d-box>
+
+	<h4>Second time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Kris, do you... know what a <span class="yellow">SPELL</span> is?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Can humans not even ASK people to use them...?</d-text>
+	</d-box>
+
+	<h4>Third time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Kris, what if you just give me a hand sign?</d-text>
+	</d-box>
+
+	<h4>Fourth time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Ummm, if this is too difficult...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Let's move to the next lesson, OK?</d-text>
+	</d-box>
+	<h5>If you haven't hugged the Dummy before</h5>
+	<p class="note">Proceeds to the <a href="#actintro">ACT introduction</a>.</p>
+	<h5>If you've hugged the Dummy before</h5>
+	<p class="note">Proceeds to the <a href="#spareintroalt">SPARE introduction</a>.</p>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+	<d-box theme="battlemenu">
+		<d-text asterisk>DUMMY - AT 0 DF 0</d-text>
+		<d-text asterisk>Cotton heart and button eye</d-text>
+		<d-text asterisk>Looks just like a fluffy guy.</d-text>
+	</d-box>
+
+	<h3>First time only</h3>
+	<p class="note">Follows the regular Check description.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Er, sorry, it kind of looks like me...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>I've been alone, so I didn't have anyone to model it after...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Kris, since it's me, please be kind to it, OK?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="hugdummy">
+	<h2>Hug the Dummy</h2>
+
+	<h3 id="actintro">Introduction</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk><img src="{{ '/assets/images/story/battlebutton/act.png' | relative_url }}" alt="ACT icon" class="inline">&nbsp; ing! Through this, even the most violent enemies...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Can be defeated through various <img src="{{ '/assets/images/story/battlebutton/act.png' | relative_url }}" alt="ACT icon" class="inline">&nbsp; s of kindness!</d-text>
+	</d-box>
+	<h5>If you used MAGIC when instructed to</h5>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Kris, though it's just a dummy, why not give it a HUG?</d-text>
+	</d-box>
+	<h5>If you refused to use MAGIC 4 times</h5>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Kris, though it's just a dummy, why not give it a HUG?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Using the Hug ACT</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You hug the DUMMY.</d-text>
+	</d-box>
+	<p class="note">The Dummy gains 100% <span class="yellow">Mercy</span>.</p>
+
+	<h4>When instructed to ACT</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Aww, that's great, Kris!</d-text>
+	</d-box>
+	<p class="note">Proceeds to the <a href="#spareintrostandard">SPARE introduction</a>.</p>
+
+	<h4>When instructed to FIGHT</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Huh...? Kris, you'd rather hug it out than fight?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>You know what, that's fine! We don't need to fight!</d-text>
+	</d-box>
+
+	<h4>If you haven't DEFENDed before</h4>
+	<p class="note">Proceeds to the <a href="#defendintrodummy">DEFEND introduction</a>.</p>
+	<h4>If you have DEFENDed before</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Kris, if you didn't notice, when you DEFENDED before -</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>The big orange TP bar on the left filled up a bit!</d-text>
+	</d-box>
+	<p class="note">Proceeds to the <a href="#magicintro">MAGIC introduction</a>.</p>
+</section>
+
+<section class="d-section" id="spare">
+	<h2>Spare</h2>
+
+	<h3 id="spareintro">Introduction</h3>
+	<h4 id="spareintrostandard">Standard</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Each enemy has different ACTs that satisfy them.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>When an enemy is satisfied, its name turns <span class="yellow">YELLOW</span>.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>When that happens, you can defeat it by SPARING (<img src="{{ '/assets/images/story/battlebutton/spare.png' | relative_url }}" alt="SPARE icon" class="inline"> &nbsp; ) it!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>If we <span class="yellow">SPARE</span> all the enemies we meet, we'll never have to <span class="yellow">FIGHT</span>!</d-text>
+	</d-box>
+
+	<h4 id="spareintroalt">If you hugged the Dummy before you were instructed to</h4>
+	<h5>If you used MAGIC when instructed to</h5>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Remember when you <span class="yellow">HUGGED</span> the dummy by <img src="{{ '/assets/images/story/battlebutton/act.png' | relative_url }}" alt="ACT icon" class="inline">&nbsp; ing on it?</d-text>
+	</d-box>
+	<h5>If you refused to use MAGIC 4 times</h5>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="B"></d-sprite>
+		<d-text asterisk>Remember when you <span class="yellow">HUGGED</span> the dummy by <img src="{{ '/assets/images/story/battlebutton/act.png' | relative_url }}" alt="ACT icon" class="inline">&nbsp; ing on it?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Because of that, its name turned <span class="yellow">YELLOW</span>!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Now by using the <span class="yellow">SPARE</span><span class="break"></span> (<img src="{{ '/assets/images/story/battlebutton/spare.png' | relative_url }}" alt="SPARE icon" class="inline">  ) command, you can win!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>When instructed to SPARE</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Great job, Kris!</d-text>
+		<d-text asterisk>That'd be the end in a real battle!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>I'm really happy I had the chance to teach you, Kris!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>When instructed to do something else</h3>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Ah, Kris, don't worry about that command yet!</d-text>
+	</d-box>
+
+	<h4>Second time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>You're really merciful, aren't you, Kris?</d-text>
+	</d-box>
+
+	<h4>Third time onwards</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Kris, you are aware it's just a dummy, right...?</d-text>
+	</d-box>
+
+	<h4>First time with 100% <span class="yellow">Mercy</span></h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Kris, since you SPARED an enemy after ACTING,</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>You would have won in a real battle, but, um...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Don't you want to learn other things, first?</d-text>
+	</d-box>
+
+	<h4>Second time with 100% <span class="yellow">Mercy</span></h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>I see... Then, perhaps we can just end here.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>You know how to win peacefully, so...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>That's good enough for me!</d-text>
+	</d-box>
+	<p class="note">The battle ends here.</p>
+
+	<hr>
+
+	<h3>Hugging the Dummy again</h3>
+
+	<h4>Second time</h4>
+	<p>As in, second use of Hug overall.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>That's great, Kris!</d-text>
+		<d-text asterisk>Just one hug is enough, though!</d-text>
+	</d-box>
+
+	<h4>Third time onwards</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Kris, you don't need to hug it anymore.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="hugralsei">
+	<h2>Hug Ralsei</h2>
+	<p class="note">Hugging Ralsei does not progress the tutorial.</p>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>You hug RALSEI.</d-text>
+	</d-box>
+
+	<h3>First time</h3>
+	<p>(First line here also gets used as fallback text for the Hug Ralsei ACT.)</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="2"></d-sprite>
+		<d-text asterisk>K... Kris!?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Ummm, I don't think, um...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>This is what you're supposed to be doing.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="2"></d-sprite>
+		<d-text asterisk>... but...</d-text>
+	</d-box>
+
+	<h3>Second time</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="2"></d-sprite>
+		<d-text asterisk>Kris...?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="2"></d-sprite>
+		<d-text asterisk>Are you trying, to, um...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Ask me to give you a tutorial on hugging...?</d-text>
+	</d-box>
+
+	<h3>Third time</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="2"></d-sprite>
+		<d-text asterisk>Ummm, I've never hugged anyone before...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>(Besides the dummy, to test it out,)</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="2"></d-sprite>
+		<d-text asterisk>So I don't know anything about it, sorry...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="7"></d-sprite>
+		<d-text asterisk>I suppose you're the one teaching me, haha!</d-text>
+	</d-box>
+
+	<h3>Fourth time onwards</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="2"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="item">
+	<h2>Using an item</h2>
+	<p class="note">In all cases, the standard item usage narration ("Kris used [ITEM]!" and variations thereof) plays first.</p>
+
+	<h3>First time</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Oh, Kris, you found an <span class="yellow">ITEM</span>?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>I figured <span class="yellow">ITEMs</span> are self-explanatory, so...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Let's skip over them for now, OK?</d-text>
+	</d-box>
+
+	<h3>Second time</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>You really want to learn about <span class="yellow">ITEMS</span>, Kris...?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>OK, I'll teach you!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Errm...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>You use them, and something happens.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>... is that sufficient?</d-text>
+	</d-box>
+
+	<h3>Third time</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Yes, haha, that <span class="yellow">ITEM</span> is very pretty, isn't it?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>I'm glad you're enjoying yourself, Kris...!</d-text>
+	</d-box>
+
+	<h3>Fourth time</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Kris, we can find lots more ITEMs on our journey!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Which, will continue... after this tutorial.</d-text>
+	</d-box>
+
+	<h3>Fifth time</h3>
+	<p class="note">The battle <a href="#endearlypeace">ends early</a>.</p>
+</section>
+
+<section class="d-section" id="endearly">
+	<h2>Ending the tutorial early</h2>
+	<p>Plays if you've disobeyed Ralsei one too many times.</p>
+
+	<h3 id="endearlyfight">If you used FIGHT too many times</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="9"></d-sprite>
+		<d-text asterisk>Kris, I don't mean to interrupt, but...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>You're going to break the dummy at this rate.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>I suppose we'll have to stop here for now.</d-text>
+	</d-box>
+
+	<h3 id="endearlypeace">If you did something other than FIGHTing</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="9"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Kris, I think I've, um, perhaps...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Reached the limits of what I can teach you today.</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Let's go find Susie.</d-text>
+	</d-box>
+
+	<p class="note">The battle ends here.</p>
+</section>
+
+<section class="d-section" id="unused">
+	<h2>Unused</h2>
+
+	<p>Intended for the initial encounter text, but gets overridden by Ralsei's introduction.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The tutorial begins.</d-text>
+	</d-box>
+
+	<hr>
+
+	<p>Intended for standard flavor text; probably meant for debugging.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Skip</d-text>
+	</d-box>
+
+	<hr>
+
+	<p>Intended for standard flavor text; probably replaced by the more specific "Let's try [OPTION]!" messages.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei looks on expectedly.</d-text>
+	</d-box>
+
+	<hr>
+
+	<p>Intended as a fallback for standard flavor text.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>What?</d-text>
+	</d-box>
+
+	<hr>
+
+	<p>Intended to play when you had Ralsei use Pacify and the Dummy wasn't <span class="blue">Tired</span>, in place of the usual first line. Never plays because the Dummy automatically gets set to <span class="blue">Tired</span> right before Ralsei asks you to use MAGIC.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Great, Kris! If it was TIRED we would have won!</d-text>
+	</d-box>
+
+	<hr>
+
+	<p>Intended as a fallback for the Hug Dummy ACT.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>How caring, Kris!</d-text>
+	</d-box>
+
+	<hr>
+
+	<p>Intended as a fallback for refusing to use MAGIC when instructed to.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Kris, please ask me to do a spell.</d-text>
+	</d-box>
+</section>
