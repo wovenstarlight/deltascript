@@ -424,13 +424,13 @@ d-box, d-choices {
 			border-image-source: url("../assets/images/textbox/dark.gif");
 		}
 
-		&[theme=plain], &[theme^=obj], &[theme=battlemenu] {
+		&[theme=plain], &[theme^=obj], &[theme=battlemenu], &[theme^=battledesc] {
 			border-image-source: url("../assets/images/textbox/plain.png");
 		}
 
 		&[theme^=obj], &[theme=battlemenu] { width: 26.4em }
 
-		&[theme^=obj], &[theme^=power] {
+		&[theme^=obj], &[theme^=power], &[theme^=battledesc] {
 			font-family: "DeltaFont Condensed", var(--font);
 		}
 
@@ -464,9 +464,12 @@ d-box, d-choices {
 			d-text { margin-inline-start: 1ch }
 		}
 
-		&[theme=objbattle] { width: 5.4em }
-
 		&[theme=powertitle] { width: 11em }
+
+		&[theme^=battledesc] {
+			width: 5.4em;
+			color: var(--gray);
+		}
 
 		&[theme=battletalk] {
 			border-image: url("../assets/images/textbox/bubble.png") 6 / 0.375em / 0.375em;
