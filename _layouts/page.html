@@ -13,14 +13,14 @@ layout: default
 	{%- endif %}
 
 	{%- if page.sources %}
-	<div id="pagesrc">
-		<p>Sources:</p>
+	<details id="pagesrc">
+		<summary>Sources</summary>
 		<ul>
 			{%- for source in page.sources %}
 			{% include code_source.html src=source %}
 			{%- endfor %}
 		</ul>
-	</div>
+	</details>
 	{%- endif %}
 </header>
 
