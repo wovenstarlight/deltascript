@@ -1,0 +1,267 @@
+---
+title: Hathy encounter
+description: >
+  <p>Flavor text and dialogue for battles against Hathy.</p>
+sources:
+  -
+    name: gml_Object_obj_heartenemy_Step_0
+    chapters: [1]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [1]
+    note: initial flavor text
+  -
+    name: gml_GlobalScript_scr_spelltext
+    chapters: [1]
+    note: Manual usage
+  -
+    name: gml_Object_obj_smallcheckers_enemy_Step_0
+    chapters: [1]
+    note: Susie sprite for unwarned attack
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+---
+<section class="d-section" id="flavortext">
+	<h2>Flavor text</h2>
+
+	<h3>Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Hathy's body beats audibly.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Hathy smiled a darling smile.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Hathy is whispering a lovely spell.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Hathy has a little secret.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like a soft kiss.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Initial encounter</h3>
+	<h4>With Rudinn</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn and Hathy blocked the way!</d-text>
+	</d-box>
+
+	<h4>With two other Hathys</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Three Hathys blocked the way!</d-text>
+	</d-box>
+
+	<h4>With Clover</h4>
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover and Hathy grew close!</d-text>
+	</d-box>
+
+	<h4>With Jigsawry and Rudinn</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smorgasboard.</d-text>
+	</d-box>
+
+	<h4>With two other Rudinns</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Various guys appeared!</d-text>
+	</d-box>
+
+	<h4>With Other_enemy_name</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TODO</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Hathy's beat slows.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Hathy's beat seems to stutter.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Spareable</h3>
+	<p>Unused. (Got assigned to the wrong variable, whoops.)</p> <!-- global.msg instead of global.battlemsg, if you were wondering -->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Hathy is skipping beats.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Check</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>HATHY - AT 7 DF 0</d-text>
+		<d-text asterisk> I am a <span class="yellow">little kiss</span>.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Flatter</h3>
+	<p class="note">At random:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Hathy it has cool tentacles.</d-text>
+		<d-text asterisk>It began to think about this...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You called Hathy a sweetheart.</d-text>
+		<d-text asterisk>It began to think about this...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Hathy its teeth look like knives.</d-text>
+		<d-text asterisk>It began to think about this...</d-text>
+	</d-box>
+	<p class="note">Hathy gains 100% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3>X-Flatter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You ordered Ralsei to flatter all the enemies!</d-text>
+	</d-box>
+	<p class="note">At random:</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Out of anyone, I'm glad we randomly encountered all of you.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>I'm making tea later...</d-text>
+		<d-text asterisk>Umm, would you like any?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>We don't need EXP.</d-text>
+		<d-text asterisk>Just encountering your smile is reward enough.</d-text>
+	</d-box>
+	<p class="note">All enemies gain 100% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3>Warning</h3>
+	<p class="note">Susie's attacks will miss from now on.</p>
+
+	<h4>When against a lone Hathy</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei warned Hathy about Susie.</d-text>
+		<d-text asterisk>The enemy went on guard.</d-text>
+	</d-box>
+
+	<h4>When against multiple enemies</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei  warned the enemies about Susie.</d-text>
+		<d-text asterisk>Everyone went on guard.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>S-Flatter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You ordered Susie to flatter all the enemies!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Can't believe my bozo teammates...</d-text>
+	</d-box>
+	<p class="note">At random:</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>... came back here just to see YOU guys.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>... wanted to fight someone like YOU so much.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>... have a THING for weaklings like you.</d-text>
+	</d-box>
+	<p class="note">All enemies gain 100% <span class="yellow">Mercy</span>.</p>
+	
+	<hr>
+
+	<h3>Using the Manual</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] read the MANUAL!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Hathy listened politely!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<hr>
+
+	<h3>Susie attacking (Unused)</h3>
+	<p>Got moved to the <a href="{{ '/misc/combat/cround' | relative_url }}">C. Round</a> encounter instead.</p>
+
+	<h4>If Hathy wasn't warned</h4>
+	<p>(The part where Susie's sprite gets selected got deleted entirely, so I copied over the same sprite that gets used against C. Round.)</p>
+	<p></p>
+	<p class="note">Susie attacks Hathy.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="4"></d-sprite>
+		<d-text asterisk>Where'd you get it?</d-text>
+		<d-text asterisk>Heh heh heh heh.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>(Umm, Kris, maybe Susie shouldn't ACT anymore...)</d-text>
+	</d-box>
+
+	<h4>If Hathy was warned</h4>
+	<p class="note">Susie attacks Hathy, but misses.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="7"></d-sprite>
+		<d-text asterisk>H-hey, what gives!?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>(Wow, that was close, Kris...)</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>(Maybe Susie shouldn't ACT anymore...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+
+	<h3>Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Hathy</d-speaker>
+		<d-text><img src="{{ '/assets/images/story/talkhathy/0.gif' | relative_url }}" alt="A heart with a biting mouth"></d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Hathy</d-speaker>
+		<d-text><img src="{{ '/assets/images/story/talkhathy/1.gif' | relative_url }}" alt="A heart with a mouth that blows a kiss"></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Flatter</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Hathy</d-speaker>
+		<d-text><img src="{{ '/assets/images/story/talkhathy/2.gif' | relative_url }}" alt="A single red heart pulsing slightly"></d-text>
+	</d-box>
+
+	<h3>X-Flatter</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Hathy</d-speaker>
+		<d-text><img src="{{ '/assets/images/story/talkhathy/3.gif' | relative_url }}" alt="A trio of red hearts pulsing slightly"></d-text>
+	</d-box>
+</section>
