@@ -86,6 +86,16 @@
 			"</d-box>"
 		]
 	},
+	"Battle dialogue": {
+		"scope": "html,liquid",
+		"prefix": "battle-talk",
+		"body": [
+			"<d-box theme=\"battletalk\">",
+			"\t<d-speaker>$1</d-speaker>",
+			"\t<d-text>$0</d-text>",
+			"</d-box>"
+		]
+	},
 	// #endregion
 
 	// #region Choices
@@ -191,5 +201,16 @@
 		"prefix": "note",
 		"body": "<p class=\"note\">$0</p>"
 	},
+	"Section": {
+		"scope": "html,liquid",
+		"prefix": "d-section",
+		"body": [
+			"<section class=\"d-section\" id=\"$1\">",
+			"\t<h2>$2</h2>",
+			"",
+			"\t$0",
+			"</section>",
+		]
+	}
 	// #endregion
 }
