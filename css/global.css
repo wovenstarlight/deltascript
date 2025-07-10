@@ -141,7 +141,7 @@ hr {
 	.cO, .orange,
 	.cA, .cS, .cV,
 	.gray, .lightyellow {
-		background: linear-gradient(color-mix(in srgb, var(--white), var(--mycolor) var(--strength, 20%)), var(--mycolor));
+		background: var(--mycolor) linear-gradient(rgb(from var(--white) r g b / 0.8), rgb(from var(--mycolor) r g b / 0));
 		background-clip: text;
 		color: transparent;
 		filter: drop-shadow(1px 1px rgb(from var(--mycolor) r g b / 0.4));
