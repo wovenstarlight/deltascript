@@ -98,12 +98,19 @@ hr {
 	border-color: var(--gray);
 	margin-block: 1em;
 	--adjacent-spacing: calc(var(--border-width) + 1em);
+	max-width: 100%;
 
 	body:not(.compact) :is(d-box, d-choices) + & {
 		margin-block-start: var(--adjacent-spacing);
 	}
 	body:not(.compact) &:has(+ d-box, + d-choices) {
 		margin-block-end: var(--adjacent-spacing);
+	}
+
+	&.hr2 {
+		opacity: 0.5;
+		width: 35.4em;
+		margin-inline-start: 0;
 	}
 }
 /* #region Color-specific classes */
