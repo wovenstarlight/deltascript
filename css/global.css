@@ -736,6 +736,12 @@ d-text {
 		background-image: url("../assets/images/faces/clover/sad.png");
 		content: "(Shy)";
 	}
+
+	img.inline {
+		height: 1em;
+		width: auto;
+		vertical-align: text-bottom;
+	}
 }
 d-choices {
 	&:not(:state(compact)) {
