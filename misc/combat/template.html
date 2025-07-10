@@ -1,0 +1,110 @@
+---
+title: Name_goes_here encounter
+description: >
+  <p>Flavor text and dialogue for battles against Name_goes_here.</p>
+sources:
+  -
+    name: gml_Object_obj_diamondenemy_Step_0
+    chapters: [1]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [1]
+    note: initial flavor text
+credits: >
+  <p>Compiled by YOUR_NAME_HERE.</p>
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(global\.encounterno = |myencounter = |scr_encountersetup\()NUMBER_GOES_HERE
+For example, you can find instances of the Jigsawry/Rudinn/Hathy enconuter with the following:
+(global\.encounterno = |myencounter = |scr_encountersetup\()23
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>Flavor text</h2>
+
+	<h3>Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TODO</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Initial encounter</h3>
+	<h4>Solo</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TODO</d-text>
+	</d-box>
+
+	<h4>With Other_enemy_name</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TODO</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TODO</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TODO</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TODO</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Check</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TODO</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Act_name_here</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TODO</d-text>
+	</d-box>
+	<p class="note">Name_goes_here gains 100% <span class="yellow">Mercy</span> / becomes <span class="blue">Tired</span> / is affected otherwise.</p>
+	
+	<hr>
+
+	<h3>Using Item_name_here</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TODO</d-text>
+	</d-box>
+	<p class="note">Effect occurs.</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+
+	<h3>Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Name_goes_here</d-speaker>
+		<d-text>TODO</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Act_name_here</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Name_goes_here</d-speaker>
+		<d-text>TODO</d-text>
+	</d-box>
+</section>
