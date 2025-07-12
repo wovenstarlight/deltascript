@@ -67,6 +67,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* ~~School scene leading into Dark World~~ DONE `/school`
 			* Ok how specific do we wanna get on this. I'm thinking I record all the character interactions for this specific scene because those are very chapter-1-this-scene-specific, you can't get them at any other point, the second you leave the classroom they're gone. BUT! The objects (e.g. board, Alphys's computer, all that) are there regardless of chapter, the wording just changes a bit, so those go to the `/locations/lightworld/alphysclass` page...?
 		* ~~Scenes in ?????? leading up to Castle Town~~ DONE `/darkworldintro` (can't do ?????? as the URL because question marks are a special chara :<)
+		* ~~Castle Town scenes leading up to entry into Card Kingdom~~ DONE `/castletown` (TODO: Update Lancer battle URL)
+		* Field scenes... Ok IDK how to do this part honestly
 		* Dark World begins...............
 	* `/chapter2`
 	* `/chapter3`
