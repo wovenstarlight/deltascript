@@ -180,6 +180,15 @@ hr {
 .lancer, .king { color: #78ade1 } /* lightened for readability from #406080 */
 .queen { color: #00a2e8 }
 /* #endregion */
+.text-center { text-align: center }
+img {
+	max-width: 100%;
+	&.box-width {
+		display: block;
+		width: 30em;
+		padding-inline: min(2.25em, 3.5vw);
+	}
+}
 /* #endregion */
 
 /* #region Accessibility */
@@ -536,18 +545,20 @@ d-box, d-choices {
 		/* Forced line break */
 		.break { display: block }
 
-		img:is(.fullheight, .fullwidth) { display: block}
-		img.fullheight {
-			height: 100%;
-			grid-row: 1 / span 3;
+		img {
+			&:is(.fullheight, .fullwidth) { display: block}
+			&.fullheight {
+				height: 100%;
+				grid-row: 1 / span 3;
+			}
+			&.fullwidth {
+				width: 100%;
+				grid-column: 1 / span 2;
+				
+				&.center { justify-self: center }
+			}
+			&.fullwidth.fullheight { object-fit: contain }
 		}
-		img.fullwidth {
-			width: 100%;
-			grid-column: 1 / span 2;
-			
-			&.center { justify-self: center }
-		}
-		img.fullwidth.fullheight { object-fit: contain }
 	}
 
 	&:state(compact) {
