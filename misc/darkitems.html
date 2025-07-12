@@ -37,6 +37,10 @@ sources:
     chapters: [1, 2, 3, 4]
     note: combat usage effects
   -
+    name: gml_Object_obj_darkcontroller_Step_0
+    chapters: [1]
+    note: Manual toss text
+  -
     name: gml_GlobalScript_scr_itemdesc_oldtype
     chapters: [1]
     note: fallback text and beta item menu
@@ -312,6 +316,67 @@ credits: >
 		<d-text asterisk>Clover became sentimental!</d-text>
 	</d-box>
 	<p class="note">On the first use only, Clover gains 50% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3>Toss</h3>
+	<p>Plays only when Ralsei is in the party. Otherwise, the Manual is discarded without commentary.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(You drop the manual on the floor with a resounding thud.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Hey, Kris.</d-text>
+		<d-text asterisk>What are you doing...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>Oh no!</d-text>
+		<d-text asterisk>Is that the manual?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Looks like you accidentally dropped it...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Here you go, Kris!</d-text>
+		<d-text asterisk>You don't wanna lose that!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You got the Manual.)</d-text>
+		<d-text asterisk>(Again.)</d-text>
+	</d-box>
+	<p class="note">The Manual remains in the inventory.</p>
+
+	<h4>Second time</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(You tossed the Manual hard.)</d-text>
+		<d-text asterisk>(Its pages scatter in the wind.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="9"></d-sprite>
+		<d-text asterisk>..............</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="5"></d-sprite>
+		<d-text asterisk>Umm...</d-text>
+		<d-text asterisk>Th-that's OK, Kris!</d-text>
+		<d-text asterisk>I can always...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>I'll just make a better one next time!</d-text>
+	</d-box>
+	<p class="note">The Manual is removed from the inventory.</p>
+
+	<h4>Unused fallback text</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="9"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
 </section>
 
 
