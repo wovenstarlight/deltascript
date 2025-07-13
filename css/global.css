@@ -76,6 +76,13 @@ h6 {
 	color: color-mix(in srgb, var(--white), var(--gray));
 	border-inline-start: 0.15rem dotted;
 }
+.d-section:target h2:first-child, :is(h2, h3, h4, h5, h6):target {
+	color: var(--yellow);
+	animation: 1s ease-in-out 0.4s flash;
+}
+@keyframes flash {
+	50% { color: var(--orange) }
+}
 /* General text */
 p, ul, ol { margin-block: 0.5em }
 li { margin-block: 0.2em }
