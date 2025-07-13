@@ -14,6 +14,143 @@ sources:
     note: actual narration
 credits: >
   <p>Compiled by wovenstarlight.</p>
+toc:
+  -
+    id: chapter1
+    name: Chapter 1
+    subheadings:
+      -
+        id: ch1intro
+        name: ??????
+      -
+        id: eyepuzzle
+        name: Eye Puzzle
+      -
+        id: ch1castletown
+        name: Castle Town
+      -
+        id: greatdoor
+        name: Field - Great Door
+      -
+        id: seamsshop
+        name: Field - Seam's Shop
+      -
+        id: greatboard
+        name: Field - Great Board
+      -
+        id: forest
+        name: Forest - Entrance
+      -
+        id: bakesale
+        name: Forest - Bake Sale
+  -
+    id: chapter2
+    name: Chapter 2
+    subheadings:
+      -
+        id: ch2castletown
+        name: Castle Town
+      -
+        id: cyberfield
+        name: Cyber Field - Entrance
+      -
+        id: arcademachine
+        name: Cyber Field - Arcade Machine
+      -
+        id: fieldmusicshop
+        name: Cyber Field - Music Shop
+      -
+        id: cybercity
+        name: Cyber City - Entrance
+      -
+        id: firstalleyway
+        name: Cyber City - First Alleyway
+      -
+        id: citymusicshop
+        name: Cyber City - Music Shop
+      -
+        id: secondalleyway
+        name: Cyber City - Second Alleyway
+      -
+        id: guesthall
+        name: Queen's Mansion - Guest Hall
+      -
+        id: queensmansion
+        name: Queen's Mansion - Entrance
+      -
+        id: mansion3f
+        name: Queen's Mansion - 3F
+      -
+        id: acidtunnel
+        name: Queen's Mansion - Acid Tunnel
+      -
+        id: ch2weirdroute
+        name: Weird Route differences
+  -
+    id: chapter3
+    name: Chapter 3
+    subheadings:
+      -
+        id: tvworld
+        name: Dark World
+      -
+        id: preshow
+        name: TV World - Before the Show
+      -
+        id: greenroom
+        name: Green Room
+      -
+        id: coldplace
+        name: Cold Place
+      -
+        id: gouldensam
+        name: TV World - Goulden Sam
+      -
+        id: concert
+        name: TV World - Concert
+      -
+        id: cookingshow
+        name: TV World - Cooking Show
+  -
+    id: chapter4
+    name: Chapter 4
+    subheadings:
+      -
+        id: ch4lightworld
+        name: First interaction with a Light World save point
+      -
+        id: ch4castletown
+        name: My Castle Town
+      -
+        id: sanctuary1atrium
+        name: Dark Sanctuary - Atrium
+      -
+        id: sanctuary1lowerleft
+        name: Dark Sanctuary - Lower Left
+      -
+        id: sanctuary1lowerright
+        name: Dark Sanctuary - Lower Right
+      -
+        id: sanctuary1study
+        name: Dark Sanctuary - Study
+      -
+        id: sanctuary1library
+        name: Dark Sanctuary - Library
+      -
+        id: smallpiano
+        name: Dark Sanctuary - Small Piano
+      -
+        id: sanctuary2atrium
+        name: 2nd Sanctuary - Atrium
+      -
+        id: sanctuary2floor
+        name: 2nd Sanctuary - Floor
+      -
+        id: sanctuary2study
+        name: 2nd Sanctuary - Study
+      -
+        id: sanctuary3
+        name: 3rd Sanctuary
 ---
 {% comment %}
 Room IDs are based on their index in the game files; helper function getRoom() is available in the head.html include if you'd like to check other room IDs for yourself
@@ -25,7 +162,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 <section class="d-section" id="chapter1">
 	<h2>Chapter 1</h2>
 
-	<h3>??????</h3> <!-- id/room name: 35/room_dark1a -->
+	<h3 id="ch1intro">??????</h3> <!-- id/room name: 35/room_dark1a -->
 
 	<d-box theme="dark">
 		<d-text asterisk>At times, you see it flickering.</d-text>
@@ -37,7 +174,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Eye Puzzle</h3> <!-- 40/room_dark_eyepuzzle -->
+	<h3 id="eyepuzzle">Eye Puzzle</h3> <!-- 40/room_dark_eyepuzzle -->
 	<p>Comes after the puzzle with the wobbly things that each shoot three bullets as you pass.</p>
 	<p>Only plays upon first interaction after entering this room.</p>
 
@@ -79,7 +216,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Castle Town</h3> <!-- 45/room_castle_town -->
+	<h3 id="ch1castletown">Castle Town</h3> <!-- 45/room_castle_town -->
 
 	<h4>Before Ralsei joins the party</h4>
 	<d-box theme="dark">
@@ -103,7 +240,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Field - Great Door</h3> <!-- 49/room_field_start -->
+	<h3 id="greatdoor">Field - Great Door</h3> <!-- 49/room_field_start -->
 
 	<h4>Before Susie "joins" the party</h4>
 	<d-box theme="dark">
@@ -123,7 +260,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Field - Seam's Shop</h3> <!-- 59/room_field_shop1 -->
+	<h3 id="seamsshop">Field - Seam's Shop</h3> <!-- 59/room_field_shop1 -->
 
 	<h4>If Susie is in the party</h4>
 	<d-box theme="dark">
@@ -143,7 +280,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Field - Great Board</h3> <!-- 68/room_field_checkers3 -->
+	<h3 id="greatboard">Field - Great Board</h3> <!-- 68/room_field_checkers3 -->
 
 	<h4>Picked Susie's team name</h4>
 	<d-box theme="dark">
@@ -168,7 +305,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Forest - Entrance</h3> <!-- 73/room_forest_savepoint1 -->
+	<h3 id="forest">Forest - Entrance</h3> <!-- 73/room_forest_savepoint1 -->
 
 	<d-box theme="dark">
 		<d-text asterisk>The blocky foliage grows thick above your head...</d-text>
@@ -179,7 +316,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Forest - Bake Sale</h3> <!-- 82/room_forest_savepoint2 -->
+	<h3 id="bakesale">Forest - Bake Sale</h3> <!-- 82/room_forest_savepoint2 -->
 
 	<d-box theme="dark">
 		<d-text asterisk>In the heart of the woods, a bake sale stands quietly.</d-text>
@@ -237,7 +374,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Cyber Field - Entrance</h3> <!-- 78/room_dw_cyber_savepoint -->
+	<h3 id="cyberfield">Cyber Field - Entrance</h3> <!-- 78/room_dw_cyber_savepoint -->
 
 	<h4>If you haven't reached Cyber City yet</h4>
 	<d-box theme="dark">
@@ -257,7 +394,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Cyber Field - Arcade Machine</h3> <!-- 83/room_dw_cyber_queen_boxing -->
+	<h3 id="arcademachine">Cyber Field - Arcade Machine</h3> <!-- 83/room_dw_cyber_queen_boxing -->
 
 	<d-box theme="dark">
 		<d-text asterisk>The game is wrecked. You are filled with the power of videogame violence.</d-text>
@@ -265,7 +402,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Cyber Field - Music Shop</h3> <!-- 89/room_dw_cyber_musical_shop -->
+	<h3 id="fieldmusicshop">Cyber Field - Music Shop</h3> <!-- 89/room_dw_cyber_musical_shop -->
 
 	<d-box theme="dark">
 		<d-text asterisk>Crash! Boom! Bang! There's a terrific noise coming from the building nearby...</d-text>
@@ -276,7 +413,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Cyber City - Entrance</h3> <!-- 112/room_dw_city_entrance -->
+	<h3 id="cybercity">Cyber City - Entrance</h3> <!-- 112/room_dw_city_entrance -->
 
 	<h4>If Kris is alone</h4>
 	<d-box theme="dark">
@@ -304,7 +441,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Cyber City - First Alleyway</h3> <!-- 115/room_dw_city_hacker -->
+	<h3 id="firstalleyway">Cyber City - First Alleyway</h3> <!-- 115/room_dw_city_hacker -->
 
 	<h4>If Noelle is in the party</h4>
 	<d-box theme="dark">
@@ -326,7 +463,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Cyber City - Music Shop</h3> <!-- 121/room_dw_city_savepoint -->
+	<h3 id="citymusicshop">Cyber City - Music Shop</h3> <!-- 121/room_dw_city_savepoint -->
 
 	<h4>If you haven't entered Queen's Mansion yet</h4>
 	<d-box theme="dark">
@@ -343,7 +480,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Cyber City - Second Alleyway</h3> <!-- 128/room_dw_city_berdly -->
+	<h3 id="secondalleyway">Cyber City - Second Alleyway</h3> <!-- 128/room_dw_city_berdly -->
 	<d-box theme="dark">
 		<d-text asterisk>After defeating Berdly, a certain scent hangs in the air...</d-text>
 	</d-box>
@@ -353,7 +490,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Queen's Mansion - Guest Hall</h3> <!-- 152/room_dw_mansion_lightner_hallway -->
+	<h3 id="guesthall">Queen's Mansion - Guest Hall</h3> <!-- 152/room_dw_mansion_lightner_hallway -->
 	<d-box theme="dark">
 		<d-text asterisk>You have escaped from your second personalized room of the day.</d-text>
 	</d-box>
@@ -363,14 +500,14 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Queen's Mansion - Entrance</h3> <!-- 157/room_dw_mansion_entrance -->
+	<h3 id="queensmansion">Queen's Mansion - Entrance</h3> <!-- 157/room_dw_mansion_entrance -->
 	<d-box theme="dark">
 		<d-text asterisk>Looking at these legs fills you with a certain power.</d-text>
 	</d-box>
 
 	<hr>
 
-	<h3>Queen's Mansion - 3F</h3> <!-- 187/room_dw_mansion_east_3f -->
+	<h3 id="mansion3f">Queen's Mansion - 3F</h3> <!-- 187/room_dw_mansion_east_3f -->
 	<d-box theme="dark">
 		<d-text asterisk>Susie has gone into a book hole with Berdly.</d-text>
 	</d-box>
@@ -380,7 +517,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Queen's Mansion - Acid Tunnel</h3> <!-- 193/room_dw_mansion_acid_tunnel_exit -->
+	<h3 id="acidtunnel">Queen's Mansion - Acid Tunnel</h3> <!-- 193/room_dw_mansion_acid_tunnel_exit -->
 	<d-box theme="dark">
 		<d-text asterisk>Everyone is together, but the wind blows coldly...</d-text>
 	</d-box>
@@ -418,7 +555,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<!-- Again, repeated code from Chapter 2 for the Castle Town save point, but it doesn't trigger because you can't go there in this chapter! -->
 
-	<h3>Dark World</h3> <!-- 98/room_dw_couch_overworld_intro -->
+	<h3 id="tvworld">Dark World</h3> <!-- 98/room_dw_couch_overworld_intro -->
 	<d-box theme="dark">
 		<d-text asterisk>(A stale wind... you stifle a sneeze.)</d-text>
 	</d-box>
@@ -428,7 +565,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>TV World - Before the Show</h3> <!-- 194/room_dw_tv_curtain -->
+	<h3 id="preshow">TV World - Before the Show</h3> <!-- 194/room_dw_tv_curtain -->
 	<d-box theme="dark">
 		<d-text asterisk>(You hear the audience whispering in awe at your presence.)</d-text>
 	</d-box>
@@ -438,7 +575,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Green Room</h3> <!-- 135/room_dw_green_room -->
+	<h3 id="greenroom">Green Room</h3> <!-- 135/room_dw_green_room -->
 
 	<h4>After Board 1 (Desert Board)</h4>
 	<d-box theme="dark">
@@ -467,7 +604,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Cold Place</h3> <!-- 109/room_dw_snow_zone -->
+	<h3 id="coldplace">Cold Place</h3> <!-- 109/room_dw_snow_zone -->
 
 	<h4>Before the Doom Board</h4>
 	<!-- actually it's plot < 280, before mike has abandoned tenna -->
@@ -500,7 +637,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>TV World - Goulden Sam</h3> <!-- 177/room_dw_b3bs_jail1 -->
+	<h3 id="gouldensam">TV World - Goulden Sam</h3> <!-- 177/room_dw_b3bs_jail1 -->
 	<d-box theme="dark">
 		<d-text asterisk>(You are greeted by yet another prisonlike location.)</d-text>
 	</d-box>
@@ -510,7 +647,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>TV World - Concert</h3> <!-- 208/room_dw_teevie_rhythm -->
+	<h3 id="concert">TV World - Concert</h3> <!-- 208/room_dw_teevie_rhythm -->
 
 	<!-- TXX -->
 	<h4>If you destroyed the Shadowguys's contracts</h4>
@@ -567,7 +704,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>TV World - Cooking Show</h3> <!-- 213/room_dw_teevie_chef -->
+	<h3 id="cookingshow">TV World - Cooking Show</h3> <!-- 213/room_dw_teevie_chef -->
 	<d-box theme="dark">
 		<d-text asterisk>(The incense of hot snacks and spicy flavors assaults you.)</d-text>
 	</d-box>
@@ -579,7 +716,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 <section class="d-section" id="chapter4">
 	<h2>Chapter 4</h2>
 
-	<h3>First interaction with a Light World save point</h3> <!-- 15/room_krisroom, 24/room_town_mid, 49/room_lw_noellehouse_kitchen -->
+	<h3 id="ch4lightworld">First interaction with a Light World save point</h3> <!-- 15/room_krisroom, 24/room_town_mid, 49/room_lw_noellehouse_kitchen -->
 	<p>There are three save points in the Light World - one in Kris's room, one near QC's Diner, and one in Noelle's kitchen. This only plays the first time you interact with one of them.</p>
 
 	<d-box theme="light">
@@ -591,7 +728,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>My Castle Town</h3> <!-- 65/room_dw_castle_town -->
+	<h3 id="ch4castletown">My Castle Town</h3> <!-- 65/room_dw_castle_town -->
 	<p>This narration does not play on the Weird Route.</p>
 
 	<h4>If you didn't recruit everyone in previous chapters</h4>
@@ -614,7 +751,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Dark Sanctuary - Atrium</h3> <!-- 108/room_dw_church_intro1 -->
+	<h3 id="sanctuary1atrium">Dark Sanctuary - Atrium</h3> <!-- 108/room_dw_church_intro1 -->
 	<d-box theme="dark">
 		<d-text asterisk>(The scent of glass and incense.)</d-text>
 	</d-box>
@@ -624,7 +761,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Dark Sanctuary - Lower Left</h3> <!-- 177/room_dw_church_savepoint -->
+	<h3 id="sanctuary1lowerleft">Dark Sanctuary - Lower Left</h3> <!-- 177/room_dw_church_savepoint -->
 	<p>Only plays upon first interaction overall, regardless of whether you exit and reenter the room.</p>
 
 	<d-box theme="dark">
@@ -636,7 +773,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Dark Sanctuary - Lower Right</h3> <!-- 227/room_dw_church_ripplepuzzle_postgers -->
+	<h3 id="sanctuary1lowerright">Dark Sanctuary - Lower Right</h3> <!-- 227/room_dw_church_ripplepuzzle_postgers -->
 	<p>This narration does not play on the Weird Route.</p>
 
 	<d-box theme="dark">
@@ -648,7 +785,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Dark Sanctuary - Study</h3> <!-- 115/room_dw_church_gersonstudy -->
+	<h3 id="sanctuary1study">Dark Sanctuary - Study</h3> <!-- 115/room_dw_church_gersonstudy -->
 
 	<h4>First time overall</h4>
 	<d-box theme="dark">
@@ -671,7 +808,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Dark Sanctuary - Library</h3> <!-- 219/room_dw_church_nwconnect -->
+	<h3 id="sanctuary1library">Dark Sanctuary - Library</h3> <!-- 219/room_dw_church_nwconnect -->
 	<p>Only plays upon first interaction overall. Does not play on the Weird Route.</p>
 
 	<d-box theme="dark">
@@ -683,7 +820,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>Dark Sanctuary - Small Piano</h3> <!-- 218/room_dw_church_pianopuzzle -->
+	<h3 id="smallpiano">Dark Sanctuary - Small Piano</h3> <!-- 218/room_dw_church_pianopuzzle -->
 	<p>Only plays upon first interaction overall.</p>
 
 	<d-box theme="dark">
@@ -695,14 +832,14 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>2nd Sanctuary - Atrium</h3> <!-- 247/room_dw_churchb_staircaseintro -->
+	<h3 id="sanctuary2atrium">2nd Sanctuary - Atrium</h3> <!-- 247/room_dw_churchb_staircaseintro -->
 	<d-box theme="dark">
 		<d-text asterisk>(The lighting has changed.)</d-text>
 	</d-box>
 
 	<hr>
 
-	<h3>2nd Sanctuary - Floor</h3> <!-- 251/room_dw_churchb_savepoint -->
+	<h3 id="sanctuary2floor">2nd Sanctuary - Floor</h3> <!-- 251/room_dw_churchb_savepoint -->
 	<d-box theme="dark">
 		<d-text asterisk>(The lighting has changed.)</d-text>
 	</d-box>
@@ -712,7 +849,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>2nd Sanctuary - Study</h3> <!-- 257/room_dw_churchb_gersonstudy -->
+	<h3 id="sanctuary2study">2nd Sanctuary - Study</h3> <!-- 257/room_dw_churchb_gersonstudy -->
 	<d-box theme="dark">
 		<d-text asterisk>(The fire has run empty. In its place...)</d-text>
 	</d-box>
@@ -722,7 +859,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
-	<h3>3rd Sanctuary</h3> <!-- 270/room_dw_churchc_superprophecies -->
+	<h3 id="sanctuary3">3rd Sanctuary</h3> <!-- 270/room_dw_churchc_superprophecies -->
 	<p>Only plays upon first interaction overall.</p>
 
 	<d-box theme="dark">

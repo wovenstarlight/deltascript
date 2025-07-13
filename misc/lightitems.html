@@ -29,6 +29,90 @@ sources:
     note: Ball of Junk's DROP warning
 credits: >
   <p>Compiled by wovenstarlight.</p>
+close_toc: true
+toc:
+  -
+    id: standard
+    name: Standard text
+  -
+    name: First seen in Chapter 1
+    subheadings:
+      -
+        id: hotchocolate
+        name: Hot Chocolate
+      -
+        id: pencil
+        name: Pencil
+      -
+        id: bandage
+        name: Bandage
+      -
+        id: bouquet
+        name: Bouquet
+      -
+        id: ballofjunk
+        name: Ball of Junk
+      -
+        id: halloweenpencil
+        name: Halloween Pencil
+      -
+        id: luckypencil
+        name: Lucky Pencil
+      -
+        id: egg
+        name: Egg
+  -
+    name: First seen in Chapter 2
+    subheadings:
+      -
+        id: cards
+        name: Cards
+      -
+        id: boxofheartcandy
+        name: Box of Heart Candy
+      -
+        id: glass
+        name: Glass
+      -
+        id: eraser
+        name: Eraser
+      -
+        id: mechanicalpencil
+        name: Mechanical Pencil
+      -
+        id: wristwatch
+        name: Wristwatch
+      -
+        id: holidaypencil
+        name: Holiday Pencil
+  -
+    name: First seen in Chapter 3
+    subheadings:
+      -
+        id: cactusneedle
+        name: Cactus Needle
+      -
+        id: blackshard
+        name: Black Shard
+  -
+    name: First seen in Chapter 4
+    subheadings:
+      -
+        id: quillpen
+        name: Quill Pen
+  -
+    id: fallbacks
+    name: Fallbacks
+    subheadings:
+    -
+      id: iteminvalid
+      name: Invalid item ID
+    -
+      id: itemdefault
+      name: Default (null) item
+    -
+      id: unequippable
+      name: Unequippable item
 ---
 
 <section class="d-section" id="standard">
@@ -735,10 +819,10 @@ credits: >
 
 
 
-<section class="d-section">
+<section class="d-section" id="fallbacks">
 	<h2>Fallbacks</h2>
 
-	<h3>Invalid item ID</h3>
+	<h3 id="iteminvalid">Invalid item ID</h3>
 	<p>Plays when an item's ID isn't accounted for in the code.</p>
 
 	<h4>Info</h4>
@@ -748,7 +832,7 @@ credits: >
 
 	<hr>
 
-	<h3>Default (null) item</h3>
+	<h3 id="itemdefault">Default (null) item</h3>
 	<p>Plays when the unused item ID 0 is provided, probably for testing purposes.</p>
 
 	<h4>Info</h4>
@@ -763,7 +847,7 @@ credits: >
 
 	<hr>
 
-	<h3>Unequippable item</h3>
+	<h3 id="unequippable">Unequippable item</h3>
 	<p>Available in Chapter 4. If Kris has the Light World equivalent of a weapon they can't equip, this message plays upon attempting to use the item.</p>
 
 	<d-box theme="light">

@@ -1,8 +1,10 @@
 ---
 title: Dummy encounter
+
 description: >
   <p>Flavor text for the tutorial battle against Ralsei's dummy. (No dialogue, since the Dummy doesn't talk.)</p>
   <p>Includes quite a few variations where the only thing that changes is the sprite. Compact mode users, take note!</p>
+
 sources:
   -
     name: gml_Object_obj_dummyenemy_Step_0
@@ -19,8 +21,116 @@ sources:
     name: gml_Object_obj_dummyenemy_Draw_0
     chapters: [1]
     note: manual setting of Tired
+
 credits: >
   <p>Compiled by wovenstarlight.</p>
+
+close_toc: true
+
+toc:
+  -
+    id: encounter
+    name: Initial encounter
+  -
+    id: turn2
+    name: Turn 2
+  -
+    id: flavortext
+    name: Neutral flavor text
+  -
+    id: fight
+    name: Fighting
+    subheadings:
+      -
+        id: fightobey
+        name: When instructed to FIGHT
+      -
+        id: fightrepeat
+        name: FIGHTing again
+      -
+        id: missing
+        name: Missing
+  -
+    id: defend
+    name: Defending
+    subheadings:
+      -
+        id: defendintro
+        name: Introduction
+      -
+        id: defendobey
+        name: When instructed to DEFEND
+      -
+        id: defendobey
+        name: When instructed to do something else
+  -
+    id: magic
+    name: Using a spell
+    subheadings:
+      -
+        id: magicintro
+        name: Introduction
+      -
+        id: magicobey
+        name: When asked to use MAGIC
+      -
+        id: magicdisobey
+        name: Refusing to use MAGIC
+  -
+    id: check
+    name: check
+  -
+    id: hugdummy
+    name: Hug the Dummy
+    subheadings:
+    -
+      id: actintro
+      name: Introduction
+    -
+      id: actuse
+      name: Using the Hug ACT
+      subheadings:
+        -
+          id: actobey
+          name: When instructed to ACT
+        -
+          id: actfight
+          name: When instructed to FIGHT
+        -
+          id: actspare
+          name: When instructed to SPARE
+  -
+    id: spare
+    name: Spare
+    subheadings:
+      -
+        id: spareintro
+        name: Introduction
+      -
+        id: spareobey
+        name: When instructed to SPARE
+      -
+        id: sparedisobey
+        name: When instructed to do something else
+  -
+    id: hugralsei
+    name: Hug Ralsei
+  -
+    id: item
+    name: Using an item
+  -
+    id: endearly
+    name: Ending the tutorial early
+    subheadings:
+      -
+        id: endearlyfight
+        name: If you used FIGHT too many times
+      -
+        id: endearlypeace
+        name: If you did something other than FIGHTing
+  -
+    id: unused
+    name: Unused
 ---
 {% comment %}
 plot
@@ -40,7 +150,7 @@ global.charspecial[i] is 100 when SPARING?
 god this page is messy as hell. feel free to clean it up
 {% endcomment %}
 
-<section class="d-section" id="flavortext">
+<section class="d-section" id="encounter">
 	<h2>Initial encounter</h2>
 	<d-box theme="battlemenu">
 		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
@@ -117,8 +227,8 @@ god this page is messy as hell. feel free to clean it up
 	<p class="note">From here on, the player's actions determine what dialogue you proceed to. Ideally, you'd proceed to the <a href="#fight">FIGHT aftermath</a>.</p>
 </section>
 
-<section class="d-section" id="neutral">
-	<h2>Neutral</h2>
+<section class="d-section" id="flavortext">
+	<h2>Neutral flavor text</h2>
 	<p>Displays after any dialogue from Ralsei, depending on what he's last asked you to try.</p>
 
 	<d-box theme="battlemenu">
@@ -141,7 +251,7 @@ god this page is messy as hell. feel free to clean it up
 <section class="d-section" id="fight">
 	<h2>Fighting</h2>
 
-	<h3>When instructed to FIGHT</h3>
+	<h3 id="fightobey">When instructed to FIGHT</h3>
 
 	<h4>If Kris dealt more than 50 damage</h4>
 	<d-box theme="battlemenu">
@@ -193,7 +303,7 @@ god this page is messy as hell. feel free to clean it up
 
 	<hr>
 
-	<h3>FIGHTing again</h3>
+	<h3 id="fightrepeat">FIGHTing again</h3>
 
 	<h4>Second time</h4>
 	<p>As in, second use of FIGHT overall.</p>
@@ -240,7 +350,7 @@ god this page is messy as hell. feel free to clean it up
 
 	<hr>
 
-	<h3>Missing</h3>
+	<h3 id="missing">Missing</h3>
 	<p>If you choose FIGHT, but then fail to hit [CONFIRM] while the cursor is in the hit box.</p>
 
 	<h4>First time</h4>
@@ -368,7 +478,7 @@ god this page is messy as hell. feel free to clean it up
 
 	<hr>
 
-	<h3>When instructed to DEFEND</h3>
+	<h3 id="defendobey">When instructed to DEFEND</h3>
 	<d-box theme="battlemenu">
 		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
 		<d-text asterisk>Great job, Kris!</d-text>
@@ -378,7 +488,7 @@ god this page is messy as hell. feel free to clean it up
 
 	<hr>
 
-	<h3>When instructed to do something else</h3>
+	<h3 id="defenddisobey">When instructed to do something else</h3>
 	<h4>First time</h4>
 	<d-box theme="battlemenu">
 		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
@@ -473,7 +583,7 @@ god this page is messy as hell. feel free to clean it up
 
 	<hr>
 
-	<h3>When asked to use MAGIC</h3>
+	<h3 id="magicobey">When instructed to use MAGIC</h3>
 	<h4>If you used Pacify</h4>
 	<d-box theme="battlemenu">
 		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
@@ -493,7 +603,7 @@ god this page is messy as hell. feel free to clean it up
 
 	<hr>
 
-	<h3>Refusing to use MAGIC</h3>
+	<h3 id="magicdisobey">Refusing to use MAGIC</h3>
 	<p>If you use commands other than MAGIC when prompted to have Ralsei cast Pacify.</p>
 
 	<h4>First time</h4>
@@ -582,20 +692,20 @@ god this page is messy as hell. feel free to clean it up
 
 	<hr>
 
-	<h3>Using the Hug ACT</h3>
+	<h3 id="actuse">Using the Hug ACT</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You hug the DUMMY.</d-text>
 	</d-box>
 	<p class="note">The Dummy gains 100% <span class="yellow">Mercy</span>.</p>
 
-	<h4>When instructed to ACT</h4>
+	<h4 id="actobey">When instructed to ACT</h4>
 	<d-box theme="battlemenu">
 		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
 		<d-text asterisk>Aww, that's great, Kris!</d-text>
 	</d-box>
 	<p class="note">Proceeds to the <a href="#spareintrostandard">SPARE introduction</a>.</p>
 
-	<h4>When instructed to FIGHT</h4>
+	<h4 id="actfight">When instructed to FIGHT</h4>
 	<d-box theme="battlemenu">
 		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
 		<d-text asterisk>Huh...? Kris, you'd rather hug it out than fight?</d-text>
@@ -622,7 +732,7 @@ god this page is messy as hell. feel free to clean it up
 	</d-box>
 	<p class="note">Proceeds to the <a href="#magicintro">MAGIC introduction</a>.</p>
 
-	<h4>When instructed to SPARE</h4>
+	<h4 id="actspare">When instructed to SPARE</h4>
 	<h5>First time</h5>
 	<p>I.e. the second use of Hug overall.</p>
 	<d-box theme="battlemenu">
@@ -684,7 +794,7 @@ god this page is messy as hell. feel free to clean it up
 
 	<hr>
 
-	<h3>When instructed to SPARE</h3>
+	<h3 id="spareobey">When instructed to SPARE</h3>
 	<d-box theme="battlemenu">
 		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
 		<d-text asterisk>Great job, Kris!</d-text>
@@ -699,7 +809,7 @@ god this page is messy as hell. feel free to clean it up
 
 	<hr>
 
-	<h3>When instructed to do something else</h3>
+	<h3 id="sparedisobey">When instructed to do something else</h3>
 	<h4>First time</h4>
 	<d-box theme="battlemenu">
 		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>

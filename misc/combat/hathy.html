@@ -1,7 +1,9 @@
 ---
 title: Hathy encounter
+
 description: >
   <p>Flavor text and dialogue for battles against Hathy.</p>
+
 sources:
   -
     name: gml_Object_obj_heartenemy_Step_0
@@ -22,13 +24,93 @@ sources:
     name: gml_Object_obj_smallcheckers_enemy_Step_0
     chapters: [1]
     note: Susie sprite for unwarned attack
+
 credits: >
   <p>Compiled by wovenstarlight.</p>
+
+close_toc: true
+
+toc:
+  -
+    id: flavortext
+    name: Flavor text
+    subheadings:
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-rudinn
+            name: With Rudinn
+          -
+            id: encounter-hathy
+            name: With two other Hathys
+          -
+            id: encounter-clover
+            name: With Clover
+          -
+            id: encounter-jigsawryrudinn
+            name: With Jigsawry and Rudinn
+          -
+            id: encounter-rudinns
+            name: With two other Rudinns
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: ft-check
+            name: Check
+          -
+            id: ft-flatter
+            name: Flatter
+          -
+            id: ft-xflatter
+            name: X-Flatter
+          -
+            id: ft-warning
+            name: Warning
+          -
+            id: ft-sflatter
+            name: S-Flatter
+      -
+        id: ft-manual
+        name: Using the Manual
+      -
+        id: susieattack
+        name: Susie attacking (Unused)
+  -
+    id: dialogue
+    name: Dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: dialogue-flatter
+            name: Flatter
+          -
+            id: dialogue-xflatter
+            name: X-Flatter
 ---
 <section class="d-section" id="flavortext">
 	<h2>Flavor text</h2>
 
-	<h3>Standard</h3>
+	<h3 id="ft-standard">Standard</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Hathy's body beats audibly.</d-text>
 	</d-box>
@@ -47,55 +129,50 @@ credits: >
 
 	<hr>
 
-	<h3>Initial encounter</h3>
-	<h4>With Rudinn</h4>
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-rudinn">With Rudinn</h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Rudinn and Hathy blocked the way!</d-text>
 	</d-box>
 
-	<h4>With two other Hathys</h4>
+	<h4 id="encounter-hathy">With two other Hathys</h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Three Hathys blocked the way!</d-text>
 	</d-box>
 
-	<h4>With Clover</h4>
+	<h4 id="encounter-clover">With Clover</h4>
 	<p>Unused.</p>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Clover and Hathy grew close!</d-text>
 	</d-box>
 
-	<h4>With Jigsawry and Rudinn</h4>
+	<h4 id="encounter-jigsawryrudinn">With Jigsawry and Rudinn</h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Smorgasboard.</d-text>
 	</d-box>
 
-	<h4>With two other Rudinns</h4>
+	<h4 id="encounter-rudinns">With two other Rudinns</h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Various guys appeared!</d-text>
 	</d-box>
 
-	<h4>With Other_enemy_name</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>TODO</d-text>
-	</d-box>
-
 	<hr>
 
-	<h3>Tired</h3>
+	<h3 id="ft-tired">Tired</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Hathy's beat slows.</d-text>
 	</d-box>
 
 	<hr>
 
-	<h3>Low HP</h3>
+	<h3 id="ft-lowhp">Low HP</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Hathy's beat seems to stutter.</d-text>
 	</d-box>
 
 	<hr>
 
-	<h3>Spareable</h3>
+	<h3 id="ft-spareable">Spareable</h3>
 	<p>Unused. (Got assigned to the wrong variable, whoops.)</p> <!-- global.msg instead of global.battlemsg, if you were wondering -->
 	<d-box theme="battlemenu">
 		<d-text asterisk>Hathy is skipping beats.</d-text>
@@ -103,7 +180,7 @@ credits: >
 
 	<hr>
 
-	<h3>Check</h3>
+	<h3 id="ft-check">Check</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>HATHY - AT 7 DF 0</d-text>
 		<d-text asterisk> I am a <span class="yellow">little kiss</span>.</d-text>
@@ -111,7 +188,7 @@ credits: >
 
 	<hr>
 
-	<h3>Flatter</h3>
+	<h3 id="ft-flatter">Flatter</h3>
 	<p class="note">At random:</p>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You told Hathy it has cool tentacles.</d-text>
@@ -129,7 +206,7 @@ credits: >
 
 	<hr>
 
-	<h3>X-Flatter</h3>
+	<h3 id="ft-xflatter">X-Flatter</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You ordered Ralsei to flatter all the enemies!</d-text>
 	</d-box>
@@ -152,7 +229,7 @@ credits: >
 
 	<hr>
 
-	<h3>Warning</h3>
+	<h3 id="ft-warning">Warning</h3>
 	<p>Available before Susie joins the party for real.</p>
 	<p></p>
 	<p class="note">Susie's attacks will miss from now on.</p>
@@ -171,7 +248,7 @@ credits: >
 
 	<hr>
 
-	<h3>S-Flatter</h3>
+	<h3 id="ft-sflatter">S-Flatter</h3>
 	<p>Available after Susie joins the party for real.</p>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You ordered Susie to flatter all the enemies!</d-text>
@@ -197,7 +274,7 @@ credits: >
 	
 	<hr>
 
-	<h3>Using the Manual</h3>
+	<h3 id="ft-manual">Using the Manual</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>[Character] read the MANUAL!</d-text>
 	</d-box>
@@ -208,7 +285,7 @@ credits: >
 
 	<hr>
 
-	<h3>Susie attacking (Unused)</h3>
+	<h3 id="susieattack">Susie attacking (Unused)</h3>
 	<p>Got moved to the <a href="{{ '/misc/combat/cround' | relative_url }}">C. Round</a> encounter instead.</p>
 
 	<h4>If Hathy wasn't warned</h4>
@@ -244,7 +321,7 @@ credits: >
 <section class="d-section" id="dialogue">
 	<h2>Dialogue</h2>
 
-	<h3>Standard</h3>
+	<h3 id="dialogue-standard">Standard</h3>
 	<d-box theme="battletalk">
 		<d-speaker>Hathy</d-speaker>
 		<d-text><img src="{{ '/assets/images/story/talkhathy/0.gif' | relative_url }}" alt="A heart with a biting mouth"></d-text>
@@ -256,13 +333,13 @@ credits: >
 
 	<hr>
 
-	<h3>Flatter</h3>
+	<h3 id="dialogue-flatter">Flatter</h3>
 	<d-box theme="battletalk">
 		<d-speaker>Hathy</d-speaker>
 		<d-text><img src="{{ '/assets/images/story/talkhathy/2.gif' | relative_url }}" alt="A single red heart pulsing slightly"></d-text>
 	</d-box>
 
-	<h3>X-Flatter</h3>
+	<h3 id="dialogue-xflatter">X-Flatter</h3>
 	<d-box theme="battletalk">
 		<d-speaker>Hathy</d-speaker>
 		<d-text><img src="{{ '/assets/images/story/talkhathy/3.gif' | relative_url }}" alt="A trio of red hearts pulsing slightly"></d-text>

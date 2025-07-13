@@ -1,7 +1,9 @@
 ---
 title: Rudinn encounter
+
 description: >
   <p>Flavor text and dialogue for battles against Rudinn.</p>
+
 sources:
   -
     name: gml_Object_obj_diamondenemy_Step_0
@@ -22,13 +24,93 @@ sources:
     name: gml_GlobalScript_scr_spelltext
     chapters: [1]
     note: Glowshard usage
+
 credits: >
   <p>Compiled by wovenstarlight.</p>
+
+close_toc: true
+
+toc:
+  -
+    id: flavortext
+    name: Flavor text
+    subheadings:
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-rudinn
+            name: With another Rudinn
+          -
+            id: encounter-hathy
+            name: With Hathy
+          -
+            id: encounter-jigsawryhathy
+            name: With Jigsawry and Hathy
+          -
+            id: encounter-hathyrudinn
+            name: With Hathy and another Rudinn
+          -
+            id: encounter-rabbick
+            name: With Rabbick
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: ft-check
+            name: Check
+          -
+            id: ft-convince
+            name: Convince
+          -
+            id: ft-lecture
+            name: Lecture
+          -
+            id: ft-warning
+            name: Warning
+      -
+        id: ft-glowshard
+        name: Using Glowshard
+  -
+    id: dialogue
+    name: Dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: dialogue-convince
+            name: Convince
+          -
+            id: dialogue-lecture
+            name: Lecture
+      -
+        id: dialogue-unused
+        name: Unused
 ---
 <section class="d-section" id="flavortext">
 	<h2>Flavor text</h2>
 
-	<h3>Standard</h3>
+	<h3 id="ft-standard">Standard</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Rudinn is glimmering plainly.</d-text>
 	</d-box>
@@ -47,8 +129,8 @@ credits: >
 
 	<hr>
 
-	<h3>Initial encounter</h3>
-	<h4>Solo</h4>
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4>
 	<h5>First time</h5>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Rudinn drew near!</d-text>
@@ -62,27 +144,27 @@ credits: >
 		<d-text asterisk>Assumedly another different Rudinn appeared!</d-text>
 	</d-box>
 
-	<h4>With another Rudinn</h4>
+	<h4 id="encounter-rudinn">With another Rudinn</h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>A necklace of Rudinns blocks your path.</d-text>
 	</d-box>
 
-	<h4>With Hathy</h4>
+	<h4 id="encounter-hathy">With Hathy</h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Rudinn and Hathy blocked the way!</d-text>
 	</d-box>
 
-	<h4>With Jigsawry and Hathy</h4>
+	<h4 id="encounter-jigsawryhathy">With Jigsawry and Hathy</h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Smorgasboard.</d-text>
 	</d-box>
 
-	<h4>With Hathy and another Rudinn</h4>
+	<h4 id="encounter-hathyrudinn">With Hathy and another Rudinn</h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Various guys appeared!</d-text>
 	</d-box>
 
-	<h4>With Rabbick</h4>
+	<h4 id="encounter-rabbick">With Rabbick</h4>
 	<p>Unused. Appears to be intended for an unimplemented encounter in the room where <a href="{{ '/misc/combat/clover' | relative_url }}">Clover</a> is first encountered.</p>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Rabbick slithered in the way!</d-text>
@@ -90,21 +172,21 @@ credits: >
 
 	<hr>
 
-	<h3>Tired</h3>
+	<h3 id="ft-tired">Tired</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Rudinn is starting to fall asleep.</d-text>
 	</d-box>
 
 	<hr>
 
-	<h3>Low HP</h3>
+	<h3 id="ft-lowhp">Low HP</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Rudinn's luster begins to fade.</d-text>
 	</d-box>
 
 	<hr>
 
-	<h3>Spareable</h3>
+	<h3 id="ft-spareable">Spareable</h3>
 	<p>Unused. (Got assigned to the wrong variable, whoops.)</p> <!-- global.msg instead of global.battlemsg, if you were wondering -->
 	<d-box theme="battlemenu">
 		<d-text asterisk>Rudinn is alright with not fighting.</d-text>
@@ -112,7 +194,7 @@ credits: >
 
 	<hr>
 
-	<h3>Check</h3>
+	<h3 id="ft-check">Check</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>RUDINN - AT 6 DF 0</d-text>
 		<d-text asterisk>This ambivalent diamond isn't any girl's best friend.</d-text>
@@ -120,7 +202,7 @@ credits: >
 
 	<hr>
 
-	<h3>Convince</h3>
+	<h3 id="ft-convince">Convince</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You told Rudinn to quit fighting.</d-text>
 		<d-text asterisk>It was utterly swayed.</d-text>
@@ -129,7 +211,7 @@ credits: >
 
 	<hr>
 
-	<h3>Lecture</h3>
+	<h3 id="ft-lecture">Lecture</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You lectured the enemies on the importance of kindness.</d-text>
 	</d-box>
@@ -140,7 +222,7 @@ credits: >
 
 	<hr>
 
-	<h3>Warning</h3>
+	<h3 id="ft-warning">Warning</h3>
 	<p>Available before Susie joins the party for real.</p>
 	<p></p>
 	<p class="note">Susie's attacks will miss from now on.</p>
@@ -159,7 +241,7 @@ credits: >
 
 	<hr>
 
-	<h3>Using Glowshard</h3>
+	<h3 id="ft-glowshard">Using Glowshard</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>[Character] used the GLOWSHARD!</d-text>
 	</d-box>
@@ -175,7 +257,7 @@ credits: >
 <section class="d-section" id="dialogue">
 	<h2>Dialogue</h2>
 
-	<h3>Standard</h3>
+	<h3 id="dialogue-standard">Standard</h3>
 	<d-box theme="battletalk">
 		<d-speaker>Rudinn</d-speaker>
 		<d-text>Long live<span class="break"></span> the guy<span class="break"></span> who pays us!</d-text>
@@ -195,7 +277,7 @@ credits: >
 
 	<hr>
 
-	<h3>Convince</h3>
+	<h3 id="dialogue-convince">Convince</h3>
 	<d-box theme="battletalk">
 		<d-speaker>Rudinn</d-speaker>
 		<d-text>Yeah I<span class="break"></span> guess that<span class="break"></span> makes<span class="break"></span> sense.</d-text>
@@ -227,7 +309,7 @@ credits: >
 
 	<hr>
 
-	<h3>Lecture</h3>
+	<h3 id="dialogue-lecture">Lecture</h3>
 	<d-box theme="battletalk">
 		<d-speaker>Rudinn</d-speaker>
 		<d-text>(Yawn)...<span class="break"></span> What? OK...</d-text>
@@ -235,7 +317,7 @@ credits: >
 
 	<hr>
 
-	<h3>Unused</h3>
+	<h3 id="dialogue-unused">Unused</h3>
 	<p>Possibly intended for the second, successful use of Convince.</p>
 	<d-box theme="battletalk">
 		<d-speaker>Rudinn</d-speaker>

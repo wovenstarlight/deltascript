@@ -1,7 +1,9 @@
 ---
 title: Name_goes_here encounter
+
 description: >
   <p>Flavor text and dialogue for battles against Name_goes_here.</p>
+
 sources:
   -
     name: gml_Object_obj_diamondenemy_Step_0
@@ -14,8 +16,61 @@ sources:
     name: gml_GlobalScript_scr_encountersetup
     chapters: [1]
     note: initial flavor text
+
 credits: >
   <p>Compiled by YOUR_NAME_HERE.</p>
+
+close_toc: true
+
+toc:
+  -
+    id: flavortext
+    name: Flavor text
+    subheadings:
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-otherenemyname
+            name: With Other_enemy_name
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: ft-check
+            name: Check
+          -
+            id: ft-actnamehere
+            name: Act_name_here
+  -
+    id: dialogue
+    name: Dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: dialogue-actnamehere
+            name: Act_name_here
 ---
 {% comment %}
 Check for encounter instances with the following regex:

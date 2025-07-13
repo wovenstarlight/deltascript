@@ -24,7 +24,7 @@ layout: default
 	{%- endif %}
 
 	{%- if page.toc %}
-	<details id="pagetoc" open>
+	<details id="pagetoc" {%- unless page.close_toc %} open {%- endunless %}>
 		<summary>Contents</summary>
 		<ol>
 			{%- for heading in page.toc %}
