@@ -1,0 +1,12 @@
+<li>
+	{% if include.item.id %}<a href="#{{ include.item.id }}">{% endif %}
+	{{- include.item.name -}}
+	{% if include.item.id %}</a>{% endif %}
+	{%- if include.item.subheadings %}
+	<ol>
+		{%- for subheading in include.item.subheadings %}
+			{%- include toc_item.html item=subheading %}
+		{%- endfor %}
+	</ol>
+	{%- endif %}
+</li>

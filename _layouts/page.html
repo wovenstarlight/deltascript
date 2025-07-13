@@ -22,6 +22,17 @@ layout: default
 		</ul>
 	</details>
 	{%- endif %}
+
+	{%- if page.toc %}
+	<details id="pagetoc" open>
+		<summary>Contents</summary>
+		<ol>
+			{%- for heading in page.toc %}
+			{% include toc_item.html item=heading %}
+			{%- endfor %}
+		</ol>
+	</details>
+	{%- endif %}
 </header>
 
 {{ content }}
