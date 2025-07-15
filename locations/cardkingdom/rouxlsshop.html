@@ -1,0 +1,529 @@
+---
+title: Rouxls's shop
+
+description: >
+  <p>Text and dialogue from Rouxls Kaard's storefront in Card Castle.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+# see_also:
+# TODO: is this the URL we want for the generic shop text
+#   -
+#     name: Generic shop text
+#     url: /misc/generic/shop
+#     for: responses to specific actions not specified on this page
+
+sources:
+  -
+    name: gml_Object_obj_shop2_Draw_0
+    chapters: [1]
+  -
+    name: gml_Object_obj_shop2_Create_0
+    chapters: [1]
+    note: buyable items
+  -
+    name: gml_GlobalScript_scr_shopmenu
+    chapters: [1]
+    note: sale exceptions
+
+close_toc: true
+
+toc:
+  -
+    id: mainscreen
+    name: Main screen
+    subheadings:
+    -
+      id: initial
+      name: Initial entrance
+    -
+      id: postexit
+      name: After exiting a menu
+  -
+    id: buy
+    name: Buy
+    subheadings:
+      -
+        id: itemlist
+        name: Items for sale
+      -
+        id: initialbuy
+        name: Initial buying
+      -
+        id: considerbuy
+        name: Considering a purchase
+      -
+        id: confirmbuy
+        name: Making a purchase
+      -
+        id: cancelbuy
+        name: Backing out of a purchase
+      -
+        id: nomoney
+        name: Not enough D$
+      -
+        id: storagefull
+        name: Storage full
+  -
+    id: sell
+    name: Sell
+    subheadings:
+    -
+      id: sellitem
+      name: Initial item sale screen
+    -
+      id: sellweapon
+      name: Initial weapon sale screen
+    -
+      id: sellarmor
+      name: Initial armor sale screen
+    -
+      id: sellempty
+      name: Selling with empty inventory
+    -
+      id: confirmsale
+      name: Making a sale
+    -
+      id: sellall
+      name: Selling the last of your items/armor/weapons
+    -
+      id: sellfail
+      name: Backing out of a sale / empty slot / trying to sell the Devilsknife/Jevilstail
+    -
+      id: sellmanual
+      name: Trying to sell the Manual
+  -
+    id: talk
+    name: Talk
+    subheadings:
+    -
+      id: aboutyourself
+      name: About yourself
+    -
+      id: whyselltous
+      name: Why sell to us
+    -
+      id: king
+      name: The King
+    -
+      id: kingsson
+      name: The King's Son
+  -
+    id: exit
+    name: Exit
+---
+<section class="d-section" id="mainscreen">
+	<h2>Main screen</h2>
+
+	<h3 id="initial">Initial entrance</h3>
+	<h4>Before fighting <a href="{{ '/misc/combat/kround' | relative_url }}">K. Round</a> for the second time</h4>
+	<d-box theme="shopleft">
+		<!--0-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Welcome, welcome,<span class="break"></span> my Heroick Comrades!</d-text>
+	</d-box>
+	<h4>After fighting K. Round for the second time</h4>
+	<d-box theme="shopleft">
+		<!--0-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Welcome, welcome,<span class="break"></span> my Heroick Comrades!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="postexit">After exiting a menu</h3>
+	<d-box theme="shopleft">
+		<!--0-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Anything else?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="buy">
+	<h2>Buy</h2>
+
+	<h3 id="itemlist">Items for sale</h3>
+	<h4>Rouxls Roux</h4>
+	<d-box theme="shopdesc">
+		<d-text>ITEM</d-text>
+		<d-text>Fragrant sauce</d-text>
+		<d-text>heals 50HP</d-text>
+	</d-box>
+	<h4>Brave Ax</h4>
+	<d-box theme="shopdesc">
+		<d-text>WEAPON</d-text>
+		<d-text>Heroic &<span class="break"></span> Cool</d-text>
+	</d-box>
+	<h4>Dainty Scarf</h4>
+	<d-box theme="shopdesc">
+		<d-text>WEAPON</d-text>
+		<d-text>Homemade</d-text>
+		<d-text>Healing up</d-text>
+	</d-box>
+	<h4>Amber Card</h4>
+	<d-box theme="shopdesc">
+		<d-text>ARMOR</d-text>
+		<d-text>Defensive charm</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="initialbuy">Initial buying</h3>
+	<d-box theme="shopright">
+		<!--0-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>What shalt thou buy?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="considerbuy">Considering a purchase</h3>
+	<d-box theme="shopright">
+		<d-text>Buyeth for $[VALUE] ?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="confirmbuy">Making a purchase</h3>
+	<h4>Before fighting K. Round for the second time</h4>
+	<d-box theme="shopright">
+		<!--2-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Thanks, worm.</d-text>
+	</d-box>
+	<h4>After fighting K. Round for the second time</h4>
+	<d-box theme="shopright">
+		<!--2-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Thanks, hero!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="cancelbuy">Backing out of a purchase</h3>
+	<d-box theme="shopright">
+		<!--3-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Perhaps another ware?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="nomoney">Not enough D$</h3>
+	<d-box theme="shopright">
+		<!--6-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Your<span class="break"></span> funds are lacking.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="storagefull">Storage full</h3>
+	<d-box theme="shopright">
+		<!--3-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Thou doth carry<span class="break"></span> too much!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="sell">
+	<h2>Sell</h2>
+	<d-box theme="shopright">
+		<!--0-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Showeth<span class="break"></span> me your treasure!</d-text>
+	</d-box>
+	<p class="note">You are given the options "Selleth Items", "Selleth Weapons", "Selleth Armor", and "Returnst".</p>
+
+	<hr>
+
+	<h3 id="sellitem">Initial item sale screen</h3>
+	<d-box theme="shopright">
+		<!--0-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>What ITEM shalt thou proffer?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellweapon">Initial weapon sale screen</h3>
+	<d-box theme="shopright">
+		<!--0-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>What WEAPON shalt thou proffer?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellarmor">Initial armor sale screen</h3>
+	<d-box theme="shopright">
+		<!--0-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>What ARMOR shalt thou proffer?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellempty">Selling with empty inventory</h3>
+	<p>Choosing "Selleth Items" when you have no items, or "Selleth Weapons/Armor" when you have no unequipped weapons/armor.</p>
+	<d-box theme="shopright">
+		<!--6-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>You have none!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="confirmsale">Making a sale</h3>
+	<d-box theme="shopright">
+		<!--5-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>I shall make use <span class="break"></span> of this!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellall">Selling the last of your items/armor/weapons</h3>
+	<d-box theme="shopright">
+		<!--2-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>That seems to be all, no?</d-text>
+	</d-box>
+	<p class="note">You are returned to the initial Sell screen.</p>
+
+	<hr>
+
+	<h3 id="sellfail">Backing out of a sale, empty slot, or trying to sell the <a href="{{ '/misc/equipment#devilsknife' | relative_url }}">Devilsknife</a>/<a href="{{ '/misc/equipment#jevilstail' | relative_url }}">Jevilstail</a></h3>
+	<d-box theme="shopright">
+		<!--6-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>What?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellmanual">Trying to sell the <a href="{{ '/misc/darkitems#manual' | relative_url }}">Manual</a></h3>
+	<d-box theme="shopright">
+		<!--6-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Er, NO thank you.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="talk">
+	<h2>Talk</h2>
+	<d-box theme="shopright">
+		<!--5-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Ah, what is thine Intereste?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="aboutyourself">About yourself</h3>
+	<d-box theme="dark">
+		<!--0-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>I amst the Duke of Puzzles, Rouxls Kaard.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--4-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>My hobbies includest calligraphy, lawkeeping, bugkeeping, cages...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--1-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>... and long walks in the dungeon.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>Before fighting K. Round for the second time</h4>
+	<d-box theme="dark">
+		<!--5-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Artest thou one of my admirers, worm?</d-text>
+	</d-box>
+	<h4>After fighting K. Round for the second time</h4>
+	<d-box theme="dark">
+		<!--5-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>By the way, no hard feelingst about earlier, right?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="whyselltous">Why sell to us</h3>
+	<h4>Before fighting K. Round for the second time</h4>
+	<d-box theme="dark">
+		<!--4-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Hahaha!! So I might amasseth funds, Worms! An army of funds...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--1-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>So that I may crushest thou like Fermented Grapes, into a most delicious and adult beverage -</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--6-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Vengeance!! Ahahaha!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--5-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Oh, how I amuse myself!!!</d-text>
+	</d-box>
+
+	<h4>After fighting K. Round for the second time</h4>
+	<d-box theme="dark">
+		<!--2-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Haha, why of course I wouldst sell to my compatriarts, the Heroes Of Legend!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--5-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Earlier art but a Test of your Heroick Resolve!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--6-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Rouxls is ALWAYS on the winning side!! Thou can bet on that!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="king">The King</h3>
+	<h4>Before fighting K. Round for the second time</h4>
+	<d-box theme="dark">
+		<!--6-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Our Lorde King art a cruel and terrifying Monarcke!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--2-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>However, he is also Brilliant, for he decidedesteth to appoinst ME, as Duke of Puzzles,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--6-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>After pretty mucheth everyone else was firedst or placed inside a cage.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--4-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Truly, a benevolent ruler!</d-text>
+	</d-box>
+
+	<h4>After fighting K. Round for the second time</h4>
+	<d-box theme="dark">
+		<!--6-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Yes, the King! A terrible Man! An awful Monarcke!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--2-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Never likedeth that Guye, really!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--3-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>I just envisionethed, perhaps... If I acceptedst this High Ranking Positione...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--5-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>I could assist to overthroweth him from the Inside!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--6-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>... What!? Cannot thou conceiveth of my plan?!?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="kingsson">The King's Son</h3>
+	<h4>Before fighting K. Round for the second time</h4>
+	<d-box theme="dark">
+		<!--0-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>His Son, on the other hand, is more troublesome than a fistful of fleas!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--1-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>He alwayst asks me the Worste Queries,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--3-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>And calleth me his "Lesser Dad."</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--6-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Our relation is NONE, you little water-beetle! I placate you for your Father's sake!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--6-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>I do not Wisheth to hear your MP3's! I would rather listen to the sweet song of Death!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--3-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--2-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>How is he, anyhow?</d-text>
+	</d-box>
+
+	<h4>After fighting K. Round for the second time</h4>
+	<d-box theme="dark">
+		<!--3-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Perhaps my wording art a bit Harshe earlier... The King's offspring is a Darling!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--6-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>A strange and irritating darling!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--3-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>When his Father does not cook, his Son yells like a baby bird, until I feed him worms!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<!--6-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Is this what it means to be High Ranking!?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="exit">
+	<h2>Exit</h2>
+
+	<h3>Before fighting K. Round for the second time</h3>
+	<d-box theme="dark">
+		<!--5-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>See thou in the Dungeon, Worms!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>After fighting K. Round for the second time</h3>
+	<d-box theme="dark">
+		<!--5-->
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Come by any time, my good Worms!</d-text>
+	</d-box>
+</section>

@@ -491,17 +491,17 @@ d-box, d-choices {
 		background-color: var(--black);
 		border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width) / var(--border-width);
 
-		&[theme=dark], &[theme^=power] {
+		&[theme=dark], &[theme^=power], &[theme^=shop] {
 			border-image-source: url("../assets/images/textbox/dark.gif");
 		}
 
-		&[theme=plain], &[theme^=obj], &[theme=battlemenu], &[theme^=battledesc] {
+		&[theme=plain], &[theme^=obj], &[theme=battlemenu], &[theme=battledesc] {
 			border-image-source: url("../assets/images/textbox/plain.png");
 		}
 
 		&[theme^=obj], &[theme=battlemenu] { width: 26.4em }
 
-		&[theme^=obj], &[theme^=power], &[theme^=battledesc] {
+		&[theme^=obj], &[theme^=power], &[theme=battledesc], &[theme=shopdesc] {
 			font-family: "DeltaFont Condensed", var(--font);
 		}
 
@@ -537,7 +537,7 @@ d-box, d-choices {
 
 		&[theme=powertitle] { width: 11em }
 
-		&[theme^=battledesc] {
+		&[theme=battledesc] {
 			width: 5.4em;
 			color: var(--gray);
 		}
@@ -566,6 +566,12 @@ d-box, d-choices {
 				&.queen { color: #1263bc }
 			}
 		}
+
+		&[theme=shopleft] { width: 15.2em }
+
+		&[theme=shopright], &[theme=shopdesc] { width: 8.2em }
+
+		&[theme=shopright] { padding-inline: 0.4em }
 
 		&[theme=fade] {
 			border-image: unset;
