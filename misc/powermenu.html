@@ -1,3 +1,16 @@
+---
+title: POWER menu <span class="yellow">(DRAFT)</span>
+description: >
+  <p>Character levels, titles, personalized stats, and spells.</p>
+  <p>Titles later in the list override any earlier ones. If the conditions for multiple titles are met, the one that comes last in this page's list will be used.</p>
+sources:
+  -
+    name: gml_Object_obj_darkcontroller_Draw_0
+    chapters: [1, 2, 3, 4]
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+---
+{% comment %}
 GATHERED THE DATA!! just gotta figure out how to format this as an HTML page
 
 All chars get Attack, Defense, Magic, Custom stat 1, Custom stat 2, Guts. Any custom stat slot not being used displays as ???
@@ -5,6 +18,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 
 gotta add each character's SPELLS section also... pull names/costs from gml_GlobalScript_scr_spellinfo
 or do we want to save that for a separate page...?
+{% endcomment %}
 
 <section class="d-section" id="kris">
 	<h2>Kris</h2>
@@ -445,7 +459,7 @@ or do we want to save that for a separate page...?
 	<h4>Stats</h4>
 
 	<p>Coldness: minimum 47, increases by 7 for each use of IceShock up to a maximum of 100</p>
-	<p>Boldness: formula is -12 + ((global.plot - 70) * 3), clamped at 100 but it never gets that high</p>
+	<p>Boldness: formula is <code>-12 + ((global.plot - 70) * 3) => (global.plot * 3) - 222</code>, clamped at 100 but it never gets that high</p>
 	<ul>
 		<li>starts at -12</li>
 		<li>-6 after first mouse puzzle</li>
