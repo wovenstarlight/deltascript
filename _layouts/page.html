@@ -33,6 +33,20 @@ layout: default
 		</ol>
 	</details>
 	{%- endif %}
+
+	{%- if page.see_also %}
+	<details id="pageseealso" {%- if page.see_also.size <= 4 %} open {%- endif -%}>
+		<summary>See also</summary>
+		<ul>
+			{%- for link in page.see_also %}
+			<li><a href="{{ link.url }}">{{ link.name }}</a>
+				{%- if link.for %}, for {{ link.for }}
+				{%- endif -%}
+			</li>
+			{%- endfor %}
+		</ul>
+	</details>
+	{%- endif %}
 </header>
 
 {{ content }}
