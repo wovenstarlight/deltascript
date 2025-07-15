@@ -1,6 +1,30 @@
 {
 	// Documentation: https://code.visualstudio.com/docs/editor/userdefinedsnippets
 
+	"Page template": {
+		"scope": "html,liquid",
+		"prefix": "template",
+		"body": [
+			"---",
+			"title: ${1:Example page title, sentence-cased}",
+			"",
+			"description: >",
+			"  ${2:<p>Page description goes here. You can put new paragraphs on the following lines; just wrap each line in p tags like at the start/end of THIS line.</p>}",
+			"",
+			"credits: >",
+			"  <p>Compiled by ${3:your_name_here}.</p>",
+			"",
+			"sources:",
+			"  ${4:- Sources go here with keys 'name', 'chapters' (number array), optionally 'note'}",
+			"---",
+			"<section class=\"d-section\" id=\"${5:sectionidnoseparators}\">",
+			"\t<h2>${6:Section title}</h2>",
+			"",
+			"\t$0",
+			"</section>",
+		],
+	},
+
 	// #region Narration
 	"Text box (Light World)": {
 		"scope": "html,liquid",
