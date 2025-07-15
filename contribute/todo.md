@@ -56,6 +56,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* by "interactions in the streets" i mean things like. sans outside the grocery store. rain kid playing in the puddles. the milk sicko being like "Damn your family is messy as hell" in chapter 4
 			* could put them under the building they're closest to...? But what if they're like. Not directly related to the building. I'm thinking about chapter 2 undyne "handling" the traffic jam next to the library. That wasn't involved with any nearby building
 	* Dark Worlds
+		* `/closetworld` - Supply closet dark world, contains Castle Town and ??????
 		* `/cardkingdom` - Chapter 1 dark world
 		* `/cyberworld` - Chapter 2 dark world
 		* `/tvworld` - Chapter 3 dark world
@@ -158,5 +159,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* Figure out where these go because I don't have the brain power atm: ch3 gml_Object_obj_b1enemy_Step_0, allch gml_Object_obj_baseenemy_Step_0
 	* ~~`/savepoints` - Youuuu guessed it. Save point text. The power of X fills you and all that.~~ DONE up to Chapter 4
 	* Maybe something for general menu text...?
-	* AH... TITLES... the whole, Level 1 Dark Knight stuff.
+	* Generic text for stuff like shops ("buy it for $### ?" and "sell it for $### ?") and opening chests and all that. May overlap with above point in some cases.
+	* AH... TITLES... the whole, Level 1 Dark Knight stuff. In progress at `/powermenu`
 	* Oh also. Death messages. Hello again ch3 Voice
