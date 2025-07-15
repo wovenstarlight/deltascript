@@ -280,7 +280,7 @@ header.d-section:has(h1.visually-hidden:only-child) {
 
 	a, label, button {
 		display: block;
-		padding: 0.5em 1em;
+		padding: 0.25em 1em;
 		background-color: transparent;
 		border: none;
 		color: inherit;
@@ -303,7 +303,7 @@ header.d-section:has(h1.visually-hidden:only-child) {
 			position: absolute;
 			right: 100%;
 			margin-inline-end: -0.95ch;
-			top: 0.85em;
+			top: 0.6em;
 		}
 
 		&:not(:hover)::before { content: unset }
@@ -412,7 +412,7 @@ body {
 			height: var(--size);
 			position: absolute;
 			left: -0.2em;
-			top: calc(50% - (0.5 * var(--size)));
+			top: calc(50% - (0.55 * var(--size)));
 			--size: 0.75em;
 		}
 	}
@@ -897,7 +897,7 @@ d-option {
 			height: var(--size);
 			position: absolute;
 			left: -0.2em;
-			top: calc(50% - (0.5 * var(--size)));
+			top: calc(50% - (0.55 * var(--size)));
 			--size: 0.75em;
 		}
 		&:is(:hover, :focus)::before,
