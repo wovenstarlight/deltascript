@@ -322,7 +322,7 @@ class DialogueOptionPanel extends HTMLElement {
 		// Add a marker for when forced view is enabled
 		const p = document.createElement("p");
 		p.classList.add("selection-label");
-		p.innerText = `Upon selecting "${document.getElementById(this.getAttribute("aria-controlledby")).innerText}"`;
+		p.innerHTML = `Upon selecting "${document.getElementById(this.getAttribute("aria-controlledby")).innerHTML}"`;
 		this.prepend(p);
 
 		// Start off collapsed
