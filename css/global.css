@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal }
 h2, h3, h4, h5, h6 {
 	margin-block: 0.7rem;
 	&:first-child { margin-block-start: 0 }
-	--adjacent-spacing: calc(var(--border-width) + 0.3rem);
+	--adjacent-spacing: 0.3rem;
 
 	body:not(.compact) :is(d-box, d-choices) + & { margin-block-start: var(--adjacent-spacing) }
 	body:not(.compact) &:has(+ d-box, + d-choices) { margin-block-end: var(--adjacent-spacing) }
@@ -105,8 +105,8 @@ a { /* Global links */
 hr {
 	border-color: var(--gray);
 	margin-block: 1em;
-	--adjacent-spacing: calc(var(--border-width) + 1em);
 	max-width: 100%;
+	--adjacent-spacing: 1em;
 
 	body:not(.compact) :is(d-box, d-choices, d-option-panel) + & {
 		margin-block-start: var(--adjacent-spacing);
@@ -205,11 +205,13 @@ img {
 #skip {
 	/* Placement */
 	position: fixed;
-	top: calc(var(--border-width) + 0.5em);
+	top: 0.5em;
 	left: 50%;
 	transform: translate(-50%);
 	/* Display */
-	border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width) / var(--border-width);
+	border: var(--border-width) solid transparent;
+	border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width);
+	background-clip: padding-box;
 	background-color: var(--black);
 	line-height: 1;
 	text-decoration: none;
@@ -389,21 +391,19 @@ body {
 		}
 	}
 }
-#pagecred, #pagedesc {
+#pagecred, #pagedesc, #pagesrc, #pagetoc, #pageseealso {
 	margin-block: 0.5em;
 	&:last-child { margin-block-end: 0 }
 }
 #pagesrc, #pagetoc, #pageseealso {
-	border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width) / calc(0.75 * var(--border-width)) var(--border-width);
-	margin-inline: calc(0.5 * var(--border-width));
-	margin-block: var(--border-width) calc(0.5em + var(--border-width));
-	&:last-child { margin-block-end: 0.5em }
+	border: calc(var(--border-width) * 0.5) solid transparent;
+	border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width) / calc(0.25 * var(--border-width));
 
 	summary {
 		cursor: pointer;
 		display: block;
 		position: relative;
-		padding-inline-start: 1em;
+		padding-inline-start: 1.2em;
 
 		&::before {
 			content: "";
@@ -411,12 +411,12 @@ body {
 			width: var(--size);
 			height: var(--size);
 			position: absolute;
-			left: -0.2em;
+			left: 0;
 			top: calc(50% - (0.55 * var(--size)));
 			--size: 0.75em;
 		}
 	}
-	&:is(:hover, :focus-within, [open]) summary {
+	&[open] summary, summary:hover, summary:focus {
 		color: var(--yellow);
 		&::before { background-image: url("../assets/images/heart.png") }
 	}
@@ -462,7 +462,7 @@ body {
 /* #region Annotations and other custom styles*/
 .note {
 	color: var(--gray);
-	--adjacent-spacing: calc(var(--border-width) + 1em);
+	--adjacent-spacing: 1em;
 	body:not(.compact) :is(d-box, d-choices, d-option-panel) + & { margin-block-start: var(--adjacent-spacing) }
 	body:not(.compact) &:has(+ d-box, + d-choices, + d-option-panel) { margin-block-end: var(--adjacent-spacing) }
 	&:first-child, .selection-label + & { margin-block-start: 0 }
@@ -477,19 +477,22 @@ d-box, d-choices {
 	&:not(:state(compact)) {
 		/* Space out
 		 * Increase spacing between neighboring boxes to account for border outset */
-		margin: var(--border-width) calc(1.5 * var(--border-width));
-		:is(d-box, d-choices, d-option-panel) + & { margin-block-start: calc((2 * var(--border-width)) + 0.2em) }
-		:is(p, ul, ol) + & { margin-block-start: calc(var(--border-width) + 0.5em) }
-		&:has(+ h2, + h3, + h4, + h5, + h6) { margin-block-end: calc(var(--border-width) + 1em) }
+		margin: 0.2em 0.5em;
+		:is(p, ul, ol) + & { margin-block-start: 0.5em }
+		&:has(+ h2, + h3, + h4, + h5, + h6) { margin-block-end: 1em }
 
 		padding: 0.1em 0.2em;
 		font-size: 1.2em;
 		line-height: 1;
-		min-height: 4.5em;
-		width: 22.4em;
-		max-width: calc(100% - 3 * var(--border-width));
+		--baseheight: 6.5em;
+		min-height: var(--baseheight);
+		--basewidth: 24.4em;
+		width: var(--basewidth);
+		max-width: calc(100% - var(--border-width));
 		background-color: var(--black);
-		border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width) / var(--border-width);
+		background-clip: padding-box;
+		border: var(--border-width) solid transparent;
+		border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width);
 
 		&[theme=dark], &[theme^=power], &[theme^=shop] {
 			border-image-source: url("../assets/images/textbox/dark.gif");
@@ -499,7 +502,7 @@ d-box, d-choices {
 			border-image-source: url("../assets/images/textbox/plain.png");
 		}
 
-		&[theme^=obj], &[theme=battlemenu] { width: 26.4em }
+		&[theme^=obj], &[theme=battlemenu] { width: calc(var(--basewidth) + 4em) }
 
 		&[theme^=obj], &[theme^=power], &[theme=battledesc], &[theme=shopdesc] {
 			font-family: "DeltaFont Condensed", var(--font);
@@ -509,7 +512,7 @@ d-box, d-choices {
 			display: flex;
 			align-items: center;
 			min-height: unset;
-			width: 28.4em;
+			width: calc(var(--basewidth + 6em));
 			padding: 0;
 
 			d-speaker {
@@ -535,22 +538,26 @@ d-box, d-choices {
 			d-text { margin-inline-start: 1ch }
 		}
 
-		&[theme=powertitle] { width: 11em }
+		&[theme=powertitle] { width: calc(var(--basewidth) - 11.4em) }
 
 		&[theme=battledesc] {
-			width: 5.4em;
+			width: calc(var(--basewidth) - 17em);
 			color: var(--gray);
 		}
 
 		&[theme=battletalk] {
-			border-image: url("../assets/images/textbox/bubble.png") 6 / 0.375em / 0.375em;
+			--border-width: 0.375em;
+			border-image-source: url("../assets/images/textbox/bubble.png");
+			border-image-slice: 6;
+			min-height: unset;
+			margin: 0.5em 1em;
+			width: fit-content;
+			display: flex;
+			flex-direction: column;
 			background-color: var(--white);
 			color: var(--black);
 			font-family: "DeltaFont Combat", var(--font);
 			font-size: 1em;
-			width: fit-content;
-			display: flex;
-			flex-direction: column;
 
 			d-speaker {
 				color: #966200;
@@ -567,14 +574,23 @@ d-box, d-choices {
 			}
 		}
 
-		&[theme=shopleft] { width: 15.2em }
+		&[theme=shopleft] { width: calc(var(--basewidth) - 7.2em) }
 
-		&[theme=shopright], &[theme=shopdesc] { width: 8.2em }
+		&[theme=shopright], &[theme=shopdesc] { width: calc(var(--basewidth) - 14.2em) }
 
 		&[theme=shopright] { padding-inline: 0.4em }
 
 		&[theme=fade] {
-			border-image: unset;
+			border: unset;
+			min-height: calc(var(--baseheight) - 2em);
+			width: calc(var(--basewidth) - 2em);
+			max-width: calc(100% - 3 * var(--border-width));
+
+			margin: calc(var(--border-width) + 0.2em) calc(var(--border-width) + 0.5em);
+			:is([theme=fade]) + & { margin-block-start: calc((2 * var(--border-width)) + 0.2em) }
+			:is(h2, h3, h4, h5, h6, p, ul, ol) + & { margin-block-start: calc(var(--border-width) + 1rem) }
+			&:has(+ h2, + h3, + h4, + h5, + h6, + p, + ul, + ol) { margin-block-end: calc(var(--border-width) + 1rem) }
+
 			box-shadow:
 				0 0
 				var(--border-width)	/* blur a lot */
@@ -592,7 +608,7 @@ d-box, d-choices {
 			font-size: 1em;
 
 			/* For boxes with small dialogues, add spacing so dialogue doesn't overlap. ...too much, at least. */
-			&:has(d-box) { min-height: 4.5em }
+			&:has(d-box) { min-height: 6.5em }
 		}
 
 		/* Forced line break */
@@ -902,7 +918,7 @@ d-option {
 			width: var(--size);
 			height: var(--size);
 			position: absolute;
-			left: -0.2em;
+			left: -0.5em;
 			top: calc(50% - (0.55 * var(--size)));
 			--size: 0.75em;
 		}
@@ -933,12 +949,13 @@ d-option {
 
 	/* Compact mode */
 	:not(d-choices) > & {
-		border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width) / calc(0.75 * var(--border-width)) var(--border-width);
+		border: var(--border-width) solid transparent;
+		border-block-width: calc(var(--border-width) * 0.5);
+		border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width) / calc(0.25 * var(--border-width));
 		/* Spacing */
-		margin: var(--border-width);
-		& + d-option, & + d-option-panel + d-option { margin-block-start: calc(var(--border-width) + 0.5em) }
+		margin: 0.3em;
 		/* Heart-shaped hover indicator */
-		padding-inline-start: 1em;
+		padding-inline-start: 0.8em;
 		&::before { --size: 0.6em }
 
 		.conditional {
@@ -958,31 +975,15 @@ d-option {
 }
 d-option-panel {
 	display: block;
-	border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width) / var(--border-width);
+	border: var(--border-width) solid transparent;
+	border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width);
 
 	&[theme=dark] { border-image-source: url("../assets/images/textbox/dark_transparent.gif") }
 
 	/* Spacing */
-	margin:
-		calc((2 * var(--border-width)) + 0.5em)
-		var(--border-width)
-		var(--border-width);
-	d-option + & {
-		margin-block:
-			calc(var(--border-width) + 0.5em)
-			calc(var(--border-width) + 0.2em);
-		&[theme=dark] {
-			margin-block:
-				calc(var(--border-width) + 0.7em)
-				calc(var(--border-width) + 0.4em);
-		}
-	}
-	&:has(+ d-option) {
-		margin-block-end: calc(var(--border-width) + 0.8em);
-		&[theme=dark] {
-			margin-block-end: calc(var(--border-width) + 1em);
-		}
-	}
+	margin: 0.3em 0;
+	d-choices:not(:state(compact)) ~ & { margin-inline-start: min(1.2em, 3vw) }
+	d-choices:state(compact) ~ & { margin-inline-start: min(0.8em, 2vw) }
 	padding: 0.1em;
 
 	/* Expanded mode: hide collapsed panels, and labels when panels aren't forced */
@@ -999,7 +1000,7 @@ d-option-panel {
 	}
 
 	/* First child will always be selection-label */
-	& > :nth-child(2):not(d-box, d-choices) { margin-block-start: 0 }
-	& > :last-child:not(d-box, d-choices) { margin-block-end: 0 }
+	& > :nth-child(2) { margin-block-start: 0 !important }
+	& > :last-child { margin-block-end: 0 !important }
 }
 /* #endregion */
