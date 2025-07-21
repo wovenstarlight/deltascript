@@ -1,0 +1,1070 @@
+---
+title: Seam's Seap
+
+description: >
+  <p>Text and dialogue from Seam's storefront in Castle Town.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    name: Seam's storefront in the Card Kingdom
+    url: /locations/cardkingdom/seap
+# TODO: is this the URL we want for the generic shop text
+#   -
+#     name: Generic shop text
+#     url: /misc/generic/shop
+#     for: responses to specific actions not specified on this page
+
+sources:
+  -
+    name: gml_Object_obj_shop1_Draw_0
+    chapters: [2, 4]
+  -
+    name: gml_Object_obj_shop1_Create_0
+    chapters: [2, 4]
+    note: buyable items
+  -
+    name: gml_GlobalScript_scr_shopmenu
+    chapters: [2, 4]
+    note: sale exceptions
+
+close_toc: true
+
+toc:
+  -
+    id: mainscreen
+    name: Main screen
+    subheadings:
+    -
+      id: initial
+      name: Initial entrance
+    -
+      id: postexit
+      name: After exiting a menu
+  -
+    id: buy
+    name: Buy
+    subheadings:
+      -
+        id: itemlist
+        name: Items for sale
+      -
+        id: initialbuy
+        name: Initial buying
+      -
+        id: confirmbuy
+        name: Making a purchase
+      -
+        id: cancelbuy
+        name: Backing out of a purchase
+      -
+        id: nomoney
+        name: Not enough D$
+      -
+        id: storagefull
+        name: Storage full
+  -
+    id: sell
+    name: Sell
+    subheadings:
+    -
+      id: sellitem
+      name: Initial item sale screen
+    -
+      id: sellweapon
+      name: Initial weapon sale screen
+    -
+      id: sellarmor
+      name: Initial armor sale screen
+    -
+      id: sellempty
+      name: Selling with empty inventory
+    -
+      id: confirmsale
+      name: Making a sale
+    -
+      id: sellall
+      name: Selling the last of your items/armor/weapons
+    -
+      id: cancelsale
+      name: Backing out of a sale
+    -
+      id: sellspecial
+      name: Trying to sell special items
+    -
+      id: sellfail
+      name: Empty slot
+  -
+    id: talkch2
+    name: Talk - Chapter 2
+    subheadings:
+    -
+      id: ch2prenojevil
+      name: Before Cyber World, if you don't have Jevil's Shadow Crystal
+    -
+      id: ch2prehavejevil
+      name: Before Cyber World, if you have Jevil's Shadow Crystal
+    -
+      id: ch2posthavejevil
+      name: After Cyber World, if you defeated Jevil but not Spamton NEO
+    -
+      id: ch2posthavespamton
+      name: After Cyber World, if you defeated Spamton NEO but not Jevil
+    -
+      id: ch2posthaveboth
+      name: After Cyber World, if you defeated both Jevil and Spamton NEO
+    -
+      id: ch2posthaveneither
+      name: After Cyber World, if you got neither Shadow Crystal
+  -
+    id: talkch4
+    name: Talk - Chapter 4
+    subheadings:
+    -
+      id: ch4standard
+      name: Standard
+    -
+      id: ch4nocrystal
+      name: If you didn't get the Knight's Shadow Crystal
+    -
+      id: ch4allcrystalsfirst
+      name: If you got all 3 Shadow Crystals, first time
+    -
+      id: ch4allcrystalsnext
+      name: If you got all 3 Shadow Crystals, subsequent times
+  -
+    id: exit
+    name: Exit
+---
+{% comment %}
+* menu
+	1. buy
+	11. Sell Items
+	12. Sell Weapons
+	13. Sell Armor
+	14. Sell Pocket Items
+* sidemessage
+	0. Initial buying
+	1. Making a purchase, item placed in inventory
+	2. Backing out of a purchase
+	3. Not enough D$
+	4. Storage full
+	5. Making a purchase, item placed in storage
+* sidemessage2
+	0. Initial selling (items/weapons/armor)
+	1. Making a sale
+	2. Backing out of a sale
+	3. Trying to sell unsellable item
+	4. Trying to sell nothing #mynothing (Empty slot)
+{% endcomment -%}
+
+
+
+<section class="d-section" id="mainscreen">
+	<h2>Main screen</h2>
+
+	<h3 id="initial">Initial entrance</h3>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopleft">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Hee hee...</d-text>
+		<d-text asterisk>Welcome, travellers.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="postexit">After exiting a menu</h3>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopleft">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Take your time...</d-text>
+		<d-text asterisk>Ain't like it's better spent.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="buy">
+	<h2>Buy</h2>
+
+	<h3 id="itemlist">Items for sale</h3>
+	<h4 id="darkcandy">Dark Candy</h4>
+	<p>Available initially. If you recruited 9 or more Cyber World Darkners, gets replaced by the <a href="#cdbagel">CD Bagel</a> after returning from Cyber World. If you didn't recruit 9 or more Cyber World Darkners, gets replaced by <a href="#darkercandy">Darker Candy</a> from Chapter 4 onwards.</p>
+	<d-box theme="shopdesc">
+		<d-text>ITEM</d-text>
+		<d-text>Star-shape candy that heals 40HP</d-text>
+	</d-box>
+	<h4 id="darkercandy">Darker Candy</h4>
+	<p>Available from Chapter 4 onwards if you didn't recruit 9 or more Cyber World Darkners. Replaces <a href="#darkcandy">Dark Candy</a>.</p>
+	<d-box theme="shopdesc">
+		<d-text>ITEM</d-text>
+		<d-text>Star-shape candy that heals 120HP</d-text>
+	</d-box>
+	<h4 id="cdbagel">CD Bagel</h4>
+	<p>Available after sealing the Cyber World's Fountain if you recruited 9 or more Darkners there. Replaces <a href="#darkcandy">Dark Candy</a>.</p>
+	<d-box theme="shopdesc">
+		<d-text>ITEM</d-text>
+		<d-text>Music with each bite</d-text>
+		<d-text>heals 80HP</d-text>
+	</d-box>
+	<h4>Darkburger</h4>
+	<d-box theme="shopdesc">
+		<d-text>ITEM</d-text>
+		<d-text>Mysterious hamburger</d-text>
+		<d-text>heals 70HP</d-text>
+	</d-box>
+	<h4>Amber Card</h4>
+	<d-box theme="shopdesc">
+		<d-text>ARMOR</d-text>
+		<d-text>Defensive charm</d-text>
+	</d-box>
+	<h4>Spookysword</h4>
+	<d-box theme="shopdesc">
+		<d-text>WEAPON</d-text>
+		<d-text>Black-and orange</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="initialbuy">Initial buying</h3>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Seam</d-speaker>
+		<d-text>What do<span class="break"></span> you like<span class="break"></span> to buy?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="confirmbuy">Making a purchase</h3>
+	<h4>If item goes to inventory</h4>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Seam</d-speaker>
+		<d-text>Thanks for that.</d-text>
+	</d-box>
+	<h4>If item goes to storage</h4>
+	<p class="note">("it'll" overflows the textbox as in the game.)</p>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Seam</d-speaker>
+		<d-text><span style="white-space: pre;">Thanks, it'll</span> <span class="break"></span> be in your STORAGE.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="cancelbuy">Backing out of a purchase</h3>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Seam</d-speaker>
+		<d-text>What,<span class="break"></span> not good enough?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="nomoney">Not enough D$</h3>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Seam</d-speaker>
+		<d-text>Not<span class="break"></span> enough money.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="storagefull">Storage full</h3>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Seam</d-speaker>
+		<d-text>You're carrying too much.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="sell">
+	<h2>Sell</h2>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Seam</d-speaker>
+		<d-text>What kind of junk<span class="break"></span> you got?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellitem">Initial item sale screen</h3>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Seam</d-speaker>
+		<d-text>Alright, give me<span class="break"></span> an ITEM.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellweapon">Initial weapon sale screen</h3>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Seam</d-speaker>
+		<d-text>What WEAPON will you give me?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellarmor">Initial armor sale screen</h3>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Seam</d-speaker>
+		<d-text>What ARMOR will you give me?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellempty">Selling with empty inventory</h3>
+	<p>Choosing "Sell Items/Pocket Items" when you have no items, or "Sell Weapons/Armor" when you have no unequipped weapons/armor.</p>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Seam</d-speaker>
+		<d-text>You don't have anything!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="confirmsale">Making a sale</h3>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Seam</d-speaker>
+		<d-text>Thanks for that.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellall">Selling the last of your items/armor/weapons</h3>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Seam</d-speaker>
+		<d-text>That's it for that.</d-text>
+	</d-box>
+	<p class="note">You are returned to the initial Sell screen.</p>
+
+	<hr>
+
+	<h3 id="cancelsale">Backing out of a sale</h3>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Seam</d-speaker>
+		<d-text>No?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellspecial">Trying to sell special items</h3>
+	<p>Special items include:</p>
+	<ul>
+		<li><a href="{{ '/misc/darkitems#manual' | relative_url }}">The Manual</a></li>
+		<li><a href="{{ '/misc/equipment#jevilstail' | relative_url }}">Jevilstail</a> & <a href="{{ '/misc/equipment#devilsknife' | relative_url }}">Devilsknife</a></li>
+		<li><a href="{{ '/misc/equipment#dealmaker' | relative_url }}">Dealmaker</a> & <a href="{{ '/misc/equipment#puppetscarf' | relative_url }}">Puppet Scarf</a></li>
+		<li><a href="{{ '/misc/equipment#thornring' | relative_url }}">Thorn Ring</a></li>
+		<li><a href="{{ '/misc/equipment#twistedsword' | relative_url }}">Twisted Sword</a></li>
+		<li><a href="{{ '/misc/equipment#blueribbon' | relative_url }}">Blue Ribbon</a></li>
+	</ul>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Seam</d-speaker>
+		<d-text>Y'think I WANT that?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellfail">Empty slot</h3>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Seam</d-speaker>
+		<d-text>That's nothing.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="talkch2">
+	<h2>Talk - Chapter 2</h2>
+
+	<h3 id="ch2prenojevil">Before Cyber World, if you don't have Jevil's Shadow Crystal</h3>
+	<h4>First time</h4>
+	<p>This dialogue also plays after Cyber World in certain cases:</p>
+	<ul>
+		<li>First time overall in Chapter 2, if you didn't defeat Spamton NEO.</li>
+		<li>Second time overall in Chapter 2, if you defeated Jevil but not Spamton NEO.</li>
+	</ul>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Hmm... So we are now in the Castle Town.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Well, now. It makes no difference to me.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>As long as I stay in my shop, these walls won't change.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>... But.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>In a way, I suppose it's just a little bit amusing to see you again.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>I'm sure you three will have an interesting journey.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Me? I'll just be here offering the same old junk.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>As you find stronger treasure, I'm sure you'll have little reason to return here.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>But if you have some time, I'll offer you a biscuit and a hint!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<h5>Before seeing Susie's room</h5>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>The little prince has something to show you in his castle.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Well now, are you going to turn down a royal invitation?</d-text>
+	</d-box>
+
+	<h5>After visiting Susie's room</h5>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>If I were you, I would head home to the LIGHT WORLD.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Of course, I'm not you. So, I'm staying right here.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>By the by, I can't offer any advice when you're not here...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>So I'm not sure my hints will be much use after all! Ha ha!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ch2prehavejevil">Before Cyber World, if you have Jevil's <a href="{{ '/misc/darkitems#shadowcrystal' | relative_url }}">Shadow Crystal</a></h3>
+	<p>The Crystal can be obtained either by previously having defeated Jevil on this save file, or defeating him on a different file and retrieving the Crystal from the cliff to the west of Castle Town in this save file.</p>
+
+	<h4>First time</h4>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>So we are here now, in a new world.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>And right off the heels of defeating that clown... Incredible.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="1" format="shop" id="crystalget"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>... Oh? What's that? It seems like he gave something to you.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>That's right... You must not have noticed it.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>That Crystal... It's nearly invisible, but you've been holding it this whole time.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Here, I'll take it off your hands and appraise it.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Incredible! To think he had a Shadow Crystal...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Shadow Crystals, so called because you can only see their shadow.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Call it a premonition, but I get the feeling you may find more of these...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>... If you continue to defeat strong adversaries like <span class="yellow">him</span>, that is.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>If you can gather more Shadow Crystals, bring them here!</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>I'm sure I can stitch together something incredible for you...</d-text>
+	</d-box>
+	<p class="note">The Shadow Crystal is removed from the inventory.</p>
+
+	<h4>Subsequent times</h4>
+	<h5>If Seam hasn't taken Jevil's Crystal yet</h5>
+	<p>Occurs when the below conditions are met:</p>
+	<ul>
+		<li>You continued a Chapter 1 save file where you hadn't defeated Jevil or started Chapter 2 with a fresh save file.</li>
+		<li>You have at least one Chapter 1 save file where you defeated Jevil.</li>
+		<li>You <a href="#ch2prenojevil">talked to Seam at least once before this in Chapter 2</a> and then retrieved Jevil's Shadow Crystal from the cliff.</li>
+	</ul>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Ah, yes, that's right. It didn't occur to me until just now, but...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>You three defeated that clown last time, didn't you?</d-text>
+	</d-box>
+	<p class="note">Continues from <a href="#crystalget">"Oh? What's that?"</a> in the above section.</p>
+
+	<h5>After Seam has taken Jevil's Crystal</h5>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>If you can defeat more strong adversaries, you may find more Shadow Crystals.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Try your best! It may be tough, but I'm sure it will be worth it!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ch2posthavejevil">After Cyber World, if you defeated Jevil but not Spamton NEO</h3>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>... It seems that you didn't get another Shadow Crystal.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Hm. I understand. It's no small feat to fight an opponent that has one.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Well then, forget it all.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>You're a Lightner. Don't take your life, well, lightly!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ch2posthavespamton">After Cyber World, if you defeated Spamton NEO but not Jevil</h3>
+	<h4>If this is the first interaction overall</h4>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>... What is that? It appears you have a Shadow Crystal.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Unfortunately, I believe that you are missing one from your previous adventures.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>But, are you sure? Are you sure you didn't defeat that clown...?</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Perhaps... You just haven't remembered that you had yet.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>That's right, as long as you ever defeated that enemy in the past...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Then perhaps, even now, that Crystal might turn up somewhere close... Perhaps!</d-text>
+	</d-box>
+	<p class="note">If you've obtained Jevil's Shadow Crystal from the cliff, dialogue continues into the next section.</p>
+
+	<h4>If this is not the first interaction overall</h4>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Aha! Another Shadow Crystal! You found it...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>You can't see it, so perhaps you didn't notice...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Didn't you defeat him? Didn't you defeat Jevil?</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Here, I'll take that Crystal. Now, you have collected 2 of them! Huzzah!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ch2posthaveboth">After Cyber World, if you defeated both Jevil and Spamton NEO</h3>
+	<h4>First time</h4>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Well, what have we here! You managed to find another Shadow Crystal...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Oh, is that so? That salesman had found the crystal in the old machine...?</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>I wonder... if perhaps, long ago, that old machine was very important to someone.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>A certain Lightner, perhaps... or maybe it's just a hunch. Haha!</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>At any rate, it's truly unfortunate a Darkner decided to steal that power...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Or, is it fortunate? Because of that, you found a new Crystal.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Here, let me hold onto that for you. Ha ha ha!</d-text>
+	</d-box>
+
+	<h4>Second time</h4>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>You have collected 2 Shadow Crystals.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>But don't let down your guard. I feel your next opponent may be... hm.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>In reality, it may be impossible to win.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>... Unless you use the power of the Shadow Mantle.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Here, it may look like an old scrap of cloth, but...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>... eh?</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>I can't find it. Did someone... take it...?</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Hahaha! Well now, there goes your one chance of victory!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>You have collected 2 Shadow Crystals.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Unfortunately, without the Shadow Mantle, at 2 you may remain.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Fate is approaching... and it is not on your side.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ch2posthaveneither">After Cyber World, if you got neither Shadow Crystal</h3>
+	<h4>First time</h4>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>There are many fresh faces in town, I see.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>It warms this old fluff to see such hope.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>I was even surprised to see the Queen again.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Same as ever... Well, aren't we all.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<h5>If you recruited 9 or more Cyber World Darkners</h5>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Those young men have made an interesting shop.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>They're leaving the bagel business, so I have the rest of their remaining stock.</d-text>
+	</d-box>
+	<h5>If you recruited 8 or fewer Cyber World Darkners</h5>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Those three young musical men are thinking about setting up a shop here.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>I'm sure you'd appreciate having an option other than me, ha ha.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>... By the by, it's growing late, isn't it?</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>You should hurry home once you finish your business here.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>You don't want to get caught when the sun goes down...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="talkch4">
+	<h2>Talk - Chapter 4</h2>
+
+	<h3 id="ch4standard">Standard</h3>
+	<p>Plays when no Shadow Crystal dialogues (see below sections) take precedence.</p>
+
+	<h4>First time</h4>
+	<p>"First time" here is in reference to the first time no Shadow Crystal dialogue is triggered, not to the first interaction overall in this chapter.</p>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>I've got a funny story. You see, the Addisons wanted to buy out my store.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>So I bet them for it on a game of cards.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Hand after hand, they lost and lost, stubbornly doubling their bet each time.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>After a while, they'd lost their store, their money, and even some of their clothes...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Hahaha!</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Of course, in the end, I laughed and gave it all back.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>But it was fun to give them a little scare.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>... Although, not as fun as if they could actually win.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>... It's funny you insist on hanging around here.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>I won't sell nor say anything new, I'm afraid.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>I'll brew a cup of tea and get out the blankets, but leave when you please.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ch4nocrystal">If you didn't get the Knight's Shadow Crystal</h3>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Ah, I know what you're going to say. Now, now, there's no shame in it.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>You fought the Knight, didn't you? Well, we all know there's no winning there...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If you got the Shadow Mantle</h4>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Even with the SHADOW MANTLE, you might have had a chance...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>But even then, getting the SHADOW CRYSTAL would be... challenging.</d-text>
+	</d-box>
+	<h4>If you didn't get the Shadow Mantle</h4>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>If only you had the SHADOW MANTLE, your luck might have gone another way.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>But, it's over now, isn't it? No mantle, no crystal.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Don't have a long face, now. We all knew nothing would come of this.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>But it was fun... to pretend it might, for a little while.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Thank you.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ch4allcrystalsfirst">If you got all 3 Shadow Crystals, first time</h3>
+	<p>From Jevil, Spamton NEO, and the Knight.</p>
+	<h4>If you gave Seam both of the previous Shadow Crystals</h4>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Ah, I know what you're going to say. Now, now, there's no shame in it.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>You fought the Knight, didn't you? Well, we all know there's no winning there...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>... what!? You GOT the Shadow Crystal!?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If you got the Shadow Mantle</h5>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>... I see, so you were able to recover the Shadow Mantle.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>That's odd. Kris... where did you find it?</d-text>
+	</d-box>
+	<h5>If you didn't get the Shadow Mantle</h5>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>... And without even using the Shadow Mantle!?</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Hee hee... You three! You might be even sicker than that old clown!</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Oh, it must've been a terrific match! If only I could've witnessed it...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If you didn't give Seam both of the previous Shadow Crystals</h4>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>What!? Is that... a Shadow Crystal!?</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Meaning, you must have...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>... Well, never mind that! You got the Crystal, that's all that matters!</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Now you've got three. Only two more, and we should have enough...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>... to make something I think you'll quite enjoy. Now good luck... and I'll be taking that Shadow Crystal.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ch4allcrystalsnext">If you got all 3 Shadow Crystals, subsequent times</h3>
+	<p class="note">Overrides regular dialogue.</p>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>It's strange. By all reasonable means, the strength of your next opponent...</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>Should be enough to already ring the bell on your defeat.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>But, for some reason... I can't help but think you may win.</d-text>
+	</d-box>
+	<d-sprite speaker="Seam" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>What is this feeling? ... Hope? Hahaha! Whatever it is, it's quite funny!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="exit">
+	<h2>Exit</h2>
+
+	<d-sprite speaker="Seam" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Seam</d-speaker>
+		<d-text asterisk>See you again...</d-text>
+		<d-text asterisk>Or not.</d-text>
+		<d-text asterisk>Ha ha ha ha...</d-text>
+	</d-box>
+</section>
