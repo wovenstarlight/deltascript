@@ -683,9 +683,9 @@ d-box {
 			/* Reset full-size features */
 			background-color: transparent;
 			border-image: unset;
+			border-inline-width: 0;
 			margin: 0;
 			width: max-content;
-			height: unset;
 			/* Center content */
 			align-items: center;
 
@@ -693,10 +693,10 @@ d-box {
 
 			/* Specify placements (defaulting to bottom right) */
 			&:not([place]), &:not([place~=bottom], [place~=top]),
-			&[place~=bottom] { bottom: -0.6em }
+			&[place~=bottom] { bottom: -2.6em }
 			&:not([place]), &:not([place~=right], [place~=left]),
 			&[place~=right] { right: 0 }
-			&[place~=top] { top: -0.6em }
+			&[place~=top] { top: -2.3em }
 			&[place~=left] { left: 0 }
 			&[place~=center-x] {
 				left: 50%;
