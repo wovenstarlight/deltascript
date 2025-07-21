@@ -69,8 +69,7 @@ class DialogueSprite extends HTMLElement {
 		super()
 	}
 
-	connectedCallback() {
-		const speaker = this.getAttribute("speaker");
+	#getImageTag(speaker) {
 		const variant = this.getAttribute("variant") ??	// Use provided variant, or default to...
 			( speaker === "Susie" ? "eyes"		// ...eyes-exposed for Susie
 			: speaker === "Ralsei" ? "nohat"	// ...hatless for Ralsei
@@ -78,11 +77,10 @@ class DialogueSprite extends HTMLElement {
 			: speaker === "Toriel" ? "home"		// ...home clothes for Toriel
 			: speaker === "Rouxls" ? "nohat"	// ...hatless for Rouxls
 			: "" )								// ...no variants for all others
-		const emotion = this.getAttribute("emotion"),
-			emotionIndex = emotionToIndex(emotion);
-		this.innerHTML =
-			`<d-speaker>${speaker}</d-speaker>
-			<img
+		const emotion = this.getAttribute("emotion");
+		const emotionIndex = emotionToIndex(emotion);
+		return (
+			`<img
 				src="${BASE_URL}/assets/images/faces/${speaker.toLowerCase()
 			}${variant.length ? `/${variant}` : ""
 			}${emotion ? `/${emotionIndex}` : ""
@@ -90,6 +88,8 @@ class DialogueSprite extends HTMLElement {
 				(speaker === "Toriel" && [0, 1, 2, 6, 7, 9].includes(emotionIndex))
 				|| (speaker === "Asgore" && [0, 1, 2, 3, 4, 6].includes(emotionIndex))
 				|| (speaker === "Susie" && emotionIndex === 11)
+				|| (speaker === "Seam" && emotionIndex !== 1)
+				|| (speaker === "Rouxls" && variant === "shop")
 				? "gif"	// `gif` in certain cases
 				: "png"	// `png` otherwise
 			}"
@@ -98,7 +98,18 @@ class DialogueSprite extends HTMLElement {
 				: variant.length ? ` (${variant})`
 				: ""
 			}"
-			>`;
+			>`
+		)
+	}
+
+	connectedCallback() {
+		const speaker = this.getAttribute("speaker");
+		this.innerHTML = this.getAttribute("format") === "shop" ? (
+			this.#getImageTag(speaker)
+		) : (
+			`<d-speaker>${speaker}</d-speaker>
+			${this.#getImageTag(speaker)}`
+		);
 	}
 }
 customElements.define("d-sprite", DialogueSprite);

@@ -331,6 +331,8 @@ body {
 	--font: "DeltaFont", "Courier New", Courier, monospace;
 	font-family: var(--font);
 	--border-width: 1.2rem;
+	--baseheight: 6.5em;
+	--basewidth: 24.4em;
 
 	&.dyslexic {
 		font-family: "OpenDyslexic", var(--font);
@@ -484,9 +486,7 @@ d-box, d-choices {
 		padding: 0.1em 0.2em;
 		font-size: 1.2em;
 		line-height: 1;
-		--baseheight: 6.5em;
 		min-height: var(--baseheight);
-		--basewidth: 24.4em;
 		width: var(--basewidth);
 		max-width: calc(100% - var(--border-width));
 		background-color: var(--black);
@@ -636,7 +636,7 @@ d-box, d-choices {
 		align-items: baseline;
 
 		/* On smaller screens, stack dialogue instead */
-		@media (max-width: 30em) {
+		@media (max-width: 30rem) {
 			display: flex;
 			flex-direction: column;
 
@@ -735,6 +735,26 @@ d-sprite {
 		height: var(--size);
 		object-fit: contain;
 		d-box:state(compact) & { display: none }
+	}
+
+	&[format=shop] {
+		font-size: 1.2em;
+		@media (max-width: 30rem) { font-size: 1em }
+
+		img {
+			display: block;
+			width: 100%;
+			margin: 0 0.5em;
+			height: auto;
+			object-position: center;
+			max-width: var(--basewidth);
+			max-height: 8em;
+		}
+
+		&:has(+ d-box[theme=shopleft]) img { max-width: calc(var(--basewidth) - 7.2em) }
+		&:has(+ d-box[theme=shopright]) img { max-width: calc(var(--basewidth) - 14.2em) }
+
+		body.compact & { display: none }
 	}
 
 }
