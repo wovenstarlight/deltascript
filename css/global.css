@@ -887,8 +887,7 @@ d-choices {
 		display: grid;
 		--side-width: 5em;
 		grid-template-columns: 1fr auto 1fr;
-		padding-block: 0;
-		padding-inline: 1.24em 0.15em;
+		padding: 0;
 		align-items: center;
 		position: relative;
 
@@ -913,38 +912,25 @@ d-choices {
 
 	/* Option sizing WITHIN a menu (fullsize mode) */
 	d-option {
-		width: fit-content;
-		position: relative;
+		width: max-content;
+		position: absolute;
 		line-height: 1.2;
 
 		/* Left/right */
 		&[index="0"], &[index="1"] {
-			grid-row: 1 / span 2;
-			width: fit-content;
-			top: -0.3em;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 		/* Up/down */
 		&[index="2"], &[index="3"] {
-			grid-column: 2;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 
-		&[index="0"] {
-			grid-column: 1;
-		}
-		&[index="1"] {
-			grid-column: 3;
-			justify-self: flex-end;
-		}
-		&[index="2"] {
-			grid-row: 1;
-			align-self: flex-start;
-			top: -0.1em;
-		}
-		&[index="3"] {
-			grid-row: 2;
-			align-self: flex-end;
-			bottom: -0.2em;
-		}
+		&[index="0"] { left: 1.24em }
+		&[index="1"] { right: 0.15em }
+		&[index="2"] { top: -0.1em }
+		&[index="3"] { bottom: -0.2em }
 	}
 
 	/* Asterisk marker */
@@ -965,13 +951,12 @@ d-option {
 	d-choices:not([noninteractive]) &,
 	:not(d-choices) > &:has(+ d-option-panel) {
 		cursor: pointer;
-		/* Heart-shaped hover indicator */
-		position: relative;
 
 		&:hover, &:focus,
 		&[aria-expanded=true] {
 			color: var(--yellow);
 		}
+		/* Heart-shaped hover indicator */
 		&::before {
 			content: "";
 			background: center / contain no-repeat;
@@ -1009,6 +994,7 @@ d-option {
 
 	/* Compact mode */
 	:not(d-choices) > & {
+		position: relative;
 		border: var(--border-width) solid transparent;
 		border-block-width: calc(var(--border-width) * 0.5);
 		border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width) / calc(0.25 * var(--border-width));
