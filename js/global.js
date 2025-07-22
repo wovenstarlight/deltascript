@@ -167,13 +167,18 @@ class DialogueChoices extends HTMLElement {
 			// Existence of identifier corresponds to "true"
 			this._internals.states.add("compact");
 			// Move all options adjacent to their panels
-			this.options.forEach(option => {
-				if (this.isInteractive) option.tabIndex = 0;
-				let panel = this.nextElementSibling;
-				while (panel.tagName.startsWith("D-OPTION") && panel.getAttribute("index") !== option.getAttribute("index"))
-					panel = panel.nextElementSibling;
-				panel.parentElement.insertBefore(option, panel);
-			});
+			if (this.isInteractive) {
+				this.options.forEach(option => {
+					option.tabIndex = 0;
+					let panel = this.nextElementSibling;
+					while (panel.tagName.startsWith("D-OPTION") && panel.getAttribute("index") !== option.getAttribute("index"))
+						panel = panel.nextElementSibling;
+					panel.parentElement.insertBefore(option, panel);
+				});
+			}
+			else {
+				this.options.toReversed().forEach(option => this.insertAdjacentElement("afterend", option));
+			}
 		} else {
 			// Absence of identifier corresponds to "false"
 			this._internals.states.delete("compact");
