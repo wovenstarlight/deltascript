@@ -1,0 +1,66 @@
+---
+title: Light World locations
+
+description: >
+  <p>Index for locations within the Light World, primarily in Hometown.</p>
+
+toc:
+  -
+    id: dreemurrresidence
+    name: Dreemurr residence
+  -
+    id: school
+    name: School
+
+items:
+  -
+    url: dreemurrresidence
+    name: Dreemurr residence
+    sublist:
+      -
+        name: First floor
+        sublist:
+          -
+            url: downstairs
+            name: Downstairs (kitchen & living room)
+          -
+            url: bathroom
+            name: Bathroom
+          -
+            url: yard
+            name: Front yard
+      -
+        name: Second floor
+        sublist:
+          -
+            url: hallway
+            name: Upstairs hallway
+          -
+            url: krisroom
+            name: Kris's (and Asriel's) room
+  -
+    url: school
+    name: School
+    sublist:
+      -
+        url: alphysclass
+        name: Alphys's class
+      -
+        url: torielclass
+        name: Toriel's class
+      -
+        url: unusedclass
+        name: Unused classroom
+---
+{% for section in page.items -%}
+<section class="d-section" id="{{ section.url }}">
+	<h2>{{ section.name }}</h2>
+	{% assign sectionurl = "/locations/lightworld/" | append: section.url -%}
+
+	<ul>
+		{% for item in section.sublist -%}
+		{% include nested_list_item.html parent=sectionurl this=item %}
+		{% endfor %}
+	</ul>
+</section>
+{% endfor -%}

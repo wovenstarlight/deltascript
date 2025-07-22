@@ -1,0 +1,24 @@
+<li>
+	{% if include.this.url -%}
+		<a href="{{ include.parent | append: '/' | append: include.this.url | replace: '//', '/' | relative_url }}">
+	{%- endif %}
+	
+	{{- include.this.name -}}
+	
+	{% if include.this.url -%}
+		</a>
+	{%- endif %}
+
+
+	{%- if include.this.sublist %}
+	<ul>
+		{% for subitem in include.this.sublist -%}
+			{% assign parenturl = include.parent -%}
+			{% if include.this.url -%}
+				{% assign parenturl = parenturl | append: "/" | append: include.this.url -%}
+			{%- endif %}
+			{% include nested_list_item.html parent=parenturl this=subitem %}
+		{% endfor %}
+	</ul>
+	{%- endif %}
+</li>
