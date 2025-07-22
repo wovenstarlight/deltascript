@@ -15,8 +15,22 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 
 * Locations `/locations`
 	* Light World i.e. Hometown `/lightworld`
-		* `/dreemurrresidence` - Kris/Toriel's home
-		* `/holidayresidence` - Noelle's home
+		* Dreemurr residence
+			* ~~`/krisroom` - Kris/Asriel's room~~ DONE up to Chapter 4
+			* ~~`/dreemurrhallway` - Upstairs hallway~~ DONE up to Chapter 4
+			* ~~`/dreemurrdownstairs` - Ground floor: kitchen/living room~~ DONE up to Chapter 4
+			* ~~`/dreemurrbathroom` - Downstairs bathroom~~ DONE up to Chapter 4
+			* ~~`/dreemurryard` - Front yard~~ DONE up to Chapter 4
+			* possibly someday will need `/torielroom`...?
+		* Noelle's house
+			* `/holidayyard` - Holidays' front yard
+			* `/holidayinterior` - The general indoors; first/second/third floor
+			* `/holidaykitchen` - Holidays' kitchen (first floor)
+			* `/holidaygiftroom` - Room with the boxes (first floor)
+			* `/noelleroom` - Noelle's room
+			* `/dessroom` - Dess's room
+			* nothing interactive in the bathroom so no page for that
+			* possibly someday will need `/rudycarolroom`...?
 		* School
 			* exterior...? IIRC in ch4 end Susie will stop at the doors with some dialogue...
 			* `/torielclass` - Toriel's classroom
