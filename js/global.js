@@ -50,8 +50,9 @@ class DialogueSpeaker extends HTMLElement {
 customElements.define("d-speaker", DialogueSpeaker);
 
 
-/** Helper for matching up dialogue sprites. Invisible when compact mode is enabled.
- * @param {string} emotion A single-character string in one of the ranges `0`–`9`, `A`–`Z`, or `a`–`z`.
+/** Converts an alphanumeric sprite code to a strictly numeric index.
+ * @param {string} emotion A single-character alphabetic string (`A`–`Z` or `a`–`z`) or a numeric string of any length.
+ * @returns The numeric index corresponding to the provided sprite code.
  */
 function emotionToIndex(emotion) {
 	const code = emotion.charCodeAt(0);
@@ -63,7 +64,7 @@ function emotionToIndex(emotion) {
 	);
 }
 
-/** A sprite for a dialogue box. */
+/** A sprite for a dialogue box. Invisible when compact mode is enabled. */
 class DialogueSprite extends HTMLElement {
 	constructor() {
 		super()
