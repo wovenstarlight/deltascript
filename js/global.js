@@ -88,7 +88,7 @@ class DialogueSprite extends HTMLElement {
 			}.${
 				(speaker === "Toriel" && [0, 1, 2, 6, 7, 9].includes(emotionIndex))
 				|| (speaker === "Asgore" && [0, 1, 2, 3, 4, 6].includes(emotionIndex))
-				|| (speaker === "Susie" && emotionIndex === 11)
+				|| (speaker === "Susie" && variant === "noeyes" && emotionIndex === 11)
 				|| (speaker === "Seam" && emotionIndex !== 1)
 				|| (speaker === "Rouxls" && variant === "shop")
 				? "gif"	// `gif` in certain cases
