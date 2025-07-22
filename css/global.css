@@ -688,15 +688,17 @@ d-box {
 			width: max-content;
 			/* Center content */
 			align-items: center;
+			
+			d-sprite img { --size: 3.2em }
 
 			d-text:first-of-type { margin-block-start: 0.5em }
 
 			/* Specify placements (defaulting to bottom right) */
 			&:not([place]), &:not([place~=bottom], [place~=top]),
-			&[place~=bottom] { bottom: -2.6em }
+			&[place~=bottom] { bottom: -2.4em }
 			&:not([place]), &:not([place~=right], [place~=left]),
 			&[place~=right] { right: 0 }
-			&[place~=top] { top: -2.3em }
+			&[place~=top] { top: -2.4em }
 			&[place~=left] { left: 0 }
 			&[place~=center-x] {
 				left: 50%;
@@ -715,6 +717,7 @@ d-box {
 	}
 
 	&:state(compact) & {
+		grid-column: 2;
 		margin-inline-start: 0;
 		& d-speaker::before {
 			content: "(";
@@ -724,7 +727,6 @@ d-box {
 	}
 
 	&:has(> d-box:first-child) {
-		grid-template-columns: 1fr;
 		d-speaker::before,
 		d-box > :last-child::after { content: unset }
 	}
