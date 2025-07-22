@@ -223,6 +223,7 @@ img {
 	/* Display */
 	border: var(--border-width) solid transparent;
 	border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width);
+	body.dim & { border-image-source: url("../assets/images/textbox/light_dim.png") }
 	background-clip: padding-box;
 	background-color: var(--black);
 	line-height: 1;
@@ -249,6 +250,7 @@ header.d-section:has(h1.visually-hidden:only-child) {
 	width: calc(100% - (2 * var(--border-width)));
 	margin: var(--border-width);
 	border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width) / var(--border-width);
+	body.dim & { border-image-source: url("../assets/images/textbox/light_dim.png") }
 	background-color: var(--black);
 	color: var(--white);
 	font: inherit;
@@ -291,6 +293,7 @@ header.d-section:has(h1.visually-hidden:only-child) {
 	margin: var(--border-width) calc(var(--border-width) - 0.25em);
 	background-color: var(--black);
 	border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width) / var(--border-width);
+	body.dim & { border-image-source: url("../assets/images/textbox/light_dim.png") }
 
 	a, label, button {
 		display: block;
@@ -331,6 +334,24 @@ header.d-section:has(h1.visually-hidden:only-child) {
 		&::after { content: "OFF" }
 		&:has(input:checked)::after { content: "ON" }
 	}
+}
+body.dim {
+	--red: #bb0000;
+	--blue: #0000bb;
+	--yellow: #bbbb00;
+	--green: #00bb00;
+	--white: #bbb;
+	--gray: #777;
+	--black: #000;
+	--purple: #5e005e;
+	--maroon: #5e0000;
+	--orange: #b6722e;
+	--lightyellow: #bbbb5e;
+
+	.kris { color: #6a7bc4 }
+	.susie { color: #cb4ed3 }
+	.ralsei { color: #429e76 }
+	.noelle { color: #d87d50 } /* actually this one is Light World */
 }
 /* #endregion */
 
@@ -412,6 +433,7 @@ body {
 #pagesrc, #pagetoc, #pageseealso {
 	border: calc(var(--border-width) * 0.5) solid transparent;
 	border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width) / calc(0.25 * var(--border-width));
+	body.dim & { border-image-source: url("../assets/images/textbox/light_transparent_dim.png") }
 
 	summary {
 		cursor: pointer;
@@ -505,9 +527,11 @@ d-box, d-choices {
 		background-clip: padding-box;
 		border: var(--border-width) solid transparent;
 		border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width);
+		body.dim &:not([theme]), body.dim &[theme=light] { border-image-source: url("../assets/images/textbox/light_dim.png") }
 
 		&[theme=dark], &[theme^=power], &[theme^=shop] {
 			border-image-source: url("../assets/images/textbox/dark.gif");
+			body.dim & { border-image-source: url("../assets/images/textbox/dark_dim.gif") }
 		}
 
 		&[theme=plain], &[theme^=obj], &[theme=battlemenu], &[theme=battledesc] {
@@ -560,6 +584,7 @@ d-box, d-choices {
 		&[theme=battletalk] {
 			--border-width: 0.375em;
 			border-image-source: url("../assets/images/textbox/bubble.png");
+			body.dim & { border-image-source: url("../assets/images/textbox/bubble_dim.png") }
 			border-image-slice: 6;
 			min-height: unset;
 			margin: 0.5em 1em;
@@ -987,6 +1012,7 @@ d-option {
 		border: var(--border-width) solid transparent;
 		border-block-width: calc(var(--border-width) * 0.5);
 		border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width) / calc(0.25 * var(--border-width));
+		body.dim & { border-image-source: url("../assets/images/textbox/light_transparent_dim.png") }
 		/* Spacing */
 		margin: 0.3em;
 		/* Heart-shaped hover indicator */
@@ -1012,8 +1038,10 @@ d-option-panel {
 	display: block;
 	border: var(--border-width) solid transparent;
 	border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width);
+	body.dim &:not([theme]), body.dim &[theme=light] { border-image-source: url("../assets/images/textbox/light_transparent_dim.png") }
 
 	&[theme=dark] { border-image-source: url("../assets/images/textbox/dark_transparent.gif") }
+	body.dim &[theme=dark] { border-image-source: url("../assets/images/textbox/dark_transparent_dim.gif") }
 
 	/* Spacing */
 	margin: 0.3em 0;

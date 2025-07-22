@@ -376,6 +376,18 @@ function setUp() {
 		document.getElementById("toggle-compact").checked = true;
 	}
 
+	// Dim mode
+	document.getElementById("toggle-dim").addEventListener("change", e => {
+		e.currentTarget.checked ? document.body.classList.add("dim") : document.body.classList.remove("dim");
+		localStorage.setItem("dimMode", e.currentTarget.checked ? "on" : "");
+	});
+	// Autofill on initial load
+	if (localStorage.getItem("dimMode")?.length) {
+		// Dim mode has been set to ON
+		document.body.classList.add("dim");
+		document.getElementById("toggle-dim").checked = true;
+	}
+
 	/*
 	// Dyslexic-friendly font
 	document.getElementById("toggle-opendyslexic").addEventListener("change", e => {
