@@ -20,7 +20,7 @@ credits: >
 				<td>d-box</td>
 				<td>Text box</td>
 				<td><ul>
-					<li><code>theme = light | dark | blur | plain</code>: Changes the border. If not provided, defaults to <code>light</code>. (Usually you'll just need light/dark. Blur is for text appearing with no border, like the Game Over text or the Vessel Creation's intro. Plain is for when you need a hard edge but no border; this is mostly just available as a fallback.)</li>
+					<li><code>theme</code>: Changes the border. <a href="#themes">See below for names/descriptions of available themes.</a></li>
 					<li>If small dialogue, then optionally <code>place</code>; may have one or more of the following values, separated by spaces
 						<ul>
 							<li><code>right</code> (default), <code>left</code>, or <code>center-x</code></li>
@@ -78,7 +78,7 @@ credits: >
 				<td>d-choices</td>
 				<td>Choice menu</td>
 				<td><ul>
-					<li><code>theme = light | dark | ...</code>: Changes the border. See <code>d-box</code> above for more.</li>
+					<li><code>theme</code>: Changes the border. <a href="#themes">See below for names/descriptions of available themes.</a></li>
 					<li><code>class = shift-right | shift-left</code>: For offsetting the heart when the L/R options are too long</li>
 					<li><code>offset</code>: The amount to offset the heart by, in <code>%</code></li>
 					<li><code>noninteractive</code>: If options change nothing, use this attribute and don't include <code>d-option-panel</code>s afterwards</li>
@@ -109,7 +109,7 @@ credits: >
 				<td>Output of a certain choice</td>
 				<td><ul>
 					<li><code>index = 0 | 1 | 2 | 3</code>: Corresponding option's index</li>
-					<li><code>theme = light | dark | ...</code>: Changes the border. See <code>d-box</code> above for more.</li>
+					<li><code>theme</code>: Changes the border. <a href="#themes">See below for names/descriptions of available themes.</a></li>
 				</ul></td>
 				<td>
 					Pretty much anything. <code>d-box</code>, <code>d-choices</code>, <code>d-option-panel</code>, <code>p.note</code>...
@@ -125,6 +125,97 @@ credits: >
 	</table>
 </section>
 
+<section class="d-section" id="themes">
+	<h2>Themes</h2>
+	<p>Borders for dialogue boxes/choice menus etc. Use in the format <code>theme="light"</code>, <code>theme="dark"</code> etc.</p>
+
+	<h3><code>light</code></h3>
+	<p>Default value; if no theme is explicitly set (i.e. you leave out the <code>theme="..."</code> attribute), elements will generally use this.</p>
+	<d-box theme="light">
+		<d-text>Light World border, a plain white box.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3><code>dark</code></h3>
+	<d-box theme="dark">
+		<d-text>Dark World border, a ridged box with elaborate corners.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3><code>fade</code></h3>
+	<p>Used for special text which doesn't have a border in-game, such as the Game Over text or the Vessel creation intro.</p>
+	<d-box theme="fade">
+		<d-text>No border; the edges simply fade into transparency.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Battle themes: <code>battlemenu</code>, <code>battletalk</code>, <code>battledesc</code></h3>
+	<p>For use in encounters.</p>
+	<p><code>battlemenu</code>: No border with solid edges. Any text that displays below the party members' names/HP/action menus. May have face sprites.</p>
+	<d-box theme="battlemenu">
+		<d-text>The "battlemenu" box. Wider than standard dialogue boxes.</d-text>
+	</d-box>
+
+	<p><code>battledesc</code>: Narrower cousin of <code>battlemenu</code>, this is for ACT/item descriptions that appear on the bottom right side of the screen.</p>
+	<d-box theme="battledesc">
+		<d-text>Battle desc box</d-text>
+		<d-text class="orange">16% TP</d-text>
+	</d-box>
+
+	<p><code>battletalk</code>: White text bubble with the Dotum font. For dialogue that appears next to characters' sprites on the top half of the screen.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tutorial</d-speaker>
+		<d-text>The "battletalk" box.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Object themes: <code>objmenu</code>, <code>objreact</code></h3>
+	<p>For use in overworld narration/dialogue related to items.</p>
+	<p><code>objmenu</code>: No border with solid edges. Object descriptions. Same width/border as <code>battlemenu</code>, but uses a condensed font variant.</p>
+	<d-box theme="objmenu"><d-text>An object's description.</d-text></d-box>
+
+	<p><code>objreact</code>: No border with solid edges, but not as tall and using simple party icons instead of face sprites. For party members' responses to using items or equipping weapons/armor.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Character's reaction goes here.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Shop themes: <code>shopleft</code>, <code>shopright</code>, <code>shopdesc</code></h3>
+	<p>Dark World border with special sizing.</p>
+	<p><code>shopleft</code>: for the initial dialogue that appears when you first enter a shop. The wider variant.</p>
+	<d-box theme="shopleft"><d-text asterisk>Welcome to shop.</d-text></d-box>
+
+	<p><code>shopright</code>: for dialogue that appears on the right side, once you start clicking into menus. The narrower variant.</p>
+	<d-box theme="shopright"><d-text>Buying something?</d-text></d-box>
+
+	<p><code>shopdesc</code>: for descriptions of items on sale. Same width as <code>shopright</code>, but uses the condensed font and has slightly different spacing.</p>
+	<d-box theme="shopdesc">
+		<d-text>ITEM</d-text>
+		<d-text>Has an effect</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Other: <code>powertitle</code></h3>
+	<p><code>powertitle</code>: Dark World border. For party members' titles in the POWER menu.</p>
+	<d-box theme="powertitle">
+		<d-text>LV8 Archivist</d-text>
+		<d-text>Keeps track of the story.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3><code>plain</code></h3>
+	<p>No border with solid edges. A fallback value for if you can't find another, more fitting theme. Prioritize using more semantically-appropriate themes wherever possible — yes, <code>battlemenu</code> and <code>plain</code> have the same edges, but if some text is from an encounter, then represent it using <code>battlemenu</code>, not <code>plain</code>!</p>
+	<d-box theme="plain"><d-text>For demonstration purposes only.</d-text></d-box>
+</section>
+
 <style>
 	#guide {
 		border-collapse: collapse;
@@ -133,13 +224,13 @@ credits: >
 			border: thin solid;
 		}
 		td:first-child { font-family: monospace }
-		code {
-			border: thin solid rgb(from currentColor r g b / 0.3);
-			border-radius: 0.2em;
-			background-color: var(--black);
-			padding: 0.1em 0.2em;
-			margin-inline: 0.2em;
-			display: inline-block;
-		}
+	}
+	code {
+		border: thin solid rgb(from currentColor r g b / 0.3);
+		border-radius: 0.2em;
+		background-color: var(--black);
+		padding: 0.1em 0.2em;
+		margin-inline: 0.2em;
+		display: inline-block;
 	}
 </style>
