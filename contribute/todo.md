@@ -33,8 +33,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* possibly someday will need `/rudycarolroom`...?
 		* School
 			* exterior...? IIRC in ch4 end Susie will stop at the doors with some dialogue...
-			* `/torielclass` - Toriel's classroom
-			* `/alphysclass` - Alphys's classroom
+			* ~~`/torielclass` - Toriel's classroom~~ DONE up to Chapter 4
+			* ~~`/alphysclass` - Alphys's classroom~~ DONE up to Chapter 4
 			* `/unusedclass` - Unused classroom (former card world)
 			* `/hallways` - all the lockers and whatnot. will include text for interacting with the supply closet doors
 			* Locked classroom if that ever opens up

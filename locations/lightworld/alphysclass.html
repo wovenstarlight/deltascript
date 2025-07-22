@@ -1,0 +1,208 @@
+---
+title: School - Alphys's classroom
+
+description: >
+  <p>Narration and dialogue for Alphys's classroom in the Hometown school.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [1, 2, 4]
+
+toc:
+  -
+    id: clock
+    name: Clock
+    subheadings:
+      -
+        id: clockpreclass
+        name: During class
+      -
+        id: clockpostclass
+        name: After school
+  -
+    id: computer
+    name: Computer
+    subheadings:
+      -
+        id: computer1
+        name: Chapter 1
+        subheadings:
+          -
+            id: computer1start
+            name: Start of chapter
+          -
+            id: computer1end
+            name: End of chapter
+      -
+        id: computer2
+        name: Chapter 2
+      -
+        id: computer4
+        name: Chapter 4
+  -
+    id: vase
+    name: Vase
+  -
+    id: posters
+    name: Posters
+    subheadings:
+      -
+        id: postersstandard
+        name: Standard
+      -
+        id: posterssusie
+        name: Chapter 4
+  -
+    id: eggs
+    name: Eggs
+    subheadings:
+      -
+        id: eggfirst
+        name: First time
+      -
+        id: eggnext
+        name: Subsequent times
+        subheadings:
+          -
+            id: noeggs
+            name: If you haven't obtained any Eggs
+          -
+            id: goteggs
+            name: If you obtained at least one Egg
+---
+<section class="d-section" id="clock">
+	<h2>Clock</h2>
+
+	<h3 id="clockpreclass">During class</h3>
+	<p>Available at the start of Chapter 1.</p>
+	<d-box theme="light">
+		<d-text asterisk>(You checked the time.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(... It seems to be time for class.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="clockpostclass">After school</h3>
+	<p>Available at the end of Chapter 1 and during Chapters 2 & 4.</p>
+	<d-box theme="light">
+		<d-text asterisk>(You checked the time.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(... It seems to not be time for class.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="computer">
+	<h2>Computer</h2>
+
+	<h3 id="computer1">Chapter 1</h3>
+	<h4 id="computer1start">Start of chapter</h4>
+	<d-box theme="light">
+		<d-text asterisk>(The computer's wallpaper is a rotating slideshow of nature images.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(... and, rarely, an image of two buff superheroes embracing, blushing.)</d-text>
+	</d-box>
+
+	<h4 id="computer1end">End of chapter</h4>
+	<d-box theme="light">
+		<d-text asterisk>(The computer is turned off.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Everything felt peaceful for a moment.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="computer2">Chapter 2</h3>
+	<d-box theme="light">
+		<d-text asterisk>(The computer wallpaper is updated.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(The buff embracing heroes are now edited to be 4 inches apart.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(There's dialogue about proper distancing at the school dance.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(You wonder if your mother had some influence on this change.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="computer4">Chapter 4</h3>
+	<d-box theme="light">
+		<d-text asterisk>(The computer is off.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="vase">
+	<h2>Vase</h2>
+
+	<d-box theme="light">
+		<d-text asterisk>(It's a bunch of roses.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="posters">
+	<h2>Posters</h2>
+
+	<h3 id="postersstandard">Standard</h3>
+	<d-box theme="light">
+		<d-text asterisk>(Looks like motivational quotes from various literature.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>"Try your best, Astral Wolf!"</d-text>
+		<d-text asterisk>"Even in your darkest hour...!"</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(... that one seems to be from a video game.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="posterssusie">Chapter 4</h3>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>These posters suck. Why can't we have, like...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>An orange cat wearing a top hat or whatever.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="eggs">
+	<h2>Eggs</h2>
+	<p>Present only in Chapter 4. On Berdly's desk sits at least one egg, joined by any more <a href="{{ '/misc/darkitems' | relative_url }}">Eggs</a> you've obtained during your journey.</p>
+
+	<h3 id="eggfirst">First time</h3>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Hey, what's with the egg at Berdly's desk...?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>... nevermind. I don't wanna think about it.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="eggnext">Subsequent times</h3>
+	<h4 id="noeggs">If you haven't obtained any Eggs</h4>
+	<d-box theme="light">
+		<d-text asterisk>(It's Berdly's desk. There is an egg here.)</d-text>
+	</d-box>
+
+	<h4 id="goteggs">If you obtained at least one Egg</h4>
+	<p>The "#" is replaced by the number of Eggs you've found so far (1/2/3). If you've only found 1, it will read "1 eggs" <a href="https://en.wikipedia.org/wiki/Sic">[sic]</a>.</p>
+	<d-box theme="light">
+		<d-text asterisk>(It's Berdly's desk. The leader egg is joined by the # eggs you found.)</d-text>
+	</d-box>
+</section>
