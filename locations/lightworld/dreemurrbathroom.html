@@ -1,0 +1,241 @@
+---
+title: Dreemurr Residence - Bathroom
+
+description: >
+  <p>Narration and dialogue for the bathroom in the Dreemurr Residence.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [1, 2, 4]
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [1, 2, 4]
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [1, 2, 4]
+  -
+    name: gml_Object_obj_town_event_Step_0
+    chapters: [1, 2, 4]
+    note: repeated flushing event
+
+see_also:
+  -
+    url: /locations/lightworld/krisroom
+    name: Dreemurr Residence - Kris's room
+  -
+    url: /locations/lightworld/dreemurrhallway
+    name: Dreemurr Residence - Upstairs hallway
+  -
+    url: /locations/lightworld/dreemurrdownstairs
+    name: Dreemurr Residence - Downstairs
+
+close_toc: true
+---
+<section class="d-section" id="shower">
+	<h2>Shower</h2>
+
+	<h3 id="showerstandard">Standard</h3>
+	<d-box theme="light">
+		<d-text asterisk>On the shower ledge, there's a small container of apple-scented shampoo.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>... and a gallon-sized container of pet shampoo.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="shower2pre">End of Chapter 2, before washing your hands</h3>
+	<d-box theme="light">
+		<d-text asterisk>(No need for it.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="shower2post">End of Chapter 2 onwards, after washing your hands</h3>
+	<d-box theme="light">
+		<d-text asterisk>(The apple-scented shampoo feels lighter than usual.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="shower4">Chapter 4, when Susie is present</h3>
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-text asterisk>(The apple-scented shampoo seems to be lighter than normal.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="P"></d-sprite>
+		<d-text asterisk>Hey, still no hard evidence I drank that.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="light">
+		<d-text asterisk>(Apple shampoo.)</d-text>
+		<d-text asterisk>(There are bite marks around the screw cap.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Look, I THOUGHT it was like a soda cap!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="toilet">
+	<h2>Toilet</h2>
+
+	<h3 id="toiletstandard">Standard</h3>
+	<d-box theme="light">
+		<d-text asterisk>(It's a toilet.)</d-text>
+		<d-text asterisk>(Flush it?)</d-text>
+	</d-box>
+	<d-choices theme="light">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<p class="note">The toilet flushes.</p>
+		<d-box theme="light">
+			<d-text asterisk>(You flushed the toilet!)</d-text>
+		</d-box>
+
+		<p class="note">In Chapter 2, the following special dialogue only plays at the end of the chapter, after returning from the Cyber World.</p>
+
+		<h4>Third time</h4>
+		<p class="note">There's a knock at the bathroom door.</p>
+		<d-box theme="light">
+			<d-sprite speaker="Toriel" emotion="1"></d-sprite>
+			<d-text asterisk>Kris...?</d-text>
+			<d-text asterisk>Is everything... alright in there?</d-text>
+		</d-box>
+
+		<h4>Sixth time</h4>
+		<p class="note">There's a knock at the bathroom door.</p>
+		<d-box theme="light">
+			<d-sprite speaker="Toriel" emotion="3"></d-sprite>
+			<d-text asterisk>Kris, WHAT are you doing?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Toriel" emotion="3"></d-sprite>
+			<d-text asterisk>You did not put a bath bomb in the toilet again, did you?</d-text>
+		</d-box>
+
+		<h4>Ninth time</h4>
+		<p class="note">There's a knock at the bathroom door.</p>
+		<d-box theme="light">
+			<d-sprite speaker="Toriel" emotion="5"></d-sprite>
+			<d-text asterisk>Kris, if anything bad happens, you are paying for the plumbing bill.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<d-box theme="light">
+			<d-text asterisk>(It's good to conserve water.)</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="toilet2pre">End of Chapter 2, before washing your hands</h3>
+	<d-box theme="light">
+		<d-text asterisk>(No need for it.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="toilet4">Chapter 4, when Susie is present</h3>
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Heh, reminds me of when I flushed down a bath bomb and...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="8"></d-sprite>
+		<d-text asterisk>Huh? ... K-Kris? You did that... too?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>What? You did it at HOME!? Dumbass! Do that at SCHOOL!!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="B"></d-sprite>
+		<d-text asterisk>Stop thinking about good memories in front of the toilet.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="sink">
+	<h2>Sink</h2>
+
+	<h3 id="sink1">Chapter 1</h3>
+	<d-box theme="light">
+		<d-text asterisk>You looked inside the sink cupboard.</d-text>
+		<d-text asterisk>There's...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>A can of Ice-E's Cool Boys Body Spray "Spray For The Boys," Flamin' Hot Pizza Flavor.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>It seems to be almost entirely full.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sink2start">Start of Chapter 2</h3>
+	<d-box theme="light">
+		<d-text asterisk>(It is not yet time to wash your hands.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sink2pre">End of Chapter 2, before washing your hands</h3>
+	<d-box theme="light">
+		<d-text asterisk>It's the bathroom sink.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>Will you run the tap?</d-text>
+	</d-box>
+	<d-choices theme="light">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<p class="note"><a href="{{ '/chapters/chapter2/handwashing' | relative_url }}">Kris runs the tap.</a></p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<d-box theme="light">
+			<d-text asterisk>Then the tap will be waiting until you choose to run it.</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="sink2post">End of Chapter 2 onwards, after washing your hands</h3>
+	<d-box theme="light">
+		<d-text asterisk>(Your hands are clean.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sink4">Chapter 4, when Susie is present</h3>
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-text asterisk>(It's a cupboard holding pizza-themed deodorant.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Haha, the apple smelling kid and their pizza stank brother!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Haha, the apple smelling kid and their pizza stank brother!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>... ugh, don't nod when I'm making fun of you.</d-text>
+	</d-box>
+</section>
