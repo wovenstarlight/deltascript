@@ -959,6 +959,7 @@ d-choices {
 }
 d-option {
 	display: block;
+	font-family: "DeltaFont Condensed", var(--font);
 
 	/* Selectable options */
 	d-choices:not([noninteractive]) &,
