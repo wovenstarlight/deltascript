@@ -891,6 +891,7 @@ d-choices {
 	d-option {
 		width: fit-content;
 		position: relative;
+		line-height: 1.2;
 
 		/* Left/right */
 		&[index="0"], &[index="1"] {
@@ -965,7 +966,7 @@ d-option {
 	/* Adjust placement of heart-shaped hover indicator inside choice menus */
 	d-choices:not([noninteractive]) &::before {
 		left: -1.75ch;
-		top: 0.05em;
+		top: 0.15em;
 	}
 
 	/* Hide the hearts/highlights when choices are forced open */
