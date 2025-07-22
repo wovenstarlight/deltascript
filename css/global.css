@@ -6,11 +6,11 @@
 /* Font initialization */
 @font-face {
 	font-family: "DeltaFont";
-	src: url("../assets/fonts/fnt_main.otf");
+	src: url("../assets/fonts/fnt_main_extended.otf");
 }
 @font-face {
 	font-family: "DeltaFont Condensed";
-	src: url("../assets/fonts/fnt_main_condensed.otf");
+	src: url("../assets/fonts/fnt_main_condensed_extended.otf");
 }
 @font-face {
 	font-family: "DeltaFont Tiny";
