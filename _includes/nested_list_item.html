@@ -1,6 +1,8 @@
+{% assign mysplit = include.this.splitter | default: "/" -%}
+
 <li>
 	{% if include.this.url -%}
-		<a href="{{ include.parent | append: '/' | append: include.this.url | replace: '//', '/' | relative_url }}">
+		<a href="{{ include.parent | append: mysplit | append: include.this.url | replace: '//', '/' | relative_url }}">
 	{%- endif %}
 	
 	{{- include.this.name -}}
@@ -15,7 +17,7 @@
 		{% for subitem in include.this.sublist -%}
 			{% assign parenturl = include.parent -%}
 			{% if include.this.url -%}
-				{% assign parenturl = parenturl | append: "/" | append: include.this.url -%}
+				{% assign parenturl = parenturl | append: mysplit | append: include.this.url -%}
 			{%- endif %}
 			{% include nested_list_item.html parent=parenturl this=subitem %}
 		{% endfor %}

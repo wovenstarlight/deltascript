@@ -1,0 +1,87 @@
+---
+title: Locations
+
+description: >
+  <p>Pages for location-based interactions available across multiple chapters or that aren't story-relevant.</p>
+
+toc:
+  -
+    id: lightworld
+    name: Light World
+  -
+    id: closetworld
+    name: Closet Dark World
+  -
+    id: cardkingdom
+    name: Card Kingdom
+  -
+    id: cyberworld
+    name: Cyber World
+  -
+    id: tvworld
+    name: TV World
+  -
+    id: darksanctuary
+    name: Dark Sanctuary
+
+items:
+  -
+    url: lightworld
+    name: Light World
+    sublist:
+      -
+        url: dreemurrresidence
+        name: Dreemurr residence
+        splitter: "#"
+      -
+        url: school
+        name: School
+        splitter: "#"
+  -
+    url: closetworld
+    name: Closet Dark World
+    sublist:
+      -
+        url: seap
+        name: Seam's shop
+  -
+    url: cardkingdom
+    name: Card Kingdom
+    sublist:
+      -
+        url: seap
+        name: Seam's (old) shop
+      -
+        # url: cardcastle
+        name: Card Castle
+        sublist:
+          -
+            name: Floor 5
+            sublist:
+              -
+                url: rouxlsshop
+                name: Rouxls's shop
+  -
+    url: cyberworld
+    name: Cyber World
+  -
+    url: tvworld
+    name: TV World
+  -
+    url: darksanctuary
+    name: Dark Sanctuary
+---
+{% for section in page.items -%}
+<section class="d-section" id="{{ section.url }}">
+	<h2>{{ section.name }}</h2>
+	{% assign sectionurl = "/locations/" | append: section.url -%}
+
+	<ul>
+		{% for item in section.sublist -%}
+		{% include nested_list_item.html parent=sectionurl this=item %}
+		{%- else -%}
+		<li class="gray">To be added!</li>
+		{% endfor %}
+	</ul>
+</section>
+{% endfor -%}
