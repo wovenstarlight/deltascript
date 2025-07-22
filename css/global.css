@@ -624,7 +624,7 @@ d-box, d-choices {
 			max-width: calc(100% - 3 * var(--border-width));
 
 			margin: calc(var(--border-width) + 0.2em) calc(var(--border-width) + 0.5em);
-			:is([theme=fade]) + & { margin-block-start: calc((2 * var(--border-width)) + 0.2em) }
+			:is([theme=fade], d-option-panel) + & { margin-block-start: calc((2 * var(--border-width)) + 0.2em) }
 			:is(h2, h3, h4, h5, h6, p, ul, ol) + & { margin-block-start: calc(var(--border-width) + 1rem) }
 			&:has(+ h2, + h3, + h4, + h5, + h6, + p, + ul, + ol) { margin-block-end: calc(var(--border-width) + 1rem) }
 
