@@ -907,8 +907,7 @@ d-choices {
 				--size: 0.75em;
 			}
 
-			&.shift-right::after { left: calc(9em + var(--offset)) }
-			&.shift-left::after { left: calc(9em - var(--offset)) }
+			&[offset]::after { left: calc(9em + var(--offset)) }
 		}
 	}
 
