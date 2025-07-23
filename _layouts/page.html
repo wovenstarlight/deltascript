@@ -13,7 +13,7 @@ layout: default
 	{%- endif %}
 
 	{%- if page.sources %}
-	<details id="pagesrc" {%- if page.sources.size <= 4 %} open {%- endif -%}>
+	<details id="pagesrc">
 		<summary>Sources</summary>
 		<ul>
 			{%- for source in page.sources %}
@@ -24,7 +24,7 @@ layout: default
 	{%- endif %}
 
 	{%- if page.toc %}
-	<details id="pagetoc" {%- unless page.close_toc %} open {%- endunless %}>
+	<details id="pagetoc">
 		<summary>Contents</summary>
 		<ol>
 			{%- for heading in page.toc %}
