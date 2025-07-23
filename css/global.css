@@ -705,6 +705,7 @@ d-box {
 		d-box {
 			position: absolute;
 			font-size: 0.6em;
+			font-family: "DeltaFont Condensed", var(--font);
 			/* Reset full-size features */
 			background-color: transparent;
 			border-image: unset;
