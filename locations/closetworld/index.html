@@ -1,0 +1,61 @@
+---
+title: Light World locations
+
+description: >
+  <p>Index for locations within the Light World, primarily in Hometown.</p>
+
+toc:
+  -
+    id: townsquare
+    name: Town square
+  -
+    id: castle
+    name: Ralsei's castle
+
+items:
+  -
+    id: townsquare
+    name: Town square
+    sublist:
+      -
+        url: seap
+        name: Seam's shop
+  -
+    url: castle
+    name: Ralsei's castle
+    sublist:
+      -
+        name: Second floor
+        sublist:
+          -
+            url: krisroom
+            name: Kris's room
+          -
+            url: susieroom
+            name: Susie's room
+          -
+            url: krissusieroom
+            name: Kris and Susie's combined room (Chapter 4 only)
+      -
+        name: Third floor
+        sublist:
+          -
+            url: ralseiroom
+            name: Ralsei's room
+---
+{% for section in page.items -%}
+<section class="d-section" id="{{ section.url | default: section.id }}">
+	<h2>{{ section.name }}</h2>
+
+	{% assign sectionurl = "/locations/closetworld" -%}
+	{% if section.url -%}
+	{% assign sectionurl = sectionurl | append: "/" | append: section.url -%}
+	{% endif -%}
+
+	<ul>
+		{% for item in section.sublist -%}
+		{% include nested_list_item.html parent=sectionurl this=item %}
+		{% endfor %}
+	</ul>
+</section>
+{% endfor -%}

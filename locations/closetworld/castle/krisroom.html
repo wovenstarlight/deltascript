@@ -1,0 +1,263 @@
+---
+title: Ralsei's castle - Kris's room
+
+description: >
+  <p>Narration and dialogue for Kris's room in Ralsei's castle, 2F.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [2, 4]
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [2]
+    note: ICE-E statue
+
+see_also:
+  -
+    url: /locations/closetworld/castle/krissusieroom
+    name: Kris and Susie's combined room (Chapter 4)
+  -
+    url: /locations/closetworld/castle/susieroom
+    name: Susie's room
+  -
+    url: /locations/closetworld/castle/ralseiroom
+    name: Ralsei's room
+
+toc:
+  -
+    id: wardrobe
+    name: Wardrobe
+  -
+    id: shelf
+    name: Shelf
+    subheadings:
+      -
+        id: shelf2
+        name: Chapter 2
+      -
+        id: shelf4
+        name: Chapter 4
+  -
+    id: drawers
+    name: Drawers
+    subheadings:
+      -
+        name: With furnishings
+        subheadings:
+          -
+            id: manual
+            name: With the Manual
+          -
+            id: trashcan
+            name: With trashcan
+      -
+        id: drawers4
+        name: Chapter 4
+  -
+    id: bed
+    name: Bed
+    subheadings:
+      -
+        id: bed2
+        name: Chapter 2
+        subheadings:
+          -
+            id: bed2standard
+            name: Standard
+          -
+            id: bed2inspector
+            name: If Kris got the Bed Inspector title in Chapter 1
+      -
+        id: bed4
+        name: Chapter 4
+        subheadings:
+          -
+            id: bed4standard
+            name: Standard
+          -
+            id: bed4award
+            name: If you got Susie's award in the Light World
+  -
+    id: moss
+    name: Moss
+  -
+    id: icee
+    name: ICE-E statue
+---
+<section class="d-section" id="wardrobe">
+	<h2>Wardrobe</h2>
+	<p>Not present in Kris and Susie's combined room.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>It's a wardrobe full of all sorts of different clothes.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You could wear whatever you want.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="shelf">
+	<h2>Shelf</h2>
+
+	<h3 id="shelf2">Chapter 2</h3>
+	<d-box theme="dark">
+		<d-text asterisk>It's a shelf.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>All sorts of keepsakes could be put here.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="shelf4">Chapter 4</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Hey, what happened to our stuff?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>Um! I placed it all in storage...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Don't worry, I'll bring it back next time!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="drawers">
+	<h2>Drawers</h2>
+	<p>Also present in Kris and Susie's combined room, but without the Manual/trashcan atop it.</p>
+
+	<h3 id="manual">With the Manual</h3>
+	<p>If you didn't throw away Ralsei's <a href="{{ '/misc/darkitems#manual' | relative_url }}">Manual</a> in Chapter 1.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>It's a stand for your Manual.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>I thought you might want to keep it here in case you want to read it!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="trashcan">With trashcan</h3>
+	<p>If you threw away Ralsei's Manual in Chapter 1.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>It's a trash can.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="3"></d-sprite>
+		<d-text asterisk>Here, Kris! In case I make another manual...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>You can throw it directly in here!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="drawers4">Chapter 4</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a drawer. ... It's full of green crayons.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="bed">
+	<h2>Bed</h2>
+
+	<h3 id="bed2">Chapter 2</h3>
+	<h4 id="bed2standard">Standard</h4>
+	<d-box theme="dark">
+		<d-text asterisk>It's your bed.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>It feels incredibly soft. Like sleeping on a dream...</d-text>
+	</d-box>
+
+	<h4 id="bed2inspector">If Kris got the <a href="{{ '/misc/powermenu#lv1bedinspector' | relative_url }}">Bed Inspector title</a> in Chapter 1</h4>
+	<d-box theme="dark">
+		<d-text asterisk>It's a bed that's been carefully crafted.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>It's suitable for a bed inspector.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bed4">Chapter 4</h3>
+	<h4 id="bed4standard">Standard</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(... What kind of dreams would you see if you slept here?)</d-text>
+	</d-box>
+
+	<h4 id="bed4award">If you got Susie's award in the Light World</h4>
+	<p>By inspecting Kris's bed in their Light World bedroom.</p>
+
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Heh, you got tons of awards here.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>... Not the BEST one though, right, Kris?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>Huh? What's... the best one?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Just a super cool one Kris got today.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+		<d-text asterisk>Really? Um, congratulations, Kris!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Yeah, congrats.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>Kris, if you want any kind of award...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>I can add it for you...!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>(He can't, though.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="moss">
+	<h2>Moss</h2>
+	<p>Present if Kris ate the Moss in Chapter 1. Not present in Kris and Susie's combined room.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>It's some decorative moss. Looks delicious.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Why the hell does YOUR room get moss!?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="icee">
+	<h2>ICE-E statue</h2>
+	<p>Present after leaving Cyber World, if you inspected the ICE-E statue in Queen's mansion. Not present in Kris and Susie's combined room.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(This maybe isn't the best thing in your room.)</d-text>
+	</d-box>
+</section>
