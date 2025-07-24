@@ -1,0 +1,70 @@
+---
+title: Holiday residence - Closet
+
+description: >
+  <p>Narration and dialogue for the closet holding gift boxes in Noelle's house, 1F.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [4]
+
+see_also:
+  -
+    url: /locations/lightworld#holidayresidence
+    name: Sublocations within the Holiday residence
+
+toc:
+  -
+    id: giftboxes
+    name: Gift boxes
+    subheadings:
+      -
+        id: giftboxesstandard
+        name: Standard
+      -
+        id: giftboxesthird
+        name: Third time with Susie and Noelle in the party
+---
+<section class="d-section" id="giftboxes">
+	<h2>Gift boxes</h2>
+
+	<h3 id="giftboxesstandard">Standard</h3>
+	<d-box theme="light">
+		<d-text asterisk>(It's an empty gift box.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="giftboxesthird">Third time with Susie and Noelle in the party</h3>
+	<p>Plays after the standard narration.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Umm, Kris? Do you need to check, all of these?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>I mean... gotta admit this room is kinda sus.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="B"></d-sprite>
+		<d-text asterisk>... especially that vent.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Haha, nice reference, Susie!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-box place="center-x top">
+			<d-sprite speaker="Susie" emotion="6"></d-sprite>
+			<d-text>Huh? ... reference?</d-text>
+		</d-box>
+		<d-box place="center-x bottom">
+			<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+			<d-text>(I'll stop talking now.)</d-text>
+		</d-box>
+	</d-box>
+</section>

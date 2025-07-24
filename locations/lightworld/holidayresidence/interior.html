@@ -1,0 +1,568 @@
+---
+title: Holiday residence - Interior
+
+description: >
+  <p>Narration and dialogue for the living room (1F) and hallways (2F/3F) of Noelle's house.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [4]
+  -
+    name: gml_Object_obj_ch4_PDC09A_Step_0
+    chapters: [4]
+    note: dancing Santa, treat catcher, unused treat launcher
+  -
+    name: gml_Object_obj_homealone_treat_launcher_Step_0
+    chapters: [4]
+    note: unused treat launcher
+
+see_also:
+  -
+    url: /locations/lightworld#holidayresidence
+    name: Sublocations within the Holiday residence
+
+toc:
+  -
+    name: First floor
+    subheadings:
+      -
+        id: backdoor
+        name: Back door
+        subheadings:
+          -
+            id: backdoorinitial
+            name: Initial
+          -
+            id: backdoorpost
+            name: After Carol comes home
+      -
+        id: snacktray
+        name: Snack tray
+        subheadings:
+          -
+            id: snacktraynoelle
+            name: First time when Noelle is in the party
+          -
+            id: snacktraystandard
+            name: Otherwise
+      -
+        id: fridge
+        name: Fridge
+        subheadings:
+          -
+            id: fridgenoelle
+            name: If Noelle is in the party
+          -
+            id: fridgenotelle
+            name: If Noelle is not in the party
+      -
+        id: thermostat
+        name: Thermostat
+      -
+        id: treatcatcher
+        name: Treat catcher
+        subheadings:
+          -
+            id: treatcatchernoelle
+            name: If Noelle is in the party
+          -
+            id: treatcatchernotelle
+            name: If Noelle is not in the party
+      -
+        id: dancingsanta
+        name: Dancing Santas
+        subheadings:
+          -
+            id: noelle
+            name: If Noelle is in the party
+          -
+            id: dancingsantanotelle
+            name: If Noelle is not in the party
+  -
+    name: Second floor
+    subheadings:
+      -
+        id: snowflakes
+        name: Snowflakes
+        subheadings:
+          -
+            id: snowflakesnoelle
+            name: If Noelle is in the party
+          -
+            id: snowflakesnotelle
+            name: If Noelle is not in the party
+      -
+        id: dessdoor
+        name: Dess's door
+        subheadings:
+          -
+            id: dessdoornoelle
+            name: If Noelle is in the party
+          -
+            id: dessdoornotelle
+            name: If Noelle is not in the party
+          -
+            id: dessdoorpost
+            name: After Carol comes home
+      -
+        id: tree
+        name: Miniature tree
+      -
+        id: bathroomdoor
+        name: Bathroom door
+        subheadings:
+          -
+            id: bathroomdoorinitial
+            name: Initial
+          -
+            id: bathroomdoorpost
+            name: After Carol comes home
+  -
+    name: Third floor
+    subheadings:
+      -
+        id: pillow
+        name: Heart-shaped pillow
+        subheadings:
+          -
+            id: pillownoelle
+            name: If Noelle is in the party
+          -
+            id: pillownotelle
+            name: If Noelle is not in the party
+      -
+        id: rudycaroldoor
+        name: Rudy and Carol's door
+        subheadings:
+          -
+            id: rudycaroldoornoelle
+            name: If Noelle is in the party
+          -
+            id: rudycaroldoornotelle
+            name: If Noelle is not in the party
+          -
+            id: rudycaroldoorpost
+            name: After Carol comes home
+      -
+        id: treatlauncher
+        name: Treat launcher (Unused)
+---
+<!-- 1F -->
+<section class="d-section" id="backdoor">
+	<h2>Back door</h2>
+
+	<h3 id="backdoorinitial">Initial</h3>
+	<d-box theme="light">
+		<d-text asterisk>(The house's back door. No need to leave.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="backdoorpost">After Carol comes home</h3>
+	<p>Available only on the normal route, since Weird Route boots you out of the house right after the bathroom scene.</p>
+	<d-box theme="light">
+		<d-text asterisk>(No reason to enter.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="snacktray">
+	<h2>Snack tray</h2>
+
+	<h3 id="snacktraynoelle">First time when Noelle is in the party</h3>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>So, um, this is the snack tray...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-box place="center-x top">
+			<d-sprite speaker="Noelle" emotion="I"></d-sprite>
+			<d-text>(Why, Noelle. Why did you slice the cheese into hearts?)</d-text>
+		</d-box>
+		<d-box place="center-x bottom">
+			<d-sprite speaker="Susie" emotion="B"></d-sprite>
+			<d-text>(I don't remember if you eat the wooden stick things)</d-text>
+		</d-box>
+	</d-box>
+
+	<hr>
+
+	<h3 id="snacktraystandard">Otherwise</h3>
+	<d-box theme="light">
+		<d-text asterisk>(It's a squishy sounding assortment of snacks.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="fridge">
+	<h2>Fridge</h2>
+
+	<h3 id="fridgenoelle">If Noelle is in the party</h3>
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Why is there so much... bottled, water in here?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Umm, it's just... convenient, you know?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>(Wait until she learns about the free water from the sink)</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="8"></d-sprite>
+		<d-text asterisk>I usually bring an icy bottle with me to school, too!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+		<d-text asterisk>Huh... coulda swore I saw you using the bubbler after me before.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="M"></d-sprite>
+		<d-text asterisk>FAHA, yeah, must've been extra thirsty, that day! Phew!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="fridgenotelle">If Noelle is not in the party</h3>
+	<d-box theme="light">
+		<d-text asterisk>(It's a fridge containing lots of greens and bottled water.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="thermostat">
+	<h2>Thermostat</h2>
+
+	<d-box theme="light">
+		<d-text asterisk>(It's a thermostat. The only option is cold.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="treatcatcher">
+	<h2>Treat catcher</h2>
+
+	<h3 id="treatcatchernoelle">If Noelle is in the party</h3>
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>... what the heck is this?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Um, it's a... holiday treat catcher! ... you know?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="H"></d-sprite>
+		<d-text asterisk font="tiny">... anyone want to tell me it's normal to have one? Nobody...?</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>This one... was my dad's idea.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="treatcatchernotelle">If Noelle is not in the party</h3>
+	<d-box theme="light">
+		<d-text asterisk>(The auto-treat-catcher is ready to nab anything in range.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dancingsanta">
+	<h2>Dancing Santas</h2>
+
+	<h3 id="noelle">If Noelle is in the party</h3>
+	<h4>First time</h4>
+	<p class="note">The Santa is activated.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Hahaha!!! What the heck is this!?</d-text>
+		<d-box>
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text>My, mom collects them...</d-text>
+		</d-box>
+	</d-box>
+	<p class="note">The Santa keeps dancing/laughing.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Okay. How the hell do you turn it off.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Umm, just hold down the button!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Though, for some weird reason, turning it off takes power?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>So it takes forever on the low battery ones, faha.</d-text>
+	</d-box>
+
+	<h4>Second time</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="I"></d-sprite>
+		<d-text asterisk>(There wouldn't be so many Santas with dead batteries...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="H"></d-sprite>
+		<d-text asterisk>(If Kris hadn't glued the cases shut trying to "starve them"...)</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<p class="note">The Santa starts or stops with no commentary.</p>
+
+	<hr>
+
+	<h3 id="dancingsantanotelle">If Noelle is not in the party</h3>
+	<p class="note">The Santa starts or stops with no commentary.</p>
+</section>
+
+<!-- 2F -->
+<section class="d-section" id="snowflakes">
+	<h2>Snowflakes</h2>
+
+	<h3 id="snowflakesnoelle">If Noelle is in the party</h3>
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>What's with the ninja shurakins?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>FAHAHA! Those are snowflakes, Susie!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>We made them from paper in Toriel's class a long time ago...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="B"></d-sprite>
+		<d-text asterisk>... then why are they metal?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="1"></d-sprite>
+		<d-text asterisk>Oh.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="0"></d-sprite>
+		<d-text asterisk>My mom had them... bronzed.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Kris, where the hell are YOUR shurakins?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Umm, Kris overcut their snowflake and it fell apart.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+		<d-text asterisk>(I did make a new one for them, but...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="snowflakesnotelle">If Noelle is not in the party</h3>
+	<d-box theme="light">
+		<d-text asterisk>(It's Noelle's absurdly dangerous ninja weapon collection.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dessdoor">
+	<h2>Dess's door</h2>
+
+	<h3 id="dessdoornoelle">If Noelle is in the party</h3>
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Hey, what's in here? Looks, uh... suspicious.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+		<d-text asterisk>Umm, sorry... guests aren't allowed in there.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Cool, sounds, uh, suspicious.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+		<d-text asterisk>(It's just my sister's room, but...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dessdoornotelle">If Noelle is not in the party</h3>
+	<d-box theme="light">
+		<d-text asterisk>(It's Dess's room. Technically, you could just walk in.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dessdoorpost">After Carol comes home</h3>
+	<p>Available only on the normal route, since Weird Route boots you out of the house right after the bathroom scene.</p>
+	<d-box theme="light">
+		<d-text asterisk>(No reason to enter.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="tree">
+	<h2>Miniature tree</h2>
+
+	<d-box theme="light">
+		<d-text asterisk>(It's a tree that would potentially fall down if you climbed it.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="bathroomdoor">
+	<h2>Bathroom door</h2>
+
+	<h3 id="bathroomdoorinitial">Initial</h3>
+	<h4>First time when Noelle is in the party</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>(Kris is staring super intense... this room has gotta be it.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Sorry Noelle, but we gotta go in here...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+		<d-text asterisk>To... to the bathroom?</d-text>
+		<d-box>
+			<d-sprite speaker="Susie" emotion="5"></d-sprite>
+			<d-text>(Dammit, Kris!)</d-text>
+		</d-box>
+	</d-box>
+
+	<h4>Otherwise</h4>
+	<d-box theme="light">
+		<d-text asterisk>(It's the bathroom door.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bathroomdoorpost">After Carol comes home</h3>
+	<p>Available only on the normal route, since Weird Route boots you out of the house right after the bathroom scene.</p>
+	<d-box theme="light">
+		<d-text asterisk>(No reason to enter.)</d-text>
+	</d-box>
+</section>
+
+<!-- 3F -->
+<section class="d-section" id="pillow">
+	<h2>Heart-shaped pillow</h2>
+
+	<h3 id="pillownoelle">If Noelle is in the party</h3>
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>My mom just... collects heart pillows for some reason.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="H"></d-sprite>
+		<d-text asterisk>(When Kris was little, they'd take one of these...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="I"></d-sprite>
+		<d-text asterisk>(Then pretend to "rip out their heart" and chase me.)</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>My mom just loves red heart-shaped objects?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="pillownotelle">If Noelle is not in the party</h3>
+	<d-box theme="light">
+		<d-text asterisk>(It's a heart or human-soul shaped pillow, depending on your opinion.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="rudycaroldoor">
+	<h2>Rudy and Carol's door</h2>
+
+	<h3 id="rudycaroldoornoelle">If Noelle is in the party</h3>
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>(click...) Yep... It's locked, all right.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Noelle, you give it a shot.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="I"></d-sprite>
+		<d-text asterisk>Um, o-okay? (... why are we trying to open my parents' room?)</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="light">
+		<d-text asterisk>(You and Susie continue to try to open the locked door in front of Noelle.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="rudycaroldoornotelle">If Noelle is not in the party</h3>
+	<d-box theme="light">
+		<d-text asterisk>(It's locked.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="rudycaroldoorpost">After Carol comes home</h3>
+	<p>Available only on the normal route, since Weird Route boots you out of the house right after the bathroom scene.</p>
+	<d-box theme="light">
+		<d-text asterisk>(No reason to enter.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="treatlauncher">
+	<h2>Treat launcher</h2>
+	<p>Unused; seems to have been intended as a combination with the treat catcher. It would also have been accompanied with a table-top fan placed nearby; this fan could've been turned on and off.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="B"></d-sprite>
+		<d-text asterisk>What is this, a tennis ball machine?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Close! It's a holiday treat launcher with automatic scheduling!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="0"></d-sprite>
+		<d-text asterisk>Just one click, and...</d-text>
+	</d-box>
+	<p class="note">The treat launcher activates, sending a treat flying past the fan. If the fan is on, the treat collides with the fan blades. Otherwise, the treat is caught by the treat catcher.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="J"></d-sprite>
+		<d-text asterisk>Just goes to show you my dad's sense of humor, faha...</d-text>
+	</d-box>
+</section>
