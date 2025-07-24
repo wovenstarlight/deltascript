@@ -1,0 +1,40 @@
+---
+title: Encounters
+
+description: >
+  <p>Flavor text, dialogue, and ACT responses for combat encounters.</p>
+
+toc:
+  -
+    id: chapter1
+    name: Chapter 1
+
+items:
+  -
+    id: chapter1
+    name: Chapter 1
+    sublist:
+      -
+        url: dummy
+        name: Dummy
+      -
+        url: rudinn
+        name: Rudinn
+      -
+        url: hathy
+        name: Hathy
+---
+{% for section in page.items -%}
+<section class="d-section" id="{{ section.url }}">
+	<h2>{{ section.name }}</h2>
+	{% assign sectionurl = "/misc/encounters/" | append: section.url -%}
+
+	<ul>
+		{% for item in section.sublist -%}
+		{% include nested_list_item parent=sectionurl this=item %}
+		{%- else -%}
+		<li class="gray">To be added!</li>
+		{% endfor %}
+	</ul>
+</section>
+{% endfor -%}
