@@ -95,7 +95,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* `/darkitems` - Consumables, key items, etc. Descriptions, usage text and reactions from the party members. Shop descriptions too, if we can find them?
 	* ~~`/lightitems` - Light World items. Crosslink to Dark World equivalents.~~ DONE up to Chapter 4
 	* ~~`/equipment` - Weapons and armor. Descriptions, reactions from the party members, shop descriptions. LW/DW equivalents.~~ DONE up to Chapter 4
-	* `/combat` - Encounters... Check descriptions, ACT descriptions, etc. This is probably gonna have a ton of subpages, I'd guess one for every potential enemy. At the very least, the big story-critical encounters (e.g. all boss fights) would need their own subpages which the `/chapters` pages could then link to.
+	* `/encounters` - Check descriptions, ACT descriptions, etc. This is probably gonna have a ton of subpages, I'd guess one for every potential enemy. At the very least, the big story-critical encounters (e.g. all boss fights) would need their own subpages which the `/chapters` pages could then link to.
 		* Include disambiguation pages for the following. Maybe we give them more descriptive names...? Double-check the URLs before creating the disambigs
 			* `/lancer`: initial fight vs kris and susie, susie & lancer vs kris & ralsei, lancer vs susie
 			* `/berdly`: coaster fight, alley fight, queen fight with plug-controlled berdly
