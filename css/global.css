@@ -32,6 +32,8 @@
 	background-color: black;
 	color: white;
 	line-height: 1.5;
+	/* Don't smooth pixels */
+	image-rendering: pixelated;
 
 	--maxwidth: 992px;
 
@@ -47,8 +49,14 @@
 	/* Custom */
 	--gray: #aaa;
 	--lightyellow: #ffff80;
-	/* Don't smooth pixels */
-	image-rendering: pixelated;
+	/* Character colors, picked off their Dark World sprites */
+	--kris: #75fbed;
+	--susie: #f883d7;
+	--ralsei: #4dcc8e;
+	--noelle: #ffce32; /* actually this one is Light World */
+	--berdly: #46b3fb;
+	--lancer: #78ade1; /* lightened for readability from #406080 */
+	--queen: #00a2e8;
 }
 h1, h2, h3, h4, h5, h6 { font-weight: normal }
 h2, h3, h4, h5, h6 {
@@ -149,6 +157,7 @@ hr {
 .gray { color: var(--gray) }
 .lightyellow { color: var(--lightyellow) }
 
+/* Dark World 3D effect */
 [theme=dark], [theme=objbattle], [theme=battlemenu] {
 	.cR, .red,
 	.cB, .blue,
@@ -181,24 +190,29 @@ hr {
 	.gray { --mycolor: var(--gray) }
 	.lightyellow { --mycolor: var(--lightyellow) }
 }
+
+/* Party colors */
+.kris { color: var(--kris) }
+.susie { color: var(--susie) }
+.ralsei { color: var(--ralsei) }
+.noelle { color: var(--noelle) }
+.berdly { color: var(--berdly) }
+.lancer, .king { color: var(--lancer) }
+.queen { color: var(--queen) }
 /* Health bar colors */
-.health.kris { color: #01ffff }
-.health.susie { color: #ff00ff }
-.health.ralsei { color: #01ff00 }
-.health.noelle { color: #ffff00 }
+.health {
+	--kris: #01ffff;
+	--susie: #ff00ff;
+	--ralsei: #01ff00;
+	--noelle: #ffff00;
+}
 /* Menu portait colors */
-.menu.kris { color: #00a2e8 }
-.menu.susie { color: #ea79c8 }
-.menu.ralsei { color: #b5e61d }
-.menu.noelle { color: #ffff00 } /*same as health bar*/
-/* Picked off their Dark World sprites */
-.kris { color: #75fbed }
-.susie { color: #f883d7 }
-.ralsei { color: #4dcc8e }
-.noelle { color: #ffce32 } /* actually this one is Light World */
-.berdly { color: #46b3fb }
-.lancer, .king { color: #78ade1 } /* lightened for readability from #406080 */
-.queen { color: #00a2e8 }
+.menu {
+	--kris: #00a2e8;
+	--susie: #ea79c8;
+	--ralsei: #b5e61d;
+	--noelle: #ffff00; /*same as health bar*/
+}
 /* #endregion */
 .text-center { text-align: center }
 img {
@@ -348,10 +362,10 @@ body.dim {
 	--orange: #b6722e;
 	--lightyellow: #bbbb5e;
 
-	.kris { color: #6a7bc4 }
-	.susie { color: #cb4ed3 }
-	.ralsei { color: #429e76 }
-	.noelle { color: #d87d50 } /* actually this one is Light World */
+	--kris: #6a7bc4;
+	--susie: #cb4ed3;
+	--ralsei: #429e76;
+	--noelle: #d87d50;
 }
 /* #endregion */
 
@@ -601,13 +615,13 @@ d-box, d-choices {
 				display: block;
 				margin-block-end: 0.4em;
 
-				&.kris { color: #3b4380 } /* blended for readability from too-dark DW hair #0b0b3b and too-light DW shadow #6a7bc4 */
-				&.susie { color: #88176a }
-				&.ralsei { color: #38705e }
-				&.noelle { color: #b15d34 } /* darkened for readability from LW skintone #d87d50*/
-				&.berdly { color: #36394b }
-				&.lancer, &.king { color: #406080 }
-				&.queen { color: #1263bc }
+				--kris: #3b4380; /* blended for readability from too-dark DW hair #0b0b3b and too-light DW shadow #6a7bc4 */
+				--susie: #88176a;
+				--ralsei: #38705e;
+				--noelle: #b15d34; /* darkened for readability from LW skintone #d87d50*/
+				--berdly: #36394b;
+				--lancer: #406080;
+				--queen: #1263bc;
 			}
 		}
 
