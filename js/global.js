@@ -116,10 +116,54 @@ class DialogueSprite extends HTMLElement {
 customElements.define("d-sprite", DialogueSprite);
 
 
+let shake, last;
+const SHAKE_CLASSES = ["s1", "s2", "s3", "s4"];
+function resetShake() {
+	if (shake) shake.setAttribute("aria-label", shake.textContent);
+	shake = document.createElement("span");
+	shake.classList.add("shake");
+}
+function randomShake() {
+	let index = Math.floor(Math.random() * SHAKE_CLASSES.length);
+	while (index === last) index = Math.floor(Math.random() * SHAKE_CLASSES.length);
+	// Index now NOT the same as the last
+	last = index;
+	return SHAKE_CLASSES[index];
+}
 /** A line of text for a dialogue box. */
 class DialogueText extends HTMLElement {
 	constructor() {
 		super()
+	}
+
+	connectedCallback() {
+		if (!this.getAttribute("effect")?.startsWith("shake")) return;
+
+		setTimeout(() => {
+			resetShake();
+			const s = this.innerText;
+			this.innerText = "";
+
+			for (const char of s) {
+				if (!char.trim().length) {
+					// Hit a space. Add any current text and the space, then get a new shake/wave container for the next word
+					if (shake.innerHTML.length) this.append(shake);
+					this.append(char);
+					if (shake.innerHTML.length) resetShake();
+					continue;
+				}
+
+				const charShake = document.createElement("span");
+				charShake.innerText = char;
+				charShake.classList.add(randomShake());
+				shake.append(charShake);
+			}
+
+			if (shake.innerHTML.length) {
+				this.append(shake);
+				resetShake();
+			}
+		}, 0);
 	}
 }
 customElements.define("d-text", DialogueText);

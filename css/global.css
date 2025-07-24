@@ -225,6 +225,61 @@ img {
 		body.compact & { margin-block: 0.5em }
 	}
 }
+/* #region Shaky text effect */
+@keyframes shake {
+	0% { transform: var(--shake-state-1) }
+	33% { transform: var(--shake-state-2) }
+	66% { transform: var(--shake-state-3) }
+	100% { transform: var(--shake-state-1) }
+}
+/* Do NOT break in the middle of a word.
+ * Limitations: Now you gotta make bordering punctuation shake too otherwise it's prone to breaking weird */
+.shake {
+	display: inline-flex;
+	flex-wrap: wrap;
+	text-indent: 0;
+	
+	d-text[asterisk]:has(&) {
+		text-indent: -1ch;
+		&::before { display: inline-block }
+	}
+
+	[effect=shake-veryslight][asterisk]:has(&)::before, [effect=shake-veryslight] & { --intensity: 0.3 }
+	[effect=shake-slight][asterisk]:has(&)::before, [effect=shake-slight] & { --intensity: 0.6 }
+	[effect=shake-hard][asterisk]:has(&)::before, [effect=shake-hard] & { --intensity: 1.8 }
+
+	body:not(.noanim) & span, body:not(.noanim) d-text[asterisk]:has(&)::before {
+		animation-name: shake;
+		animation-duration: 0.2s;
+		animation-timing-function: steps(2, jump-none);
+		animation-iteration-count: infinite;
+		animation-delay: -0.45s;
+	}
+	body.noanim & span, body.noanim d-text[asterisk]:has(&)::before {
+		font-style: italic;
+	}
+	.s1, d-text[asterisk]:has(&)::before {
+		--shake-state-1: translate(calc(var(--intensity, 1) * 3.2%), calc(var(--intensity, 1) * -3.2%));
+		--shake-state-2: translate(calc(var(--intensity, 1) * 2.2%), calc(var(--intensity, 1) * 0%));
+		--shake-state-3: translate(calc(var(--intensity, 1) * -4%), calc(var(--intensity, 1) * 3.6%));
+	}
+	.s2 {
+		--shake-state-1: translate(calc(var(--intensity, 1) * -0.6%), calc(var(--intensity, 1) * 3.9%));
+		--shake-state-2: translate(calc(var(--intensity, 1) * -3.2%), calc(var(--intensity, 1) * -1.4%));
+		--shake-state-3: translate(calc(var(--intensity, 1) * 4.8%), calc(var(--intensity, 1) * -1.2%));
+	}
+	.s3 {
+		--shake-state-1: translate(calc(var(--intensity, 1) * 4.4%), calc(var(--intensity, 1) * 3.5%));
+		--shake-state-2: translate(calc(var(--intensity, 1) * -3.8%), calc(var(--intensity, 1) * 1.8%));
+		--shake-state-3: translate(calc(var(--intensity, 1) * 2.2%), calc(var(--intensity, 1) * 3%));
+	}
+	.s4 {
+		--shake-state-1: translate(calc(var(--intensity, 1) * 4.8%), calc(var(--intensity, 1) * -0.2%));
+		--shake-state-2: translate(calc(var(--intensity, 1) * -3.5%), calc(var(--intensity, 1) * -0.2%));
+		--shake-state-3: translate(calc(var(--intensity, 1) * -4.2%), calc(var(--intensity, 1) * -4.6%));
+	}
+}
+/* #endregion */
 /* #endregion */
 
 /* #region Accessibility */
