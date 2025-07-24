@@ -739,6 +739,11 @@ d-box {
 				top: 50%;
 				transform: translate(-50%, -50%);
 			}
+
+			@media (min-width: 30rem) {
+				&[place~=bottom][place~=center-x] { bottom: -1.7em }
+				&[place~=top][place~=center-x] { top: -1.7em }
+			}
 		}
 	}
 
