@@ -1,0 +1,8 @@
+{% capture link -%}
+https://
+{{- include.wiki | default: "deltarune" -}}
+.wiki/w/
+{{- include.page | replace: " ", "_" -}}
+{%- endcapture -%}
+
+{{ link | uri_escape }}
