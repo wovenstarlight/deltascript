@@ -635,6 +635,21 @@ d-box, d-choices {
 				var(--black);
 		}
 
+		&[theme=caller] {
+			--border-width: 1rem;
+			border-image-source: url("../assets/images/textbox/spikebubble.png");
+			border-image-repeat: stretch round;
+			border-image-slice: 12 8;
+			min-height: calc(var(--baseheight) + 1em);
+			width: fit-content;
+			margin: 1em;
+			padding: 0.5em 1em;
+			display: flex;
+			flex-direction: column;
+			font-family: "DeltaFont Combat", var(--font);
+			font-size: 1em;
+		}
+
 		&.hideoverflow {
 			white-space: pre;
 			max-width: 100%;
