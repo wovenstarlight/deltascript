@@ -17,6 +17,11 @@
 			Dim colors
 		</label>
 
+		<label for="toggle-anim" class="toggle">
+			<input type="checkbox" id="toggle-anim" class="visually-hidden">
+			Disable animations
+		</label>
+
 		{%- comment %}
 		<label for="toggle-opendyslexic" class="toggle">
 			<input type="checkbox" id="toggle-opendyslexic" class="visually-hidden">

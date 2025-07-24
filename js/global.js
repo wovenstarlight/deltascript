@@ -425,6 +425,18 @@ function setUp() {
 		document.getElementById("toggle-compact").checked = true;
 	}
 
+	// Disable animations
+	document.getElementById("toggle-anim").addEventListener("change", e => {
+		e.currentTarget.checked ? document.body.classList.add("noanim") : document.body.classList.remove("noanim");
+		localStorage.setItem("noAnimations", e.currentTarget.checked ? "on" : "");
+	});
+	// Autofill on initial load; auto-enable for prefers-reduced-motion havers
+	if (localStorage.getItem("noAnimations")?.length || window.matchMedia("(prefers-reduced-motion)").matches) {
+		// Animations are DISABLED
+		document.body.classList.add("noanim");
+		document.getElementById("toggle-anim").checked = true;
+	}
+
 	// Dim mode
 	document.getElementById("toggle-dim").addEventListener("change", e => {
 		e.currentTarget.checked ? document.body.classList.add("dim") : document.body.classList.remove("dim");
