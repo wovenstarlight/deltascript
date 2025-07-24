@@ -8,6 +8,7 @@
 			{{- site.title -}}
 		{%- endif -%}
 	</title>
+	<meta name="description" content="{{ page.description | default: site.description | strip_html | strip }}">
 	<link rel="stylesheet" href="{{ 'css/global.css' | relative_url }}">
 	<script>const BASE_URL = "{{ site.baseurl }}";</script>
 	<script src="{{ 'js/global.js' | relative_url }}"></script>
