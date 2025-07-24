@@ -78,7 +78,7 @@ items:
 
 	<ul>
 		{% for item in section.sublist -%}
-		{% include nested_list_item.html parent=sectionurl this=item %}
+		{% include nested_list_item parent=sectionurl this=item %}
 		{%- else -%}
 		<li class="gray">To be added!</li>
 		{% endfor %}

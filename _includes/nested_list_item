@@ -19,7 +19,7 @@
 			{% if include.this.url -%}
 				{% assign parenturl = parenturl | append: mysplit | append: include.this.url -%}
 			{%- endif %}
-			{% include nested_list_item.html parent=parenturl this=subitem %}
+			{% include nested_list_item parent=parenturl this=subitem %}
 		{% endfor %}
 	</ul>
 	{%- endif %}

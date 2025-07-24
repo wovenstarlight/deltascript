@@ -5,7 +5,7 @@
 	{%- if include.item.subheadings %}
 	<ol>
 		{%- for subheading in include.item.subheadings %}
-			{%- include toc_item.html item=subheading %}
+			{%- include toc_item item=subheading %}
 		{%- endfor %}
 	</ol>
 	{%- endif %}

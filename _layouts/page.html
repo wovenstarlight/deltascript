@@ -17,7 +17,7 @@ layout: default
 		<summary>Sources</summary>
 		<ul>
 			{%- for source in page.sources %}
-			{% include code_source.html src=source %}
+			{% include code_source src=source %}
 			{%- endfor %}
 		</ul>
 	</details>
@@ -28,7 +28,7 @@ layout: default
 		<summary>Contents</summary>
 		<ol>
 			{%- for heading in page.toc %}
-			{% include toc_item.html item=heading %}
+			{% include toc_item item=heading %}
 			{%- endfor %}
 		</ol>
 	</details>
