@@ -56,6 +56,9 @@ toc:
           -
             id: ft-actnamehere
             name: Act_name_here
+          -
+            id: ft-itemnamehere
+            name: Act_name_here
   -
     id: dialogue
     name: Dialogue
@@ -81,63 +84,63 @@ Then check that the obj whose file it appears in actually exists in the canonica
 <section class="d-section" id="flavortext">
 	<h2>Flavor text</h2>
 
-	<h3>Standard</h3>
+	<h3 id="ft-standard">Standard</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>TODO</d-text>
 	</d-box>
 
 	<hr>
 
-	<h3>Initial encounter</h3>
-	<h4>Solo</h4>
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>TODO</d-text>
 	</d-box>
 
-	<h4>With Other_enemy_name</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>TODO</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3>Tired</h3>
+	<h4 id="encounter-otherenemyname">With Other_enemy_name</h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>TODO</d-text>
 	</d-box>
 
 	<hr>
 
-	<h3>Low HP</h3>
+	<h3 id="ft-tired">Tired</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>TODO</d-text>
 	</d-box>
 
 	<hr>
 
-	<h3>Spareable</h3>
+	<h3 id="ft-lowhp">Low HP</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>TODO</d-text>
 	</d-box>
 
 	<hr>
 
-	<h3>Check</h3>
+	<h3 id="ft-spareable">Spareable</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>TODO</d-text>
 	</d-box>
 
 	<hr>
 
-	<h3>Act_name_here</h3>
+	<h3 id="ft-check">Check</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TODO</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-actnamehere">Act_name_here</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>TODO</d-text>
 	</d-box>
 	<p class="note">Name_goes_here gains 100% <span class="yellow">Mercy</span> / becomes <span class="blue">Tired</span> / is affected otherwise.</p>
-	
+
 	<hr>
 
-	<h3>Using Item_name_here</h3>
+	<h3 id="ft-itemnamehere">Using Item_name_here</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>TODO</d-text>
 	</d-box>
@@ -147,7 +150,7 @@ Then check that the obj whose file it appears in actually exists in the canonica
 <section class="d-section" id="dialogue">
 	<h2>Dialogue</h2>
 
-	<h3>Standard</h3>
+	<h3 id="dialogue-standard">Standard</h3>
 	<d-box theme="battletalk">
 		<d-speaker>Name_goes_here</d-speaker>
 		<d-text>TODO</d-text>
@@ -155,7 +158,7 @@ Then check that the obj whose file it appears in actually exists in the canonica
 
 	<hr>
 
-	<h3>Act_name_here</h3>
+	<h3 id="dialogue-actnamehere">Act_name_here</h3>
 	<d-box theme="battletalk">
 		<d-speaker>Name_goes_here</d-speaker>
 		<d-text>TODO</d-text>
