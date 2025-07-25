@@ -1,0 +1,236 @@
+---
+title: Rabbick encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Rabbick.</p>
+
+sources:
+  -
+    name: gml_Object_obj_rabbick_enemy_Step_0
+    chapters: [1]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [1]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: Flavor text
+    subheadings:
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-rabbick
+            name: With 1 or 2 other Rabbicks
+          -
+            id: encounter-rudinn
+            name: With Rudinn
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: ft-check
+            name: Check
+          -
+            id: ft-blowon
+            name: Blow On / BreathAll
+          -
+            id: ft-warning
+            name: Warning
+  -
+    id: dialogue
+    name: Dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-standard
+        name: Standard
+        subheadings:
+          -
+            id: dialogue-initial
+            name: Initial
+          -
+            id: dialogue-isblown
+            name: After being cleaned
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(global\.encounterno = |myencounter = |scr_encountersetup\()(16|17|24|32)
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+
+encounters 16/17/24/32; 24 is unused
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>Flavor text</h2>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rabbick is looking for a couch to get stuck under.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rabbick emits a musty groan.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rabbick ambiently damages the soil.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The battlefield is filled with the smell of dusty mustard.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rabbick slithered in the way!</d-text>
+	</d-box>
+
+	<h4 id="encounter-rabbick">With 1 or 2 other Rabbicks</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rabbicks slithered in the way!</d-text>
+	</d-box>
+
+	<h4 id="encounter-rudinn">With Rudinn</h4>
+	<p>Unused. Appears to be intended for an unimplemented encounter in the room where <a href="{{ '/misc/encounters/clover' | relative_url }}">Clover is first encountered</a>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rabbick slithered in the way!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rabbick is starting to look wispy.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<p>Unused. (Got assigned to the wrong variable.)</p> <!-- global.msg instead of global.battlemsg, if you were wondering --></p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rabbick is now nice and clean.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-check">Check</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>RABBICK - AT 8 DF 1</d-text>
+		<d-text asterisk>This dusty bunny needs a bit&  of spring cleaning.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-blowon">Blow On / BreathAll</h3>
+	<h4>Upon usage</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press [CONFIRM] repeatedly to blow air!</d-text>
+	</d-box>
+
+	<h4>First time successfully blowing on Rabbick</h4>
+	<p class="note">If enough air is blown, Rabbick gains 100% <span class="yellow">Mercy</span> and becomes clean.</p>
+
+	<h4>Second time successfully blowing on Rabbick</h4>
+	<h5>If using Blow On</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris breathed on the Rabbick.</d-text>
+		<d-text asterisk>It blew away entirely...</d-text>
+	</d-box>
+	<p class="note">Rabbick is instantly spared.</p>
+
+	<h5>If using BreathAll</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The bunnies were blown away!</d-text>
+	</d-box>
+	<p class="note">This Rabbick and any other clean Rabbicks are instantly spared.</p>
+
+	<hr>
+
+	<h3 id="ft-warning">Warning</h3>
+	<p>Intended to be available when Susie is in the party, before joining the party for real. Unused as Susie has already left the party by the time Rabbicks are encountered.</p>
+	<p></p>
+	<p class="note">Susie's attacks will miss from now on.</p>
+
+	<h4>When against a lone Rabbick</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei warned Rabbick about Susie.</d-text>
+		<d-text asterisk>The enemy went on guard...</d-text>
+	</d-box>
+
+	<h4>When against multiple enemies</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei warned the enemies about Susie.</d-text>
+		<d-text asterisk>Everyone went on guard.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<h4 id="dialogue-initial">Initial</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text>Snitter<span class="break"></span> snatter<span class="break"></span> what's the<span class="break"></span> matter</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text>Duruuuu---</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text>Hop, hop</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text>Meow.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text>Bunnies are<span class="break"></span> the sequel<span class="break"></span> to frogs.</d-text>
+	</d-box>
+
+	<h4 id="dialogue-isblown">After being cleaned</h4>
+	<p>The first of these has a doubled chance of showing up (2/5 instead of 1/5).</p>
+	<d-box theme="battletalk">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text>A soft and<span class="break"></span> clean boy.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text>A refreshing<span class="break"></span> boy.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text>A sweet and<span class="break"></span> fresh girl.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text>A nice and<span class="break"></span> tidy girl.</d-text>
+	</d-box>
+</section>

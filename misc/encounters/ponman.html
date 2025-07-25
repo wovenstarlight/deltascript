@@ -1,0 +1,193 @@
+---
+title: Ponman encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Ponman.</p>
+
+sources:
+  -
+    name: gml_Object_obj_ponman_enemy_Step_0
+    chapters: [1]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [1]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: Flavor text
+    subheadings:
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-ponmen
+            name: With 1 or 2 other Ponmen
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: ft-check
+            name: Check
+          -
+            id: ft-goodnight
+            name: Goodnight
+          -
+            id: ft-lullaby
+            name: Lullaby
+          -
+            id: ft-warning
+            name: Warning
+  -
+    id: dialogue
+    name: Dialogue
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(global\.encounterno = |myencounter = |scr_encountersetup\()13
+For example, you can find instances of the Jigsawry/Rudinn/Hathy enconuter with the following:
+(global\.encounterno = |myencounter = |scr_encountersetup\()23
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>Flavor text</h2>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ponman advances one step at a time.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ponman listens politely, despite having no ears.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ponman seems hypnotized by your idle animation.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ponman gazes enigmatically.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like a pawn shop.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-ponmen">With 1 or 2 other Ponmen</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ponman drew near!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ponman can't keep its eye open.</d-text>
+	</d-box>
+
+	<h4>Unused "sleepy" variant</h4>
+	<p>Intended for when the "Lullaby" act was used on another Ponman in the encounter, making this one <span class="blue">Tired</span>. (Unused because it got assigned to the wrong variable.)</p> <!-- global.msg instead of global.battlemsg, if you were wondering --></p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The enemies became SLEEPY from Ralsei's lullaby!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ponman looks dilated.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<p>Unused. (Got assigned to the wrong variable.)</p> <!-- global.msg again -->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ponman is sleeping soundly.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-check">Check</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>PONMAN - AT 8 DF 0</d-text>
+		<d-text asterisk>Its nucleus doubles as an eyespot.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-goodnight">Goodnight</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You whispered goodnight to Ponman.</d-text>
+		<d-text asterisk>It fell asleep...</d-text>
+	</d-box>
+	<p class="note">Ponman falls asleep, gaining 100% <span class="yellow">Mercy</span>, though this can be lost if it's awoken by being attacked.</p>
+
+	<hr>
+
+	<h3 id="ft-lullaby">Lullaby</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei sang a soft and entrancing lullaby!</d-text>
+	</d-box>
+	<p class="note">Ralsei sings to the enemies.</p>
+	<hr class="hr2">
+	<h4>If Susie is on the team</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>PONMAN fell asleep!</d-text>
+		<d-text asterisk>SUSIE fell asleep!</d-text>
+		<d-text asterisk>The enemies became TIRED!</d-text>
+	</d-box>
+	<h4>If Susie is not on the team</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>PONMAN fell asleep!</d-text>
+		<d-text asterisk>The enemies became TIRED!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Ponman falls asleep, gaining 100% <span class="yellow">Mercy</span>, though this can be lost if it's awoken by being attacked. Any other enemies become <span class="blue">Tired</span>.</p>
+
+	<hr>
+
+	<h3 id="ft-warning">Warning</h3>
+	<p>Available before Susie joins the party for real.</p>
+	<p></p>
+	<p class="note">Susie's attacks will miss from now on.</p>
+
+	<h4>When against a lone Ponman</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei warned Ponman about Susie.</d-text>
+		<d-text asterisk>The enemy went on guard...</d-text>
+	</d-box>
+
+	<h4>When against multiple enemies</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei warned the enemies about Susie.</d-text>
+		<d-text asterisk>Everyone went on guard.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+
+	<p>No dialogue; Ponmen do not talk.</p>
+</section>
