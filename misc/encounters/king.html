@@ -1,0 +1,1414 @@
+---
+title: King encounter
+
+description: >
+  <p>Flavor text and dialogue for the battle against King.</p>
+
+sources:
+  -
+    name: gml_Object_obj_kingcutscene_Step_0
+    chapters: [1]
+    note: prefight/postfight cutscene
+  -
+    name: gml_Object_obj_king_boss_Step_0
+    chapters: [1]
+    note: flavor text and dialogue
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [1]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: prefight
+    name: Before the fight
+  -
+    id: flavortext
+    name: Flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: ft-check
+            name: Check
+          -
+            id: ft-talk
+            name: Talk
+          -
+            id: ft-courage
+            name: Courage
+          -
+            id: ft-talk-susie
+            name: Talk (with Susie)
+          -
+            id: ft-redbuster
+            name: Red Buster
+          -
+            id: ft-talk-ralsei
+            name: Talk (with Ralsei)
+          -
+            id: ft-dualheal
+            name: Dual Heal
+  -
+    id: dialogue
+    name: Dialogue
+    subheadings:
+      -
+        id: dialogue1
+        name: Turn 1
+      -
+        id: dialogue2
+        name: Turn 2
+      -
+        id: dialogue3
+        name: Turn 3
+      -
+        id: dialogue4
+        name: Turn 4
+      -
+        id: dialogue5
+        name: Turn 5
+      -
+        id: dialogue6
+        name: Turn 6
+      -
+        id: dialogue7
+        name: Turn 7
+      -
+        id: dialogue8
+        name: Turn 8
+      -
+        id: dialogue9
+        name: Turn 9
+      -
+        id: dialogue10
+        name: Turn 10
+      -
+        id: dialogue11
+        name: Turn 11
+      -
+        id: dialogue12
+        name: Turn 12
+      -
+        id: dialogue13
+        name: Turn 13
+      -
+        id: dialogue14
+        name: Turn 14
+      -
+        id: dialogue15
+        name: Turn 15
+  -
+    id: postfight
+    name: After the fight
+    subheadings:
+      -
+        id: defeat-nonviolent
+        name: If no Darkners were lost previously
+      -
+        id: defeat-violent
+        name: If any Darkners were lost
+---
+<section class="d-section" id="prefight">
+	<h2>Before the fight</h2>
+
+	<p class="note">Kris, Susie, and Ralsei step out onto the Card Castle rooftop. Lancer is visible in front of them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Hey, there's Lancer...!</d-text>
+	</d-box>
+
+	<p class="note">The camera follows Lancer as he approaches King, cast in shadow.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Father!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>Lancer, my son.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>Have you dispatched the Lightners, as I commanded?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="7"></d-sprite>
+		<d-text asterisk>N... No, b-but...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>I did even better!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>It turns out we don't actually have to fight them!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>They said they could just talk to you, and...</d-text>
+	</d-box>
+
+	<p class="note">King turns sharply towards Lancer.</p>
+
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>They're ALIVE?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Yes, and I think you'll like them a lot!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>There's Susie, she's very purple and strong, and...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>WHERE ARE THEY NOW?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="4"></d-sprite>
+		<d-text asterisk>Ummm...</d-text>
+	</d-box>
+
+	<p class="note">Lancer turns to the left. Kris, Susie, and Ralsei approach.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="1"></d-sprite>
+		<d-text asterisk>Hey.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>It's nice to meet you!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>... Lancer.</d-text>
+		<d-text asterisk>Lancer, my son.</d-text>
+	</d-box>
+
+	<p class="note">Lancer turns to face King.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="7"></d-sprite>
+		<d-text asterisk>Y... Yes, father?</d-text>
+	</d-box>
+
+	<p class="note">King approaches Lancer and crouches down in front of him.</p>
+
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>Do you remember what I told you?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="5"></d-sprite>
+		<d-text asterisk>D... Don't... get too attached?</d-text>
+	</d-box>
+
+	<p class="note">King puts a hand on Lancer's shoulder.</p>
+
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>You have failed.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>They have poisoned you with their sentimentality.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>Free yourself, Lancer.</d-text>
+		<d-text asterisk>They care NOT for you.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>Their only goal is to destroy our glorious Fountain.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>They. Are. Scum.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="A"></d-sprite>
+		<d-text asterisk>N... no they aren't...</d-text>
+	</d-box>
+
+	<p class="note">King stands up, Lancer seiezd in one hand. Susie and Ralsei are stunned.</p>
+
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>WHAT DID YOU SAY!?</d-text>
+	</d-box>
+
+	<p class="note">Susie draws her axe and steps forward, pointing threateningly at King.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Let him go.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>Ha ha ha ha...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>You want me to LET HIM GO!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>Then how about this...?</d-text>
+	</d-box>
+
+	<p class="note">King holds Lancer to the side, over the edge of the roof.</p>
+
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>I'll drop him off the edge and let him splatter...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>Unless you all KNEEL and learn your place!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>What will it be, Lightners!?</d-text>
+	</d-box>
+
+	<p class="note">A pause. Susie puts away her axe and backs up.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="5"></d-sprite>
+		<d-text asterisk>D-don't listen to him Susie, he'll... he'll...</d-text>
+	</d-box>
+
+	<p class="note">The party kneels. The King takes a step forward.</p>
+
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>Now WATCH, Lancer...!</d-text>
+	</d-box>
+
+	<p class="note">Spade bullets appear next to each of the party members, poised to attack.</p>
+
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>SEE what happens when you befriend Lightners!</d-text>
+	</d-box>
+
+	<p class="note">Lancer raises his hand with a flare of magic. From behind King comes a single spade bullet that hits him in the back, knocking him forward and making him lose his grip on Lancer, who drops to the ground.</p>
+
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>Wh... What the!?</d-text>
+	</d-box>
+
+	<p class="note">Lancer rushes away, heading down from the rooftop. The party members stand.</p>
+
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>YOU... YOU TRAITOR...!</d-text>
+		<d-text asterisk>COME BACK HERE...!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Alright, enough already.</d-text>
+	</d-box>
+
+	<p class="note">The party members draw their weapons.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="3"></d-sprite>
+		<d-text asterisk>Who the hell do you think you are?</d-text>
+	</d-box>
+
+	<p class="note">King takes a step back, bending over slightly. </p>
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>Heheh...</d-text>
+		<d-text asterisk>Heheheheh...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>To my people, I am a hero...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King</d-speaker>
+		<d-text asterisk>... to you?</d-text>
+	</d-box>
+
+	<p class="note">The shadows fall away from King as he stands up straight, holding his stomach-mouth's spade-ended tongue in preparation for battle.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="4"></d-sprite>
+		<d-text asterisk>I'M THE BAD GUY!!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="flavortext">
+	<h2>Flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>King blocked the way!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Darkness pours from the fountain.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>KING's mouths gave a berserk smile.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The battlefield is rumbling.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>KING's mouths babble indecipherably.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>KING's cape flutters weakly.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-check">Check</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>KING - Abandoned by the Lightners, his heart became cracked with hatred.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>He cannot be reasoned with, but don't give up...!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-talk">Talk</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You tried to reason with the King...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>Silence, Lightbringer!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>Your very existence goes against our own...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>By the Knight's will, I shall shatter your heart to pieces!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your will is changing...</d-text>
+		<d-text asterisk><span class="yellow">TALK</span> became <span class="yellow">COURAGE</span>!</d-text>
+	</d-box>
+	<p class="note">The Talk ACT is replaced by <a href="#ft-courage">Courage</a>.</p>
+
+	<hr>
+
+	<h3 id="ft-courage">Courage</h3>
+	<h4>Description</h4>
+	<d-box theme="battledesc">
+		<d-text>Defense Boost</d-text>
+		<d-text class="orange">25% TP</d-text>
+	</d-box>
+
+	<h4>Usage</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You encouraged the party!</d-text>
+		<d-text asterisk>The party's DEFENSE raised for this turn!</d-text>
+	</d-box>
+	<p class="note">King's attacks do 20% less damage.</p>
+
+	<hr>
+
+	<h3 id="ft-talk-susie">Talk (with Susie)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie tried to reason with the King...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="1"></d-sprite>
+		<d-text asterisk>Arright, listen up.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Lancer's my friend.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="C"></d-sprite>
+		<d-text asterisk>So if we can get by without hurting you, then...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>If I perish, so be it!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="King" emotion="4"></d-sprite>
+		<d-text asterisk>Show my son the monster you REALLY are!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="C"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="3"></d-sprite>
+		<d-text asterisk>Arright, you wanna see what I can do, huh?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie's will is changing...</d-text>
+		<d-text asterisk><span class="yellow">TALK</span> became <span class="yellow">RED BUSTER</span>!</d-text>
+	</d-box>
+	<p class="note">The Talk ACT is replaced by <a href="#ft-redbuster">Red Buster</a>.</p>
+
+	<hr>
+
+	<h3 id="ft-redbuster">Red Buster</h3>
+	<h4>Description</h4>
+	<d-box theme="battledesc">
+		<d-text>Red Damage</d-text>
+		<d-text class="orange">60% TP</d-text>
+	</d-box>
+
+	<h4>Usage</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your SOUL shined its power on Susie!</d-text>
+	</d-box>
+	<p class="note">Susie attacks.</p>
+
+	<hr>
+
+	<h3 id="ft-talk-ralsei">Talk (with Ralsei)</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei tried to reason with the King...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="B"></d-sprite>
+		<d-text asterisk>You might not realize it, but...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>This is a world where you don't have to fight.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>I know if we try, we can all find another way...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="King" emotion="6"></d-sprite>
+		<d-text asterisk>Such simple-minded platitudes...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>A shame you will not live to realize your naivety.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="King" emotion="4"></d-sprite>
+		<d-text asterisk>Now, perish with the pathetic LIGHTNERs you worship!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Sorry, my friends and I aren't going anywhere!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei's will is changing...</d-text>
+		<d-text asterisk><span class="yellow">TALK</span> became <span class="yellow">DUAL HEAL</span>!</d-text>
+	</d-box>
+	<p class="note">The Talk ACT is replaced by <a href="#ft-dualheal">Dual Heal</a>.</p>
+
+	<hr>
+
+	<h3 id="ft-dualheal">Dual Heal</h3>
+	<h4>Description</h4>
+	<d-box theme="battledesc">
+		<d-text>Heals everyone</d-text>
+		<d-text class="orange">50% TP</d-text>
+	</d-box>
+
+	<h4>Usage</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your SOUL shined its power on RALSEI!</d-text>
+	</d-box>
+	<p class="note">Ralsei heals all party members for 4 times their respective Magic stat.</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+	<p>Dialogue is scripted; the fight ends in at most 15 turns, with the below lines playing out in order.</p>
+
+	<h3 id="dialogue1">Turn 1</h3>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>How dare you<span class="break"></span> come here,<span class="break"></span> Lightners...?</d-text>
+	</d-box>
+
+	<h3 id="dialogue2">Turn 2</h3>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>You, that<span class="break"></span> left us in<span class="break"></span> the shadows,<span class="break"></span> stripped of<span class="break"></span> meaning...</d-text>
+	</d-box>
+
+	<h3 id="dialogue3">Turn 3</h3>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>You DARE<span class="break"></span> return<span class="break"></span> to torment us<span class="break"></span> once again?</d-text>
+	</d-box>
+
+	<h3 id="dialogue4">Turn 4</h3>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>Begone!</d-text>
+		<d-text>We have found<span class="break"></span> fresh<span class="break"></span> purpose.</d-text>
+	</d-box>
+
+	<h3 id="dialogue5">Turn 5</h3>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>For the<span class="break"></span> KNIGHT<span class="break"></span> has appeared.</d-text>
+	</d-box>
+
+	<h3 id="dialogue6">Turn 6</h3>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>The KNIGHT<span class="break"></span> that pulls<span class="break"></span> the Fountains<span class="break"></span> from the<span class="break"></span> Earth.</d-text>
+	</d-box>
+
+	<h3 id="dialogue7">Turn 7</h3>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>Holy<span class="break"></span> Fountains,<span class="break"></span> whose shadows<span class="break"></span> are creating<span class="break"></span> a new<span class="break"></span> world...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>OUR world.</d-text>
+	</d-box>
+
+	<h3 id="dialogue8">Turn 8</h3>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>Hahaha...</d-text>
+		<d-text>Do you see<span class="break"></span> now our NEW<span class="break"></span> purpose...?</d-text>
+	</d-box>
+
+	<h3 id="dialogue9">Turn 9</h3>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>Soon, this<span class="break"></span> world<span class="break"></span> shall be<span class="break"></span> blanketed<span class="break"></span> in darkness...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>And DARKNERS<span class="break"></span> shall RULE<span class="break"></span> it!</d-text>
+	</d-box>
+
+	<h3 id="dialogue10">Turn 10</h3>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>Then, you may<span class="break"></span> see what it is<span class="break"></span> like to live<span class="break"></span> in DESPAIR!</d-text>
+	</d-box>
+
+	<h3 id="dialogue11">Turn 11</h3>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>Now, enough<span class="break"></span> talk!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>Fall before<span class="break"></span> the chain of<span class="break"></span> justice!</d-text>
+	</d-box>
+
+	<h3 id="dialogue12">Turn 12</h3>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>... ha,<span class="break"></span> you're<span class="break"></span> quite strong,<span class="break"></span> aren't you!?</d-text>
+	</d-box>
+
+	<h3 id="dialogue13">Turn 13</h3>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>If I keep<span class="break"></span> fighting you<span class="break"></span> like this,<span class="break"></span> then...</d-text>
+	</d-box>
+
+	<h3 id="dialogue14">Turn 14</h3>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>It seems...<span class="break"></span> that...</d-text>
+	</d-box>
+
+	<h3 id="dialogue15">Turn 15</h3>
+	<d-box theme="battletalk">
+		<d-speaker>King</d-speaker>
+		<d-text>My KNIGHT...<span class="break"></span> I shall not<span class="break"></span> fail you...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="postfight">
+	<h2>After the fight</h2>
+
+	<p class="note">The King looks tired.</p>
+
+	<hr>
+
+	<h3>If defeated through fighting</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="3"></d-sprite>
+		<d-text asterisk>I... I see...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="3"></d-sprite>
+		<d-text asterisk>You are much stronger... than I envisioned...</d-text>
+	</d-box>
+	<h3>If defeated by outlasting</h3>
+	<p>By surviving 15 turns.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="3"></d-sprite>
+		<d-text asterisk>Enough... is enough...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="3"></d-sprite>
+		<d-text asterisk>I see... I see that I cannot defeat you.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="3"></d-sprite>
+		<d-text asterisk>I have grown exhausted from our long battle.</d-text>
+	</d-box>
+
+	<hr>
+
+	<p class="note">King sinks to his knees. His cape flaps away like a butterfly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="3"></d-sprite>
+		<d-text asterisk>Lightners... I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="3"></d-sprite>
+		<d-text asterisk>Perhaps I... I have been too cruel.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="1"></d-sprite>
+		<d-text asterisk>The truth is... I was not always this way.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="3"></d-sprite>
+		<d-text asterisk>There once was a time...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="3"></d-sprite>
+		<d-text asterisk>... where Darkners and Lightners lived in harmony.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="3"></d-sprite>
+		<d-text asterisk>A time where Darkners could fulfill their purpose in peace...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="2"></d-sprite>
+		<d-text asterisk>It would be a lie to say that I, too...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="3"></d-sprite>
+		<d-text asterisk>... do not yearn for those days.</d-text>
+	</d-box>
+
+	<p class="note">The King puts a hand to his chest.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="3"></d-sprite>
+		<d-text asterisk>... Perhaps... Perhaps you young ones are right.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="2"></d-sprite>
+		<d-text asterisk>Please... let us put away our weapons.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="2"></d-sprite>
+		<d-text asterisk>There must be a peaceful solution to all this.</d-text>
+	</d-box>
+
+	<p class="note">Ralsei stands at ease, and Kris follows him, putting away their sword. A pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>(Come now, Susie!)</d-text>
+	</d-box>
+
+	<p class="note">A pause. Susie puts away her axe, and the party members take a few steps towards King.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>I'm glad you're starting to realize, Mr. King...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>None of us really want to fight.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>If you can just tell us about your worries...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>I'm sure we can all be friends, Mr. King!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="2"></d-sprite>
+		<d-text asterisk>Y-yes... "Friends..."</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="2"></d-sprite>
+		<d-text asterisk>That sounds... lovely...</d-text>
+	</d-box>
+
+	<p class="note">King coughs.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="1"></d-sprite>
+		<d-text asterisk>(C... cough)</d-text>
+		<d-text asterisk>My apologies, I am...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="3"></d-sprite>
+		<d-text asterisk>I am not used to... fighting like that...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="3"></d-sprite>
+		<d-text asterisk>My body is... getting weak...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Oh, don't say another word!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei steps up in front of King and casts Heal Prayer on him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>There, you should be all healed up!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>How do you feel...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="1"></d-sprite>
+		<d-text asterisk>L... Let's see...</d-text>
+	</d-box>
+
+	<p class="note">Columns of spade bullets sweep past, knocking down the party members. King grins and stands.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>Never better.</d-text>
+	</d-box>
+
+	<p class="note">Kris and Susie struggle and push themselves up into a kneel.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="9"></d-sprite>
+		<d-text asterisk>Y... You...</d-text>
+	</d-box>
+
+	<p class="note">Spade bullets appear in front of Susie.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>Did I say you could get up?</d-text>
+	</d-box>
+
+	<p class="note">The bullets fly forward - but Kris throws themself in front of Susie in the nick of time, the bullets striking harmlessly against their shield.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="9"></d-sprite>
+		<d-text asterisk>Kris...!?</d-text>
+	</d-box>
+
+	<p class="note">Another column of bullets knocks Susie down and forces Kris into a kneel.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>Oh, spare me the heroics.</d-text>
+	</d-box>
+
+	<p class="note">Spade bullets knock Kris way back on the roof, leaving them limp on the ground. King approaches them slowly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>You... You're the leader, aren't you?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>So, what's your plan?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>To laugh, as you cast us all back into obscurity?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>You can't even say...?</d-text>
+	</d-box>
+
+	<p class="note">King kneels.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="1"></d-sprite>
+		<d-text asterisk>Young one...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="2"></d-sprite>
+		<d-text asterisk>Let me tell you a secret.</d-text>
+	</d-box>
+
+	<p class="note">King seizes Kris in one hand, rising to his feet. Spade bullets appear above Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="4"></d-sprite>
+		<d-text asterisk>Quiet people PISS ME OFF.</d-text>
+	</d-box>
+
+	<p class="note">An attack hits King, startling him into dropping Kris and letting the bullets dissipate. The camera pans over to show Susie, hair swept off her eyes, teeth bared, and axe in hand.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Hey.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Get away.</d-text>
+		<d-text asterisk>From my.</d-text>
+		<d-text asterisk>Friend.</d-text>
+	</d-box>
+
+	<p class="note">King turns around to face her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>Heh heh heh heh...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>If no Darkners were lost</h3>
+	<p>If you spared all Card Kingdom Darkners you encountered.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>OR WHAT?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="4"></d-sprite>
+		<d-text asterisk>You'll KILL me?</d-text>
+	</d-box>
+
+	<h3>If any Darkners were lost</h3>
+	<p>If you defeated any of the Card Kingdom Darkners through fighting.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="4"></d-sprite>
+		<d-text asterisk>OR WHAT?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>Surely you must realize...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>How exhausted I am, Lightner.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>Any hit from you would kill me.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>Why not do it, Lightner?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>Kill me and show my son how much you REALLY care.</d-text>
+	</d-box>
+
+	<hr>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Nah.</d-text>
+	</d-box>
+
+	<p class="note">King takes a few steps towards her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>So what's your plan, then...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>To TALK me to death...?</d-text>
+	</d-box>
+
+	<p class="note">King steps closer.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>You stupid, stupid Lightner.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>You honestly think you have any way...</d-text>
+	</d-box>
+
+	<p class="note">Spade bullets appear above both Kris and Susie.</p>
+
+	<hr>
+
+	<h3 id="defeat-nonviolent">If no Darkners were lost previously</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="4"></d-sprite>
+		<d-text asterisk>... to convince me NOT to kill you?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="4"></d-sprite>
+		<d-text asterisk>Nah.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>But THEY might.</d-text>
+	</d-box>
+
+	<p class="note">Susie puts away her axe as the roof begins to shake. The Card Kingdom's Darkners stampede onto the roof, carrying Lancer, and lift up the flailing King as well. Kris is pushed forward by the crowd and left kneeling in front of Susie.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="6"></d-sprite>
+		<d-text asterisk>L... Lancer!?</d-text>
+		<d-text asterisk>E... Everyone!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="6"></d-sprite>
+		<d-text asterisk>WHAT is the meaning of this!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>Sorry, Dad!</d-text>
+		<d-text asterisk>You're being overthrown!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="0"></d-sprite>
+		<d-text asterisk>When I told everyone you were fighting the Lightners...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Everyone remembered how kind they were!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="0"></d-sprite>
+		<d-text asterisk>They decided they'd rather have a king...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>That accepts them!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>Me!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Now I'm the dad!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="6"></d-sprite>
+		<d-text asterisk>You IDIOTS! The Lightners are your ENEMIES!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="6"></d-sprite>
+		<d-text asterisk>FOOLS! I'LL KILL YOU! I'LL KILL ALL OF YOU!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>Yikes! I think someone needs a time out!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Go to your room, Dad!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="6"></d-sprite>
+		<d-text asterisk>NOOOOOOOOOOOOOOOOOO!!!!</d-text>
+	</d-box>
+
+	<p class="note">The crowd recedes, taking King and Lancer with them. Susie takes a step towards Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="3"></d-sprite>
+		<d-text asterisk>Y'alright, Kris?</d-text>
+	</d-box>
+
+	<p class="note">Kris stands, and along with Susie, faces Ralsei as he comes over.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>Kris!</d-text>
+		<d-text asterisk>Susie...!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Oh, you're all right...!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Yeah, it'll take more than that to take us down.</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns away.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="4"></d-sprite>
+		<d-text asterisk>Kris, Susie... I'm... I'm sorry.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="4"></d-sprite>
+		<d-text asterisk>Because I healed the KING, we almost... we almost...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Susie, you were right. I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="5"></d-sprite>
+		<d-text asterisk>I was foolish to think we could act so soft to everyone...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="4"></d-sprite>
+		<d-text asterisk>This isn't a world where kindness always wins, is it?</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns back around when Susie speaks.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Eh, it's complicated.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Yeah, sometimes there's people you just gotta fight.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>But if you NEVER let your guard down, then...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>You might just... hurt someone you care about.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Aww, Susie...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>You're beginning to sound like a real hero...!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Eh, don't get used to it.</d-text>
+	</d-box>
+
+	<p class="note">Ralsei looks to the side for a moment, then turns back.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>Then, I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="6"></d-sprite>
+		<d-text asterisk>I suppose you and Kris should return home now.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Yeah, I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>I guess that's right, huh.</d-text>
+	</d-box>
+
+	<p class="note">Ralsei steps out of the way as Kris and Susie head towards the right. They both pause at the center of the rooftop and turn to look at Ralsei.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Well, uh...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="3"></d-sprite>
+		<d-text asterisk>See ya.</d-text>
+	</d-box>
+
+	<p class="note">The screen fades to black as they both <a href="{{ '/chapters/chapter1/farewell#prefinal' | relative_url }}">head off towards the Dark Fountain</a>.</p>
+
+	<h3 id="defeat-violent">If any Darkners were lost</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="4"></d-sprite>
+		<d-text asterisk>To convince me NOT to kill you?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="4"></d-sprite>
+		<d-text asterisk>Just wait a second.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>Wait for WHAT?</d-text>
+	</d-box>
+
+	<p class="note">Pacify is cast on King, who loses his smile as the spade bullets dissipate.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="6"></d-sprite>
+		<d-text asterisk>H... Huh?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="6"></d-sprite>
+		<d-text asterisk>Why am I suddenly... so sleepy...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>Why you... you little...</d-text>
+	</d-box>
+
+	<p class="note">King drops to his knees.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="1"></d-sprite>
+		<d-text asterisk>You sweet...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="1"></d-sprite>
+		<d-text asterisk>... little...</d-text>
+	</d-box>
+
+	<p class="note">King's head droops, his tongue sticking out.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="8"></d-sprite>
+		<d-text asterisk>... pumpkin...</d-text>
+	</d-box>
+
+	<p class="note">King falls asleep. Susie puts away her axe and rushes over to Kris, who's sitting up now.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="3"></d-sprite>
+		<d-text asterisk>Hey Kris, y'alright?</d-text>
+	</d-box>
+
+	<p class="note">Kris stands, and along with Susie, faces Ralsei as he comes over.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Th... That was close, Susie!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>I'm surprised you remembered my Pacify spell...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Hey, c'mon.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>I'd never forget something I made fun of you for.</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns away.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="4"></d-sprite>
+		<d-text asterisk>Kris, Susie... I'm... I'm sorry.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="4"></d-sprite>
+		<d-text asterisk>Because I healed the KING, we almost... we almost...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Susie, you were right. I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="4"></d-sprite>
+		<d-text asterisk>I was foolish to think we could act so soft to everyone...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="4"></d-sprite>
+		<d-text asterisk>This isn't a world where kindness always wins, is it?</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns back around when Susie speaks.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Eh, it's complicated.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Yeah, sometimes there's people you just gotta fight.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>But if you NEVER let your guard down, then...</d-text>
+	</d-box>
+
+	<p class="note">The party turns to the left as Lancer approaches.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>You might just... hurt someone you care about, too.</d-text>
+	</d-box>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Everyone!!!</d-text>
+		<d-text asterisk>You're OK!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Lancer! Hey!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="3"></d-sprite>
+		<d-text asterisk>Sorry, I kinda beat up your dad.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>That's OK! It happens!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Oh, it even looks like he's having a beauty nap!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>That's good.</d-text>
+		<d-text asterisk>He seemed cranky.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Man, you can say that again!</d-text>
+	</d-box>
+
+	<p class="note">A distant rumble surprises Susie and Ralsei; Lancer glances back the way he came, then turns back to the party.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>Err, Lancer...?</d-text>
+		<d-text asterisk>What's that noise...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="4"></d-sprite>
+		<d-text asterisk>Oh. I actually... came to <span class="yellow">WARN</span> you clownlings.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="6"></d-sprite>
+		<d-text asterisk>I informed the Guys you were fighting My Dad, but...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="7"></d-sprite>
+		<d-text asterisk>Instead of eagerly volunteering to help you,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="4"></d-sprite>
+		<d-text asterisk>Everyone just caught the "freak-outs."</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="7"></d-sprite>
+		<d-text asterisk>Now they appear to be... um...</d-text>
+	</d-box>
+
+	<p class="note">Lancer turns away.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="4"></d-sprite>
+		<d-text asterisk>Breaking through the door to the throne room.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="3"></d-sprite>
+		<d-text asterisk>Well, uh, that's not the best.</d-text>
+	</d-box>
+
+	<p class="note">Ralsei walks forward, turning to face Kris and Susie.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Kris, Susie...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>It seems that you must hurry to the Fountain.</d-text>
+	</d-box>
+
+	<p class="note">Susie turns away.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>... No time for goodbyes, huh...</d-text>
+	</d-box>
+
+	<p class="note">Lancer quickly steps forward; everyone looks at him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Yes!!! Of course no goodbyes!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>We're bad guys, so we only have BAD-byes!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Heheh, you've learned a lot, huh.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Only from the best!</d-text>
+		<d-text asterisk>Of the worst!!!</d-text>
+	</d-box>
+
+	<p class="note">Lancer and Susie laugh together.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>OK! I'll go stop the door!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Later, dude.</d-text>
+	</d-box>
+
+	<p class="note">Lancer heads off to the left, while the party heads to the right, proceeding to <a href="{{ '/chapters/chapter1/farewell#final-violent' | relative_url }}">the final farewell</a>.</p>
+</section>
