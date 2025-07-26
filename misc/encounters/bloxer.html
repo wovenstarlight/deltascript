@@ -1,0 +1,264 @@
+---
+title: Bloxer encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Bloxer.</p>
+
+sources:
+  -
+    name: gml_Object_obj_bloxer_enemy_Step_0
+    chapters: [1]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [1]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: Flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-bloxer
+            name: With another Bloxer
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-spareable
+        name: Spareable
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: ft-check
+            name: Check
+          -
+            id: ft-rearrange
+            name: Rearrange
+            subheadings:
+              -
+                id: ft-rearrange-pre
+                name: Upon usage
+              -
+                id: ft-rearrange-post
+                name: After usage
+          -
+            id: ft-rival
+            name: Rival
+  -
+    id: dialogue
+    name: Dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: dialogue-rearrange
+            name: Rearrange
+          -
+            id: dialogue-rival
+            name: Rival
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(global\.encounterno = |myencounter = |scr_encountersetup\()(18|19)
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>Flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bloxer assembled!</d-text>
+	</d-box>
+
+	<h4 id="encounter-bloxer">With another Bloxer</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bloxers assembled!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bloxer is thinking about training.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bloxer is thinking about trains.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bloxer is thinking about training wheels.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bloxer considers building a house out of its own body.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like freshly-printed plastic.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bloxer is starting to break apart with exhaustion.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bloxer radiates with the spirit of joy.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-check">Check</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>BLOXER - AT 9 DF 2</d-text>
+		<d-text asterisk>Loves: Training. Hates: Body being the wrong shape</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-rearrange">Rearrange</h3>
+	<h4 id="ft-rearrange-pre">Upon usage</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press [MENU] to choose:</d-text>
+		<d-text>&nbsp; &nbsp; #1 HEAD, #2 BODY, #3 LEGS.</d-text>
+	</d-box>
+
+	<h4 id="ft-rearrange-post">After usage</h4>
+	<h5>Rearranged correctly</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bloxer is pleased with its new self!</d-text>
+	</d-box>
+	<p class="note">Bloxer gains 100% <span class="yellow">Mercy</span>.</p>
+	<h5>Rearranged incorrectly</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bloxer is still unhappy with its self...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-rival">Rival</h3>
+	<p>Available after Susie joins the party for real.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie became antagonistic!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">At random:</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Why bother training? You'll NEVER beat me.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Why train? You're still 100 years too early to beat me.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Training? Yeah, like I need that to beat you down.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>The enemies became <span class="blue">TIRED</span>...</d-text>
+	</d-box>
+	<p class="note">All enemies become <span class="blue">Tired</span>. (Last message does contain Susie's sprite, yes; they appear to have forgotten to reset it after her line.)</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Bloxer</d-speaker>
+		<d-text>HOOH...! You<span class="break"></span> interrupted my<span class="break"></span> training...!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Bloxer</d-speaker>
+		<d-text>GOOH...! I'm<span class="break"></span> gonna knock<span class="break"></span> your block<span class="break"></span> off...!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Bloxer</d-speaker>
+		<d-text>Let's see how<span class="break"></span> you stack<span class="break"></span> up...! HIYA!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Bloxer</d-speaker>
+		<d-text>Let me show<span class="break"></span> you my<span class="break"></span> training!<span class="break"></span> YIHA!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-rearrange">Rearrange</h3>
+	<h4>Rearranged incorrectly</h4>
+	<h5>If legs are on top</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Bloxer</d-speaker>
+		<d-text>ARRGH!! NO!!</d-text>
+		<d-text>MY BUTT IS<span class="break"></span> MY FACE!!</d-text>
+	</d-box>
+	<h5>If torso is on top</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Bloxer</d-speaker>
+		<d-text>ARRGH!! NO!!</d-text>
+		<d-text>MY ABS ARE<span class="break"></span> MY FACE!!</d-text>
+	</d-box>
+	<h5>If head is on top</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Bloxer</d-speaker>
+		<d-text>ARRGH!! NO!!</d-text>
+		<d-text>MY FACE IS<span class="break"></span> MY FACE!!</d-text>
+		<d-text>Wait...</d-text>
+	</d-box>
+	<h5>If legs are in the middle</h5>
+	<p>Unused, as it gets overridden by the message for torso/head being on top (see above).</p>
+	<d-box theme="battletalk">
+		<d-speaker>Bloxer</d-speaker>
+		<d-text>ARRGH!! NO!!</d-text>
+		<d-text>MY BUTT IS<span class="break"></span> MY ABS!</d-text>
+	</d-box>
+	<h5>Otherwise</h5>
+	<p>Unused fallback; gets overridden by the messages for whatever's on top (see above).</p>
+	<d-box theme="battletalk">
+		<d-speaker>Bloxer</d-speaker>
+		<d-text>ARRGH!!</d-text>
+	</d-box>
+
+	<h4>Rearranged correctly</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Bloxer</d-speaker>
+		<d-text>Oh, you mixed<span class="break"></span> me up all<span class="break"></span> nice~</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-rival">Rival</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Bloxer</d-speaker>
+		<d-text>My momentum<span class="break"></span> is totally<span class="break"></span> blocked<span class="break"></span> up...</d-text>
+	</d-box>
+</section>

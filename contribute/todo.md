@@ -113,11 +113,11 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* ~~gml_Object_obj_ponman_enemy_Step_0 `/ponman`~~
 		* gml_Object_obj_lancerboss3_Step_0/gml_Object_obj_susieenemy_Step_0 (vs Lancer & Susie) `/badguys` or `/darkfungang` or smthn maybe lmao. pick a better name if you want
 		* ~~gml_Object_obj_rabbick_enemy_Step_0 `/rabbick`~~
-		* gml_Object_obj_bloxer_enemy_Step_0 `/bloxer`
+		* ~~gml_Object_obj_bloxer_enemy_Step_0 `/bloxer`~~
 		* gml_Object_obj_jigsawryenemy_Step_0 `/jigsawry`
 		* gml_Object_obj_clubsenemy_Step_0 `/clover` (ch1 file) and `/cloverdojo` (ch2 file), crosslink each other and `/cloverunused`
 		* gml_Object_obj_lancerboss2_Step_0 (Susie vs Lancer) `/lancer2` or `/lancervssusie`
-		* gml_Object_obj_joker_Step_0 `/jevil`
+		* ~~gml_Object_obj_joker_Step_0 `/jevil`~~
 		* gml_Object_obj_rudinnranger_Step_0 `/rudinnranger`
 		* gml_Object_obj_headhathy_Step_0 `/headhathy`
 		* gml_Object_obj_king_boss_Step_0 `/king`
