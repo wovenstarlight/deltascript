@@ -750,31 +750,33 @@ d-box, d-choices {
 			&.fullwidth.fullheight { object-fit: contain }
 		}
 
-		&:not([theme=objreact]):has(
-			> d-speaker.kris,
-			> d-speaker.susie,
-			> d-speaker.ralsei,
-			> d-speaker.noelle
-		) {
-			position: relative;
+		&:not([theme=objreact]) {
+			&:has(
+				> d-speaker.kris,
+				> d-speaker.susie,
+				> d-speaker.ralsei,
+				> d-speaker.noelle
+			) {
+				position: relative;
 
-			&::before {
-				content: "";
-				position: absolute;
-				top: -0.25em;
-				left: -2.1em;
-				border: 0.2em solid var(--white);
-				--size: 1.75em;
-				width: var(--size);
-				height: var(--size);
-				background: var(--black) center / 80% no-repeat;
-				border-radius: 25%;
+				&::before {
+					content: "";
+					position: absolute;
+					top: -0.25em;
+					left: -2.1em;
+					border: 0.2em solid var(--white);
+					--size: 1.75em;
+					width: var(--size);
+					height: var(--size);
+					background: var(--black) center / 80% no-repeat;
+					border-radius: 25%;
+				}
 			}
+			&:has(> d-speaker.kris)::before { background-image: url("../assets/images/faces/kris/battle.png") }
+			&:has(> d-speaker.susie)::before { background-image: url("../assets/images/faces/susie/battle.png") }
+			&:has(> d-speaker.ralsei)::before { background-image: url("../assets/images/faces/ralsei/battle.png") }
+			&:has(> d-speaker.noelle)::before { background-image: url("../assets/images/faces/noelle/battle.png") }
 		}
-		&:has(> d-speaker.kris)::before { background-image: url("../assets/images/faces/kris/battle.png") }
-		&:has(> d-speaker.susie)::before { background-image: url("../assets/images/faces/susie/battle.png") }
-		&:has(> d-speaker.ralsei)::before { background-image: url("../assets/images/faces/ralsei/battle.png") }
-		&:has(> d-speaker.noelle)::before { background-image: url("../assets/images/faces/noelle/battle.png") }
 	}
 
 	&:state(compact) {
