@@ -9,6 +9,14 @@ Nothing right now!
 * Home page could use cleanup/more information. Some sections that might be nice to have:
 	* Progress updates (what's finished/new arrivals, what's currently being focused on)
 	* Priority list (what will be worked on after the current tasks are complete, what needs attention, what's been requested...)
+* ch3 0.0.089/ch4 0.0.088 has typo fixes:
+	* Elnina/Lanino page: Tenna's win condition declaration
+	* Shuttah(?)'s "you have seen naught" dialogue in `obj_npc_room`
+	* Shadowguy's Sharpshoot ACT instructions
+	* Watercooler chat ACT description
+	* Catty's rendition of the prophecy
+	* `obj_dw_church_waterfallroom` "if only you had something **to** help you climb"
+	* stealing scarlixir from mizzle (via nuzzle, I think?)
 
 ### Page list
 Brainstorming what pages we'd want. This is a changeable list! Feel free to add and edit!
