@@ -666,7 +666,7 @@ d-box, d-choices {
 			font-size: 1em;
 
 			d-speaker {
-				color: #966200;
+				color: color-mix(in srgb, var(--orange), var(--black));
 				display: block;
 				margin-block-end: 0.4em;
 
@@ -750,7 +750,7 @@ d-box, d-choices {
 			&.fullwidth.fullheight { object-fit: contain }
 		}
 
-		&:has(
+		&:not([theme=objreact]):has(
 			> d-speaker.kris,
 			> d-speaker.susie,
 			> d-speaker.ralsei,
@@ -916,13 +916,15 @@ d-sprite {
 d-speaker {
 	color: var(--lightyellow);
 	&::after { content: ":" }
-	d-box:not(:state(compact)) & {
-		position: fixed;
-		top: 100vh;
-		left: 100vw;
+	d-box:not([theme=battletalk], [theme=objreact]):not(:state(compact)) & {
+		position: absolute;
+		top: 0;
+		left: 0;
 		font-size: 1rem;
 		opacity: 0;
+		pointer-events: none;
 	}
+	d-box:not(:state(compact)) d-sprite > & { display: none }
 	d-box:state(compact) & {
 		grid-column: 1;
 		grid-row: 1 / span 3;
