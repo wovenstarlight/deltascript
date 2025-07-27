@@ -575,6 +575,12 @@ body {
 
 	a:not(:hover, :focus) { color: inherit }
 }
+.acticon {
+	height: 0.75em;
+	width: auto;
+	vertical-align: baseline;
+	margin-inline-end: 0.2ch;
+}
 /* #endregion */
 
 /* #region Game styles */
