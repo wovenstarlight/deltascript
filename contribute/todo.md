@@ -111,24 +111,12 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* `/tenna`: doom board and final showdown
 		* gml_Object_obj_placeholderenemy_Step_0 `/placeholder` (check chapter variants! also maybe crosslink whatever baseenemy ends up becoming?)
 		* gml_Object_obj_lancerboss_Step_0 (Lancer intro) `/lancer1` or `/lancervslightners`
-		* ~~gml_Object_obj_dummyenemy_Step_0~~ `/dummy` DONE (messy as hell though. is there a neater way to organize it...)
 		* gml_Object_obj_ralseienemy_Step_0 (Unused Ralsei tutorial) `/ralsei`
-		* ~~gml_Object_obj_diamondenemy_Step_0~~ `/rudinn` DONE
-		* ~~gml_Object_obj_heartenemy_Step_0~~ `/hathy` DONE
 		* gml_Object_obj_clubsenemy_old_Step_0 (old Clover fight) `/cloverunused`, crosslink `/clover`
-		* gml_Object_obj_smallcheckers_enemy_Step_0 `/cround`, crosslink `/kround`
 		* gml_Object_obj_checkers_enemy_Step_0 `/kround`, crosslink `/cround`; include sections/numbered pages for first/second fight
-		* ~~gml_Object_obj_ponman_enemy_Step_0 `/ponman`~~
 		* gml_Object_obj_lancerboss3_Step_0/gml_Object_obj_susieenemy_Step_0 (vs Lancer & Susie) `/badguys` or `/darkfungang` or smthn maybe lmao. pick a better name if you want
-		* ~~gml_Object_obj_rabbick_enemy_Step_0 `/rabbick`~~
-		* ~~gml_Object_obj_bloxer_enemy_Step_0 `/bloxer`~~
-		* gml_Object_obj_jigsawryenemy_Step_0 `/jigsawry`
 		* gml_Object_obj_clubsenemy_Step_0 `/clover` (ch1 file) and `/cloverdojo` (ch2 file), crosslink each other and `/cloverunused`
 		* gml_Object_obj_lancerboss2_Step_0 (Susie vs Lancer) `/lancer2` or `/lancervssusie`
-		* ~~gml_Object_obj_joker_Step_0 `/jevil`~~
-		* ~~gml_Object_obj_rudinnranger_Step_0 `/rudinnranger`~~
-		* ~~gml_Object_obj_headhathy_Step_0 `/headhathy`~~
-		* ~~gml_Object_obj_king_boss_Step_0 `/king`~~
 		* gml_Object_obj_omawaroid_enemy_Step_0 `/ambyulance`
 		* gml_Object_obj_poppup_enemy_Step_0 `/poppup`
 		* gml_Object_obj_tasque_enemy_Step_0 `/tasque`
