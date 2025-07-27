@@ -44,7 +44,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* ~~`/torielclass` - Toriel's classroom~~ DONE up to Chapter 4
 			* ~~`/alphysclass` - Alphys's classroom~~ DONE up to Chapter 4
 			* `/unusedclass` - Unused classroom (former card world)
-			* `/hallways` - all the lockers and whatnot. will include text for interacting with the supply closet doors
+			* ~~`/hallways` - all the lockers and whatnot. will include text for interacting with the supply closet doors~~ DONE up to Chapter 4
 			* Locked classroom if that ever opens up
 		* North street (residential)
 			* Locked gate
