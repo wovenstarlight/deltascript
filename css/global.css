@@ -84,8 +84,7 @@ h6 {
 	color: color-mix(in srgb, var(--white), var(--gray));
 	border-inline-start: 0.15rem dotted;
 }
-.d-section:target h2:first-child, :is(h2, h3, h4, h5, h6):target {
-	color: var(--yellow);
+.d-section:target h2:first-child, :is(h2, h3, h4, h5, h6):target, .profile:target h3 {
 	animation: 1s ease-in-out 0.4s flash;
 }
 @keyframes flash {
@@ -1194,5 +1193,80 @@ d-option-panel {
 	width: auto;
 	vertical-align: baseline;
 	margin-inline-end: 0.2ch;
+}
+/* Character profiles from the Recruits menu */
+.profile {
+	display: grid;
+	align-items: center;
+	background-color: var(--black);
+	border: var(--border-width) solid transparent;
+	border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width);
+	body.dim & { border-image-source: url("../assets/images/textbox/light_dim.png") }
+	font-size: 1.2em;
+	font-family: "DeltaFont Condensed", var(--font);
+	max-width: 35em;
+	margin-inline: auto;
+	
+	@media (min-width: 30rem) {
+		grid-template-columns: 1fr auto;
+		h3 { grid-column: 1 }
+		.chapter {
+			grid-column: 2;
+			text-align: right;
+			margin-block-end: 0;
+		}
+		.desc { grid-column: 1 / span 2 }
+		.stats-text { grid-column: 1 }
+		.stats-num {
+			text-align: right;
+			grid-column: 2;
+			.stat {
+				display: flex;
+				column-gap: 1ch;
+				justify-content: end;
+			}
+
+			dd { min-width: 3ch }
+		}
+	}
+	@media (max-width: 30rem) {
+		.stats-num {
+			display: grid;
+			grid-template-columns: auto 1fr;
+			column-gap: 1ch;
+		}
+		.stat { display: contents }
+	}
+
+	h3 {
+		font-size: 1.2em;
+		margin-block: 0;
+	}
+	.chapter {
+		grid-row: 1;
+		text-transform: uppercase;
+		margin-block-start: 0;
+	}
+	.desc {
+		font-size: 0.9em;
+		font-family: "DeltaFont Combat", var(--font);
+		max-width: calc(var(--basewidth) - 3.4em);
+		margin-block: 0.5em 1em;
+		word-break: keep-all;
+	}
+	
+	dl { margin-block: 0 }
+
+	.stats-text {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		column-gap: 1ch;
+	}
+	
+	dt {
+		text-transform: uppercase;
+	}
+	
+	dd { margin: 0 }
 }
 /* #endregion */

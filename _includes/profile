@@ -1,0 +1,41 @@
+<div class="profile" id="{{ include.name | downcase | replace: ' ', '' | replace: '-', '' }}">
+	<h3>{{ include.name | default: "<span class='gray'>No name provided.</span>" }}</h3>
+	<p class="chapter">Chapter {{ include.chapter | default: "?" }}</p>
+	<p class="desc">{{ include.desc | default: include.description | default: "<span class='gray'>No description provided.</span>" }}</p>
+
+	<dl class="stats-text">
+		<dt>Like</dt>
+		<dd>{{ include.like | default: "?????????" }}</dd>
+
+		<dt>Dislike</dt>
+		<dd>{{ include.dislike | default: "?????????" }}</dd>
+
+		<dt>{{ include.stat3label | default: "?????" }}</dt>
+		<dd>{{ include.stat3text | default: "?????????" }}</dd>
+
+		<dt>{{ include.stat4label | default: "?????" }}</dt>
+		<dd>{{ include.stat4text | default: "?????????" }}</dd>
+	</dl>
+
+	<dl class="stats-num">
+		<div class="stat">
+			<dt>Level</dt>
+			<dd>{{ include.level | default: "???" }}</dd>
+		</div>
+
+		<div class="stat">
+			<dt>Attack</dt>
+			<dd>{{ include.attack | default: "???" }}</dd>
+		</div>
+
+		<div class="stat">
+			<dt>Defense</dt>
+			<dd>{{ include.defense | default: "???" }}</dd>
+		</div>
+
+		<div class="stat">
+			<dt>Element</dt>
+			<dd>{{ include.element | default: "???" }}</dd>
+		</div>
+	</dl>
+</div>
