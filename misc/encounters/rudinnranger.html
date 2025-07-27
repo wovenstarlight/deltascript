@@ -1,0 +1,293 @@
+---
+title: Rudinn Ranger encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Rudinn Ranger.</p>
+
+sources:
+  -
+    name: gml_Object_obj_rudinnranger_Step_0
+    chapters: [1]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [1]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: Flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: ft-check
+            name: Check
+          -
+            id: ft-convince
+            name: Convince
+          -
+            id: ft-compliment
+            name: Compliment
+  -
+    id: dialogue
+    name: Dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: dialogue-convince
+            name: Convince
+          -
+            id: dialogue-compliment
+            name: Compliment
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(global\.encounterno = |myencounter = |scr_encountersetup\()28
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>Flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<p>Appears with another Rudinn Ranger.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn Rangers came sparkling into view!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn Ranger gleams gallantly.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn Ranger puts a power limiter on its feelings.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn Ranger fantasizes about divine gems.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn Ranger pledges allegiance.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like crystal.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn Ranger is starting to fall asleep.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn Ranger's luster begins to fade.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<p>Unused. (Got assigned to the wrong variable.)</p> <!-- global.msg instead of global.battlemsg, if you were wondering -->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn Ranger seems totally flattered.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-check">Check</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>RUDINN RANGER - AT 8 DF 0</d-text>
+		<d-text asterisk>Ideally multicolored, but they all wanted to be red.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-convince">Convince</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You tried to explain why fighting is bad.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But Rudinn Ranger just became <span class="blue">TIRED</span>...</d-text>
+	</d-box>
+	<p class="note">Rudinn Ranger becomes <span class="blue">Tired</span>.</p>
+
+	<hr>
+
+	<h3 id="ft-compliment">{% include acticon chara="Susie" -%} Compliment</h3>
+	<h4>First time</h4>
+	<h5>If this is the first use across all encounters</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Susie to COMPLIMENT the enemy!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>... uhhh, are you serious?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>What good can I say about someone trying to kill us?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Aww, Susie... if you're stuck, why not try...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>... saying something you wish someone'd say to you?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>"You are unbanned from free ham sandwich day"</d-text>
+	</d-box>
+	<p class="note">Rudinn Ranger gains 100% <span class="yellow">Mercy</span>.</p>
+
+	<h5>Otherwise</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie COMPLIMENTed the enemy...?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">At random:</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>"Your outfit is NOT disgusting."</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>"Please keep body tackling the soda machine."</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Nice, you guys look like you're gonna kill me.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Rudinn Ranger gains 100% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie actively didn't COMPLIMENT the enemy!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Look, it's just gonna be weird if I keep going.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text>Long live<span class="break"></span> the king!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text>Glimmer<span class="break"></span> glammor</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text>Perish,<span class="break"></span> Lightners!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text>I'm the,<span class="break"></span> diamond,<span class="break"></span> here's the<span class="break"></span> rough!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-convince">Convince</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text>Enough!</d-text>
+		<d-text>You can't<span class="break"></span> convince<span class="break"></span> me!</d-text>
+	</d-box>
+
+	<h4>Unused variants</h4>
+	<p>Seem to be left over from <a href="{{ '/misc/encounters/rudinn#dialogue-convince' | relative_url }}">Rudinn's encounter</a>.</p>
+	<h5>First time</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text>You kidding?</d-text>
+		<d-text>I can't quit.</d-text>
+		<d-text>Stopping you<span class="break"></span> is my job!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Really?</d-text>
+		<d-text asterisk>What do you spend your money on?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text>I'm a normal<span class="break"></span> person.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text>I spend all<span class="break"></span> my money on<span class="break"></span> RENT and<span class="break"></span> MYSTIC GEMs.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>(Kris, let's try CONVINCING them again...)</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text>Alright,<span class="break"></span> you convinced<span class="break"></span> me!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-compliment">{% include acticon chara="Susie" -%} Compliment</h3>
+	<h4>First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text>No one ever<span class="break"></span> said THAT to<span class="break"></span> me before<span class="break"></span> ...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text>The King<span class="break"></span> never said<span class="break"></span> THAT to me<span class="break"></span> before...</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text>Yeah it<span class="break"></span> would be<span class="break"></span> weird.</d-text>
+	</d-box>
+</section>

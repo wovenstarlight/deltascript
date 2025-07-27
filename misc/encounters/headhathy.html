@@ -1,0 +1,309 @@
+---
+title: Head Hathy encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Head Hathy.</p>
+
+sources:
+  -
+    name: gml_Object_obj_headhathy_Step_0
+    chapters: [1]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [1]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: Flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-headhathy2
+            name: With another Head Hathy
+          -
+            id: encounter-headhathy3
+            name: With 2 other Head Hathys
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: ft-check
+            name: Check
+          -
+            id: ft-flirt
+            name: Flirt
+          -
+            id: ft-xflirt
+            name: X-Flirt
+            subheadings:
+              -
+                id: ft-xflirt1
+                name: First use across all encounters
+              -
+                id: ft-xflirt2
+                name: Second use across all encounters
+              -
+                id: ft-xflirt3
+                name: Third use across all encounters
+              -
+                id: ft-xflirt4
+                name: Subsequent uses across all encounters
+  -
+    id: dialogue
+    name: Dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: dialogue-flirt
+            name: Flirt
+          -
+            id: dialogue-xflirt
+            name: X-Flirt
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(global\.encounterno = |myencounter = |scr_encountersetup\()(29|30)
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>Flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-headhathy2">With another Head Hathy</h4>
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Head Hathy blocked the way quietly!</d-text>
+	</d-box>
+
+	<h4 id="encounter-headhathy3">With 2 other Head Hathys</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Head Hathy blocked the way quietly! (x3)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Head Hathy's body moves silently.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Head Hathy showed no emotion at all.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Head Hathy whispered something unhearable.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Head Hathy's mind is an enigma.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like a lonely kiss.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Head Hathy's beat slows.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Head Hathy's beat seems to stutter.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<p>Unused. (Got assigned to the wrong variable.)</p> <!-- global.msg instead of global.battlemsg, if you were wondering -->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Head Hathy is skipping beats.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-check">Check</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>HEAD HATHY - AT 8 DF 0</d-text>
+		<d-text asterisk>It learned to hide its feelings... is that strength?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-flirt">Flirt</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You flirted with Head Hathy.</d-text>
+		<d-text asterisk>It was highly effective.</d-text>
+	</d-box>
+	<p class="note">Head Hathy gains 100% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3 id="ft-xflirt">{% include acticon chara="Susie" -%} X-Flirt</h3>
+	<h4 id="ft-xflirt1">First use across all encounters</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You ordered SUSIE to flirt with the enemy!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="1"></d-sprite>
+		<d-text asterisk>Annnnnnnnnd hell no.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Aww, Susie, it's OK if you don't know how!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="7"></d-sprite>
+		<d-text asterisk>What? Shut up, that's not the problem!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>... Are you sure?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="7"></d-sprite>
+		<d-text asterisk>Alright, LOOK, wise guy! I'll show you! Watch this!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>AHEM.</d-text>
+	</d-box>
+	<p class="note">The battle music stops. A 2-second pause.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>So, uh...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Come here... often?</d-text>
+	</d-box>
+	<p class="note">The music starts back up as Head Hathy exits the encounter to the right.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Head Hathy felt awkward and left...)</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="7"></d-sprite>
+		<d-text asterisk>HEY, GET BACK HERE AND LET ME FLIRT WITH YOU!!!</d-text>
+	</d-box>
+
+	<h4 id="ft-xflirt2">Second use across all encounters</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You ordered SUSIE to flirt with the enemy!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Hell nah. Let's see Ralsei do it.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>I suppose if it can't be helped...!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Hathy, your beauty is just... transcendent.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Your hair is like a waterfall of...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>... wait, um, do you have hair, or...</d-text>
+	</d-box>
+	<p class="note">Head Hathy exits the encounter to the right.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Head Hathy felt awkward and left...)</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>Oh, oh dear! Wait!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Not so easy, huh!?</d-text>
+	</d-box>
+
+	<h4 id="ft-xflirt3">Third use across all encounters</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You ordered SUSIE to flirt with the enemy!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="7"></d-sprite>
+		<d-text asterisk>Oh my god, Kris!!! I can't!! Do it yourself!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You said some sweet lines. The enemies were deeply enamored!</d-text>
+	</d-box>
+	<p class="note">All enemies gain 100% <span class="yellow">Mercy</span>.</p>
+
+	<h4 id="ft-xflirt4">Subsequent uses across all encounters</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You flirted with the enemies. It worked! (Susie did not help.)</d-text>
+	</d-box>
+	<p class="note">All enemies gain 100% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Head Hathy</d-speaker>
+		<d-text><img src="{{ '/assets/images/story/talkhathy/4.gif' | relative_url }}" alt="A heart with a biting mouth"></d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Head Hathy</d-speaker>
+		<d-text><img src="{{ '/assets/images/story/talkhathy/5.gif' | relative_url }}" alt="A heart that repeatedly cracks apart and fuses back together"></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-flatter">Flirt</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Head Hathy</d-speaker>
+		<d-text><img src="{{ '/assets/images/story/talkhathy/2.gif' | relative_url }}" alt="A single red heart pulsing slightly"></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-xflatter">{% include acticon chara="Susie" -%} X-Flirt</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Head Hathy</d-speaker>
+		<d-text><img src="{{ '/assets/images/story/talkhathy/3.gif' | relative_url }}" alt="A trio of red hearts pulsing slightly"></d-text>
+	</d-box>
+</section>

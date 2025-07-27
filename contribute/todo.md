@@ -126,9 +126,9 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* gml_Object_obj_clubsenemy_Step_0 `/clover` (ch1 file) and `/cloverdojo` (ch2 file), crosslink each other and `/cloverunused`
 		* gml_Object_obj_lancerboss2_Step_0 (Susie vs Lancer) `/lancer2` or `/lancervssusie`
 		* ~~gml_Object_obj_joker_Step_0 `/jevil`~~
-		* gml_Object_obj_rudinnranger_Step_0 `/rudinnranger`
-		* gml_Object_obj_headhathy_Step_0 `/headhathy`
-		* gml_Object_obj_king_boss_Step_0 `/king`
+		* ~~gml_Object_obj_rudinnranger_Step_0 `/rudinnranger`~~
+		* ~~gml_Object_obj_headhathy_Step_0 `/headhathy`~~
+		* ~~gml_Object_obj_king_boss_Step_0 `/king`~~
 		* gml_Object_obj_omawaroid_enemy_Step_0 `/ambyulance`
 		* gml_Object_obj_poppup_enemy_Step_0 `/poppup`
 		* gml_Object_obj_tasque_enemy_Step_0 `/tasque`
