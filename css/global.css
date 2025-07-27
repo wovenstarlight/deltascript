@@ -575,15 +575,10 @@ body {
 
 	a:not(:hover, :focus) { color: inherit }
 }
-.acticon {
-	height: 0.75em;
-	width: auto;
-	vertical-align: baseline;
-	margin-inline-end: 0.2ch;
-}
 /* #endregion */
 
 /* #region Game styles */
+/* Dialogue boxes and choice menus */
 d-box, d-choices {
 	&:not(:state(compact)) {
 		/* Space out
@@ -808,6 +803,7 @@ d-box, d-choices {
 		}
 	}
 }
+/* Dialogue boxes only */
 d-box {
 	display: grid;
 	grid-template-columns: auto 1fr;
@@ -880,6 +876,7 @@ d-box {
 		d-box > :last-child::after { content: unset }
 	}
 }
+/* Talksprites */
 d-sprite {
 	grid-row: 1 / span 3;
 	grid-column: 1;
@@ -921,6 +918,7 @@ d-sprite {
 	}
 
 }
+/* Speaker labels */
 d-speaker {
 	color: var(--lightyellow);
 	&::after { content: ":" }
@@ -938,6 +936,9 @@ d-speaker {
 		grid-row: 1 / span 3;
 	}
 }
+/* Single line of text within a dialogue box
+ * Automatically formats with asterisks, fonts, and speaker icons
+ */
 d-text {
 	grid-column: 2;
 	line-height: 1.4;
@@ -1014,6 +1015,7 @@ d-text {
 		vertical-align: text-bottom;
 	}
 }
+/* Choice menus only */
 d-choices {
 	&:not(:state(compact)) {
 		display: grid;
@@ -1075,6 +1077,7 @@ d-choices {
 	/* In compact mode, all the options get moved alongside their tabs; hide the resulting empty menu */
 	&:state(compact) { display: none }
 }
+/* Options in choice menus */
 d-option {
 	display: block;
 	font-family: "DeltaFont Condensed", var(--font);
@@ -1152,6 +1155,7 @@ d-option {
 
 	body.compact & :is(.hide, .break) { display: none }
 }
+/* Panel containing the result of choosing an option in a choice menu */
 d-option-panel {
 	display: block;
 	border: var(--border-width) solid transparent;
@@ -1183,5 +1187,12 @@ d-option-panel {
 	/* First child will always be selection-label */
 	& > :nth-child(2) { margin-block-start: 0 !important }
 	& > :last-child { margin-block-end: 0 !important }
+}
+/* Character icons for ACTs */
+.acticon {
+	height: 0.75em;
+	width: auto;
+	vertical-align: baseline;
+	margin-inline-end: 0.2ch;
 }
 /* #endregion */
