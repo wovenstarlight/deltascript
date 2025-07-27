@@ -15,17 +15,57 @@ items:
     name: Chapter 1
     sublist:
       -
-        url: dummy
-        name: Dummy
+        name: Castle Town
+        sublist:
+          -
+            url: dummy
+            name: Dummy
+          # also unused ralsei fight
       -
-        url: rudinn
-        name: Rudinn
+        name: Field
+        sublist:
+          -
+            url: rudinn
+            name: Rudinn
+          -
+            url: hathy
+            name: Hathy
+          # also c. round, jigsawry
       -
-        url: hathy
-        name: Hathy
+        name: Great Board
+        sublist:
+          -
+            url: ponman
+            name: Ponman
+          # also k. round
+      -
+        name: Forest
+        sublist:
+          -
+            url: rabbick
+            name: Rabbick
+          -
+            url: bloxer
+            name: Bloxer
+          # also clover
+      -
+        name: Card Castle
+        sublist:
+          -
+            url: rudinnranger
+            name: Rudinn Ranger
+          -
+            url: headhathy
+            name: Head Hathy
+          -
+            url: king
+            name: King
+          -
+            url: jevil
+            name: Jevil
 ---
 {% for section in page.items -%}
-<section class="d-section" id="{{ section.url }}">
+<section class="d-section" id="{{ section.url | default: section.id }}">
 	<h2>{{ section.name }}</h2>
 	{% assign sectionurl = "/misc/encounters/" | append: section.url -%}
 
