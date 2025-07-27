@@ -31,19 +31,19 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* ~~`/yard` - Front yard~~ DONE up to Chapter 4
 			* possibly someday will need `/torielroom`...?
 		* Noelle's house `/holidayresidence`
-			* `/yard` - Holidays' front yard
-			* `/interior` - The general indoors; first/second/third floor
-			* `/kitchen` - Holidays' kitchen (first floor)
-			* `/giftroom` - Room with the boxes (first floor)
-			* `/noelleroom` - Noelle's room
-			* `/dessroom` - Dess's room
+			* ~~`/yard` - Holidays' front yard~~ DONE up to Chapter 4
+			* ~~`/interior` - The general indoors; first/second/third floor~~ DONE up to Chapter 4
+			* ~~`/kitchen` - Holidays' kitchen (first floor)~~ DONE up to Chapter 4
+			* ~~`/closet` - Room with the boxes (first floor)~~ DONE up to Chapter 4
+			* ~~`/noelleroom` - Noelle's room~~ DONE up to Chapter 4
+			* ~~`/dessroom` - Dess's room~~ DONE up to Chapter 4
 			* nothing interactive in the bathroom so no page for that
 			* possibly someday will need `/rudycarolroom`...?
 		* School `/school`
 			* exterior...? IIRC in ch4 end Susie will stop at the doors with some dialogue...
 			* ~~`/torielclass` - Toriel's classroom~~ DONE up to Chapter 4
 			* ~~`/alphysclass` - Alphys's classroom~~ DONE up to Chapter 4
-			* `/unusedclass` - Unused classroom (former card world)
+			* ~~`/unusedclass` - Unused classroom (former card world)~~ DONE up to Chapter 4
 			* ~~`/hallways` - all the lockers and whatnot. will include text for interacting with the supply closet doors~~ DONE up to Chapter 4
 			* Locked classroom if that ever opens up
 		* North street (residential)
@@ -100,7 +100,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* `/chapter6`
 	* `/chapter7`
 * Miscellaneous pages... `/misc`
-	* `/darkitems` - Consumables, key items, etc. Descriptions, usage text and reactions from the party members. Shop descriptions too, if we can find them?
+	* ~~`/darkitems` - Consumables, key items, etc. Descriptions, usage text and reactions from the party members. Shop descriptions too, if we can find them?~~ DONE up to Chapter 4
 	* ~~`/lightitems` - Light World items. Crosslink to Dark World equivalents.~~ DONE up to Chapter 4
 	* ~~`/equipment` - Weapons and armor. Descriptions, reactions from the party members, shop descriptions. LW/DW equivalents.~~ DONE up to Chapter 4
 	* `/encounters` - Check descriptions, ACT descriptions, etc. This is probably gonna have a ton of subpages, I'd guess one for every potential enemy. At the very least, the big story-critical encounters (e.g. all boss fights) would need their own subpages which the `/chapters` pages could then link to.
