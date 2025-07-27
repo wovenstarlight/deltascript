@@ -1,0 +1,272 @@
+---
+title: Jigsawry encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Jigsawry.</p>
+
+sources:
+  -
+    name: gml_Object_obj_jigsawryenemy_Step_0
+    chapters: [1]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [1]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: Flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-jigsawry
+            name: With another Jigsawry
+          -
+            id: encounter-rudinnhathy
+            name: With Rudinn and Hathy
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: ft-check
+            name: Check
+          -
+            id: ft-befriend
+            name: Befriend
+          -
+            id: ft-warning
+            name: Warning
+  -
+    id: dialogue
+    name: Dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-spareable
+        name: Spareable
+      -
+        id: dialogue-hurt
+        name: Hurt
+      -
+        id: dialogue-lost
+        name: When another Jigsawry is defeated
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(global\.encounterno = |myencounter = |scr_encountersetup\()(21|22|23)
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>Flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<p>Unused.</p>
+	<h4 id="encounter-solo">Solo</h4>
+	<h5>First time</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Jigsawry drew near!</d-text>
+	</d-box>
+	<h5>Second time, and fourth time onwards</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>A different Jigsawry from last time drew near!</d-text>
+	</d-box>
+	<h5>Third time</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Assumedly another different Jigsawry appeared!</d-text>
+	</d-box>
+
+	<h4 id="encounter-jigsawry">With another Jigsawry</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>A board of Jigsawrys blocked the way!</d-text>
+	</d-box>
+
+	<h4 id="encounter-rudinnhathy">With Rudinn and Hathy</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smorgasboard.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Jigsawry is pretending to march.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Jigsawry is trying to calculate this month's rent.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Jigsawry thought of its boss and felt afraid.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Jigsawry is wishing it could quit its job.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like cardboard.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Jigsawry looks exhausted.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Jigsawry's edges are fraying.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<p>Unused. (Got assigned to the wrong variable.)</p> <!-- global.msg instead of global.battlemsg, if you were wondering -->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Jigsawry looks happy about its life.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-check">Check</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>JIGSAWRY - AT 5 DF 0</d-text>
+		<d-text asterisk>This mousenary is only fighting to make ends meet...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-befriend">Befriend</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You barely lifted a finger, and...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">At random:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>Of course<span class="break"></span> I'll be<span class="break"></span> your friend!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>Alright!</d-text>
+		<d-text>You win!</d-text>
+		<d-text>Let's be<span class="break"></span> friends!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>Friends?</d-text>
+		<d-text>I was thinking<span class="break"></span> the same<span class="break"></span> thing!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>... well,<span class="break"></span> if we HAVE<span class="break"></span> to be<span class="break"></span> friends...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Jigsawry gains 100% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3 id="ft-warning">{% include acticon chara="Ralsei" -%} Warning</h3>
+	<p>Available before Susie joins the party for real.</p>
+	<p></p>
+	<p class="note">Susie's attacks will miss from now on.</p>
+
+	<h4>When against a lone Jigsawry</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei warned Jigsawry about Susie.</d-text>
+		<d-text asterisk>The enemy went on guard...</d-text>
+	</d-box>
+
+	<h4>When against multiple enemies</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei warned the enemies about Susie.</d-text>
+		<d-text asterisk>Everyone went on guard.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>H... hurting<span class="break"></span> people is<span class="break"></span> cool..</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>P... Put up<span class="break"></span> your d-dukes,<span class="break"></span> bubbo...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>F... Fighting?<span class="break"></span> I love<span class="break"></span> fighting...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>I... I have<span class="break"></span> a rent<span class="break"></span> payment<span class="break"></span> to make...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-spareable">Spareable</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>I always<span class="break"></span> wanted a<span class="break"></span> friend just<span class="break"></span> like you.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>We're friends<span class="break"></span> now, la la~</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-hurt">Hurt</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>WHADDA WORLD!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>I'M TOO YOUNG<span class="break"></span> TO DIE!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-lost">When another Jigsawry is defeated</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>BARRY!!!<span class="break"></span> THEY GOT<span class="break"></span> BARRY!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>BARRY!!<span class="break"></span> HANG IN<span class="break"></span> THERE BARRY!</d-text>
+	</d-box>
+</section>
