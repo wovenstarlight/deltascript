@@ -18,8 +18,8 @@
 		</label>
 
 		<label for="toggle-anim" class="toggle">
-			<input type="checkbox" id="toggle-anim" class="visually-hidden">
-			Disable animations
+			<input type="checkbox" id="toggle-anim" class="visually-hidden" checked>
+			Text animations
 		</label>
 
 		{%- comment %}
