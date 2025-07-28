@@ -23,7 +23,7 @@ sources:
   -
     name: gml_GlobalScript_scr_spelltext
     chapters: [1]
-    note: Glowshard usage
+    note: Glowshard/Manual usage
 
 credits: >
   <p>Compiled by wovenstarlight.</p>
@@ -83,8 +83,14 @@ toc:
             id: ft-warning
             name: Warning
       -
-        id: ft-glowshard
-        name: Using Glowshard
+        name: Items
+        subheadings:
+          -
+            id: ft-glowshard
+            name: Using Glowshard
+          -
+            id: ft-manual
+            name: Using the Manual
   -
     id: dialogue
     name: Dialogue
@@ -250,6 +256,17 @@ toc:
 		<d-text asterisk>The GLOWSHARD disappeared!</d-text>
 	</d-box>
 	<p class="note">All Rudinns gain 100% <span class="yellow">Mercy</span>. The Glowshard is removed from the inventory.</p>
+	
+	<hr>
+
+	<h3 id="ft-manual">Using the <a href="{{ '/misc/darkitems#manual' | relative_url }}">Manual</a></h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] read the MANUAL!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn was <span class="blue">bored to tears</span>!</d-text>
+	</d-box>
+	<p class="note">Rudinn becomes <span class="blue">Tired</span>.</p>
 </section>
 
 <section class="d-section" id="dialogue">
