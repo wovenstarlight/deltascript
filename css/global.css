@@ -46,6 +46,9 @@
 	--purple: #800080;
 	--maroon: #800000;
 	--orange: #ffa040;
+	--lightblue: #00aeff;
+	--pink: #ff80ff;
+	--lightgreen: #80ff80;
 	/* Custom */
 	--gray: #aaa;
 	--lightyellow: #ffff80;
@@ -150,9 +153,9 @@ hr {
 .cP, .purple { color: var(--purple) } /* unused */
 .cM, .maroon { color: var(--maroon) } /* unused */
 .cO, .orange { color: var(--orange) }
-.cA { color: #00aeff }
-.cS { color: #ff80ff }
-.cV { color: #80ff80 } /* unused */
+.cA, .lightblue { color: var(--lightblue) }
+.cS, .pink { color: var(--pink) }
+.cV, .lightgreen { color: var(--lightgreen) }
 .gray { color: var(--gray) }
 .lightyellow { color: var(--lightyellow) }
 
@@ -183,9 +186,9 @@ hr {
 	.cP, .purple { --mycolor: var(--purple) } /* unused */
 	.cM, .maroon { --mycolor: var(--maroon) } /* unused */
 	.cO, .orange { --mycolor: var(--orange) }
-	.cA { --mycolor: #00aeff }
-	.cS { --mycolor: #ff80ff }
-	.cV { --mycolor: #80ff80 } /* unused */
+	.cA, .lightblue { --mycolor: var(--lightblue) }
+	.cS, .pink { --mycolor: var(--pink) }
+	.cV, .lightgreen { --mycolor: var(--lightgreen) }
 	.gray { --mycolor: var(--gray) }
 	.lightyellow { --mycolor: var(--lightyellow) }
 }
@@ -211,6 +214,11 @@ hr {
 	--susie: #ea79c8;
 	--ralsei: #b5e61d;
 	--noelle: #ffff00; /*same as health bar*/
+}
+.act {
+	--kris: var(--lightblue);
+	--susie: var(--pink);
+	--ralsei: var(--lightgreen);
 }
 /* #endregion */
 .text-center { text-align: center }
@@ -414,6 +422,9 @@ body.dim {
 	--purple: #5e005e;
 	--maroon: #5e0000;
 	--orange: #b6722e;
+	--lightblue: #0077af;
+	--pink: #bb5ebb;
+	--lightgreen: #5ebb5e;
 	--lightyellow: #bbbb5e;
 
 	--kris: #6a7bc4;
