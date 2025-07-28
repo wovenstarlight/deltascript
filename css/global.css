@@ -993,7 +993,7 @@ d-text {
 			background: center / contain no-repeat;
 		}
 	}
-	[theme=battletalk] &:is(
+	body:not(.compact) [theme=battletalk] &:is(
 		[asterisk="Happy" i], [asterisk="Nice" i],
 		[asterisk="Mad" i], [asterisk="Mean" i],
 		[asterisk="Sad" i], [asterisk="Shy" i]
