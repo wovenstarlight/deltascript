@@ -78,8 +78,17 @@ items:
     name: Other
     sublist:
       -
-        url: placeholder
-        name: Placeholder enemy
+        name: Party Dojo
+        sublist:
+          -
+            url: cloverdojo
+            name: Clover Rematch
+      -
+        name: Unused
+        sublist:
+          -
+            url: placeholder
+            name: Placeholder enemy
 ---
 {% for section in page.items -%}
 <section class="d-section" id="{{ section.url | default: section.id }}">
