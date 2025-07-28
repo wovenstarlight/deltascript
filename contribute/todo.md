@@ -109,13 +109,12 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* `/berdly`: coaster fight, alley fight, queen fight with plug-controlled berdly
 			* `/rouxls`: chapter 2 pirate hat, chapter 3 contractors
 			* `/tenna`: doom board and final showdown
-		* gml_Object_obj_placeholderenemy_Step_0 `/placeholder` (check chapter variants! also maybe crosslink whatever baseenemy ends up becoming?)
 		* gml_Object_obj_lancerboss_Step_0 (Lancer intro) `/lancer1` or `/lancervslightners`
 		* gml_Object_obj_ralseienemy_Step_0 (Unused Ralsei tutorial) `/ralsei`
 		* gml_Object_obj_clubsenemy_old_Step_0 (old Clover fight) `/cloverunused`, crosslink `/clover`
 		* gml_Object_obj_checkers_enemy_Step_0 `/kround`, crosslink `/cround`; include sections/numbered pages for first/second fight
 		* gml_Object_obj_lancerboss3_Step_0/gml_Object_obj_susieenemy_Step_0 (vs Lancer & Susie) `/badguys` or `/darkfungang` or smthn maybe lmao. pick a better name if you want
-		* gml_Object_obj_clubsenemy_Step_0 `/clover` (ch1 file) and `/cloverdojo` (ch2 file), crosslink each other and `/cloverunused`
+		* gml_Object_obj_clubsenemy_Step_0 `/cloverdojo` (ch2 file), crosslink to `/clover` and `/cloverunused`
 		* gml_Object_obj_lancerboss2_Step_0 (Susie vs Lancer) `/lancer2` or `/lancervssusie`
 		* gml_Object_obj_omawaroid_enemy_Step_0 `/ambyulance`
 		* gml_Object_obj_poppup_enemy_Step_0 `/poppup`

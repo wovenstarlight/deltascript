@@ -1,0 +1,494 @@
+---
+title: Clover encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Clover.</p>
+
+sources:
+  -
+    name: gml_Object_obj_clubsenemy_Step_0
+    chapters: [1]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [1]
+    note: initial flavor text
+  -
+    name: gml_GlobalScript_scr_spelltext
+    chapters: [1]
+    note: Manual usage
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /misc/encounters/cloverdojo
+    name: Party Dojo - Clover encounter
+  -
+    url: /misc/encounters/cloverunused
+    name: Unused, non-miniboss Clover variant
+
+toc:
+  -
+    id: prefight
+    name: Before the fight
+    subheadings:
+      -
+        id: prefight-standard
+        name: Standard
+      -
+        id: prefight-unused
+        name: Unused variant
+  -
+    id: flavortext
+    name: Flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-hathy
+            name: With Hathy
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+      -
+        id: ft-betray
+        name: Attacked after 100% Mercy
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: ft-check
+            name: Check
+          -
+            id: ft-talkbday
+            name: TalkBday
+          -
+            id: ft-talkboys
+            name: TalkBoys
+          -
+            id: ft-talksports
+            name: TalkSports
+          -
+            id: ft-talkanimals
+            name: TalkAnimals
+          -
+            id: ft-talktrees
+            name: TalkTrees
+      -
+        name: Items
+        subheadings:
+          -
+            id: ft-manual
+            name: Using the Manual
+  -
+    id: dialogue
+    name: Dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: dialogue-actnamehere
+            name: TalkBoys
+          -
+            id: dialogue-actnamehere
+            name: TalkSports
+          -
+            id: dialogue-actnamehere
+            name: TalkAnimals
+          -
+            id: dialogue-actnamehere
+            name: TalkTrees
+      -
+        name: Items
+        subheadings:
+          -
+            id: dialogue-manual
+            name: Using the Manual
+      -
+        id: dialogue-fallback
+        name: Fallback text
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(global\.encounterno = |myencounter = |scr_encountersetup\()(8|15)
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="prefight">
+	<h2>Before the fight</h2>
+
+	<h3 id="prefight-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Clover</d-speaker>
+		<d-text asterisk>Heyy~! It's my birthday today~!</d-text>
+		<d-text asterisk>And you didn't even SAY HELLO!?</d-text>
+		<d-text asterisk>That's fine, actually...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Clover</d-speaker>
+		<d-text asterisk>Stop and say hi, folks~!</d-text>
+		<d-text asterisk>Shut up! They don't DESERVE us!</d-text>
+		<d-text asterisk>H-hey, calm down, you two.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Clover</d-speaker>
+		<d-text asterisk>Let's celebrate my birthday~!</d-text>
+		<d-text asterisk>Yeah, get ready to HURT!</d-text>
+		<d-text asterisk>Oh, I'm s-sorry about this...!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="prefight-unused">Unused variant</h3>
+	<p>Intended for if you spoke to Clover in her entirety before leaving the area where she's encountered... but that interaction was cut from the game, so this became inaccessible.</p>
+	<d-box theme="dark">
+		<d-speaker>Clover</d-speaker>
+		<d-text asterisk>Oh, you don't know the day?</d-text>
+		<d-text asterisk>You mean you FORGOT!?</d-text>
+		<d-text asterisk>That's OK, you don't know us.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Clover</d-speaker>
+		<d-text asterisk>It's our birthday~! Yayyyy~!</d-text>
+		<d-text asterisk>And you're gonna REGRET IT!</d-text>
+		<d-text asterisk>Oh, I'm sorry about this...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="flavortext">
+	<h2>Flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover grew close!</d-text>
+	</d-box>
+
+	<h4 id="encounter-hathy">With Hathy</h4>
+	<p>Unused. Possibly intended for the <a href="{{ '/misc/encounters/cloverunused' | relative_url }}">non-miniboss version of Clover</a>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover and Hathy grew close!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover flashes a trio of terrible smiles.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover is bickering with herselves.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover is whispering about cute boys.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover is arguing about whose toothbrush is whose.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover hums like an out-of-tune choir.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like clover and dew.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<p>Clover automatically grows <span class="blue">Tired</span> after 3 Talk ACTs.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover seems TIRED of discussing so much.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover starts to look wilted.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<p>Unused. (Got assigned to the wrong variable.)</p> <!-- global.msg instead of global.battlemsg, if you were wondering -->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover seems to be getting along with herselves.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-betray">Attacked after 100% <span class="yellow">Mercy</span></h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover's harmony was shattered by violence.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-check">Check</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>CLOVER - AT 8 DF 2</d-text>
+		<d-text asterisk>Two heads are better than one!</d-text>
+		<d-text asterisk>Three... maybe not.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-talkbday">{% include acticon chara="Ralsei" -%} TalkBday</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Ummm, what would you like for your birthday?</d-text>
+	</d-box>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">Let's just<span class="break"></span> have a nice<span class="break"></span> chat~</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">You IDIOT!<span class="break"></span> Ask for a<span class="break"></span> GIFT!!!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">(Just<span class="break"></span> discuss<span class="break"></span> our likes.)</d-text>
+		</d-box>
+	</div>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Seems like you should talk about something else...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-talkboys">{% include acticon chara="Ralsei" -%} TalkBoys</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Ummm... What kind of "Boys" do you like?</d-text>
+	</d-box>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">Cute ones!<span class="break"></span> Hmm hmm~<span class="break"></span> </d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">NICE ONES,<span class="break"></span> like I AM!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">None...<span class="break"></span> Um, I mean,<span class="break"></span> all.</d-text>
+		</d-box>
+	</div>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Seems like Clover enjoyed talking about that...)</d-text>
+	</d-box>
+	<p class="note">First time only: Clover gains 40% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3 id="ft-talksports">{% include acticon chara="Ralsei" -%} TalkSports</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Do you like, um... Sports?</d-text>
+	</d-box>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">I wanna<span class="break"></span> eat a<span class="break"></span> football.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">Sports!<span class="break"></span> My favorite<span class="break"></span> food!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">Oh!<span class="break"></span> I love you<span class="break"></span> two!</d-text>
+		</d-box>
+	</div>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Seems like Clover enjoyed talking about that...)</d-text>
+	</d-box>
+	<p class="note">First time only: Clover gains 40% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3 id="ft-talkanimals">TalkAnimals</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You brought up the topic of Animals.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover didn't seem to care...</d-text>
+	</d-box>
+	
+	<hr>
+	
+	<h3 id="ft-talktrees">TalkTrees</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You brought up the topic of Trees. Clover seemed happy...</d-text>
+	</d-box>
+	<p class="note">First time only: Clover gains 40% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3 id="ft-manual">Using the <a href="{{ '/misc/darkitems#manual' | relative_url }}">Manual</a></h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] read the MANUAL!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover became sentimental!</d-text>
+	</d-box>
+	<p class="note">Clover gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">Nice to<span class="break"></span> meet you!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">Die!<span class="break"></span> Die!<span class="break"></span> Die!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">Please<span class="break"></span> ignore<span class="break"></span> them.</d-text>
+		</d-box>
+	</div>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">Let's get<span class="break"></span> to know<span class="break"></span> you~</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">GET OUT<span class="break"></span> OF HERE!!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">Sorry<span class="break"></span> about<span class="break"></span> this...</d-text>
+		</d-box>
+	</div>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">Nice<span class="break"></span> weather<span class="break"></span> today.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">What?<span class="break"></span> It's just<span class="break"></span> awful!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">Please<span class="break"></span> stop, you<span class="break"></span> two...</d-text>
+		</d-box>
+	</div>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">It's my<span class="break"></span> birthday~</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">WHAT!? NO!<span class="break"></span> It's MY<span class="break"></span> birthday!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">We're<span class="break"></span> triplets...</d-text>
+		</d-box>
+	</div>
+
+	<hr>
+
+	<h3 id="dialogue-actnamehere">TalkBoys</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">Glasses<span class="break"></span> are cute,<span class="break"></span> I think...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">Fluffy!<span class="break"></span> Glasses!<span class="break"></span> That's it!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">HIM???<span class="break"></span> ... err,<span class="break"></span> sure.</d-text>
+		</d-box>
+	</div>
+
+	<hr>
+
+	<h3 id="dialogue-actnamehere">TalkSports</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">Spaghetti<span class="break"></span> and tennis<span class="break"></span> balls.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">That's<span class="break"></span> GENIUS!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">We really<span class="break"></span> agree<span class="break"></span> on it.</d-text>
+		</d-box>
+	</div>
+
+	<hr>
+
+	<h3 id="dialogue-actnamehere">TalkAnimals</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">Animals<span class="break"></span> are kind<span class="break"></span> of nasty.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">Just AWFUL<span class="break"></span> in<span class="break"></span> concept.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">(Never<span class="break"></span> seen one,<span class="break"></span> but...)</d-text>
+		</d-box>
+	</div>
+
+	<hr>
+
+	<h3 id="dialogue-actnamehere">TalkTrees</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">I love<span class="break"></span> the smell<span class="break"></span> of trees.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">Oh!<span class="break"></span> Me too!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">Pollen<span class="break"></span> makes me...<span class="break"></span> Uh, sure!</d-text>
+		</d-box>
+	</div>
+
+	<hr>
+
+	<h3 id="dialogue-manual">Using the Manual</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">Aww, he<span class="break"></span> MADE that!?<span class="break"></span> So caring!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">It's SOOO<span class="break"></span> cute!<span class="break"></span> I want it!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">(Isn't it<span class="break"></span> a bit...<span class="break"></span> boring?)</d-text>
+		</d-box>
+	</div>
+
+	<hr>
+
+	<h3 id="dialogue-fallback">Fallback text</h3>
+	<p>Unused.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">Nice mouth</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">Anger mouth</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">Smart Mouth</d-text>
+		</d-box>
+	</div>
+</section>

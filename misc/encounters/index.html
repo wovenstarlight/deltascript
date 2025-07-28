@@ -8,6 +8,9 @@ toc:
   -
     id: chapter1
     name: Chapter 1
+  -
+    id: other
+    name: Other
 
 items:
   -
@@ -52,7 +55,9 @@ items:
           -
             url: bloxer
             name: Bloxer
-          # also clover
+          -
+            url: clover
+            name: Clover
       -
         name: Card Castle
         sublist:
@@ -68,6 +73,13 @@ items:
           -
             url: jevil
             name: Jevil
+  -
+    id: other
+    name: Other
+    sublist:
+      -
+        url: placeholder
+        name: Placeholder enemy
 ---
 {% for section in page.items -%}
 <section class="d-section" id="{{ section.url | default: section.id }}">
