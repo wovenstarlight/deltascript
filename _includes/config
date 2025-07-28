@@ -19,7 +19,7 @@
 
 		<label for="toggle-anim" class="toggle">
 			<input type="checkbox" id="toggle-anim" class="visually-hidden" checked>
-			Text animations
+			Animations
 		</label>
 
 		{%- comment %}

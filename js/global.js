@@ -80,26 +80,40 @@ class DialogueSprite extends HTMLElement {
 			: "" )								// ...no variants for all others
 		const emotion = this.getAttribute("emotion");
 		const emotionIndex = emotionToIndex(emotion);
-		return (
-			`<img
-				src="${BASE_URL}/assets/images/faces/${speaker.toLowerCase()
+		const src = (
+			`${BASE_URL}/assets/images/faces/${speaker.toLowerCase()
 			}${variant.length ? `/${variant}` : ""
 			}${emotion ? `/${emotionIndex}` : ""
-			}.${
-				(speaker === "Toriel" && [0, 1, 2, 6, 7, 9].includes(emotionIndex))
-				|| (speaker === "Asgore" && [0, 1, 2, 3, 4, 6].includes(emotionIndex))
-				|| (speaker === "Susie" && variant === "noeyes" && emotionIndex === 11)
-				|| (speaker === "Seam" && emotionIndex !== 1)
-				|| (speaker === "Rouxls" && variant === "shop")
-				? "gif"	// `gif` in certain cases
-				: "png"	// `png` otherwise
-			}"
-				alt="${speaker}${variant.length && emotion ? ` (${variant}, ver.${emotion})`
+			}`
+		);
+		const alt = (
+			`${
+				speaker
+			}${
+				variant.length && emotion
+				? ` (${variant}, ver.${emotion})`
 				: emotion ? ` (ver.${emotion})`
 				: variant.length ? ` (${variant})`
 				: ""
-			}"
-			>`
+			}`
+		);
+		const isGif = (
+			(speaker === "Toriel" && [0, 1, 2, 6, 7, 9].includes(emotionIndex))
+			|| (speaker === "Asgore" && [0, 1, 2, 3, 4, 6].includes(emotionIndex))
+			|| (speaker === "Susie" && variant === "noeyes" && emotionIndex === 11)
+			|| (speaker === "Seam" && emotionIndex !== 1)
+			|| (speaker === "Rouxls" && variant === "shop")
+		);
+
+		return (
+			`<img
+				src="${src}.${isGif ? "gif" : "png"}"
+				alt="${alt}"
+			>${
+				isGif
+				? `<img src="${src}.png" alt="${alt}">`
+				: ""
+			}`
 		)
 	}
 

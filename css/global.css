@@ -290,6 +290,7 @@ img {
 /* #endregion */
 
 /* #region Accessibility */
+/* Skip to main content link */
 #skip {
 	/* Placement */
 	position: fixed;
@@ -312,6 +313,7 @@ img {
 		transform: translate(-50%, calc(-100% - (2 * var(--border-width) + 1em)));
 	}
 }
+/* Hide from sight but not screen readers */
 .visually-hidden,
 header.d-section:has(h1.visually-hidden:only-child) {
 	position: fixed;
@@ -322,6 +324,7 @@ header.d-section:has(h1.visually-hidden:only-child) {
 	padding: 0 !important;
 	white-space: pre; /* Prevent text wrapping into visibility */
 }
+/* "Go back" link on 404 pages */
 #back404 {
 	width: calc(100% - (2 * var(--border-width)));
 	margin: var(--border-width);
@@ -335,7 +338,7 @@ header.d-section:has(h1.visually-hidden:only-child) {
 
 	&:hover, &:focus { color: var(--yellow) }
 }
-/* Settings */
+/* #region Settings */
 #menu {
 	position: fixed;
 	bottom: 0;
@@ -411,6 +414,13 @@ header.d-section:has(h1.visually-hidden:only-child) {
 		&:has(input:checked)::after { content: "ON" }
 	}
 }
+/* #endregion */
+/* Toggling animated images */
+body:not(.noanim) img.animswitch[src$=".png"],
+body.noanim img.animswitch[src$=".gif"] {
+	display: none;
+}
+/* Dim colors */
 body.dim {
 	--red: #bb0000;
 	--blue: #0000bb;
@@ -904,6 +914,8 @@ d-sprite {
 		width: var(--size);
 		height: var(--size);
 		object-fit: contain;
+		body:not(.noanim) &[src$=".gif"] + &[src$=".png"],
+		body.noanim &[src$=".gif"],
 		d-box:state(compact) & { display: none }
 	}
 
@@ -1018,6 +1030,11 @@ d-text {
 	&:is([asterisk="K_K" i], [asterisk="KK" i])::before {
 		background-image: url("../assets/images/faces/sweetcapncakes/kk.gif");
 		content: "(K_K)";
+	}
+	body.noanim & {
+		&:is([asterisk="Sweet" i])::before { background-image: url("../assets/images/faces/sweetcapncakes/sweet.png") }
+		&:is([asterisk="Cap'n" i], [asterisk="Capn" i])::before { background-image: url("../assets/images/faces/sweetcapncakes/capn.png") }
+		&:is([asterisk="K_K" i], [asterisk="KK" i])::before { background-image: url("../assets/images/faces/sweetcapncakes/kk.png") }
 	}
 	&:is([asterisk="Happy" i], [asterisk="Nice" i])::before {
 		background-image: url("../assets/images/faces/clover/happy.png");
