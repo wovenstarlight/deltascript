@@ -79,15 +79,6 @@
 			"</d-box>"
 		]
 	},
-	"Object description (in battle)": {
-		"scope": "html,liquid",
-		"prefix": "object-battle",
-		"body": [
-			"<d-box theme=\"objbattle\">",
-			"\t<d-text>$0</d-text>",
-			"</d-box>"
-		]
-	},
 	"Object reaction": {
 		"scope": "html,liquid",
 		"prefix": "object-reaction",
@@ -116,6 +107,15 @@
 		"body": [
 			"<d-box theme=\"battletalk\">",
 			"\t<d-speaker>$1</d-speaker>",
+			"\t<d-text>$0</d-text>",
+			"</d-box>"
+		]
+	},
+	"Object/ACT description in battle": {
+		"scope": "html,liquid",
+		"prefix": ["battle-description", "object-battle"],
+		"body": [
+			"<d-box theme=\"battledesc\">",
 			"\t<d-text>$0</d-text>",
 			"</d-box>"
 		]
@@ -234,6 +234,28 @@
 			"",
 			"\t$0",
 			"</section>",
+		]
+	},
+	"ACT icon": {
+		"scope": "html,liquid",
+		"prefix": "act-icon",
+		"body": "{% include acticon chara=\"${1|Susie,Ralsei,Noelle,Gerson,Kris|}\" %}"
+	},
+	"Recruit profile": {
+		"scope": "html,liquid",
+		"prefix": ["profile", "recruit"],
+		"body": [
+			"{% include profile",
+			"\tname=\"$1\"",
+			"\tdesc=\"$2\"",
+			"\tlike=\"$3\"",
+			"\tdislike=\"$4\"",
+			"\tchapter=$5",
+			"\tlevel=$6",
+			"\tattack=$7",
+			"\tdefense=$8",
+			"\telement=\"$9\"",
+			"%}",
 		]
 	}
 	// #endregion
