@@ -101,6 +101,26 @@
 			"</d-box>"
 		]
 	},
+	"Battle narration with sprite": {
+		"scope": "html,liquid",
+		"prefix": "battle-menu-sprite",
+		"body": [
+			"<d-box theme=\"battlemenu\">",
+			"\t<d-sprite speaker=\"${2|Susie,Ralsei,Noelle,Lancer,Kris|}\" emotion=\"${3|0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z|}\"></d-sprite>",
+			"\t<d-text asterisk>$0</d-text>",
+			"</d-box>"
+		]
+	},
+	"Battle narration with speaker": {
+		"scope": "html,liquid",
+		"prefix": "battle-menu-speaker",
+		"body": [
+			"<d-box theme=\"battlemenu\">",
+			"\t<d-speaker>${1|Susie,Ralsei,Noelle,Lancer,Kris|}</d-speaker>",
+			"\t<d-text asterisk>$0</d-text>",
+			"</d-box>"
+		]
+	},
 	"Battle dialogue": {
 		"scope": "html,liquid",
 		"prefix": "battle-talk",
@@ -239,7 +259,7 @@
 	"ACT icon": {
 		"scope": "html,liquid",
 		"prefix": "act-icon",
-		"body": "{% include acticon chara=\"${1|Susie,Ralsei,Noelle,Gerson,Kris|}\" %}"
+		"body": "{% include acticon chara=\"${1|Susie,Ralsei,Noelle,Gerson,Kris|}\" -%}"
 	},
 	"Recruit profile": {
 		"scope": "html,liquid",
@@ -257,6 +277,11 @@
 			"\telement=\"$9\"",
 			"%}",
 		]
+	},
+	"Wiki link": {
+		"scope": "html,liquid",
+		"prefix": "wiki-link",
+		"body": "{% include wikilink page='$1' %}"
 	}
 	// #endregion
 }
