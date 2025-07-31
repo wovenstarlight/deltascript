@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<header class="d-section">
+	<h1 {%- if page.hide_title %} class="visually-hidden" {%- endif %}>{{ page.title }} (disambiguation)</h1>
+
+	{%- if page.credits %}
+	<div id="pagecred">{{ page.credits }}</div>
+	{%- endif %}
+
+	{%- if page.see_also %}
+	<details id="pageseealso" {%- if page.see_also.size <= 4 %} open {%- endif -%}>
+		<summary>See also</summary>
+		<ul>
+			{%- for link in page.see_also %}
+			<li><a href="{{ link.url | relative_url }}">{{ link.name }}</a>
+				{%- if link.for %}, for {{ link.for }}
+				{%- endif -%}
+			</li>
+			{%- endfor %}
+		</ul>
+	</details>
+	{%- endif %}
+</header>
+
+<section class="d-section">
+	<p>There is more than one page with the title "{{ page.title }}". You may be looking for one of the following:</p>
+
+	<ul>
+		{% for item in page.items -%}
+		{% include nested_list_item this=item %}
+		{% endfor %}
+	</ul>
+
+	<hr>
+
+	<p>If an internal link led you to this disambiguation page, consider changing the link to point to the intended page.</p>
+</section>
