@@ -1,0 +1,438 @@
+---
+title: K. Round encounter - Card Castle
+
+description: >
+  <p>Flavor text and dialogue for the second battle against K. Round.</p>
+
+sources:
+  -
+    name: gml_Object_obj_rurus_checker_event_Step_0
+    chapters: [1]
+    note: prefight/postfight cutscene
+  -
+    name: gml_Object_obj_checkers_enemy_Step_0
+    chapters: [1]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [1]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_throwralsei_Step_0
+    chapters: [1]
+    note: second "Throw" instruction
+  -
+    name: gml_Object_obj_ralseithrown_Collision_obj_throwtarget
+    chapters: [1]
+    note: '"Throw" results; hit'
+  -
+    name: gml_Object_obj_ralseithrown_Step_0
+    chapters: [1]
+    note: '"Throw" results; missed'
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: cround
+    name: C. Round encounter
+  -
+    url: /misc/encounters/kroundgreatboard
+    name: K. Round encounter - Great Board
+
+toc:
+  -
+    id: prefight
+    name: Before the fight
+  -
+    id: flavortext
+    name: Flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-bow
+        name: Bow
+      -
+        id: ft-selfheal
+        name: Healing itself
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: ft-check
+            name: Check / Checkers
+          -
+            id: ft-bow
+            name: Bow
+          -
+            id: ft-deepbow
+            name: Deep Bow
+          -
+            id: ft-warning
+            name: Warning
+  -
+    id: dialogue
+    name: Dialogue
+  -
+    id: postfight
+    name: After the fight
+---
+<section class="d-section" id="prefight">
+	<h2>Before the fight</h2>
+
+	<p class="note">Kris, Susie, and Ralsei stop in the hallway leading from Floor 5F to the throne room.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Enough, Worms...!</d-text>
+	</d-box>
+
+	<p class="note">Rouxls Kaard teleports in front of them. <a href="{% include wikilink page='Rouxls Kaard (Soundtrack)' %}">His theme</a> begins playing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="0"></d-sprite>
+		<d-text asterisk>Thou may have CHEATETHED through mine PUZZLES, but...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="0"></d-sprite>
+		<d-text asterisk>In COMBAT, thou shalt be scattered about!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="0"></d-sprite>
+		<d-text asterisk>Come, knaves...! Prepareth for battle with...!</d-text>
+	</d-box>
+
+	<p class="note">Rouxls moves aside and teleports in <a href="{{ '/misc/encounters/kroundgreatboard' | relative_url }}">K. Round</a>.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="0"></d-sprite>
+		<d-text asterisk>Whatever this is!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>Huh...!?</d-text>
+		<d-text asterisk>It's the enemy from earlier...!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>But its CROWN looks different!</d-text>
+		<d-box place="center-x">
+			<d-sprite speaker="Susie" variant="noeyes" emotion="6"></d-sprite>
+			<d-text asterisk>... it looks the same.</d-text>
+		</d-box>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="0"></d-sprite>
+		<d-text asterisk>Yes! With my Control Crowne...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="0"></d-sprite>
+		<d-text asterisk>I mayst control ANY disc-shaped Lifeforme!</d-text>
+	</d-box>
+
+	<p class="note">K. Round takes an aggressive stance.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>Oh no!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>It looks like it's in pain!!</d-text>
+		<d-box place="center-x">
+			<d-sprite speaker="Susie" variant="noeyes" emotion="7"></d-sprite>
+			<d-text asterisk>IT LOOKS THE SAME!!!!</d-text>
+		</d-box>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="0"></d-sprite>
+		<d-text asterisk>Yes... The control crown is painful...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="0"></d-sprite>
+		<d-text asterisk>But, I'm certain this Creature will feeleth relief...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="0"></d-sprite>
+		<d-text asterisk>When it sees how much MORE pain THOU'LL be in!!!</d-text>
+	</d-box>
+
+	<p class="note">The fight begins.</p>
+</section>
+
+<section class="d-section" id="flavortext">
+	<h2>Flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Here it comes. Again.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K.Round shuffles furiously.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K.Round looks weak.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K.Round's shuffle becomes lethargic.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-postthrow">After
+		{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Susie's Idea
+		/
+		{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Throw
+	</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The crown is <span class="yellow">[NUMBER]-percent</span> loose!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-selfheal">Healing itself</h3>
+	<p>Triggers when K. Round falls to or below 600 HP. Replaces K. Round's attack for that turn.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K. ROUND practiced self-care!</d-text>
+	</d-box>
+	<p class="note">A carton of milk appears, moving towards K. Round and healing it for 700 HP, as well as increasing its attack by 0.5 up to a maximum total attack of 10.</p>
+
+	<hr>
+
+	<h3 id="ft-check">Check / Checkers</h3>
+	<h4>Check (if not Checked in its first encounter)</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K.ROUND - AT 9 DF 3</d-text>
+		<d-text asterisk>It's being controlled into attacking...!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Though, wouldn't it just attack anyway...?)</d-text>
+	</d-box>
+
+	<h4>Checkers (if Checked in its first encounter)</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K.ROUND - AT 9 DF 3</d-text>
+		<d-text asterisk>Watch out for its Flying King attack!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Also, you need to get the CROWN off of its head.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-bow">Bow</h3>
+	<p class="note">Kris bows.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You bowed to K. ROUND.</d-text>
+	</d-box>
+	<p class="note">K. Round repeatedly bows back. Its crown loosens by 18%.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It bowed back.</d-text>
+		<d-text asterisk>Its crown loosened a little.</d-text>
+	</d-box>
+
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>Huh!? That hardly did anything!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>How can we push off that CROWN...?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="1"></d-sprite>
+		<d-text asterisk>... Hmm.</d-text>
+	</d-box>
+
+	<h4>Second time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>It's still hardly working!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Whatever can we do, Kris...?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>... Hey.</d-text>
+	</d-box>
+
+	<h4>Third time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Sometimes persistence is key, Kris!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>It'll be hard, but we can do it!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="7"></d-sprite>
+		<d-text asterisk>HEY YOU GUYS!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-throw">{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Susie's Idea / {% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Throw</h3>
+	<p>Initially appears as "Susie's Idea", and changes to "Throw" after the first use.</p>
+
+	<h4>First time only</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Susie? You want to ACT? Aww, what's your idea?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Umm... well... how do I say this.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>I kind of...</d-text>
+		<d-text asterisk>Need you for this one.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>That's fine, Susie!</d-text>
+		<d-text asterisk>I'll help!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>You want to apologize to it for earlier, right?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Nah, I just need you to stay still.</d-text>
+	</d-box>
+
+	<p class="note">Susie grabs Ralsei in one hand and hefts him.</p>
+
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="7"></d-sprite>
+		<d-text asterisk>Kris! We gotta get that CROWN off its head!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="7"></d-sprite>
+		<d-text asterisk>Help me throw Ralsei at it!</d-text>
+	</d-box>
+	<p class="note">Continues to the below section.</p>
+
+	<h4>Standard</h4>
+	<p class="note">An arrow appears in front of Susie, oscillating up and down.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press [MENU] to determine the ANGLE!</d-text>
+	</d-box>
+	<p class="note">After selecting the angle, the arrow turns red and a curved, dotted line stretches forward from it, oscillating back and forth.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press [MENU] to determine the POWER!</d-text>
+	</d-box>
+	<p class="note">After selecting the power, Ralsei is thrown, either hitting the crown/missing and flying offscreen to the right, or hitting K. Round and bouncing off, falling offscreen. He reenters from the left, retaking his place in the lineup.</p>
+
+	<h5>Hitting the crown</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The crown greatly loosened!</d-text>
+	</d-box>
+	<p class="note">K. Round's crown loosens by 35%.</p>
+
+	<h5>Hitting K. Round</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The crown loosened a little!</d-text>
+	</d-box>
+	<p class="note">K. Round's crown loosens by 20%.</p>
+
+	<h5>Missing</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Missed!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+
+	<p>No dialogue; K. Round does not talk.</p>
+</section>
+
+<section class="d-section" id="postfight">
+	<h2>After the fight</h2>
+
+	<p class="note">Once the crown is 100% loose, it slides off K. Round and falls to the ground, sliding offscreen. K. Round transforms back into C. Round and rolls offscreen, ending the encounter. Rouxls slides back into view from the right.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="6"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="1"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">Rouxls's theme begins playing again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>Why, brilliant!</d-text>
+		<d-text asterisk>Just BRILLIANT!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="3"></d-sprite>
+		<d-text asterisk>I knew you couldst do it! Thou great heroes, thou!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="6"></d-sprite>
+		<d-text asterisk>Thou see-eth, that was merely...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="3"></d-sprite>
+		<d-text asterisk>A friendly TEST of thine abilities!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="2"></d-sprite>
+		<d-text asterisk>But thou hast WON! And now, NOTHING blocks thine path!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>I, personally, could NOT be less of an obstruction!</d-text>
+	</d-box>
+
+	<p class="note">The music cuts off. A pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>But you -</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="3"></d-sprite>
+		<d-text asterisk>Luck be with you. Heroes!</d-text>
+	</d-box>
+
+	<p class="note">Rouxls cuts off Ralsei; as he speaks, he exits rapidly towards the right. The party is able to proceed to the throne room, from where they can access <a href="{{ '/misc/encounters/king' | relative_url }}">the roof</a>.</p>
+</section>

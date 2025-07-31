@@ -1,0 +1,589 @@
+---
+title: K. Round encounter - Great Board
+
+description: >
+  <p>Flavor text and dialogue for the first battle against K. Round.</p>
+
+sources:
+  -
+    name: gml_Object_obj_checker_animtest_Step_0
+    chapters: [1]
+    note: prefight/postfight cutscene
+  -
+    name: gml_Object_obj_checkers_enemy_Step_0
+    chapters: [1]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [1]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: cround
+    name: C. Round encounter
+  -
+    url: /misc/encounters/kroundcardcastle
+    name: K. Round encounter - Card Castle
+
+toc:
+  -
+    id: prefight
+    name: Before the fight
+  -
+    id: flavortext
+    name: Flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-postbow
+        name: After Bow / Deep Bow
+      -
+        id: ft-selfheal
+        name: Healing itself
+      -
+        name: ACTs
+        subheadings:
+          -
+            id: ft-check
+            name: Check / Checkers
+          -
+            id: ft-bow
+            name: Bow
+          -
+            id: ft-deepbow
+            name: Deep Bow
+          -
+            id: ft-warning
+            name: Warning
+  -
+    id: dialogue
+    name: Dialogue
+  -
+    id: postfight
+    name: After the fight
+---
+<section class="d-section" id="prefight">
+	<h2>Before the fight</h2>
+
+	<p class="note">Kris, Ralsei, and Susie proceed over the Great Board until they come upon Lancer, facing away.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="0"></d-sprite>
+		<d-text asterisk>Hohoho...</d-text>
+		<d-text asterisk>Well STEP on my BOOTS.</d-text>
+	</d-box>
+	<hr>
+	<h3>If you named your party "The $!$? Squad"</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="0"></d-sprite>
+		<d-text asterisk>If it isn't the (name I'm not allowed to say).</d-text>
+	</d-box>
+	<h3>If you named your party "The Lancer Fan Club"</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="0"></d-sprite>
+		<d-text asterisk>If it isn't the Lancer Fan Club.</d-text>
+	</d-box>
+	<h3>If you named your party "The Fun Gang"</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="0"></d-sprite>
+		<d-text asterisk>If it isn't the Friendly Fun Gang.</d-text>
+	</d-box>
+	<h3>Error</h3>
+	<p class="note">Displays if your team name choice wasn't stored properly.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="0"></d-sprite>
+		<d-text asterisk>If it isn't the Guys</d-text>
+	</d-box>
+	<hr>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="0"></d-sprite>
+		<d-text asterisk>You boys or girls had better turn back while you can.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>Lancer!!!</d-text>
+		<d-text asterisk>What is it this time!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Hohoho...</d-text>
+		<d-text asterisk>I'm simply warning you...!</d-text>
+	</d-box>
+
+	<p class="note">Lancer turns around and steps forward towards the party, accompanied by a scare chord.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>Something EXTREMELY dangerous is lying ahead!</d-text>
+	</d-box>
+
+	<p class="note">Lancer steps forward again, accompanied by a higher-pitched scare chord.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>Hohoho! It's actually really inconvenient!</d-text>
+	</d-box>
+
+	<p class="note">Lancer steps forward again, accompanied by an even higher-pitched scare chord.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Ha! I can't go home at all because I'm so scared!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="9"></d-sprite>
+		<d-text asterisk>Wh... What is it!?</d-text>
+	</d-box>
+
+	<p class="note">Lancer moves out of the way for the party to proceed. The camera pans forward with them, revealing a <a href="{{ '/misc/encounters/cround' | relative_url }}">C. Round</a> standing on the second-to-last row of the Great Board.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Oh, hey, little guy...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="6"></d-sprite>
+		<d-text asterisk>THAT??? THAT'S what you're afraid of???</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>W... Wow, purple girl!</d-text>
+		<d-text asterisk>You aren't scared!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Heh, why would I be? What's it gonna do?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="6"></d-sprite>
+		<d-text asterisk>Hmm, well, normally...</d-text>
+	</d-box>
+
+	<p class="note">C. Round steps forward to the last row of the Great Board, which flashes under its feet. A crown falls from the sky, landing on top of it. C. Round grows in size into a K. Round, which then takes an aggressive stance, spooking Susie and Ralsei.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="6"></d-sprite>
+		<d-text asterisk>It crushes people to death, I think.</d-text>
+	</d-box>
+
+	<p class="note">The fight begins.</p>
+</section>
+
+<section class="d-section" id="flavortext">
+	<h2>Flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Here it comes!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K.Round shuffles furiously.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K.Round looks weak.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K.Round's shuffle becomes lethargic.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-postbow">After Bow / {% include acticon chara="Ralsei" -%} Deep Bow</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The crown is <span class="yellow">[NUMBER]-percent</span> loose!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-selfheal">Healing itself</h3>
+	<p>Triggers when K. Round falls to or below 1000 HP (first time) / 600 HP (subsequent times). Replaces K. Round's attack for that turn.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K. ROUND felt stressed out and attacked!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K. ROUND practiced self-care!</d-text>
+	</d-box>
+	<p class="note">A carton of milk appears, moving towards K. Round and healing it for 300 HP (first time) / 700 HP (subsequent times), as well as increasing its attack by 0.5 up to a maximum total attack of 10.</p>
+	<h4>First time only</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K. ROUND's HP and ATTACK went up!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>Susie! Stop attacking it! You're making it stronger!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="3"></d-sprite>
+		<d-text asterisk>Pssh, and let it think I'm AFRAID? No way!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-check">Check / Checkers</h3>
+	<h4>Check (First time)</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K.ROUND - AT 9 DF 3</d-text>
+		<d-text asterisk>Check?</d-text>
+		<d-text asterisk>That's chess, not checkers!</d-text>
+	</d-box>
+	<p class="note">The ACT name changes to "Checkers".</p>
+
+	<h4>Checkers (Subsequent times)</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K.ROUND - AT 9 DF 3</d-text>
+		<d-text asterisk>That's better.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-bow">Bow</h3>
+	<p class="note">Kris bows.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You bowed to K. ROUND.</d-text>
+	</d-box>
+	<p class="note">K. Round repeatedly bows back. Its crown loosens by 15%.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It bowed back.</d-text>
+		<d-text asterisk>Its crown loosened a little.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4 id="firstbow">First time only</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>That's it, Kris! If we can get its crown off...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>It should turn back into a little guy...!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Susie! Help us bow at it!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Nah, it's crown'll come off...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="4"></d-sprite>
+		<d-text asterisk>When I smash this guy into the GROUND!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-deepbow">{% include acticon chara="Ralsei" -%} Deep Bow</h3>
+	<p class="note">Kris and Ralsei bow.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei bowed.</d-text>
+	</d-box>
+	<p class="note">K. Round repeatedly bows back. Its crown loosens by 20%.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K. ROUND bowed back.</d-text>
+		<d-text asterisk>Its crown loosened!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time only</h4>
+	<p class="note">Proceeds to <a href="#firstbow">Ralsei and Susie's dialogue for the first bow</a>.</p>
+
+	<hr>
+
+	<h3 id="ft-warning">{% include acticon chara="Ralsei" -%} Warning</h3>
+	<p class="note">K. Round is not warned, and Susie's attacks do not miss.</p>
+	<h4>First time, and fourth time onwards</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You explained to K. Round about the importance of dodging Susie's attacks.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But it didn't seem to understand...</d-text>
+	</d-box>
+
+	<h4>Second time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You started making siren noises with your mouth and looking at Susie.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K. Round still didn't understand...</d-text>
+	</d-box>
+
+	<h4>Third time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You started explaining that Susie is really dangerous and strong.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie got a large boost to her morale.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie's ATTACK went up massively...!</d-text>
+	</d-box>
+	<p class="note">Susie's Attack increases by 50%.</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+
+	<p>No dialogue; K. Round does not talk.</p>
+</section>
+
+<section class="d-section" id="postfight">
+	<h2>After the fight</h2>
+
+	<p class="note">Once the crown is 100% loose, it slides off K. Round and falls to the ground, sliding offscreen. K. Round transforms back into C. Round and rolls offscreen, ending the encounter.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="6"></d-sprite>
+		<d-text asterisk>We... We did it!?</d-text>
+	</d-box>
+
+	<p class="note">Lancer moves to stand in front of the party.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Wow!! You clowns really ARE heroes!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>You saved the next twenty minutes of my life!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Yeah, yeah, I am pretty great, huh...?</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns around to face Susie. Kris turns around as well.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Ummm, Susie...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>Not to downplay your contributions, but...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>You... didn't actually help at all.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="B"></d-sprite>
+		<d-text asterisk>You only made everything WORSE by attacking it.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>If you had just acted nice to it in the first place...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>We could have avoided that entire battle.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="6"></d-sprite>
+		<d-text asterisk>Huh?</d-text>
+		<d-text asterisk>Are you FOR REAL?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="7"></d-sprite>
+		<d-text asterisk>That thing was BLOODTHIRSTY!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>The only thing keeping it at bay was MY AX!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei looks aside briefly before facing Susie again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>And, earlier, you terrorized those troops...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Those guys were ENEMIES. They're FOR terrorizing.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Yeah! She's right!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>And before that, you ate an innocent person's cake...</d-text>
+	</d-box>
+
+	<p class="note">Susie looks aside briefly before facing the others again.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Cakes... are also my enemy.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="C"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Susie... Whether you like it or not...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>You're a hero.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>One with the power to bring peace to the future.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="5"></d-sprite>
+		<d-text asterisk>Could you please start... acting like one?</d-text>
+	</d-box>
+
+	<p class="note">Susie turns around, losing her smile and staying silent for a moment.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Yeah, when you lay it out like that...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>I've been a pretty bad hero, haven't I?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">Susie walks to the side, still unsmiling. A brief pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Alright, Ralsei.</d-text>
+		<d-text asterisk>You got it.</d-text>
+		<d-text asterisk>I'll change my ways.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>From now on, I won't be such a rotten hero anymore.</d-text>
+	</d-box>
+
+	<p class="note">Susie quickly makes her way forward to stand near Lancer and turns with a smile to face Kris and Ralsei, both looking at her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="3"></d-sprite>
+		<d-text asterisk>I'll just be one of the BAD GUYS instead!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei reels in shock. Lancer's theme starts playing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>R... Really!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>You're going to be on MY team?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Yeah, sounds way easier, honestly.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
+		<d-text asterisk>Susie, you can't just -</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Quiet, Toothpaste Boy! Susie is MY comrade now!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Hahaha, yeah, Toothpaste Boy!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>We're going to have monogrammed track jackets!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Yeah!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>And sleepovers! Where we tell each other secrets!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="6"></d-sprite>
+		<d-text asterisk>Ummm, yeah?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Anyway, uhh, see you guys never.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Haha!! If you can even last that long!</d-text>
+	</d-box>
+
+	<p class="note">Lancer and Susie laugh together as they leave the Great Board, heading ahead towards the Forest. The music stops. Ralsei walks ahead of Kris, looking after the other two. A brief pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Kris...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Perhaps I shouldn't have been so hard on her.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>But, I just worry that if Susie is too eager to fight...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="4"></d-sprite>
+		<d-text asterisk>Then...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>Well, let's just be kind to her, OK, Kris?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>I'm sure Susie'll come around soon!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei leads Kris forward; the scene fades to black, then fades back in to reveal the Forest.</p>
+</section>
