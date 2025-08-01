@@ -1,7 +1,7 @@
 {
 	// Documentation: https://code.visualstudio.com/docs/editor/userdefinedsnippets
 
-	"Page template": {
+	"Regular page template": {
 		"scope": "html,liquid",
 		"prefix": "template",
 		"body": [
@@ -23,6 +23,21 @@
 			"\t$0",
 			"</section>",
 		],
+	},
+
+	"Disambiguation page template": {
+		"scope": "html,liquid",
+		"prefix": "disambig",
+		"body": [
+			"---",
+			"title: ${1:Example page title, sentence-cased}",
+			"",
+			"layout: disambiguation",
+			"",
+			"items:",
+			"  ${2:- Links go here with keys 'url', 'name', optionally 'sublist'}",
+			"---",
+		]
 	},
 
 	// #region Narration
