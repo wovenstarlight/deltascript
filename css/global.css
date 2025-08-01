@@ -771,7 +771,7 @@ d-box, d-choices {
 			&.fullwidth.fullheight { object-fit: contain }
 		}
 
-		&:not([theme=objreact]) {
+		&:not([theme=objreact], [theme=battletalk]) {
 			&:has(
 				> d-speaker.kris,
 				> d-speaker.susie,
