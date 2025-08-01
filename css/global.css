@@ -687,7 +687,7 @@ d-box, d-choices {
 			font-size: 1em;
 
 			d-speaker {
-				color: color-mix(in srgb, var(--orange), var(--black));
+				--lightyellow: color-mix(in srgb, var(--orange), var(--black));
 				display: block;
 				margin-block-end: 0.4em;
 
