@@ -1,0 +1,176 @@
+---
+title: Lancer encounter - VS Susie
+
+description: >
+  <p>Flavor text and dialogue for the second battle against Lancer (solo).</p>
+  <p>This battle is entirely scripted, with no flavor text and no opportunities given to use items/instruct Susie otherwise.</p>
+
+sources:
+  -
+    name: gml_Object_obj_lancerboss2_Step_0
+    chapters: [1]
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /chapters/chapter1/prisonbreak#prefight
+    name: Pre- & post-fight cutscenes
+  -
+    url: /misc/encounters/lancervslightners
+    name: First Lancer solo encounter encounter (VS Lightners)
+  -
+    url: /misc/encounters/badguys
+    name: Susie and Lancer encounter
+
+toc:
+  -
+    id: turn1
+    name: Turn 1
+  -
+    id: turn2
+    name: Turn 2
+  -
+    id: turn3
+    name: Turn 3
+  -
+    id: turn4
+    name: Turn 4
+  -
+    id: turn5
+    name: Turn 5
+  -
+    id: turn6
+    name: Turn 6
+  -
+    id: turn7
+    name: Turn 7
+  -
+    id: turn8
+    name: Turn 8
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(global\.encounterno = |myencounter = |scr_encountersetup\()NUMBER_GOES_HERE
+For example, you can find instances of the Jigsawry/Rudinn/Hathy enconuter with the following:
+(global\.encounterno = |myencounter = |scr_encountersetup\()23
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="turn1">
+	<h2>Turn 1</h2>
+
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hey, wanna<span class="break"></span> see what<span class="break"></span> happens to<span class="break"></span> traitors?</d-text>
+	</d-box>
+	<p class="note">Susie attacks.</p>
+
+	<p class="note">If, at any point in the first 3 turns, Susie's HP drops to or below 70, Lancer's bullets begin doing 40% less damage.</p>
+</section>
+
+<section class="d-section" id="turn2">
+	<h2>Turn 2</h2>
+
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>They.<span class="break"></span> Get.<span class="break"></span> Crushed.</d-text>
+	</d-box>
+	<p class="note">Susie attacks.</p>
+</section>
+
+<section class="d-section" id="turn3">
+	<h2>Turn 3</h2>
+
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>If you don't<span class="break"></span> get out of<span class="break"></span> the way...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>...I'll<span class="break"></span> kill you.</d-text>
+	</d-box>
+	<p class="note">Susie attacks.</p>
+</section>
+
+<section class="d-section" id="turn4">
+	<h2>Turn 4</h2>
+
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Get it?<span class="break"></span> I'll KILL<span class="break"></span> you.</d-text>
+	</d-box>
+	<p class="note">Susie attacks.</p>
+
+	<p class="note">During Lancer's turn, his bullets begin deliberately avoiding the SOUL.</p>
+
+	<p class="note">Once Lancer's HP drops to/below 65%, he bows his head and starts trembling.</p>
+</section>
+
+<section class="d-section" id="turn5">
+	<h2>Turn 5</h2>
+
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Heh...<span class="break"></span> You missed,<span class="break"></span> idiot!</d-text>
+	</d-box>
+	<p class="note">Susie attacks.</p>
+
+	<p class="note">Lancer's bullets become more avoidant of the SOUL.</p>
+</section>
+
+<section class="d-section" id="turn6">
+	<h2>Turn 6</h2>
+
+	<p class="note">Susie's smile fades.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... wait, why<span class="break"></span> aren't you<span class="break"></span> fighting<span class="break"></span> back...?</d-text>
+	</d-box>
+	<p class="note">Susie attacks.</p>
+
+	<p class="note">Lancer's bullets become more avoidant of the SOUL.</p>
+</section>
+
+<section class="d-section" id="turn7">
+	<h2>Turn 7</h2>
+
+	<p class="note">Susie regains her smile.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... Heh, you<span class="break"></span> think I<span class="break"></span> CARE?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>If you just<span class="break"></span> wanna lie<span class="break"></span> down and<span class="break"></span> die?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>You're just<span class="break"></span> making it<span class="break"></span> easier for<span class="break"></span> me!</d-text>
+	</d-box>
+	<p class="note">Susie attacks.</p>
+
+	<p class="note">Lancer's bullets become sparse and incredibly avoidant of the SOUL.</p>
+
+	<p class="note">Once Lancer's HP drops to/below 20%, his head droops further, his tongue sticking out, and his trembling grows worse.</p>
+</section>
+
+<section class="d-section" id="turn8">
+	<h2>Turn 8</h2>
+
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>........<span class="break"></span> Alright,<span class="break"></span> that's<span class="break"></span> enough.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>If you<span class="break"></span> wanna die<span class="break"></span> so much...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>THEN DIE!</d-text>
+	</d-box>
+
+	<p class="note">The screen cuts to black as Susie attacks... <a href="{{ '/chapters/chapter1/prisonbreak#postfight' | relative_url }}">and misses</a>.</p>
+</section>

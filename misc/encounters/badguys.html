@@ -1,0 +1,706 @@
+---
+title: Susie and Lancer encounter
+
+description: >
+  <p>Flavor text and dialogue for the battle against Susie and Lancer.</p>
+
+sources:
+  -
+    name: gml_Object_obj_lancerboss3_Step_0
+    chapters: [1]
+    note: Lancer flavor text and dialogue, end of fight dialogue
+  -
+    name: gml_Object_obj_susieenemy_Step_0
+    chapters: [1]
+    note: Susie flavor text
+  -
+    name: gml_Object_obj_susieenemy_Other_11
+    chapters: [1]
+    note: Susie dialogue
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [1]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /chapters/chapter1/thrashing#prefight
+    name: Pre- & post-fight cutscenes
+  -
+    url: /misc/encounters/lancervslightners
+    name: First Lancer solo encounter encounter (VS Lightners)
+  -
+    url: /misc/encounters/lancervssusie
+    name: Second Lancer solo encounter (VS Susie)
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+        subheadings:
+          -
+            id: dialogue-standard-susie
+            name: Susie
+          -
+            id: dialogue-standard-lancer
+            name: Lancer
+      -
+        id: dialogue-fight
+        name: After FIGHTing, If Lancer is below 50% HP
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+        subheadings:
+          -
+            id: check-susie
+            name: Susie
+          -
+            id: check-lancer
+            name: Lancer
+      -
+        id: anything-susie
+        name: Anything (on Susie)
+      -
+        id: sing
+        name: Sing
+        subheadings:
+          -
+            id: sing-ft
+            name: Flavor text
+          -
+            id: sing-dialogue
+            name: Dialogue
+      -
+        id: anything-lancer
+        name: Anything (on Lancer) / X-Anything
+  -
+    id: pacify
+    name: Attempting to pacify Susie
+    subheadings:
+      -
+        id: pacify-ft
+        name: Flavor text
+      -
+        id: pacify-dialogue
+        name: Dialogue
+  -
+    id: end
+    name: End of fight
+    subheadings:
+      -
+        id: end-nonviolent
+        name: If Lancer was convinced not to fight
+      -
+        id: end-violent
+        name: If Lancer was attacked
+---
+{% comment %} global.encounterno = 31 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Two bad guys blocked the way!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie and Lancer are making fun of you.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie and Lancer are gloating about how great their team is.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie and Lancer are having an evil laugh contest.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie and Lancer are coming up with victory celebration plans.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like teamwork.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<h4 id="dialogue-standard-susie">Susie</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Heh,<span class="break"></span> scared?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Weasel<span class="break"></span> out of<span class="break"></span> THIS!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Talk your<span class="break"></span> way out of<span class="break"></span> THIS!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Think<span class="break"></span> fast!</d-text>
+	</d-box>
+
+	<h4 id="dialogue-standard-lancer">Lancer</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Lancer</d-speaker>
+		<d-text>Hey!!<span class="break"></span> Hey Susie!!<span class="break"></span> Watch me,<span class="break"></span> watch me!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lancer</d-speaker>
+		<d-text>Prepare for<span class="break"></span> smashing, you<span class="break"></span> luxurious<span class="break"></span> melons!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lancer</d-speaker>
+		<d-text>Horror! Pain!<span class="break"></span> The power of<span class="break"></span> REAL bad guys!<span class="break"></span> (Nice, huh?)</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lancer</d-speaker>
+		<d-text>This bike is<span class="break"></span> fueled by<span class="break"></span> EVIL! ...and<span class="break"></span> friendship!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-fight">After FIGHTing, If Lancer is below 50% HP</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Lancer</d-speaker>
+		<d-text>Ow, my<span class="break"></span> guts hurt!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If only Lancer has been attacked</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hey, stop<span class="break"></span> ganging up<span class="break"></span> on him!</d-text>
+	</d-box>
+	<h4>If both Susie and Lancer have been attacked</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hey, stop<span class="break"></span> hitting<span class="break"></span> him!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-susie">Susie</h3>
+	<p class="note">Susie's stats as seen in the EQUIP menu are substituted into the flavor text.</p>
+	<h4>If you didn't equip any armor to Susie</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SUSIE - AT:&lt;AT&gt; DF:&lt;DF&gt; HP:&lt;HP&gt;</d-text>
+		<d-text asterisk>If you read the status screen, you already knew that.</d-text>
+	</d-box>
+
+	<h4>If you equipped armor to Susie</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SUSIE - AT:&lt;AT&gt; DF:&lt;DF&gt; HP:&lt;HP&gt;</d-text>
+		<d-text asterisk>The armor you equipped her with just made her tougher!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-lancer">Lancer</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>LANCER - AT 7 DF 1</d-text>
+		<d-text asterisk>Watch out!!! He's boosted by friendship!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="anything-susie">
+	<h2>Anything (on Susie)</h2>
+
+	<h3 id="anything-susie1">First time</h3>
+	<h4>Flavor text</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You tried convincing Susie not to fight.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>There was no effect!</d-text>
+	</d-box>
+
+	<h4>Dialogue</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>No way!<span class="break"></span> Shut up and<span class="break"></span> fight!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="anything-susie2">Second time</h3>
+	<h4>Flavor text</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You tried telling Susie you like her hair.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It seems this command is a total waste of time!</d-text>
+	</d-box>
+
+	<h4>Dialogue</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Really?<span class="break"></span> ...<span class="break"></span> Shut up and<span class="break"></span> fight!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="anything-susie3">Third time</h3>
+	<h4>Flavor text</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You growled at Susie like a bear.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It seems this command is a total waste of time!</d-text>
+	</d-box>
+
+	<h4>Dialogue</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>What are<span class="break"></span> you even<span class="break"></span> doing?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="anything-susie4">Fourth time</h3>
+	<h4>Flavor text</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Susie you'd give her a picnic basket of worms.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It seems this command is a total waste of time!</d-text>
+	</d-box>
+
+	<h4>Dialogue</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Really...?<span class="break"></span> No way, I<span class="break"></span> don't see<span class="break"></span> anything!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="anything-susie5">Fifth time onwards</h3>
+	<h4>Flavor text</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You have no idea what to do what to Susie anymore.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It seems this command is a total waste of time!</d-text>
+	</d-box>
+
+	<h4>Dialogue</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Yeah, it's<span class="break"></span> hopeless.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="sing">
+	<h2>{% include acticon chara="Ralsei" -%} Sing</h2>
+	<p>ACT available on Susie.</p>
+
+	<h3 id="sing-ft">Flavor text</h3>
+	<p class="note">The battle music pauses as Ralsei sings part of the <a href="{% include wikilink page='The Legend (Soundtrack)' %}">Legend theme</a>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei sang a soft and entrancing lullaby!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If Susie wasn't asleep</h4>
+	<p class="note">Susie drops into a kneel.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SUSIE fell asleep!</d-text>
+	</d-box>
+	<p class="note">Susie gains the (Asleep) status; she automatically wakes up after 3 enemy turns.</p>
+	<h4>If Susie was asleep</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But SUSIE was already asleep...!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sing-dialogue">Dialogue</h3>
+	<h4>While Susie is asleep</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>(Zzzz...)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>Immediately after using {% include acticon chara="Ralsei" -%} Sing</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Lancer</d-speaker>
+		<d-text>Oh, what a<span class="break"></span> beautiful<span class="break"></span> song!!!</d-text>
+	</d-box>
+
+	<h4>When Susie wakes up</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>(Yawn)<span class="break"></span> I'm awake,<span class="break"></span> did I miss<span class="break"></span> anything?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="anything-lancer">
+	<h2>Anything (on Lancer) / {% include acticon chara="Ralsei" -%} X-Anything</h2>
+	<p>These two ACTs share a usage counter, so "First time" etc. refers to the total times either ACT has been used.</p>
+
+	<h3 id="anything-lancer1">First time</h3>
+	<h4>Flavor text - Anything</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You tried convincing Lancer not to fight.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Lancer started to become convinced!</d-text>
+	</d-box>
+
+	<h4>Flavor text - {% include acticon chara="Ralsei" -%} X-Anything</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Ralsei to compliment the enemies!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>You two look like a really great team! I'm proud!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Lancer started to become a little convinced!)</d-text>
+	</d-box>
+
+	<h4>Dialogue</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Lancer</d-speaker>
+		<d-text>Oh!!!<span class="break"></span> It's<span class="break"></span> working<span class="break"></span> on me!!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If using {% include acticon chara="Ralsei" -%} X-Anything</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Flattery<span class="break"></span> won't<span class="break"></span> work on<span class="break"></span> US!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="anything-lancer2">Second time</h3>
+	<h4>Anything</h4>
+	<h5>Flavor text</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You tried telling Lancer you like his hair.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Lancer became even more convinced!</d-text>
+	</d-box>
+
+	<h5>Dialogue</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Lancer</d-speaker>
+		<d-text>Thanks,<span class="break"></span> it's all<span class="break"></span> natural!</d-text>
+	</d-box>
+
+	<h4>{% include acticon chara="Ralsei" -%} X-Anything</h4>
+	<h5>Flavor text</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Ralsei to logically best Lancer and Susie.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>You two, if we don't stop fighting, then...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>... Someone might get hurt!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Lancer became more convinced! It's working!)</d-text>
+	</d-box>
+
+	<h5>Dialogue</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Lancer</d-speaker>
+		<d-text>Really!?<span class="break"></span> That's bad!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>THAT'S<span class="break"></span> THE<span class="break"></span> POINT!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="anything-lancer3">Third time</h3>
+	<h4>Anything</h4>
+	<h5>Flavor text</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Lancer you'd give him a picnic basket of worms.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Lancer became almost fully convinced!</d-text>
+	</d-box>
+
+	<h5>Dialogue</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Lancer</d-speaker>
+		<d-text>Really!?<span class="break"></span> It's just<span class="break"></span> what I<span class="break"></span> wanted!!!</d-text>
+	</d-box>
+
+	<h4>{% include acticon chara="Ralsei" -%} X-Anything</h4>
+	<h5>Flavor text</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Ralsei to offer his services to the enemies!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>You two, if we stop fighting, then I could, um...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>I could braid your hair!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Lancer became almost fully convinced!)</d-text>
+	</d-box>
+
+	<h5>Dialogue</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Lancer</d-speaker>
+		<d-text>Wow, I'll<span class="break"></span> look<span class="break"></span> amazing!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Huh...?<span class="break"></span> I mean...<span class="break"></span> NO!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="anything-lancer4">Fourth and fifth times</h3>
+	<h4>Flavor text - Anything</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Lancer you just want to get along!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It's the decisive kindness!</d-text>
+	</d-box>
+	<p class="note">If Susie is awake, proceeds to <a href="#susiedefend">Susie shielding Lancer</a>. Otherwise, proceeds to the <a href="#end-nonviolent">nonviolent ending</a>.</p>
+
+	<h4>Flavor text - {% include acticon chara="Ralsei" -%} X-Anything</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Ralsei to deal the final blow of kindness!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>In summary, I like you two, and...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>I think we should all just get along!</d-text>
+	</d-box>
+	<p class="note">If Susie is awake, proceeds to <a href="#susiedefend">Susie shielding Lancer</a>. Otherwise, proceeds to the <a href="#end-nonviolent">nonviolent ending</a>.</p>
+
+	<h4 id="susiedefend">Susie defending Lancer</h4>
+	<p>Follows one of the above flavor text segments.</p>
+	<p></p>
+	<p class="note">Susie jumps next to Lancer, covering his ears with her hands.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(But Susie blocked the soundwaves before they reached Lancer!)</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Try convincing someone that can't HEAR YOU!</d-text>
+	</d-box>
+
+	<h4>Dialogue</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Lancer</d-speaker>
+		<d-text>Hee hee!<span class="break"></span> I'm bliss-<span class="break"></span>-fully<span class="break"></span> ignorant!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If using {% include acticon chara="Ralsei" -%} X-Anything</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Heh,<span class="break"></span> score for<span class="break"></span> the BAD<span class="break"></span> GUYS!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="anything-lancer6">Sixth time</h3>
+	<h4>Usage - Anything</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Lancer you want to get along really fast!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The soundwaves reached Lancer instantly!</d-text>
+	</d-box>
+
+	<h4>Usage - {% include acticon chara="Ralsei" -%} X-Anything</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Ralsei to compliment Lancer really fast!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>You're&ZeroWidthSpace;really&ZeroWidthSpace;a&ZeroWidthSpace;swell&ZeroWidthSpace;person<span class="break"></span>&ZeroWidthSpace;you&ZeroWidthSpace;know&ZeroWidthSpace;that?!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The soundwaves reached Lancer instantly!</d-text>
+	</d-box>
+
+	<h4>Dialogue</h4>
+	<p class="note"><a href="#end-nonviolent">Dialogue proceeds to the nonviolent ending.</a></p>
+</section>
+
+<section class="d-section" id="pacify">
+	<h2>Attempting to pacify Susie</h2>
+	<p>Can be attempted while Susie is asleep from {% include acticon chara="Ralsei" -%} Sing.</p>
+
+	<h3 id="pacify-ft">Flavor text</h3>
+	<h4 id="pacify-ft1">First time</h4>
+	<p class="note">Lancer and his bike jump in front of Susie, flashing blue with the Pacify spell instead of her.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(The PACIFY spell was absorbed by Lancer's bike!)</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>I'll never let you SPARE my friends!!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Lancer's BIKE began to get tired??????????????)</d-text>
+	</d-box>
+
+	<h4 id="pacify-ft2">Second time</h4>
+	<p class="note">Lancer and his bike jump in front of Susie, flashing blue with the Pacify spell instead of her.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(The PACIFY spell was absorbed by Lancer's bike!)</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(The WHEEL of the BIKE became SPARED!)</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(It turned into a SPARED TIRE!)</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(... that didn't do anything though.)</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Seems that PACIFYing won't work!)</d-text>
+	</d-box>
+
+	<h4 id="pacify-ft3">Third time onwards</h4>
+	<p class="note">Lancer and his bike jump in front of Susie, flashing blue with the Pacify spell instead of her.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(The PACIFY spell was absorbed by Lancer's bike!)</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Seems that nothing else interesting will happen!)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="pacify-dialogue">Dialogue</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Lancer</d-speaker>
+		<d-text>Don't worry<span class="break"></span> Bikey, I'll<span class="break"></span> put you to<span class="break"></span> bed soon...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of fight</h2>
+
+	<h3 id="end-nonviolent">If Lancer was convinced not to fight</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Lancer" emotion="4"></d-sprite>
+		<d-text asterisk>Uh oh.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>What's wrong, dude?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Lancer" emotion="4"></d-sprite>
+		<d-text asterisk>I accidentally started liking the enemies...!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Now seeing them just makes me feel round and soft.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Lancer" emotion="4"></d-sprite>
+		<d-text asterisk>Bad atmosphere for battle, though.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="1"></d-sprite>
+		<d-text asterisk>Well, if you don't wanna fight,</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>There's no point, I guess.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Battle's over!</d-text>
+	</d-box>
+
+	<p class="note"><a href="{{ '/chapters/chapter1/thrashing#postfight-nonviolent' | relative_url }}">The encounter ends.</a></p>
+
+	<hr>
+
+	<h3 id="end-violent">If Lancer was attacked</h3>
+	<p>Attacking Susie enough just knocks her down for a few turns, so you have to FIGHT Lancer to end the battle violently.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Lancer" emotion="4"></d-sprite>
+		<d-text asterisk>Ow...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="9"></d-sprite>
+		<d-text asterisk>Hey, HEY! Enough's enough already!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="9"></d-sprite>
+		<d-text asterisk>If you hit him any more, you might really hurt him!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>... Lancer, you OK...?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>I... I'm fine, Susie!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Lancer" emotion="7"></d-sprite>
+		<d-text asterisk>My insides are just... a little mixed up.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Alright, fine! You guys win!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>(Kris, maybe we should have taken it easier...)</d-text>
+	</d-box>
+
+	<p class="note"><a href="{{ '/chapters/chapter1/thrashing#postfight-violent' | relative_url }}">The encounter ends.</a></p>
+</section>
