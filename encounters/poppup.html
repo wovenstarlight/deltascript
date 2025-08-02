@@ -1,0 +1,403 @@
+---
+title: Poppup encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Poppup.</p>
+
+sources:
+  -
+    name: gml_Object_obj_poppup_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/ch2allstars
+    name: Ch2 All Stars (featuring Poppup)
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-poppup
+            name: With another Poppup
+          -
+            id: encounter-maus
+            name: With Maus
+          -
+            id: encounter-tasque
+            name: With Tasque
+          -
+            id: encounter-ambyulance
+            name: With Ambyu-Lance
+          -
+            id: encounter-swatchlings
+            name: With 2 Swatchlings
+          -
+            id: encounter-virovirokun
+            name: With Virovirokun
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-tired
+        name: Immediately after becoming Tired
+      -
+        id: dialogue-spareable
+        name: Immediately after becoming spareable
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: click
+        name: Click
+      -
+        id: block
+        name: Block
+      -
+        id: avoid
+        act_icon: Noelle
+        name: Avoid
+      -
+        id: saction
+        name: S-Action
+      -
+        id: raction
+        name: R-Action
+      -
+        id: naction
+        name: N-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(global\.encounterno = |myencounter = |scr_encountersetup\()(51|70|77|78|88|101)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-poppup">With another Poppup</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppups popped up!</d-text>
+	</d-box>
+
+	<h4 id="encounter-maus">With Maus</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup and Maus appeared.</d-text>
+	</d-box>
+
+	<h4 id="encounter-tasque">With Tasque</h4>
+	<p>Unused, though you can have an encounter with Poppup and Tasque if you use the <a href="{{ '/encounters/maus#upgrade' | relative_url }}">Upgrade ACT on a Maus</a>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Animal house.</d-text>
+	</d-box>
+
+	<h4 id="encounter-ambyulance">With Ambyu-Lance</h4>
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ambyu-Lance and its pet appeared!</d-text>
+	</d-box>
+
+	<h4 id="encounter-swatchlings">With 2 Swatchlings</h4>
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup and caretakers appeared!</d-text>
+	</d-box>
+
+	<h4 id="encounter-virovirokun">With Virovirokun</h4>
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup and Virovirokun Appeared!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup is begging you to click on a broken link with puppy dog eyes.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup is preening its weird rubbery flesh.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup wants Liimo Berry</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup wants PlayTime</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup wants its tongue to be pressed in so it doesn't feel hunger anymore</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup wants Scary Noise</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup wants To Play With You In The Mystical Island Of Mysticisland</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup wants Do Taxes At 7:44 AM</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup wants Randomized String 1</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like tropical candy.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup feels like it's been put upside down in a closet.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup is popping with joy!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Poppup</d-speaker>
+		<d-text>.....ASOBOH<span class="break"></span>......?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Poppup</d-speaker>
+		<d-text>...OTANJOBY..<span class="break"></span> OMEDETOH...?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Poppup</d-speaker>
+		<d-text>This application is only<span class="break"></span> supported by OS 2000.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Poppup</d-speaker>
+		<d-text>Click Here! Click Here!<span class="break"></span> Click Here! Click Here!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">1% chance:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Poppup</d-speaker>
+		<d-text>GOKARMASHI<span class="break"></span> O INARY....?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-tired">Immediately after becoming Tired</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Poppup</d-speaker>
+		<d-text>...NEMMUY...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-spareable">Immediately after becoming spareable</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Poppup</d-speaker>
+		<d-text>...HAPPI...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>POPPUP - A rubbery mascot starved for attention. Click it and...?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="click">
+	<h2>Click</h2>
+
+	<h3 id="click-ft">Flavor text</h3>
+	<h4>If there are less than three enemies</h4>
+	<p class="note">At random:</p>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You unconsciously clicked on a popup about "monsters 4 humans" "in your area,"</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You unconsciously clicked on an ad for a video about making knives out of spaghetti.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You unconsciously clicked on a popup about demon summoning classes for teens.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">A new Poppup is cloned, joining the encounter.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Huh...!? That made another one!?</d-text>
+	</d-box>
+
+	<h4>If there are three enemies</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You just kept clicking and clicking on ads!!</d-text>
+	</d-box>
+	<p class="note">More Poppups are cloned, filling the enemies' side of the screen. When the 22nd Poppup clone appears, all Poppups go still.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The Poppups crashed!</d-text>
+	</d-box>
+	<p class="note">All Poppups in the encounter gain 100% <span class="yellow">Mercy</span> and are automatically spared, leaving the encounter.</p>
+</section>
+
+<section class="d-section" id="block">
+	<h2>Block</h2>
+
+	<h3 id="block-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press [MENU] repeatedly to block the ads!!</d-text>
+	</d-box>
+	<p class="note">Popup windows appear in the center of the screen. Pressing [MENU] flashes a red prohibited sign (🚫) over an ad window, closing it.</p>
+	<p class="note">Once time is up or a maximum of 10 ads have been blocked, the action period ends and a window appears next to Poppup, reading "Blocked &lt;#&gt; ads!". For each blocked ad, Poppup gains 10% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="avoid">
+	<h2>{% include acticon chara="Noelle" -%} Avoid</h2>
+
+	<h3 id="avoid-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle got nervous and looked at the ground!</d-text>
+	</d-box>
+	<p class="note">All Poppups in the encounter become <span class="blue">Tired</span> and look fatigued.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The enemies got shrivelled and TIRED from lack of attention!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="actnamehere-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie accidentally clicked on an ad featuring a flaming eggplant holding a chainsaw!!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie accidentally clicked on a picture of a steak.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It wasn't actually an ad, just a static image of a steak...</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie missed clicking on an ad and ended up clicking on the word processor.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It got a virus somehow.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Susie looks shocked.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>D... Damn!! They knew what I'd fall for!!</d-text>
+	</d-box>
+	<p class="note">Poppup gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="actnamehere-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei moved to click on an ad with a bunny on it teaching you how to make friends...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>...and accidentally clicked on an ad of a machine gun that appeared over it!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei tried to click on an ad with a castle on it...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>...but it was actually an ad for a company that demolishes buildings with bazookas!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei accidentally clicked on an ad for "lightners 4 darkners in ur area" and was mortified.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>He deleted the browser shortcut on the desktop entirely...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>...but immediately felt guilty because he thought he had "deleted the entire internet".</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Ralsei looks shocked.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="U"></d-sprite>
+		<d-text asterisk>I... I didn't mean to do it... I... I'm sorry!!! I repent!!!</d-text>
+	</d-box>
+	<p class="note">Poppup gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="naction">
+	<h2 class="noelle act">N-Action</h2>
+
+	<h3 id="actnamehere-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle misclicked on a link to buy How To Draw Dragons!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle clicked on a link for creepy game glitch compilations!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle clicked on a link for Hot Female Santas In Your Area!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Wh-what!? What did I do wrong??</d-text>
+	</d-box>
+	<p class="note">Poppup gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
