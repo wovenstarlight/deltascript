@@ -9,6 +9,7 @@
 		{% comment %} Placeholders {% endcomment %}
 		<a href="{{ '/chapters/' | relative_url }}">Chapters</a>
 		<a href="{{ '/locations/' | relative_url }}">Locations</a>
+		<a href="{{ '/encounters/' | relative_url }}">Encounters</a>
 		<a href="{{ '/misc/' | relative_url }}">Miscellaneous</a>
 	</nav>
 </header>
