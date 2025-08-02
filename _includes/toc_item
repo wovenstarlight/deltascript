@@ -1,7 +1,7 @@
 <li>
 	{% if include.item.id %}<a href="#{{ include.item.id }}" {%- if include.item.class %} class="{{ include.item.class }}" {%- endif -%}>{% endif %}
 
-	{%- if include.item.icon_replace_mode -%}
+	{%- if include.item.custom_icon_positions -%}
 		{%- capture icons -%}
 			{%- for character in include.item.act_icon -%}
 				{% include acticon chara=character -%}
