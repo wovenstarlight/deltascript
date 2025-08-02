@@ -271,6 +271,15 @@
 			"</section>",
 		]
 	},
+	"Section splitter": {
+		"scope": "html,liquid",
+		"prefix": "section-split",
+		"body": [
+			"</section>",
+			"",
+			"<section class=\"d-section\" id=\"$1\">",
+		]
+	},
 	"ACT icon": {
 		"scope": "html,liquid",
 		"prefix": "act-icon",
