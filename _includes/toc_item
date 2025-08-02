@@ -1,5 +1,5 @@
 <li>
-	{% if include.item.id %}<a href="#{{ include.item.id }}">{% endif %}
+	{% if include.item.id %}<a href="#{{ include.item.id }}" {%- if include.item.class %} class="{{ include.item.class }}" {%- endif -%}>{% endif %}
 
 	{%- if include.item.icon_replace_mode -%}
 		{%- capture icons -%}
