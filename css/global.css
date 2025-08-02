@@ -115,7 +115,7 @@ a { /* Global links */
 hr {
 	max-width: 100%;
 
-	&:not(.hr2) {
+	&:not([class]) {
 		border: none;
 		position: relative;
 		margin-block: 2em;
@@ -136,12 +136,14 @@ hr {
 		}
 	}
 
-	&.hr2 {
+	&.hr2, &.hr3 {
 		color: var(--gray);
 		width: 35.4em;
 		margin-inline-start: 0;
 		margin-block: 1em;
 	}
+
+	&.hr3 { border-style: dashed }
 }
 /* #region Color-specific classes */
 .cR, .red { color: var(--red) }
