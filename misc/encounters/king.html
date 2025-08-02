@@ -31,7 +31,7 @@ toc:
     name: Before the fight
   -
     id: flavortext
-    name: Flavor text
+    name: General flavor text
     subheadings:
       -
         id: encounter
@@ -42,30 +42,30 @@ toc:
       -
         id: ft-lowhp
         name: Low HP
+  -
+    name: ACTs
+    subheadings:
       -
-        name: ACTs
-        subheadings:
-          -
-            id: ft-check
-            name: Check
-          -
-            id: ft-talk
-            name: Talk
-          -
-            id: ft-courage
-            name: Courage
-          -
-            id: ft-talk-susie
-            name: Talk (with Susie)
-          -
-            id: ft-redbuster
-            name: Red Buster
-          -
-            id: ft-talk-ralsei
-            name: Talk (with Ralsei)
-          -
-            id: ft-dualheal
-            name: Dual Heal
+        id: check
+        name: Check
+      -
+        id: talk-kris
+        name: Talk
+      -
+        id: courage
+        name: Courage
+      -
+        id: talk-susie
+        name: Talk (with Susie)
+      -
+        id: redbuster
+        name: Red Buster
+      -
+        id: talk-ralsei
+        name: Talk (with Ralsei)
+      -
+        id: dualheal
+        name: Dual Heal
   -
     id: dialogue
     name: Dialogue
@@ -318,7 +318,7 @@ toc:
 </section>
 
 <section class="d-section" id="flavortext">
-	<h2>Flavor text</h2>
+	<h2>General flavor text</h2>
 
 	<h3 id="encounter">Initial encounter</h3>
 	<d-box theme="battlemenu">
@@ -347,20 +347,22 @@ toc:
 	<d-box theme="battlemenu">
 		<d-text asterisk>KING's cape flutters weakly.</d-text>
 	</d-box>
+</section>
 
-	<hr>
-
-	<h3 id="ft-check">Check</h3>
+<section class="d-section" id="check">
+	<h2>Check</h2>
 	<d-box theme="battlemenu">
 		<d-text asterisk>KING - Abandoned by the Lightners, his heart became cracked with hatred.</d-text>
 	</d-box>
 	<d-box theme="battlemenu">
 		<d-text asterisk>He cannot be reasoned with, but don't give up...!</d-text>
 	</d-box>
+</section>
 
-	<hr>
+<section class="d-section" id="talk-kris">
+	<h2>Talk</h2>
 
-	<h3 id="ft-talk">Talk</h3>
+	<h3 id="talk-kris-ft">Flavor text</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You tried to reason with the King...</d-text>
 	</d-box>
@@ -380,27 +382,33 @@ toc:
 		<d-text asterisk>Your will is changing...</d-text>
 		<d-text asterisk><span class="yellow">TALK</span> became <span class="yellow">COURAGE</span>!</d-text>
 	</d-box>
-	<p class="note">The Talk ACT is replaced by <a href="#ft-courage">Courage</a>.</p>
+	<p class="note">The Talk ACT is replaced by <a href="#courage">Courage</a>.</p>
+</section>
 
-	<hr>
+<section class="d-section" id="courage">
+	<h2>Courage</h2>
+	<p>Replaces the Talk ACT.</p>
 
-	<h3 id="ft-courage">Courage</h3>
-	<h4>Description</h4>
+	<h3 id="courage-description">Description</h3>
 	<d-box theme="battledesc">
 		<d-text>Defense Boost</d-text>
 		<d-text class="orange">25% TP</d-text>
 	</d-box>
 
-	<h4>Usage</h4>
+	<hr>
+
+	<h3 id="courage-ft">Flavor text</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You encouraged the party!</d-text>
 		<d-text asterisk>The party's DEFENSE raised for this turn!</d-text>
 	</d-box>
 	<p class="note">King's attacks do 20% less damage.</p>
+</section>
 
-	<hr>
+<section class="d-section" id="talk-susie">
+	<h2>{% include acticon chara="Susie" -%} Talk</h2>
 
-	<h3 id="ft-talk-susie">{% include acticon chara="Susie" -%} Talk</h3>
+	<h3 id="talk-susie-ft">Flavor text</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Susie tried to reason with the King...</d-text>
 	</d-box>
@@ -436,26 +444,32 @@ toc:
 		<d-text asterisk>Susie's will is changing...</d-text>
 		<d-text asterisk><span class="yellow">TALK</span> became <span class="yellow">RED BUSTER</span>!</d-text>
 	</d-box>
-	<p class="note">The Talk ACT is replaced by <a href="#ft-redbuster">Red Buster</a>.</p>
+	<p class="note">The {% include acticon chara="Susie" -%} Talk ACT is replaced by <a href="#redbuster">Red Buster</a>.</p>
+</section>
 
-	<hr>
+<section class="d-section" id="redbuster">
+	<h2>{% include acticon chara="Susie" -%} Red Buster</h2>
+	<p>Replaces the {% include acticon chara="Susie" -%} Talk ACT.</p>
 
-	<h3 id="ft-redbuster">{% include acticon chara="Susie" -%} Red Buster</h3>
-	<h4>Description</h4>
+	<h3 id="redbuster-description">Description</h3>
 	<d-box theme="battledesc">
 		<d-text>Red Damage</d-text>
 		<d-text class="orange">60% TP</d-text>
 	</d-box>
 
-	<h4>Usage</h4>
+	<hr>
+
+	<h3 id="redbuster-ft">Flavor text</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Your SOUL shined its power on Susie!</d-text>
 	</d-box>
 	<p class="note">Susie attacks.</p>
+</section>
 
-	<hr>
+<section class="d-section" id="talk-ralsei">
+	<h2>{% include acticon chara="Ralsei" -%} Talk</h2>
 
-	<h3 id="ft-talk-ralsei">{% include acticon chara="Ralsei" -%} Talk</h3>
+	<h3 id="talk-ralsei-ft">Flavor text</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Ralsei tried to reason with the King...</d-text>
 	</d-box>
@@ -491,18 +505,22 @@ toc:
 		<d-text asterisk>Ralsei's will is changing...</d-text>
 		<d-text asterisk><span class="yellow">TALK</span> became <span class="yellow">DUAL HEAL</span>!</d-text>
 	</d-box>
-	<p class="note">The Talk ACT is replaced by <a href="#ft-dualheal">Dual Heal</a>.</p>
+	<p class="note">The {% include acticon chara="Ralsei" -%} Talk ACT is replaced by <a href="#dualheal">Dual Heal</a>.</p>
+</section>
 
-	<hr>
+<section class="d-section" id="dualheal">
+	<h2>{% include acticon chara="Ralsei" -%} Dual Heal</h2>
+	<p>Replaces the {% include acticon chara="Ralsei" -%} Talk ACT.</p>
 
-	<h3 id="ft-dualheal">{% include acticon chara="Ralsei" -%} Dual Heal</h3>
-	<h4>Description</h4>
+	<h3 id="dualheal-description">Description</h3>
 	<d-box theme="battledesc">
 		<d-text>Heals everyone</d-text>
 		<d-text class="orange">50% TP</d-text>
 	</d-box>
 
-	<h4>Usage</h4>
+	<hr>
+
+	<h3 id="dualheal-ft">Flavor text</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Your SOUL shined its power on RALSEI!</d-text>
 	</d-box>
@@ -1098,11 +1116,11 @@ toc:
 	<p class="note">Ralsei looks to the side for a moment, then turns back.</p>
 
 	<d-box theme="dark">
-		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
 		<d-text asterisk>Then, I...</d-text>
 	</d-box>
 	<d-box theme="dark">
-		<d-sprite speaker="Ralsei" emotion="6"></d-sprite>
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
 		<d-text asterisk>I suppose you and Kris should return home now.</d-text>
 	</d-box>
 	<d-box theme="dark">

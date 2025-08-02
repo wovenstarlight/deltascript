@@ -31,7 +31,7 @@ credits: >
 toc:
   -
     id: flavortext
-    name: Flavor text
+    name: General flavor text
     subheadings:
       -
         id: encounter
@@ -67,52 +67,40 @@ toc:
       -
         id: ft-spareable
         name: Spareable
-      -
-        name: ACTs
-        subheadings:
-          -
-            id: ft-check
-            name: Check
-          -
-            id: ft-convince
-            name: Convince
-          -
-            id: ft-lecture
-            name: Lecture
-          -
-            id: ft-warning
-            name: Warning
-      -
-        name: Items
-        subheadings:
-          -
-            id: ft-glowshard
-            name: Using Glowshard
-          -
-            id: ft-manual
-            name: Using the Manual
   -
     id: dialogue
-    name: Dialogue
+    name: General dialogue
     subheadings:
       -
         id: dialogue-standard
         name: Standard
+  -
+    name: ACTs
+    subheadings:
       -
-        name: ACTs
-        subheadings:
-          -
-            id: dialogue-convince
-            name: Convince
-          -
-            id: dialogue-lecture
-            name: Lecture
+        id: check
+        name: Check
       -
-        id: dialogue-unused
-        name: Unused
+        id: convince
+        name: Convince
+      -
+        id: lecture
+        name: Lecture
+      -
+        id: warning
+        name: Warning
+  -
+    name: Items
+    subheadings:
+      -
+        id: glowshard
+        name: Using the Glowshard
+      -
+        id: manual
+        name: Using the Manual
 ---
 <section class="d-section" id="flavortext">
-	<h2>Flavor text</h2>
+	<h2>General flavor text</h2>
 
 	<h3 id="encounter">Initial encounter</h3>
 	<h4 id="encounter-solo">Solo</h4>
@@ -195,82 +183,10 @@ toc:
 	<d-box theme="battlemenu">
 		<d-text asterisk>Rudinn is alright with not fighting.</d-text>
 	</d-box>
-
-	<hr>
-
-	<h3 id="ft-check">Check</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>RUDINN - AT 6 DF 0</d-text>
-		<d-text asterisk>This ambivalent diamond isn't any girl's best friend.</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-convince">Convince</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You told Rudinn to quit fighting.</d-text>
-		<d-text asterisk>It was utterly swayed.</d-text>
-	</d-box>
-	<p class="note">Rudinn gains 100% <span class="yellow">Mercy</span>.</p>
-
-	<hr>
-
-	<h3 id="ft-lecture">Lecture</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You lectured the enemies on the importance of kindness.</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-text asterisk>The enemies became <span class="blue">TIRED</span>...</d-text>
-	</d-box>
-	<p class="note">All enemies become <span class="blue">Tired</span>.</p>
-
-	<hr>
-
-	<h3 id="ft-warning">{% include acticon chara="Ralsei" -%} Warning</h3>
-	<p>Available before Susie joins the party for real.</p>
-	<p></p>
-	<p class="note">Susie's attacks will miss from now on.</p>
-
-	<h4>When against a lone Rudinn</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You and Ralsei warned Rudinn about Susie.</d-text>
-		<d-text asterisk>The enemy went on guard...</d-text>
-	</d-box>
-
-	<h4>When against multiple enemies</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You and Ralsei warned the enemies about Susie.</d-text>
-		<d-text asterisk>Everyone went on guard.</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-glowshard">Using Glowshard</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>[Character] used the GLOWSHARD!</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Rudinn became enraptured!</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-text asterisk>The GLOWSHARD disappeared!</d-text>
-	</d-box>
-	<p class="note">All Rudinns gain 100% <span class="yellow">Mercy</span>. The Glowshard is removed from the inventory.</p>
-	
-	<hr>
-
-	<h3 id="ft-manual">Using the <a href="{{ '/misc/darkitems#manual' | relative_url }}">Manual</a></h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>[Character] read the MANUAL!</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Rudinn was <span class="blue">bored to tears</span>!</d-text>
-	</d-box>
-	<p class="note">Rudinn becomes <span class="blue">Tired</span>.</p>
 </section>
 
 <section class="d-section" id="dialogue">
-	<h2>Dialogue</h2>
+	<h2>General dialogue</h2>
 
 	<h3 id="dialogue-standard">Standard</h3>
 	<d-box theme="battletalk">
@@ -289,17 +205,40 @@ toc:
 		<d-speaker>Rudinn</d-speaker>
 		<d-text>Face my<span class="break"></span> Diamond<span class="break"></span> Cutter!</d-text>
 	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+	<d-box theme="battlemenu">
+		<d-text asterisk>RUDINN - AT 6 DF 0</d-text>
+		<d-text asterisk>This ambivalent diamond isn't any girl's best friend.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="convince">
+	<h2>Convince</h2>
+
+	<h3 id="convince-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Rudinn to quit fighting.</d-text>
+		<d-text asterisk>It was utterly swayed.</d-text>
+	</d-box>
+	<p class="note">Rudinn gains 100% <span class="yellow">Mercy</span>.</p>
 
 	<hr>
 
-	<h3 id="dialogue-convince">Convince</h3>
+	<h3 id="convince-dialogue">Dialogue</h3>
 	<d-box theme="battletalk">
 		<d-speaker>Rudinn</d-speaker>
 		<d-text>Yeah I<span class="break"></span> guess that<span class="break"></span> makes<span class="break"></span> sense.</d-text>
 	</d-box>
 
-	<h4>First attempt (Unused)</h4>
-	<p>It appears Convince was intended to work only on the second try; this is the dialogue and response for what would've been the first try.</p>
+	<hr>
+
+	<h3 id="convince-dialogue-unused">Unused dialogue</h3>
+	<p>It appears Convince was intended to work only on the second try; this is the diaogue for those attempts.</p>
+
+	<h4>First time</h4>
 	<d-box theme="battletalk">
 		<d-speaker>Rudinn</d-speaker>
 		<d-text>You kidding?<span class="break"></span> I can't quit.<span class="break"></span> Stopping you<span class="break"></span> is my job!</d-text>
@@ -322,20 +261,79 @@ toc:
 		<d-text asterisk>(Kris, let's try CONVINCING them again...)</d-text>
 	</d-box>
 
-	<hr>
-
-	<h3 id="dialogue-lecture">Lecture</h3>
-	<d-box theme="battletalk">
-		<d-speaker>Rudinn</d-speaker>
-		<d-text>(Yawn)...<span class="break"></span> What? OK...</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="dialogue-unused">Unused</h3>
-	<p>Possibly intended for the second, successful use of Convince.</p>
+	<h4>Subsequent times</h4>
 	<d-box theme="battletalk">
 		<d-speaker>Rudinn</d-speaker>
 		<d-text>Alright,<span class="break"></span> you convinced<span class="break"></span> me!!</d-text>
 	</d-box>
+</section>
+
+<section class="d-section" id="lecture">
+	<h2>Lecture</h2>
+
+	<h3 id="lecture-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You lectured the enemies on the importance of kindness.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The enemies became <span class="blue">TIRED</span>...</d-text>
+	</d-box>
+	<p class="note">All enemies become <span class="blue">Tired</span>.</p>
+
+	<hr>
+
+	<h3 id="lecture-dialogue">Dialogue</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text>(Yawn)...<span class="break"></span> What? OK...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="warning">
+	<h2>{% include acticon chara="Ralsei" -%} Warning</h2>
+	<p>Available before Susie joins the party for real.</p>
+
+	<h3 id="warning-ft">Flavor text</h3>
+	<p class="note">Susie's attacks will miss from now on.</p>
+
+	<h4>When against a lone Rudinn</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei warned Rudinn about Susie.</d-text>
+		<d-text asterisk>The enemy went on guard...</d-text>
+	</d-box>
+
+	<h4>When against multiple enemies</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei warned the enemies about Susie.</d-text>
+		<d-text asterisk>Everyone went on guard.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="glowshard">
+	<h2>Using the <a href="{{ '/misc/darkitems#glowshard' | relative_url }}">Glowshard</a></h2>
+
+	<h3 id="glowshard-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] used the GLOWSHARD!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn became enraptured!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The GLOWSHARD disappeared!</d-text>
+	</d-box>
+	<p class="note">All Rudinns gain 100% <span class="yellow">Mercy</span>. The Glowshard is removed from the inventory.</p>
+</section>
+
+<section class="d-section" id="manual">
+	<h2>Using the <a href="{{ '/misc/darkitems#manual' | relative_url }}">Manual</a></h2>
+
+	<h3 id="manual-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] read the MANUAL!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Rudinn was <span class="blue">bored to tears</span>!</d-text>
+	</d-box>
+	<p class="note">Rudinn becomes <span class="blue">Tired</span>.</p>
 </section>

@@ -50,7 +50,7 @@ toc:
     name: Before the fight
   -
     id: flavortext
-    name: Flavor text
+    name: General flavor text
     subheadings:
       -
         id: encounter
@@ -65,29 +65,26 @@ toc:
         id: ft-lowhp
         name: Low HP
       -
-        id: ft-bow
-        name: Bow
-      -
         id: ft-selfheal
         name: Healing itself
-      -
-        name: ACTs
-        subheadings:
-          -
-            id: ft-check
-            name: Check / Checkers
-          -
-            id: ft-bow
-            name: Bow
-          -
-            id: ft-deepbow
-            name: Deep Bow
-          -
-            id: ft-warning
-            name: Warning
   -
     id: dialogue
-    name: Dialogue
+    name: General dialogue
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: checkers
+        name: Checkers
+      -
+        id: bow
+        name: Bow
+      -
+        id: throw
+        name: Susie's Idea / Throw
   -
     id: postfight
     name: After the fight
@@ -176,7 +173,7 @@ toc:
 </section>
 
 <section class="d-section" id="flavortext">
-	<h2>Flavor text</h2>
+	<h2>General flavor text</h2>
 
 	<h3 id="encounter">Initial encounter</h3>
 	<d-box theme="battlemenu">
@@ -223,11 +220,18 @@ toc:
 		<d-text asterisk>K. ROUND practiced self-care!</d-text>
 	</d-box>
 	<p class="note">A carton of milk appears, moving towards K. Round and healing it for 700 HP, as well as increasing its attack by 0.5 up to a maximum total attack of 10.</p>
+</section>
 
-	<hr>
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
 
-	<h3 id="ft-check">Check / Checkers</h3>
-	<h4>Check (if not Checked in its first encounter)</h4>
+	<p>No dialogue; K. Round does not talk.</p>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+	<p>Available if K. Round was not Checked in its <a href="{{ '/misc/encounters/kroundgreatboard' | relative_url }}">first encounter</a>. Otherwise, is replaced by the <a href="#checkers">Checkers</a> ACT.</p>
+
 	<d-box theme="battlemenu">
 		<d-text asterisk>K.ROUND - AT 9 DF 3</d-text>
 		<d-text asterisk>It's being controlled into attacking...!</d-text>
@@ -235,8 +239,12 @@ toc:
 	<d-box theme="battlemenu">
 		<d-text asterisk>(Though, wouldn't it just attack anyway...?)</d-text>
 	</d-box>
+</section>
 
-	<h4>Checkers (if Checked in its first encounter)</h4>
+<section class="d-section" id="checkers">
+	<h2>Checkers</h2>
+	<p>Available if K. Round was Checked in its first encounter. Otherwise, is replaced by the <a href="#check">Check</a> ACT.</p>
+
 	<d-box theme="battlemenu">
 		<d-text asterisk>K.ROUND - AT 9 DF 3</d-text>
 		<d-text asterisk>Watch out for its Flying King attack!</d-text>
@@ -244,10 +252,12 @@ toc:
 	<d-box theme="battlemenu">
 		<d-text asterisk>(Also, you need to get the CROWN off of its head.)</d-text>
 	</d-box>
+</section>
 
-	<hr>
+<section class="d-section" id="bow">
+	<h2>Bow</h2>
 
-	<h3 id="ft-bow">Bow</h3>
+	<h3 id="bow-standard">Standard</h3>
 	<p class="note">Kris bows.</p>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You bowed to K. ROUND.</d-text>
@@ -257,8 +267,12 @@ toc:
 		<d-text asterisk>It bowed back.</d-text>
 		<d-text asterisk>Its crown loosened a little.</d-text>
 	</d-box>
+	<p class="note">On the first three uses, proceeds to one of the below sections.</p>
 
-	<h4>First time</h4>
+	<hr>
+
+	<h3 id="bow1">First time</h3>
+	<p>Follows the <a href="#bow-standard">standard flavor text</a>.</p>
 	<d-box theme="battlemenu">
 		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
 		<d-text asterisk>Huh!? That hardly did anything!</d-text>
@@ -272,7 +286,10 @@ toc:
 		<d-text asterisk>... Hmm.</d-text>
 	</d-box>
 
-	<h4>Second time</h4>
+	<hr>
+
+	<h3 id="bow2">Second time</h3>
+	<p>Follows the <a href="#bow-standard">standard flavor text</a>.</p>
 	<d-box theme="battlemenu">
 		<d-sprite speaker="Ralsei" variant="hat" emotion="3"></d-sprite>
 		<d-text asterisk>It's still hardly working!</d-text>
@@ -286,7 +303,10 @@ toc:
 		<d-text asterisk>... Hey.</d-text>
 	</d-box>
 
-	<h4>Third time</h4>
+	<hr>
+
+	<h3 id="bow3">Third time</h3>
+	<p>Follows the <a href="#bow-standard">standard flavor text</a>.</p>
 	<d-box theme="battlemenu">
 		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
 		<d-text asterisk>Sometimes persistence is key, Kris!!</d-text>
@@ -299,13 +319,17 @@ toc:
 		<d-sprite speaker="Susie" variant="noeyes" emotion="7"></d-sprite>
 		<d-text asterisk>HEY YOU GUYS!!!</d-text>
 	</d-box>
+</section>
 
-	<hr>
-
-	<h3 id="ft-throw">{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Susie's Idea / {% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Throw</h3>
+<section class="d-section" id="throw">
+	<h2>
+		{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Susie's Idea
+		/
+		{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Throw
+	</h2>
 	<p>Initially appears as "Susie's Idea", and changes to "Throw" after the first use.</p>
 
-	<h4>First time only</h4>
+	<h3>First time only</h3>
 	<d-box theme="battlemenu">
 		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
 		<d-text asterisk>Susie? You want to ACT? Aww, what's your idea?</d-text>
@@ -343,9 +367,11 @@ toc:
 		<d-sprite speaker="Susie" variant="noeyes" emotion="7"></d-sprite>
 		<d-text asterisk>Help me throw Ralsei at it!</d-text>
 	</d-box>
-	<p class="note">Continues to the below section.</p>
+	<p class="note">Continues to <a href="#throw-instructions">the usage instructions</a>.</p>
 
-	<h4>Standard</h4>
+	<hr>
+
+	<h3>Instructions</h3>
 	<p class="note">An arrow appears in front of Susie, oscillating up and down.</p>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Press [MENU] to determine the ANGLE!</d-text>
@@ -356,29 +382,23 @@ toc:
 	</d-box>
 	<p class="note">After selecting the power, Ralsei is thrown, either hitting the crown/missing and flying offscreen to the right, or hitting K. Round and bouncing off, falling offscreen. He reenters from the left, retaking his place in the lineup.</p>
 
-	<h5>Hitting the crown</h5>
+	<h4>Hitting the crown</h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>The crown greatly loosened!</d-text>
 	</d-box>
 	<p class="note">K. Round's crown loosens by 35%.</p>
 
-	<h5>Hitting K. Round</h5>
+	<h4>Hitting K. Round</h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>The crown loosened a little!</d-text>
 	</d-box>
 	<p class="note">K. Round's crown loosens by 20%.</p>
 
-	<h5>Missing</h5>
+	<h4>Missing</h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Missed!</d-text>
 	</d-box>
 	<p class="note">Nothing happens.</p>
-</section>
-
-<section class="d-section" id="dialogue">
-	<h2>Dialogue</h2>
-
-	<p>No dialogue; K. Round does not talk.</p>
 </section>
 
 <section class="d-section" id="postfight">

@@ -23,7 +23,7 @@ credits: >
 toc:
   -
     id: flavortext
-    name: Flavor text
+    name: General flavor text
     subheadings:
       -
         id: encounter
@@ -47,47 +47,38 @@ toc:
       -
         id: ft-spareable
         name: Spareable
-      -
-        name: ACTs
-        subheadings:
-          -
-            id: ft-check
-            name: Check
-          -
-            id: ft-flirt
-            name: Flirt
-          -
-            id: ft-xflirt
-            name: X-Flirt
-            subheadings:
-              -
-                id: ft-xflirt1
-                name: First use across all encounters
-              -
-                id: ft-xflirt2
-                name: Second use across all encounters
-              -
-                id: ft-xflirt3
-                name: Third use across all encounters
-              -
-                id: ft-xflirt4
-                name: Subsequent uses across all encounters
   -
     id: dialogue
-    name: Dialogue
+    name: General dialogue
     subheadings:
       -
         id: dialogue-standard
         name: Standard
+  -
+    name: ACTs
+    subheadings:
       -
-        name: ACTs
+        id: check
+        name: Check
+      -
+        id: flirt
+        name: Flirt
+      -
+        id: xflirt
+        name: X-Flirt
         subheadings:
           -
-            id: dialogue-flirt
-            name: Flirt
+            id: xflirt1
+            name: First use across all encounters
           -
-            id: dialogue-xflirt
-            name: X-Flirt
+            id: xflirt2
+            name: Second use across all encounters
+          -
+            id: xflirt3
+            name: Third use across all encounters
+          -
+            id: xflirt4
+            name: Subsequent uses across all encounters
 ---
 {% comment %}
 Check for encounter instances with the following regex:
@@ -96,7 +87,7 @@ Then check that the obj whose file it appears in actually exists in the canonica
 {% endcomment %}
 
 <section class="d-section" id="flavortext">
-	<h2>Flavor text</h2>
+	<h2>General flavor text</h2>
 
 	<h3 id="encounter">Initial encounter</h3>
 	<h4 id="encounter-headhathy2">With another Head Hathy</h4>
@@ -150,18 +141,35 @@ Then check that the obj whose file it appears in actually exists in the canonica
 	<d-box theme="battlemenu">
 		<d-text asterisk>Head Hathy is skipping beats.</d-text>
 	</d-box>
+</section>
 
-	<hr>
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
 
-	<h3 id="ft-check">Check</h3>
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Head Hathy</d-speaker>
+		<d-text><img src="{{ '/assets/images/story/talkhathy/4.gif' | relative_url }}" alt="A heart with a biting mouth"></d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Head Hathy</d-speaker>
+		<d-text><img src="{{ '/assets/images/story/talkhathy/5.gif' | relative_url }}" alt="A heart that repeatedly cracks apart and fuses back together"></d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
 	<d-box theme="battlemenu">
 		<d-text asterisk>HEAD HATHY - AT 8 DF 0</d-text>
 		<d-text asterisk>It learned to hide its feelings... is that strength?</d-text>
 	</d-box>
+</section>
 
-	<hr>
+<section class="d-section" id="flirt">
+	<h2>Flirt</h2>
 
-	<h3 id="ft-flirt">Flirt</h3>
+	<h3 id="flirt-ft">Flavor text</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You flirted with Head Hathy.</d-text>
 		<d-text asterisk>It was highly effective.</d-text>
@@ -170,8 +178,17 @@ Then check that the obj whose file it appears in actually exists in the canonica
 
 	<hr>
 
-	<h3 id="ft-xflirt">{% include acticon chara="Susie" -%} X-Flirt</h3>
-	<h4 id="ft-xflirt1">First use across all encounters</h4>
+	<h3 id="flirt-dialogue">Dialogue</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Head Hathy</d-speaker>
+		<d-text><img src="{{ '/assets/images/story/talkhathy/2.gif' | relative_url }}" alt="A single red heart pulsing slightly"></d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="xflirt">
+	<h2>{% include acticon chara="Susie" -%} X-Flirt</h2>
+
+	<h3 id="xflirt1">First use across all encounters</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You ordered SUSIE to flirt with the enemy!</d-text>
 	</d-box>
@@ -221,7 +238,9 @@ Then check that the obj whose file it appears in actually exists in the canonica
 		<d-text asterisk>HEY, GET BACK HERE AND LET ME FLIRT WITH YOU!!!</d-text>
 	</d-box>
 
-	<h4 id="ft-xflirt2">Second use across all encounters</h4>
+	<hr>
+
+	<h3 id="xflirt2">Second use across all encounters</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You ordered SUSIE to flirt with the enemy!</d-text>
 	</d-box>
@@ -258,7 +277,10 @@ Then check that the obj whose file it appears in actually exists in the canonica
 		<d-text asterisk>Not so easy, huh!?</d-text>
 	</d-box>
 
-	<h4 id="ft-xflirt3">Third use across all encounters</h4>
+	<hr>
+
+	<h3 id="xflirt3">Third use across all encounters</h3>
+	<h4>Flavor text</h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You ordered SUSIE to flirt with the enemy!</d-text>
 	</d-box>
@@ -271,37 +293,22 @@ Then check that the obj whose file it appears in actually exists in the canonica
 	</d-box>
 	<p class="note">All enemies gain 100% <span class="yellow">Mercy</span>.</p>
 
-	<h4 id="ft-xflirt4">Subsequent uses across all encounters</h4>
+	<h4>Dialogue</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Head Hathy</d-speaker>
+		<d-text><img src="{{ '/assets/images/story/talkhathy/3.gif' | relative_url }}" alt="A trio of red hearts pulsing slightly"></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="xflirt4">Subsequent uses across all encounters</h3>
+	<h4>Flavor text</h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You flirted with the enemies. It worked! (Susie did not help.)</d-text>
 	</d-box>
 	<p class="note">All enemies gain 100% <span class="yellow">Mercy</span>.</p>
-</section>
 
-<section class="d-section" id="dialogue">
-	<h2>Dialogue</h2>
-
-	<h3 id="dialogue-standard">Standard</h3>
-	<d-box theme="battletalk">
-		<d-speaker>Head Hathy</d-speaker>
-		<d-text><img src="{{ '/assets/images/story/talkhathy/4.gif' | relative_url }}" alt="A heart with a biting mouth"></d-text>
-	</d-box>
-	<d-box theme="battletalk">
-		<d-speaker>Head Hathy</d-speaker>
-		<d-text><img src="{{ '/assets/images/story/talkhathy/5.gif' | relative_url }}" alt="A heart that repeatedly cracks apart and fuses back together"></d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="dialogue-flatter">Flirt</h3>
-	<d-box theme="battletalk">
-		<d-speaker>Head Hathy</d-speaker>
-		<d-text><img src="{{ '/assets/images/story/talkhathy/2.gif' | relative_url }}" alt="A single red heart pulsing slightly"></d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="dialogue-xflatter">{% include acticon chara="Susie" -%} X-Flirt</h3>
+	<h4>Dialogue</h4>
 	<d-box theme="battletalk">
 		<d-speaker>Head Hathy</d-speaker>
 		<d-text><img src="{{ '/assets/images/story/talkhathy/3.gif' | relative_url }}" alt="A trio of red hearts pulsing slightly"></d-text>

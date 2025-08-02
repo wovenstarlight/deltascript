@@ -23,7 +23,7 @@ credits: >
 toc:
   -
     id: flavortext
-    name: Flavor text
+    name: General flavor text
     subheadings:
       -
         id: encounter
@@ -44,41 +44,35 @@ toc:
       -
         id: ft-spareable
         name: Spareable
-      -
-        name: ACTs
-        subheadings:
-          -
-            id: ft-check
-            name: Check
-          -
-            id: ft-rearrange
-            name: Rearrange
-            subheadings:
-              -
-                id: ft-rearrange-pre
-                name: Upon usage
-              -
-                id: ft-rearrange-post
-                name: After usage
-          -
-            id: ft-rival
-            name: Rival
   -
     id: dialogue
-    name: Dialogue
+    name: General dialogue
     subheadings:
       -
         id: dialogue-standard
         name: Standard
+  -
+    name: ACTs
+    subheadings:
       -
-        name: ACTs
+        id: check
+        name: Check
+      -
+        id: rearrange
+        name: Rearrange
         subheadings:
           -
-            id: dialogue-rearrange
-            name: Rearrange
+            id: rearrange-instructions
+            name: Instructions
           -
-            id: dialogue-rival
-            name: Rival
+            id: rearrange-correct
+            name: Rearranged correctly
+          -
+            id: rearrange-incorrect
+            name: Rearranged incorrectly
+      -
+        id: rival
+        name: Rival
 ---
 {% comment %}
 Check for encounter instances with the following regex:
@@ -87,7 +81,7 @@ Then check that the obj whose file it appears in actually exists in the canonica
 {% endcomment %}
 
 <section class="d-section" id="flavortext">
-	<h2>Flavor text</h2>
+	<h2>General flavor text</h2>
 
 	<h3 id="encounter">Initial encounter</h3>
 	<h4 id="encounter-solo">Solo</h4>
@@ -132,66 +126,10 @@ Then check that the obj whose file it appears in actually exists in the canonica
 	<d-box theme="battlemenu">
 		<d-text asterisk>Bloxer radiates with the spirit of joy.</d-text>
 	</d-box>
-
-	<hr>
-
-	<h3 id="ft-check">Check</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>BLOXER - AT 9 DF 2</d-text>
-		<d-text asterisk>Loves: Training. Hates: Body being the wrong shape</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-rearrange">Rearrange</h3>
-	<h4 id="ft-rearrange-pre">Upon usage</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Press [MENU] to choose:</d-text>
-		<d-text>&nbsp; &nbsp; #1 HEAD, #2 BODY, #3 LEGS.</d-text>
-	</d-box>
-
-	<h4 id="ft-rearrange-post">After usage</h4>
-	<h5>Rearranged correctly</h5>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Bloxer is pleased with its new self!</d-text>
-	</d-box>
-	<p class="note">Bloxer gains 100% <span class="yellow">Mercy</span>.</p>
-	<h5>Rearranged incorrectly</h5>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Bloxer is still unhappy with its self...</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-rival">{% include acticon chara="Susie" -%} Rival</h3>
-	<p>Available after Susie joins the party for real.</p>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Susie became antagonistic!</d-text>
-	</d-box>
-	<hr class="hr2">
-	<p class="note">At random:</p>
-	<d-box theme="battlemenu">
-		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
-		<d-text asterisk>Why bother training? You'll NEVER beat me.</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
-		<d-text asterisk>Why train? You're still 100 years too early to beat me.</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
-		<d-text asterisk>Training? Yeah, like I need that to beat you down.</d-text>
-	</d-box>
-	<hr class="hr2">
-	<d-box theme="battlemenu">
-		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
-		<d-text asterisk>The enemies became <span class="blue">TIRED</span>...</d-text>
-	</d-box>
-	<p class="note">All enemies become <span class="blue">Tired</span>. (Last message does contain Susie's sprite, yes; they appear to have forgotten to reset it after her line.)</p>
 </section>
 
 <section class="d-section" id="dialogue">
-	<h2>Dialogue</h2>
+	<h2>General dialogue</h2>
 
 	<h3 id="dialogue-standard">Standard</h3>
 	<d-box theme="battletalk">
@@ -210,11 +148,50 @@ Then check that the obj whose file it appears in actually exists in the canonica
 		<d-speaker>Bloxer</d-speaker>
 		<d-text>Let me show<span class="break"></span> you my<span class="break"></span> training!<span class="break"></span> YIHA!!</d-text>
 	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+	<d-box theme="battlemenu">
+		<d-text asterisk>BLOXER - AT 9 DF 2</d-text>
+		<d-text asterisk>Loves: Training. Hates: Body being the wrong shape</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="rearrange">
+	<h2>Rearrange</h2>
+
+	<h3 id="rearrange-instructions">Instructions</h3>
+	<p class="note">Bloxer's body parts begin oscillating past an arrow. Pressing [MENU] pushes the currently-indicated body part into a stack on the right, built from the top down.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press [MENU] to choose:</d-text>
+		<d-text>&nbsp; &nbsp; #1 HEAD, #2 BODY, #3 LEGS.</d-text>
+	</d-box>
 
 	<hr>
 
-	<h3 id="dialogue-rearrange">Rearrange</h3>
-	<h4>Rearranged incorrectly</h4>
+	<h3 id="rearrange-correct">Rearranged correctly</h3>
+	<h4>Flavor text</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bloxer is pleased with its new self!</d-text>
+	</d-box>
+	<p class="note">Bloxer gains 100% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Dialogue</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Bloxer</d-speaker>
+		<d-text>Oh, you mixed<span class="break"></span> me up all<span class="break"></span> nice~</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="rearrange-incorrect">Rearranged incorrectly</h3>
+	<h4>Flavor text</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bloxer is still unhappy with its self...</d-text>
+	</d-box>
+
+	<h4>Dialogue</h4>
 	<h5>If legs are on top</h5>
 	<d-box theme="battletalk">
 		<d-speaker>Bloxer</d-speaker>
@@ -247,16 +224,40 @@ Then check that the obj whose file it appears in actually exists in the canonica
 		<d-speaker>Bloxer</d-speaker>
 		<d-text>ARRGH!!</d-text>
 	</d-box>
+</section>
 
-	<h4>Rearranged correctly</h4>
-	<d-box theme="battletalk">
-		<d-speaker>Bloxer</d-speaker>
-		<d-text>Oh, you mixed<span class="break"></span> me up all<span class="break"></span> nice~</d-text>
+<section class="d-section" id="rival">
+	<h2>{% include acticon chara="Susie" -%} Rival</h2>
+
+	<h3>Flavor text</h3>
+	<p>Available after Susie joins the party for real.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie became antagonistic!</d-text>
 	</d-box>
+	<hr class="hr2">
+	<p class="note">At random:</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Why bother training? You'll NEVER beat me.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Why train? You're still 100 years too early to beat me.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Training? Yeah, like I need that to beat you down.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>The enemies became <span class="blue">TIRED</span>...</d-text>
+	</d-box>
+	<p class="note">All enemies become <span class="blue">Tired</span>. (Last message does contain Susie's sprite, yes; they appear to have forgotten to reset it after her line.)</p>
 
 	<hr>
 
-	<h3 id="dialogue-rival">{% include acticon chara="Susie" -%} Rival</h3>
+	<h3>Dialogue</h3>
 	<d-box theme="battletalk">
 		<d-speaker>Bloxer</d-speaker>
 		<d-text>My momentum<span class="break"></span> is totally<span class="break"></span> blocked<span class="break"></span> up...</d-text>

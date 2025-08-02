@@ -38,7 +38,7 @@ toc:
     name: Before the fight
   -
     id: flavortext
-    name: Flavor text
+    name: General flavor text
     subheadings:
       -
         id: encounter
@@ -58,24 +58,27 @@ toc:
       -
         id: ft-selfheal
         name: Healing itself
-      -
-        name: ACTs
-        subheadings:
-          -
-            id: ft-check
-            name: Check / Checkers
-          -
-            id: ft-bow
-            name: Bow
-          -
-            id: ft-deepbow
-            name: Deep Bow
-          -
-            id: ft-warning
-            name: Warning
   -
     id: dialogue
-    name: Dialogue
+    name: General dialogue
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: ft-check
+        name: Check
+      -
+        id: ft-checkers
+        name: Checkers
+      -
+        id: ft-bow
+        name: Bow
+      -
+        id: ft-deepbow
+        name: Deep Bow
+      -
+        id: ft-warning
+        name: Warning
   -
     id: postfight
     name: After the fight
@@ -188,7 +191,7 @@ toc:
 </section>
 
 <section class="d-section" id="flavortext">
-	<h2>Flavor text</h2>
+	<h2>General flavor text</h2>
 
 	<h3 id="encounter">Initial encounter</h3>
 	<d-box theme="battlemenu">
@@ -246,27 +249,37 @@ toc:
 		<d-sprite speaker="Susie" variant="noeyes" emotion="3"></d-sprite>
 		<d-text asterisk>Pssh, and let it think I'm AFRAID? No way!</d-text>
 	</d-box>
+</section>
 
-	<hr>
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
 
-	<h3 id="ft-check">Check / Checkers</h3>
-	<h4>Check (First time)</h4>
+	<p>No dialogue; K. Round does not talk.</p>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
 	<d-box theme="battlemenu">
 		<d-text asterisk>K.ROUND - AT 9 DF 3</d-text>
 		<d-text asterisk>Check?</d-text>
 		<d-text asterisk>That's chess, not checkers!</d-text>
 	</d-box>
-	<p class="note">The ACT name changes to "Checkers".</p>
+	<p class="note">Gets replaced by the <a href="#checkers">Checkers</a> ACT.</p>
+</section>
 
-	<h4>Checkers (Subsequent times)</h4>
+<section class="d-section" id="checkers">
+	<h2>Checkers</h2>
+	<p>Replaces the <a href="#check">Check</a> ACT after the first use.</p>
+
 	<d-box theme="battlemenu">
 		<d-text asterisk>K.ROUND - AT 9 DF 3</d-text>
 		<d-text asterisk>That's better.</d-text>
 	</d-box>
+</section>
 
-	<hr>
+<section class="d-section" id="bow">
+	<h2>Bow</h2>
 
-	<h3 id="ft-bow">Bow</h3>
 	<p class="note">Kris bows.</p>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You bowed to K. ROUND.</d-text>
@@ -277,7 +290,7 @@ toc:
 		<d-text asterisk>Its crown loosened a little.</d-text>
 	</d-box>
 	<hr class="hr2">
-	<h4 id="firstbow">First time only</h4>
+	<h3 id="firstbow">First time only</h3>
 	<d-box theme="battlemenu">
 		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
 		<d-text asterisk>That's it, Kris! If we can get its crown off...</d-text>
@@ -302,10 +315,11 @@ toc:
 		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
 		<d-text asterisk>...</d-text>
 	</d-box>
+</section>
 
-	<hr>
+<section class="d-section" id="deepbow">
+	<h2>{% include acticon chara="Ralsei" -%} Deep Bow</h2>
 
-	<h3 id="ft-deepbow">{% include acticon chara="Ralsei" -%} Deep Bow</h3>
 	<p class="note">Kris and Ralsei bow.</p>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You and Ralsei bowed.</d-text>
@@ -316,30 +330,36 @@ toc:
 		<d-text asterisk>Its crown loosened!</d-text>
 	</d-box>
 	<hr class="hr2">
-	<h4>First time only</h4>
+	<h3>First time only</h3>
 	<p class="note">Proceeds to <a href="#firstbow">Ralsei and Susie's dialogue for the first bow</a>.</p>
+</section>
 
-	<hr>
+<section class="d-section" id="warning">
+	<h2>{% include acticon chara="Ralsei" -%} Warning</h2>
 
-	<h3 id="ft-warning">{% include acticon chara="Ralsei" -%} Warning</h3>
-	<p class="note">K. Round is not warned, and Susie's attacks do not miss.</p>
-	<h4>First time, and fourth time onwards</h4>
+	<h3>First time, and fourth time onwards</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You explained to K. Round about the importance of dodging Susie's attacks.</d-text>
 	</d-box>
 	<d-box theme="battlemenu">
 		<d-text asterisk>But it didn't seem to understand...</d-text>
 	</d-box>
+	<p class="note">K. Round is not warned, and Susie's attacks do not miss.</p>
 
-	<h4>Second time</h4>
+	<hr>
+
+	<h3>Second time</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You started making siren noises with your mouth and looking at Susie.</d-text>
 	</d-box>
 	<d-box theme="battlemenu">
 		<d-text asterisk>K. Round still didn't understand...</d-text>
 	</d-box>
+	<p class="note">K. Round is not warned, and Susie's attacks do not miss.</p>
 
-	<h4>Third time</h4>
+	<hr>
+
+	<h3>Third time</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You started explaining that Susie is really dangerous and strong.</d-text>
 	</d-box>
@@ -349,13 +369,7 @@ toc:
 	<d-box theme="battlemenu">
 		<d-text asterisk>Susie's ATTACK went up massively...!</d-text>
 	</d-box>
-	<p class="note">Susie's Attack increases by 50%.</p>
-</section>
-
-<section class="d-section" id="dialogue">
-	<h2>Dialogue</h2>
-
-	<p>No dialogue; K. Round does not talk.</p>
+	<p class="note">Susie's Attack increases by 50%. K. Round is not warned, and Susie's attacks do not miss.</p>
 </section>
 
 <section class="d-section" id="postfight">

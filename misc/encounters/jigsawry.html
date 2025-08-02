@@ -23,7 +23,7 @@ credits: >
 toc:
   -
     id: flavortext
-    name: Flavor text
+    name: General flavor text
     subheadings:
       -
         id: encounter
@@ -50,21 +50,9 @@ toc:
       -
         id: ft-spareable
         name: Spareable
-      -
-        name: ACTs
-        subheadings:
-          -
-            id: ft-check
-            name: Check
-          -
-            id: ft-befriend
-            name: Befriend
-          -
-            id: ft-warning
-            name: Warning
   -
     id: dialogue
-    name: Dialogue
+    name: General dialogue
     subheadings:
       -
         id: dialogue-standard
@@ -78,6 +66,18 @@ toc:
       -
         id: dialogue-lost
         name: When another Jigsawry is defeated
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: befriend
+        name: Befriend
+      -
+        id: warning
+        name: Warning
 ---
 {% comment %}
 Check for encounter instances with the following regex:
@@ -86,11 +86,11 @@ Then check that the obj whose file it appears in actually exists in the canonica
 {% endcomment %}
 
 <section class="d-section" id="flavortext">
-	<h2>Flavor text</h2>
+	<h2>General flavor text</h2>
 
 	<h3 id="encounter">Initial encounter</h3>
-	<p>Unused.</p>
 	<h4 id="encounter-solo">Solo</h4>
+	<p>Unused.</p>
 	<h5>First time</h5>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Jigsawry drew near!</d-text>
@@ -154,67 +154,10 @@ Then check that the obj whose file it appears in actually exists in the canonica
 	<d-box theme="battlemenu">
 		<d-text asterisk>Jigsawry looks happy about its life.</d-text>
 	</d-box>
-
-	<hr>
-
-	<h3 id="ft-check">Check</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>JIGSAWRY - AT 5 DF 0</d-text>
-		<d-text asterisk>This mousenary is only fighting to make ends meet...</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-befriend">Befriend</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You barely lifted a finger, and...</d-text>
-	</d-box>
-	<hr class="hr2">
-	<p class="note">At random:</p>
-	<d-box theme="battletalk">
-		<d-speaker>Jigsawry</d-speaker>
-		<d-text>Of course<span class="break"></span> I'll be<span class="break"></span> your friend!</d-text>
-	</d-box>
-	<d-box theme="battletalk">
-		<d-speaker>Jigsawry</d-speaker>
-		<d-text>Alright!</d-text>
-		<d-text>You win!</d-text>
-		<d-text>Let's be<span class="break"></span> friends!</d-text>
-	</d-box>
-	<d-box theme="battletalk">
-		<d-speaker>Jigsawry</d-speaker>
-		<d-text>Friends?</d-text>
-		<d-text>I was thinking<span class="break"></span> the same<span class="break"></span> thing!</d-text>
-	</d-box>
-	<d-box theme="battletalk">
-		<d-speaker>Jigsawry</d-speaker>
-		<d-text>... well,<span class="break"></span> if we HAVE<span class="break"></span> to be<span class="break"></span> friends...</d-text>
-	</d-box>
-	<hr class="hr2">
-	<p class="note">Jigsawry gains 100% <span class="yellow">Mercy</span>.</p>
-
-	<hr>
-
-	<h3 id="ft-warning">{% include acticon chara="Ralsei" -%} Warning</h3>
-	<p>Available before Susie joins the party for real.</p>
-	<p></p>
-	<p class="note">Susie's attacks will miss from now on.</p>
-
-	<h4>When against a lone Jigsawry</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You and Ralsei warned Jigsawry about Susie.</d-text>
-		<d-text asterisk>The enemy went on guard...</d-text>
-	</d-box>
-
-	<h4>When against multiple enemies</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You and Ralsei warned the enemies about Susie.</d-text>
-		<d-text asterisk>Everyone went on guard.</d-text>
-	</d-box>
 </section>
 
 <section class="d-section" id="dialogue">
-	<h2>Dialogue</h2>
+	<h2>General dialogue</h2>
 
 	<h3 id="dialogue-standard">Standard</h3>
 	<d-box theme="battletalk">
@@ -268,5 +211,65 @@ Then check that the obj whose file it appears in actually exists in the canonica
 	<d-box theme="battletalk">
 		<d-speaker>Jigsawry</d-speaker>
 		<d-text>BARRY!!<span class="break"></span> HANG IN<span class="break"></span> THERE BARRY!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+	<d-box theme="battlemenu">
+		<d-text asterisk>JIGSAWRY - AT 5 DF 0</d-text>
+		<d-text asterisk>This mousenary is only fighting to make ends meet...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="befriend">
+	<h2>Befriend</h2>
+
+	<h3 id="befriend-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You barely lifted a finger, and...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">At random:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>Of course<span class="break"></span> I'll be<span class="break"></span> your friend!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>Alright!</d-text>
+		<d-text>You win!</d-text>
+		<d-text>Let's be<span class="break"></span> friends!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>Friends?</d-text>
+		<d-text>I was thinking<span class="break"></span> the same<span class="break"></span> thing!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>... well,<span class="break"></span> if we HAVE<span class="break"></span> to be<span class="break"></span> friends...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Jigsawry gains 100% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="warning">
+	<h2>{% include acticon chara="Ralsei" -%} Warning</h2>
+	<p>Available before Susie joins the party for real.</p>
+
+	<h3 id="warning-ft">Flavor text</h3>
+	<p class="note">Susie's attacks will miss from now on.</p>
+
+	<h4>When against a lone Jigsawry</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei warned Jigsawry about Susie.</d-text>
+		<d-text asterisk>The enemy went on guard...</d-text>
+	</d-box>
+
+	<h4>When against multiple enemies</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei warned the enemies about Susie.</d-text>
+		<d-text asterisk>Everyone went on guard.</d-text>
 	</d-box>
 </section>

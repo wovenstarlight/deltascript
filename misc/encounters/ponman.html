@@ -23,7 +23,7 @@ credits: >
 toc:
   -
     id: flavortext
-    name: Flavor text
+    name: General flavor text
     subheadings:
       -
         id: encounter
@@ -40,24 +40,28 @@ toc:
       -
         id: ft-spareable
         name: Spareable
-      -
-        name: ACTs
-        subheadings:
-          -
-            id: ft-check
-            name: Check
-          -
-            id: ft-goodnight
-            name: Goodnight
-          -
-            id: ft-lullaby
-            name: Lullaby
-          -
-            id: ft-warning
-            name: Warning
   -
     id: dialogue
-    name: Dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: goodnight
+        name: Goodnight
+      -
+        id: lullaby
+        name: Lullaby
+      -
+        id: warning
+        name: Warning
 ---
 {% comment %}
 Check for encounter instances with the following regex:
@@ -122,68 +126,71 @@ Then check that the obj whose file it appears in actually exists in the canonica
 	<d-box theme="battlemenu">
 		<d-text asterisk>Ponman is sleeping soundly.</d-text>
 	</d-box>
+</section>
 
-	<hr>
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+	
+	<p>No dialogue; Ponmen do not talk.</p>
+</section>
 
-	<h3 id="ft-check">Check</h3>
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
 	<d-box theme="battlemenu">
 		<d-text asterisk>PONMAN - AT 8 DF 0</d-text>
 		<d-text asterisk>Its nucleus doubles as an eyespot.</d-text>
 	</d-box>
+</section>
 
-	<hr>
+<section class="d-section" id="goodnight">
+	<h2>Goodnight</h2>
 
-	<h3 id="ft-goodnight">Goodnight</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You whispered goodnight to Ponman.</d-text>
 		<d-text asterisk>It fell asleep...</d-text>
 	</d-box>
 	<p class="note">Ponman falls asleep, gaining 100% <span class="yellow">Mercy</span>, though this can be lost if it's awoken by being attacked.</p>
+</section>
 
-	<hr>
+<section class="d-section" id="lullaby">
+	<h2>{% include acticon chara="Ralsei" -%} Lullaby</h2>
 
-	<h3 id="ft-lullaby">{% include acticon chara="Ralsei" -%} Lullaby</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Ralsei sang a soft and entrancing lullaby!</d-text>
 	</d-box>
 	<p class="note">Ralsei sings to the enemies.</p>
 	<hr class="hr2">
-	<h4>If Susie is in the party</h4>
+	<h3>If Susie is in the party</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>PONMAN fell asleep!</d-text>
 		<d-text asterisk>SUSIE fell asleep!</d-text>
 		<d-text asterisk>The enemies became TIRED!</d-text>
 	</d-box>
-	<h4>If Susie is not in the party</h4>
+	<h3>If Susie is not in the party</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>PONMAN fell asleep!</d-text>
 		<d-text asterisk>The enemies became TIRED!</d-text>
 	</d-box>
 	<hr class="hr2">
 	<p class="note">Ponman falls asleep, gaining 100% <span class="yellow">Mercy</span>, though this can be lost if it's awoken by being attacked. Any other enemies become <span class="blue">Tired</span>.</p>
+</section>
 
-	<hr>
-
-	<h3 id="ft-warning">{% include acticon chara="Ralsei" -%} Warning</h3>
+<section class="d-section" id="warning">
+	<h2>{% include acticon chara="Ralsei" -%} Warning</h2>
 	<p>Available before Susie joins the party for real.</p>
 	<p></p>
 	<p class="note">Susie's attacks will miss from now on.</p>
 
-	<h4>When against a lone Ponman</h4>
+	<h3>When against a lone Ponman</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You and Ralsei warned Ponman about Susie.</d-text>
 		<d-text asterisk>The enemy went on guard...</d-text>
 	</d-box>
 
-	<h4>When against multiple enemies</h4>
+	<h3>When against multiple enemies</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You and Ralsei warned the enemies about Susie.</d-text>
 		<d-text asterisk>Everyone went on guard.</d-text>
 	</d-box>
-</section>
-
-<section class="d-section" id="dialogue">
-	<h2>Dialogue</h2>
-
-	<p>No dialogue; Ponmen do not talk.</p>
 </section>

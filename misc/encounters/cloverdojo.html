@@ -39,7 +39,7 @@ toc:
     name: Challenge info
   -
     id: flavortext
-    name: Flavor text
+    name: General flavor text
     subheadings:
       -
         id: encounter
@@ -59,27 +59,9 @@ toc:
       -
         id: ft-betray
         name: '"Betray"'
-      -
-        name: ACTs
-        subheadings:
-          -
-            id: ft-check
-            name: Check
-          -
-            id: ft-topic
-            name: Topic
-          -
-            id: ft-topiclong
-            name: Topic(Long)
-          -
-            id: ft-saction
-            name: S-Action
-          -
-            id: ft-raction
-            name: R-Action
   -
     id: dialogue
-    name: Dialogue
+    name: General dialogue
     subheadings:
       -
         id: dialogue-standard
@@ -87,6 +69,24 @@ toc:
       -
         id: dialogue-fallback
         name: Fallback text
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: topic
+        name: Topic
+      -
+        id: topiclong
+        name: Topic(Long)
+      -
+        id: saction
+        name: S-Action
+      -
+        id: raction
+        name: R-Action
 ---
 {% comment %}
 Check for encounter instances with the following regex:
@@ -106,7 +106,7 @@ Then check that the obj whose file it appears in actually exists in the canonica
 </section>
 
 <section class="d-section" id="flavortext">
-	<h2>Flavor text</h2>
+	<h2>General flavor text</h2>
 
 	<h3 id="encounter">Initial encounter</h3>
 	<d-box theme="battlemenu">
@@ -165,122 +165,10 @@ Then check that the obj whose file it appears in actually exists in the canonica
 	<d-box theme="battlemenu">
 		<d-text asterisk>Clover's harmony was shattered by violence.</d-text>
 	</d-box>
-
-	<hr>
-
-	<h3 id="ft-check">Check</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>CLOVER - AT 8 DF 2</d-text>
-		<d-text asterisk>Two heads are better than one!</d-text>
-		<d-text asterisk>Three... maybe not.</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-topic">Topic</h3>
-	<h4>Description</h4>
-	<d-box theme="battledesc">
-		<d-text>Guess favorite thing</d-text>
-	</d-box>
-
-	<h4>Usage</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Choose a topic that Clover likes!</d-text>
-	</d-box>
-
-	<p class="note">3 randomly-chosen options (1 correct, 2 wrong) are provided in a standard choice menu, with a timer above starting at <span class="red">TIME: 03</span> and counting down each second.</p>
-
-	<h5>Answering correctly</h5>
-	<p>Correct answers include:</p>
-	<ul>
-		<li>CuteBoys</li>
-		<li>Fluffy</li>
-		<li>Birthday</li>
-		<li>Sports</li>
-		<li>Family</li>
-		<li>Hole</li>
-		<li>Rouxls</li>
-		<li>Puzzle</li>
-		<li>Party</li>
-		<li>Dance</li>
-		<li>GiantBed</li>
-		<li>NumberThree</li>
-		<li>Sandwich</li>
-		<li>Tree</li>
-	</ul>
-	<d-box theme="battlemenu">
-		<d-text asterisk="nice">That's right!</d-text>
-		<d-text asterisk="mean">Not bad!</d-text>
-		<d-text asterisk="shy">(It's OK...)</d-text>
-	</d-box>
-	<p class="note">Clover gains a base amount of 20% <span class="yellow">Mercy</span>, with an increase of 5% for every additional turn, up to a maximum of 50%.</p>
-
-	<h5>Answering incorrectly</h5>
-	<p>Wrong answers include:</p>
-	<ul>
-		<li>SplatNoise</li>
-		<li>SandPaper</li>
-		<li>Chaos</li>
-		<li>Clown</li>
-		<li>NumberFour</li>
-		<li>NumberTwo</li>
-		<li>Turtleneck</li>
-		<li>Trouble</li>
-		<li>Thrash</li>
-		<li>Guns</li>
-		<li>Cheating</li>
-		<li>Dice</li>
-		<li>Starwalker</li>
-		<li>4LeafClover</li>
-		<li>Garbage</li>
-		<li>Non-Birthday</li>
-		<li>Crime</li>
-	</ul>
-	<d-box theme="battlemenu">
-		<d-text asterisk="nice">No thanks!</d-text>
-		<d-text asterisk="mean">WRONG!</d-text>
-		<d-text asterisk="shy">(Is it that bad?)</d-text>
-	</d-box>
-
-	<h5>Running out of time</h5>
-	<d-box theme="battlemenu">
-		<d-text asterisk="nice">Time's up!</d-text>
-		<d-text asterisk="mean">TOO SLOW!</d-text>
-		<d-text asterisk="shy">(Sorry...)</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-topiclong">{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Topic(Long)</h3>
-	<h4>Description</h4>
-	<d-box theme="battledesc">
-		<d-text>Longer time to guess</d-text>
-	</d-box>
-
-	<h4>Usage</h4>
-	<p>Identical to <a href="#ft-topic">the Topic ACT</a>, but with the timer starting at 10 seconds instead (<span class="red">TIME: 10</span>).</p>
-
-	<hr>
-
-	<h3 id="ft-saction" class="susie act">S-Action</h3>
-	<p>Available after returning from Cyber World.</p>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Susie stood there awkwardly!</d-text>
-	</d-box>
-	<p class="note">Clover gains 5% <span class="yellow">Mercy</span>.</p>
-
-	<hr>
-
-	<h3 id="ft-raction" class="ralsei act">R-Action</h3>
-	<p>Available after returning from Cyber World.</p>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Ralsei stood there cutely!</d-text>
-	</d-box>
-	<p class="note">Clover gains 25% <span class="yellow">Mercy</span>.</p>
 </section>
 
 <section class="d-section" id="dialogue">
-	<h2>Dialogue</h2>
+	<h2>General dialogue</h2>
 
 	<h3 id="dialogue-standard">Standard</h3>
 	<div class="boxgroup">
@@ -332,4 +220,139 @@ Then check that the obj whose file it appears in actually exists in the canonica
 			<d-text asterisk="shy">Smart Mouth</d-text>
 		</d-box>
 	</div>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+	<d-box theme="battlemenu">
+		<d-text asterisk>CLOVER - AT 8 DF 2</d-text>
+		<d-text asterisk>Two heads are better than one!</d-text>
+		<d-text asterisk>Three... maybe not.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="topic">
+	<h2>Topic</h2>
+
+	<h3 id="topic-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Guess favorite thing</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="topic-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Choose a topic that Clover likes!</d-text>
+	</d-box>
+
+	<p class="note">3 randomly-chosen options (1 correct, 2 wrong) are provided in a standard choice menu, with a timer above starting at <span class="red">TIME: 03</span> and counting down each second.</p>
+
+	<hr>
+
+	<h3 id="topic-dialogue">Dialogue</h3>
+
+	<h4 id="topic-dialogue-correct">Answering correctly</h4>
+	<details>
+		<summary>Correct answers</summary>
+		<ul>
+			<li>CuteBoys</li>
+			<li>Fluffy</li>
+			<li>Birthday</li>
+			<li>Sports</li>
+			<li>Family</li>
+			<li>Hole</li>
+			<li>Rouxls</li>
+			<li>Puzzle</li>
+			<li>Party</li>
+			<li>Dance</li>
+			<li>GiantBed</li>
+			<li>NumberThree</li>
+			<li>Sandwich</li>
+			<li>Tree</li>
+		</ul>
+	</details>
+	<d-box theme="battlemenu">
+		<d-text asterisk="nice">That's right!</d-text>
+		<d-text asterisk="mean">Not bad!</d-text>
+		<d-text asterisk="shy">(It's OK...)</d-text>
+	</d-box>
+	<p class="note">Clover gains a base amount of 20% <span class="yellow">Mercy</span>, with an increase of 5% for every additional turn, up to a maximum of 50%.</p>
+
+	<h4 id="topic-dialogue-incorrect">Answering incorrectly</h4>
+	<details>
+		<summary>Wrong answers</summary>
+		<ul>
+			<li>SplatNoise</li>
+			<li>SandPaper</li>
+			<li>Chaos</li>
+			<li>Clown</li>
+			<li>NumberFour</li>
+			<li>NumberTwo</li>
+			<li>Turtleneck</li>
+			<li>Trouble</li>
+			<li>Thrash</li>
+			<li>Guns</li>
+			<li>Cheating</li>
+			<li>Dice</li>
+			<li>Starwalker</li>
+			<li>4LeafClover</li>
+			<li>Garbage</li>
+			<li>Non-Birthday</li>
+			<li>Crime</li>
+		</ul>
+	</details>
+	<d-box theme="battlemenu">
+		<d-text asterisk="nice">No thanks!</d-text>
+		<d-text asterisk="mean">WRONG!</d-text>
+		<d-text asterisk="shy">(Is it that bad?)</d-text>
+	</d-box>
+
+	<h4 id="topic-dialogue-timeout">Running out of time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk="nice">Time's up!</d-text>
+		<d-text asterisk="mean">TOO SLOW!</d-text>
+		<d-text asterisk="shy">(Sorry...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="topiclong">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Topic(Long)</h2>
+
+	<h3 id="topiclong-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Longer time to guess</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="topiclong-ft">Flavor text</h3>
+	<p>Identical to <a href="#topic-ft">the Topic ACT</a>, but with the timer starting at 10 seconds instead (<span class="red">TIME: 10</span>).</p>
+
+	<hr>
+
+	<h3 id="topiclong-dialogue">Dialogue</h3>
+	<p>Identical to <a href="#topic-dialogue">the Topic ACT</a>.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+	<p>Available after returning from Cyber World.</p>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie stood there awkwardly!</d-text>
+	</d-box>
+	<p class="note">Clover gains 5% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+	<p>Available after returning from Cyber World.</p>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei stood there cutely!</d-text>
+	</d-box>
+	<p class="note">Clover gains 25% <span class="yellow">Mercy</span>.</p>
 </section>

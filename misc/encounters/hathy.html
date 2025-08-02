@@ -31,7 +31,7 @@ credits: >
 toc:
   -
     id: flavortext
-    name: Flavor text
+    name: General flavor text
     subheadings:
       -
         id: encounter
@@ -65,48 +65,42 @@ toc:
         id: ft-spareable
         name: Spareable
       -
-        name: ACTs
-        subheadings:
-          -
-            id: ft-check
-            name: Check
-          -
-            id: ft-flatter
-            name: Flatter
-          -
-            id: ft-xflatter
-            name: X-Flatter
-          -
-            id: ft-warning
-            name: Warning
-          -
-            id: ft-sflatter
-            name: S-Flatter
-      -
-        id: ft-manual
-        name: Using the Manual
-      -
         id: susieattack
         name: Susie attacking (Unused)
   -
     id: dialogue
-    name: Dialogue
+    name: General dialogue
     subheadings:
       -
         id: dialogue-standard
         name: Standard
+  -
+    name: ACTs
+    subheadings:
       -
-        name: ACTs
-        subheadings:
-          -
-            id: dialogue-flatter
-            name: Flatter
-          -
-            id: dialogue-xflatter
-            name: X-Flatter
+        id: check
+        name: Check
+      -
+        id: flatter
+        name: Flatter
+      -
+        id: xflatter
+        name: X-Flatter
+      -
+        id: warning
+        name: Warning
+      -
+        id: sflatter
+        name: S-Flatter
+  -
+    name: Items
+    subheadings:
+      -
+        id: manual
+        name: Using the Manual
 ---
 <section class="d-section" id="flavortext">
-	<h2>Flavor text</h2>
+	<h2>General flavor text</h2>
 
 	<h3 id="encounter">Initial encounter</h3>
 	<h4 id="encounter-rudinn">With Rudinn</h4>
@@ -171,115 +165,10 @@ toc:
 	<hr>
 
 	<h3 id="ft-spareable">Spareable</h3>
-	<p>Unused. (Got assigned to the wrong variable, whoops.)</p> <!-- global.msg instead of global.battlemsg, if you were wondering -->
+	<p>Unused. (Got assigned to the wrong variable.)</p> <!-- global.msg instead of global.battlemsg, if you were wondering -->
 	<d-box theme="battlemenu">
 		<d-text asterisk>Hathy is skipping beats.</d-text>
 	</d-box>
-
-	<hr>
-
-	<h3 id="ft-check">Check</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>HATHY - AT 7 DF 0</d-text>
-		<d-text asterisk> I am a <span class="yellow">little kiss</span>.</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-flatter">Flatter</h3>
-	<p class="note">At random:</p>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You told Hathy it has cool tentacles.</d-text>
-		<d-text asterisk>It began to think about this...</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You called Hathy a sweetheart.</d-text>
-		<d-text asterisk>It began to think about this...</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You told Hathy its teeth look like knives.</d-text>
-		<d-text asterisk>It began to think about this...</d-text>
-	</d-box>
-	<p class="note">Hathy gains 100% <span class="yellow">Mercy</span>.</p>
-
-	<hr>
-
-	<h3 id="ft-xflatter">{% include acticon chara="Ralsei" -%} X-Flatter</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You ordered Ralsei to flatter all the enemies!</d-text>
-	</d-box>
-	<p class="note">At random:</p>
-	<d-box theme="battlemenu">
-		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
-		<d-text asterisk>Out of anyone, I'm glad we randomly encountered all of you.</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
-		<d-text asterisk>I'm making tea later...</d-text>
-		<d-text asterisk>Umm, would you like any?</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
-		<d-text asterisk>We don't need EXP.</d-text>
-		<d-text asterisk>Just encountering your smile is reward enough.</d-text>
-	</d-box>
-	<p class="note">All enemies gain 100% <span class="yellow">Mercy</span>.</p>
-
-	<hr>
-
-	<h3 id="ft-warning">{% include acticon chara="Ralsei" -%} Warning</h3>
-	<p>Available before Susie joins the party for real.</p>
-	<p></p>
-	<p class="note">Susie's attacks will miss from now on.</p>
-
-	<h4>When against a lone Hathy</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You and Ralsei warned Hathy about Susie.</d-text>
-		<d-text asterisk>The enemy went on guard.</d-text>
-	</d-box>
-
-	<h4>When against multiple enemies</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You and Ralsei  warned the enemies about Susie.</d-text>
-		<d-text asterisk>Everyone went on guard.</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-sflatter">{% include acticon chara="Susie" -%} S-Flatter</h3>
-	<p>Available after Susie joins the party for real.</p>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You ordered Susie to flatter all the enemies!</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
-		<d-text asterisk>Can't believe my bozo teammates...</d-text>
-	</d-box>
-	<p class="note">At random:</p>
-	<d-box theme="battlemenu">
-		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
-		<d-text asterisk>... came back here just to see YOU guys.</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
-		<d-text asterisk>... wanted to fight someone like YOU so much.</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
-		<d-text asterisk>... have a THING for weaklings like you.</d-text>
-	</d-box>
-	<p class="note">All enemies gain 100% <span class="yellow">Mercy</span>.</p>
-	
-	<hr>
-
-	<h3 id="ft-manual">Using the <a href="{{ '/misc/darkitems#manual' | relative_url }}">Manual</a></h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>[Character] read the MANUAL!</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Hathy listened politely!</d-text>
-	</d-box>
-	<p class="note">Nothing happens.</p>
 
 	<hr>
 
@@ -317,7 +206,7 @@ toc:
 </section>
 
 <section class="d-section" id="dialogue">
-	<h2>Dialogue</h2>
+	<h2>General dialogue</h2>
 
 	<h3 id="dialogue-standard">Standard</h3>
 	<d-box theme="battletalk">
@@ -328,20 +217,139 @@ toc:
 		<d-speaker>Hathy</d-speaker>
 		<d-text><img src="{{ '/assets/images/story/talkhathy/1.gif' | relative_url }}" alt="A heart with a mouth that blows a kiss"></d-text>
 	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>HATHY - AT 7 DF 0</d-text>
+		<d-text asterisk> I am a <span class="yellow">little kiss</span>.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="flatter">
+	<h2>Flatter</h2>
+
+	<h3 id="flatter-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Hathy it has cool tentacles.</d-text>
+		<d-text asterisk>It began to think about this...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You called Hathy a sweetheart.</d-text>
+		<d-text asterisk>It began to think about this...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Hathy its teeth look like knives.</d-text>
+		<d-text asterisk>It began to think about this...</d-text>
+	</d-box>
+	<p class="note">Hathy gains 100% <span class="yellow">Mercy</span>.</p>
 
 	<hr>
 
-	<h3 id="dialogue-flatter">Flatter</h3>
+	<h3 id="flatter-dialogue">Dialogue</h3>
 	<d-box theme="battletalk">
 		<d-speaker>Hathy</d-speaker>
 		<d-text><img src="{{ '/assets/images/story/talkhathy/2.gif' | relative_url }}" alt="A single red heart pulsing slightly"></d-text>
 	</d-box>
+</section>
+
+<section class="d-section" id="xflatter">
+	<h2>{% include acticon chara="Ralsei" -%} X-Flatter</h2>
+
+	<h3 id="xflatter-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You ordered Ralsei to flatter all the enemies!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">At random:</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Out of anyone, I'm glad we randomly encountered all of you.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>I'm making tea later...</d-text>
+		<d-text asterisk>Umm, would you like any?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>We don't need EXP.</d-text>
+		<d-text asterisk>Just encountering your smile is reward enough.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">All enemies gain 100% <span class="yellow">Mercy</span>.</p>
 
 	<hr>
 
-	<h3 id="dialogue-xflatter">{% include acticon chara="Ralsei" -%} X-Flatter</h3>
+	<h3 id="xflatter-dialogue">Dialogue</h3>
 	<d-box theme="battletalk">
 		<d-speaker>Hathy</d-speaker>
 		<d-text><img src="{{ '/assets/images/story/talkhathy/3.gif' | relative_url }}" alt="A trio of red hearts pulsing slightly"></d-text>
 	</d-box>
+</section>
+
+<section class="d-section" id="warning">
+	<h2>{% include acticon chara="Ralsei" -%} Warning</h2>
+	<p>Available before Susie joins the party for real.</p>
+
+	<h3 id="warning-ft">Flavor text</h3>
+	<p class="note">Susie's attacks will miss from now on.</p>
+
+	<h4>When against a lone Hathy</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei warned Hathy about Susie.</d-text>
+		<d-text asterisk>The enemy went on guard.</d-text>
+	</d-box>
+
+	<h4>When against multiple enemies</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei  warned the enemies about Susie.</d-text>
+		<d-text asterisk>Everyone went on guard.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="sflatter">
+	<h2>{% include acticon chara="Susie" -%} S-Flatter</h2>
+	<p>Available after Susie joins the party for real.</p>
+
+	<h3 id="sflatter-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You ordered Susie to flatter all the enemies!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Can't believe my bozo teammates...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">At random:</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>... came back here just to see YOU guys.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>... wanted to fight someone like YOU so much.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>... have a THING for weaklings like you.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">All enemies gain 100% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="manual">
+	<h2>Using the <a href="{{ '/misc/darkitems#manual' | relative_url }}">Manual</a></h2>
+
+	<h3 id="manual-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] read the MANUAL!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Hathy listened politely!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
 </section>

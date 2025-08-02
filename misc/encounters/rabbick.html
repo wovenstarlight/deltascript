@@ -23,7 +23,7 @@ credits: >
 toc:
   -
     id: flavortext
-    name: Flavor text
+    name: General flavor text
     subheadings:
       -
         id: encounter
@@ -47,35 +47,31 @@ toc:
       -
         id: ft-spareable
         name: Spareable
-      -
-        name: ACTs
-        subheadings:
-          -
-            id: ft-check
-            name: Check
-          -
-            id: ft-blowon
-            name: Blow On / BreathAll
-          -
-            id: ft-warning
-            name: Warning
   -
     id: dialogue
-    name: Dialogue
+    name: General dialogue
     subheadings:
       -
         id: dialogue-standard
         name: Standard
       -
-        id: dialogue-standard
-        name: Standard
-        subheadings:
-          -
-            id: dialogue-initial
-            name: Initial
-          -
-            id: dialogue-isblown
-            name: After being cleaned
+        id: dialogue-isblown
+        name: After being cleaned
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: blowon
+        name: Blow On
+      -
+        id: breathall
+        name: BreathAll
+      -
+        id: warning
+        name: Warning
 ---
 {% comment %}
 Check for encounter instances with the following regex:
@@ -86,7 +82,7 @@ encounters 16/17/24/32; 24 is unused
 {% endcomment %}
 
 <section class="d-section" id="flavortext">
-	<h2>Flavor text</h2>
+	<h2>General flavor text</h2>
 
 	<h3 id="encounter">Initial encounter</h3>
 	<h4 id="encounter-solo">Solo</h4>
@@ -135,65 +131,12 @@ encounters 16/17/24/32; 24 is unused
 	<d-box theme="battlemenu">
 		<d-text asterisk>Rabbick is now nice and clean.</d-text>
 	</d-box>
-
-	<hr>
-
-	<h3 id="ft-check">Check</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>RABBICK - AT 8 DF 1</d-text>
-		<d-text asterisk>This dusty bunny needs a bit&  of spring cleaning.</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-blowon">Blow On / {% include acticon chara="Ralsei" -%} BreathAll</h3>
-	<h4>Upon usage</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Press [CONFIRM] repeatedly to blow air!</d-text>
-	</d-box>
-
-	<h4>First time successfully blowing on Rabbick</h4>
-	<p class="note">If enough air is blown, Rabbick gains 100% <span class="yellow">Mercy</span> and becomes clean.</p>
-
-	<h4>Second time successfully blowing on Rabbick</h4>
-	<h5>If using Blow On</h5>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Kris breathed on the Rabbick.</d-text>
-		<d-text asterisk>It blew away entirely...</d-text>
-	</d-box>
-	<p class="note">Rabbick is instantly spared.</p>
-
-	<h5>If using {% include acticon chara="Ralsei" -%} BreathAll</h5>
-	<d-box theme="battlemenu">
-		<d-text asterisk>The bunnies were blown away!</d-text>
-	</d-box>
-	<p class="note">This Rabbick and any other clean Rabbicks are instantly spared.</p>
-
-	<hr>
-
-	<h3 id="ft-warning">{% include acticon chara="Ralsei" -%} Warning</h3>
-	<p>Intended to be available when Susie is in the party, before joining the party for real. Unused as Susie has already left the party by the time Rabbicks are encountered.</p>
-	<p></p>
-	<p class="note">Susie's attacks will miss from now on.</p>
-
-	<h4>When against a lone Rabbick</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You and Ralsei warned Rabbick about Susie.</d-text>
-		<d-text asterisk>The enemy went on guard...</d-text>
-	</d-box>
-
-	<h4>When against multiple enemies</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You and Ralsei warned the enemies about Susie.</d-text>
-		<d-text asterisk>Everyone went on guard.</d-text>
-	</d-box>
 </section>
 
 <section class="d-section" id="dialogue">
-	<h2>Dialogue</h2>
+	<h2>General dialogue</h2>
 
 	<h3 id="dialogue-standard">Standard</h3>
-	<h4 id="dialogue-initial">Initial</h4>
 	<d-box theme="battletalk">
 		<d-speaker>Rabbick</d-speaker>
 		<d-text>Snitter<span class="break"></span> snatter<span class="break"></span> what's the<span class="break"></span> matter</d-text>
@@ -215,7 +158,9 @@ encounters 16/17/24/32; 24 is unused
 		<d-text>Bunnies are<span class="break"></span> the sequel<span class="break"></span> to frogs.</d-text>
 	</d-box>
 
-	<h4 id="dialogue-isblown">After being cleaned</h4>
+	<hr>
+
+	<h3 id="dialogue-isblown">After being cleaned</h3>
 	<p>The first of these has a doubled chance of showing up (2/5 instead of 1/5).</p>
 	<d-box theme="battletalk">
 		<d-speaker>Rabbick</d-speaker>
@@ -232,5 +177,69 @@ encounters 16/17/24/32; 24 is unused
 	<d-box theme="battletalk">
 		<d-speaker>Rabbick</d-speaker>
 		<d-text>A nice and<span class="break"></span> tidy girl.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+	<d-box theme="battlemenu">
+		<d-text asterisk>RABBICK - AT 8 DF 1</d-text>
+		<d-text asterisk>This dusty bunny needs a bit&  of spring cleaning.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="blowon">
+	<h2>Blow On</h2>
+
+	<h3 id="blowon1">Initial</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press [CONFIRM] repeatedly to blow air!</d-text>
+	</d-box>
+	<p class="note">If enough air is blown, Rabbick gains 100% <span class="yellow">Mercy</span> and becomes clean.</p>
+
+	<hr>
+
+	<h3 id="blowon2">Subsequent uses</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris breathed on the Rabbick.</d-text>
+		<d-text asterisk>It blew away entirely...</d-text>
+	</d-box>
+	<p class="note">Rabbick is instantly spared.</p>
+</section>
+
+<section class="d-section" id="breathall">
+	<h2>{% include acticon chara="Ralsei" -%} BreathAll</h2>
+
+	<h3 id="breathall1">Initial</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press [CONFIRM] repeatedly to blow air!</d-text>
+	</d-box>
+	<p class="note">If enough air is blown, all Rabbicks in the encounter gain 100% <span class="yellow">Mercy</span> and become clean.</p>
+
+	<hr>
+
+	<h3 id="breathall2">Subsequent uses</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The bunnies were blown away!</d-text>
+	</d-box>
+	<p class="note">All already-clean Rabbicks are instantly spared.</p>
+</section>
+
+<section class="d-section" id="warning">
+	<h2>{% include acticon chara="Ralsei" -%} Warning</h2>
+	<p>Intended to be available when Susie is in the party, before joining the party for real. Unused as Susie has already left the party by the time Rabbicks are encountered.</p>
+	<p></p>
+	<p class="note">Susie's attacks will miss from now on.</p>
+
+	<h3>When against a lone Rabbick</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei warned Rabbick about Susie.</d-text>
+		<d-text asterisk>The enemy went on guard...</d-text>
+	</d-box>
+
+	<h3>When against multiple enemies</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei warned the enemies about Susie.</d-text>
+		<d-text asterisk>Everyone went on guard.</d-text>
 	</d-box>
 </section>

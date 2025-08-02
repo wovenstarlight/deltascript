@@ -56,7 +56,7 @@ toc:
     name: Dialogue
 ---
 <section class="d-section" id="flavortext">
-	<h2>Flavor text</h2>
+	<h2>General flavor text</h2>
 
 	<h3 id="encounter">Initial encounter</h3>
 	<d-box theme="battlemenu">
@@ -67,22 +67,30 @@ toc:
 	<hr>
 
 	<h3 id="ft-standard">Standard</h3>
-	<p>Unused, as the battle is scripted to end after the first turn, with Susie's attack knocking C. Round out of the encounter without commentary even if no ACT (other than Check) is used.</p>
+	<p>Unused, as the battle is scripted to end after the first turn, with Susie's attack knocking C. Round out of the encounter without commentary even if the ACTs {% include acticon chara="Susie" -%} X-Compliment and {% include acticon chara="Ralsei" -%} Warning aren't used.</p>
 	<d-box theme="battlemenu">
 		<d-text asterisk>C.Round continues to act extremely violent.</d-text>
 	</d-box>
+</section>
 
-	<hr>
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
 
-	<h3 id="ft-check">Check</h3>
+	<p>No dialogue; C. Round does not talk.</p>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
 	<d-box theme="battlemenu">
 		<d-text asterisk>C.ROUND - AT 1 DF 0</d-text>
 		<d-text asterisk>Despite appearances, it's trying its best to defeat you.</d-text>
 	</d-box>
+</section>
 
-	<hr>
+<section class="d-section" id="xcompliment">
+	<h2>{% include acticon chara="Susie" -%} X-Compliment</h2>
 
-	<h3 id="ft-xcompliment">{% include acticon chara="Susie" -%} X-Compliment</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You ordered Susie to flatter the enemy!</d-text>
 	</d-box>
@@ -131,10 +139,11 @@ toc:
 		<d-text asterisk>(Umm, Kris, maybe I should talk to her...)</d-text>
 	</d-box>
 	<p class="note">The encounter ends here.</p>
+</section>
 
-	<hr>
+<section class="d-section" id="warning">
+	<h2>{% include acticon chara="Ralsei" -%} Warning</h2>
 
-	<h3 id="ft-warning">{% include acticon chara="Ralsei" -%} Warning</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>You warned C.Round about Susie.</d-text>
 		<d-text asterisk>It seems barely cognizant of what that means.</d-text>
@@ -198,10 +207,4 @@ toc:
 		<d-text asterisk>(M-maybe I should talk to her...)</d-text>
 	</d-box>
 	<p class="note">The encounter ends here.</p>
-</section>
-
-<section class="d-section" id="dialogue">
-	<h2>Dialogue</h2>
-
-	<p>No dialogue; C. Round does not talk.</p>
 </section>

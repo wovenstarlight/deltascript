@@ -25,7 +25,7 @@ credits: >
 toc:
   -
     id: flavortext
-    name: Flavor text
+    name: General flavor text
     subheadings:
       -
         id: encounter
@@ -33,40 +33,34 @@ toc:
       -
         id: ft-standard
         name: Standard
-      -
-        name: ACTs
-        subheadings:
-          -
-            id: ft-check
-            name: Check
-          -
-            id: warning
-            name: Warning
-          -
-            id: victory
-            name: Victory
-          -
-            id: victoryd
-            name: Victory (D)
-          -
-            id: victorys
-            name: Victory (S)
-          -
-            id: lecture
-            name: Lecture
   -
     id: dialogue
-    name: Dialogue
+    name: General dialogue
     subheadings:
       -
         id: dialogue-standard
         name: Standard
+  -
+    name: ACTs
+    subheadings:
       -
-        name: ACTs
-        subheadings:
-          -
-            id: victorys
-            name: Victory (S)
+        id: check
+        name: Check
+      -
+        id: warning
+        name: Warning
+      -
+        id: victory
+        name: Victory
+      -
+        id: victoryd
+        name: Victory (D)
+      -
+        id: victorys
+        name: Victory (S)
+      -
+        id: lecture
+        name: Lecture
 ---
 {% comment %}
 Check for encounter instances with the following regex:
@@ -77,7 +71,7 @@ Then check that the obj whose file it appears in actually exists in the canonica
 {% endcomment %}
 
 <section class="d-section" id="flavortext">
-	<h2>Flavor text</h2>
+	<h2>General flavor text</h2>
 
 	<h3 id="encounter">Initial encounter</h3>
 	<p>Appears with another placeholder enemy.</p>
@@ -101,58 +95,10 @@ Then check that the obj whose file it appears in actually exists in the canonica
 	<d-box theme="battlemenu">
 		<d-text asterisk>Placeholder Message D.</d-text>
 	</d-box>
-
-	<hr>
-
-	<h3 id="ft-check">Check</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>ENEMY - AT 1 DF 1</d-text>
-		<d-text asterisk>I am your adversary.</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-warning">Warning</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You warned the enemy.</d-text>
-		<d-text asterisk>It guarded from Susie's attack.</d-text>
-	</d-box>
-	<p class="note">Susie's attacks will miss from now on.</p>
-
-	<hr>
-
-	<h3 id="ft-victory">Victory</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Its body was filled with a kind feeling.</d-text>
-	</d-box>
-	<p class="note">The placeholder enemy gains 100% <span class="yellow">Mercy</span>.</p>
-
-	<hr>
-
-	<h3 id="ft-victoryd">Victory (D)</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Its body will result in a kind feeling at the end of the combat.</d-text>
-	</d-box>
-	<p class="note">The placeholder enemy gains 100% <span class="yellow">Mercy</span> after its turn is over.</p>
-
-	<hr>
-
-	<h3 id="ft-victorys">Victory (S)</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Its body will result in a speech after attack.</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-lecture">Lecture</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Its body became tired.</d-text>
-	</d-box>
-	<p class="note">The placeholder enemy becomes <span class="blue">Tired</span>.</p>
 </section>
 
 <section class="d-section" id="dialogue">
-	<h2>Dialogue</h2>
+	<h2>General dialogue</h2>
 
 	<h3 id="dialogue-standard">Standard</h3>
 	<d-box theme="battletalk">
@@ -182,14 +128,73 @@ Then check that the obj whose file it appears in actually exists in the canonica
 		<d-text>WlyWlyWlyWly</d-text>
 		<d-text>WlyWlyWlyWly</d-text>
 	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>ENEMY - AT 1 DF 1</d-text>
+		<d-text asterisk>I am your adversary.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="warning">
+	<h2>Warning</h2>
+
+	<h3 id="warning-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You warned the enemy.</d-text>
+		<d-text asterisk>It guarded from Susie's attack.</d-text>
+	</d-box>
+	<p class="note">Susie's attacks will miss from now on.</p>
+</section>
+
+<section class="d-section" id="victory">
+	<h2>Victory</h2>
+
+	<h3 id="victory-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Its body was filled with a kind feeling.</d-text>
+	</d-box>
+	<p class="note">The placeholder enemy gains 100% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="victoryd">
+	<h2>Victory (D)</h2>
+
+	<h3 id="victoryd-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Its body will result in a kind feeling at the end of the combat.</d-text>
+	</d-box>
+	<p class="note">The placeholder enemy gains 100% <span class="yellow">Mercy</span> after its turn is over.</p>
+</section>
+
+<section class="d-section" id="victorys">
+	<h2>Victory (S)</h2>
+
+	<h3 id="victorys-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Its body will result in a speech after attack.</d-text>
+	</d-box>
 
 	<hr>
 
-	<h3 id="dialogue-victorys">Victory (S)</h3>
+	<h3 id="victorys-dialogue">Dialogue</h3>
 	<p class="note">Plays after the enemy uses its turn, instead of before.</p>
 	<d-box theme="battletalk">
 		<d-speaker>Enemy</d-speaker>
 		<d-text>A special<span class="break"></span> scenario<span class="break"></span> occurred!!</d-text>
 	</d-box>
 	<p class="note">The placeholder enemy leaves the encounter.</p>
+</section>
+
+<section class="d-section" id="lecture">
+	<h2>Lecture</h2>
+
+	<h3 id="lecture-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Its body became tired.</d-text>
+	</d-box>
+	<p class="note">The placeholder enemy becomes <span class="blue">Tired</span>.</p>
 </section>

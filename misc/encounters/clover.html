@@ -45,7 +45,7 @@ toc:
         name: Unused variant
   -
     id: flavortext
-    name: Flavor text
+    name: General flavor text
     subheadings:
       -
         id: encounter
@@ -72,64 +72,43 @@ toc:
       -
         id: ft-betray
         name: '"Betray"'
-      -
-        name: ACTs
-        subheadings:
-          -
-            id: ft-check
-            name: Check
-          -
-            id: ft-talkbday
-            name: TalkBday
-          -
-            id: ft-talkboys
-            name: TalkBoys
-          -
-            id: ft-talksports
-            name: TalkSports
-          -
-            id: ft-talkanimals
-            name: TalkAnimals
-          -
-            id: ft-talktrees
-            name: TalkTrees
-      -
-        name: Items
-        subheadings:
-          -
-            id: ft-manual
-            name: Using the Manual
   -
     id: dialogue
-    name: Dialogue
+    name: General dialogue
     subheadings:
       -
         id: dialogue-standard
         name: Standard
       -
-        name: ACTs
-        subheadings:
-          -
-            id: dialogue-actnamehere
-            name: TalkBoys
-          -
-            id: dialogue-actnamehere
-            name: TalkSports
-          -
-            id: dialogue-actnamehere
-            name: TalkAnimals
-          -
-            id: dialogue-actnamehere
-            name: TalkTrees
-      -
-        name: Items
-        subheadings:
-          -
-            id: dialogue-manual
-            name: Using the Manual
-      -
         id: dialogue-fallback
         name: Fallback text
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: talkbday
+        name: TalkBday
+      -
+        id: talkboys
+        name: TalkBoys
+      -
+        id: talksports
+        name: TalkSports
+      -
+        id: talkanimals
+        name: TalkAnimals
+      -
+        id: talktrees
+        name: TalkTrees
+  -
+    name: Items
+    subheadings:
+      -
+        id: manual
+        name: Using the Manual
 ---
 {% comment %}
 Check for encounter instances with the following regex:
@@ -179,7 +158,7 @@ Then check that the obj whose file it appears in actually exists in the canonica
 </section>
 
 <section class="d-section" id="flavortext">
-	<h2>Flavor text</h2>
+	<h2>General flavor text</h2>
 
 	<h3 id="encounter">Initial encounter</h3>
 	<h4 id="encounter-solo">Solo</h4>
@@ -245,116 +224,10 @@ Then check that the obj whose file it appears in actually exists in the canonica
 	<d-box theme="battlemenu">
 		<d-text asterisk>Clover's harmony was shattered by violence.</d-text>
 	</d-box>
-
-	<hr>
-
-	<h3 id="ft-check">Check</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>CLOVER - AT 8 DF 2</d-text>
-		<d-text asterisk>Two heads are better than one!</d-text>
-		<d-text asterisk>Three... maybe not.</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-talkbday">{% include acticon chara="Ralsei" -%} TalkBday</h3>
-	<d-box theme="battlemenu">
-		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
-		<d-text asterisk>Ummm, what would you like for your birthday?</d-text>
-	</d-box>
-	<div class="boxgroup">
-		<d-box theme="battletalk">
-			<d-text asterisk="nice">Let's just<span class="break"></span> have a nice<span class="break"></span> chat~</d-text>
-		</d-box>
-		<d-box theme="battletalk">
-			<d-text asterisk="mean">You IDIOT!<span class="break"></span> Ask for a<span class="break"></span> GIFT!!!</d-text>
-		</d-box>
-		<d-box theme="battletalk">
-			<d-text asterisk="shy">(Just<span class="break"></span> discuss<span class="break"></span> our likes.)</d-text>
-		</d-box>
-	</div>
-	<d-box theme="battlemenu">
-		<d-text asterisk>(Seems like you should talk about something else...)</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-talkboys">{% include acticon chara="Ralsei" -%} TalkBoys</h3>
-	<d-box theme="battlemenu">
-		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
-		<d-text asterisk>Ummm... What kind of "Boys" do you like?</d-text>
-	</d-box>
-	<div class="boxgroup">
-		<d-box theme="battletalk">
-			<d-text asterisk="nice">Cute ones!<span class="break"></span> Hmm hmm~<span class="break"></span> </d-text>
-		</d-box>
-		<d-box theme="battletalk">
-			<d-text asterisk="mean">NICE ONES,<span class="break"></span> like I AM!</d-text>
-		</d-box>
-		<d-box theme="battletalk">
-			<d-text asterisk="shy">None...<span class="break"></span> Um, I mean,<span class="break"></span> all.</d-text>
-		</d-box>
-	</div>
-	<d-box theme="battlemenu">
-		<d-text asterisk>(Seems like Clover enjoyed talking about that...)</d-text>
-	</d-box>
-	<p class="note">First time only: Clover gains 40% <span class="yellow">Mercy</span>.</p>
-
-	<hr>
-
-	<h3 id="ft-talksports">{% include acticon chara="Ralsei" -%} TalkSports</h3>
-	<d-box theme="battlemenu">
-		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
-		<d-text asterisk>Do you like, um... Sports?</d-text>
-	</d-box>
-	<div class="boxgroup">
-		<d-box theme="battletalk">
-			<d-text asterisk="nice">I wanna<span class="break"></span> eat a<span class="break"></span> football.</d-text>
-		</d-box>
-		<d-box theme="battletalk">
-			<d-text asterisk="mean">Sports!<span class="break"></span> My favorite<span class="break"></span> food!</d-text>
-		</d-box>
-		<d-box theme="battletalk">
-			<d-text asterisk="shy">Oh!<span class="break"></span> I love you<span class="break"></span> two!</d-text>
-		</d-box>
-	</div>
-	<d-box theme="battlemenu">
-		<d-text asterisk>(Seems like Clover enjoyed talking about that...)</d-text>
-	</d-box>
-	<p class="note">First time only: Clover gains 40% <span class="yellow">Mercy</span>.</p>
-
-	<hr>
-
-	<h3 id="ft-talkanimals">TalkAnimals</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You brought up the topic of Animals.</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Clover didn't seem to care...</d-text>
-	</d-box>
-	
-	<hr>
-	
-	<h3 id="ft-talktrees">TalkTrees</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You brought up the topic of Trees. Clover seemed happy...</d-text>
-	</d-box>
-	<p class="note">First time only: Clover gains 40% <span class="yellow">Mercy</span>.</p>
-
-	<hr>
-
-	<h3 id="ft-manual">Using the <a href="{{ '/misc/darkitems#manual' | relative_url }}">Manual</a></h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>[Character] read the MANUAL!</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Clover became sentimental!</d-text>
-	</d-box>
-	<p class="note">Clover gains 50% <span class="yellow">Mercy</span>.</p>
 </section>
 
 <section class="d-section" id="dialogue">
-	<h2>Dialogue</h2>
+	<h2>General dialogue</h2>
 
 	<h3 id="dialogue-standard">Standard</h3>
 	<div class="boxgroup">
@@ -404,81 +277,6 @@ Then check that the obj whose file it appears in actually exists in the canonica
 
 	<hr>
 
-	<h3 id="dialogue-actnamehere">TalkBoys</h3>
-	<div class="boxgroup">
-		<d-box theme="battletalk">
-			<d-text asterisk="nice">Glasses<span class="break"></span> are cute,<span class="break"></span> I think...</d-text>
-		</d-box>
-		<d-box theme="battletalk">
-			<d-text asterisk="mean">Fluffy!<span class="break"></span> Glasses!<span class="break"></span> That's it!</d-text>
-		</d-box>
-		<d-box theme="battletalk">
-			<d-text asterisk="shy">HIM???<span class="break"></span> ... err,<span class="break"></span> sure.</d-text>
-		</d-box>
-	</div>
-
-	<hr>
-
-	<h3 id="dialogue-actnamehere">TalkSports</h3>
-	<div class="boxgroup">
-		<d-box theme="battletalk">
-			<d-text asterisk="nice">Spaghetti<span class="break"></span> and tennis<span class="break"></span> balls.</d-text>
-		</d-box>
-		<d-box theme="battletalk">
-			<d-text asterisk="mean">That's<span class="break"></span> GENIUS!</d-text>
-		</d-box>
-		<d-box theme="battletalk">
-			<d-text asterisk="shy">We really<span class="break"></span> agree<span class="break"></span> on it.</d-text>
-		</d-box>
-	</div>
-
-	<hr>
-
-	<h3 id="dialogue-actnamehere">TalkAnimals</h3>
-	<div class="boxgroup">
-		<d-box theme="battletalk">
-			<d-text asterisk="nice">Animals<span class="break"></span> are kind<span class="break"></span> of nasty.</d-text>
-		</d-box>
-		<d-box theme="battletalk">
-			<d-text asterisk="mean">Just AWFUL<span class="break"></span> in<span class="break"></span> concept.</d-text>
-		</d-box>
-		<d-box theme="battletalk">
-			<d-text asterisk="shy">(Never<span class="break"></span> seen one,<span class="break"></span> but...)</d-text>
-		</d-box>
-	</div>
-
-	<hr>
-
-	<h3 id="dialogue-actnamehere">TalkTrees</h3>
-	<div class="boxgroup">
-		<d-box theme="battletalk">
-			<d-text asterisk="nice">I love<span class="break"></span> the smell<span class="break"></span> of trees.</d-text>
-		</d-box>
-		<d-box theme="battletalk">
-			<d-text asterisk="mean">Oh!<span class="break"></span> Me too!</d-text>
-		</d-box>
-		<d-box theme="battletalk">
-			<d-text asterisk="shy">Pollen<span class="break"></span> makes me...<span class="break"></span> Uh, sure!</d-text>
-		</d-box>
-	</div>
-
-	<hr>
-
-	<h3 id="dialogue-manual">Using the Manual</h3>
-	<div class="boxgroup">
-		<d-box theme="battletalk">
-			<d-text asterisk="nice">Aww, he<span class="break"></span> MADE that!?<span class="break"></span> So caring!</d-text>
-		</d-box>
-		<d-box theme="battletalk">
-			<d-text asterisk="mean">It's SOOO<span class="break"></span> cute!<span class="break"></span> I want it!</d-text>
-		</d-box>
-		<d-box theme="battletalk">
-			<d-text asterisk="shy">(Isn't it<span class="break"></span> a bit...<span class="break"></span> boring?)</d-text>
-		</d-box>
-	</div>
-
-	<hr>
-
 	<h3 id="dialogue-fallback">Fallback text</h3>
 	<p>Unused.</p>
 	<div class="boxgroup">
@@ -490,6 +288,200 @@ Then check that the obj whose file it appears in actually exists in the canonica
 		</d-box>
 		<d-box theme="battletalk">
 			<d-text asterisk="shy">Smart Mouth</d-text>
+		</d-box>
+	</div>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+	<d-box theme="battlemenu">
+		<d-text asterisk>CLOVER - AT 8 DF 2</d-text>
+		<d-text asterisk>Two heads are better than one!</d-text>
+		<d-text asterisk>Three... maybe not.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="talkbday">
+	<h2>{% include acticon chara="Ralsei" -%} TalkBday</h2>
+
+	<h3 id="talkbday-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Ummm, what would you like for your birthday?</d-text>
+	</d-box>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">Let's just<span class="break"></span> have a nice<span class="break"></span> chat~</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">You IDIOT!<span class="break"></span> Ask for a<span class="break"></span> GIFT!!!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">(Just<span class="break"></span> discuss<span class="break"></span> our likes.)</d-text>
+		</d-box>
+	</div>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Seems like you should talk about something else...)</d-text>
+	</d-box>
+
+</section>
+
+<section class="d-section" id="talkboys">
+	<h2>{% include acticon chara="Ralsei" -%} TalkBoys</h2>
+
+	<h3 id="talkboys-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Ummm... What kind of "Boys" do you like?</d-text>
+	</d-box>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">Cute ones!<span class="break"></span> Hmm hmm~<span class="break"></span> </d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">NICE ONES,<span class="break"></span> like I AM!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">None...<span class="break"></span> Um, I mean,<span class="break"></span> all.</d-text>
+		</d-box>
+	</div>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Seems like Clover enjoyed talking about that...)</d-text>
+	</d-box>
+	<p class="note">First time only: Clover gains 40% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3 id="talkboys-dialogue">Dialogue</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">Glasses<span class="break"></span> are cute,<span class="break"></span> I think...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">Fluffy!<span class="break"></span> Glasses!<span class="break"></span> That's it!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">HIM???<span class="break"></span> ... err,<span class="break"></span> sure.</d-text>
+		</d-box>
+	</div>
+</section>
+
+<section class="d-section" id="talksports">
+	<h2>{% include acticon chara="Ralsei" -%} TalkSports</h2>
+
+	<h3 id="talksports-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Do you like, um... Sports?</d-text>
+	</d-box>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">I wanna<span class="break"></span> eat a<span class="break"></span> football.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">Sports!<span class="break"></span> My favorite<span class="break"></span> food!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">Oh!<span class="break"></span> I love you<span class="break"></span> two!</d-text>
+		</d-box>
+	</div>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Seems like Clover enjoyed talking about that...)</d-text>
+	</d-box>
+	<p class="note">First time only: Clover gains 40% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3 id="talksports-dialogue">Dialogue</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">Spaghetti<span class="break"></span> and tennis<span class="break"></span> balls.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">That's<span class="break"></span> GENIUS!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">We really<span class="break"></span> agree<span class="break"></span> on it.</d-text>
+		</d-box>
+	</div>
+</section>
+
+<section class="d-section" id="talkanimals">
+	<h2>TalkAnimals</h2>
+
+	<h3 id="talkanimals-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You brought up the topic of Animals.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover didn't seem to care...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="talkanimals-dialogue">Dialogue</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">Animals<span class="break"></span> are kind<span class="break"></span> of nasty.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">Just AWFUL<span class="break"></span> in<span class="break"></span> concept.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">(Never<span class="break"></span> seen one,<span class="break"></span> but...)</d-text>
+		</d-box>
+	</div>
+</section>
+
+<section class="d-section" id="talktrees">
+	<h2>TalkTrees</h2>
+
+	<h3 id="talktrees-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You brought up the topic of Trees. Clover seemed happy...</d-text>
+	</d-box>
+	<p class="note">First time only: Clover gains 40% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3 id="talktrees-dialogue">Dialogue</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">I love<span class="break"></span> the smell<span class="break"></span> of trees.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">Oh!<span class="break"></span> Me too!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">Pollen<span class="break"></span> makes me...<span class="break"></span> Uh, sure!</d-text>
+		</d-box>
+	</div>
+</section>
+
+<section class="d-section" id="manual">
+	<h2>Using the <a href="{{ '/misc/darkitems#manual' | relative_url }}">Manual</a></h2>
+
+	<h3 id="manual-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] read the MANUAL!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Clover became sentimental!</d-text>
+	</d-box>
+	<p class="note">Clover gains 50% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3 id="manual-dialogue">Dialogue</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-text asterisk="nice">Aww, he<span class="break"></span> MADE that!?<span class="break"></span> So caring!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="mean">It's SOOO<span class="break"></span> cute!<span class="break"></span> I want it!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-text asterisk="shy">(Isn't it<span class="break"></span> a bit...<span class="break"></span> boring?)</d-text>
 		</d-box>
 	</div>
 </section>

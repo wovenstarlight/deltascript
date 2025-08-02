@@ -23,7 +23,7 @@ credits: >
 toc:
   -
     id: flavortext
-    name: Flavor text
+    name: General flavor text
     subheadings:
       -
         id: encounter
@@ -47,31 +47,31 @@ toc:
       -
         id: ft-spareable
         name: Spareable
-      -
-        name: ACTs
-        subheadings:
-          -
-            id: ft-check
-            name: Check
-          -
-            id: ft-actnamehere
-            name: Act_name_here
-          -
-            id: ft-itemnamehere
-            name: Act_name_here
   -
     id: dialogue
-    name: Dialogue
+    name: General dialogue
     subheadings:
       -
         id: dialogue-standard
         name: Standard
       -
-        name: ACTs
-        subheadings:
-          -
-            id: dialogue-actnamehere
-            name: Act_name_here
+        id: dialogue-specialcondition
+        name: Special_condition
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: actnamehere
+        name: Act_name_here
+  -
+    name: Items
+    subheadings:
+      -
+        id: itemnamehere
+        name: Using Item_name_here
 ---
 {% comment %}
 Check for encounter instances with the following regex:
@@ -82,7 +82,7 @@ Then check that the obj whose file it appears in actually exists in the canonica
 {% endcomment %}
 
 <section class="d-section" id="flavortext">
-	<h2>Flavor text</h2>
+	<h2>General flavor text</h2>
 
 	<h3 id="encounter">Initial encounter</h3>
 	<h4 id="encounter-solo">Solo</h4>
@@ -122,33 +122,10 @@ Then check that the obj whose file it appears in actually exists in the canonica
 	<d-box theme="battlemenu">
 		<d-text asterisk>TODO</d-text>
 	</d-box>
-
-	<hr>
-
-	<h3 id="ft-check">Check</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>TODO</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-actnamehere">Act_name_here</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>TODO</d-text>
-	</d-box>
-	<p class="note">Name_goes_here gains 100% <span class="yellow">Mercy</span> / becomes <span class="blue">Tired</span> / is affected otherwise.</p>
-
-	<hr>
-
-	<h3 id="ft-itemnamehere">Using Item_name_here</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>TODO</d-text>
-	</d-box>
-	<p class="note">Effect occurs.</p>
 </section>
 
 <section class="d-section" id="dialogue">
-	<h2>Dialogue</h2>
+	<h2>General dialogue</h2>
 
 	<h3 id="dialogue-standard">Standard</h3>
 	<d-box theme="battletalk">
@@ -158,7 +135,51 @@ Then check that the obj whose file it appears in actually exists in the canonica
 
 	<hr>
 
-	<h3 id="dialogue-actnamehere">Act_name_here</h3>
+	<h3 id="dialogue-specialcondition">Special_condition</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Name_goes_here</d-speaker>
+		<d-text>TODO</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>TODO</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="actnamehere">
+	<h2>Act_name_here</h2>
+
+	<h3 id="actnamehere-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TODO</d-text>
+	</d-box>
+	<p class="note">Name_goes_here gains 100% <span class="yellow">Mercy</span> / becomes <span class="blue">Tired</span> / is affected otherwise.</p>
+
+	<hr>
+
+	<h3 id="actnamehere-dialogue">Dialogue</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Name_goes_here</d-speaker>
+		<d-text>TODO</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="itemnamehere">
+	<h2>Using Item_name_here</h2>
+
+	<h3 id="itemnamehere-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TODO</d-text>
+	</d-box>
+	<p class="note">Name_goes_here gains 100% <span class="yellow">Mercy</span> / becomes <span class="blue">Tired</span> / is affected otherwise.</p>
+
+	<hr>
+
+	<h3 id="itemnamehere-dialogue">Dialogue</h3>
 	<d-box theme="battletalk">
 		<d-speaker>Name_goes_here</d-speaker>
 		<d-text>TODO</d-text>

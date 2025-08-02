@@ -30,7 +30,7 @@ see_also:
 toc:
   -
     id: flavortext
-    name: Flavor text
+    name: General flavor text
     subheadings:
       -
         id: encounter
@@ -38,39 +38,33 @@ toc:
       -
         id: ft-standard
         name: Standard
-      -
-        name: ACTs
-        subheadings:
-          -
-            id: ft-check
-            name: Check
-          -
-            id: ft-warning
-            name: Warning
-          -
-            id: ft-compliment
-            name: Compliment
   -
     id: dialogue
-    name: Dialogue
+    name: General dialogue
     subheadings:
       -
         id: dialogue-standard
         name: Standard
+  -
+    name: ACTs
+    subheadings:
       -
-        name: ACTs
-        subheadings:
-          -
-            id: dialogue-compliment
-            name: Compliment
+        id: check
+        name: Check
       -
-        id: dialogue-end
-        name: End of fight
+        id: warning
+        name: Warning
+      -
+        id: compliment
+        name: Compliment
+  -
+    id: end
+    name: End of fight
 ---
 {% comment %} global.encounterno = 2 {% endcomment %}
 
 <section class="d-section" id="flavortext">
-	<h2>Flavor text</h2>
+	<h2>General flavor text</h2>
 
 	<h3 id="encounter">Initial encounter</h3>
 	<d-box theme="battlemenu">
@@ -101,75 +95,10 @@ toc:
 		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
 		<d-text asterisk>Dunno how I got an ax but, like, that's cool.</d-text>
 	</d-box>
-
-	<hr>
-
-	<h3 id="ft-check">Check</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>LANCER - AT 7 DF 1</d-text>
-		<d-text asterisk>Not to call a spade a spade, but he's a spade.</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Not old enough to ride a motorcycle, so he set his bike on fire.</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-warning">Warning</h3>
-	<h4>First time</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You tell Lancer to watch out for Susie's attack.</d-text>
-		<d-text asterisk>He readies himself.</d-text>
-	</d-box>
-	<p class="note">Susie's attacks will miss from now on.</p>
-
-	<h4>Subsequent times</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Lancer laughs at the idea he would need your help!</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-compliment">Compliment</h3>
-	<h4>First time</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You tell Lancer you can't tell the difference between his clothes and his body.</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-text asterisk>He seems flattered...</d-text>
-		<d-text asterisk>His ATTACK POWER went down!</d-text>
-	</d-box>
-	<p class="note">Lancer gains 20% <span class="yellow">Mercy</span> and his attack reduces by 1, resulting in a total of 4.</p>
-
-	<h4>Second time</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You try to compliment LANCER again...</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-text asterisk>But he sees it as insincere.</d-text>
-		<d-text asterisk>His ATTACK POWER goes back up!</d-text>
-	</d-box>
-	<p class="note">Lancer gains 20% <span class="yellow">Mercy</span> and his attack increases by 1, going back to a total of 5.</p>
-
-	<h4>Third time</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You compliment LANCER.</d-text>
-		<d-text asterisk>He gets confused as to your sincerity.</d-text>
-	</d-box>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Instead of going up or down, his ATTACK power goes sideways...?</d-text>
-	</d-box>
-	<p class="note">Lancer gains 20% <span class="yellow">Mercy</span>.</p>
-
-	<h4>Subsequent times</h4>
-	<d-box theme="battlemenu">
-		<d-text asterisk>You say some kind words.</d-text>
-		<d-text asterisk>Lancer absorbs them into his skin.</d-text>
-	</d-box>
 </section>
 
 <section class="d-section" id="dialogue">
-	<h2>Dialogue</h2>
+	<h2>General dialogue</h2>
 
 	<h3 id="dialogue-standard">Standard</h3>
 	<h4>First turn</h4>
@@ -189,26 +118,94 @@ toc:
 		<d-text>So what are<span class="break"></span> you guys doing<span class="break"></span> after this???</d-text>
 	</d-box>
 	<h4>Fourth turn</h4>
-	<p>The encounter ends by the end of turn 4 at the latest; otherwise, this dialogue would've played on subsequent turns as well.</p>
+	<p>The encounter <a href="#end">ends</a> after turn 4 at the latest; otherwise, this dialogue would've played on subsequent turns as well.</p>
 	<d-box theme="battletalk">
 		<d-speaker>Lancer</d-speaker>
 		<d-text>Hohoho!!!<span class="break"></span> I'm the bad<span class="break"></span> guy!</d-text>
 	</d-box>
+</section>
 
-	<hr>
+<section class="d-section" id="check">
+	<h2>Check</h2>
+	<d-box theme="battlemenu">
+		<d-text asterisk>LANCER - AT 7 DF 1</d-text>
+		<d-text asterisk>Not to call a spade a spade, but he's a spade.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Not old enough to ride a motorcycle, so he set his bike on fire.</d-text>
+	</d-box>
+</section>
 
-	<h3 id="dialogue-compliment">Compliment</h3>
-	<h4>First time</h4>
+<section class="d-section" id="warning">
+	<h2>Warning</h2>
+
+	<h3>Flavor text</h3>
+	<h4 id="warning1">First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You tell Lancer to watch out for Susie's attack.</d-text>
+		<d-text asterisk>He readies himself.</d-text>
+	</d-box>
+	<p class="note">Susie's attacks will miss from now on.</p>
+
+	<h4 id="warning2">Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Lancer laughs at the idea he would need your help!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="compliment">
+	<h2>Compliment</h2>
+
+	<h3 id="compliment1">First time</h3>
+	<h4>Flavor text</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You tell Lancer you can't tell the difference between his clothes and his body.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>He seems flattered...</d-text>
+		<d-text asterisk>His ATTACK POWER went down!</d-text>
+	</d-box>
+	<p class="note">Lancer gains 20% <span class="yellow">Mercy</span> and his attack reduces by 1, resulting in a total of 4.</p>
+
+	<h4>Dialogue</h4>
 	<d-box theme="battletalk">
 		<d-speaker>Lancer</d-speaker>
 		<d-text>Oh! You make<span class="break"></span> my feelings<span class="break"></span> do wheelies!<span class="break"></span> Sweet wheelys</d-text>
 	</d-box>
-	<h4>Second time</h4>
+
+	<hr>
+
+	<h3 id="compliment2">Second time</h3>
+	<h4>Flavor text</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You try to compliment LANCER again...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But he sees it as insincere.</d-text>
+		<d-text asterisk>His ATTACK POWER goes back up!</d-text>
+	</d-box>
+	<p class="note">Lancer gains 20% <span class="yellow">Mercy</span> and his attack increases by 1, going back to a total of 5.</p>
+
+	<h4>Dialogue</h4>
 	<d-box theme="battletalk">
 		<d-speaker>Lancer</d-speaker>
 		<d-text>Did you not<span class="break"></span> realize I can<span class="break"></span> mask my self-<span class="break"></span>esteem levels?</d-text>
 	</d-box>
-	<h4>Third time</h4>
+
+	<hr>
+
+	<h3 id="compliment3">Third time</h3>
+	<h4>Flavor text</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You compliment LANCER.</d-text>
+		<d-text asterisk>He gets confused as to your sincerity.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Instead of going up or down, his ATTACK power goes sideways...?</d-text>
+	</d-box>
+	<p class="note">Lancer gains 20% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Dialogue</h4>
 	<d-box theme="battletalk">
 		<d-speaker>Lancer</d-speaker>
 		<d-text>Stop!! My<span class="break"></span> personality's<span class="break"></span> getting too<span class="break"></span> deep!!!</d-text>
@@ -216,7 +213,15 @@ toc:
 
 	<hr>
 
-	<h3 id="dialogue-end">End of fight</h3>
+	<h3 id="compliment4">Subsequent times</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You say some kind words.</d-text>
+		<d-text asterisk>Lancer absorbs them into his skin.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of fight</h2>
 	<d-box theme="battletalk">
 		<d-speaker>Lancer</d-speaker>
 		<d-text>Wait!<span class="break"></span> Wait a second!</d-text>
@@ -245,4 +250,6 @@ toc:
 		<d-speaker>Lancer</d-speaker>
 		<d-text>I gotta get<span class="break"></span> home before<span class="break"></span> dinner!!!</d-text>
 	</d-box>
+
+	<p class="note">The encounter ends here.</p>
 </section>
