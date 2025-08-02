@@ -1,6 +1,28 @@
 <li>
 	{% if include.item.id %}<a href="#{{ include.item.id }}">{% endif %}
-	{{- include.item.name -}}
+
+	{%- if include.item.icon_replace_mode -%}
+		{%- capture icons -%}
+			{%- for character in include.item.act_icon -%}
+				{% include acticon chara=character -%}
+			{%- unless forloop.last -%}
+				SPLITTER
+			{%- endunless -%}
+			{%- endfor -%}
+		{%- endcapture -%}
+
+		{%- assign icons = icons | split: "SPLITTER" -%}
+		{%- assign namestring = include.item.name | split: "ACTICON " -%}
+
+		{%- for part in namestring %}{{ part }}{{ icons[forloop.index0] | default: "" }}{% endfor -%}
+		{%- if namestring.size < icons.size %}{{ icons | slice: namestring.size }}{% endif -%}
+	{%- else -%}
+		{%- for character in include.item.act_icon -%}
+			{% include acticon chara=character -%}
+		{%- endfor -%}
+		{{- include.item.name -}}
+	{%- endif -%}
+
 	{% if include.item.id %}</a>{% endif %}
 	{%- if include.item.subheadings %}
 	<ol>
