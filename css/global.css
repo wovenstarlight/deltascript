@@ -49,9 +49,9 @@
 	--lightblue: #00aeff;
 	--pink: #ff80ff;
 	--lightgreen: #80ff80;
+	--lightyellow: #ffff80;
 	/* Custom */
 	--gray: #aaa;
-	--lightyellow: #ffff80;
 	/* Character colors, picked off their Dark World sprites */
 	--kris: #75fbed;
 	--susie: #f883d7;
@@ -219,6 +219,7 @@ hr {
 	--kris: var(--lightblue);
 	--susie: var(--pink);
 	--ralsei: var(--lightgreen);
+	--noelle: var(--lightyellow);
 }
 /* #endregion */
 .text-center { text-align: center }
