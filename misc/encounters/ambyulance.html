@@ -1,0 +1,340 @@
+---
+title: Ambyu-Lance encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Ambyu-Lance.</p>
+
+sources:
+  -
+    name: gml_Object_obj_omawaroid_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_battlecontroller_Create_0
+    chapters: [2]
+    note: Ultimate Heal prompt's sprite
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /misc/encounters/ch2allstars
+    name: Ch2 All Stars (featuring Ambyu-Lance)
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-ambyulance
+            name: With 1 or 2 other Ambyu-Lances
+          -
+            id: encounter-susie
+            name: First time after reuniting with Susie and Ralsei
+          -
+            id: encounter-virovirokun
+            name: With Virovirokun
+          -
+            id: encounter-poppup
+            name: With Poppup
+      -
+        id: ft-standard
+        name: Standard
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-spareable
+        name: Spareable
+      -
+        id: dialogue-virovirokun
+        name: Encountered with Virovirokun
+      -
+        id: dialogue-ultimateheal
+        name: After Susie uses Ultimate Heal
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: avoid
+        name: Avoid
+      -
+        id: gethit
+        name: GetHit
+      -
+        id: hospitality
+        name: Hospitality
+      -
+        id: saction
+        name: S-Action
+      -
+        id: raction
+        name: R-Action
+      -
+        id: naction
+        name: N-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(global\.encounterno = |myencounter = |scr_encountersetup\()(50|68|69|77|85|97)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ambyu-Lance beeps towards you!</d-text>
+	</d-box>
+
+	<h4 id="encounter-ambyulance">With 1 or 2 other Ambyu-Lances</h4>
+	<h5 id="encounter-susie">First time after reuniting with Susie and Ralsei</h5>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Hey Kris, lemme show you my ultimate healing!</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ambyu-Lances beeped towards you!</d-text>
+	</d-box>
+
+	<h4 id="encounter-virovirokun">With Virovirokun</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Virovirokun and Ambyu-lance are fighting each other!</d-text>
+	</d-box>
+
+	<h4 id="encounter-poppup">With Poppup</h4>
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ambyu-Lance and its pet appeared!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ambyu-Lance is sucking up coffee out of a tall glass.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ambyu-Lance puts a clown nose on to make you comfortable.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ambyu-Lance is comparing the battle to a dentist visit.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ambyu-Lance is making siren noises with its mouth.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like isopropyl.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Ambyu-Lance</d-speaker>
+		<d-text>You'll need TWO<span class="break"></span> apples to stop ME!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Ambyu-Lance</d-speaker>
+		<d-text>Wee-woo-wee-woo!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Ambyu-Lance</d-speaker>
+		<d-text>Did you take your<span class="break"></span> bullets today?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Ambyu-Lance</d-speaker>
+		<d-text>Where there's a wee,<span class="break"></span> there's a woo.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-spareable">Spareable</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Ambyu-Lance</d-speaker>
+		<d-text>All in a day's<span class="break"></span> work, wee-woo.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-virovirokun">Encountered with Virovirokun</h3>
+	<h4>First turn</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Ambyu-Lance</d-speaker>
+		<d-text>Hey! Virus!<span class="break"></span> You've gotta pay!</d-text>
+	</d-box>
+
+	<h4>After Virovirokun is defeated</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Ambyu-Lance</d-speaker>
+		<d-text>You showed that virus,<span class="break"></span>  wee-woo!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Ambyu-Lance</d-speaker>
+		<d-text>Have some<span class="break"></span> free bullets!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-ultimateheal">After Susie uses Ultimate Heal</h3>
+	<h4>First/third Ambyu-Lances in the encounter</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Ambyu-Lance</d-speaker>
+		<d-text>(That's the worst<span class="break"></span> healing I've seen)</d-text>
+	</d-box>
+
+	<h4>Second Ambyu-Lance in the encounter</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Ambyu-Lance</d-speaker>
+		<d-text>(Is she charging<span class="break"></span> for that?)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>AMBYU-LANCE - If it doesn't find an accident, it'll make one!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="avoid">
+	<h2>{% include acticon chara="Susie" -%} Avoid</h2>
+
+	<h3 id="avoid-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>Ambulance? Hell no. Like doctors even GET me!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Susie told you to <span class="yellow">avoid getting hit</span> by the ambulances!)</d-text>
+	</d-box>
+	<p class="note">All Ambyu-Lances in the encounter gain 100% <span class="yellow">Mercy</span> if you successfully avoid the ambulances and 50% <span class="yellow">Mercy</span> if you get hit.</p>
+</section>
+
+<section class="d-section" id="gethit">
+	<h2>{% include acticon chara="Ralsei" -%} GetHit</h2>
+
+	<h3 id="gethit-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+		<d-text asterisk>We'll use your service, friends!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Ralsei encouraged you to <span class="yellow">get hit</span> by the ambulances!)</d-text>
+	</d-box>
+	<p class="note">All Ambyu-Lances in the encounter gain 100% <span class="yellow">Mercy</span> if you successfully get hit by the ambulances.</p>
+</section>
+
+<section class="d-section" id="hospitality">
+	<h2>{% include acticon chara="Noelle" -%} Hospitality</h2>
+
+	<h3 id="hospitality-ft">Flavor text</h3>
+	<p class="note">All Ambyu-Lances in the encounter gain 100% <span class="yellow">Mercy</span>.</p>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle acted warmly towards Ambyu-Lance!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Needles aren't scary... medicine's important, you know?</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle muttered absentmindedly about hospital tools!</d-text>
+	</d-box>
+
+	<h4>On Weird Route</h4>
+	<p>After getting the <a href="{{ '/misc/equipment#freezering' | relative_url }}">Freeze Ring</a> and passing the forcefield. Overrides the above two sections' flavor text.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle mutters to herself about saws and needles.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="hospitality">Dialogue</h3>
+	<p>First time only; subsequent times use <a href="#dialogue-standard">standard dialogue</a>.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Ambyu-Lance</d-speaker>
+		<d-text>This girl is so sweet...</d-text>
+		<d-text>Let's give her free bullets!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie lies about how often she brushes and flosses!</d-text>
+	</d-box>
+	<p class="note">Ambyu-Lance gains 50% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Shortened version</h4>
+	<p>Triggers when used in the same turn as another X-Action. Displayed in a single dialogue box with the other X-Actions' flavor text, in the order Susie > Ralsei > Noelle.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie lies about her health!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei washes his hands for 60 seconds!</d-text>
+	</d-box>
+	<p class="note">Ambyu-Lance gains 50% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Shortened version</h4>
+	<p>Triggers when used in the same turn as another X-Action. Displayed in a single dialogue box with the other X-Actions' flavor text, in the order Susie > Ralsei > Noelle.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei washes his hands!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="naction">
+	<h2 class="noelle act">N-Action</h2>
+
+	<h3 id="naction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle takes on and off her nurse hat really fast!</d-text>
+	</d-box>
+	<p class="note">Ambyu-Lance gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
