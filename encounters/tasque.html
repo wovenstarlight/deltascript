@@ -1,0 +1,341 @@
+---
+title: Tasque encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Tasque.</p>
+
+sources:
+  -
+    name: gml_Object_obj_tasque_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-tasquemanager
+            name: With Tasque Manager and another Tasque
+          -
+            id: encounter-werewirevirovirokun
+            name: With Werewire and Virovirokun
+          -
+            id: encounter-virovirokuns
+            name: With 2 Virovirokuns
+          -
+            id: encounter-tasque
+            name: With 1 or 2 other Tasques
+          -
+            id: encounter-poppup
+            name: With Poppup
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: petting
+        name: Petting
+      -
+        id: roar
+        act_icon: Susie
+        name: Roar
+      -
+        id: softvoice
+        act_icon: Ralsei
+        name: SoftVoice
+      -
+        id: pettingx
+        act_icon: Noelle
+        name: PettingX
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+      -
+        id: naction
+        class: noelle act
+        name: N-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(global\.encounterno = |myencounter = |scr_encountersetup\()(52|57|70|74|86|87|98)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque crossed your path!</d-text>
+	</d-box>
+
+	<h4 id="encounter-tasquemanager">With Tasque Manager and another Tasque</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque Manager blocks the way!</d-text>
+	</d-box>
+
+	<h4 id="encounter-werewirevirovirokun">With Werewire and Virovirokun</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smorgasbord 2.</d-text>
+	</d-box>
+
+	<h4 id="encounter-virovirokuns">With 2 Virovirokuns</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque and Co. drew near!</d-text>
+	</d-box>
+
+	<h4 id="encounter-tasque">With 1 or 2 other Tasques</h4>
+	<p>Unused</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasques crossed your path!</d-text>
+	</d-box>
+
+	<h4 id="encounter-poppup">With Poppup</h4>
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Animal house.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque is batting a ball of low-poly yarn.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque is meowing to be minimized.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque is meowing to be maximized.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque cleans with a sawtooth tongue.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque wags its tail in a sine wave.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like plastic cartridge.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque is beeping dangerously.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque is emitting an 8-bit purr.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Tasque</d-speaker>
+		<d-text>meowowme<span class="break"></span>owowmeow</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Tasque</d-speaker>
+		<d-text>meowowme<span class="break"></span>meowmeow</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Tasque</d-speaker>
+		<d-text>meowowme<span class="break"></span>owowowow</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Tasque</d-speaker>
+		<d-text>meowowow<span class="break"></span>meowowow</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>TASQUE - This stray cat is in need of some management.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="petting">
+	<h2>Petting</h2>
+
+	<h3 id="petting-ft">Flavor text</h3>
+	<p class="note">Tasque gains 100% <span class="yellow">Mercy</span>.</p>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You pet Tasque. It liked that.</d-text>
+	</d-box>
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris > Susie > Ralsei > Noelle.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You pet Tasque!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="petting-dialogue">Dialogue</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Tasque</d-speaker>
+		<d-text>owowowmememeowme<span class="break"></span> owmemeowowmemeow<span class="break"></span> owmeowmemeowmeow</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="roar">
+	<h2>{% include acticon chara="Susie" -%} Roar</h2>
+
+	<h3 id="roar-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie roared!! The enemies became TIRED.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time only</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Who's king of the jungle now!?</d-text>
+		<d-box>
+			<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+			<d-text asterisk>It's just a cat...</d-text>
+		</d-box>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Tasque becomes <span class="blue">Tired</span>.</p>
+</section>
+
+<section class="d-section" id="softvoice">
+	<h2>{% include acticon chara="Ralsei" -%} SoftVoice</h2>
+
+	<h3 id="softvoice-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei talked in a soft voice to the enemies!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time only</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>There, there, it's okay, little kitty...</d-text>
+		<d-box>
+			<d-sprite speaker="Susie" emotion="C"></d-sprite>
+			<d-text asterisk>Isn't that just how he normally talks?</d-text>
+		</d-box>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">All Tasques gain 100% <span class="yellow">Mercy</span>. Tasque Manager, if present, gains 5% <span class="yellow">Mercy</span>. All other enemies gain 50% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="pettingx">
+	<h2>{% include acticon chara="Noelle" -%} PettingX</h2>
+
+	<h3 id="pettingx-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Noelle pet the enemies!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time only</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Th-there, there... (It's not too different from Catti...)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">All enemies gain 100% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie yelled at Tasque to get off her lawn.</d-text>
+	</d-box>
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris > Susie > Ralsei > Noelle.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie roared like a lion!</d-text>
+	</d-box>
+	<p class="note">Tasque gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei cooed gently at Tasque!</d-text>
+	</d-box>
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris > Susie > Ralsei > Noelle.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei blinks at Tasque!</d-text>
+	</d-box>
+	<p class="note">Tasque gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="naction">
+	<h2 class="noelle act">N-Action</h2>
+
+	<h3 id="naction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle got rubbed on by Tasque!</d-text>
+	</d-box>
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris > Susie > Ralsei > Noelle.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque showed its belly to Noelle!</d-text>
+	</d-box>
+	<p class="note">Tasque gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
