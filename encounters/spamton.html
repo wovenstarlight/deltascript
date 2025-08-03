@@ -1,0 +1,563 @@
+---
+title: Spamton encounter
+
+description: >
+  <p>Flavor text and dialogue for the battle against Spamton.</p>
+
+sources:
+  -
+    name: gml_Object_obj_spamton_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /chapters/chapter2/spamton
+    name: Pre- & post-fight cutscenes
+  -
+    url: /encounters/spamtonneo
+    name: Spamton NEO encounter (normal route)
+  -
+    url: /encounters/spamtonneoweird
+    name: Spamton NEO encounter (Weird Route)
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-otherenemyname
+            name: With Other_enemy_name
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-specialcondition
+        name: Special_condition
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: actnamehere
+        name: Act_name_here
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+      -
+        id: naction
+        class: noelle act
+        name: N-Action
+  -
+    name: Items
+    subheadings:
+      -
+        id: itemnamehere
+        name: Using Item_name_here
+---
+{% comment %} global.encounterno = 60 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>DON'T YOU WANNA BE A BIG SHOT?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-turn2">Turn 2</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>THERE'S NOTHING WRONG WITH HAVING A NICE [Splurge] EVERY ONCE IN A WHILE</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-turn3">Turn 3</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>There's nothing wrong.<span class="break"></span> There's NOTHING WRONG.<span class="break"></span> THERE'S NOTHING WRONG.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Great ENEMY! SUSCRIBE NOW! </d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton mutters "1997."</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like KROMER.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>CONGRULATIONS YOU ARE THE 100th VISITOR!!! CLICK HERE TO [Die]</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton flashes an award-losing smile.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>Get Big and WIN<span class="break"></span> [W1ld Pr1zes!]</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>HELP</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Plays only once.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>[Press F1 For] HELP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-preattack">Before specific attacks</h3>
+	<p>These dialogues play only the first time each attack is used. See the <a href="{% include wikilink page='Spamton#Attacks' %}">Deltarune Wiki</a> for descriptions of the attacks.</p>
+
+	<h4 id="dialogue-wordbullets">Word Bullets</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>ENL4RGE<span class="break"></span> Yourself</d-text>
+	</d-box>
+
+	<h4 id="dialogue-moneyvacuum">Money Vacuum</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>TRANSMIT<span class="break"></span> KROMER</d-text>
+	</d-box>
+
+	<h4 id="dialogue-minitons">Minitons</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>MEET LOCAL SINGLES<span class="break"></span> STRAIGHT FROM [My]</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>SPAMTON - He wants to make a <span class="yellow">DEAL</span>, but don't give him your <span class="yellow">MONEY</span>!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="deal">
+	<h2>Deal</h2>
+	<p>Repeated use of this ACT progresses through a conversation, with Spamton offering a deal in each use. Answering correctly progresses to the next part of the conversation. Giving the wrong answer does not progress, with successive uses of Deal repeating the same part of the conversation until you answer correctly.</p>
+
+	<h3 id="deal1">Part 1</h3>
+	<hr class="hr2">
+	<h4>First read</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>HEY HEY HEY!</d-text>
+		<d-text>I'VE NEVER SEEN A<span class="break"></span> [HeartShapedObject]<span class="break"></span> LIKE THAT BEFORE!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>MY EYES ARE [[Burning]]<span class="break"></span> LIKE [[DVDs of ANY<span class="break"></span> movie at Half-pr1ce!]]</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>I HAVE A VERY SPECIL<span class="break"></span> [Deal] FOR YOU KID!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent reads</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>KID!!! IN BUSINESS<span class="break"></span> YOU NEED TO<span class="break"></span> SAY YOU'RE<span class="break"></span> INTERESTED!!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="battlemenu">
+		<d-option index="0" text="TELL ME MORE"></d-option>
+		<d-option index="1" text="NOT INTERESTED"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Correct answer. Spamton gains 20% <span class="yellow">Mercy</span>.</p>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>THAT'S THE ATTITUDE<span class="break"></span> YOU LITTLE [Slime]!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>DEALS LIKE THIS<span class="break"></span> ONLY COME ONCE IN<span class="break"></span> YOUR [[Ant-sized]]<span class="break"></span> [[Rapidly-shrinking]]<span class="break"></span> LIFE!!</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Wrong answer.</p>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>WRONG ANSWER!!!<span class="break"></span> WRONG!!! WRONG!!!<span class="break"></span> WRONG!!! TRY AGAIN!!!</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="deal2">Part 2</h3>
+	<hr class="hr2">
+	<h4>First read</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>BELIEVE IT<span class="break"></span> OR&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; !!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>I USED TO be A <span class="red">BIG<span class="break"></span> SHOT</span>. THE BIGGEST!!!<span class="break"></span> BUT NOW...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>I NEED A LITTLE<span class="break"></span> [[Genorisity]]</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent reads</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>YUM YUM I NEED<span class="break"></span> A LITTLE MORE<span class="break"></span> [Genorisity]</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="battlemenu">
+		<d-option index="0" text="GIVE MONEY"></d-option>
+		<d-option index="1" text="DON'T GIVE"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Wrong answer.</p>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>YUM YUM.<span class="break"></span> DELICIS KROMER.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>DID YOU HAVE<span class="break"></span> AN YMORE?</d-text>
+		</d-box>
+		<d-box theme="battlemenu">
+			<d-text asterisk>(You felt your KROMER being absorbed...)</d-text>
+			<d-text asterisk>(Wrong choice...?)</d-text>
+		</d-box>
+		<p class="note">If you have $25 or more, you lose $25.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Correct answer. Spamton gains 20% <span class="yellow">Mercy</span>.</p>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>THAT'S RIGHT AND I<span class="break"></span> DON'T MEAN [Money]!!!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>I'M A SALESMAN &nbsp; ,<span class="break"></span> I WAS NEVER IN IT<span class="break"></span> FOR THE MONEY!!!</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="deal3">Part 3</h3>
+	<hr class="hr2">
+	<h4>First read</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>I WAS ONLY EVER<span class="break"></span> IN IT FOR</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>THE [Freedom].</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>TO MAKE YOUR OWN<span class="break"></span> [Deals]</d-text>
+		<d-text>TO CALL YOUR OWN<span class="break"></span> [Shots]</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>AND SOMETIMES IN THE<span class="break"></span> MORNING, A LITTLE</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>[Hyperlink Blocked]</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>SOUNDS GOOD.<span class="break"></span> DOESN;T IT?KID?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>DON'T YOU W4NT TO BE<span class="break"></span> JUST LIKE YOUR OLD<span class="break"></span> PAL SPAMTON????</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>TAKE THE DE4L.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent reads</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>TAKE THE DEAL<span class="break"></span> YOU LITTLE [Sponge]</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="battlemenu">
+		<d-option index="0" text="DON'T TAKE DEAL"></d-option>
+		<d-option index="1" text="TAKE DEAL"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Wrong answer.</p>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>DEAL OR NO DEAL,<span class="break"></span> THAT'S THE TV SHOW</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>WHERE THE PEOPLE<span class="break"></span> WHO DON'T TAKE THE DEAL</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>GET FILLED WITH BULLETS<span class="break"></span> FIRED FROM THE HOST'S<span class="break"></span> MOUTH!!!</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Correct answer. Spamton gains 20% <span class="yellow">Mercy</span>.</p>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>NOW THAT'S WHAT<span class="break"></span> I'M TALKING AB04T!<span class="break"></span> YOU GOT [Guts] KID!!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>THAT's [[Discomfort<span class="break"></span> And Abdominal<span class="break"></span> Pain]] IN MY<span class="break"></span> [[Guts]]!!</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="deal4">Part 4</h3>
+	<hr class="hr2">
+	<h4>First read</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>DONT WORRY KID I<span class="break"></span> WILL GIVE YOU<span class="break"></span> [Deal Insurance]</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>ONLY FOR THE<span class="break"></span> LOW, LOW PRICE<span class="break"></span> OF 1000 KROMER.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>AN AWESOME PRICE.!<span class="break"></span> AN ABSOLUTELY<span class="break"></span> [[Terrifying]] PRICE</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>PRICES SO LOW,<span class="break"></span> EVERYONE I KNOW IS<span class="break"></span> [[Dead]]!!!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent reads</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>YUM YUM DID<span class="break"></span> YOU WANT SOME<span class="break"></span> MORE INSURANCE?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="battlemenu">
+		<d-option index="0" text="BUY INSURANCE"></d-option>
+		<d-option index="1" text="DON'T BUY"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Wrong answer.</p>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>YUM YUM.<span class="break"></span> DELICIS KROMER.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>DID YOU HAVE<span class="break"></span> AN YMORE?</d-text>
+		</d-box>
+		<d-box theme="battlemenu">
+			<d-text asterisk>(You felt your KROMER being absorbed...)</d-text>
+			<d-text asterisk>(Wrong choice...?)</d-text>
+		</d-box>
+		<p class="note">If you have $25 or more, you lose $25.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Correct answer. Spamton gains 20% <span class="yellow">Mercy</span>.</p>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>WHAT!? YOU DOn'T<span class="break"></span> HAVE ENOUGH<span class="break"></span> [Wacky Stacks]!?</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>Kid, you're [Killing]<span class="break"></span> me! HAHAHA!!<span class="break"></span> HAHAHA!!!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>PLEASE STOP [Killing]<span class="break"></span> ME I WILL GIVE<span class="break"></span> Y OU ANOTHER DEAL.</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="deal5">Part 5</h3>
+	<hr class="hr2">
+	<h4>First read</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>DON'T WORRY KIDS<span class="break"></span> I'M AN [HonestMan]</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>I JUST NEED YOUR<span class="break"></span> [Account Details] AND<span class="break"></span> THE<span class="break"></span> [Number on theB4ck]!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>THEN YOU CAN ENJ0Y<span class="break"></span> 1000 Fr3e KROmer</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent reads</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>YUM YUM DID<span class="break"></span> YOU HAVE ANY<span class="break"></span> MORE ACCOUNTS?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="battlemenu">
+		<d-option index="0" text="GIVE ACCOUNT\sACCESS"></d-option>
+		<d-option index="1" text="REFUSE"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Wrong answer.</p>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>YUM YUM GREAT<span class="break"></span> DEAL KID!!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>YOUR A BIGSHOT!!<span class="break"></span> SAVING THE WORLD!!</d-text>
+		</d-box>
+		<d-box theme="battlemenu">
+			<d-text asterisk>(You felt your KROMER being absorbed...)</d-text>
+			<d-text asterisk>(Wrong choice...?)</d-text>
+		</d-box>
+		<p class="note">If you have $25 or more, you lose $25.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Correct answer. Spamton gains 19% <span class="yellow">Mercy</span>.</p>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>WHAT!?!? YOU DON"T<span class="break"></span> NEED IT!?!?</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>THAT'S A REAL BIGSHOT<span class="break"></span> MOVE KID!!!<span class="break"></span> YOU'RE LIKE ME...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>[Desperate]</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>BUT WE KNOW WHAT<span class="break"></span> WE WANT,<span class="break"></span> DON'T WE!?</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>W1LD PR1ZES,<span class="break"></span> HOTSINGLE,<span class="break"></span> 100 CUSTOMER,<span class="break"></span> AND MOST OF ALL...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>[Hyperlink Blocked].</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>WILL YOU TAKE<span class="break"></span> THE FINAL DEAL!?</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Spamton</d-speaker>
+			<d-text>REMEMBER...<span class="break"></span> THIS IS UP TO YOU!<span class="break"></span> I WOn'T FORCE YOU.</d-text>
+		</d-box>
+		<d-choices theme="battlemenu">
+			<d-option index="0" text="NO DEAL"></d-option>
+			<d-option index="1" text="YES DEAL"></d-option>
+		</d-choices>
+		<d-option-panel index="0" theme="dark">
+			<p class="note">Wrong answer.</p>
+			<d-box theme="battletalk">
+				<d-speaker>Spamton</d-speaker>
+				<d-text>WRONG</d-text>
+			</d-box>
+			<p class="note">Spamton gets slightly wider. You are returned to the "NO DEAL/YES DEAL" choice menu.</p>
+		</d-option-panel>
+		<d-option-panel index="1" theme="dark">
+			<p class="note">Right answer. Spamton gains 100% <span class="yellow">Mercy</span>. A 2-second pause.</p>
+			<d-box theme="battletalk">
+				<d-speaker>Spamton</d-speaker>
+				<d-text>THEN A DEAL'S<span class="break"></span> A DEAL!!!</d-text>
+			</d-box>
+			<d-box theme="battletalk">
+				<d-speaker>Spamton</d-speaker>
+				<d-text>PLEASURE DOING<span class="break"></span> BUSINESS WITH<span class="break"></span> YOU KID!!!</d-text>
+			</d-box>
+			<p class="note"><a href="{{ '/chapters/chapter2/spamton#postfight-nonviolent' | relative_url }}">The encounter ends here.</a></p>
+		</d-option-panel>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="healdeal">
+	<h2>HealDeal</h2>
+
+	<h3 id="healdeal-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>DEAL & HEAL 60</d-text>
+		<d-text class="orange">50% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="healdeal-ft">Flavor text</h3>
+	<p class="note">Heals 60 HP. Otherwise, flavor text and effects are identical to the <a href="#deal">Deal ACT</a>.</p>
+</section>
