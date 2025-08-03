@@ -1,0 +1,506 @@
+---
+title: Virovirokun encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Virovirokun.</p>
+
+sources:
+  -
+    name: gml_Object_obj_diamondenemy_Step_0
+    chapters: [1]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [1]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/ch2allstars
+    name: Ch2 All Stars (featuring Virovirokun)
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-virovirokun
+            name: With another Virovirokun
+          -
+            id: encounter-ambyulance
+            name: With Ambyu-Lance
+          -
+            id: encounter-werewiretasque
+            name: With Werewire and Tasque
+          -
+            id: encounter-tasquevirovirokun
+            name: With Tasque and another Virovirokun
+          -
+            id: encounter-poppup
+            name: With Poppup
+          -
+            id: dialogue-ambyulance
+            name: Encountered with Ambyu-Lance
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired / Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-ambyulance
+        name: Encountered with Ambyu-Lance
+      -
+        id: dialogue-spareable
+        name: Spareable
+      -
+        id: dialogue-ambushed
+        name: '"Ambushed"'
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: takecare
+        name: TakeCare
+      -
+        id: takecarex-susral
+        act_icon: [Susie, Ralsei]
+        name: TakeCareX
+      -
+        id: takecarex-noelle
+        act_icon: Noelle
+        name: TakeCareX
+      -
+        id: unused-ralsei
+        act_icon: Ralsei
+        name: Unused ACT
+      -
+        id: unused-susie
+        act_icon: Susie
+        name: Unused ACT
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+      -
+        id: naction
+        class: noelle act
+        name: N-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(global\.encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(96|73|67|55|68|69|74|86|88)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Virovirokun floated in!</d-text>
+	</d-box>
+
+	<h5>First encounter overall with Noelle in the party</h5>
+	<p>Overrides the above text.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>H-huh!? What's going on!?</d-text>
+		<d-text asterisk>What are we doing!?</d-text>
+	</d-box>
+
+	<h6>Unused variant</h6>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>H-huh!? What's going on!?</d-text>
+	</d-box>
+
+	<h4 id="encounter-virovirokun">With another Virovirokun</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Virovirokun floated in!</d-text>
+	</d-box>
+
+	<h5>"Ambushed"</h5>
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>First strike!</d-text>
+	</d-box>
+
+	<h4 id="encounter-ambyulance">With Ambyu-Lance</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Virovirokun and Ambyu-lance are fighting each other!</d-text>
+	</d-box>
+
+	<h4 id="encounter-werewiretasque">With Werewire and Tasque</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smorgasbord 2.</d-text>
+	</d-box>
+
+	<h4 id="encounter-tasquevirovirokun">With Tasque and another Virovirokun</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque and Co. drew near!</d-text>
+	</d-box>
+
+	<h4 id="encounter-poppup">With Poppup</h4>
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup and Virovirokun Appeared!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Virovirokun is poking round things with a spear.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Virovirokun uses a text document as a tissue.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Virovirokun is sweating suspiciously.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Virovirokun is beeping a criminal tune.</d-text>
+	</d-box>
+	<p class="note">2% chance:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like cherry syrup.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired / Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Virovirokun looks extra sick.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Virovirokun looks healthy.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text>I'm the fever,<span class="break"></span> I'm the chill.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text>Don't let<span class="break"></span> this bug ya!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text>Happy new<span class="break"></span> year 1997!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text>I've got a love<span class="break"></span> letter for you.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-ambyulance">Encountered with Ambyu-Lance</h3>
+	<h4>First turn</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text>This shrink's<span class="break"></span> out of control!</d-text>
+	</d-box>
+
+	<h4>After Ambyu-Lance is defeated</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text>Yaha, I'm<span class="break"></span> home free!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-spareable">Spareable</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text>Kindness is<span class="break"></span> contagious!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text>Just what the<span class="break"></span> doctor ordered!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-ambushed">"Ambushed"</h3>
+	<p>Unused. Maybe intended for a surprise battle...?</p>
+	<d-box theme="battletalk">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text>Got your nose!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>VIROVIROKUN - This sick virus needs affordable healthcare.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="takecare">
+	<h2>TakeCare</h2>
+
+	<h3 id="takecare-ft">Flavor text</h3>
+	<p class="note">Kris dons a nurse or doctor costume.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You treated Virovirokun with care! It's no longer infectious!</d-text>
+	</d-box>
+	<p class="note">Virovirokun gains 100% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="takecarex-susral">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} TakeCareX</h2>
+
+	<h3 id="takecarex-susral-ft">Flavor text</h3>
+	<p class="note">Kris, Susie, and Ralsei don nurse/doctor, doctor, and nurse costumes respectively.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone treated the enemy with tender loving care!! All the enemies felt great!!</d-text>
+	</d-box>
+	<p class="note">All Virovirokuns gain 100% <span class="yellow">Mercy</span>. All other enemies gain 50% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="takecarex-noelle">
+	<h2>{% include acticon chara="Noelle" -%} TakeCareX</h2>
+
+	<h3 id="takecarex-noelle-ft">Flavor text</h3>
+	<h4 id="takecarex-noelle-ft-standard">Standard</h4>
+	<p class="note">Kris and Noelle don nurse/doctor and nurse costumes respectively.</p>
+	<p class="note">Noelle trips and falls on her face with a splat noise. (Does not play after completing the first forcefield puzzle on the Weird Route.)</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Noelle showed the enemy tender loving care!</d-text>
+	</d-box>
+	<p class="note">All Virovirokuns gain 100% <span class="yellow">Mercy</span>. All other enemies gain 50% <span class="yellow">Mercy</span>.</p>
+
+	<h4 id="takecarex-noelle-ft-tutorial">First time overall</h4>
+	<p>Plays during the first use of this ACT in the first encounter overall during which Noelle in the party.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>H... huh? What are you telling me to do? ACT...?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Can someone please explain what's going on?!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text>Oh boy, is this<span class="break"></span> your first time<span class="break"></span> in a battle?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+		<d-text asterisk>Uh... well... um... yes.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text>Oh boy...</d-text>
+	</d-box>
+	<p class="note">The music cuts out and the screen fades to black.</p>
+	<d-box theme="dark">
+		<d-text asterisk>You and Virovirokun explained how battles work to Noelle.</d-text>
+	</d-box>
+	<p class="note">The encounter fades back in.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>I get it! It's kind of like Dragon Blazers!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="0"></d-sprite>
+		<d-text asterisk>And if we're nice to you, we can win through mercy?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text>Yeah</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>And the way I have to do that is...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="H"></d-sprite>
+		<d-text asterisk>Dressing up in a weird costume.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text>Yeah</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="H"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<p class="note">The music resumes and the <a href="#takecarex-noelle-ft-standard">standard flavor text</a> plays out.</p>
+
+	<hr>
+
+	<h3 id="takecarex-noelle-dialogue">Dialogue</h3>
+	<p>Only plays if Noelle trips, on the normal route/early Weird Route.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text>Nice</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="unused-ralsei">
+	<h2>{% include acticon chara="Ralsei" -%} Unused ACT</h2>
+	<p>Flavor text for a combination ACT with Ralsei, name unknown.</p>
+
+	<h3 id="unused-ralsei-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei cooked up a cure.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+		<d-text asterisk>If you're sick, shouldn't you have some soup? Say "aah"~!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sickness was cured! Everyone's HP up!</d-text>
+	</d-box>
+	<p class="note">Effects unknown, but likely healed either party members, enemies, or both for some amount of HP.</p>
+</section>
+
+<section class="d-section" id="unused-susie">
+	<h2>{% include acticon chara="Susie" -%} Unused ACT</h2>
+	<p>Flavor text for a combination ACT with Susie, name unknown.</p>
+
+	<h3 id="unused-susie-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie cooked up a cure!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>What, you want me to cook something!?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie put a hot dog in the microwave!</d-text>
+	</d-box>
+	<p class="note">An explosion occurs in front of Susie, hitting all enemies for 75% of their current HP (if they were at 10 or more HP).</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>She forgot to poke holes in it! The hot dog exploded!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie commiserated with the enemy!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Stick it to the man, dude.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Even if that means cloning yourself, or whatever.</d-text>
+	</d-box>
+	<p class="note">Virovirokun gains 50% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as another X-Action. Displayed in a single dialogue box with the other X-Actions' flavor text, in the order Susie > Ralsei > Noelle.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie encouraged evil!</d-text>
+	</d-box>
+	<p class="note">Virovirokun gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei tried to steer the enemy down the right path.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>Not everybody knows this, but...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Crimes are bad. ... Did you know that?</d-text>
+	</d-box>
+	<p class="note">Virovirokun gains 50% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as another X-Action. Displayed in a single dialogue box with the other X-Actions' flavor text, in the order Susie > Ralsei > Noelle.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei tried to rehabilitate!</d-text>
+	</d-box>
+	<p class="note">Virovirokun gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="naction">
+	<h2 class="noelle act">N-Action</h2>
+
+	<h3 id="naction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle offered a cold compress!</d-text>
+	</d-box>
+	<p class="note">Virovirokun gains 50% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Shortened version</h4>
+	<p>Unused, as Kris has no shortened ACT flavor text. Would have overriden the standard flavor text when used in the same turn as another X-Action. Would have been displayed in a single dialogue box with the other X-Actions' flavor text, in the order Kris > Susie > Ralsei > Noelle.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle tried her best!</d-text>
+	</d-box>
+	<p class="note">Virovirokun gains 50% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Before learning how to ACT</h4>
+	<p>Before Kris and Virovirokun walk Noelle through encounters and ACTing in the <a href="takecarex-noelle-ft-tutorial">first use</a> of <a href="#takecarex-noelle">{% include acticon chara="Noelle" -%} TakeCareX</a>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle was clueless!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
