@@ -1,0 +1,456 @@
+---
+title: Maus encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Maus.</p>
+
+sources:
+  -
+    name: gml_Object_obj_maus_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_maus_basket_Step_0
+    chapters: [2]
+    note: TrapAll <span class="yellow">Mercy</span> amounts
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/ch2allstars
+    name: Ch2 All Stars (featuring Maus)
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-maus
+            name: With 1 or 2 other Maice
+          -
+            id: encounter-poppup
+            name: With Poppup
+          -
+            id: encounter-werewires
+            name: With 2 Werewires
+          -
+            id: encounter-swatchlings
+            name: With 2 Swatchlings
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-trapped
+        name: '"Trapped"'
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: trapone
+        name: TrapOne
+      -
+        id: upgrade
+        act_icon: Susie
+        name: Upgrade
+      -
+        id: trapall
+        custom_icon_positions: true
+        act_icon: [Ralsei, Noelle]
+        name: ACTICON TrapAll / ACTICON TrapAll
+      -
+        id: fear
+        act_icon: Noelle
+        name: Fear
+      -
+        id: compliment
+        act_icon: Noelle
+        name: Compliment
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+      -
+        id: naction
+        class: noelle act
+        name: N-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(global\.encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(66|54|101|76|80)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Maus blocked the way!</d-text>
+	</d-box>
+
+	<h4 id="encounter-maus">With 1 or 2 other Maice</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Maice blocked the way!</d-text>
+	</d-box>
+
+	<h4 id="encounter-poppup">With Poppup</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup and Maus appeared.</d-text>
+	</d-box>
+
+	<h4 id="encounter-werewires">With 2 Werewires</h4>
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Werewire and Maus swung down like stringed superheroes!</d-text>
+	</d-box>
+
+	<h4 id="encounter-swatchlings">With 2 Swatchlings</h4>
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Swatchling and vermin appeared!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Maus is thinking about overly elaborate machines.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Maus is clicking and squeaking.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Maus keeps running between your feet.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Maus is keenly aware of the fear it invokes.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">1% chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Maus would like to go to its favorite bistro in this marvelous city.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">1% chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like wood shavings.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Maus's clicking sounds more like splat noises.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Maus is squeaking cheerfully.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Maus</d-speaker>
+		<d-text>(You think you're<span class="break"></span> the big cheese?)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Maus</d-speaker>
+		<d-text>(Tired of being<span class="break"></span> pushed around.)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Maus</d-speaker>
+		<d-text>(Left, right,<span class="break"></span> right, left...)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Maus</d-speaker>
+		<d-text>(Catch me, catch me!)</d-text>
+		<d-text>(Hee hee hee...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-trapped">"Trapped"</h3>
+	<p>Possibly intended to be used after <a href="#trapone">TrapOne</a> / <a href="#trapall">{% include acticon chara="Ralsei" -%} TrapAll / {% include acticon chara="Noelle" -%} TrapAll</a>.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Maus</d-speaker>
+		<d-text>(Are you going to<span class="break"></span> take me home?)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Maus</d-speaker>
+		<d-text>(Just take good<span class="break"></span> care of me!)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>MAUS - It's just a little mouse living in a little house.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="trapone">
+	<h2>TrapOne</h2>
+
+	<h3 id="trapone-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press [MENU] To Trap!!!</d-text>
+	</d-box>
+	<p class="note">The Maus moves back and forth at the center of the screen. A cage at the top of the screen also goes back and forth but at a different speed. [MENU] must be pressed to drop the cage at the right time, catching the Maus.</p>
+
+	<h4>Caught</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Caught the enemy!</d-text>
+	</d-box>
+	<p class="note">Maus gains 100% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Missed</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Didn't catch anything...</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="upgrade">
+	<h2>{% include acticon chara="Susie" -%} Upgrade</h2>
+
+	<h3 id="upgrade-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>There's only one solution for a mouse!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Here, kitty kitty!!</d-text>
+	</d-box>
+	<p class="note">Maus moves offscreen and a <a href="{{ '/encounters/tasque' | relative_url }}">Tasque</a> takes its place. A pause.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>...don't we just have to fight the cat now?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Huh?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="upgrade-dialogue">Dialogue</h3>
+	<p>Spoken by any other Maice in the encounter, not the banished Maus.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Maus</d-speaker>
+		<d-text>(I'll work with<span class="break"></span> who I have to.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="trapall">
+	<h2>{% include acticon chara="Ralsei" -%} TrapAll / {% include acticon chara="Noelle" -%} TrapAll</h2>
+
+	<h3 id="trapall-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press [MENU] to trap all the enemies!</d-text>
+	</d-box>
+	<p class="note">All Maice (and Tasques) move back and forth at the center of the screen. A cage at the top of the screen also goes back and forth but at a different speed. [MENU] must be pressed to drop the cage at the right time, catching the enemies.</p>
+
+	<h4>Caught one enemy</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Caught the enemy!</d-text>
+	</d-box>
+	<p class="note">The caught enemy gains 100% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Caught multiple enemies</h4>
+	<p>The "#" is replaced by the number of captured enemies.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Caught # enemies!</d-text>
+	</d-box>
+	<p class="note">The caught enemies gain 100% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Missed</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Didn't catch anything...</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="fear">
+	<h2>{% include acticon chara="Noelle" -%} Fear</h2>
+	<p>Available if Noelle is afraid of mice. Otherwise, is replaced by <a href="#compliment">{% include acticon chara="Noelle" -%} Compliment</a>.</p>
+
+	<h3 id="fear-ft">Flavor text</h3>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>Th-the way it moves is just so... so scary!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>It's disgusting!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Maus was rejected... everyone felt TIRED.</d-text>
+	</d-box>
+	<p class="note">All Maice become <span class="blue">Tired</span>.</p>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle reacted in fear!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The enemies felt dejected and TIRED...</d-text>
+	</d-box>
+	<p class="note">All Maice become <span class="blue">Tired</span>.</p>
+
+	<hr>
+
+	<h3 id="fear-dialogue">Dialogue</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Maus</d-speaker>
+		<d-text>(I can't help it,<span class="break"></span> I'm a scary guy.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="compliment">
+	<h2>{% include acticon chara="Noelle" -%} Compliment</h2>
+	<p>Available if Noelle is immune to mice, replacing <a href="#fear">{% include acticon chara="Noelle" -%} Fear</a>.</p>
+
+	<h3 id="compliment-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle complimented the enemies!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>They're... kind of cute, right...?</d-text>
+	</d-box>
+	<p class="note">All Maice gain 100% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3 id="compliment-dialogue">Dialogue</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Maus</d-speaker>
+		<d-text>(I can't help it,<span class="break"></span> I'm a cutey guy.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie got on all fours and chased the mouse around the room like an animal!!</d-text>
+	</d-box>
+	<p class="note">Maus gains 50% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as another X-Action. Displayed in a single dialogue box with the other X-Actions' flavor text, in the order Susie > Ralsei > Noelle. (The <a href="#raction-ft1">first use of R-Action</a> is an exception; when that's used, S-Action uses standard flavor text.)</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie chased on all fours!!</d-text>
+	</d-box>
+	<p class="note">Maus gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<h4 id="raction-ft1">First time</h4>
+	<p>That is, first time across all Maice in a given encounter.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei started putting peanut butter on a spoon and put it in a trap!!</d-text>
+	</d-box>
+	<p class="note">Maus gains 50% <span class="yellow">Mercy</span>. A cage falls on a surprised Susie.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie was captured!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="N"></d-sprite>
+		<d-text asterisk>Susie!!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>The hell you blaming ME for!! YOU made the trap!!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<h5>Standard</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei sang a song about mice!!</d-text>
+	</d-box>
+	<p class="note">Maus gains 50% <span class="yellow">Mercy</span>.</p>
+
+	<h5>Shortened version</h5>
+	<p>Overrides the standard flavor text when used in the same turn as another X-Action. Displayed in a single dialogue box with the other X-Actions' flavor text, in the order Susie > Ralsei > Noelle.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei sang a mouse song!</d-text>
+	</d-box>
+	<p class="note">Maus gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="naction">
+	<h2 class="noelle act">N-Action</h2>
+
+	<h3 id="naction-ft">Flavor text</h3>
+	<h4>If Noelle is afraid of mice</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle screamed quietly!</d-text>
+	</d-box>
+	<p class="note">Maus gains 50% <span class="yellow">Mercy</span>.</p>
+
+	<h4>If Noelle is immune to mice</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle cheered brightly!</d-text>
+	</d-box>
+	<p class="note">Maus gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
