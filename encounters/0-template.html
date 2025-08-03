@@ -87,9 +87,9 @@ toc:
 ---
 {% comment %}
 Check for encounter instances with the following regex:
-(global\.encounterno = |myencounter = |scr_encountersetup\()NUMBER_GOES_HERE
+(global\.encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(NUMBER_GOES_HERE)\b
 For example, you can find instances of the Jigsawry/Rudinn/Hathy enconuter with the following:
-(global\.encounterno = |myencounter = |scr_encountersetup\()23
+(global\.encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(23)\b
 Then check that the obj whose file it appears in actually exists in the canonical rooms!
 {% endcomment %}
 
