@@ -1,0 +1,1335 @@
+---
+title: Armor
+
+description: >
+  <p>Names, descriptions, and reactions to armor equippable by the party members.</p>
+# Want to get stuff from the latest chapter because that'll also have all the equipment from previous chapters
+
+sources:
+  -
+    name: gml_GlobalScript_scr_armorinfo
+    chapters: [2, 3, 4]
+  -
+    name: gml_Object_obj_darkcontroller_Step_0
+    chapters: [4]
+    note: additional party members' reactions
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /misc/weapons
+    name: Weapons
+
+toc:
+  -
+    id: notes
+    name: Notes
+    subheadings:
+      -
+        id: remove
+        name: Attempting to remove armor
+  -
+    name: First seen in Chapter 1
+    subheadings:
+      -
+        id: ambercard
+        name: Amber Card
+      -
+        id: dicebrace
+        name: Dice Brace
+      -
+        id: pinkribbon
+        name: Pink Ribbon
+      -
+        id: whiteribbon
+        name: White Ribbon
+      -
+        id: ironshackle
+        name: Iron Shackle
+      -
+        id: mousetoken
+        name: Mouse Token
+      -
+        id: jevilstail
+        name: Jevilstail
+  -
+    name: First seen in Chapter 2
+    subheadings:
+      -
+        id: silvercard
+        name: Silver Card
+      -
+        id: twinribbon
+        name: Twin Ribbon
+      -
+        id: glowwrist
+        name: Glow Wrist
+      -
+        id: chainmail
+        name: Chain Mail
+      -
+        id: bshotbowtie
+        name: B. Shot Bowtie
+      -
+        id: spikeband
+        name: Spike Band
+      -
+        id: silverwatch
+        name: Silver Watch
+      -
+        id: tensionbow
+        name: Tension Bow
+      -
+        id: mannequin
+        name: Mannequin
+      -
+        id: darkgoldband
+        name: Dark Gold Band
+      -
+        id: skymantle
+        name: Sky Mantle
+      -
+        id: spikeshackle
+        name: Spike Shackle
+      -
+        id: frayedbowtie
+        name: Frayed Bowtie
+      -
+        id: dealmaker
+        name: Dealmaker
+      -
+        id: royalpin
+        name: Royal Pin
+  -
+    name: First seen in Chapter 3
+    subheadings:
+      -
+        id: shadowmantle
+        name: Shadow Mantle
+      -
+        id: lodestone
+        name: Lode Stone
+      -
+        id: gingerguard
+        name: Ginger Guard
+      -
+        id: blueribbon
+        name: Blue Ribbon
+      -
+        id: tennatie
+        name: Tenna Tie
+  -
+    name: First seen in Chapter 4
+    subheadings:
+      -
+        id: waferguard
+        name: Waferguard
+      -
+        id: mysticband
+        name: Mystic Band
+      -
+        id: powerband
+        name: Power Band
+      -
+        id: princessribbon
+        name: Princess Ribbon
+      -
+        id: goldwidow
+        name: Gold Widow
+---
+{% comment %}
+The value of global.submenu controls which editor you're in:
+	- 12 is weapon slot
+	- 13 is armor slot 1
+	- 14 is armor slot 2
+
+weaponchar#temp/armorchar#temp = 1 if the character corresponding to # can equip this weapon/armor, and 0 if not
+wwho is who you're trying to equip the weapon/armor to
+"#" and wwho use the same 1-4 <=> Kris/Susie/Ralsei/Noelle ordering as always
+{% endcomment -%}
+
+<section class="d-section" id="notes">
+	<h2>Notes</h2>
+	<p>Armor can normally be equipped by all party members, unless specified otherwise.</p>
+
+	<h3 id="remove">Attempting to remove armor</h3>
+	<p>Most characters allow you to remove their equipment (leaving that armor slot blank, instead of replacing it with another armor) without saying anything. The exception is Susie, who reacts as follows:</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hey, hands off!</d-text>
+	</d-box>
+	<p class="note">Susie's armor is not removed.</p>
+</section>
+
+<section class="d-section" id="ambercard"> <!-- armor id 1 -->
+	<h2>Amber Card</h2>
+
+	<h3 id="ambercard-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A thin square charm that sticks<span class="break"></span> to you, increasing defense.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ambercard-react">Reactions</h3>
+
+	<h4 id="ambercard-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... better than nothing.</d-text>
+	</d-box>
+
+	<h4 id="ambercard-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It's sticky, huh, Kris...</d-text>
+	</d-box>
+
+	<h4 id="ambercard-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>It's like a name-tag!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dicebrace"> <!-- armor id 2 -->
+	<h2>Dice Brace</h2>
+
+	<h3 id="dicebrace-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A bracelet made out of various<span class="break"></span> symbol-inscribed cubes.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dicebrace-react">Reactions</h3>
+
+	<h4 id="dicebrace-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... okay.</d-text>
+	</d-box>
+
+	<h4 id="dicebrace-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It says "Friendship!"</d-text>
+	</d-box>
+
+	<h4 id="dicebrace-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Hey, y-you jumbled it...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="pinkribbon"> <!-- armor id 3 -->
+	<h2>Pink Ribbon</h2>
+
+	<h3 id="pinkribbon-description">Description</h3>
+	<h4>Outside of Chapter 3</h4>
+	<d-box theme="objmenu">
+		<d-text>A cute hair ribbon that increases<span class="break"></span> the range bullets increase tension.</d-text>
+	</d-box>
+
+	<h4>During Chapter 3</h4>
+	<d-box theme="objmenu">
+		<d-text>A cute hair ribbon. Increases the range<span class="break"></span> at which bullets raise tension.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="pinkribbon-react">Reactions</h3>
+
+	<h4 id="pinkribbon-react-susie">Susie</h4>
+	<p class="note">Cannot be equipped by Susie.</p>
+
+	<h5>Outside of Chapter 2</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Nope. Not in 1st grade anymore.</d-text>
+	</d-box>
+
+	<h5>During Chapter 2</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I said NO! C'mon already!</d-text>
+	</d-box>
+
+	<h4 id="pinkribbon-react-ralsei">Ralsei</h4>
+	<h5>Outside of Chapter 2</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Um... D-do I look cute...?</d-text>
+	</d-box>
+
+	<h5>During Chapter 2</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It's nice dressing up...</d-text>
+	</d-box>
+
+	<h4 id="pinkribbon-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>... feels familiar.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="whiteribbon"> <!-- armor id 4 -->
+	<h2>White Ribbon</h2>
+
+	<h3 id="whiteribbon-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A crinkly hair ribbon that slightly<span class="break"></span> increases your defense.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="whiteribbon-react">Reactions</h3>
+
+	<h4 id="whiteribbon-react-susie">Susie</h4>
+	<p class="note">Cannot be equipped by Susie.</p>
+
+	<h5>Outside of Chapter 2</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Nope. Not in 1st grade anymore.</d-text>
+	</d-box>
+
+	<h5>During Chapter 2</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I said NO! C'mon already!</d-text>
+	</d-box>
+
+	<h4 id="whiteribbon-react-ralsei">Ralsei</h4>
+	<h5>Outside of Chapter 2</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Um... D-do I look cute...?</d-text>
+	</d-box>
+
+	<h5>During Chapter 2</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It's nice being dressed up...</d-text>
+	</d-box>
+
+	<h4 id="whiteribbon-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>... feels familiar.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="ironshackle"> <!-- armor id 5 -->
+	<h2>Iron Shackle</h2>
+
+	<h3 id="ironshackle-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>Shackle that ironically increases<span class="break"></span> your attack and defense.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ironshackle-react">Reactions</h3>
+
+	<h4 id="ironshackle-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>(Damn, it's actually cool...)</d-text>
+	</d-box>
+
+	<h4 id="ironshackle-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>*jingle jangle* Haha!</d-text>
+	</d-box>
+
+	<h4 id="ironshackle-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>I'm the ghost of holidays past!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="mousetoken"> <!-- armor id 6 -->
+	<h2>Mouse Token</h2>
+	<p>Unused item that's not available in the playable game, but included for completion.</p>
+
+	<hr>
+
+	<h3 id="mousetoken-description">Description</h3>
+	<h4>Outside of Chapter 3</h4>
+	<d-box theme="objmenu">
+		<d-text>A golden coin with a once-powerful mousewizard engraved on it.</d-text>
+	</d-box>
+
+	<h4>During Chapter 3</h4>
+	<d-box theme="objmenu">
+		<d-text>A golden coin with a once-powerful mouse<span class="break"></span> wizard engraved on it.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="mousetoken-react">Reactions</h3>
+
+	<h4 id="mousetoken-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>This guy's... familiar?</d-text>
+	</d-box>
+
+	<h4 id="mousetoken-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Chu! Healing power UP!</d-text>
+	</d-box>
+
+	<h4 id="mousetoken-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>... from the family entertainment center?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="jevilstail"> <!-- armor id 7 -->
+	<h2>Jevilstail</h2>
+
+	<h3 id="jevilstail-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A J-shaped tail that gives you devilenergy.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="jevilstail-react">Reactions</h3>
+
+	<h4 id="jevilstail-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Figured I'd grow one someday.</d-text>
+	</d-box>
+
+	<h4 id="jevilstail-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>I'm a good devil, OK?</d-text>
+	</d-box>
+
+	<h4 id="jevilstail-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>... (I like it...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="silvercard"> <!-- armor id 8 -->
+	<h2>Silver Card</h2>
+
+	<h3 id="silvercard-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A square charm that increases<span class="break"></span> dropped money by 5%</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="silvercard-react">Reactions</h3>
+
+	<h4 id="silvercard-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Money, that's what I need.</d-text>
+	</d-box>
+
+	<h4 id="silvercard-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Do they take credit?</d-text>
+	</d-box>
+
+	<h4 id="silvercard-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>It goes with my watch!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="twinribbon"> <!-- armor id 9 -->
+	<h2>Twin Ribbon</h2>
+
+	<h3 id="twinribbon-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>Two ribbons. You'll have to put<span class="break"></span> your hair into pigtails.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="twinribbon-react">Reactions</h3>
+
+	<h4 id="twinribbon-react-susie">Susie</h4>
+	<p class="note">Cannot be equipped by Susie.</p>
+
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... it gets worse and worse.</d-text>
+	</d-box>
+
+	<h4 id="twinribbon-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Try around my horns!</d-text>
+	</d-box>
+
+	<h4 id="twinribbon-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>... nostalgic, huh.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="glowwrist"> <!-- armor id 10 -->
+	<h2>Glow Wrist</h2>
+
+	<h3 id="glowwrist-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A tough bracelet made of green wires,<span class="break"></span> and studded with sharp glowing lights.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="glowwrist-react">Reactions</h3>
+
+	<h4 id="glowwrist-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Whoops, it's tangled.</d-text>
+	</d-box>
+
+	<h4 id="glowwrist-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Let me just untangle this...</d-text>
+	</d-box>
+
+	<h4 id="glowwrist-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>It's like holiday lights...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="chainmail"> <!-- armor id 11 -->
+	<h2>Chain Mail</h2>
+
+	<h3 id="chainmail-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>Chain-armor. Send it to 10 others<span class="break"></span> or it'll lose its defensive rating</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="chainmail-react">Reactions</h3>
+
+	<h4 id="chainmail-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Damn, guess I'm cursed.</d-text>
+	</d-box>
+
+	<h4 id="chainmail-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>A letter?... For me...?</d-text>
+	</d-box>
+
+	<h4 id="chainmail-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Armor? (It's cool...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="bshotbowtie"> <!-- armor id 12 -->
+	<h2>B. Shot Bowtie</h2>
+
+	<h3 id="bshotbowtie-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A handsome bowtie. Looks like the brand<span class="break"></span> name has been cut off.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bshotbowtie-react">Reactions</h3>
+
+	<h4 id="bshotbowtie-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Ugh, I look like a nerd.</d-text>
+	</d-box>
+
+	<h4 id="bshotbowtie-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Can I have suspenders?</d-text>
+	</d-box>
+
+	<h4 id="bshotbowtie-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>... do I put it in my hair?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="spikeband"> <!-- armor id 13 -->
+	<h2>Spike Band</h2>
+
+	<h3 id="spikeband-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A black wristband covered in spikes.</d-text>
+		<d-text>Has the tendency to get stuck to itself.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="spikeband-react">Reactions</h3>
+
+	<h4 id="spikeband-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Can't say no to spikes.</d-text>
+	</d-box>
+
+	<h4 id="spikeband-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Um, do I... look tough?</d-text>
+	</d-box>
+
+	<h4 id="spikeband-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(Maybe Susie would like this look?)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="silverwatch"> <!-- armor id 14 -->
+	<h2>Silver Watch</h2>
+	<p>Dark World equivalent of the <a href="{{ '/misc/lightitems#wristwatch' | relative_url }}">Wristwatch</a>.</p>
+
+	<hr>
+
+	<h3 id="silverwatch-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>Grazing bullets affects<span class="break"></span> the turn length by 10% more</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="silverwatch-react">Reactions</h3>
+
+	<h4 id="silverwatch-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>It's clobbering time.</d-text>
+	</d-box>
+
+	<h4 id="silverwatch-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>I'm late, I'm late!</d-text>
+	</d-box>
+
+	<h4 id="silverwatch-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(Th-this was mine...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="tensionbow"> <!-- armor id 15 -->
+	<h2>Tension Bow</h2>
+
+	<h3 id="tensionbow-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>Gain 10% more tension from<span class="break"></span> grazing bullets</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tensionbow-react">Reactions</h3>
+	<p>No one reacts to this being equipped.</p>
+</section>
+
+<section class="d-section" id="mannequin"> <!-- armor id 16 -->
+	<h2>Mannequin</h2>
+	<p>This can only be equipped by Kris.</p>
+
+	<hr>
+
+	<h3 id="mannequin-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>It's a mannequin with the clothes<span class="break"></span> permanently attached. Useless</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="mannequin-react">Reactions</h3>
+
+	<h4 id="mannequin-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Not even gonna ask.</d-text>
+	</d-box>
+
+	<h4 id="mannequin-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Um, the d-dress is cute...</d-text>
+	</d-box>
+
+	<h4 id="mannequin-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(Why did they spend $300 on this!?)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="darkgoldband"> <!-- armor id 17 -->
+	<h2>Dark Gold Band</h2>
+	<p>Unused. Some of its data appears to be copied over from the Mannequin; party reactions are identical to the Mannequin's, as is the fact that this can only be equipped by Kris.</p>
+
+	<hr>
+
+	<h3 id="darkgoldband-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A black metal with a golden shine.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="darkgoldband-react">Reactions</h3>
+
+	<h4 id="darkgoldband-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Not even gonna ask.</d-text>
+	</d-box>
+
+	<h4 id="darkgoldband-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Um, the d-dress is cute...</d-text>
+	</d-box>
+
+	<h4 id="darkgoldband-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(Why did they spend $300 on this!?)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="skymantle"> <!-- armor id 18 -->
+	<h2>Sky Mantle</h2>
+	<p>Unused, but included for completion.</p>
+
+	<hr>
+
+	<h3 id="skymantle-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A cape that shimmers fluorescently.</d-text>
+		<d-text>Protects against Elec and Holy attacks.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="skymantle-react">Reactions</h3>
+	<p>No one reacts to this being equipped.</p>
+</section>
+
+<section class="d-section" id="spikeshackle"> <!-- armor id 19 -->
+	<h2>Spike Shackle</h2>
+	<p>Unused, but included for completion.</p>
+
+	<hr>
+
+	<h3 id="spikeshackle-description">Description</h3>
+	<p class="note">The description is blank.</p>
+
+	<hr>
+
+	<h3 id="spikeshackle-react">Reactions</h3>
+
+	<h4 id="spikeshackle-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Get a load of THIS!</d-text>
+	</d-box>
+
+	<h4 id="spikeshackle-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Looking SHARP!</d-text>
+	</d-box>
+
+	<h4 id="spikeshackle-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(It's tearing my sleeves...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="frayedbowtie"> <!-- armor id 20 -->
+	<h2>Frayed Bowtie</h2>
+
+	<h3 id="frayedbowtie-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>An old bowtie. It seems to have<span class="break"></span> lost much of its defensive value.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="frayedbowtie-react">Reactions</h3>
+
+	<h4 id="frayedbowtie-react-susie">Susie</h4>
+	<p class="note">Cannot be equipped by Susie.</p>
+
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Look. I have standards.</d-text>
+	</d-box>
+
+	<h4 id="frayedbowtie-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It's still wearable!</d-text>
+	</d-box>
+
+	<h4 id="frayedbowtie-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(Reminds me of Asgore...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dealmaker"> <!-- armor id 21 -->
+	<h2>Dealmaker</h2>
+
+	<h3 id="dealmaker-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>Fashionable pink and yellow glasses.</d-text>
+		<d-text>Greatly increase $ gained, and...?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dealmaker-react">Reactions</h3>
+
+	<h4 id="dealmaker-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Money, that's what I need.</d-text>
+	</d-box>
+
+	<h4 id="dealmaker-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Two pairs of glasses?</d-text>
+	</d-box>
+
+	<h4 id="dealmaker-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(Seems... familiar?)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="royalpin"> <!-- armor id 22 -->
+	<h2>Royal Pin</h2>
+
+	<h3 id="royalpin-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A brooch engraved with Queen's face.</d-text>
+		<d-text>Careful of the sharp part.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="royalpin-react">Reactions</h3>
+
+	<h4 id="royalpin-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>ROACH? Oh, brooch. Heh.</d-text>
+	</d-box>
+
+	<h4 id="royalpin-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>I'm a cute little corkboard!</d-text>
+	</d-box>
+
+	<h4 id="royalpin-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Queen... gave this to me.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="shadowmantle"> <!-- armor id 23 -->
+	<h2>Shadow Mantle</h2>
+
+	<h3 id="shadowmantle-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>Shadows slip off like water.</d-text>
+		<d-text>Greatly protects against Dark and Star attacks.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="shadowmantle-react">Reactions</h3>
+
+	<h4 id="shadowmantle-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hell yeah, what's this?</d-text>
+	</d-box>
+
+	<h4 id="shadowmantle-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Sh-should I wear this...?</d-text>
+	</d-box>
+
+	<h4 id="shadowmantle-react-noelle">Noelle</h4>
+	<p class="note">Cannot be equipped by Noelle.</p>
+
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>No... it's for someone... taller.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="lodestone"> <!-- armor id 24 -->
+	<h2>Lode Stone</h2>
+
+	<h3 id="lodestone-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A lodestone token shaped like a snail's shell.</d-text>
+		<d-text>Enemy bullets give a bit more TP.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="lodestone-react">Reactions</h3>
+
+	<h4 id="lodestone-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Escargot? ... escargross.</d-text>
+	</d-box>
+
+	<h4 id="lodestone-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>I have no opinions on snails!</d-text>
+	</d-box>
+
+	<h4 id="lodestone-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Did your mom eat the non-shell part?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Unused variant 1</h3>
+	<p>An alternate description and reactions. The flag that's supposed to trigger these never actually gets set. Maybe it was supposed to represent which save slot (1/2/3) you were using, like <a href="{{ '/misc/darkitems#tvdinner' | relative_url }}">some item descriptions</a> do...?</p>
+
+	<h4>Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A lodestone token inscribed with the record of<span class="break"></span> a legend athlete. Enemy bullets give a bit more TP.</d-text>
+	</d-box>
+	<h4>Reactions</h4>
+	<h5>Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Consolation prize, nice.</d-text>
+	</d-box>
+	<h5>Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>A reward... just for me?</d-text>
+	</d-box>
+	<h5>Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Thanks, but, this is Azzy's...?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Unused variant 2</h3>
+	<h4>Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A lodestone token in the shape of a pizza.</d-text>
+		<d-text>Enemy bullets give a bit more TP.</d-text>
+	</d-box>
+	<h4>Reactions</h4>
+	<h5>Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I'm going to eat this.</d-text>
+	</d-box>
+	<h5>Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>If I wear it, Susie won't eat it!</d-text>
+	</d-box>
+	<h5>Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>D-don't eat that! I'll wear it!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="gingerguard"> <!-- armor id 25 -->
+	<h2>Ginger Guard</h2>
+
+	<h3 id="gingerguard-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A steel bangle tempered by extreme flame.</d-text>
+		<d-text>Its shape is humanoid in nature.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="gingerguard-react">Reactions</h3>
+
+	<h4 id="gingerguard-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Look! I punched through a guy!</d-text>
+	</d-box>
+
+	<h4 id="gingerguard-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>A bigger one could make Kris!</d-text>
+	</d-box>
+
+	<h4 id="gingerguard-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>This smells amazing! Um, sorry.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="blueribbon"> <!-- armor id 26 -->
+	<h2>Blue Ribbon</h2>
+
+	<h3 id="blueribbon-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A blue cheer bow. When the user uses a<span class="break"></span> healing move, it recovers slightly more HP.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="blueribbon-react">Reactions</h3>
+
+	<h4 id="blueribbon-react-susie">Susie</h4>
+	<p class="note">Cannot be equipped by Susie.</p>
+
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>ABSOLUTELY not.</d-text>
+	</d-box>
+
+	<h4 id="blueribbon-react-ralsei">Ralsei</h4>
+	<h5>First time</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Give me a K! Give me an R!</d-text>
+	</d-box>
+	<h5>Second time</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Give me an I! Give me an S!</d-text>
+	</d-box>
+	<h5>Third time</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Give me an ampersand!</d-text>
+	</d-box>
+	<h5>Fourth time</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Give me an S! Give me a U!</d-text>
+	</d-box>
+	<h5>Fifth time</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Give me an S! Give me an I!</d-text>
+	</d-box>
+	<h5>Sixth time</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Give me an E! Give me an A!</d-text>
+	</d-box>
+	<h5>Seventh time</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Give me an R! Give me an E!</d-text>
+	</d-box>
+	<h5>Eighth time</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Give me an M! Give me a Y!</d-text>
+	</d-box>
+	<h5>Ninth time</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Give me an F! Give me an R!</d-text>
+	</d-box>
+	<h5>Tenth time</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Give me an I! Give me an E!</d-text>
+	</d-box>
+	<h5>Eleventh time</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Give me an N! Give me a D!</d-text>
+	</d-box>
+	<h5>Twelfth time</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Give me an S!</d-text>
+	</d-box>
+	<h5>Thirteenth time</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Give me an exclamation point!</d-text>
+	</d-box>
+	<h5>Fourteenth time</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Um, that's it!</d-text>
+	</d-box>
+	<h5>Fifteenth time</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>D... don't give me anything else!</d-text>
+	</d-box>
+	<h5>Sixteenth time onwards</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Yeah!</d-text>
+	</d-box>
+
+	<h4 id="blueribbon-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Go...  t... team?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="tennatie"> <!-- armor id 27 -->
+	<h2>Tenna Tie</h2>
+
+	<h3 id="tennatie-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A giant, heavy-duty, bullet-proof tie.</d-text>
+		<d-text>How to even wear it...?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tennatie-react">Reactions</h3>
+
+	<h4 id="tennatie-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Bandana-style.</d-text>
+	</d-box>
+
+	<h4 id="tennatie-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Like a sash...?</d-text>
+	</d-box>
+
+	<h4 id="tennatie-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Look, I'm like a gift!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="waferguard"> <!-- armor id 50 -->
+	<h2>Waferguard</h2>
+
+	<h3 id="waferguard-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>Although it looks brittle, it contains a magical energy that blunts damage on impact. +4DF</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="waferguard-react">Reactions</h3>
+
+	<h4 id="waferguard-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>(Don't eat it. Don't eat it.)</d-text>
+	</d-box>
+
+	<h4 id="waferguard-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It's got drool on it.</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>(Too bad)</d-text>
+	</d-box>
+
+	<h4 id="waferguard-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>What's next, cheezy armor? Faha!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="mysticband"> <!-- armor id 51 -->
+	<h2>Mystic Band</h2>
+
+	<h3 id="mysticband-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A silver armlet stained with amber.</d-text>
+		<d-text>Increases magic only. MAG +4</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="mysticband-react">Reactions</h3>
+
+	<h4 id="mysticband-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Let's go, Rude Buster!</d-text>
+	</d-box>
+
+	<h4 id="mysticband-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Behold! Heal Prayer!</d-text>
+	</d-box>
+
+	<h4 id="mysticband-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(The other flavor is better)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="powerband"> <!-- armor id 52 -->
+	<h2>Power Band</h2>
+
+	<h3 id="powerband-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A silver armlet stained with red essence.</d-text>
+		<d-text>Increases strength only. ATK +4</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="powerband-react">Reactions</h3>
+
+	<h4 id="powerband-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>BLOOD POWER ACTIVATE!</d-text>
+	</d-box>
+
+	<h4 id="powerband-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>I'm juiced up!</d-text>
+	</d-box>
+
+	<h4 id="powerband-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Why always jewelry?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="princessribbon"> <!-- armor id 53 -->
+	<h2>Princess Ribbon</h2>
+
+	<h3 id="princessribbon-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>Elegant lace ribbon with gloves,<span class="break"></span> delicate enough to see through. +4 DEF +2 ATK</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="princessribbon-react">Reactions</h3>
+
+	<h4 id="princessribbon-react-susie">Susie</h4>
+	<p class="note">Cannot be equipped by Susie.</p>
+
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Nah. Gloves don't fit.</d-text>
+	</d-box>
+
+	<h4 id="princessribbon-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Cute! (Gloves don't fit)</d-text>
+	</d-box>
+
+	<h4 id="princessribbon-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Kris, you can wear the gloves!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="goldwidow"> <!-- armor id 54 -->
+	<h2>Gold Widow</h2>
+
+	<h3 id="goldwidow-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A spider made of gold. It gathers coins<span class="break"></span> into it, reducing $ gained.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="goldwidow-react">Reactions</h3>
+
+	<h4 id="goldwidow-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Spider on my head. K.</d-text>
+	</d-box>
+
+	<h4 id="goldwidow-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Itsy and/or bitsy!</d-text>
+	</d-box>
+
+	<h4 id="goldwidow-react-noelle">Noelle</h4>
+	<p class="note">Cannot be equipped by Noelle.</p>
+
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>E-Ew! Kris, get that away!</d-text>
+	</d-box>
+</section>

@@ -1,0 +1,1150 @@
+---
+title: Weapons
+
+description: >
+  <p>Names, descriptions, and reactions to weapons equippable by the party members.</p>
+# Want to get stuff from the latest chapter because that'll also have all the equipment from previous chapters
+
+sources:
+  -
+    name: gml_GlobalScript_scr_weaponinfo
+    chapters: [4]
+  -
+    name: gml_Object_obj_darkcontroller_Step_0
+    chapters: [4]
+    note: additional party members' reactions
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /misc/armor
+    name: Armor
+
+toc:
+  -
+    id: swords
+    name: Kris's swords
+    subheadings:
+      -
+        id: woodblade
+        name: Wood Blade
+      -
+        id: spookysword
+        name: Spookysword
+      -
+        id: trefoil
+        name: Trefoil
+      -
+        id: twistedsword
+        name: Twisted Sword
+      -
+        id: bounceblade
+        name: Bounce Blade
+      -
+        id: mechasaber
+        name: Mecha Saber
+      -
+        id: saber10
+        name: Saber 10
+      -
+        id: winglade
+        name: Winglade
+  -
+    id: axes
+    name: Susie's axes
+    subheadings:
+      -
+        id: maneax
+        name: Mane Ax
+      -
+        id: braveax
+        name: Brave Ax
+      -
+        id: devilsknife
+        name: Devilsknife
+      -
+        id: autoaxe
+        name: Auto Axe
+      -
+        id: toxicaxe
+        name: Toxic Axe
+      -
+        id: justiceaxe
+        name: Justice Axe
+      -
+        id: absorbax
+        name: Absorb Ax
+  -
+    id: scarves
+    name: Ralsei's scarves
+    subheadings:
+      -
+        id: redscarf
+        name: Red Scarf
+      -
+        id: ragger
+        name: Ragger
+      -
+        id: daintyscarf
+        name: Dainty Scarf
+      -
+        id: cheerscarf
+        name: Cheer Scarf
+      -
+        id: fiberscarf
+        name: Fiber Scarf
+      -
+        id: ragger2
+        name: Ragger 2
+      -
+        id: puppetscarf
+        name: Puppet Scarf
+      -
+        id: flexscarf
+        name: Flex Scarf
+      -
+        id: scarfmark
+        name: Scarf Mark
+  -
+    id: rings
+    name: Noelle's rings
+    subheadings:
+      -
+        id: snowring
+        name: Snow Ring
+      -
+        id: thornring
+        name: Thorn Ring
+      -
+        id: freezering
+        name: Freeze Ring
+  -
+    id: other
+    name: Other weapons
+    subheadings:
+      -
+        id: everybodyweapon
+        name: Everybody Weapon
+      -
+        id: brokensword
+        name: Broken Sword
+      -
+        id: blackshard
+        name: Black Shard
+      -
+        id: jingleblade
+        name: Jingle Blade
+---
+{% comment %}
+The value of global.submenu controls which editor you're in:
+	- 12 is weapon slot
+	- 13 is armor slot 1
+	- 14 is armor slot 2
+
+weaponchar#temp/armorchar#temp = 1 if the character corresponding to # can equip this weapon/armor, and 0 if not
+wwho is who you're trying to equip the weapon/armor to
+"#" and wwho use the same 1-4 <=> Kris/Susie/Ralsei/Noelle ordering as always
+{% endcomment -%}
+
+
+
+<section class="d-section" id="swords">
+	<h2>Kris's swords</h2>
+	<p>The swords listed in this section can only be equipped by Kris. See <a href="#other">Other weapons</a> for swords that can be equipped by others.</p>
+
+	<h3 id="woodblade">Wood Blade</h3> <!-- weapon id 1 -->
+	<p>Dark World equivalent of the <a href="{{ '/misc/lightitems#pencil' | relative_url }}">Pencil</a>.</p>
+
+	<h4 id="woodblade-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A wooden practice blade with a carbon-reinforced core.</d-text>
+	</d-box>
+
+	<h4 id="woodblade-react">Reactions</h4>
+	<p>When trying to equip to other party members.</p>
+
+	<h5 id="woodblade-react-susie">Susie</h5>
+	<h6>Initial</h6>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... You have a SWORD!?</d-text>
+	</d-box>
+
+	<h6>After Ralsei first joins the party</h6>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>What's this!? A CHOPSTICK?</d-text>
+	</d-box>
+
+	<h5 id="woodblade-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>That's yours, Kris...</d-text>
+	</d-box>
+
+	<h5 id="woodblade-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(It has bite marks...)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="spookysword">Spookysword</h3> <!-- weapon id 5 -->
+	<p>Dark World equivalent of the <a href="{{ '/misc/lightitems#halloweenpencil' | relative_url }}">Halloween Pencil</a>.</p>
+
+	<h4 id="spookysword-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A black-and-orange sword with a bat hilt.</d-text>
+	</d-box>
+
+	<h4 id="spookysword-react">Reactions</h4>
+
+	<h5 id="spookysword-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Ugh, it's too small!</d-text>
+	</d-box>
+
+	<h5 id="spookysword-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Oh, it's too scary!</d-text>
+	</d-box>
+
+	<h5 id="spookysword-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(It's kinda cool...)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="trefoil">Trefoil</h3> <!-- weapon id 8 -->
+	<p>Unused item that's not available in the playable game, but included for completion. Dark World equivalent of the <a href="{{ '/misc/lightitems#luckypencil' | relative_url }}">Lucky Pencil</a>.</p>
+
+	<h4 id="trefoil-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>Mossy rapier with a clover emblem.</d-text>
+		<d-text>Increases $ found by 5%.</d-text>
+	</d-box>
+
+	<h4 id="trefoil-react">Reactions</h4>
+
+	<h5 id="trefoil-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>That tacky thing? No!</d-text>
+	</d-box>
+
+	<h5 id="trefoil-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Not my shade of green...</d-text>
+	</d-box>
+
+	<h5 id="trefoil-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Okay! ...? What do you mean, unused!?</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="twistedsword">Twisted Sword</h3> <!-- weapon id 11 -->
+
+	<h4 id="twistedsword-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A strange blade</d-text>
+	</d-box>
+
+	<h4 id="twistedsword-react">Reactions</h4>
+
+	<h5 id="twistedsword-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... uhh, looks bad.</d-text>
+	</d-box>
+
+	<h5 id="twistedsword-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It's like a spiral.</d-text>
+	</d-box>
+
+	<h5 id="twistedsword-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>It's... kind of scary...</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="bounceblade">Bounce Blade</h3> <!-- weapon id 14 -->
+	<p>Dark World equivalent of the <a href="{{ '/misc/lightitems#eraser' | relative_url }}">Eraser</a>.</p>
+
+	<h4 id="bounceblade-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A pink saber with a rubber blade.</d-text>
+		<d-text>Weak, but increases defence.</d-text>
+	</d-box>
+
+	<h4 id="bounceblade-react">Reactions</h4>
+
+	<h5 id="bounceblade-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>What is this, rubber?</d-text>
+	</d-box>
+
+	<h5 id="bounceblade-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Soft and squishy!</d-text>
+	</d-box>
+
+	<h5 id="bounceblade-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>S-stop thwacking me!</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="mechasaber">Mecha Saber</h3> <!-- weapon id 16 -->
+	<p>Dark World equivalent of the <a href="{{ '/misc/lightitems#mechanicalpencil' | relative_url }}">Mechanical Pencil</a>.</p>
+
+	<h4 id="mechasaber-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>The blade extends when you press the hilt.</d-text>
+		<d-text>CHA-CHK!</d-text>
+	</d-box>
+
+	<h4 id="mechasaber-react">Reactions</h4>
+
+	<h5 id="mechasaber-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>*chk chk chk chk* Nah.</d-text>
+	</d-box>
+
+	<h5 id="mechasaber-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>You'd look cool holding it, Kris!</d-text>
+	</d-box>
+
+	<h5 id="mechasaber-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>*chk* A-AHH! Scared myself...</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="saber10">Saber 10</h3> <!-- weapon id 23 -->
+	<p>Dark World equivalent of the <a href="{{ '/misc/lightitems#cactusneedle' | relative_url }}">Cactus Needle</a>.</p>
+
+	<h4 id="saber10-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A saber made of 10 cactus needles.</d-text>
+		<d-text>Fortunately, can deal more than 10 damage.</d-text>
+	</d-box>
+
+	<h4 id="saber10-react">Reactions</h4>
+
+	<h5 id="saber10-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Nah, I'd snap it.</d-text>
+	</d-box>
+
+	<h5 id="saber10-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>You want to... pierce my ears...?</d-text>
+	</d-box>
+
+	<h5 id="saber10-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(I'm not against using it, but...)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="winglade">Winglade</h3> <!-- weapon id 53 -->
+	<p>Dark World equivalent of the <a href="{{ '/misc/lightitems#quillpen' | relative_url }}">Quill Pen</a>.</p>
+
+	<h4 id="winglade-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A majestic sword with a white feathered hilt.</d-text>
+		<d-text>Slightly increases money won.</d-text>
+	</d-box>
+
+	<h4 id="winglade-react">Reactions</h4>
+
+	<h5 id="winglade-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Don't make me sneeze!</d-text>
+	</d-box>
+
+	<h5 id="winglade-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Th-that tickles!</d-text>
+	</d-box>
+
+	<h5 id="winglade-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>... whose feather is this?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="axes">
+	<h2>Susie's axes</h2>
+	<p>The axes listed in this section can only be equipped by Susie.</p>
+
+	<h3 id="maneax">Mane Ax</h3> <!-- weapon id 2 -->
+
+	<h4 id="maneax-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>Beginner's ax forged from the<span class="break"></span> mane of a dragon whelp.</d-text>
+	</d-box>
+
+	<h4 id="maneax-react">Reactions</h4>
+
+	<h5 id="maneax-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I'm too GOOD for that.</d-text>
+	</d-box>
+
+	<h5 id="maneax-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Ummm... it's a bit big.</d-text>
+	</d-box>
+
+	<h5 id="maneax-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>It... smells nice...</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="braveax">Brave Ax</h3> <!-- weapon id 6 -->
+
+	<h4 id="braveax-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A glossy ax from a block warrior.</d-text>
+		<d-text>Suitable for heroes.</d-text>
+	</d-box>
+
+	<h4 id="braveax-react">Reactions</h4>
+
+	<h5 id="braveax-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Well, if I have to.</d-text>
+	</d-box>
+
+	<h5 id="braveax-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It's a bit too heavy...</d-text>
+	</d-box>
+
+	<h5 id="braveax-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(W-wow, what presence...)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="devilsknife">Devilsknife</h3> <!-- weapon id 7 -->
+
+	<h4 id="devilsknife-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>Skull-emblazoned scythe-ax.</d-text>
+		<d-text>Reduces Rudebuster's cost by 10</d-text>
+	</d-box>
+
+	<h4 id="devilsknife-react">Reactions</h4>
+
+	<h5 id="devilsknife-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Let the games begin!</d-text>
+	</d-box>
+
+	<h5 id="devilsknife-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It's too, um, evil.</d-text>
+	</d-box>
+
+	<h5 id="devilsknife-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>...? It smiled at me?</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="autoaxe">Auto Axe</h3> <!-- weapon id 17 -->
+
+	<h4 id="autoaxe-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>Make sure to charge it by<span class="break"></span> plugging it into the wall.</d-text>
+	</d-box>
+
+	<h4 id="autoaxe-react">Reactions</h4>
+
+	<h5 id="autoaxe-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>*chainsaw noises* Hahaha!!</d-text>
+	</d-box>
+
+	<h5 id="autoaxe-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>(Is this a good idea?)</d-text>
+	</d-box>
+
+	<h5 id="autoaxe-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>*zrrt* A-AHH! Scared myself...</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="toxicaxe">Toxic Axe</h3> <!-- weapon id 24 -->
+
+	<h4 id="toxicaxe-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>An axe used to clear wastelands<span class="break"></span> in a fetid swamp. Not poison, but gross.</d-text>
+	</d-box>
+
+	<h4 id="toxicaxe-react">Reactions</h4>
+
+	<h5 id="toxicaxe-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Eat dirt, losers.</d-text>
+	</d-box>
+
+	<h5 id="toxicaxe-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Could I wash it off first?</d-text>
+	</d-box>
+
+	<h5 id="toxicaxe-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>N-no way! Susie wouldn't use that!</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="justiceaxe">Justice Axe</h3> <!-- weapon id 52 -->
+
+	<h4 id="justiceaxe-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>It has no special powers. However, in order to attain this item, you became much stronger!</d-text>
+	</d-box>
+
+	<h4 id="justiceaxe-react">Reactions</h4>
+
+	<h5 id="justiceaxe-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Watch this, old man!</d-text>
+	</d-box>
+
+	<h5 id="justiceaxe-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>... isn't Susie amazing?</d-text>
+	</d-box>
+
+	<h5 id="justiceaxe-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>... Susie beat up an old man!?</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="absorbax">Absorb Ax</h3> <!-- weapon id 54 -->
+
+	<h4 id="absorbax-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A long, curved axe with an indent.</d-text>
+		<d-text>Scoop up HP when you attack.</d-text>
+	</d-box>
+
+	<h4 id="absorbax-react">Reactions</h4>
+
+	<h5 id="absorbax-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Scoopin' time.</d-text>
+	</d-box>
+
+	<h5 id="absorbax-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Don't scoop me!</d-text>
+	</d-box>
+
+	<h5 id="absorbax-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>That red... is that blood?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="scarves">
+	<h2>Ralsei's scarves</h2>
+	<p>The scarves listed in this section can only be equipped by Ralsei.</p>
+
+	<h3 id="redscarf">Red Scarf</h3> <!-- weapon id 3 -->
+
+	<h4 id="redscarf-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A basic scarf made of lightly<span class="break"></span> magical fiber.</d-text>
+	</d-box>
+
+	<h4 id="redscarf-react">Reactions</h4>
+
+	<h5 id="redscarf-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>No. Just... no.</d-text>
+	</d-box>
+
+	<h5 id="redscarf-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Comfy! Touch it, Kris!</d-text>
+	</d-box>
+
+	<h5 id="redscarf-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Huh? No, I'm not cold.</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="ragger">Ragger</h3> <!-- weapon id 9 -->
+
+	<h4 id="ragger-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A rugged scarf that cuts enemies like a dagger.</d-text>
+	</d-box>
+
+	<h4 id="ragger-react">Reactions</h4>
+
+	<h5 id="ragger-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Ow! That can't be comfy!</d-text>
+	</d-box>
+
+	<h5 id="ragger-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Feels prickly... Nice!</d-text>
+	</d-box>
+
+	<h5 id="ragger-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Ouch! ... kind of nice</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="daintyscarf">Dainty Scarf</h3> <!-- weapon id 10 -->
+
+	<h4 id="daintyscarf-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>Delicate scarf that increases healing<span class="break"></span> power but has no attack.</d-text>
+	</d-box>
+
+	<h4 id="daintyscarf-react">Reactions</h4>
+
+	<h5 id="daintyscarf-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>IT'S MADE OF DOILIES!</d-text>
+	</d-box>
+
+	<h5 id="daintyscarf-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>I'll protect everyone!</d-text>
+	</d-box>
+
+	<h5 id="daintyscarf-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>S-stop covering me with it!</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="cheerscarf">Cheer Scarf</h3> <!-- weapon id 15 -->
+
+	<h4 id="cheerscarf-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A scarf with colorful you-can-do-it<span class="break"></span> imagery. Gains more TP from criticals.</d-text>
+	</d-box>
+
+	<h4 id="cheerscarf-react">Reactions</h4>
+
+	<h5 id="cheerscarf-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Smiley faces? Ecch.</d-text>
+	</d-box>
+
+	<h5 id="cheerscarf-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>You can do it!</d-text>
+	</d-box>
+
+	<h5 id="cheerscarf-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Now THIS is a tacky scarf! Faha!</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="fiberscarf">Fiber Scarf</h3> <!-- weapon id 18 -->
+
+	<h4 id="fiberscarf-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A scarf made of soft microfiber.</d-text>
+		<d-text>Balances attack and magic.</d-text>
+	</d-box>
+
+	<h4 id="fiberscarf-react">Reactions</h4>
+
+	<h5 id="fiberscarf-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>(Soft...)</d-text>
+	</d-box>
+
+	<h5 id="fiberscarf-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Oh! My fur's staticy!</d-text>
+	</d-box>
+
+	<h5 id="fiberscarf-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Sure, I'll... huh? It's a weapon?</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="ragger2">Ragger 2</h3> <!-- weapon id 19 -->
+
+	<h4 id="ragger2-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A sharp and scratchy scarf.</d-text>
+		<d-text>Worse healing, better attack.</d-text>
+	</d-box>
+
+	<h4 id="ragger2-react">Reactions</h4>
+
+	<h5 id="ragger2-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>This is Ralsei's deal.</d-text>
+	</d-box>
+
+	<h5 id="ragger2-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>I'm a prickly prince!</d-text>
+	</d-box>
+
+	<h5 id="ragger2-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(It's like Santa's beard?)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="puppetscarf">Puppet Scarf</h3> <!-- weapon id 21 -->
+
+	<h4 id="puppetscarf-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A scarf made of strange strings.</d-text>
+		<d-text>For those that abandon healing.</d-text>
+	</d-box>
+
+	<h4 id="puppetscarf-react">Reactions</h4>
+
+	<h5 id="puppetscarf-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>No way, that's creepy.</d-text>
+	</d-box>
+
+	<h5 id="puppetscarf-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>If I have to fight...</d-text>
+	</d-box>
+
+	<h5 id="puppetscarf-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(Feels like guitar strings...)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="flexscarf">Flex Scarf</h3> <!-- weapon id 25 -->
+
+	<h4 id="flexscarf-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A scarf that is warm and fuzzy, but with<span class="break"></span> a metal core that lets it keep its shape.</d-text>
+	</d-box>
+
+	<h4 id="flexscarf-react">Reactions</h4>
+
+	<h5 id="flexscarf-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Looks like a giant caterpillar.  </d-text>
+	</d-box>
+
+	<h5 id="flexscarf-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>So pliable, like me!</d-text>
+	</d-box>
+
+	<h5 id="flexscarf-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Twist it and... it's a wreath!</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="scarfmark">Scarf Mark</h3> <!-- weapon id 51 -->
+
+	<h4 id="scarfmark-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A thin scarf with a deep sheen. Holy writing has been pressed into it, imbuing it with magic.</d-text>
+	</d-box>
+
+	<h4 id="scarfmark-react">Reactions</h4>
+
+	<h5 id="scarfmark-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Heheh...</d-text>
+	</d-box>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Don't write that on it!!</d-text>
+	</d-box>
+
+	<h5 id="scarfmark-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>I'll keep my place.</d-text>
+	</d-box>
+
+	<h5 id="scarfmark-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Look, ribbon dancing!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="rings">
+	<h2>Noelle's rings</h2>
+	<p>The rings listed in this section can only be equipped by Noelle.</p>
+
+	<h3 id="snowring">Snow Ring</h3> <!-- weapon id 12 -->
+
+	<h4 id="snowring-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A ring with the emblem of the<span class="break"></span> snowflake</d-text>
+	</d-box>
+
+	<h4 id="snowring-react">Reactions</h4>
+
+	<h5 id="snowring-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Smells like Noelle</d-text>
+	</d-box>
+
+	<h5 id="snowring-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Are you... proposing?</d-text>
+	</d-box>
+
+	<h5 id="snowring-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(Thank goodness...)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="thornring">Thorn Ring</h3> <!-- weapon id 13 -->
+
+	<h4 id="thornring-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>Wearer takes damage from pain</d-text>
+		<d-text>Reduces the TP cost of ice spells</d-text>
+	</d-box>
+
+	<h4 id="thornring-react">Reactions</h4>
+
+	<h5 id="thornring-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>A torture device?</d-text>
+	</d-box>
+
+	<h5 id="thornring-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+
+	<h5 id="thornring-react-noelle">Noelle</h5>
+	<p class="note">Noelle is silent.</p>
+
+
+	<hr>
+
+
+	<h3 id="freezering">Freeze Ring</h3> <!-- weapon id 22 -->
+
+	<h4 id="freezering-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A ring with a snowglobe on it.</d-text>
+		<d-text>... is that someone inside?</d-text>
+	</d-box>
+
+	<h4 id="freezering-react">Reactions</h4>
+
+	<h5 id="freezering-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Heh, you steal this? Heh.</d-text>
+	</d-box>
+
+	<h5 id="freezering-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It's beautiful...</d-text>
+	</d-box>
+
+	<h5 id="freezering-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="other">
+	<h2>Other weapons</h2>
+	<p>Equippable by multiple or no party members.</p>
+
+	<h3 id="everybodyweapon">Everybody Weapon</h3> <!-- weapon id 4 -->
+	<p>Equippable by Kris, Susie, Ralsei, and Noelle.</p>
+
+	<h4 id="everybodyweapon-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>It felt right for everyone.</d-text>
+	</d-box>
+
+	<h4 id="everybodyweapon-react">Reactions</h4>
+
+	<h5 id="everybodyweapon-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Uhhh... Ok.</d-text>
+	</d-box>
+
+	<h5 id="everybodyweapon-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>A perfect fit!</d-text>
+	</d-box>
+
+	<h5 id="everybodyweapon-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Wh... what is this?</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="brokensword">Broken Sword</h3> <!-- weapon id 20 -->
+	<p>Cannot be equipped by any party member.</p>
+
+	<h4 id="brokensword-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A rejected sword cut into 2 pieces.</d-text>
+		<d-text>Not even you can equip this...</d-text>
+	</d-box>
+
+	<h4 id="brokensword-react">Reactions</h4>
+
+	<h5 id="brokensword-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... this is trash.</d-text>
+	</d-box>
+
+	<h5 id="brokensword-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Should we fix this...?</d-text>
+	</d-box>
+
+	<h5 id="brokensword-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(Wh... why give this to me?)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="blackshard">Black Shard</h3> <!-- weapon id 26 -->
+	<p>Equippable by Kris and Noelle. Dark World equivalent of the <a href="{{ '/misc/lightitems#blackshard' | relative_url }}">Black Shard (Light World)</a>.</p>
+
+	<h4 id="blackshard-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A dagger-like shard of the Black Knife.</d-text>
+		<d-text>Strikes the weakness of dark-element enemies.</d-text>
+	</d-box>
+
+	<h4 id="blackshard-react">Reactions</h4>
+
+	<h5 id="blackshard-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... how is this a weapon?</d-text>
+	</d-box>
+
+	<h5 id="blackshard-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>I... shouldn't use it.</d-text>
+	</d-box>
+
+	<h5 id="blackshard-react-noelle">Noelle</h5>
+	<p class="note">Noelle is silent.</p>
+
+
+	<hr>
+
+
+	<h3 id="jingleblade">Jingle Blade</h3> <!-- weapon id 50 -->
+	<p>Equippable by Kris and Noelle. Dark World equivalent of the <a href="{{ '/misc/lightitems#holidaypencil' | relative_url }}">Holiday Pencil</a>.</p>
+
+	<h4 id="jingleblade-description">Description</h4>
+	<d-box theme="objmenu">
+		<d-text>A lance-like sword with red-and-white stripes.</d-text>
+		<d-text>Perfect for jousting.</d-text>
+	</d-box>
+
+	<h4 id="jingleblade-react">Reactions</h4>
+
+	<h5 id="jingleblade-react-susie">Susie</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Sleigh the bad guys.</d-text>
+	</d-box>
+
+	<h5 id="jingleblade-react-ralsei">Ralsei</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Mmm! Minty and festive!</d-text>
+	</d-box>
+
+	<h5 id="jingleblade-react-noelle">Noelle</h5>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>What is this, a barber pole?</d-text>
+	</d-box>
+</section>
