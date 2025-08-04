@@ -103,6 +103,7 @@ class DialogueSprite extends HTMLElement {
 			|| (speaker === "Susie" && variant === "noeyes" && emotionIndex === 11)
 			|| (speaker === "Seam" && emotionIndex !== 1)
 			|| (speaker === "Rouxls" && variant === "shop")
+			|| (speaker === "Spamton" && emotionIndex !== 0)
 		);
 
 		return (

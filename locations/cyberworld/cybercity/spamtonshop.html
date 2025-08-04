@@ -1,0 +1,654 @@
+---
+title: Spamton's shop
+
+description: >
+  <p>Text and dialogue from Spamton's storefront in the Trash Zone of Cyber World.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_shop_ch2_spamton_Draw_0
+    chapters: [2]
+  -
+    name: gml_Object_obj_shop_ch2_spamton_Create_0
+    chapters: [2]
+    note: buyable items
+
+see_also:
+  -
+    url: /locations/cyberworld/spamtonshopexterior
+    name: Cutscenes before/after visiting the shop for the first time
+
+toc:
+  -
+    id: mainscreen
+    name: Main screen
+    subheadings:
+    -
+      id: initial
+      name: Initial entrance
+    -
+      id: postexit
+      name: After exiting a menu
+  -
+    id: buy
+    name: Buy
+    subheadings:
+      -
+        id: itemlist
+        name: Items for sale
+      -
+        id: initialbuy
+        name: Initial buying
+      -
+        id: confirmbuy
+        name: Making a purchase
+      -
+        id: cancelbuy
+        name: Backing out of a purchase
+      -
+        id: nomoney
+        name: Not enough D$
+      -
+        id: storagefull
+        name: Storage full
+  -
+    id: sell
+    name: Sell
+    subheadings:
+    -
+      id: sellitem
+      name: Initial item sale screen
+    -
+      id: sellweapon
+      name: Initial weapon sale screen
+    -
+      id: sellarmor
+      name: Initial armor sale screen
+    -
+      id: sellempty
+      name: Selling with empty inventory
+    -
+      id: confirmsale
+      name: Making a sale
+    -
+      id: sellall
+      name: Selling the last of your items/armor/weapons
+    -
+      id: cancelsale
+      name: Backing out of a sale
+    -
+      id: sellspecial
+      name: Trying to sell special items
+    -
+      id: sellfail
+      name: Empty slot
+  -
+    id: talkch2
+    name: Talk - Chapter 2
+    subheadings:
+    -
+      id: ch2prenojevil
+      name: Before Cyber World, if you don't have Jevil's Shadow Crystal
+    -
+      id: ch2prehavejevil
+      name: Before Cyber World, if you have Jevil's Shadow Crystal
+    -
+      id: ch2posthavejevil
+      name: After Cyber World, if you defeated Jevil but not Spamton NEO
+    -
+      id: ch2posthavespamton
+      name: After Cyber World, if you defeated Spamton NEO but not Jevil
+    -
+      id: ch2posthaveboth
+      name: After Cyber World, if you defeated both Jevil and Spamton NEO
+    -
+      id: ch2posthaveneither
+      name: After Cyber World, if you got neither Shadow Crystal
+  -
+    id: talkch4
+    name: Talk - Chapter 4
+    subheadings:
+    -
+      id: ch4standard
+      name: Standard
+    -
+      id: ch4nocrystal
+      name: If you didn't get the Knight's Shadow Crystal
+    -
+      id: ch4allcrystalsfirst
+      name: If you got all 3 Shadow Crystals, first time
+    -
+      id: ch4allcrystalsnext
+      name: If you got all 3 Shadow Crystals, subsequent times
+  -
+    id: exit
+    name: Exit
+---
+{% comment %}
+* menu
+	1. buy
+	11. Sell Items
+	12. Sell Weapons
+	13. Sell Armor
+	14. Sell Pocket Items
+* sidemessage
+	0. Initial buying
+	1. Making a purchase, item placed in inventory
+	2. Backing out of a purchase
+	3. Not enough D$
+	4. Storage full
+	5. Making a purchase, item placed in storage
+* sidemessage2
+	0. Initial selling (items/weapons/armor)
+	1. Making a sale
+	2. Backing out of a sale
+	3. Trying to sell unsellable item
+	4. Trying to sell nothing #mynothing (Empty slot)
+{% endcomment -%}
+
+
+
+<section class="d-section" id="mainscreen">
+	<h2>Main screen</h2>
+
+	<h3 id="initial">Initial entrance</h3>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopleft">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>HEY EVERY &nbsp; &nbsp; &nbsp; !</d-text>
+		<d-text asterisk>IT'S ME, SPAMTON G.<span class="break"></span> <span class="break"></span>SPAMTON!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="postexit">After exiting a menu</h3>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopleft">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>HURRY UP AND BUY!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="buy">
+	<h2>BUY</h2>
+	<p>Prices are listed as "&lt;#&gt; KROMER" and fluctuate every half-second. Your current money is also listed as "&lt;#&gt; KROMER". The usual "Exit" option instead reads, in an oversized font, "RUN AWAY".</p>
+
+	<h3 id="itemlist">Items for sale</h3>
+	<h4 id="darkcandy">KeyGen</h4>
+	<d-box theme="shopdesc">
+		<d-text>KEYITEM </d-text>
+		<d-text>100%<span class="break"></span> CERTIFIED<span class="break"></span> WAREZ</d-text>
+	</d-box>
+	<h4>S. POTION</h4>
+	<p>Actually <a href="{{ '/misc/darkitems#spoison' | relative_url }}">S.POISON</a>.</p>
+	<d-box theme="shopdesc">
+		<d-text>ITEM </d-text>
+		<d-text>ITEM</d-text>
+		<d-text>AFFECTS HP<span class="break"></span> A LOT!</d-text>
+		<d-text>THE SMOOTH<span class="break"></span> TASTE OF</d-text>
+	</d-box>
+	<h4>''THE BIG ONE''</h4>
+	<p>Actually the <a href="{{ '/misc/equipment#brokensword' | relative_url }}">Broken Sword</a>.</p>
+	<d-box theme="shopdesc">
+		<d-text>CUT ANYTHING</d-text>
+		<d-text>2 PIECES!</d-text>
+		<d-text>CRIMINAL!</d-text>
+	</d-box>
+	<h4>BSHOT BOWTIE</h4>
+	<p>Actually the <a href="{{ '/misc/equipment#frayedbowtie' | relative_url }}">Frayed Bowtie</a>.</p>
+	<d-box theme="shopdesc">
+		<d-text>EXCLUSIVE<span class="break"></span> OFFICIAL<span class="break"></span> SPAMTON</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="initialbuy">Initial buying</h3>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>DEALS SO GOOD I'LL [$!$$] MYSELF!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="considerbuy">Considering a purchase</h3>
+	<p class="note">Text overflows the box as in the game.</p>
+	<d-box theme="shopright">
+		<d-text>TRANSMIT <span style="white-space: pre">&lt;VALUE&gt; KROMER ?</span></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="confirmbuy">Making a purchase</h3>
+	<h4>If item goes to inventory</h4>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>DELICIOUS KROMER</d-text>
+	</d-box>
+	<h4>If item goes to storage</h4>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>[Storing up for the winter!]</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="cancelbuy">Backing out of a purchase</h3>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>WHAT!?<span class="break"></span> YOU WERE<span class="break"></span> SO CLOSE!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="nomoney">Not enough D$</h3>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>MONEY NO</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="storagefull">Storage full</h3>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>YOU HAVE TOO MUCH<span class="break"></span> <span class="break"></span>MONEY</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="buymore">
+	<h2>BUYMORE!!!</h2>
+	<p>Takes the usual place of the Sell menu. Leads to the <a href="#buy">BUY menu</a>.</p>
+</section>
+
+<section class="d-section" id="talk">
+	<h2>TALKING</h2>
+	<p>The usual "Exit" option instead reads "EXIT AND BUY MORE!!!"</p>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Spamton</d-speaker>
+		<d-text>LET'S MAKE A DEAL.</d-text>
+	</d-box>
+
+	<h3 id="ourdeal">OUR DEAL</h3>
+	<p>Gets replaced by <a href="#givedisk" class="yellow">GIVE DISK</a> after the <a href="{{ '/misc/darkitems#emptydisk' | relative_url }}">Empty Disk</a> is obtained.</p>
+	<h4>First time</h4>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>KRIS!!! YOU [Little Sponge]! I KNEW YOU'D COME HERE [[On A Saturday Night]]!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>AFTER ALL, YOU WANNA BE A [Big Shot]! EAHAHAHAHAA!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>BUT HOW? HOW CAN YOU BE?</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>LISTEN. IN THE [Deep Abyss] OF QUEEN'S [Mansion]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[[A Great Deal]] IS WAITING For [[A LimiTed Time Only!]]</d-text>
+		<d-text asterisk>A HEAVEN-PIERCING [[Workout-Ready Body]]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="4" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[[Designed BY The Classics You've Come To Expect! (C)1997]]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>KRIS THAT [Little Nipper] IS OUR [One-way Ticket] TO MAKE YOU [Big]. MAKE ME [Big].</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>BEFORE YOU KNOW IT WE WILL BE TAKING [ A Ride around Town on Our Specil Cungadero]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>VACATIONING IN [Burning acid] WHILE YOU SOAK IN THE [Hyperlink Blocked].</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>BUT KRIS DON'T [Breathe] YET!! THE WAY IS LOCKED BY [High Quality Encryption]!!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>YOU WILL NEVER GET INSIDE.</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="5" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WAIT KRIS LOOK!! HEAR THOSE [Balloons]??? YOU ARE [1000th Customer]!!.</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>AS A [Commemorative Ring] I WILL LET YOU BUY [KeyGen] FROM ME AT [The Low Low Price Of]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="4" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WHAT DO YOU THINK!?!? IT'S SUCH A STEAL, I'M [$!X$]ING MYSELF!!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="5" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>TAKE THIS DEAL AND YOU WILL [[Die]]!!</d-text>
+		<d-text asterisk>IT'S THAT GOOD!!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[BUY] THE KEYGEN FROM ME, UNLOCK THE BASEMENT, AND GET THAT EmptyDisk!!!</d-text>
+	</d-box>
+
+	<h4>Subsequent times before buying the KeyGen</h4>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>KRIS!! BUY [KeyGen] FROM ME AND GO TO QUEEN'S MANSION'S [Luxurious Basement Apartment]!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="7" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WHAT!? GO MYSELF!? KRIS!!!!! NO!!!!!</d-text>
+		<d-text asterisk>THE MEN INSIDE WOULD</d-text>
+		<d-text asterisk>THE MEN INSIDE WOULD</d-text>
+	</d-box>
+
+	<h4>Subsequent times after buying the KeyGen</h4>
+	<p class="note">The track <a href="{% include wikilink page='KEYGEN' %}">KEYGEN</a> plays.</p>
+	<d-sprite speaker="Spamton" emotion="9" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>KEYGEN</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="givedisk" class="yellow">GIVE DISK</h3>
+	<p>Replaces <a href="#ourdeal">OUR DEAL</a> after the Empty Disk is obtained.</p>
+	<d-sprite speaker="Spamton" emotion="4" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>KRIS!!! YOU DID IT!! YOU [[Funky]] LITTLE [[Worm]]! YOU BROUGHT ME THE DISK!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="5" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>HOCHI MAMA!!!! I CAN FEEL THAT [Smooth Taste] ALREADY!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="7" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>... NOW KRIS. DON'T BE GREEDY. HAND OVER. THE DISK.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>THEN WE WILL TRANSFER.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>MY [[Hyperlink Blocked]].</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>THEN. KRIS. AFTER. THIS IS VERY, VERY IMPORTANT.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>GO BACK. AND PUT. THE DISK. BACK. WHERE YOU GOT IT.</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>DO THAT...</d-text>
+		<d-text asterisk>AND YOU HAVE MY [Specil Guaranttee] I WILL [[Pass My Savings Onto You!]]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="4" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>EVERY [Big], EVERY [Shot], EVERY [Hyperlink Blocked], ALL YOURS, KRIS.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>SO WHAT DO YOU SAY? BIG SHOT...</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[[Warning! If you consent to the terms and agreements,]]</d-text>
+		<d-text asterisk>[[OUR STORE is PERMANENTLY Closing Down!!]]</d-text>
+	</d-box>
+	<p class="note">The following choices are presented. In-game, "TRANSFER" is in significantly larger text, while "DO NOT" is tiny.</p>
+	<d-choices theme="dark">
+		<d-option index="0" text="TRANSFER"></d-option>
+		<d-option index="1" text="DO NOT"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-sprite speaker="Spamton" emotion="3" format="shop"></d-sprite>
+		<d-box theme="dark">
+			<d-speaker>Spamton</d-speaker>
+			<d-text asterisk>FINALLY!!! I KNEW YOU WOULD [[Request Accepted]]</d-text>
+		</d-box>
+		<d-sprite speaker="Spamton" emotion="5" format="shop"></d-sprite>
+		<d-box theme="dark">
+			<d-speaker>Spamton</d-speaker>
+			<d-text asterisk>KRIS!!! HERE I GO!!! BEGIN THE [[Transfer]]</d-text>
+		</d-box>
+		<p class="note">The music cuts out. The shop and Spamton are slowly replaced by an empty, grayscale version of the shop. The shop theme starts playing again, but greatly slowed down. No options are left in the menu; pressing [CONFIRM] results in leaving the shop.</p>
+		<p class="note">In the inventory, the Empty Disk is replaced by <a href="{{ '/misc/darkitems#loadeddisk' | relative_url }}">Loaded Disk</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-sprite speaker="Spamton" emotion="7" format="shop"></d-sprite>
+		<d-box theme="dark">
+			<d-speaker>Spamton</d-speaker>
+			<d-text asterisk>TURNING DOWN A BELOVED [[Stranger]]... THAT'S NOT VERY [[Big Shot]] OF YOU, KRIS.</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="aboutyou">ABOUT YOU</h3>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>I USED TO BE NOTHING BUT THE E_MAIL GUY, NOW I'M THE [[It Burns! Ow! Stop! Help Me! It Burns!]] GUY!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="6" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[[Amazed at thi5 amazing transformation? You too can]] HAVE A [[Communion]] WITH [[Unintelligble Laughter]]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>SOON I'LL EVEN SURPASS THAT DAMNED [[Clown Around Town!]]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="4" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>BUT UNLIKE HIM I'M GONNA [[Shoot For the Sky!]] AND  GET ON THE PATH TO ...</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="7" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[[The Big One]]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="6" format="shop"></d-sprite>
+	<d-box theme="dark" style="max-height: 9.25em">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>I'LL GET SO.</d-text>
+		<d-text asterisk>I'LL GET SO.</d-text>
+		<d-text asterisk>I'LL GET SO.</d-text>
+		<d-text asterisk>I'LL GET SO.</d-text>
+		<d-text asterisk>I'LL GET SO.</d-text>
+		<d-text asterisk>I'LL GET SO.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[[Hyperlink blocked.]]</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="knight">KNIGHT</h3>
+	<d-sprite speaker="Spamton" emotion="7" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>SPEAKING OF [[Communion]]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>KRIS, DID YOU KNOW THAT THE KNIGHT...</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="6" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>No, I'm sorry! I'm sorry! I didn't mean to --</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="7" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>TOO MANY EXCESS VACATION DAYS?? TAKE A GOD DAMN VACATION STRAIGHT TO HELL</d-text>
+	</d-box>
+	<p>After this, this option gets replaced by <a href="#friends" class="yellow">FRIENDS</a>.</p>
+
+	<hr>
+
+	<h3 id="friends" class="yellow">FRIENDS</h3>
+	<p>Replaces <a href="#knight">KNIGHT</a>.</p>
+	<d-sprite speaker="Spamton" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>ME? ... FRIENDS?</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>EAHAEHAEHAEHAEH!!!</d-text>
+		<d-text asterisk>KRIS! YOU AND ME. ARE ALREADY [Friend Request Accepted]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WE DON'T NEED ANYONE ELSE!!! WE DON'T NEED [[Easels]] or [[CRTs]]!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="4" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WE DON'T NEED ANY [[Man, Woman, or Child]] [[At Half Price]]!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="5" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WE DON'T NEED [[MIKE]]!!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="8" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>...</d-text>
+		<d-text asterisk>... Mike...</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="7" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>KRIS!!! DON'T BELIEVE [[Anything You See On TV!]]</d-text>
+		<d-text asterisk>THE MAN'S A CRIMINAL, I TELL YOU!! A CRIMINAL!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="fear">FEAR</h3>
+	<h4>First time</h4>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WHAT ARE YOU AFRAID OF??? ACCORDING TO [[Encyclopedia of]] [[Being Afraid]]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>THERE'S NOTHING TO FEAR EXCEPT</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="8" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>... can anyone hear me? Help...</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>HUH??? WHAT?? NO, I DIDN'T HEAR ANYTHING JUST NOW!!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="7" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>... BUT IT SOUNDED LIKE THEY WERE TALKING TO YOU.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="exit">
+	<h2>ESCAPE</h2>
+
+	<h3>Standard</h3>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>DON'T FORGET TO<span class="break"></span> [Like and Subscribe]<span class="break"></span> FOR MORE<span class="break"></span> [Hyperlink Blocked]!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>After purchasing the KeyGen and before entering the Mansion basement</h3>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>MANSION... BASEMENT!</d-text>
+		<d-text asterisk>FIND IT!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>After obtaining the Empty Disk</h3>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>YOU'RE LEAVING!?</d-text>
+		<d-text asterisk>WHAT ABOUT MY DISK!?!?</d-text>
+	</d-box>
+</section>

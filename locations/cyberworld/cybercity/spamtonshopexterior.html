@@ -1,0 +1,129 @@
+---
+title: Outside Spamton's shop
+
+description: >
+  <p>Text and dialogue from the Trash Zone area directly outside Spamton's shop.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [2]
+    note: pre-meeting dialogue
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: pre-entry dialogue
+  -
+    name: gml_Object_obj_ch2_room_spamton_shop_exterior_Step_0
+    chapters: [2]
+    note: post-leaving dialogue
+---
+<section class="d-section" id="door">
+	<h2>Door</h2>
+
+	<h3 id="prespamton">Before meeting Spamton</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(The door is locked.)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time with Noelle in the party only</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+		<d-text asterisk>Kris...? Wh-why did you bring me here...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>No one's home... no, no one's around at all.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>It's... it's so creepy...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="e"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="d"></d-sprite>
+		<d-text asterisk>(At the same time, it's kind of nostalgic...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="preentry">After meeting Spamton</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(The door is unlocked.)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Go Inside"></d-option>
+		<d-option index="1" text="Don't\sgo in"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends here.</p>
+	</d-option-panel>
+	<hr class="hr2">
+	<h5 id="preentry-noelle">If Noelle is in the party</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+		<d-text asterisk>Huh? You want to go in alone...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>... okay, I'll... I'll just wait here...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+		<d-text asterisk>Just, um.... it's... cr-creepy out here, so...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="D"></d-sprite>
+		<d-text asterisk>N-no, you can take your time! It's okay...</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5 id="preentry-susral">If Susie and Ralsei are in the party</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>What? You wanna go in by yourself...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>... whatever. Do what you want.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The music fades out and Kris enters the shop.</p>
+
+	<h4>Subsequent times</h4>
+	<p class="note">Kris enters the shop without commentary.</p>
+
+	<hr>
+
+	<h3 id="postexit">After exiting the shop for the first time, if Susie and Ralsei are in the party</h3>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>... what kinda creepy stuff were you buying anyway?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Nah... like I even wanna know. Yikes.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="G"></d-sprite>
+		<d-text asterisk>She said she hoped if it was candy, you'd share with her...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>SHUT UP!!!</d-text>
+		<d-box>
+			<d-sprite speaker="Susie" emotion="7"></d-sprite>
+			<d-text>Kris?</d-text>
+		</d-box>
+	</d-box>
+</section>

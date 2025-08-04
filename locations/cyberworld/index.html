@@ -1,0 +1,52 @@
+---
+title: Cyber World locations
+
+description: >
+  <p>Index for locations within Cyber World, Chapter 2's Dark World.</p>
+
+toc:
+  -
+    id: cyberfield
+    name: Cyber Field
+  -
+    id: cybercity
+    name: Cyber City
+  -
+    id: queensmansion
+    name: Queen's Mansion
+
+items:
+  -
+    url: cyberfield
+    name: Cyber Field
+  -
+    url: cybercity
+    name: Cyber City
+    sublist:
+      -
+        name: Trash Zone
+        sublist:
+          -
+            url: spamtonshop
+            name: Spamton's shop
+          -
+            url: spamtonshopexterior
+            name: Outside Spamton's shop
+  -
+    url: queensmansion
+    name: Queen's Mansion
+---
+{% for section in page.items -%}
+<section class="d-section" id="{{ section.url }}">
+	<h2>{{ section.name }}</h2>
+	{% assign sectionurl = "/locations/lightworld/" | append: section.url -%}
+
+	<ul>
+		{% for item in section.sublist -%}
+		{% include nested_list_item parent=sectionurl this=item %}
+		{% else %}
+		<li class="gray">To be added!</li>
+		{% endfor %}
+	</ul>
+</section>
+{% endfor -%}
