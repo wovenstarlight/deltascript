@@ -1,5 +1,10 @@
+{% assign mylink = include.item.id -%}
+{% if page.layout == "indexpage" and page.toc == nil -%}
+{% assign mylink = mylink | default: include.item.url -%}
+{% endif -%}
+
 <li>
-	{% if include.item.id %}<a href="#{{ include.item.id }}" {%- if include.item.class %} class="{{ include.item.class }}" {%- endif -%}>{% endif %}
+	{% if mylink %}<a href="#{{ mylink }}" {%- if include.item.class %} class="{{ include.item.class }}" {%- endif -%}>{% endif %}
 
 	{%- if include.item.custom_icon_positions -%}
 		{%- capture icons -%}
@@ -23,7 +28,7 @@
 		{{- include.item.name -}}
 	{%- endif -%}
 
-	{% if include.item.id %}</a>{% endif %}
+	{% if mylink %}</a>{% endif %}
 	{%- if include.item.subheadings %}
 	<ol>
 		{%- for subheading in include.item.subheadings %}

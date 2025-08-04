@@ -32,6 +32,16 @@ layout: default
 			{%- endfor %}
 		</ol>
 	</details>
+	{%- elsif page.layout == 'indexpage' %}
+	{%- comment %} Automatically generate contents from page sections. {% endcomment %}
+	<details id="pagetoc">
+		<summary>Contents</summary>
+		<ol>
+			{%- for heading in page.items %}
+			{% include toc_item item=heading %}
+			{%- endfor %}
+		</ol>
+	</details>
 	{%- endif %}
 
 	{%- if page.see_also %}
