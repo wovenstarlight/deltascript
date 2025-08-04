@@ -1,0 +1,2187 @@
+---
+title: After service
+
+description: >
+  <p>After church service ends, Kris and Susie seek out clues to the bunker codes.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_ch4_PDC03_Step_0
+    chapters: [4]
+    note: waking up
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [4]
+    note: talking to Susie, juice bowl interaction
+  -
+    name: gml_Object_obj_ch4_PDC03A_rudy_toriel_Step_0
+    chapters: [4]
+    note: talking to Rudy and Noelle
+  -
+    name: gml_Object_obj_ch4_PDC03A_alphys_juice_Step_0
+    chapters: [4]
+    note: talking to Alphys
+  -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [4]
+    note: talking to Catty's mother
+  -
+    name: gml_Object_obj_npc_room_facing_Other_10
+    chapters: [4]
+    note: talking to Toriel, Jockington, Bratty, and Ms. Boom
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [4]
+    note: talking to all others
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [4]
+    note: choices
+  -
+    name: gml_Object_obj_ch4_PDC05_Step_0
+    chapters: [4]
+    note: outside church
+
+toc:
+  -
+    id: wakeup
+    name: Waking up
+  -
+    name: Talking to the churchgoers
+    subheadings:
+      -
+        id: susie
+        name: Susie
+      -
+        id: cattymother
+        name: Catty's mother
+      -
+        id: cattyfather
+        name: Catty's father
+      -
+        id: catty
+        name: Catty
+      -
+        id: alvin
+        name: Alvin
+      -
+        id: jockington
+        name: Jockington
+      -
+        id: msboom
+        name: Ms. Boom
+      -
+        id: shyren
+        name: Shyren
+      -
+        id: bratty
+        name: Bratty
+      -
+        id: toriel
+        name: Toriel
+      -
+        id: rudy
+        name: Rudy
+      -
+        id: noelle
+        name: Noelle
+      -
+        id: monsterkid
+        name: Monster Kid
+      -
+        id: snowy
+        name: Snowy
+      -
+        id: snowyfather
+        name: Snowy's father
+      -
+        id: rg01
+        name: RG 01
+      -
+        id: rg02
+        name: RG 02
+      -
+        id: alphys
+        name: Alphys
+  -
+    id: juicebowls
+    name: Juice bowls
+    subheadings:
+      -
+        id: juicebowlspre
+        name: Before making Alphys's juice mix
+      -
+        id: juicebowlspost
+        name: After making Alphys's juice mix
+  -
+    id: end
+    name: Brainstorming with Susie
+    subheadings:
+      -
+        id: end-normal
+        name: On the normal route
+      -
+        id: end-weird
+        name: On the Weird Route
+  -
+    id: outside
+    name: Outside church
+---
+<section class="d-section" id="wakeup">
+	<h2>Waking up</h2>
+
+	<p class="note">The screen is black as Kris sleeps. After a moment, though:</p>
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<!-- intended sprite: 5 -->
+		<d-text asterisk>Kris! Hey, Kris! Get up!</d-text>
+	</d-box>
+	<p class="note">The church is shown, with a standing Susie winding up to kick the pew Kris is sitting on with a bang. She turns to Kris.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>We don't have any time to waste!</d-text>
+	</d-box>
+	<p class="note">Kris stands and faces her.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>We have to get to the bottom of this!</d-text>
+	</d-box>
+	<p class="note">Susie produces two cups of red juice.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>The bottom of these two sweet, sweet, cups of juice.</d-text>
+	</d-box>
+	<p class="note">Susie hands Kris a cup of juice. They tap their cups together in a toast, then proceed to pour the cups dramatically into each other's mouths. Once they're done, their mouths are stained red.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Ahh.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Church flavor.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Anyway, you go ask around about the Shelter codes.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Me? I'll make sure there's nothing hidden...</d-text>
+	</d-box>
+	<p class="note">Susie walks over to the juice bowls, coming to a stop in front of the red bowl. Kris follows after her but instead stops in the aisle.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>... in here.</d-text>
+	</d-box>
+	<p class="note">Susie begins dunking her cup in the bowl to refill it and chugging the juice. The screen pans back up to Kris, who can now talk to the other churchgoers.</p>
+</section>
+
+<section class="d-section" id="susie">
+	<h2>Talking to Susie</h2>
+
+	<h3>Before gathering any clues</h3>
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Hey Kris, I'LL get to the bottom of this juice.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>YOU get to the bottom of the cluice.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Clues. Whatever.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>The longer you trip, the more I'm gonna sip.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>After gathering one clue</h3>
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Hey, you got something?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>... What, you wanna figure more out before you spill it?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If you haven't got Alphys's clue</h5>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Damn, if only Ralsei was there to solve it for you.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Too bad there's a shortage of <span class="yellow">glasses nerds</span> in here.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>If you haven't got the Holidays's clue</h5>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>Man, too bad Noelle can't help us...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>... She'd probably figure this out in no time.</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<h4>Subsequent times</h4>
+	<hr class="hr2">
+	<h5>If you haven't got Alphys's clue</h5>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Damn, if only Ralsei was there to solve it for you.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Too bad there's a shortage of <span class="yellow">glasses nerds</span> in here.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>If you haven't got the Holidays's clue</h5>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>Man, too bad Noelle can't help us...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>... She'd probably figure this out in no time.</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3>After gathering both clues</h3>
+	<p class="note">Susie has drunk all the juice and is staring at the empty bowl.</p>
+	<d-box theme="light">
+		<d-text asterisk>(Tell Susie the info?)</d-text>
+	</d-box>
+	<d-choices theme="light">
+		<d-option index="0" text="Explain\sthe clues"></d-option>
+		<d-option index="1" text="Not yet"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<p class="note">Dialogue proceeds to <a href="#end">brainstorming with Susie</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Dialogue ends here.</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="cattymother">
+	<h2>Talking to Catty's mother</h2>
+
+	<h3>First time</h3>
+	<d-box theme="light">
+		<d-speaker>Catty's mother</d-speaker>
+		<d-text asterisk>Code? If you mean the code to success, look at MY man and MY girl!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Catty's mother</d-speaker>
+		<d-text asterisk>They knocked out the whole damn congregation!! Way to go, family!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="light">
+		<d-speaker>Catty's mother</d-speaker>
+		<d-text asterisk>The congregation was MASSACRED! They got SHUT down!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Catty's mother</d-speaker>
+		<d-text asterisk>No one will ever come here again!!! Cattenheimers stay WINNING!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="cattyfather">
+	<h2>Talking to Catty's father</h2>
+
+	<h3>First time</h3>
+	<d-box theme="light">
+		<d-speaker>Catty's father</d-speaker>
+		<d-text asterisk>My little girl kicked butt today. My big girl, too.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Catty's father</d-speaker>
+		<d-text asterisk>Huh? Code? Locked door? I'm a simple man, Kris, but my <span class="yellow">genius daughter</span> will know!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="light">
+		<d-speaker>Catty's father</d-speaker>
+		<d-text asterisk>Today is a cartoon fish bone grill for all the girls of the house!!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Catty's father</d-speaker>
+		<d-text asterisk>We are crunching bones!! We are feminests!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="catty">
+	<h2>Talking to Catty</h2>
+
+	<h3>First time</h3>
+	<d-box theme="light">
+		<d-sprite speaker="Catty" emotion="2"></d-sprite>
+		<d-text asterisk>KRISSY!!! OMG you came to see me!? SO CUTE!!!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Catty" emotion="5"></d-sprite>
+		<d-text asterisk>Huh? Code? Locked...? Huh? Sorry, don't get it!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Catty" emotion="6"></d-sprite>
+		<d-text asterisk>But, <span class="yellow">Noelley</span> knows a lot about being <span class="yellow">locked</span> out!!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Catty" emotion="2"></d-sprite>
+		<d-text asterisk>And, like, um, codes...? Are for <span class="yellow">NERDS</span>!!! LOL!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="light">
+		<d-sprite speaker="Catty" emotion="6"></d-sprite>
+		<d-text asterisk><span class="yellow">Noelley</span> knows a lot about being <span class="yellow">locked</span> out!!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Catty" emotion="2"></d-sprite>
+		<d-text asterisk>And, like, um, codes...? Are for <span class="yellow">NERDS</span>!!! LOL!!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="alvin">
+	<h2>Talking to Alvin</h2>
+
+	<hr class="hr2">
+	<h3>First time</h3>
+	<d-box theme="light">
+		<d-speaker>Alvin</d-speaker>
+		<d-text asterisk>Ah, Kris. It is most wonderful to see you worshipping here today...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Alvin</d-speaker>
+		<d-text asterisk>And with a friend, too. Did you seek something from me?</d-text>
+	</d-box>
+
+	<hr class="hr3">
+
+	<h3>Subsequent times</h3>
+	<d-box theme="light">
+		<d-speaker>Alvin</d-speaker>
+		<d-text asterisk>Kris, did you seek something from me?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="light">
+		<d-option index="0" text="Enter the \bshelter"></d-option>
+		<d-option index="1" text="Bangin'\ssermon\smy man"></d-option>
+		<d-option index="2" text="Asgore"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<h3>First time</h3>
+		<d-box theme="light">
+			<d-speaker>Alvin</d-speaker>
+			<d-text asterisk>...? Kris? I do not know what you are experiencing recently, but...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Alvin</d-speaker>
+			<d-text asterisk>... Kris, please, look to the Angel for guidance. I will pray for you as well.</d-text>
+		</d-box>
+
+		<hr class="hr2">
+	
+		<h3>Subsequent times</h3>
+		<d-box theme="light">
+			<d-speaker>Alvin</d-speaker>
+			<d-text asterisk>Kris... stay away from the shelter.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<h3>First time</h3>
+		<d-box theme="light">
+			<d-speaker>Alvin</d-speaker>
+			<d-text asterisk>Thank you, Kris. Ha ha. Although I did see that it put you to sleep.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Alvin</d-speaker>
+			<d-text asterisk>I know. I do not exactly have a "flair" for entertainment.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Alvin</d-speaker>
+			<d-text asterisk>That's why I don't write my own sermons. Or... anything, anymore.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Alvin</d-speaker>
+			<d-text asterisk>I don't think my father could rest well knowing I was... tarnishing his legacy.</d-text>
+		</d-box>
+
+		<hr class="hr2">
+	
+		<h3>Subsequent times</h3>
+		<d-box theme="light">
+			<d-speaker>Alvin</d-speaker>
+			<d-text asterisk>Kris, it's good you can get some sleep, even if it's from my words.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Alvin</d-speaker>
+			<d-text asterisk>This is a day of rest, after all.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="light">
+		<h3>First time</h3>
+		<d-box theme="light">
+			<d-speaker>Alvin</d-speaker>
+			<d-text asterisk>Ah, your father? He typically comes here at night.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Alvin</d-speaker>
+			<d-text asterisk>He prays much for you, Kris... for Asriel, Toriel, Rudy... and his flowers, too.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Alvin</d-speaker>
+			<d-text asterisk>You should join your mother in praying for him, as well.</d-text>
+		</d-box>
+
+		<hr class="hr2">
+	
+		<h3>Subsequent times</h3>
+		<d-box theme="light">
+			<d-speaker>Alvin</d-speaker>
+			<d-text asterisk>The poor man. It seems the Angel has made a difficult path for him...</d-text>
+		</d-box>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="jockington">
+	<h2>Talking to Jockington</h2>
+
+	<h3>First time</h3>
+	<d-box theme="light">
+		<d-sprite speaker="Jockington" emotion="0"></d-sprite>
+		<d-text asterisk>Kris. Folled you! Ha Ha, bet you thought I was, Catti!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Jockington" emotion="0"></d-sprite>
+		<d-text asterisk>Today's Game was wild,! I think we Won... What? "Codes?"</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Jockington" emotion="0"></d-sprite>
+		<d-text asterisk>Sorry. don't know That. Never will. Been real.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="light">
+		<d-sprite speaker="Jockington" emotion="0"></d-sprite>
+		<d-text asterisk>For her, I go the big Church Match, as her Substitute Player.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Jockington" emotion="0"></d-sprite>
+		<d-text asterisk>For me, she Covered in Hair Always. We Do What, the other can n't!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="msboom">
+	<h2>Talking to Ms. Boom</h2>
+
+	<h3>First time</h3>
+	<d-box theme="light">
+		<d-speaker>Ms. Boom</d-speaker>
+		<d-text asterisk>Shelter? No, no, now you know that's not a wholesome place!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Ms. Boom</d-speaker>
+		<d-text asterisk>You could stand to learn a thing or two from that polite young man... Burghley.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="light">
+		<d-speaker>Ms. Boom</d-speaker>
+		<d-text asterisk>Just the other day, that young man told me you wavedash.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Ms. Boom</d-speaker>
+		<d-text asterisk>Now I haven't told your mother, but please, for dear shame!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="shyren">
+	<h2>Talking to Shyren</h2>
+
+	<d-box theme="light">
+		<d-text asterisk>(She's shyly running a cup of juice through her gills.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="bratty">
+	<h2>Talking to Bratty</h2>
+
+	<h3>First time</h3>
+	<d-box theme="light">
+		<d-sprite speaker="Bratty" emotion="3"></d-sprite>
+		<d-text asterisk>Code? No clue, I don't go here. I just randomly decided to today.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Bratty" emotion="6"></d-sprite>
+		<d-text asterisk>By the way that girl's reading was, like, SO bad.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Bratty" emotion="5"></d-sprite>
+		<d-text asterisk>It was so awful you can't help but smile, you know? ... Like?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Bratty" emotion="6"></d-sprite>
+		<d-text asterisk>Like, what does <span class="yellow">that girl</span> think she knows?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="light">
+		<d-sprite speaker="Bratty" emotion="0"></d-sprite>
+		<d-text asterisk>... think she'll go to the diner after this? I mean, I am.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Bratty" emotion="6"></d-sprite>
+		<d-text asterisk>Ugh, guess I have to watch her to make sure she doesn't go.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="toriel">
+	<h2>Talking to Toriel</h2>
+
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" variant="church" emotion="1"></d-sprite>
+		<d-text asterisk>Sorry honey, I'm still catching up with Rudy.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" variant="church" emotion="0"></d-sprite>
+		<d-text asterisk>You and Susie can go home earlier if you want to.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="rudy">
+	<h2>Talking to Rudy</h2>
+
+	<h3>On the normal route</h3>
+	<p>If you didn't complete the Weird Route in Chapter 2.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="7"></d-sprite>
+		<d-text asterisk>Hey, Krismas! Look who decided to crawl out of their lil' igloo.</d-text>
+	</d-box>
+	<d-choices theme="light">
+		<d-option index="0" text="Asgore"></d-option>
+		<d-option index="1" text="Key"></d-option>
+		<d-option index="2" text="Noelle"></d-option>
+	</d-choices>
+
+	<d-option-panel index="0" theme="light">
+		<h4>First time</h4>
+		<d-box theme="light">
+			<d-sprite speaker="Toriel" variant="church" emotion="2"></d-sprite>
+			<d-text asterisk>I am grateful for your wife's...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="0"></d-sprite>
+			<d-text asterisk>Carol's.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Toriel" variant="church" emotion="1"></d-sprite>
+			<d-text asterisk>Your wife's... financial support to him.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Toriel" variant="church" emotion="6"></d-sprite>
+			<d-text asterisk>I just wish she did not support his, er...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Toriel" variant="church" emotion="7"></d-sprite>
+			<d-text asterisk>His... you know what.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="7"></d-sprite>
+			<d-text asterisk>His "you know what?"</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Toriel" variant="church" emotion="5"></d-sprite>
+			<d-text asterisk>One more word and you're soaked, Mr. Holiday.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="2"></d-sprite>
+			<d-text asterisk>"One more word!"</d-text>
+		</d-box>
+		<p class="note">Toriel throws the contents of her glass in Rudy's face, stunning him and Noelle. After a moment, both relax and Rudy starts laughing.</p>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="3"></d-sprite>
+			<d-text asterisk>Fahaha, what was I supposed to say, sweetheart?</d-text>
+		</d-box>
+
+		<h4>Subsequent times</h4>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="3"></d-sprite>
+			<d-text asterisk>Hey, if YOU don't support his you know what...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="2"></d-sprite>
+			<d-text asterisk>That just means WE gotta!</d-text>
+			<d-box>
+				<d-sprite speaker="Toriel" variant="church" emotion="3"></d-sprite>
+				<d-text asterisk>(Kris, please bring up a new topic)</d-text>
+			</d-box>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="2"></d-sprite>
+			<d-text asterisk>Key-lime-pie? Boy, do I have some memories of that.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Toriel" variant="church" emotion="3"></d-sprite>
+			<d-text asterisk>Not here, Rudy. This is a holy place.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="light">
+		<d-box theme="light">
+			<d-sprite speaker="Toriel" variant="church" emotion="9"></d-sprite>
+			<d-text asterisk>Noelle, your singing has gotten so lovely...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Toriel" variant="church" emotion="4"></d-sprite>
+			<d-text asterisk>You, Kris, and Asriel should perform sometime!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+			<d-text asterisk>Huh? Umm, it would be nice to go caroling together...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-box place="top left">
+				<d-sprite speaker="Rudy" emotion="4"></d-sprite>
+				<d-text asterisk>(Kris will sing swears.)</d-text>
+			</d-box>
+			<d-box place="center">
+				<d-sprite speaker="Noelle" emotion="H"></d-sprite>
+				<d-text asterisk>(Kris will sing swears.)</d-text>
+			</d-box>
+			<d-box>
+				<d-sprite speaker="Toriel" variant="church" emotion="5"></d-sprite>
+				<d-text asterisk>(Kris will sing swears.)</d-text>
+			</d-box>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3>On the Weird Route</h3>
+	<p>If you completed the Weird Route in Chapter 2.</p>
+
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="2"></d-sprite>
+		<d-text asterisk>Krismeister, hey! What's the deal, snowmobile?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="1"></d-sprite>
+		<d-text asterisk>... huh? "Locked out...?"</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="5"></d-sprite>
+		<d-text asterisk>(Noelle... wasn't stuck outside the gate again, was she, Kris...?)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="6"></d-sprite>
+		<d-text asterisk>(...  Carol... damn, I keep telling her to keep a key at City Hall...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="5"></d-sprite>
+		<d-text asterisk>(But she insists on keeping everything important at home.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="2"></d-sprite>
+		<d-text asterisk>(Like, when Noelle was a kid...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="0"></d-sprite>
+		<d-text asterisk>(She made paper snowflakes, for Carol to hang up at work...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="5"></d-sprite>
+		<d-text asterisk>(But Carol just... wouldn't take 'em there.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="6"></d-sprite>
+		<d-text asterisk>(Because she wanted to keep the damn things safe.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="5"></d-sprite>
+		<d-text asterisk>(She preserved 'em, and stuck 'em up on the wall at home...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="4"></d-sprite>
+		<d-text asterisk>(... course, you know Noelle, she had to cry over that.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="2"></d-sprite>
+		<d-text asterisk>(Until she went and made snow angels with you guys...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="4"></d-sprite>
+		<d-text asterisk>(...  After that, she forgot she was sad at all.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="2"></d-sprite>
+		<d-text asterisk>(...  Anyway, what was I saying?)</d-text>
+	</d-box>
+
+	<hr class="hr2">
+	<h5>If you haven't got Alphys's clue yet</h5>
+	<d-box theme="light">
+		<d-text asterisk>(Felt like useful information.)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>If you already got Alphys's clue</h5>
+	<d-box theme="light">
+		<d-text asterisk>(... Felt like you gathered enough clues to tell Susie.)</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="5"></d-sprite>
+		<d-text asterisk>(Y'know, this morning, Noelle was saying...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="2"></d-sprite>
+		<d-text asterisk>("I wonder... if Kris is going tomorrow, too.")</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Rudy" emotion="3"></d-sprite>
+		<d-text asterisk>(Just... make sure she has fun, all right?)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="noelle">
+	<h2>Talking to Noelle</h2>
+
+	<h3>On the normal route</h3>
+	<p>If you didn't complete the Weird Route in Chapter 2.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="0"></d-sprite>
+		<d-text asterisk>Hi, Kris! Kinda funny seeing you here without Asriel, faha.</d-text>
+	</d-box>
+	<d-choices theme="light">
+		<d-option index="0" text="Nice singing"></d-option>
+		<d-option index="1" text="Key"></d-option>
+		<d-option index="2" text="Locked door"></d-option>
+	</d-choices>
+
+	<d-option-panel index="0" theme="light">
+		<h4>First time</h4>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+			<d-text asterisk>H... huh? Thanks! Where'd that come from?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+			<d-text asterisk>I don't think you've ever... complimented me, before. Fahaha.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+			<d-text asterisk>You know, if you wanted to join the choir, you could...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+			<d-text asterisk>I always missed, um... liked hearing you play the piano.</d-text>
+		</d-box>
+
+		<h4>Subsequent times</h4>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+			<d-text asterisk>... I mean, sometimes I miss...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text asterisk>I mean, I always liked hearing you play the piano.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<h4>First time</h4>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+			<d-text asterisk>Huh? K... Key? You don't mean...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="H"></d-sprite>
+			<d-text asterisk>You don't mean I was singing off-key?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Toriel" variant="church" emotion="5"></d-sprite>
+			<d-text asterisk>Kris, don't tease Noelle.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Rudy" emotion="3"></d-sprite>
+			<d-text asterisk>Yeah, or I'll kick your ass!</d-text>
+			<d-box>
+				<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+				<d-text asterisk>D-dad!</d-text>
+			</d-box>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Toriel" variant="church" emotion="5"></d-sprite>
+			<d-text asterisk>Rudy!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Toriel" variant="church" emotion="4"></d-sprite>
+			<d-text asterisk>... but he's right, Kris.</d-text>
+			<d-box>
+				<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+				<d-text asterisk>T... Toriel!</d-text>
+			</d-box>
+		</d-box>
+
+		<h4>Subsequent times</h4>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>Kris, I'm getting better at singing, you know.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+			<d-text asterisk>The times of you covering your ears while I scream Jingle Bells...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+			<d-text asterisk>Those are... over, y'know?</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="light">
+		<h4>First time</h4>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+			<d-text asterisk>Huh...? You mean, um... how I... got locked out of my house?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text asterisk>That's why I... well, I used to end up at your place sometimes.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+			<d-text asterisk>Y'know, you'd help me... faha, break into my own room.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+			<d-text asterisk>Even then, my mom... never gave your family a spare key.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text asterisk>She never even kept anything at City Hall, either.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+			<d-text asterisk>No keys, no documents, no... handmade gifts, anything.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+			<d-text asterisk>Everything important... she always...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+			<d-text asterisk>... keeps locked down at home.</d-text>
+		</d-box>
+
+		<hr class="hr2">
+		<h5>If you haven't got Alphys's clue yet</h5>
+		<d-box theme="light">
+			<d-text asterisk>(Felt like useful information.)</d-text>
+		</d-box>
+		<hr class="hr3">
+		<h5>If you already got Alphys's clue</h5>
+		<d-box theme="light">
+			<d-text asterisk>(... Felt like you gathered enough clues to tell Susie.)</d-text>
+		</d-box>
+		<hr class="hr2">
+
+		<h4>Subsequent times</h4>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text asterisk>Oh, I see! That, wasn't a question, at all!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+			<d-text asterisk>You're just, repeating the same words, like a parrot!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="H"></d-sprite>
+			<d-text asterisk>(I shouldn't have answered so seriously.)</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3>On the Weird Route</h3>
+	<p>If you completed the Weird Route in Chapter 2.</p>
+
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>... Kris? You came over to... check on me?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>That's really nice of you, I...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>... Do you... think I could talk you later?</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Key? Umm, yeah, I think I was singing a bit off-key...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Fahaha, can you blame me for being distracted?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>After gathering both clues</h3>
+	<d-box theme="light">
+		<d-text asterisk>(Clues acquired.)</d-text>
+		<d-text asterisk>(Now you can report the hint to Susie.)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>Normal route only</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>... hello? Earth to Kris? Personal space?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="monsterkid">
+	<h2>Talking to Monster Kid</h2>
+
+	<h3>First time</h3>
+	<d-box theme="light">
+		<d-speaker>Monster Kid</d-speaker>
+		<d-text asterisk>Yo, Kris! Didn't expect to see you here... And with S-Susie.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If you <a href="{{ '/chapters/chapter2/shelter' | relative_url }}">checked the shelter with Susie during Chapter 2</a></h4>
+	<d-box theme="light">
+		<d-speaker>Monster Kid</d-speaker>
+		<d-text asterisk>You know, last time... At the shelter... Yo, that wasn't cool, haha.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>If you didn't check the shelter with Susie during Chapter 2</h4>
+	<d-box theme="light">
+		<d-speaker>Monster Kid</d-speaker>
+		<d-text asterisk>It's cool you're kind of... you're kind of, like, taming her. Haha.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="light">
+		<d-option index="0" text="Shelter"></d-option>
+		<d-option index="1" text="Susie will\snot be\stamed"></d-option>
+	</d-choices>
+
+	<d-option-panel index="0" theme="light">
+		<h4>If you checked the shelter with Susie</h4>
+		<d-box theme="light">
+			<d-speaker>Monster Kid</d-speaker>
+			<d-text asterisk>K-Kris...? Kris, yo, Kris. the weenie thing was just a bad Snowy joke!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Monster Kid</d-speaker>
+			<d-text asterisk>You... you don't have to p-prove anything, okay?</d-text>
+		</d-box>
+
+		<h4>If you didn't check the shelter with Susie</h4>
+		<d-box theme="light">
+			<d-speaker>Monster Kid</d-speaker>
+			<d-text asterisk>Huh? Susie... Susie's making you ask, isn't she?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Monster Kid</d-speaker>
+			<d-text asterisk>Kris, learn to say no to her, haha. ... for both of us.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<d-box theme="light">
+			<d-speaker>Monster Kid</d-speaker>
+			<d-text asterisk>S-sure, Kris. Just as long as you have her spare us, okay? Haha...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Monster Kid</d-speaker>
+			<d-text asterisk>... Kris?</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="light">
+		<d-speaker>Monster Kid</d-speaker>
+		<d-text asterisk>Umm... Kris, if you wanna know something...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Monster Kid</d-speaker>
+		<d-text asterisk><span class="yellow">Our teacher</span> is right over there, y'know!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="snowy">
+	<h2>Talking to Snowy</h2>
+
+	<d-box theme="light">
+		<d-speaker>Snowy</d-speaker>
+		<d-text asterisk>Kris! Put anything in your hair before you come here today? No?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Snowy</d-speaker>
+		<d-text asterisk>... you mean you "ain't gel" it!? HAHA! Get it!? Angel? Ain't gel!?</d-text>
+	</d-box>
+	<d-choices theme="light">
+		<d-option index="0" text="Shelter"></d-option>
+		<d-option index="1" text="Laugh"></d-option>
+		<d-option index="2" text="Don't laugh"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<d-box theme="light">
+			<d-speaker>Snowy</d-speaker>
+			<d-text asterisk>Shelter? I hardly know 'er! HAHAHAHA!!! ... what?</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<d-box theme="light">
+			<d-speaker>Snowy</d-speaker>
+			<d-text asterisk>Haha! Pretty good, right, Kris? Why don't we hang out more, anyway?</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="light">
+		<d-box theme="light">
+			<d-speaker>Snowy</d-speaker>
+			<d-text asterisk>What!? It's not funny!? Do humans not have any sense of humor or something?</d-text>
+		</d-box>
+		<p class="note">Monster Kid turns to Snowy.</p>
+		<d-box theme="light">
+			<d-speaker>Monster Kid</d-speaker>
+			<d-text asterisk>(Yo, Snowy, u-um...)</d-text>
+		</d-box>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="snowyfather">
+	<h2>Talking to Snowy's father</h2>
+
+	<h3>First time</h3>
+	<d-box theme="light">
+		<d-speaker>Snowy's father</d-speaker>
+		<d-text asterisk>Hey, be nice to ya muddah. You're all she talks about at qwhyah.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Snowy's father</d-speaker>
+		<d-text asterisk>You're her little snowball... Her little slushy. Make ya muddah proud, Kris.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="light">
+		<d-speaker>Snowy's father</d-speaker>
+		<d-text asterisk>Kris, be nice to ya muddah, ya faddah, ya bruddah, and all uddahs.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="rg01">
+	<h2>Talking to RG 01</h2>
+
+	<h3>First time</h3>
+	<d-box theme="light">
+		<d-speaker>RG 01</d-speaker>
+		<d-text asterisk>I'm not too religious, man, but I just, like, love coming here.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>RG 01</d-speaker>
+		<d-text asterisk>The atmosphere, the structure, the community... it's just so groovular.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="light">
+		<d-speaker>RG 01</d-speaker>
+		<d-text asterisk>And yeah, the juice. My boyfriend loves the juice.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="rg02">
+	<h2>Talking to RG 02</h2>
+
+	<d-box theme="light">
+		<d-speaker>RG 02</d-speaker>
+		<d-text asterisk>... juice.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h3>If you haven't brought Alphys juice</h3>
+	<p>Neither giving Alphys juice, or drinking juice in front of her.</p>
+	<d-box theme="light">
+		<d-speaker>RG 02</d-speaker>
+		<d-text asterisk>... <span class="yellow">your teacher</span> looks thirsty.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="alphys">
+	<h2>Talking to Alphys</h2>
+
+	<h3>Before getting Alphys's juice</h3>
+	<h4>First time</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Alphys" emotion="0"></d-sprite>
+		<d-text asterisk>Kris! A nice surprise seeing you here! I...</d-text>
+	</d-box>
+	<p class="note">Alphys coughs.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Alphys" emotion="4"></d-sprite>
+		<d-text asterisk>(Darn, I need a drink, but... Susie's over there, and...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Alphys" emotion="9"></d-sprite>
+		<d-text asterisk>(If I go make my <span class="red">25% red</span> and <span class="yellow">75% yellow</span> juice combo...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Alphys" emotion="8"></d-sprite>
+		<d-text asterisk>(I know she'll... make fun of me for it somehow.)</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Alphys" emotion="9"></d-sprite>
+		<d-text asterisk>(I really want a <span class="red">25% red</span> <span class="yellow">75% yellow</span> drink but...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>With Alphys's juice</h3>
+	<p>Making <a href="#alphysjuice">Alphys's juice mix</a> and talking to her while holding it.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Alphys" emotion="9"></d-sprite>
+		<d-text asterisk>(My throat is parched..)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Alphys" emotion="3"></d-sprite>
+		<d-text asterisk>K... Kris? Is that my... special combo drink recipe?</d-text>
+	</d-box>
+	<d-choices theme="light">
+		<d-option index="0" text="Offer juice"></d-option>
+		<d-option index="1" text="Drink juice\sin front\sof her"></d-option>
+	</d-choices>
+
+	<d-option-panel index="0" theme="light">
+		<p class="note">Kris offers the juice to Alphys.</p>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="0"></d-sprite>
+			<d-text asterisk>Ahh, Kris! Phew! What a relief!</d-text>
+		</d-box>
+		<p class="note">Alphys takes the juice and drinks it.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Kris drinks the juice, then throws the cup to the ground as a dismayed Alphys watches. A pause.</p>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="5"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<p class="note">Alphys coughs.</p>
+	</d-option-panel>
+	<p class="note">A long pause. Dialogue proceeds to <a href="#postjuice">the below section</a>.</p>
+
+	<hr>
+
+	<h3 id="postjuice">After getting Alphys's juice</h3>
+	<d-box theme="light">
+		<d-sprite speaker="Alphys" emotion="9"></d-sprite>
+		<d-text asterisk>Did... you want to talk about something?</d-text>
+	</d-box>
+	<d-choices theme="light">
+		<d-option index="0" text="Shelter"></d-option>
+		<d-option index="1" text="No"></d-option>
+		<d-option index="2" text="Undyne" conditional></d-option>
+	</d-choices>
+
+	<d-option-panel index="0" theme="light">
+		<h4>First time</h4>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="3"></d-sprite>
+			<d-text asterisk>Huh? Shelter? Why would you want to go there?</d-text>
+		</d-box>
+		<d-choices theme="light" offset="10%">
+			<d-option index="0" text="Architectural\shistory\sresearch"></d-option>
+			<d-option index="1" text="Put hay inside\snew house\sfor Susie"></d-option>
+		</d-choices>
+
+		<d-option-panel index="0" theme="light">
+			<d-box theme="light">
+				<d-sprite speaker="Alphys" emotion="2"></d-sprite>
+				<d-text asterisk>... Kris? Wow, that's very... um, above and beyond!</d-text>
+			</d-box>
+		</d-option-panel>
+		<d-option-panel index="1" theme="light">
+			<d-box theme="light">
+				<d-sprite speaker="Alphys" emotion="1"></d-sprite>
+				<d-text asterisk>H... huh? Like she's some kind of ... horse?</d-text>
+			</d-box>
+			<d-box theme="light">
+				<d-sprite speaker="Alphys" emotion="3"></d-sprite>
+				<d-text asterisk>... wouldn't she... just eat the hay???</d-text>
+			</d-box>
+			<d-box theme="light">
+				<d-sprite speaker="Alphys" emotion="1"></d-sprite>
+				<d-text asterisk>(... w-wait. Let's not seriously go into this topic...)</d-text>
+			</d-box>
+		</d-option-panel>
+
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="9"></d-sprite>
+			<d-text asterisk>... That being said Kris, I don't think you should...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="4"></d-sprite>
+			<d-text asterisk>Try to go in there by yourself.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="2"></d-sprite>
+			<d-text asterisk>The shelter... it's...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="9"></d-sprite>
+			<d-text asterisk>A place for people to survive an emergency, right?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="4"></d-sprite>
+			<d-text asterisk>But, ever since I've moved here, it's been... closed for some reason.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="8"></d-sprite>
+			<d-text asterisk>It makes me wonder if... even if there was some disaster...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="9"></d-sprite>
+			<d-text asterisk>Whatever's inside there...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="8"></d-sprite>
+			<d-text asterisk>Might be worse...?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="4"></d-sprite>
+			<d-text asterisk>Eheheheh. Of course, maybe that's just my paranoia speaking.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="0"></d-sprite>
+			<d-text asterisk>But, I will say, I've only ever seen a couple people head over there.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="1"></d-sprite>
+			<d-text asterisk>... Undyne... and the mayor.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="5"></d-sprite>
+			<d-text asterisk>So if you asked the mayor or Undyne to chaperone you, um...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="0"></d-sprite>
+			<d-text asterisk>I'm sure that, might be able to help you with your project?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="7"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="B"></d-sprite>
+			<d-text asterisk>B... by the way, in the process of asking Undyne...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="4"></d-sprite>
+			<d-text asterisk>If you could t-tell her to call me, or t-text me back...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="9"></d-sprite>
+			<d-text asterisk>O-or, I guess just otherwise f-find out, if she hates me...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="9"></d-sprite>
+			<d-text asterisk>That would really help me out! Eheheh... she's sort of...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="4"></d-sprite>
+			<d-text asterisk>... not... answering my calls.</d-text>
+		</d-box>
+
+		<h4>Subsequent times</h4>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="0"></d-sprite>
+			<d-text asterisk>Umm, Kris, if you want to know more about the shelter...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="5"></d-sprite>
+			<d-text asterisk>Ask the Mayor and Officer Undyne.</d-text>
+		</d-box>
+		<hr class="hr2">
+		<h5>If you said this was for architectural history research</h5>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="7"></d-sprite>
+			<d-text asterisk>... I can, um, help you with the architecture though!</d-text>
+		</d-box>
+		<hr class="hr3">
+		<h5>If you said you were making Susie a new house</h5>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="4"></d-sprite>
+			<d-text asterisk>... and, I recommend forgetting about the hay.</d-text>
+		</d-box>
+		<hr class="hr2">
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="5"></d-sprite>
+			<d-text asterisk>... Thanks for the enthusiasm, Kris.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="light">
+		<p class="note">Only available once; after the first time choosing this option, it will disappear from subsequent conversations.</p>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="0"></d-sprite>
+			<d-text asterisk>Yesterday evening, Officer Undyne actually invited me here!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="7"></d-sprite>
+			<d-text asterisk>She said you know, I've been in town a while...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="5"></d-sprite>
+			<d-text asterisk>I should... m-make some more friends, you know?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="4"></d-sprite>
+			<d-text asterisk>... Which is, why it's kind of awkward, s-she's not even here...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="5"></d-sprite>
+			<d-text asterisk>I... I actually can't even... reach her at all, eheh...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="9"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<hr class="hr2">
+		<h4>If you gave Alphys the <a href="{{ '/misc/lightitems#boxofheartcandy' | relative_url }}">Box of Heart Candy</a></h4>
+		<d-box theme="light">
+			<d-sprite speaker="Alphys" emotion="9"></d-sprite>
+			<d-text asterisk>Eheh, m-maybe I'm the stupid one, thinking she actually...</d-text>
+		</d-box>
+		<d-choices theme="light">
+			<d-option index="0" text="She gave you\schocolates\sthough"></d-option>
+			<d-option index="1" text="It's\sbecause\sof me"></d-option>
+		</d-choices>
+		<d-option-panel index="0" theme="light">
+			<d-box theme="light">
+				<d-sprite speaker="Alphys" emotion="7"></d-sprite>
+				<d-text asterisk>Y... you know, you're right, Kris!</d-text>
+			</d-box>
+			<d-box theme="light">
+				<d-sprite speaker="Alphys" emotion="4"></d-sprite>
+				<d-text asterisk>Then again, the chocolates were so stale...</d-text>
+			</d-box>
+			<d-box theme="light">
+				<d-sprite speaker="Alphys" emotion="9"></d-sprite>
+				<d-text asterisk>Th... they kind of put me into a coma all last night, so...</d-text>
+			</d-box>
+			<d-box theme="light">
+				<d-sprite speaker="Alphys" emotion="5"></d-sprite>
+				<d-text asterisk>She... also could have been trying to poison me? But...</d-text>
+			</d-box>
+		</d-option-panel>
+		<d-option-panel index="1" theme="light">
+			<d-box theme="light">
+				<d-sprite speaker="Alphys" emotion="3"></d-sprite>
+				<d-text asterisk>... K... Kris? What? Wh-what are you...</d-text>
+			</d-box>
+			<d-box theme="light">
+				<d-sprite speaker="Alphys" emotion="1"></d-sprite>
+				<d-text asterisk>... ah.</d-text>
+			</d-box>
+			<d-box theme="light">
+				<d-sprite speaker="Alphys" emotion="A"></d-sprite>
+				<d-text asterisk>Kris, I did notice one of her chocolates was, um, missing...</d-text>
+			</d-box>
+			<d-box theme="light">
+				<d-sprite speaker="Alphys" emotion="7"></d-sprite>
+				<d-text asterisk>It's okay! D-delivery fee and all that. Eh... eheh.</d-text>
+			</d-box>
+		</d-option-panel>
+		<hr class="hr2">
+		<h4>If you haven't got the Holidays's clue yet</h4>
+		<d-box theme="light">
+			<d-text asterisk>(Felt like useful information.)</d-text>
+		</d-box>
+		<hr class="hr3">
+		<h4>If you already got the Holidays's clue</h4>
+		<d-box theme="light">
+			<d-text asterisk>(... Felt like you gathered enough clues to tell Susie.)</d-text>
+		</d-box>
+		<hr class="hr2">
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="juicebowls">
+	<h2>Juice bowls</h2>
+
+	<h3 id="juicebowlspre">Before making Alphys's juice mix</h3>
+	<hr class="hr2">
+	<h4>When glass is not full</h4>
+	<d-box theme="light">
+		<d-text asterisk>(Glass is <span class="red">#% red</span>, <span class="yellow">#% yellow</span>.)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>When glass is full</h4>
+	<p class="note">One of the following narrations plays, depending on the juice percentages you added. The fallback name "Bepis Brew" is unused.</p>
+	<d-box theme="light">
+		<d-text asterisk>(Glass is <span class="red">0% red</span>, <span class="yellow">100% yellow</span>.)</d-text>
+		<d-text asterisk>(Drink Name: Mystic Nectar.)</d-text>
+	</d-box>
+	<p id="alphysjuice" class="note">The follow narration box is unused in-game, as after making this drink, <a href="#juicebowlspost">the narration for interacting with the juice bowls gets overridden</a> and no more drinks can be made.</p>
+	<d-box theme="light" >
+		<d-text asterisk>(Glass is <span class="red">25% red</span>, <span class="yellow">75% yellow</span>.)</d-text>
+		<d-text asterisk>(Drink Name: Dragon's Scar.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Glass is <span class="red">50% red</span>, <span class="yellow">50% yellow</span>.)</d-text>
+		<d-text asterisk>(Drink Name: Try This It's Orange Juice.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Glass is <span class="red">75% red</span>, <span class="yellow">25% yellow</span>.)</d-text>
+		<d-text asterisk>(Drink Name: Sunset Requiem.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Glass is <span class="red">100% red</span>, <span class="yellow">0% yellow</span>.)</d-text>
+		<d-text asterisk>(Drink Name: Blood of Power.)</d-text>
+	</d-box>
+
+	<hr class="hr2">
+	<d-choices theme="light">
+		<d-option index="0" text="Add 25%\sred juice"></d-option>
+		<d-option index="1" text="Add 25%\syellow juice"></d-option>
+		<d-option index="2" text="Empty drink" conditional></d-option>
+	</d-choices>
+
+	<d-option-panel index="0" theme="light">
+		<h4>If glass is not full</h4>
+		<hr class="hr2">
+		<h5>First time adding juice</h5>
+		<d-box theme="light">
+			<d-text asterisk>(You carefully titrated the juice into your glass.)</d-text>
+		</d-box>
+		<hr class="hr3">
+		<h5>Subsequent times</h5>
+		<d-box theme="light">
+			<d-text asterisk>(Juice added.)</d-text>
+		</d-box>
+		<hr class="hr2">
+		<p class="note">25% red juice is added to your glass.</p>
+		<hr class="hr2">
+		<h5>If the added juice results in a <span class="yellow">25% yellow</span>, <span class="red">75% red</span> mix</h5>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="7"></d-sprite>
+			<d-text asterisk>Woah, nice juice combo. Looks cool.</d-text>
+		</d-box>
+
+		<hr class="hr2">
+
+		<h4>If glass is full</h4>
+		<d-box theme="light">
+			<d-text asterisk>(You already have 100% juice. This is... the limits of your power.)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<h4>If glass is not full</h4>
+		<hr class="hr2">
+		<h5>First time adding juice</h5>
+		<d-box theme="light">
+			<d-text asterisk>(You carefully titrated the juice into your glass.)</d-text>
+		</d-box>
+		<hr class="hr3">
+		<h5>Subsequent times</h5>
+		<d-box theme="light">
+			<d-text asterisk>(Juice added.)</d-text>
+		</d-box>
+		<hr class="hr2">
+		<p class="note">25% yellow juice is added to your glass.</p>
+		<hr class="hr2">
+		<h5>If the added juice results in a <span class="red">25% red</span>, <span class="yellow">75% yellow</span> mix</h5>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="7"></d-sprite>
+			<d-text asterisk>Woah, nice juice combo. Looks cool.</d-text>
+		</d-box>
+
+		<hr class="hr2">
+
+		<h4>If glass is full</h4>
+		<d-box theme="light">
+			<d-text asterisk>(You already have 100% juice. This is... the limits of your power.)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="light">
+		<p class="note">Available only when the glass is not empty.</p>
+		<d-box theme="light">
+			<d-text asterisk>(You returned the drink to the cycle of Susie.)</d-text>
+		</d-box>
+		<p class="note">The glass is emptied; juice percentages are reset to 0.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="juicebowlspost">After making Alphys's juice mix</h3>
+	<d-box theme="light">
+		<d-text asterisk>(Juice. There's no reason to get more.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="end">
+	<h2>Brainstorming with Susie</h2>
+
+	<p class="note">Susie turns around to face Kris.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Cool, let's hear what you got.</d-text>
+	</d-box>
+
+	<p class="note">The screen fades to black.</p>
+
+	<d-box theme="light">
+		<d-text asterisk>(You explained the situation to Susie.)</d-text>
+	</d-box>
+
+	<p class="note"><a href="{% include wikilink page='Flashback (Excerpt)' %}">Flashback (Excerpt)</a> begins playing.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>So the only two leads we got are...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Undyne... and the mayor, huh.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>... I guess if we think about the 3 symbols on the shelter...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>... That pretty much tracks.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>One looked like the church symbol.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Don't got that code yet, but it could be here.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="B"></d-sprite>
+		<d-text asterisk>One looked like the badge the cops wear.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>... So Undyne probably knew something, too.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>One looked like a pine tree, and the mayor...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Likes trees, right? I mean, there's one in City Hall.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Maybe... Maybe that's why the Knight captured Undyne?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>They wanted to take their code so they could get in...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="B"></d-sprite>
+		<d-text asterisk>... But in that case...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>They'd have to know the other two codes, too.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Someone who goes to church... who knows the mayor...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Who also has something to do with the cops?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>... Who the hell could that be?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>... Guess... City Hall's our best bet for now.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>... what? Noelle said... her mom keeps everything important at home?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>... Yeah... wait, now that I think about it...</d-text>
+	</d-box>
+	<p class="note">A slight pause. The scene diverges from here depending on whether you're on the <a href="#end-normal">normal route</a> or <a href="#end-weird">Weird Route</a>.</p>
+
+	<hr>
+
+	<h3 id="end-normal">On the normal route</h3>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Her mom's the mayor, right?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>And the front of their house... it's got pine trees all over.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Kinda like the holidays just got frozen in place.</d-text>
+	</d-box>
+
+	<p class="note">The music fades out.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Maybe if we can sneak in there ourselves...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>We might be able to find a clue in there?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>... I got an idea.</d-text>
+	</d-box>
+
+	<p class="note">The screen fades back in. Susie walks over to Noelle, Kris following behind, and puts a hand on her shoulder, startling her.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="A"></d-sprite>
+		<d-text asterisk>Hey, nice singing.</d-text>
+	</d-box>
+
+	<p class="note">Noelle spews the juice she was drinking. Susie lowers her hand.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>Susie!? How d-did you... wh-why are you...</d-text>
+	</d-box>
+
+	<p class="note">Noelle twists to look at Susie, smiling with a juice trail leaking out the side of her mouth. <!-- noelle_school.ogg starts playing. --></p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="M"></d-sprite>
+		<d-text asterisk>Umm, what brings you to, um, church, Susie?</d-text>
+	</d-box>
+	<p class="note">Noelle turns to fully face Susie and Kris. Susie turns away briefly.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Uhh, y'know.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Juice.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Oh, r-right! Sure, that's why I come, too???????</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Right?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Y-yeah!</d-text>
+	</d-box>
+
+	<p class="note">A pause.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>It looks like blood.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="M"></d-sprite>
+		<d-text asterisk>Definitely! Haha! That's why I'm! Always drinking it??????????</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>Yeah. Too bad they just ran out.</d-text>
+	</d-box>
+
+	<p class="note">Susie takes a step closer to Noelle, who backs up, blushing and putting a hand over her mouth.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="X"></d-sprite>
+		<d-text asterisk>Of blood.</d-text>
+	</d-box>
+
+	<p class="note">Noelle calms, lowering her hand...</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="I"></d-sprite>
+		<d-text asterisk>Where, um, are you going with this?</d-text>
+	</d-box>
+
+	<p class="note">...but Susie steps closer and Noelle backs up, flustered again.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+		<d-text asterisk>Lemme get straight to the point.</d-text>
+	</d-box>
+
+	<p class="note">Noelle grows even more flustered.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="P"></d-sprite>
+		<d-text asterisk>YES?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Look, Noelle...</d-text>
+	</d-box>
+
+	<p class="note">Susie backs up a little and scratches her head.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>You wanna... work on our... uh, projects together?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Y'know. At your place.</d-text>
+	</d-box>
+
+	<p class="note">Noelle is stunned.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>HUH???</d-text>
+	</d-box>
+
+	<p class="note">She turns away.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Uh... Umm, I... I mean, I'd have to... ask, and...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="A"></d-sprite>
+		<d-text asterisk>My mom, I'm not sure if she'd...</d-text>
+	</d-box>
+
+	<p class="note">She looks briefly downcast, then her expression turns neutral. A pause. She turns around, fists clenched in determination.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Yes! I mean, yes. Yes, we can do it! Yes!</d-text>
+	</d-box>
+
+	<p class="note">Susie stops scratching her head.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Really? Damn, that was easy.</d-text>
+	</d-box>
+
+	<p class="note">She walks over to Kris.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Boom!</d-text>
+	</d-box>
+
+	<p class="note">Susie highfives Kris, while Noelle's determined pose gains a baffled edge.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="G"></d-sprite>
+		<d-text asterisk>???????</d-text>
+	</d-box>
+
+	<p class="note">Susie turns back to Noelle.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Cool, we'll see you later?</d-text>
+	</d-box>
+
+	<p class="note">Noelle lowers her hands.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Oh. Kris is... coming too?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>I mean, of course! Right, it's for the school project.</d-text>
+	</d-box>
+
+	<p class="note">A pause.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>... so, um, should I invite Berdly then?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Oh hell no.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Umm, okay! Hahaha!</d-text>
+	</d-box>
+
+	<p class="note">A pause.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>W-well, feel free to, um... come over anytime!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Sure, we gotta go to school first anyway.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>On... on a weekend?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>I-I mean, cool, sounds normal! S... See you later!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Yeah, see ya.</d-text>
+	</d-box>
+
+	<p class="note">Noelle smiles at Susie for a moment longer, then turns around and gets Rudy's attention, leading him and Toriel out of the church. Meanwhile, Susie turns to Kris.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Hell yeah. That went perfectly!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="4"></d-sprite>
+		<d-text asterisk>Let's ball...</d-text>
+	</d-box>
+
+	<p class="note"><a href="#outside">She shoves Kris into heading out as well.</a></p>
+
+	<hr>
+
+	<h3 id="end-weird">On the Weird Route</h3>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>The mayor's Noelle's mom, right?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>Maybe if we tried...</d-text>
+	</d-box>
+
+	<p class="note">The screen abruptly cuts back to the church, showing Noelle standing right behind a startled Susie.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Kris...? Umm, and... Susie...?</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to face Noelle.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Would... would you want to come by my house...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+		<d-text asterisk>... and... work on our projects after church?</d-text>
+	</d-box>
+
+	<p class="note">Susie puts her arms behind her head.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>H... huh? Uhh, yeah! Of course!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Great!</d-text>
+	</d-box>
+
+	<p class="note">A pause. Noelle backs up a little as Susie lowers her arms.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="0"></d-sprite>
+		<d-text asterisk>I'll, um, go bring my dad back to the hospital.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Cool. That's, uh, awesome! See ya later.</d-text>
+	</d-box>
+
+	<p class="note">Noelle walks away. Susie turns back to Kris.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Too easy, right? Boom! Gimme five!</d-text>
+	</d-box>
+
+	<p class="note">She jumps to highfive Kris, but they don't respond, staying still. Susie takes a step back, losing her smile.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>... uhh, what's up?</d-text>
+	</d-box>
+
+	<p class="note">She glances over at Noelle.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>... you, uh, got somethin' against Noelle, Kris?</d-text>
+	</d-box>
+
+	<p class="note">Susie turns back to Kris and looks down.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">She scratches her head.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Like, uh, hey, maybe things took a weird route right now...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>I mean, who'd expect she'd ask us like that?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>But we should be glad it's going so fast, right?</d-text>
+	</d-box>
+
+	<p class="note">A pause. Susie goes still.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>... right?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">She lowers her hand and turns around, walking over to the juice bowls and turning to look at Kris.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Hey, how 'bout some of the red stuff? ... no?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Heh, your loss. Know you're gonna want it later.</d-text>
+	</d-box>
+
+	<p class="note">She turns back around. After a moment, her smile drops. She turns to leave.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>... let's just go already.</d-text>
+	</d-box>
+
+	<p class="note"><a href="#outside">Susie heads outside, with Kris following.</a></p>
+</section>
+
+<section class="d-section" id="outside">
+	<h2>Outside church</h2>
+
+	<p class="note">Kris and Susie exit the church doors. Toriel is standing beside the doors and notices them.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" variant="church" emotion="0"></d-sprite>
+		<d-text asterisk>Oh, Kris, Susie. How about going to the diner?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" variant="church" emotion="1"></d-sprite>
+		<d-text asterisk>I have to come back to church in a few hours for choir practice...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" variant="church" emotion="0"></d-sprite>
+		<d-text asterisk>It would be nice to have a little treat before then.</d-text>
+	</d-box>
+
+	<p class="note">Leaves fly off the trees by the path leading to the shelter as Asgore springs out of them, approaching Toriel. Susie and Toriel both stop smiling.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="5"></d-sprite>
+		<d-text asterisk>Oh, Tori! What a coincidence seeing you here!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="6"></d-sprite>
+		<d-text asterisk>Just after church ended too.</d-text>
+	</d-box>
+
+	<p class="note">A pause.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" variant="church" emotion="1"></d-sprite>
+		<d-text asterisk>Oh, err... hello, Asgore. We -</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="4"></d-sprite>
+		<d-text asterisk>Oh, Tori. Would you look at that!</d-text>
+	</d-box>
+
+	<p class="note">Asgore kneels, producing a bouquet of flowers.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="6"></d-sprite>
+		<d-text asterisk>Seems I had some extra flowers lying around and...</d-text>
+	</d-box>
+
+	<p class="note">Toriel turns away. Asgore looks sheepish.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" variant="church" emotion="1"></d-sprite>
+		<d-text asterisk>Asgore, I...</d-text>
+	</d-box>
+
+	<p class="note">A pause.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" variant="church" emotion="1"></d-sprite>
+		<d-text asterisk>I think I have to go, I'm sorry. Can we talk later?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="0"></d-sprite>
+		<d-text asterisk>Of course!</d-text>
+	</d-box>
+
+	<p class="note">Toriel leaves, heading north. Asgore stands with a disappointed look.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="2"></d-sprite>
+		<d-text asterisk>... ah.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="3"></d-sprite>
+		<d-text asterisk>Well, little blossoms, we tried our best.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="0"></d-sprite>
+		<d-text asterisk>Just hope Asriel will be able to see us all... back to normal.</d-text>
+	</d-box>
+
+	<p class="note">Asgore is surprised to notice Kris and Susie.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="4"></d-sprite>
+		<d-text asterisk>...!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="1"></d-sprite>
+		<d-text asterisk>Oh, Kris! How are you doing!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="5"></d-sprite>
+		<d-text asterisk>Would you like some flowers?</d-text>
+	</d-box>
+
+	<p class="note">Asgore walks over to Kris and hands them the flowers.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="6"></d-sprite>
+		<d-text asterisk>Here. Share with your friend.</d-text>
+	</d-box>
+
+	<p class="note">He turns to leave.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="5"></d-sprite>
+		<d-text asterisk>See you later, alligator.</d-text>
+	</d-box>
+
+	<p class="note">Asgore walks away. Once he's out of sight, Kris shoves the bouquet into their pockets.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">A pause. When Susie speaks, Kris turns to her.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Hey, let's change the hell out of these clothes.</d-text>
+	</d-box>
+
+	<p class="note">Kris and Susie spin, church clothes flying off them and falling into piles at the ground; somehow, they are wearing their usual clothes underneath.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Now what? Wanna check up on Ralsei at school?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>We should probably catch him up on the plan.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>... or I guess we could go to Noelle's first.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Whatever you wanna do, do it. It's the weekend.</d-text>
+	</d-box>
+
+	<p class="note"><a href="{% include wikilink page='Another day in hometown' %}">Another day in hometown</a> begins playing. Kris and Susie are free to explore Hometown, where they can <a href="{{ '/chapters/chapter4/teaparty' | relative_url }}">spend time with Ralsei</a>, <a href="{{ '/chapters/chapter4/noellevisit' | relative_url }}">go to Noelle's house for their "study session"</a>, or <a href="{{ '/chapters/chapter4/diner' | relative_url }}">hang out together at the diner</a>.</p>
+</section>
