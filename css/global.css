@@ -896,6 +896,8 @@ d-box {
 	}
 
 	&:has(> d-box:first-child) {
+		gap: 0;
+
 		d-speaker::before,
 		d-box > :last-child::after { content: unset }
 	}
