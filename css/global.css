@@ -224,6 +224,7 @@ hr {
 	--noelle: var(--lightyellow);
 }
 /* #endregion */
+d-box:not(:state(compact)) .text-center-expand,
 .text-center { text-align: center }
 img {
 	max-width: 100%;
