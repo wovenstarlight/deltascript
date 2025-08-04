@@ -1,0 +1,310 @@
+---
+title: Tea party at Ralsei's castle
+
+description: >
+  <p>Ralsei hosts a tea party for Kris and Susie in their combined rooms.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_room_castle_2f_Step_0
+    chapters: [4]
+    note: outside room
+  -
+    name: gml_Object_obj_room_castle_kris_susie_Step_0
+    chapters: [4]
+    note: inside room
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [4]
+    note: options
+
+see_also:
+  -
+    url: /locations/closetworld/castle/krissusieroom
+    name: Object interactions
+
+toc:
+  -
+    id: preentry
+    name: Before entering Kris and Susie's rooms
+  -
+    id: cutscene
+    name: Entering the room
+---
+<section class="d-section" id="preentry">
+	<h2>Before entering Kris and Susie's rooms</h2>
+
+	<p class="note">When entering Floor 2F of Ralsei's castle, Kris and Susie's doors can be seen having switched places. When the party approaches the doors, Ralsei stops the others.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Umm..^1. I have a surprise for you two!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>If we could go in your rooms...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="cutscene">
+	<h2>Entering the room</h2>
+	<p class="note">Kris, Ralsei, and Susie enter the <a href="{{ '/locations/closetworld/castle/krissusieroom' | relative_url }}">combined room</a>. Susie scratches her head.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>... H-huh? Our rooms... they're... combined?</d-text>
+	</d-box>
+	<p class="note">Ralsei steps forward, turning to face the others.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>Umm, just for today! I thought we could use the space...</d-text>
+	</d-box>
+	<p class="note">Ralsei spreads his arms happily.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="P"></d-sprite>
+		<d-text asterisk>... For a tea party!</d-text>
+	</d-box>
+	<p class="note">Susie turns to him.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Heh, a tea party?</d-text>
+	</d-box>
+	<p class="note">Ralsei watches as Kris and Susie sit on the center and right chairs.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Hit me, I guess.</d-text>
+	</d-box>
+	<p class="note">Ralsei walks over and pours Susie a cup of tea. She takes a sip and looks surprised.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Hey, this is pretty good!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Thanks! I got help from Swatch...</d-text>
+	</d-box>
+	<p class="note">Ralsei turns to Kris.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Kris, would you like any?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="No"></d-option>
+		<d-option index="1" text="Yes"></d-option>
+		<d-option index="2" text="Two lumps please"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Ralsei looks away, going red.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>Umm, okay! There's still cake, too, if you'd fancy some...</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>Umm, okay! Here you go...</d-text>
+		</d-box>
+		<p class="note">Ralsei pours tea for Kris.</p>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<p class="note">Susie leans forward and flicks sugar cubes into Kris's cup.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="A"></d-sprite>
+			<d-text asterisk>There.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+			<d-text asterisk>Umm, and here's the tea.</d-text>
+		</d-box>
+		<p class="note">Ralsei pours tea for Kris.</p>
+	</d-option-panel>
+	<p class="note">Susie takes another sip while Ralsei puts down the teapot and sits in the left chair.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>It's kinda funny... I always thought tea parties were for wimps.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="4"></d-sprite>
+		<d-text asterisk>I mean, don't get me wrong. They still are. But...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>Just feels like when I'm with you guys...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>I don't even... need to think about that.</d-text>
+	</d-box>
+	<p class="note">Susie drinks as Ralsei laughs.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Aww, Susie!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Guess your stupid attitude's been rubbing off on me.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+		<d-text asterisk>Like... I don't want to say I've been getting soft. But...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>I just always... HAD to be tough, you know?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>Now it just... feels like I... have options.</d-text>
+	</d-box>
+	<p class="note">Ralsei laughs again; Susie goes to take a drink.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Aww, Susie!</d-text>
+	</d-box>
+	<p class="note">Susie's eyes widen, cup still held up, as Ralsei continues.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>You've changed so tremendously since I met you.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>No, rather, you've finally just been able to...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Be... yourself.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>I feel... haha, I just feel so proud of you, Susie.</d-text>
+	</d-box>
+	<p class="note">Susie puts down her cup.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Hey, you've changed too, dude.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>I... I have?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Before... you were all stuck up about being good, right?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Now... you're actually kinda normal sometimes.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>I suppose I just... started appreciating you more, Susie.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="9"></d-sprite>
+		<d-text asterisk>For example, I thought your Rude Buster was scary before...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>But now, I think it's really b--</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>Umm, bad-bum!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Just say "bad ass", idiot!</d-text>
+	</d-box>
+	<p class="note">Ralsei and Susie both laugh.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>You gonna eat a piece or what?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Huh? No, that's for you two, haha.</d-text>
+	</d-box>
+	<p class="note">Susie pushes a plate of cake over to a startled Ralsei.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Dude, you made it. You should have some.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Umm... okay!</d-text>
+	</d-box>
+	<p class="note">Ralsei tries the cake and looks surprised.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="D"></d-sprite>
+		<d-text asterisk>...!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+		<d-text asterisk>Oh! Th... this is really yummy!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Why the heck are you so surprised?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="D"></d-sprite>
+		<d-text asterisk>I... I've actually never eaten cake before...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>Since, I was making it for you two, after all.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>... I can't believe it tastes this good!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Haha, dude, you're such a weirdo sometimes.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Just have the rest.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="D"></d-sprite>
+		<d-text asterisk>N-no, I couldn't...</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Ralsei eat\sthe cake"></d-option>
+		<d-option index="1" text="That's\smy cake"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>Umm, okay! Just, um... later.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+			<d-text asterisk>(I'm, a bit embarrassed how much I liked it...)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="2"></d-sprite>
+			<d-text asterisk>Haha, Kris, chill. He'll make you more later.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+			<d-text asterisk>Umm, I'd be happy to!</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Anyways, that was kinda fun. Thanks Ralsei.</d-text>
+	</d-box>
+	<p class="note">The party stands and lines up again.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>(Kris, we should do something for Ralsei sometime...)</d-text>
+	</d-box>
+
+	<p class="note">The party is free to move, and can explore the rest of the castle, including <a href="{{ '/chapters/chapter4/ralseiroom' | relative_url }}">Ralsei's room</a>.</p>
+</section>
