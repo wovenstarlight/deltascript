@@ -1,6 +1,9 @@
 ---
 title: Closet Dark World locations
 
+layout: indexpage
+base_url: "/locations/closetworld/"
+
 description: >
   <p>Index for locations within the supply closet's Dark World.</p>
 
@@ -43,19 +46,3 @@ items:
             url: ralseiroom
             name: Ralsei's room
 ---
-{% for section in page.items -%}
-<section class="d-section" id="{{ section.url | default: section.id }}">
-	<h2>{{ section.name }}</h2>
-
-	{% assign sectionurl = "/locations/closetworld" -%}
-	{% if section.url -%}
-	{% assign sectionurl = sectionurl | append: "/" | append: section.url -%}
-	{% endif -%}
-
-	<ul>
-		{% for item in section.sublist -%}
-		{% include nested_list_item parent=sectionurl this=item %}
-		{% endfor %}
-	</ul>
-</section>
-{% endfor -%}

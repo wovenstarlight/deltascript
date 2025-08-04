@@ -1,6 +1,9 @@
 ---
 title: Locations
 
+layout: indexpage
+base_url: "/locations/"
+
 description: >
   <p>Pages for location-based interactions available across multiple chapters or that aren't story-relevant.</p>
 
@@ -92,17 +95,3 @@ items:
     url: darksanctuary
     name: Dark Sanctuary
 ---
-{% for section in page.items -%}
-<section class="d-section" id="{{ section.url }}">
-	<h2>{{ section.name }}</h2>
-	{% assign sectionurl = "/locations/" | append: section.url -%}
-
-	<ul>
-		{% for item in section.sublist -%}
-		{% include nested_list_item parent=sectionurl this=item %}
-		{%- else -%}
-		<li class="gray">To be added!</li>
-		{% endfor %}
-	</ul>
-</section>
-{% endfor -%}

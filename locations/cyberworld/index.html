@@ -1,6 +1,9 @@
 ---
 title: Cyber World locations
 
+layout: indexpage
+base_url: "/locations/cyberworld/"
+
 description: >
   <p>Index for locations within Cyber World, Chapter 2's Dark World.</p>
 
@@ -36,17 +39,3 @@ items:
     url: queenmansion
     name: Queen's Mansion
 ---
-{% for section in page.items -%}
-<section class="d-section" id="{{ section.url }}">
-	<h2>{{ section.name }}</h2>
-	{% assign sectionurl = "/locations/cyberworld/" | append: section.url -%}
-
-	<ul>
-		{% for item in section.sublist -%}
-		{% include nested_list_item parent=sectionurl this=item %}
-		{% else %}
-		<li class="gray">To be added!</li>
-		{% endfor %}
-	</ul>
-</section>
-{% endfor -%}

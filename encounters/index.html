@@ -1,6 +1,9 @@
 ---
 title: Encounters
 
+layout: indexpage
+base_url: "/encounters/"
+
 description: >
   <p>Flavor text, dialogue, and ACT responses for combat encounters.</p>
 
@@ -141,17 +144,3 @@ items:
             url: placeholder
             name: Placeholder enemy
 ---
-{% for section in page.items -%}
-<section class="d-section" id="{{ section.url | default: section.id }}">
-	<h2>{{ section.name }}</h2>
-	{% assign sectionurl = "/encounters/" | append: section.url -%}
-
-	<ul>
-		{% for item in section.sublist -%}
-		{% include nested_list_item parent=sectionurl this=item %}
-		{%- else -%}
-		<li class="gray">To be added!</li>
-		{% endfor %}
-	</ul>
-</section>
-{% endfor -%}

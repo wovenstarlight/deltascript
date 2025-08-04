@@ -1,6 +1,9 @@
 ---
 title: Chapter index
 
+layout: indexpage
+base_url: "/chapters/"
+
 description: >
   <p>Overview for story events.</p>
 
@@ -131,17 +134,3 @@ items:
     name: Chapter 7
     sublist:
 ---
-{% for section in page.items -%}
-<section class="d-section" id="{{ section.url }}">
-	<h2>{{ section.name }}</h2>
-	{% assign sectionurl = "/chapters/" | append: section.url -%}
-
-	<ul>
-		{% for item in section.sublist -%}
-		{% include nested_list_item parent=sectionurl this=item %}
-		{%- else -%}
-		<li class="gray">To be added!</li>
-		{% endfor %}
-	</ul>
-</section>
-{% endfor -%}
