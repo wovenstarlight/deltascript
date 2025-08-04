@@ -1,0 +1,53 @@
+---
+title: Card Kingdom locations
+
+description: >
+  <p>Index for locations within Card Kingdom, Chapter 1's Dark World.</p>
+
+toc:
+  -
+    id: field
+    name: Field
+  -
+    id: forest
+    name: Forest
+  -
+    id: cardcastle
+    name: Card Castle
+
+items:
+  -
+    url: field
+    name: Field
+    sublist:
+      -
+        url: seap
+        name: Seam's (old) shop
+  -
+    url: forest
+    name: Forest
+  -
+    url: cardcastle
+    name: Card Castle
+    sublist:
+      -
+        name: 5F
+        sublist:
+          -
+            url: rouxlsshop
+            name: Rouxls's shop
+---
+{% for section in page.items -%}
+<section class="d-section" id="{{ section.url | default: section.id }}">
+	<h2>{{ section.name }}</h2>
+	{% assign sectionurl = "/locations/cardkingdom/" | append: section.url -%}
+
+	<ul>
+		{% for item in section.sublist -%}
+		{% include nested_list_item parent=sectionurl this=item %}
+		{% else %}
+		<li class="gray">To be added!</li>
+		{% endfor %}
+	</ul>
+</section>
+{% endfor -%}
