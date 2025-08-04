@@ -1,7 +1,9 @@
 ---
 title: Chapter index
+
 description: >
   <p>Overview for story events.</p>
+
 toc:
   -
     id: chapter1
@@ -15,18 +17,118 @@ toc:
   -
     id: chapter4
     name: Chapter 4
+  -
+    id: chapter5
+    name: Chapter 5
+  -
+    id: chapter6
+    name: Chapter 6
+  -
+    id: chapter7
+    name: Chapter 7
+
+items:
+  -
+    url: chapter1
+    name: Chapter 1
+    sublist:
+      -
+        name: Beginning
+        sublist:
+          -
+            url: intro
+            name: Intro
+          -
+            url: school
+            name: School
+      -
+        name: Dark World
+        sublist:
+          -
+            url: darkworldintro
+            name: ??????
+          -
+            url: castletown
+            name: Castle Town
+          # -
+          #   name: 'TO DO: Remaining Dark World scenes'
+      # -
+      #   name: 'TO DO: Return to the Light World'
+  -
+    url: chapter2
+    name: Chapter 2
+    sublist:
+      # -
+      #   name: 'TO DO: Light World scenes'
+      -
+        name: Cyber World
+        sublist:
+          # -
+          #   name: 'TO DO: Initial Dark World scenes'
+          -
+            url: spamton
+            name: Meeting Spamton
+          # -
+          #   name: 'TO DO: Remaining Dark World scenes'
+      # -
+      #   name: 'TO DO: Return to the Light World'
+  -
+    url: chapter3
+    name: Chapter 3
+    sublist:
+  -
+    url: chapter4
+    name: Chapter 4
+    sublist:
+      # -
+      #   name: 'TO DO: Church scene'
+      -
+        name: At Noelle's house
+        sublist:
+          -
+            name: Normal route
+            sublist:
+              -
+                url: basement
+                name: Susie and Noelle's conversations
+              -
+                url: desscloset
+                name: Conversations in Dess's room
+          -
+            name: Weird Route
+            sublist:
+              -
+                url: basementweird
+                name: Susie exploring Noelle's basement
+              -
+                url: noelleroomweird
+                name: Kris and Noelle's conversation
+      # -
+      #   name: 'TO DO: Remaining Light World scenes, Dark World scenes'
+  -
+    url: chapter5
+    name: Chapter 5
+    sublist:
+  -
+    url: chapter6
+    name: Chapter 6
+    sublist:
+  -
+    url: chapter7
+    name: Chapter 7
+    sublist:
 ---
-<section class="d-section" id="chapter1">
-	<h2>Chapter 1</h2>
+{% for section in page.items -%}
+<section class="d-section" id="{{ section.url }}">
+	<h2>{{ section.name }}</h2>
+	{% assign sectionurl = "/chapters/" | append: section.url -%}
+
 	<ul>
-		<li><a href="{{ '/chapters/chapter1/intro' | relative_url }}">Intro</a></li>
-		<li><a href="{{ '/chapters/chapter1/school' | relative_url }}">School</a></li>
-		<li><a href="{{ '/chapters/chapter1/darkworldintro' | relative_url }}">??????</a></li>
-		<li><a href="{{ '/chapters/chapter1/castletown' | relative_url }}">Castle Town</a></li>
-		<li>TODO</li>
+		{% for item in section.sublist -%}
+		{% include nested_list_item parent=sectionurl this=item %}
+		{%- else -%}
+		<li class="gray">To be added!</li>
+		{% endfor %}
 	</ul>
 </section>
-
-<section class="d-section">
-	<p class="note">More to come...!</p>
-</section>
+{% endfor -%}
