@@ -1082,8 +1082,10 @@ d-choices {
 				top: 1.7em;
 				--size: 0.75em;
 			}
+			&[theme=battlemenu]::after { left: 11em }
 
 			&[offset]::after { left: calc(9em + var(--offset)) }
+			&[offset][theme=battlemenu]::after { left: calc(11em + var(--offset)) }
 		}
 	}
 
