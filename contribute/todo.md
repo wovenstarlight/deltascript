@@ -85,6 +85,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* QUESTION: where to put interactions that happen in the streets... do the streets themselves need pages.
 			* by "interactions in the streets" i mean things like. sans outside the grocery store. rain kid playing in the puddles. the milk sicko being like "Damn your family is messy as hell" in chapter 4
 			* could put them under the building they're closest to...? But what if they're like. Not directly related to the building. I'm thinking about chapter 2 undyne "handling" the traffic jam next to the library. That wasn't involved with any nearby building
+			* Maybe just a general "Streets" page for the interactions that can't be tied to specific buildings
 	* Dark Worlds
 		* `/closetworld` - Supply closet dark world, contains Castle Town and ??????
 		* `/cardkingdom` - Chapter 1 dark world
@@ -93,6 +94,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/darksanctuary` - Chapter 4 dark worlds. I think for this one we can include all three sanctuaries' subpages
 		* Ach how do we even subdivide these pages
 * Chapters `/chapters`
+	* Ok for this one there's enough Stuff that i'm just listing like. Pages that have been linked to from elsewhere. So you can update the URLs as/when necessary. Pages not mentioned here, just create as you like and make sure you add them to the [index](../chapters/index.html)
 	* `/chapter1`
 		* ~~Vessel creation and being woken up by Toriel~~ DONE `/intro`
 		* ~~School scene leading into Dark World~~ DONE `/school`
@@ -102,7 +104,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/field` (placeholder URL, update when created) - Field scenes... Ok IDK how to do this part honestly
 		* `/thrashing` susie&lancer fight pre/post
 		* `prisonbreak` - after susie gets out and breaks kris n ralsei out
-		* `/fountain` - Closing the fountain
+		* `/night` - Kris goes back home and partyyyyyyys (feat. knife)
 	* `/chapter2`
 		* `/darkworldintro` - cyber world entrance
 		* `/drive1` - First part of the Kris/Queen/Noelle drive, pre-Spamton
@@ -114,7 +116,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/noellevisit` - Noelle's house intro. Update this link on other pages if you end up splitting it further
 		* `bathroomweird` - maybe merge with below for an `outroweird`
 		* `/holidayoutro` - leaving the Holidays' house. May need a `weird` variant
-		* `/diner` - Kris/Susie diner cutscene
 		* `/darkworldintro` - sanctuary entrance
 	* `/chapter5`
 	* `/chapter6`
