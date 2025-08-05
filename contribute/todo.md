@@ -91,11 +91,23 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* Ok how specific do we wanna get on this. I'm thinking I record all the character interactions for this specific scene because those are very chapter-1-this-scene-specific, you can't get them at any other point, the second you leave the classroom they're gone. BUT! The objects (e.g. board, Alphys's computer, all that) are there regardless of chapter, the wording just changes a bit, so those go to the `/locations/lightworld/alphysclass` page...?
 		* ~~Scenes in ?????? leading up to Castle Town~~ DONE `/darkworldintro` (can't do ?????? as the URL because question marks are a special chara :<)
 		* ~~Castle Town scenes leading up to entry into Card Kingdom~~ DONE `/castletown` (TODO: Update Lancer battle URL)
-		* Field scenes... Ok IDK how to do this part honestly
-		* Dark World begins...............
+		* `/field` (placeholder URL, update when created) - Field scenes... Ok IDK how to do this part honestly
+		* `/thrashing` susie&lancer fight pre/post
+		* `prisonbreak` - after susie gets out and breaks kris n ralsei out
+		* `/fountain` - Closing the fountain
 	* `/chapter2`
+		* `/darkworldintro` - cyber world entrance
+		* `/drive1` - First part of the Kris/Queen/Noelle drive, pre-Spamton
+		* `/drive2` - Second part of the Kris/Queen/Noelle drive, post-Spamton
+		* `/shelter` - End of chapter scene with Susie confronting Snowy/MK
+		* `/handwashing` - kris runs the tap.
 	* `/chapter3`
 	* `/chapter4`
+		* `/noellevisit` - Noelle's house intro. Update this link on other pages if you end up splitting it further
+		* `bathroomweird` - maybe merge with below for an `outroweird`
+		* `/holidayoutro` - leaving the Holidays' house. May need a `weird` variant
+		* `/diner` - Kris/Susie diner cutscene
+		* `/darkworldintro` - sanctuary entrance
 	* `/chapter5`
 	* `/chapter6`
 	* `/chapter7`
