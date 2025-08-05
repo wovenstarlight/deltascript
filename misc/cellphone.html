@@ -1,0 +1,634 @@
+---
+title: Cell Phone
+
+description: >
+  <p>Text and dialogue for using the cell phone in the Light and Dark Worlds.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_GlobalScript_scr_phonename
+    chapters: [1, 2, 4]
+    note: Light World number list
+  -
+    name: gml_Object_obj_overworldc_Step_0
+    chapters: [4]
+    note: Light World usage after closet cutscene
+  -
+    name: gml_GlobalScript_scr_litemuseb
+    chapters: [1, 2, 4]
+    note: Light World usage
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [1]
+    note: chapter 1's first Toriel call after school
+
+toc:
+  -
+    id: lightworld
+    name: In the Light World
+    subheadings:
+      -
+        id: lightworldstandard
+        name: Standard
+      -
+        id: lightworldch4
+        name: Chapter 4, after the closet cutscene at Noelle's house
+  -
+    id: callhome
+    name: Call Home
+    subheadings:
+      -
+        id: callhome-noone
+        name: If no one is at home
+      -
+        id: callhome-busy
+        name: If everyone at home is busy
+      -
+        id: callhome-dreemurrresidence
+        name: While inside the Dreemurr residence
+        subheadings:
+          -
+            id: callhome-dreemurrupstairs
+            name: In Kris's room, the upper floor hallway, or the bathroom
+          -
+            id: callhome-dreemurrdownstairs
+            name: In the kitchen / living room
+      -
+        id: chapter1
+        name: Chapter 1
+      -
+        id: chapter2
+        name: Chapter 2
+  -
+    id: sansnumber
+    name: (Not) Sans's Number
+  -
+    id: darkworld
+    name: In the Dark World
+---
+<section class="d-section" id="lightworld">
+	<h2>In the Light World</h2>
+
+	<h3 id="lightworldstandard">Standard</h3>
+	<p class="note">Selecting "CELL" in the menu gives the following options:</p>
+	<ul class="note">
+		<li><a href="#callhome">Call Home</a></li>
+		<li><a href="#sansnumber">(Not) Sans's Number</a> (Chapter 1 only, after talking to Sans)</li>
+	</ul>
+
+	<hr>
+
+	<h3 id="lightworldch4">Chapter 4, after the <a href="{{ '/chapters/chapter4/desscloset' | relative_url }}">closet cutscene at Noelle's house</a></h3>
+	<p class="note">Selecting "CELL" in the menu gives the following narration:</p>
+	<d-box theme="light">
+		<d-text asterisk>(You checked your phone's contacts and recent dials.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(... but everything has been deleted.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="callhome">
+	<h2>Call Home</h2>
+	<p>Also labelled "Call Toriel" under certain circumstances.</p>
+
+	<h3 id="callhome-noone">If no one is at home</h3>
+	<d-box theme="light">
+		<d-text asterisk>Ring...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>No one picked up.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="callhome-busy">If everyone at home is busy</h3>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Everybody seems too busy to pick up the phone...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="callhome-dreemurrresidence">While inside the Dreemurr residence</h3>
+	<p>Standard text for making calls while at Kris's home. May be overridden by chapter-specific dialogue.</p>
+
+	<h4 id="callhome-dreemurrupstairs">In Kris's room, the upper floor hallway, or the bathroom</h4>
+	<p>Chapter 4 v0.0.098 onwards: after breakfast, since Toriel is waiting outside the house, this dialogue gets overridden by <a href="#callhome-busy">the text for everyone being busy</a>.</p>
+	<d-box theme="dark">
+		<d-text asterisk>Ring...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>Hello?</d-text>
+		<d-text asterisk>Dreemurr residence...</d-text>
+		<d-text asterisk>Who might this be...?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="3"></d-sprite>
+		<d-text asterisk>... Kris?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="5"></d-sprite>
+		<d-text asterisk>Sigh... Do not make me come over there.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>Click...</d-text>
+	</d-box>
+
+	<h4 id="callhome-dreemurrdownstairs">In the kitchen / living room</h4>
+	<d-box theme="light">
+		<d-text asterisk>Ring...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(The phone is ringing, but you can't get it.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(You're already on the phone, after all...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="chapter1">Chapter 1</h3>
+	<p>After leaving the Card Kingdom, at which point school is over for the day.</p>
+	<h4 id="chapter1-1">First time</h4>
+	<p>Also plays when leaving the school, if you haven't already called Toriel.</p>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="8"></d-sprite>
+		<d-text asterisk>K... Kris!?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="1"></d-sprite>
+		<d-text asterisk>Whatever have you been doing!?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="3"></d-sprite>
+		<d-text asterisk>I sat in the car waiting for you after school for half an hour...!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="7"></d-sprite>
+		<d-text asterisk>I called and called, but you never picked up...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="8"></d-sprite>
+		<d-text asterisk>You had your poor mother worried sick!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="7"></d-sprite>
+		<d-text asterisk>Kris, I am afraid I am going to have to punish you...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="8"></d-sprite>
+		<d-text asterisk>... huh?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="1"></d-sprite>
+		<d-text asterisk>... A friend?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>You were spending time with... a friend?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="9"></d-sprite>
+		<d-text asterisk>Kris...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>I will make an exception this time.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>You can continue your adventures a little longer.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="1"></d-sprite>
+		<d-text asterisk>But when you return home...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="5"></d-sprite>
+		<d-text asterisk>You are going to have to go to bed early.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>See you soon, honey.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Click...)</d-text>
+	</d-box>
+
+	<h4 id="chapter1-2">Second time</h4>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="1"></d-sprite>
+		<d-text asterisk>Kris, honey, what is it?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="3"></d-sprite>
+		<d-text asterisk>What? No, I am not giving you a ride home.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="1"></d-sprite>
+		<d-text asterisk>Our house is not far. It is just at the top of town.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="4"></d-sprite>
+		<d-text asterisk>Try walking. It builds character, honey.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Click...)</d-text>
+	</d-box>
+
+	<h4 id="chapter1-3">Subsequent times</h4>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="1"></d-sprite>
+		<d-text asterisk>Kris, I am grading papers.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>I can talk to you when you get back, alright?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>Our house is only at the top of town, you know.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Click...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="chapter2">Chapter 2</h3>
+	<h4>In the school hallways, after obtaining the trash orb</h4>
+	<p class="note">At this point only, the number is labelled <span class="white">Call Toriel</span> instead of <span class="white">Call Home</span>.</p>
+	<h5>First time</h5>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="1"></d-sprite>
+		<d-text asterisk>Oh, excuse me, I seem to be receiving a phone call.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>Kris...? What is it, honey?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h6>If you haven't overheard Alphys and Toriel's conversation</h6>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="3"></d-sprite>
+		<d-text asterisk>What? You are "normal?"</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h6>If you overheard Alphys and Toriel's conversation</h6>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="3"></d-sprite>
+		<d-text asterisk>What? You made a "trash orb"?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="4"></d-sprite>
+		<d-text asterisk>... Could you explain what you mean by that?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Alphys" emotion="6"></d-sprite>
+		<d-text asterisk>(Kris, d-don't give the phone to me!!!)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="1"></d-sprite>
+		<d-text asterisk>Oh, you are going to the library later?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>Well, thank you for telling me this time! Have a nice time!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Click...)</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="1"></d-sprite>
+		<d-text asterisk>Kris, do not worry about the library.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Click...)</d-text>
+	</d-box>
+
+	<h4>After being banished from Castle Town to do schoolwork</h4>
+	<h5>First time</h5>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>Ah, Kris! You are going to do your project...?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="1"></d-sprite>
+		<d-text asterisk>Oh, are you calling to ask for my help!?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="4"></d-sprite>
+		<d-text asterisk>I will go find our homemade scented glue-sticks!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="8"></d-sprite>
+		<d-text asterisk>... Oh? You have a partner this time?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="9"></d-sprite>
+		<d-text asterisk>Kris!! That's wonderful!!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="4"></d-sprite>
+		<d-text asterisk>I hope they like butterscotch-scented gluesticks!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Click...)</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>Kris, do not worry about going to the library.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="5"></d-sprite>
+		<d-text asterisk>If Berdly harasses you about our debt...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="4"></d-sprite>
+		<d-text asterisk>I will come and throw a smoke bomb so you can escape.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>... maybe not. Hee hee hee. Try your best, honey.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Click...)</d-text>
+	</d-box>
+
+	<h4>After returning from Cyber World, before going home</h4>
+	<h5>First time</h5>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>Hi honey! How was your group project?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>I can give you a ride home in a minute, I am just...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="1"></d-sprite>
+		<d-text asterisk>... oh? No need?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="8"></d-sprite>
+		<d-text asterisk>You are still spending time with a friend...?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="4"></d-sprite>
+		<d-text asterisk>Oh dear! Two days in a row, Kris! Is that a record?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>Have fun, honey! Be back before sunset!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Click...)</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="4"></d-sprite>
+		<d-text asterisk>Calling me again? What must your friend think?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>Have fun with your friend, honey!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Click...)</d-text>
+	</d-box>
+
+	<h4>After going home</h4>
+	<p>Overrides the standard <a href="#callhome-dreemurrresidence">Dreemurr residence call dialogue</a>.</p>
+	<h5>First time</h5>
+	<h6>If you're in the kitchen / living room</h6>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="1"></d-sprite>
+		<d-text asterisk>Kris, the phone is going.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>Would you mind getting it for me while I...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="8"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="3"></d-sprite>
+		<d-text asterisk>Kris? Why are you calling our house?</d-text>
+	</d-box>
+
+	<h6>If you're in the bathroom</h6>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>Hello, Dreemurr residence.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="8"></d-sprite>
+		<d-text asterisk>What? You would like to talk to "Susie"?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="3"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="4"></d-sprite>
+		<d-text asterisk>Of course, here you are.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>KRIS FINISH WASHING YOUR DAMN HANDS!!!</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Everybody seems too busy to pick up the phone...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="sansnumber">
+	<h2>(Not) Sans's Number</h2>
+	<p>Available only in Chapter 1, after asking Sans about friends and suggesting that he befriend you. Initially appears as "Sans's Number", and gets renamed to "Not Sans's Number" after the first time it's called.</p>
+
+	<h3>First time</h3>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Operator</d-speaker>
+		<d-text asterisk>Hello.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Operator</d-speaker>
+		<d-text asterisk>You have reached the Hotline for Idiot Babies.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Operator</d-speaker>
+		<d-text asterisk>Please press 1 for Idiots, 2 for Babies, 3 for Idiot Babies, and 4 for None.</d-text>
+	</d-box>
+	<d-choices theme="light">
+		<d-option index="0" text="1"></d-option>
+		<d-option index="1" text="2"></d-option>
+		<d-option index="2" text="3"></d-option>
+		<d-option index="3" text="4"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>Ah, you're an Idiot?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>To tell you the truth, I'm one too.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>Let's try our best, OK?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>(Click...)</d-text>
+		</d-box>
+		<p class="note">This number gets relabelled "Not Sans's Number".</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>Ah, you're an Baby?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>To tell you the truth, I'm one too.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>Let's try our best, OK?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>(Click...)</d-text>
+		</d-box>
+		<p class="note">This number gets relabelled "Not Sans's Number".</p>
+	</d-option-panel>
+	<d-option-panel index="2" theme="light">
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>Ah, you're an Idiot Baby?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>To tell you the truth, I'm one too.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>Let's try our best, OK?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>(Click...)</d-text>
+		</d-box>
+		<p class="note">This number gets relabelled "Not Sans's Number".</p>
+	</d-option-panel>
+	<d-option-panel index="3" theme="light">
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>Why'd you call the Hotline for Idiot Babies if you aren't an Idiot Baby?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>Operator</d-speaker>
+			<d-text asterisk>(Click...)</d-text>
+		</d-box>
+		<p class="note">This number gets relabelled "Not Sans's Number".</p>
+	</d-option-panel>
+
+	<hr class="hr2">
+	<h4>Unused fallback</h4>
+	<p>For if you somehow responded with something other than 1, 2, 3, or 4.</p>
+	<d-box theme="light">
+		<d-speaker>Operator</d-speaker>
+		<d-text asterisk>Huh!?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+		<d-text asterisk>(Ring, ring...)</d-text>
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(The phone kept ringing infinitely.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="darkworld">
+	<h2>In the Dark World</h2>
+
+	<p>See <a href="{{ '/misc/darkitems#cellphone' }}">"Cell Phone" on the Dark World items page</a>.</p>
+</section>
