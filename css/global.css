@@ -802,6 +802,17 @@ d-box, d-choices {
 			&:has(> d-speaker.ralsei)::before { background-image: url("../assets/images/faces/ralsei/battle.png") }
 			&:has(> d-speaker.noelle)::before { background-image: url("../assets/images/faces/noelle/battle.png") }
 		}
+		&[theme=fade]:has(
+			> d-speaker.kris,
+			> d-speaker.susie,
+			> d-speaker.ralsei,
+			> d-speaker.noelle
+		)::before {
+			top: -0.05em;
+			left: -1.9em;
+			box-shadow: 0 0 0.2em 0.1em var(--black);
+			border: none;
+		}
 	}
 
 	&:state(compact) {
