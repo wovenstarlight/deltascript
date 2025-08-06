@@ -34,13 +34,36 @@ class DialogueSpeaker extends HTMLElement {
 		setTimeout(() => {
 			// Add the corresponding color class where possible
 			switch (this.innerText) {
+				case "Kris":
 				case "Susie":
 				case "Ralsei":
 				case "Noelle":
-				case "Kris":
+				case "Berdly":
+				case "Toriel":
+				case "Asgore":
+				case "Sans":
+				case "Papyrus":
+				case "Undyne":
+				case "Alphys":
+				case "Mettaton":
+				case "Rudy":
+				case "Carol":
 				case "Lancer":
+				case "King":
+				case "Rouxls":
+				case "Jevil":
+				case "Queen":
+				case "Spamton":
+				case "Tenna":
+				// eram's down below cuz we're not sure eram's Da Actual Name
+				case "Gerson":
 					this.classList.add(this.innerText.toLowerCase());
 					break;
+
+				case "Shadow Mantle holder":
+					this.classList.add("eram");
+					break;
+
 				default:
 					break;
 			}

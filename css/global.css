@@ -58,9 +58,153 @@
 	--ralsei: #4dcc8e;
 	--noelle: #ffce32; /* actually this one is Light World */
 	--berdly: #46b3fb;
+	--toriel: #7e76a8; /* lightened for readability from #5e5492 */
+	--asgore: #e4ba00;
+	--sans: #4782c9;
+	--papyrus: #ff4711;
+	--undyne: #6299c1;
+	--alphys: #fdc748;
+	--mettaton: #fa0ef3;
+	--rudy: #d76551;
+	--carol: #00a2e8;
 	--lancer: #78ade1; /* lightened for readability from #406080 */
+	--king: #5585bd; /* King uses the same sprite palette as Lancer so this one's actually taken from Lancer's bucket LMAO */
+	--rouxls: #637de3; /* CUSTOM-PICKED, NOT FROM SPRITE; lightened for readability from #0f0062 */
+	--jevil: #8a95c8; /* mixed for readability from #6d6dc0 and #a6bdd0 */
 	--queen: #00a2e8;
+	--friend-pink: #ffaec9;
+	--friend-yellow: #fff200;
+	--tenna: #da1f52;
+	--eram: #f26522;
+	--gerson: #65aa26;
 }
+/* Dim colors */
+body.dim {
+	--red: #bb0000;
+	--blue: #0000bb;
+	--yellow: #bbbb00;
+	--green: #00bb00;
+	--white: #bbb;
+	--gray: #777;
+	--black: #000;
+	--purple: #5e005e;
+	--maroon: #5e0000;
+	--orange: #b6722e;
+	--lightblue: #0077af;
+	--pink: #bb5ebb;
+	--lightgreen: #5ebb5e;
+	--lightyellow: #bbbb80;
+
+	--kris: #169fb5; /* CUSTOM-PICKED, NOT FROM SPRITE */
+	--susie: #af67af; /* from Light World sprite */
+	--ralsei: #429e76;
+	--noelle: #cf9e00; /* CUSTOM-PICKED, NOT FROM SPRITE */
+	--berdly: #558ed5; /* from Light World sprite */
+	--toriel: #5e5492;
+	--jevil: #6d6dc0;
+}
+/* #region Color-specific classes */
+.cR, .red { color: var(--red) }
+.cB, .blue { color: var(--blue) }
+.cY, .yellow { color: var(--yellow) }
+.cG, .green { color: var(--green) }
+.cW, .white { color: var(--white) }
+.cX, .black { color: var(--black) }
+.cP, .purple { color: var(--purple) } /* unused */
+.cM, .maroon { color: var(--maroon) } /* unused */
+.cO, .orange { color: var(--orange) }
+.cA, .lightblue { color: var(--lightblue) }
+.cS, .pink { color: var(--pink) }
+.cV, .lightgreen { color: var(--lightgreen) }
+.gray { color: var(--gray) }
+.lightyellow { color: var(--lightyellow) }
+/* Dark World 3D effect */
+[theme=dark], [theme=objbattle], [theme=battlemenu] {
+	.cR, .red,
+	.cB, .blue,
+	.cY, .yellow,
+	.cG, .green,
+	.cW, .white,
+	.cX, .black,
+	.cP, .purple,
+	.cM, .maroon,
+	.cO, .orange,
+	.cA, .cS, .cV,
+	.gray, .lightyellow {
+		background: var(--mycolor) linear-gradient(rgb(from var(--white) r g b / 0.8), rgb(from var(--mycolor) r g b / 0));
+		background-clip: text;
+		color: transparent;
+		filter: drop-shadow(1px 1px rgb(from var(--mycolor) r g b / 0.4));
+	}
+	.cR, .red { --mycolor: var(--red) }
+	.cB, .blue { --mycolor: var(--blue) }
+	.cY, .yellow { --mycolor: var(--yellow); --strength: 20% }
+	.cG, .green { --mycolor: var(--green) }
+	.cW, .white { --mycolor: var(--white) }
+	.cX, .black { --mycolor: var(--black) }
+	.cP, .purple { --mycolor: var(--purple) } /* unused */
+	.cM, .maroon { --mycolor: var(--maroon) } /* unused */
+	.cO, .orange { --mycolor: var(--orange) }
+	.cA, .lightblue { --mycolor: var(--lightblue) }
+	.cS, .pink { --mycolor: var(--pink) }
+	.cV, .lightgreen { --mycolor: var(--lightgreen) }
+	.gray { --mycolor: var(--gray) }
+	.lightyellow { --mycolor: var(--lightyellow) }
+}
+/* Health bar colors */
+.health {
+	--kris: #01ffff;
+	--susie: #ff00ff;
+	--ralsei: #01ff00;
+	--noelle: #ffff00;
+}
+/* Menu portait colors */
+.menu {
+	--kris: #00a2e8;
+	--susie: #ea79c8;
+	--ralsei: #b5e61d;
+	--noelle: #ffff00; /*same as health bar*/
+}
+.act {
+	--kris: var(--lightblue);
+	--susie: var(--pink);
+	--ralsei: var(--lightgreen);
+	--noelle: var(--lightyellow);
+}
+/* #region Character colors */
+.kris { color: var(--kris) }
+.susie { color: var(--susie) }
+.ralsei { color: var(--ralsei) }
+.noelle { color: var(--noelle) }
+.berdly { color: var(--berdly) }
+.toriel { color: var(--toriel) }
+.asgore { color: var(--asgore) }
+.sans { color: var(--sans) }
+.papyrus { color: var(--papyrus) }
+.undyne { color: var(--undyne) }
+.alphys { color: var(--alphys) }
+.mettaton { color: var(--mettaton) }
+.rudy { color: var(--rudy) }
+.carol { color: var(--carol) }
+/* Chapter 1 */
+.lancer { color: var(--lancer) }
+.king { color: var(--king) }
+.rouxls { color: var(--rouxls) }
+.jevil { color: var(--jevil) }
+/* Chapter 2 */
+.queen { color: var(--queen) }
+.spamton {
+	color: transparent;
+	background-image: linear-gradient(to right, var(--friend-pink), var(--friend-yellow));
+	background-clip: text;
+}
+/* Chapter 3 */
+.tenna { color: var(--tenna) }
+.eram { color: var(--eram) }
+/* Chapter 4 */
+.gerson { color: var(--gerson) }
+/* #endregion */
+/* #endregion */
 h1, h2, h3, h4, h5, h6 { font-weight: normal }
 h2, h3, h4, h5, h6 {
 	margin-block: 0.7rem;
@@ -145,85 +289,6 @@ hr {
 
 	&.hr3 { border-style: dashed }
 }
-/* #region Color-specific classes */
-.cR, .red { color: var(--red) }
-.cB, .blue { color: var(--blue) }
-.cY, .yellow { color: var(--yellow) }
-.cG, .green { color: var(--green) }
-.cW, .white { color: var(--white) }
-.cX, .black { color: var(--black) }
-.cP, .purple { color: var(--purple) } /* unused */
-.cM, .maroon { color: var(--maroon) } /* unused */
-.cO, .orange { color: var(--orange) }
-.cA, .lightblue { color: var(--lightblue) }
-.cS, .pink { color: var(--pink) }
-.cV, .lightgreen { color: var(--lightgreen) }
-.gray { color: var(--gray) }
-.lightyellow { color: var(--lightyellow) }
-
-/* Dark World 3D effect */
-[theme=dark], [theme=objbattle], [theme=battlemenu] {
-	.cR, .red,
-	.cB, .blue,
-	.cY, .yellow,
-	.cG, .green,
-	.cW, .white,
-	.cX, .black,
-	.cP, .purple,
-	.cM, .maroon,
-	.cO, .orange,
-	.cA, .cS, .cV,
-	.gray, .lightyellow {
-		background: var(--mycolor) linear-gradient(rgb(from var(--white) r g b / 0.8), rgb(from var(--mycolor) r g b / 0));
-		background-clip: text;
-		color: transparent;
-		filter: drop-shadow(1px 1px rgb(from var(--mycolor) r g b / 0.4));
-	}
-	.cR, .red { --mycolor: var(--red) }
-	.cB, .blue { --mycolor: var(--blue) }
-	.cY, .yellow { --mycolor: var(--yellow); --strength: 20% }
-	.cG, .green { --mycolor: var(--green) }
-	.cW, .white { --mycolor: var(--white) }
-	.cX, .black { --mycolor: var(--black) }
-	.cP, .purple { --mycolor: var(--purple) } /* unused */
-	.cM, .maroon { --mycolor: var(--maroon) } /* unused */
-	.cO, .orange { --mycolor: var(--orange) }
-	.cA, .lightblue { --mycolor: var(--lightblue) }
-	.cS, .pink { --mycolor: var(--pink) }
-	.cV, .lightgreen { --mycolor: var(--lightgreen) }
-	.gray { --mycolor: var(--gray) }
-	.lightyellow { --mycolor: var(--lightyellow) }
-}
-
-/* Party colors */
-.kris { color: var(--kris) }
-.susie { color: var(--susie) }
-.ralsei { color: var(--ralsei) }
-.noelle { color: var(--noelle) }
-.berdly { color: var(--berdly) }
-.lancer, .king { color: var(--lancer) }
-.queen { color: var(--queen) }
-/* Health bar colors */
-.health {
-	--kris: #01ffff;
-	--susie: #ff00ff;
-	--ralsei: #01ff00;
-	--noelle: #ffff00;
-}
-/* Menu portait colors */
-.menu {
-	--kris: #00a2e8;
-	--susie: #ea79c8;
-	--ralsei: #b5e61d;
-	--noelle: #ffff00; /*same as health bar*/
-}
-.act {
-	--kris: var(--lightblue);
-	--susie: var(--pink);
-	--ralsei: var(--lightgreen);
-	--noelle: var(--lightyellow);
-}
-/* #endregion */
 d-box:not(:state(compact)) .text-center-expand,
 .text-center { text-align: center }
 img {
@@ -423,28 +488,6 @@ header.d-section:has(h1.visually-hidden:only-child) {
 body:not(.noanim) img.animswitch[src$=".png"],
 body.noanim img.animswitch[src$=".gif"] {
 	display: none;
-}
-/* Dim colors */
-body.dim {
-	--red: #bb0000;
-	--blue: #0000bb;
-	--yellow: #bbbb00;
-	--green: #00bb00;
-	--white: #bbb;
-	--gray: #777;
-	--black: #000;
-	--purple: #5e005e;
-	--maroon: #5e0000;
-	--orange: #b6722e;
-	--lightblue: #0077af;
-	--pink: #bb5ebb;
-	--lightgreen: #5ebb5e;
-	--lightyellow: #bbbb5e;
-
-	--kris: #6a7bc4;
-	--susie: #cb4ed3;
-	--ralsei: #429e76;
-	--noelle: #d87d50;
 }
 /* #endregion */
 
@@ -698,10 +741,13 @@ d-box, d-choices {
 				--kris: #3b4380; /* blended for readability from too-dark DW hair #0b0b3b and too-light DW shadow #6a7bc4 */
 				--susie: #88176a;
 				--ralsei: #38705e;
-				--noelle: #b15d34; /* darkened for readability from LW skintone #d87d50*/
+				--noelle: #b15d34; /* darkened for readability from LW skintone #d87d50 */
 				--berdly: #36394b;
 				--lancer: #406080;
 				--queen: #1263bc;
+				--jevil: #3c3c97; /* darkened for readbility from #6d6dc0 */
+				--friend-pink: #a24b68; /* darkened for readability from #ffaec9 */
+				--friend-yellow: #9f9600; /* darkened for readability from #fff200 */
 			}
 		}
 
