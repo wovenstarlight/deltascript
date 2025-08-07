@@ -1,0 +1,97 @@
+---
+title: Pipis encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Pipis. Exclusive to the Weird Route.</p>
+
+sources:
+  -
+    name: gml_Object_obj_pipis_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+  -
+    id: dialogue
+    name: General dialogue
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %} global.encounterno = 102 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<p>Appears with 2 other Pipis.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Pipis.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+	
+	<p>No dialogue; Pipis do not talk.</p>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+	<p class="note">&lt;NUMBER&gt; is a randomly-generated number between 42 and 5555, inclusive.</p>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>PIPIS - ''The Original'' An invasive species of freshwater clam.</d-text>
+		<d-box>
+			<d-text>&lt;NUMBER&gt; liked this!</d-text>
+		</d-box>
+	</d-box>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Nothing happened!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Nothing happened!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>

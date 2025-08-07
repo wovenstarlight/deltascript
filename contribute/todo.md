@@ -149,7 +149,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* gml_Object_obj_spamton_neo_enemy_Step_0 `/spamtonneo`, crosslink `/spamton`, split sections/pages(?) for the regular/weird route (`/spamtonneoweird`? maybe `weirdroute` in full lmao.)
 			* gml_Object_obj_gigaqueen_enemy_Step_0 `/gigaqueen`
 			* gml_Object_obj_dojo_spareenemy_Step_0 `/jigsawjoe` or `/dojospare` (dojo's spare challenge)
-			* gml_Object_obj_pipis_enemy_Step_0 `/pipis`
 		* Chapter 3
 			* gml_Object_obj_shadowman_enemy_Step_0 `/shadowguy`
 			* gml_Object_obj_shutta_enemy_Step_0 `/shuttah`
