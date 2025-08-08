@@ -1,0 +1,609 @@
+---
+title: Spamton NEO encounter - Weird Route
+
+description: >
+  <p>Flavor text and dialogue for the Weird Route battle against Spamton NEO.</p>
+
+sources:
+  -
+    name: gml_Object_obj_spamton_neo_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_sneo_phonecall_Step_0
+    chapters: [2]
+    note: Call For You/Me dialogue
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/spamton
+    name: First Spamton encounter
+  -
+    url: /encounters/spamtonneo
+    name: Spamton NEO encounter - Normal route
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+        subheadings:
+          -
+            id: ft-bigshotpre
+            name: If no big shots have been fired and Spamton NEO is at 70% HP or higher
+          -
+            id: ft-bigshotpost
+            name: After big shots have been fired
+      -
+        id: ft-lowhp
+        name: Low HP
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-turn
+        name: With specific turns
+      -
+        id: dialogue-attack
+        name: With specific attacks
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: xslash
+        name: X-Slash
+      -
+        id: friedpipis
+        name: FriedPipis
+      -
+        id: callforhelp
+        act_icon: [Ralsei, Susie, Noelle]
+        custom_icon_positions: true
+        name: ACTICON /ACTICON /ACTICON Call for help
+---
+{% comment %} global.encounterno = 61 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It's time to be a BIG SHOT!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The stage lights are shattered.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It pulls the strings and makes them ring.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The air crackles with freedom.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like rotten glass.</d-text>
+	</d-box>
+	<h4 id="ft-bigshotpre">If no big shots have been fired and Spamton NEO is at 70% HP or higher</h4>
+	<p>Not including the big shot(s) required for the pre-battle cutscene.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Hold and release [CONFIRM] to fire a BIG SHOT!</d-text>
+	</d-box>
+	<h4 id="ft-bigshotpost">After big shots have been fired</h4>
+	<p>"First turn" etc. here refers to the number of turns since the first big shot was fired, not including the big shot(s) required for the pre-battle cutscene.</p>
+	<h5>First turn</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton turns to the audience and laughs.</d-text>
+	</d-box>
+	<h5>Second turn</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton appeals to the audience with a festive jig!</d-text>
+	</d-box>
+	<h5>Third turn</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton begs to the audience, Spamton prays to the audience.</d-text>
+	</d-box>
+	<h5>Fourth turn</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>There is no audience.</d-text>
+	</d-box>
+	<h5>Seventh turn</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton begs the audience to stop taking the furniture out of his room.</d-text>
+	</d-box>
+	<h5>Tenth turn</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton feels the sweet breeze as he takes a ride around town.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<h4>Below 10% HP</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton NEO's DEFENSE is towering.</d-text>
+	</d-box>
+
+	<h4>Below 6% HP</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton NEO recovered HP with Pipis!</d-text>
+	</d-box>
+	<p class="note">Spamton NEO heals to 6% HP.</p>
+
+	<h4>Unused variant</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton looks to the heavens.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>CAN A [Little<span class="break"></span> Sponge] DO THIS?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>GO [Ga-Ga]<span class="break"></span> AND [Die]</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>[BreaKing] and<span class="break"></span> [CracKing]</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>[The Smooth<span class="break"></span> Taste Of] NEO</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>THE [@$@!] TASTE<span class="break"></span> OF SPAMTON</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>DON'T YOU<span class="break"></span> WANNA BE A<span class="break"></span> BIG SHOT?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>[Clown]!? NO!!!<span class="break"></span> I FEEL SICK!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn">With specific turns</h3>
+	<p>Dialogue for the first 10 turns is scripted; the below lines play out in order unless overridden by the <a href="#dialogue-lowhp">low HP dialogue</a>.</p>
+
+	<h4 id="dialogue1">Turn 1</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>I REMEMBER WHEN<span class="break"></span> YOU WERE JUST<span class="break"></span> A LOST [Little Sponge]</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>SLEEPING AT<span class="break"></span> THE BOTTOM OF<span class="break"></span> A DUMPSTER!</d-text>
+	</d-box>
+
+	<h4 id="dialogue2">Turn 2</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>I GAVE YOU<span class="break"></span> EVERYTHING I HAD!<span class="break"></span> MY LIFE<span class="break"></span> ADVICE!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>I TOLD YOU<span class="break"></span> [4 Left]<span class="break"></span> AND ASKED YOU<span class="break"></span> [Buy] OR [Don't Buy]!</d-text>
+	</d-box>
+
+	<h4 id="dialogue3">Turn 3</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>I GAVE YOU MY<span class="break"></span> [Commemorative Ring]<span class="break"></span> FOR THE PRICE OF<span class="break"></span> [My Favorite Year]!</d-text>
+	</d-box>
+
+	<h4 id="dialogue4">Turn 4</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>AND THIS IS HOW<span class="break"></span> YOU [Repay] ME!?<span class="break"></span> TREATING ME LIKE<span class="break"></span> [DLC]!?</d-text>
+	</d-box>
+
+	<h4 id="dialogue5">Turn 5</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>NO, I GET IT!<span class="break"></span> IT'S YOU AND<span class="break"></span> THAT [Hochi Mama]!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>YOU'VE BEEN<span class="break"></span> [Making],<span class="break"></span> HAVEN'T YOU!</d-text>
+	</d-box>
+
+	<h4 id="dialogue6">Turn 6</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>YOU'VE BEEN<span class="break"></span> MAKING<span class="break"></span> [Hyperlink Blocked]!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>AND NOW THAT<span class="break"></span> YOU HAVE YOUR<span class="break"></span> OWN SUPPLY,<span class="break"></span> YOU DON'T NEED ME!!!</d-text>
+	</d-box>
+
+	<h4 id="dialogue7">Turn 7</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>I WAS TOO [Trusting]<span class="break"></span> TOO [Honest]</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>I'VE ALWAYS BEEN<span class="break"></span> A MAN OF THE [PIPIS].<span class="break"></span> A REAL [PIPIS]<span class="break"></span> PERSON!</d-text>
+	</d-box>
+
+	<h4 id="dialogue8">Turn 8</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>I SHOULD HAVE<span class="break"></span> KNOWN YOU WOULD<span class="break"></span> HAVE USED MY [Ring]<span class="break"></span> FOR [Evil]...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>OH, [Right].<span class="break"></span> THAT'S WHY I SOLD<span class="break"></span> IT TO YOU</d-text>
+	</d-box>
+
+	<h4 id="dialogue9">Turn 9</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>YOU THINK MAKING<span class="break"></span> [Frozen Chicken]<span class="break"></span> WITH YOUR<span class="break"></span> [Side Chick]</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>IS GONNA LET<span class="break"></span> YOU DRINK UP<span class="break"></span> THAT [Sweet, Sweet]<span class="break"></span> [Freedom Sauce]?</d-text>
+	</d-box>
+
+	<h4 id="dialogue10">Turn 10</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>WELL, YOU'RE<span class="break"></span> [$!$!] RIGHT!<span class="break"></span> BUT DON'T BLAME<span class="break"></span> ME</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>WHEN YOU'RE [Crying]<span class="break"></span> IN A [Broken Home]<span class="break"></span> WISHING YOU LET<span class="break"></span> YOUR OLD PAL<span class="break"></span> SPAMTON</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>[Kill You]</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-attack">With specific attacks</h3>
+	<p>The below lines play after any <a href="#dialogue-turn">turn-specific dialogue</a>, and play only the first time their associated attack is used. <a href="{% include wikilink page='Spamton NEO#Attacks' %}">Attack names</a> are borrowed from the Deltarune Wiki.</p>
+
+	<h4>A Call For You</h4>
+	<p class="note">Spamton NEO lifts up towards the top of the screen as a phone receiver hangs down from it, ringing. Spamton NEO grabs the receiver and puts it to his ear.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>WHAT!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>WHAT? ARE<span class="break"></span> YOU SERIOUS!?</d-text>
+	</d-box>
+	<p class="note">Spamton NEO holds the phone out towards the bullet board.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>... IT'S<span class="break"></span> FOR YOU.</d-text>
+	</d-box>
+
+	<h4>A Call For Me</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>OR...<span class="break"></span> DID YOU WANT<span class="break"></span> TO BE...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>Did you wanna<span class="break"></span> be...</d-text>
+	</d-box>
+	<p class="note">Spamton NEO lifts up towards the top of the screen as a phone receiver hangs down from it, ringing. Spamton NEO grabs the receiver and puts it to his ear.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>WHAT!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>IT'S FOR<span class="break"></span> ME!?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-lowhp">Below 10% HP</h3>
+	<h4>First turn after dropping to 10% HP</h4>
+	<p class="note">The music fades out. Spamton NEO stops moving.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>MY ESTEEM CUSTOMER I<span class="break"></span> SEE YOU ARE ATTEMPTING<span class="break"></span> TO DEPLETE MY HP!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>I'LL ADMIT YOU'VE<span class="break"></span> GOT SOME [Guts]<span class="break"></span> KID!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>BUT IN A [1 for 1]<span class="break"></span> BATTLE, &nbsp;NEO<span class="break"></span> NEVER LOSES!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>IT'S TIME FOR A<span class="break"></span> LITTLE [Bluelight Specil]</d-text>
+	</d-box>
+	<p class="note">Blue light flares around Spamton NEO.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton Neo's ATTACK dropped!</d-text>
+		<d-text asterisk>Spamton Neo's DEFENSE rose greatly!</d-text>
+	</d-box>
+	<p class="note"><a href="{% include wikilink page='Deal Gone Wrong' %}">Deal Gone Wrong</a> starts playing.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>DIDN'T YOU KNOW<span class="break"></span> [Neo] IS FAMOUS FOR<span class="break"></span> ITS HIGH DEFENSE!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>NOW... ENJ0Y THE<span class="break"></span> FIR3WORKS, KID!!!</d-text>
+	</d-box>
+	<p class="note">Kris's <a href="#check">Check</a>/<a href="#xslash">X-Slash</a>/<a href="#friedpipis">FriedPipis</a> ACTs are replaced by <a href="#callforhelp">a nameless ACT</a>.</p>
+
+	<h4>Subsequent turns</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>ENJOY THE FIREWORKS,<span class="break"></span> KID!!!!</d-text>
+	</d-box>
+
+	<h4>Unused variant</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>My esteem customer<span class="break"></span> I see you are attempting to deplete my HP!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3>First time</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SPAMTON NEO - YOU WON'T FIND HIGHER ATTACK AND DEFENSE ANYWHERE ELSE!!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>THE SMOOTH TASTE OF NEO "WAKE UP AND TASTE THE <span class="red">PAIN</span>".</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>Unused continuation</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[[note: pain is in red.]]</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton Neo - He is his own worst invention.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="xslash">
+	<h2>X-Slash</h2>
+
+	<h3 id="xslash-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Physical damage</d-text>
+		<d-text class="orange">25% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="xslash-usage">Usage</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris used X-Slash!</d-text>
+	</d-box>
+	<p class="note">Kris slashes twice at Spamton NEO, dealing damage twice.</p>
+</section>
+
+<section class="d-section" id="friedpipis">
+	<h2>FriedPipis</h2>
+
+	<h3 id="friedpipis-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Heals<span class="break"></span> 120 HP</d-text>
+		<d-text class="orange">32% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="friedpipis-usage">Usage</h3>
+	<p class="note">&lt;NUMBER&gt; is a randomly-generated number between 42 and 5555, inclusive.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>RECOVERED HP with pipis!</d-text>
+		<d-box>
+			<d-text>[&lt;NUMBER&gt;] Liked this!</d-text>
+		</d-box>
+	</d-box>
+</section>
+
+<section class="d-section" id="callforhelp">
+	<h2>{% include acticon chara="Ralsei" -%}/{% include acticon chara="Susie" -%}/{% include acticon chara="Noelle" -%} Call for help</h2>
+	<p>A nameless act. Replaces <a href="#check">Check</a>, <a href="#xslash">X-Slash</a>, and <a href="#friedpipis">FriedPipis</a>. Has several variants.</p>
+
+	<h3 id="callforhelp1">{% include acticon chara="Ralsei" -%} (First time)</h3>
+	<h4>Flavor text</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris called for help...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... but nobody came.</d-text>
+	</d-box>
+
+	<h4>Dialogue</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>WHAT!? YOU'RE<span class="break"></span> CALLING FRIENDS!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>YOU THINK YOU<span class="break"></span> CAN BEAT ME WITH<span class="break"></span> YOUR FRIENDS' [Magic]!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>GO AHEAD, [Kid]...<span class="break"></span> CALL ALL YOU WANT!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>NO ONE WILL<span class="break"></span> EVER PICK UP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="callforhelp2">{% include acticon chara="Ralsei" -%} (Second time)</h3>
+	<h4>Flavor text</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris called for help...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... but nobody came.</d-text>
+	</d-box>
+
+	<h4>Dialogue</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>GO AHEAD AND<span class="break"></span> [Scream] INTO THE<span class="break"></span> [Receiver].</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>THE [Voice] RUNS<span class="break"></span> OUT EVENTUALLY</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>YOUR [Voice]<span class="break"></span> THEIR [Voice]</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>UNTIL YOU REALIZE<span class="break"></span> YOU ARE ALL ALONE</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="callforhelp3">{% include acticon chara="Susie" -%} (Third time)</h3>
+	<h4>Flavor text</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris called for help...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... but nobody came.</d-text>
+	</d-box>
+
+	<h4>Dialogue</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>THERE WILL BE NO<span class="break"></span> MORE [Miracles]<span class="break"></span> NO MORE [Magic].</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>YOU LOST IT WHEN<span class="break"></span> YOU TRIED TO SEE<span class="break"></span> TOO FAR....</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>... YOU LOST IT...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="callforhelp4">{% include acticon chara="Susie" -%} (Fourth time)</h3>
+	<h4>Flavor text</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris called for help...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... but nobody came.</d-text>
+	</d-box>
+
+	<h4>Dialogue</h4>
+	<p class="note">Spamton spasms violently.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>YOU MAKE ME [Sick]!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>MUTTERING YOUR<span class="break"></span> [Lost Friends] NAMES<span class="break"></span> AT THE BOTTOM OF<span class="break"></span> A [Dumpster]!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>NO ONE'S GONNA<span class="break"></span> HELP YOU!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>GET THAT THROUGH<span class="break"></span> YOUR [Beautiful Head],<span class="break"></span> YOU LITTLE [Worm]!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="callforhelp5">{% include acticon chara="Noelle" -%} (Fifth time)</h3>
+	<h4>Flavor text</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You whispered Noelle's name...</d-text>
+	</d-box>
+
+	<h4>Dialogue</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>... HER?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>YOU'RE STILL TRYING<span class="break"></span> TO [Use] HER!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>HA HA HA HA!!!</d-text>
+	</d-box>
+	<p class="note">Spamton laughs.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>YOU THINK SHE CAN<span class="break"></span> [Hear] YOU NOW,<span class="break"></span> MUTTERING HER NAME!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>WHAT'S SHE GONNA<span class="break"></span> DO, MAKE ME AN<span class="break"></span> [Ice Cream]!?</d-text>
+	</d-box>
+	<p class="note">Spamton laughs, head jerking around. Then, suddenly, he pauses.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>HEY, IS IT COLD<span class="break"></span> IN HERE OR IS IT<span class="break"></span> JUST ME?</d-text>
+	</d-box>
+	<p class="note">The screen cuts to black. The trilling of IceShock being cast is heard, and Spamton NEO takes damage thrice. Without commentary, a <a href="{{ '/misc/darkitems#shadowcrystal' | relative_url }}">Shadow Crystal</a> and the <a href="{{ '/misc/weapons#puppetscarf' | relative_url }}">Puppet Scarf</a> are added to the inventory.</p>
+
+	<p class="note">After a moment, the <a href="{{ '/chapters/chapter2/fountainweird#postfight' | relative_url }}">SOUL emerges to seal the Dark Fountain</a>.</p>
+</section>

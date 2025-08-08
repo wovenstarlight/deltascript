@@ -146,7 +146,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* gml_Object_obj_rouxls_enemy_Step_0 `/rouxls1` or `/rouxlsch2` (pirate hat fight)
 			* gml_Object_obj_berdlyb2_enemy_Step_0 `/berdly2` or `/berdlyalley`
 			* gml_Object_obj_queen_enemy_Step_0/gml_Object_obj_berdlyplug_enemy_Step_0 `/queen`
-			* gml_Object_obj_spamton_neo_enemy_Step_0 `/spamtonneoweird`, crosslink `/spamton` and `/spamtonneo`
 			* gml_Object_obj_gigaqueen_enemy_Step_0 `/gigaqueen`
 			* gml_Object_obj_dojo_spareenemy_Step_0 `/jigsawjoe` or `/dojospare` (dojo's spare challenge)
 		* Chapter 3
