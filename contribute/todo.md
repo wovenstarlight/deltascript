@@ -129,7 +129,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* ~~`/armor` - Defense equipment.~~ DONE up to Chapter 4
 	* `/encounters` - Check descriptions, ACT descriptions, etc. This is probably gonna have a ton of subpages, I'd guess one for every potential enemy. At the very least, the big story-critical encounters (e.g. all boss fights) would need their own subpages which the `/chapters` pages could then link to.
 		* Include disambiguation pages for the following. Maybe we give them more descriptive names...? Double-check the URLs before creating the disambigs
-			* `/berdly`: coaster fight, alley fight, queen fight with plug-controlled berdly
 			* `/rouxls`: chapter 2 pirate hat, chapter 3 contractors
 			* `/tenna`: doom board and final showdown
 		* Chapter 1
