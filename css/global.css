@@ -356,6 +356,9 @@ img {
 	}
 }
 /* #endregion */
+@media (max-width: 30rem) {
+	body { font-size: 0.875em }
+}
 /* #endregion */
 
 /* #region Accessibility */
@@ -556,6 +559,7 @@ body {
 	h1 {
 		text-align: center;
 		margin: 0;
+		hyphens: auto;
 
 		&:not(:last-child) {
 			border-block-end: 0.1em solid rgb(from var(--gray) r g b / 0.1);
@@ -798,7 +802,7 @@ d-box, d-choices {
 			overflow: hidden;
 		}
 
-		@media (max-width: 30em) {
+		@media (max-width: 30rem) {
 			font-size: 1em;
 
 			/* For boxes with small dialogues, add spacing so dialogue doesn't overlap. ...too much, at least. */
