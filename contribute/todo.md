@@ -142,7 +142,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* gml_Object_obj_werewerewire_enemy_Step_0 `/werewerewire`
 			* gml_Object_obj_dojograzeenemy_Step_0 `/jigsawrydojo` or `/dojograze` (dojo's graze challenge)
 			* gml_Object_obj_tasque_manager_enemy_Step_0 `/tasquemanager`
-			* gml_Object_obj_berdlyb_enemy_Step_0 `/berdly1` or `/berdlycoaster` (coaster fight)
 			* gml_Object_obj_mauswheel_enemy_Step_0 `/mauswheel`
 			* gml_Object_obj_rouxls_enemy_Step_0 `/rouxls1` or `/rouxlsch2` (pirate hat fight)
 			* gml_Object_obj_berdlyb2_enemy_Step_0 `/berdly2` or `/berdlyalley`

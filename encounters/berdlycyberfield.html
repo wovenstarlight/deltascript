@@ -1,0 +1,371 @@
+---
+title: Berdly encounter - Cyber Field
+
+description: >
+  <p>Flavor text and dialogue for the battle against Berdly on the Cyber Field rollercoasters.</p>
+
+sources:
+  -
+    name: gml_Object_obj_berdlyb_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/berdlycybercity
+    name: Second Berdly encounter - Cyber City, normal route
+  -
+    url: /encounters/berdlycybercityweird
+    name: Second Berdly encounter - Cyber City, Weird Route
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Above 75% Mercy
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-turn
+        name: With specific turns
+      -
+        id: dialogue-attack
+        name: With specific attacks
+      -
+        id: dialogue-carbroke
+        name: Low HP or above 50% <span class="yellow">Mercy</span>, turn 6 or later
+      -
+        id: dialogue-bumped
+        name: If previously bumped, turn 6 or later
+      -
+        id: dialogue-spareable
+        name: Spareable
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: bump-kris
+        name: Bump
+      -
+        id: bumpx
+        act_icon: [Susie, Ralsei]
+        name: BumpX
+      -
+        id: bump-susie
+        class: susie act
+        name: Bump
+      -
+        id: bump-ralsei
+        class: ralsei act
+        name: Bump
+---
+{% comment %} global.encounterno = 58 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly rides in!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly calls Queen for help!</d-text>
+		<d-text asterisk>But Queen is pretending to be on the phone!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly asks Queen what snacks they have at home!</d-text>
+		<d-text asterisk>Queen nods! She has earbuds in!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly gives the secret sign!</d-text>
+		<d-text asterisk>But Queen is busy with a coloring book!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly summons Queen!</d-text>
+		<d-text asterisk>Queen calls in sick!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly shows Queen his card collection!</d-text>
+		<d-text asterisk>Queen escaped successfully.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like fried chicken.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly asks Queen for healing!</d-text>
+		<d-text asterisk>She says "You're Doing Great Honey"</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Above 75% <span class="yellow">Mercy</span></h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly's coaster car thing looks sick.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-turn">With specific turns</h3>
+	<h4>Turn 1</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Kris, I get why<span class="break"></span> you're getting in my<span class="break"></span> way! You're jealous,<span class="break"></span> aren't you!?</d-text>
+	</d-box>
+
+	<h4>Turn 2</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Kris, you're tired<span class="break"></span> of being the class<span class="break"></span> No.3, gazing distantly<span class="break"></span> at Noelle and I's<span class="break"></span> fruited figures...</d-text>
+	</d-box>
+
+	<h4>Turn 3</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>So rather than ever<span class="break"></span> STUDYING, you'd enlist<span class="break"></span> SUSIE to take us down!</d-text>
+	</d-box>
+
+	<h4>Turn 4</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Kris... you are truly<span class="break"></span> depraved. Playing<span class="break"></span> in the mud with<span class="break"></span> the class hellion.</d-text>
+	</d-box>
+
+	<h4>Turn 5</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>But Kris, I am<span class="break"></span> a kind and brave<span class="break"></span> hero! If you come<span class="break"></span> to our side...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>You may be a<span class="break"></span> slightly less<span class="break"></span> distant No. 3!<span class="break"></span> Haha... slightly.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-attack">With specific attacks</h3>
+	<p>These dialogues play only the first time each attack is used from turn 6 onwards. See the <a href="{% include wikilink page='Berdly#Attacks' %}">Deltarune Wiki</a> for descriptions of each attack.</p>
+
+	<h4>Tornado</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Partake, Kris! The<span class="break"></span> zephyr of punishment!</d-text>
+	</d-box>
+
+	<h4>Spear Blast</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Holy Halbird!<span class="break"></span> Grant me strength!</d-text>
+	</d-box>
+
+	<h4>Chirashi</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Look, Susie! The<span class="break"></span> closest you'll ever<span class="break"></span> get to an "A"!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-carbroke">Low HP or above 50% <span class="yellow">Mercy</span>, turn 6 or later</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>What? My car<span class="break"></span> is breaking!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Fools! This is<span class="break"></span> Smart Smoke! It means<span class="break"></span> my car is getting<span class="break"></span> stronger!</d-text>
+	</d-box>
+	<p class="note">May continue into the dialogue below, if one of the Bump ACTs was previously used.</p>
+
+	<hr>
+
+	<h3 id="dialogue-bumped">If previously bumped, turn 6 or later</h3>
+	<p>May follow the dialogue above, if conditions for both are met.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Ha! Go ahead, "bump"<span class="break"></span> me, you bumpbarians!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>I'll show you<span class="break"></span> "bumper cars" is a<span class="break"></span> game of INTELLECT,<span class="break"></span> not skill!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-spareable">Spareable</h3>
+	<p class="note">Berdly's coaster car jolts and Berdly looks stunned.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>W-what...?<span class="break"></span> My coaster, it's...!</d-text>
+	</d-box>
+	<p class="note"><a href="{{ '/chapters/chapter2/rollercoasters#postfight' | relative_url }}">The encounter automatically ends.</a></p>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>BERDLY - Go! Use your roller coaster cars to play "bump of chicken"!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="bump-kris">
+	<h2>Bump</h2>
+
+	<h3 id="bump-kris-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Ride coaster</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bump-kris-usage">Usage</h3>
+	<h4>If used alongside both <a class="susie act" href="#bump-susie">Bump</a> and <a class="ralsei act" href="#bump-ralsei">Bump</a></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The whole gang will attempt to bump into Berdly's car!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 18% <span class="yellow">Mercy</span>.</p>
+
+	<h4>If used alongside only <span class="susie act">Bump</span></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Susie will attempt to bump into Berdly's car!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 12% <span class="yellow">Mercy</span>.</p>
+
+	<h4>If used alongside only <span class="ralsei act">Bump</span></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei will attempt to bump into Berdly's car!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 12% <span class="yellow">Mercy</span>.</p>
+
+	<h4>If used solo</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You will attempt to bump into Berdly's car!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 6% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="bumpx">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} BumpX</h2>
+
+	<h3 id="bump-kris-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Everyone rides coaster</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bump-kris-usage">Usage</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The whole gang will attempt to bump into Berdly's car!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 18% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="bump-susie">
+	<h2 class="susie act">Bump</h2>
+
+	<h3 id="bump-susie-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Ride coaster</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bump-susie-usage">Usage</h3>
+	<h4>If used alongside both <a href="#bump-kris">Bump</a> and <a class="ralsei act" href="#bump-ralsei">Bump</a></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The whole gang will attempt to bump into Berdly's car!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 18% <span class="yellow">Mercy</span>.</p>
+
+	<h4>If used alongside only Bump</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Susie will attempt to bump into Berdly's car!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 12% <span class="yellow">Mercy</span>.</p>
+
+	<h4>If used alongside only <span class="ralsei act">Bump</span></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie and Ralsei will attempt to bump into Berdly's car!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 12% <span class="yellow">Mercy</span>.</p>
+
+	<h4>If used solo</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie will attempt to bump into Berdly's car!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 6% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="bump-ralsei">
+	<h2 class="ralsei act">Bump</h2>
+
+	<h3 id="bump-ralsei-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Ride coaster</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bump-ralsei-usage">Usage</h3>
+	<h4>If used alongside both <a href="#bump-kris">Bump</a> and <a class="susie act" href="#bump-susie">Bump</a></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The whole gang will attempt to bump into Berdly's car!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 18% <span class="yellow">Mercy</span>.</p>
+
+	<h4>If used alongside only Bump</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei will attempt to bump into Berdly's car!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 12% <span class="yellow">Mercy</span>.</p>
+
+	<h4>If used alongside only <span class="ralsei act">Bump</span></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie and Ralsei will attempt to bump into Berdly's car!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 12% <span class="yellow">Mercy</span>.</p>
+
+	<h4>If used solo</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei will attempt to bump into Berdly's car!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 6% <span class="yellow">Mercy</span>.</p>
+</section>
