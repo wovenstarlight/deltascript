@@ -713,6 +713,8 @@ d-box, d-choices {
 
 		&[theme=powertitle] { width: calc(var(--basewidth) - 11.4em) }
 
+		&[theme=battlemenu] d-text { max-width: calc(var(--basewidth) - 2.4em) }
+
 		&[theme=battledesc] {
 			width: calc(var(--basewidth) - 17em);
 			color: var(--gray);
