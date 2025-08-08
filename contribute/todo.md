@@ -104,7 +104,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/field` (placeholder URL, update when created) - Field scenes... Ok IDK how to do this part honestly
 		* `/thrashing` Susie & Lancer joint fight's pre-/post-encounter dialogue
 		* `/prisonbreak` - The prison scene with Susie breaking out, encountering Lancer, and freeing Kris/Ralsei
-		* `/night` - Kris goes back home and partyyyyyyys (feat. knife)
 	* `/chapter2`
 		* `/darkworldintro` - Entering the Cyber World and meeting Queen
 		* `/drive1` - First part of the Kris/Queen/Noelle drive, pre-Spamton
