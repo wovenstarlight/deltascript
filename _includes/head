@@ -26,6 +26,10 @@
 		return nums.map(num => "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".charAt(num));
 	}
 
+	function tp(num) {
+		return Math.floor((num / 250) * 100);
+	}
+
 
 	function getRoom(chapter, ...roomIds) {
 		let roomLongIds = chapter === 1 ? {
