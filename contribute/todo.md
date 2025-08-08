@@ -102,19 +102,22 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* ~~Scenes in ?????? leading up to Castle Town~~ DONE `/darkworldintro` (can't do ?????? as the URL because question marks are a special chara :<)
 		* ~~Castle Town scenes leading up to entry into Card Kingdom~~ DONE `/castletown` (TODO: Update Lancer battle URL)
 		* `/field` (placeholder URL, update when created) - Field scenes... Ok IDK how to do this part honestly
-		* `/thrashing` susie&lancer fight pre/post
-		* `prisonbreak` - after susie gets out and breaks kris n ralsei out
+		* `/thrashing` Susie & Lancer joint fight's pre-/post-encounter dialogue
+		* `/prisonbreak` - The prison scene with Susie breaking out, encountering Lancer, and freeing Kris/Ralsei
 		* `/night` - Kris goes back home and partyyyyyyys (feat. knife)
 	* `/chapter2`
-		* `/darkworldintro` - cyber world entrance
+		* `/darkworldintro` - Entering the Cyber World and meeting Queen
 		* `/drive1` - First part of the Kris/Queen/Noelle drive, pre-Spamton
 		* `/drive2` - Second part of the Kris/Queen/Noelle drive, post-Spamton
+		* `/trashzonepostspamton` - The Addisons gathering in the Trash Zone to mourn(?) Spamton
+		* `/fountain` - Sealing the fountain
+		* `/fountainweird` - Sealing the fountain (Weird Route)
 		* `/shelter` - End of chapter scene with Susie confronting Snowy/MK
-		* `/handwashing` - kris runs the tap.
+		* `/handwashing` - Kris runs the tap.
 	* `/chapter3`
 	* `/chapter4`
 		* `/noellevisit` - Noelle's house intro. Update this link on other pages if you end up splitting it further
-		* `bathroomweird` - maybe merge with below for an `outroweird`
+		* `/bathroomweird` - maybe merge with below for an `outroweird`
 		* `/holidayoutro` - leaving the Holidays' house. May need a `weird` variant
 		* `/darkworldintro` - sanctuary entrance
 	* `/chapter5`
