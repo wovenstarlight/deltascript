@@ -27,7 +27,7 @@
 	}
 
 	function tp(num) {
-		return Math.floor((num / 250) * 100);
+		return Math.ceil((num / 250) * 100);
 	}
 
 
