@@ -60,6 +60,10 @@ class DialogueSpeaker extends HTMLElement {
 					this.classList.add(this.innerText.toLowerCase());
 					break;
 
+				case "Spamton NEO":
+					this.classList.add("spamton");
+					break;
+
 				case "Shadow Mantle holder":
 					this.classList.add("eram");
 					break;
