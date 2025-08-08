@@ -109,7 +109,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/darkworldintro` - Entering the Cyber World and meeting Queen
 		* `/drive1` - First part of the Kris/Queen/Noelle drive, pre-Spamton
 		* `/drive2` - Second part of the Kris/Queen/Noelle drive, post-Spamton
-		* `/trashzonepostspamton` - The Addisons gathering in the Trash Zone to mourn(?) Spamton
 		* `/fountain` - Sealing the fountain
 		* `/fountainweird` - Sealing the fountain (Weird Route)
 		* `/shelter` - End of chapter scene with Susie confronting Snowy/MK
