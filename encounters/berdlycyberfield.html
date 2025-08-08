@@ -61,9 +61,6 @@ toc:
       -
         id: dialogue-bumped
         name: If previously bumped, turn 6 or later
-      -
-        id: dialogue-spareable
-        name: Spareable
   -
     name: ACTs
     subheadings:
@@ -85,6 +82,9 @@ toc:
         id: bump-ralsei
         class: ralsei act
         name: Bump
+  -
+    id: end
+    name: End of fight
 ---
 {% comment %} global.encounterno = 58 {% endcomment %}
 
@@ -225,16 +225,6 @@ toc:
 		<d-speaker>Berdly</d-speaker>
 		<d-text>I'll show you<span class="break"></span> "bumper cars" is a<span class="break"></span> game of INTELLECT,<span class="break"></span> not skill!</d-text>
 	</d-box>
-
-	<hr>
-
-	<h3 id="dialogue-spareable">Spareable</h3>
-	<p class="note">Berdly's coaster car jolts and Berdly looks stunned.</p>
-	<d-box theme="battletalk">
-		<d-speaker>Berdly</d-speaker>
-		<d-text>W-what...?<span class="break"></span> My coaster, it's...!</d-text>
-	</d-box>
-	<p class="note"><a href="{{ '/chapters/chapter2/rollercoasters#postfight' | relative_url }}">The encounter automatically ends.</a></p>
 </section>
 
 <section class="d-section" id="check">
@@ -368,4 +358,16 @@ toc:
 		<d-text asterisk>Ralsei will attempt to bump into Berdly's car!</d-text>
 	</d-box>
 	<p class="note">Berdly gains 6% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of fight</h2>
+	<p>Plays automatically when Berdly reaches 100% <span class="yellow">Mercy</span> or is reduced to 0% HP.</p>
+	<p></p>
+	<p class="note">Berdly's coaster car jolts and Berdly looks stunned.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>W-what...?<span class="break"></span> My coaster, it's...!</d-text>
+	</d-box>
+	<p class="note"><a href="{{ '/chapters/chapter2/rollercoasters#postfight' | relative_url }}">The encounter ends.</a></p>
 </section>
