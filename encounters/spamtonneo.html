@@ -1,0 +1,727 @@
+---
+title: Spamton NEO encounter - Normal route
+
+description: >
+  <p>Flavor text and dialogue for the normal route battle against Spamton NEO.</p>
+
+sources:
+  -
+    name: gml_Object_obj_spamton_neo_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_sneo_kristhrown_Collision_obj_sneo_throwtarget
+    chapters: [2]
+    note: unused Throw-like ACT results; hit
+  -
+    name: gml_Object_obj_sneo_kristhrown_Step_0
+    chapters: [2]
+    note: unused Throw-like ACT results; missed
+  -
+    name: gml_Object_obj_sneo_phonecall_Step_0
+    chapters: [2]
+    note: Call For You/Me dialogue
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/spamton
+    name: First Spamton encounter
+  -
+    url: /encounters/spamtonneoweird
+    name: Spamton NEO encounter - Weird Route
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+        subheadings:
+          -
+            id: ft-bigshotpre
+            name: If no big shots have been fired and Spamton NEO is at 70% HP or higher
+          -
+            id: ft-bigshotpost
+            name: After big shots have been fired
+      -
+        id: ft-lowhp
+        name: Low HP
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-specific
+        name: With specific attacks
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: snap
+        name: Snap
+      -
+        id: snapall
+        act_icon: [Susie, Ralsei]
+        name: SnapAll
+      -
+        id: snap-susie
+        class: susie act
+        name: Snap
+      -
+        id: supercharge
+        class: susie act
+        name: Supercharge
+      -
+        id: snap-ralsei
+        class: ralsei act
+        name: Snap
+      -
+        id: fluffyguard
+        class: ralsei act
+        name: FluffyGuard
+---
+{% comment %} global.encounterno = 61 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It's time to be a BIG SHOT!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The stage lights are shattered.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It pulls the strings and makes them ring.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The air crackles with freedom.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like rotten glass.</d-text>
+	</d-box>
+	<h4 id="ft-bigshotpre">If no big shots have been fired and Spamton NEO is at 70% HP or higher</h4>
+	<p>Not including the big shot(s) required for the pre-battle cutscene.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Hold and release [CONFIRM] to fire a BIG SHOT!</d-text>
+	</d-box>
+	<h4 id="ft-bigshotpost">After big shots have been fired</h4>
+	<p>"First turn" etc. here refers to the number of turns since the first big shot was fired, not including the big shot(s) required for the pre-battle cutscene.</p>
+	<h5>First turn</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton turns to the audience and laughs.</d-text>
+	</d-box>
+	<h5>Second turn</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton appeals to the audience with a festive jig!</d-text>
+	</d-box>
+	<h5>Third turn</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton begs to the audience, Spamton prays to the audience.</d-text>
+	</d-box>
+	<h5>Fourth turn</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>There is no audience.</d-text>
+	</d-box>
+	<h5>Seventh turn</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton begs the audience to stop taking the furniture out of his room.</d-text>
+	</d-box>
+	<h5>Tenth turn</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton feels the sweet breeze as he takes a ride around town.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton looks to the heavens.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>CAN A [Little<span class="break"></span> Sponge] DO THIS?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>GO [Ga-Ga]<span class="break"></span> AND [Die]</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>[BreaKing] and<span class="break"></span> [CracKing]</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>[The Smooth<span class="break"></span> Taste Of] NEO</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>THE [@$@!] TASTE<span class="break"></span> OF SPAMTON</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>DON'T YOU<span class="break"></span> WANNA BE A<span class="break"></span> BIG SHOT?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>[Clown]!? NO!!!<span class="break"></span> I FEEL SICK!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-specific">With specific attacks</h3>
+	<p>The below lines, if no numbered use is specified, play only the first time their associated attack is used. <a href="{% include wikilink page='Spamton NEO#Attacks' %}">Attack names</a> are borrowed from the Deltarune Wiki. The phases as described here are:</p>
+	<ul>
+		<li>Phase 1: Spamton NEO is above 30% HP or below 70% <span class="yellow">Mercy</span></li>
+		<li>Phase 2: Spamton NEO is at/below 30% HP or at/above 70% <span class="yellow">Mercy</span></li>
+		<li>Phase 3: Spamton NEO is at/below 10% HP or at/above 90% <span class="yellow">Mercy</span></li>
+	</ul>
+
+	<h4>Phase 1, Flying Heads - First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>KRIS! ISN'T THIS<span class="break"></span> [Body] JUST [Heaven]LY!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>3X THE [Fire]POWER.<span class="break"></span> 2X THE [Water]POWER.<span class="break"></span> AND BEST OF ALL,<span class="break"></span> FLYING [Heads]!</d-text>
+	</d-box>
+
+	<h4>Phase 1, Spam Mail - First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>WE'LL TURN THOSE<span class="break"></span> [Schmoes] AND [Daves]<span class="break"></span> INTO [Rosen Graves]</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>THOSE [Cathode Screens]<span class="break"></span> INTO [Cathode Screams]</d-text>
+	</d-box>
+
+	<h4>Phase 1, Chained Heart - First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>KRIS, DON'T YOU<span class="break"></span> WANNA BE [Part]<span class="break"></span> OF MY BEAUTIFUL [Heart]?!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>OR... DID YOU NEED<span class="break"></span> A LITTLE<span class="break"></span> [Specil Tour]?</d-text>
+	</d-box>
+
+	<h4>Phase 1, A Call For You - First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>ALL YOU GOTTA<span class="break"></span> DO IS [Big].</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>THEN WE'LL BE<span class="break"></span> THE ONES MAKING<span class="break"></span> THE [Calls], KRIS!</d-text>
+	</d-box>
+	<p class="note">Spamton NEO lifts up towards the top of the screen as a phone receiver hangs down from it, ringing. Spamton NEO grabs the receiver and puts it to his ear.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>WHAT!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>WHAT? ARE<span class="break"></span> YOU SERIOUS!?</d-text>
+	</d-box>
+	<p class="note">Spamton NEO holds the phone out towards the bullet board.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>... IT'S<span class="break"></span> FOR YOU.</d-text>
+	</d-box>
+
+	<h4>Phase 1, Gripping Phones - First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>IT'S CALLING, KRIS...<span class="break"></span> MY [Heart]...<span class="break"></span> MY [Hands]...</d-text>
+	</d-box>
+
+	<h4>Phase 1, Eyes, Nose, and Mouth - First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>KRIS!<span class="break"></span> CAN YOU REALLY<span class="break"></span> LOOK IN MY [Eyes]<span class="break"></span> AND SAY NO!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>LOOK IN MY [Eyes]<span class="break"></span> LOOK IN MY [Nose]<span class="break"></span> LOOK IN MY [Mouth]</d-text>
+	</d-box>
+
+	<h4>Phase 1, Chained Heart - Second time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>I CAN'T STAND IT!!!<span class="break"></span> I THINK I'M GONNA<span class="break"></span> HAVE A [HeartAttack]!</d-text>
+	</d-box>
+
+	<h4>Phase 1, Flying Heads - Second time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>KRIS, I'LL EVEN<span class="break"></span> GIVE YOU A<span class="break"></span> [Free Value]</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>[Die Now] AND I'LL<span class="break"></span> THROW IN [50]<span class="break"></span> [Bullets] FOR FREE!</d-text>
+	</d-box>
+
+	<h4>Phase 1, Eyes, Nose, and Mouth - Second time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>KRIS. IF YOU GIVE<span class="break"></span> ME THAT [Soul] I<span class="break"></span> WILL GIVE YOU<span class="break"></span> EVERYTHING I HAVE.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>I WILL GIVE YOU<span class="break"></span> [3 Easy Payments<span class="break"></span> of $9.99!]</d-text>
+	</d-box>
+
+	<h4>Phase 1, Gripping Phones - Second time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>[Friends]!? KRIS!?<span class="break"></span> WHAT ARE YOU<span class="break"></span> TALKING ABOUT!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>YOU DON'T NEED [Friends]!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>I CAN MAKE MY<span class="break"></span> HANDS INTO<span class="break"></span> PHONES!!!</d-text>
+	</d-box>
+
+	<h4>Phase 1, A Call For You - Second time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>DON'T YOU<span class="break"></span> WANNA HELP YOUR<span class="break"></span> OLD PAL SPAMTON?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>KRIS!! THINK!!<span class="break"></span> WHAT ARE MY<span class="break"></span> [Eggs] GOING TO DO!?</d-text>
+	</d-box>
+
+	<h4>Phase 1, Spam Mail - Second time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>BUT KRIS, IF YOU<span class="break"></span> REFUSE. THAT'S YOUR<span class="break"></span> CHOICE. I CAN'T<span class="break"></span> FORCE YOU.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>I CAN ONLY [Kill]<span class="break"></span> YOU [50-percent faster<span class="break"></span> than similar products]<span class="break"></span> OR [No Money Back!]</d-text>
+	</d-box>
+
+	<h4>Phase 2/3, Chained Heart</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>KRIS!!! TAKE THE<span class="break"></span> DEAL!!! TAKE IT!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>DO YOU WANNA BE<span class="break"></span> A [Heart] ON A [Chain]<span class="break"></span> YOUR WHOLE LIFE!?</d-text>
+	</d-box>
+
+	<h4>Phase 2, A Call For Me</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>OR...<span class="break"></span> DID YOU WANT<span class="break"></span> TO BE...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>Did you wanna<span class="break"></span> be...</d-text>
+	</d-box>
+	<p class="note">Spamton NEO lifts up towards the top of the screen as a phone receiver hangs down from it, ringing. Spamton NEO grabs the receiver and puts it to his ear.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>WHAT!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>IT'S FOR<span class="break"></span> ME!?</d-text>
+	</d-box>
+
+	<h4>Phase 2/3, Power of NEO</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>KRIS...<span class="break"></span> I WON'T FORCE YOU.<span class="break"></span> I CAN'T.<span class="break"></span> I CAN'T FORCE YOU.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>BUT JUST LOOK, KRIS.<span class="break"></span> LOOK AT THE [Power of<span class="break"></span> NEO] AND ASK YOURSELF...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>WELL, DON'T YOU?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>DON'T YOU WANNA<span class="break"></span> BE A [Big Shot]!?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3>First time</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SPAMTON NEO - YOU WON'T FIND HIGHER ATTACK AND DEFENSE ANYWHERE ELSE!!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>THE SMOOTH TASTE OF NEO "WAKE UP AND TASTE THE <span class="red">PAIN</span>".</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>Unused continuation</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[[note: pain is in red.]]</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Spamton Neo - He is his own worst invention.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="snap-kris">
+	<h2>Snap</h2>
+
+	<h3>If either Susie or Ralsei is not downed</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You snapped a wire!</d-text>
+	</d-box>
+	<p class="note">Spamton NEO gains 2% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3>If Susie and Ralsei are downed</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You snapped desperately!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Broke 2 wires!</d-text>
+	</d-box>
+	<p class="note">Spamton NEO gains 4% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3>Unused variant</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You tried to snap a wire... but it failed!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="snapall">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} SnapAll</h2>
+
+	<h3>Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone snapped wires!</d-text>
+	</d-box>
+	<p class="note">Spamton NEO gains 7% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3>Unused variant</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone tried to snap wires... but it failed!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="throw">
+	<h2>{% include acticon chara="Susie" -%} Unused ACT</h2>
+	<p>Flavor text for a combination ACT with Ralsei, likely named "Throw" given the similarity of the flavor text to <a href="{{ '/encounters/werewire#throw' | relative_url }}">Werewire's Throw ACT</a>. Would probably have been identical in function.</p>
+
+	<h3>Instructions</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press [MENU] to throw, aim for the weakpoint!</d-text>
+	</d-box>
+
+	<h4>Hitting the weakpoint</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The wire was cut!</d-text>
+	</d-box>
+	<p class="note">Spamton NEO gains an unknown amount of Mercy, possibly 2–4%.</p>
+
+	<h4>Missing</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Missed!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="snap-susie">
+	<h2 class="susie act">Snap</h2>
+
+	<h3>If either Kris or Ralsei is not downed</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie snapped a wire!</d-text>
+	</d-box>
+	<p class="note">Spamton NEO gains 2% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3>If Kris and Ralsei are downed</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie snapped desperately!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Broke 2 wires!</d-text>
+	</d-box>
+	<p class="note">Spamton NEO gains 4% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3>Unused variant</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie tried to snap a wire... but it failed!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="supercharge">
+	<h2 class="susie act">Supercharge</h2>
+
+	<h3 id="supercharge-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Charge faster</d-text>
+		<d-text class="orange">32% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="supercharge-usage">Usage</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You Super Charged! Can charge bullets faster! Lasts 20 shots.</d-text>
+	</d-box>
+	<p class="note">Big shots charge faster.</p>
+</section>
+
+<section class="d-section" id="snap-ralsei">
+	<h2 class="ralsei act">Snap</h2>
+
+	<h3>If either Kris or Susie is not downed</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei snapped a wire!</d-text>
+	</d-box>
+	<p class="note">Spamton NEO gains 2% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3>If Kris and Susie are downed</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei snapped desperately!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Broke 2 wires!</d-text>
+	</d-box>
+	<p class="note">Spamton NEO gains 4% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3>Unused variant</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei tried to snap a wire... but it failed!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="fluffyguard">
+	<h2 class="ralsei act">FluffyGuard</h2>
+
+	<h3 id="fluffyguard-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Orbiting shield</d-text>
+		<d-text class="orange">16% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="fluffyguard-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei defended you!</d-text>
+	</d-box>
+	<p class="note">2 fluff-ball shields orbit around the SOUL; they can take damage in the SOUL's stead and will disappear when damaged enough. Holding [CANCEL] stops them from orbiting. This ACT can be reused to have up to a maximum of 4 shields at once.</p>
+
+	<h4>Already have 4 FluffyGuards</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Too many fluff balls!</d-text>
+		<d-text asterisk>Can't make any more!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<h4>Unused variant</h4>
+	<p>A longer version of the standard flavor text; the shortened version above would've overridden the standard flavor text when used in the same turn as another X-Action, but the variable that triggers the switch between the two variants never gets set, so this doesn't play.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The power Ralsei's fluffy warmth surrounds you!.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of fight</h2>
+
+	<h3 id="end-nonviolent">If Spamton NEO was defeated by reaching 100% <span class="yellow">Mercy</span></h3>
+	<p class="note">The rollercoasters the party is riding on come to a stop. Spamton NEO hangs from a single wire.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>WAIT!!<span class="break"></span> [$!?!] THE PRESSES!</d-text>
+	</d-box>
+	<p class="note">Spamton NEO looks up at the wire.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>MY... MY [Wires]...<span class="break"></span> THEY'RE ALMOST [Gone]!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>KRIS... YOU...<span class="break"></span> YOU'RE [Gifting] ME<span class="break"></span> MY [Freedom]?!</d-text>
+	</d-box>
+	<p class="note">Spamton NEO hangs his head, glasses dark.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>KRIS... AFTER EVERYTHING<span class="break"></span> I DID TO YOU...!?</d-text>
+	</d-box>
+	<p class="note">He begins looking around erratically.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>AFTER ALL THE<span class="break"></span> [Unforgettable D3als]<span class="break"></span> [Free KROMER] I<span class="break"></span> GAVE YOU</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>YOU'RE FINALLY<span class="break"></span> REPAYING MY<span class="break"></span> [Genorisity]!?</d-text>
+	</d-box>
+	<p class="note">He hangs his head, glasses dark.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>KRIS!!! I UNDERSTAND<span class="break"></span> NOW!! THE GREATEST<span class="break"></span> DEAL OF ALL!!!</d-text>
+	</d-box>
+	<p class="note"><a href="{% include wikilink page='A Real Boy!' %}">A Real Boy!</a> begins playing as the background is replaced with the painted sky from <a href="{{ '/locations/cyberworld/cybercity/spamtonshop' | relative_url }}">Spamton's shop</a>. Spamton NEO beams.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text effect="shake">[Friendship]!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text effect="shake">KRIS!!! MY DAYS AS<span class="break"></span> A [Long-Nosed Doll]<span class="break"></span> ARE OVER!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text effect="shake">CUT THAT<span class="break"></span> [Wire] AND MAKE<span class="break"></span> ME A [Real Boy]!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text effect="shake">ARE YOU WATCHING,<span class="break"></span> [Heaven]!? IT'S<span class="break"></span> TIME FOR SPAMTON'S<span class="break"></span> [Comeback Special]!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text effect="shake">AND THIS TIME...<span class="break"></span> I LIVE FOR MYSELF!!!</d-text>
+	</d-box>
+	<p class="note">Spamton NEO begins bobbing up and down, limbs swinging wildly.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text effect="shake">NO... MYSELF AND<span class="break"></span> MY [Friend(s)]!!!</d-text>
+	</d-box>
+	<p class="note">He moves even faster.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text effect="shake-hard">HERE I GO!!!!<span class="break"></span> WATCH ME FLY,<span class="break"></span> [MAMA]!!!!</d-text>
+	</d-box>
+
+	<p class="note">The music cuts out as the last wire is cut. A moment of stillness... and then Spamton falls limp to the ground, eyes dark. The screen cuts to black, then cuts back to the basement area for the <a href="{{ '/chapters/chapter2/spamtonneo#postfight' | relative_url }}">post-battle cutscene</a>.</p>
+
+	<hr>
+
+	<h3 id="end-violent">If Spamton NEO was defeated by FIGHTing</h3>
+	<p class="note">The rollercoasters the party is riding on come to a stop. Spamton spasms as he talks, holding different hurt positions for each line.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>WAIT!!<span class="break"></span> [$!?!] THE PRESSES!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>HAHAHA... KRIS!!!<span class="break"></span> YOU THINK DEPLETING<span class="break"></span> MY [8000 Life Points]</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>MEANS YOU'VE WON<span class="break"></span> [A Free Meal] TO<span class="break"></span> [Winning]?!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>NO!!! NO!!! NE-O!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>KRIS!!<span class="break"></span> YOUR [Deal] HAS FAILED!!<span class="break"></span> [NEO] NEVER LOSES!!</d-text>
+	</d-box>
+	<p class="note">The damage SFX plays as Spamton NEO's torso begins emitting smoke. His limbs start jerking around erratically.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>THIS IS [Victory Smoke]!!<span class="break"></span> IT MEANS IT'S TIME<span class="break"></span> FOR MY [Second Form]!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text>ARE YOU READY KRIS!?<span class="break"></span> FOR MY [Next Trick]!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text effect="shake">I WILL FILL MY [Body]<span class="break"></span> WITH [Electricaty] AND BECOME<span class="break"></span> SPAMTON [EX]!</d-text>
+	</d-box>
+	<p class="note">A powering-up noise starts to loop, getting increasingly higher-pitched. Spamton NEO's limbs begin flashing white and he jerks around increasingly quickly.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text effect="shake">ARE YOU READY [Kids]!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text effect="shake">[Turn Up The JUICE!]<span class="break"></span> [Turn Up The JUICE!]</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text effect="shake">[Make Sure You Don't<span class="break"></span> Get It On Your Shoese!]</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text effect="shake">ARE YOU GETTING<span class="break"></span> ALL THIS [Mike]!?<span class="break"></span> I'M FINALLY</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text effect="shake">I'M FINALLY GONNA<span class="break"></span> BE A BIG SHOT!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Spamton NEO</d-speaker>
+		<d-text effect="shake">HERE I GO!!!!<span class="break"></span> WATCH ME FLY,<span class="break"></span> [MAMA]!!!!</d-text>
+	</d-box>
+	<p class="note">After a moment's continued flashing, an explosion sounds as the screen flashes white, fades to black, then cuts back to the basement area for the <a href="{{ '/chapters/chapter2/spamtonneo#postfight' | relative_url }}">post-battle cutscene</a>.</p>
+</section>
