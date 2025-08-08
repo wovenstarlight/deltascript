@@ -158,13 +158,12 @@ class DialogueSprite extends HTMLElement {
 customElements.define("d-sprite", DialogueSprite);
 
 
-let shake, last;
+let shake,
+	last,
+	insideTag = false,
+	insideEntity = false;
+	insideShake = true;
 const SHAKE_CLASSES = ["s1", "s2", "s3", "s4"];
-function resetShake() {
-	if (shake) shake.setAttribute("aria-label", shake.textContent);
-	shake = document.createElement("span");
-	shake.classList.add("shake");
-}
 function randomShake() {
 	let index = Math.floor(Math.random() * SHAKE_CLASSES.length);
 	while (index === last) index = Math.floor(Math.random() * SHAKE_CLASSES.length);
@@ -182,29 +181,69 @@ class DialogueText extends HTMLElement {
 		if (!this.getAttribute("effect")?.startsWith("shake")) return;
 
 		setTimeout(() => {
-			resetShake();
-			const s = this.innerText;
-			this.innerText = "";
+			this.setAttribute("aria-label", this.innerText);
+			let result = `<span class="shake">`;
 
-			for (const char of s) {
-				if (!char.trim().length) {
-					// Hit a space. Add any current text and the space, then get a new shake/wave container for the next word
-					if (shake.innerHTML.length) this.append(shake);
-					this.append(char);
-					if (shake.innerHTML.length) resetShake();
+			for (const char of this.innerHTML) {
+				if (char === "<") {	// HTML; include everything until the end of this tag without changes
+					insideTag = true;
+					result += char;
+					continue;
+				}
+				else if (insideTag) {	// HTML; include tag ender
+					result += char;
+					if (char === ">") insideTag = false;
 					continue;
 				}
 
-				const charShake = document.createElement("span");
-				charShake.innerText = char;
-				charShake.classList.add(randomShake());
-				shake.append(charShake);
+				if (char === "&") {	// HTML entity; include everything until the end of this entity without changes
+					insideEntity = true;
+					result += `${		// Add shake opener if necessary
+						!insideShake ? `<span class="shake">` : ""
+					}<span class="${	// Add random shake class; never selects the same class twice in a row
+						randomShake()
+					}">${				// Add the character itself
+						char
+					}`;					// DO NOT CLOSE; entity has to be shaken as one unit!
+					if (!insideShake) insideShake = true;
+					continue;
+				}
+				else if (insideEntity && char === ";") {	// HTML entity; include entity ender
+					insideEntity = false;
+					result += `${char}</span>`;
+					continue;
+				}
+				else if (insideEntity) {	// HTML entity; keep parsing as one unit
+					result += char;
+					continue;
+				}
+
+				if (!char.trim().length) {	// Whitespace
+					if (insideShake) {
+						result += "</span>";
+						insideShake = false;
+					}
+					result += char;
+					continue;
+				}
+
+				// Non-whitespace
+				result += `${		// Add shake opener if necessary
+					!insideShake ? `<span class="shake">` : ""
+				}<span class="${	// Add random shake class; never selects the same class twice in a row
+					randomShake()
+				}">${				// Add the character itself
+					char
+				}</span>`;
+				insideShake = true;
 			}
 
-			if (shake.innerHTML.length) {
-				this.append(shake);
-				resetShake();
-			}
+			// Got through all characters; check whether the last span is closed
+			if (insideShake) result += "</span>";
+			this.innerHTML = result;
+
+			// Move any line breaks out of their parent shakers
+			this.querySelectorAll(".break").forEach(el => el.parentElement.insertAdjacentElement("afterend", el));
 		}, 0);
 	}
 }
