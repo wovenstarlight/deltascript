@@ -25,8 +25,8 @@
 	src: url("../assets/fonts/fnt_dotumche.otf");
 }
 @font-face {
-	font-family: "OpenDyslexic";
-	src: url("../assets/fonts/OpenDyslexicMono-Regular.otf");
+	font-family: "DeltaFont 8-Bit";
+	src: url("../assets/fonts/fnt_8bit.otf");
 }
 :root { /* Global colors and font */
 	background-color: black;
@@ -675,7 +675,10 @@ d-box, d-choices {
 			body.dim & { border-image-source: url("../assets/images/textbox/dark_dim.gif") }
 		}
 
-		&[theme=plain], &[theme^=obj], &[theme=battlemenu], &[theme=battledesc] {
+		&[theme=plain],
+		&[theme^=obj],
+		&[theme=battlemenu], &[theme=battledesc],
+		&[theme=eightbit], &[theme="8bit"] {
 			border-image-source: url("../assets/images/textbox/plain.png");
 		}
 
@@ -794,6 +797,11 @@ d-box, d-choices {
 			flex-direction: column;
 			font-family: "DeltaFont Combat", var(--font);
 			font-size: 1em;
+		}
+
+		&[theme=eightbit], &[theme="8bit"] {
+			width: calc(var(--basewidth) - 4.39em);
+			font-family: "DeltaFont 8-Bit", var(--font);
 		}
 
 		&.hideoverflow {
@@ -1041,6 +1049,10 @@ d-text {
 
 	&[font=sans] {
 		font-family: "DeltaFont Comic Sans", var(--font);
+	}
+
+	&[font=eightbit], &[font="8bit"] {
+		font-family: "DeltaFont 8-Bit", var(--font);
 	}
 
 	&[asterisk] {
