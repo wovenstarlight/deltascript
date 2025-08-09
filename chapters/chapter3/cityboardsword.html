@@ -1,0 +1,688 @@
+---
+title: City Board - Sword Route
+
+description: >
+  <p>Kris goes backstage and plays the third and final level of the original game.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_npc_ramb_Other_10
+    chapters: [3]
+    note: Ramb's dialogue
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [3]
+    note: console interaction
+  -
+    name: gml_Object_obj_gameshow_swordroute_Other_10
+    chapters: [3]
+    note: original game interface
+  -
+    name: gml_Object_obj_board_dungeon3_tenna_Step_0
+    chapters: [3]
+    note: Tenna dialogue
+  -
+    name: gml_Object_obj_board_warptopreshadowmantle_Step_0
+    chapters: [3]
+    note: using Shelter Key
+  -
+    name: gml_Object_obj_board_npc_Other_10
+    chapters: [3]
+    note: unreachable treasure chest
+  -
+    name: gml_Object_obj_swordroute_event_leavescreen_Step_0
+    chapters: [3]
+    note: HERO_SWORD leaving screen, Kris/Susie scene
+  -
+    name: gml_GlobalScript_scr_itemget_anytype_text
+    chapters: [3]
+    note: Mantle get message
+  -
+    name: gml_Object_obj_room_green_room_Step_0
+    chapters: [3]
+    note: party reunion
+
+see_also:
+#   -
+    # url: /chapters/chapter3/cityboard
+    # name: City Board - Legend of Tenna
+  -
+    url: /chapters/chapter3/desertboardsword
+    name: Desert Board - Sword Route stage 1
+  -
+    url: /chapters/chapter3/islandboardsword
+    name: Island Board - Sword Route stage 2
+
+toc:
+  -
+    id: ramb
+    name: Talking to Ramb backstage
+  -
+    id: gamestart
+    name: Starting up the game
+  -
+    id: gameplay
+    name: Gameplay
+    subheadings:
+      -
+        id: interface
+        name: Interface
+      -
+        id: tenna
+        name: Finding Tenna
+      -
+        id: shelterkey
+        name: Using the Shelter Key
+  -
+    id: mantleget
+    name: Obtaining the Shadow Mantle
+    subheadings:
+      -
+        id: attacksusie
+        name: If HERO_SWORD is made to attack Susie
+  -
+    id: reunion
+    name: Meeting back up with Susie and Ralsei
+---
+<section class="d-section" id="ramb">
+	<h2>Talking to Ramb backstage</h2>
+	<p>Dialogue for before as well as after the Sword Route ends. The doors to the backstage area are only open if the first two stages of the Sword Route were completed.</p>
+
+	<h3>First time</h3>
+	<p class="note">A half-petrified Ramb stands to the side, blocking the way to the original game's console, awash in light coming from its room.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Kris... Kris, that's you, isn't it, luv?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Good show, good show...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Tenna's been up to this and that, that and this... All sorts of boring stuff.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>But Kris! Oh, Kris! You and I know... The REAL drama happens BACKSTAGE!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>That's why... I got it ready for you, y'know.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>One last game.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>And I'll keep watch.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Well, just as long as... haha. Just as long as I can.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Now, Kris, I hate to trouble you, I really do, but...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Y'see, I can't really move myself now.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>If you could just shove me out of the way...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Yes, that's right! Just like that!</d-text>
+	</d-box>
+
+	<p class="note">Kris carefully shifts Ramb out of the way.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Kris!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>... enjoy the games, eh, luv?</d-text>
+	</d-box>
+
+	<p class="note">Kris can now <a href="#gamestart">go to the game console</a>.</p>
+
+	<hr>
+
+	<h3>Second time</h3>
+
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Kris... I'm an ignorant plug. Can't say I know your motivation.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>But... I saw. I saw you make it, you know. The Fountain.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Could it be... you just wanted to have fun again?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Heh heh heh... some REAL fun, just like the old days.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>That's been my purpose, y'know. Letting you play your games.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>But, heh, now that the games are almost over...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Makes you think, was it really all such a good idea?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Your mother. Your poor mother, what will happen if she wakes up...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>... ah, what am I doing? A power strip, giving YOU a lecture...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>... just play your games, luv.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Kris... if not for fun, why'd you do it?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>... mum's the word, innit. Fair play, fair play.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="gamestart">
+	<h2>Starting up the game</h2>
+
+	<d-box theme="dark">
+		<d-text asterisk>(Looks like a game console.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Play it?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The console turns on. The intro sequence of the original game plays, showing a shadowed logo that appears to be the word "MANTLE", but the sequence is abruptly cut short. Instead, the screen shows an error message reading <span class="fnt-8bit white">NO CONTROLLER</span>.</p>
+
+		<p class="note">Kris kneels and plugs the Odd Controller into the console. The game screen begins flashing until, with a high-pitched noise, the SOUL appears on screen. With a series of softening beeps, the City Board is overlaid on the screen in steps, with HERO_SWORD (as well as HERO_AXE and HERO_SCARF hidden behind them) appearing over the SOUL, and <a href="#gameplay">gameplay begins</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Nothing happens.</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="gameplay">
+	<h2>Gameplay</h2>
+
+	<h3 id="interface">Interface</h3>
+	<p class="note">At the top left of the screen is a bar labelled <span class="fnt-8bit white">HP</span>. The Shelter Key icon is present at the top center-right.</p>
+
+	<p class="note">After obtaining the sword, a level marker and progress bar appear at the top center of the screen, advancing through the stages <span class="fnt-8bit white">LV1</span> → <span class="fnt-8bit white">LV2</span> → <span class="fnt-8bit white">LV3</span> → <span class="fnt-8bit white">MAX</span> (i.e. LV4). A small sword icon is added on the top right every time HERO_SWORD's LV goes up.</p>
+
+	<p class="note">There are no enemies available on the City Board. Unlike in other stages, HERO_SWORD must attack HERO_AXE and HERO_SCARF to reach LV3; a pale Kris flinches and looks away each time one of them is killed. After this, they can access the Manhole Dungeon, where they will be able to reach MAX LV.</p>
+
+	<hr>
+
+	<h3 id="tenna">Finding Tenna</h3>
+	<p class="note">Tenna stands on the path leading out of the Manhole Dungeon, facing away from the viewer.</p>
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>... HOW DID THINGS TURN OUT LIKE THIS...</d-text>
+	</d-box>
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>... KEEPING POOR TORIEL ALL LOCKED UP...</d-text>
+	</d-box>
+
+	<p class="note">Tenna moves further down the path.</p>
+
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>IF ONLY HE HADN'T ABANDONED ME.</d-text>
+	</d-box>
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>MY OLD PARTNER...</d-text>
+	</d-box>
+
+	<p class="note">Tenna moves further down the path.</p>
+
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>I WAS GONNA PUT HIM ON TV! MAKE HIM A STAR!</d-text>
+	</d-box>
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>I GAVE HIM EVERYTHING! EVERYTHING I HAD! MY LIFE ADVICE!</d-text>
+	</d-box>
+
+	<p class="note">Tenna moves further down the path.</p>
+
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>ALL. HE HAD. TO DO. WAS TELL ME WHAT HIS LITTLE SECRET WAS.</d-text>
+	</d-box>
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>HIS SECRET TO BEING A BIG SHOT...</d-text>
+	</d-box>
+
+	<p class="note">Tenna moves further down the path.</p>
+
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>IT TOOK A LITTLE SWEET TALK...</d-text>
+	</d-box>
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>BUT JUST WHEN I HAD, FINALLY, FINALLY ? HA HA --</d-text>
+	</d-box>
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>GOTTEN HIM TO SIGN THE DEAL.</d-text>
+	</d-box>
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>HE SUDDENLY HAD TO TAKE A PHONE CALL.</d-text>
+	</d-box>
+
+	<p class="note">Tenna moves further down the path.</p>
+
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>BUT WHEN HE PICKED IT UP, HIS FACE TURNED PALE...</d-text>
+	</d-box>
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>AND HE RAN RIGHT OUT OF THE ROOM WITH THE RECEIVER HANGING!</d-text>
+	</d-box>
+
+	<p class="note">Tenna moves further down the path.</p>
+
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>SO I WENT TO PICK IT UP...</d-text>
+	</d-box>
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>THINKING IT WAS FINALLY MY CHANCE TO BE A BIG SHOT.</d-text>
+	</d-box>
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>... BUT THERE WAS NOBODY THERE!</d-text>
+	</d-box>
+
+	<p class="note">Tenna moves further down the path.</p>
+
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>THAT LITTLE FREAK RIPPED ME OFF!</d-text>
+	</d-box>
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>... I WISH THEY NEVER BROUGHT THAT LAPTOP HOME...</d-text>
+	</d-box>
+
+	<p class="note">Tenna falls silent. When HERO_SWORD gets closer, Tenna turns around.</p>
+
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>K... KRIS! KRIS, I DIDN'T SEE YOU THERE!</d-text>
+	</d-box>
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>I... I DID WHAT YOU SAID, KRIS! HA... JUST LIKE OUR DEAL!</d-text>
+	</d-box>
+	<d-box theme="8bit">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Y-YOU AREN'T GONNA TURN ME OFF AGAIN, ARE YOU...?</d-text>
+	</d-box>
+
+	<p class="note">Tenna blocks the path ahead, and must be killed to proceed.</p>
+
+	<hr>
+
+	<h3 id="shelterkey">Using the Shelter Key</h3>
+
+	<p class="note">Ahead, the scenery abruptly turns into that of the path to the Hometown shelter. As the player directs HERO_SWORD to approach it, Kris will independently override the controls multiple times to try and stop them from getting to the shelter doors, but their efforts are in vain.</p>
+
+	<p class="note">Upon interacting with the shelter doors, the Shelter Key icon disappears from the top right and the following messages play:</p>
+
+	<d-box theme="8bit">
+		<d-text>USED THE <span class="yellow">SHELTER KEY</span>.</d-text>
+	</d-box>
+
+	<p class="note">The doors swing open slowly. Inside the shelter is a long hallway leading to the area where the <a href="{{ '/encounters/shadowmantleholder' | relative_url }}">Shadow Mantle holder is battled</a>.</p>
+</section>
+
+<section class="d-section" id="mantleget">
+	<h2>Obtaining the <a href="{{ '/misc/armor#shadowmantle' | relative_url }}">Shadow Mantle</a></h2>
+
+	<p class="note">Following the path opened after the Mantle holder's defeat takes HERO_SWORD to a corridor with a treasure chest sitting on a higher level. Interacting with it gives the following:</p>
+
+	<d-box theme="8bit">
+		<d-text>A TREASURE CHEST. IT'S TOO HIGH UP TO REACH.</d-text>
+	</d-box>
+
+	<p class="note">HERO_SWORD cannot exit back into the previous room. The only way out is the path leading to the right, which lines up with a channel on the wall. Rather than being taken to another area within the game, HERO_SWORD exits the game screen and comes out into the room with Kris, who watches them exit the game. When they stand on the same floor as them, Kris drops their controller and backs away. They quickly back up further if HERO_SWORD approaches, and if HERO_SWORD attacks with their sword, Kris will collapse.</p>
+
+	<p class="note"> After a while, if the player has not already directed HERO_SWORD to exit the door to the right, they will walk down and out of sight.</p>
+
+	<p class="note">Once HERO_SWORD is gone, Kris stands back up (if they collapsed) and the player regains control of them. Kris can now walk directly into the original game; they are tall enough to reach the treasure chest.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(<span class="yellow">ShadowMantle</span> was added to your <span class="yellow">ARMORs</span>.)</d-text>
+	</d-box>
+
+	<p class="note">After Kris exits the game screen, they walk back over to the console to pick up the controller, but are interrupted from acting further by Susie's voice.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Hey Kris!</d-text>
+	</d-box>
+
+	<p class="note">Susie walks into the room and comes to stand beside Kris, looking at the screen with them.</p>
+
+	<hr>
+
+	<h3>Standard conversation</h3>
+	<p class="note">At this point, the player regains control of HERO_SWORD and can make them reenter the room to Susie's right. At any point during the below conversation, they can approach Susie (which will make Kris watch them instead of Susie) and even attack her (which will <a href="#attacksusie">trigger a cutscene that interrupts any ongoing dialogue</a>).</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>What the hell are you doing?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Being a tryhard all by yourself?</d-text>
+	</d-box>
+
+	<p class="note">A pause. Kris and Susie look at each other.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>You seriously enjoy this?</d-text>
+	</d-box>
+
+	<d-choices theme="dark">
+		<d-option index="0" text="Of course.\sGames are fun"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Kris's head hangs down. A pause. Susie grins.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="0"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+			<d-text asterisk>If you get all sweaty playing games alone...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="9"></d-sprite>
+			<d-text asterisk>You're gonna end up like Berdly, right?</d-text>
+		</d-box>
+
+		<p class="note">A pause.</p>
+
+		<hr class="hr2">
+
+		<h3>If Chapter 2's Weird Route was completed</h3>
+		<p class="note">Susie stops smiling.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="0"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="K"></d-sprite>
+			<d-text asterisk>Hey, uh, it's just a joke. Chill.</d-text>
+		</d-box>
+
+		<hr class="hr3">
+
+		<h3>Otherwise</h3>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="0"></d-sprite>
+			<d-text asterisk>... Okay, enough bird noises. I get it.</d-text>
+		</d-box>
+
+		<hr class="hr2">
+
+		<p class="note">From this point on, HERO_SWORD can no longer be made to interrupt the conversation by attacking Susie, and will leave offscreen to the right if they were made to reenter.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">After a brief moment, Susie stops smiling.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="V"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="W"></d-sprite>
+			<d-text asterisk>Okay, then here's an idea.</d-text>
+		</d-box>
+
+		<p class="note">Susie walks towards Kris, who backs away. She stops in front of the console, kneels, and unplugs their controller. (If HERO_SWORD was made to reenter the room, they are destroyed when the controller is unplugged.) Susie stands back up, controller in hand, then demonstratively drops it on the ground.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+			<d-text asterisk>Don't play it.</d-text>
+		</d-box>
+
+		<p class="note">Kris turns back towards the screen, though they keep looking at Susie.</p>
+	</d-option-panel>
+
+	<hr class="hr2">
+
+	<h3 id="attacksusie">If HERO_SWORD is made to attack Susie</h3>
+	<p class="note">Kris, who was watching HERO_SWORD, reacts as soon as they draw their sword and grabs Susie by the collar, yanking her well out of range. They skid some distance with the force of the pull, and Kris is visibly breathing fast for a few seconds before they slowly calm down. Susie also gets over her surprise and stares in confusion at Kris. While they both calm down, control over HERO_SWORD is lost and they leave the room.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Z"></d-sprite>
+		<d-text asterisk>K-Kris...? What are you...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">Susie straightens up slightly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>Alright, I... I get it.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="W"></d-sprite>
+		<d-text asterisk>Well, if... if you really want to.</d-text>
+	</d-box>
+
+	<p class="note">After a pause, Susie ducks her head and jams it against Kris's face so that they're lost in her hair.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="X"></d-sprite>
+		<d-text asterisk>Go ahead.</d-text>
+	</d-box>
+
+	<p class="note">Susie looks away from Kris, eyes still wide.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+		<d-text asterisk>I tasted your shampoo in your bathroom, here, you can taste mine.</d-text>
+	</d-box>
+
+	<p class="note">A 2-second pause. Abruptly, Susie yanks her head back, blushing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>WHAT? HOW AM I THE WEIRD ONE HERE!?</d-text>
+	</d-box>
+
+	<p class="note">Susie pulls away, unsmiling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="M"></d-sprite>
+		<d-text asterisk>Jeez.</d-text>
+	</d-box>
+
+	<hr>
+
+	<p class="note">Susie quickly walks away, stopping after a few steps.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Anyway.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Here. Stole you a drink.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>Now stop making us wait already.</d-text>
+	</d-box>
+
+	<p class="note">Susie puts down a can of <a href="{{ '/misc/darkitems#flatsoda' | relative_url }}">Flat Soda</a> and leaves the room. Control is returned to Kris, who can follow her out.</p>
+</section>
+
+<section class="d-section" id="reunion">
+	<h2>Meeting back up with Susie and Ralsei</h2>
+	<p>Only plays after successfully completing this stage of the original game.</p>
+	<p></p>
+
+	<p class="note">Out in the Green Room, Susie is waiting by the S-Rank door, while Ralsei sits on the closest couch playing a game. As Kris comes outside, Susie turns to them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Took you long enough.</d-text>
+	</d-box>
+
+	<p class="note">A moment later, Ralsei speaks, drawing Susie's attention.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="P"></d-sprite>
+		<d-text asterisk>Susie! Susie, look! I made it to Level 2!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Level 2, huh?</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to Kris. As she speaks, Ralsei's hands freeze on his controller.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Kris, you're the tryhard. Whaddya you think?</d-text>
+	</d-box>
+
+	<p class="note">Ralsei looks stunned. A brief pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>... K... Kris?</d-text>
+	</d-box>
+
+	<p class="note">No longer smiling, Ralsei jumps off the couch and joins Kris and Susie in front of the door; they both look at him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="O"></d-sprite>
+		<d-text asterisk>I'm sorry, Kris! I... I forgot all about you!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>I got so into playing games with Susie, I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Heh, you should have seen it, Kris!</d-text>
+	</d-box>
+
+	<p class="note">Susie laughs as she speaks.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>He was actually RAGING at the falling arrow part.</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns around, head ducked as he adjusts his glasses.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="X"></d-sprite>
+		<d-text asterisk>I suppose I was, not very chuffed, by that dart.</d-text>
+	</d-box>
+
+	<p class="note">He lowers his hand, blushing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>But I... I had fun.</d-text>
+	</d-box>
+
+	<p class="note">A pause. Ralsei startles, turning back around.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>... s-sorry! Did you want to play, Kris?</d-text>
+	</d-box>
+
+	<p class="note">Susie glances towards the doors to the Cold Place.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Dude, we need to seal the fountain.</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns away.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>Oh! Right! I...</d-text>
+	</d-box>
+
+	<p class="note">He hangs his head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>How did I... forget about that...?</d-text>
+	</d-box>
+
+	<p class="note">Ralsei takes his place next to Susie, forming a line with Kris at the head. Susie turns to Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Let's go.</d-text>
+	</d-box>
+
+	<p class="note">The party is free to move on.</p>
+</section>

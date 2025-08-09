@@ -112,10 +112,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/desertboard`
 		* `/islandboard`
 		* `/doomboard`
-		* Sword Route - These should all also include Ramb's before/after commentary
-			* `/desertboardsword` - Obtaining the Ice Key
-			* `/islandboardsword` - YOU WERE USED UP
-			* `/cityboard` - The Manhole Dungeon & the Mantle holder fight's post-cutscene, as well as the Susie interrupting scene
+		* `/cityboard` - The unused version of Board 3
 	* `/chapter4`
 		* `/noellevisit` - Noelle's house intro. Update this link on other pages if you end up splitting it further
 		* `/bathroomweird` - maybe merge with below for an `outroweird`
