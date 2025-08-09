@@ -124,7 +124,6 @@ body.dim {
 	.cB, .blue,
 	.cY, .yellow,
 	.cG, .green,
-	.cW, .white,
 	.cX, .black,
 	.cP, .purple,
 	.cM, .maroon,
@@ -140,7 +139,6 @@ body.dim {
 	.cB, .blue { --mycolor: var(--blue) }
 	.cY, .yellow { --mycolor: var(--yellow); --strength: 20% }
 	.cG, .green { --mycolor: var(--green) }
-	.cW, .white { --mycolor: var(--white) }
 	.cX, .black { --mycolor: var(--black) }
 	.cP, .purple { --mycolor: var(--purple) } /* unused */
 	.cM, .maroon { --mycolor: var(--maroon) } /* unused */
