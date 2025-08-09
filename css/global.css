@@ -205,6 +205,13 @@ body.dim {
 .gerson { color: var(--gerson) }
 /* #endregion */
 /* #endregion */
+/* #region Font-specific classes */
+.fnt-condensed { font-family: "DeltaFont Condensed", var(--font) }
+.fnt-tiny { font-family: "DeltaFont Tiny", var(--font) }
+.fnt-sans { font-family: "DeltaFont Comic Sans", var(--font) }
+.fnt-combat { font-family: "DeltaFont Combat", var(--font) }
+.fnt-eightbit, .fnt-8bit { font-family: "DeltaFont 8-Bit", var(--font) }
+/* #endregion */
 h1, h2, h3, h4, h5, h6 { font-weight: normal }
 h2, h3, h4, h5, h6 {
 	margin-block: 0.7rem;
