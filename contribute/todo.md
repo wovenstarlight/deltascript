@@ -94,13 +94,9 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/darksanctuary` - Chapter 4 dark worlds. I think for this one we can include all three sanctuaries' subpages
 		* Ach how do we even subdivide these pages
 * Chapters `/chapters`
-	* Ok for this one there's enough Stuff that i'm just listing like. Pages that have been linked to from elsewhere. So you can update the URLs as/when necessary. Pages not mentioned here, just create as you like and make sure you add them to the [index](../chapters/index.html)
+	* Ok for this one there's enough Stuff that i'm just listing like. Pages that have been linked to from elsewhere. So you can update the URLs as/when necessary. Pages not mentioned here, just create as you like and make sure you add them to the [index](../chapters/index.html). If you're not sure whether a page already exists, search for one of its dialogue lines and see if any pages come up
 	* `/chapter1`
-		* ~~Vessel creation and being woken up by Toriel~~ DONE `/intro`
-		* ~~School scene leading into Dark World~~ DONE `/school`
-			* Ok how specific do we wanna get on this. I'm thinking I record all the character interactions for this specific scene because those are very chapter-1-this-scene-specific, you can't get them at any other point, the second you leave the classroom they're gone. BUT! The objects (e.g. board, Alphys's computer, all that) are there regardless of chapter, the wording just changes a bit, so those go to the `/locations/lightworld/alphysclass` page...?
-		* ~~Scenes in ?????? leading up to Castle Town~~ DONE `/darkworldintro` (can't do ?????? as the URL because question marks are a special chara :<)
-		* ~~Castle Town scenes leading up to entry into Card Kingdom~~ DONE `/castletown` (TODO: Update Lancer battle URL)
+		* Vessel creation up to all Castle Town scenes DONE
 		* `/field` (placeholder URL, update when created) - Field scenes... Ok IDK how to do this part honestly
 		* `/thrashing` Susie & Lancer joint fight's pre-/post-encounter dialogue
 		* `/prisonbreak` - The prison scene with Susie breaking out, encountering Lancer, and freeing Kris/Ralsei
@@ -113,6 +109,13 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/shelter` - End of chapter scene with Susie confronting Snowy/MK
 		* `/handwashing` - Kris runs the tap.
 	* `/chapter3`
+		* `/desertboard`
+		* `/islandboard`
+		* `/doomboard`
+		* Sword Route - These should all also include Ramb's before/after commentary
+			* `/desertboardsword` - Obtaining the Ice Key
+			* `/islandboardsword` - YOU WERE USED UP
+			* `/cityboard` - The Manhole Dungeon & the Mantle holder fight's post-cutscene, as well as the Susie interrupting scene
 	* `/chapter4`
 		* `/noellevisit` - Noelle's house intro. Update this link on other pages if you end up splitting it further
 		* `/bathroomweird` - maybe merge with below for an `outroweird`
