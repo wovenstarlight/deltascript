@@ -50,6 +50,7 @@
 	--pink: #ff80ff;
 	--lightgreen: #80ff80;
 	--lightyellow: #ffff80;
+	--iceblue: #81c0ff;
 	/* Custom */
 	--gray: #aaa;
 	/* Character colors, picked off their Dark World sprites */
@@ -109,13 +110,24 @@ body.dim {
 .cY, .yellow { color: var(--yellow) }
 .cG, .green { color: var(--green) }
 .cW, .white { color: var(--white) }
-.cX, .black { color: var(--black) }
+.cX, .black {
+	color: var(--black);
+	:is([theme=eightbit], [theme="8bit"]) &::selection,
+	&:is(
+		[font=eightbit], [font="8bit"],
+		.fnt-eightbit, .fnt-8bit,
+	)::selection {
+		background-color: var(--kris);
+		color: var(--black);
+	}
+}
 .cP, .purple { color: var(--purple) } /* unused */
 .cM, .maroon { color: var(--maroon) } /* unused */
 .cO, .orange { color: var(--orange) }
 .cA, .lightblue { color: var(--lightblue) }
 .cS, .pink { color: var(--pink) }
 .cV, .lightgreen { color: var(--lightgreen) }
+.cI, .iceblue { color: var(--iceblue) }
 .gray { color: var(--gray) }
 .lightyellow { color: var(--lightyellow) }
 /* Dark World 3D effect */
@@ -128,7 +140,10 @@ body.dim {
 	.cP, .purple,
 	.cM, .maroon,
 	.cO, .orange,
-	.cA, .cS, .cV,
+	.cA, .lightblue,
+	.cS, .pink,
+	.cV, .lightgreen,
+	.cI, .iceblue,
 	.gray, .lightyellow {
 		background: var(--mycolor) linear-gradient(rgb(from var(--white) r g b / 0.8), rgb(from var(--mycolor) r g b / 0));
 		background-clip: text;
@@ -146,6 +161,7 @@ body.dim {
 	.cA, .lightblue { --mycolor: var(--lightblue) }
 	.cS, .pink { --mycolor: var(--pink) }
 	.cV, .lightgreen { --mycolor: var(--lightgreen) }
+	.cI, .iceblue { --mycolor: var(--iceblue) }
 	.gray { --mycolor: var(--gray) }
 	.lightyellow { --mycolor: var(--lightyellow) }
 }
