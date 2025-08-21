@@ -1,0 +1,331 @@
+---
+title: Berdly encounter - Cyber City, Weird Route
+
+description: >
+  <p>Flavor text and dialogue for the battle against Berdly in the Cyber City alleyway on the Weird Route.</p>
+
+sources:
+  -
+    name: gml_Object_obj_berdlyb2_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+  -
+    name: gml_GlobalScript_scr_spellinfo
+    chapters: [2]
+    note: SnowGrave description
+  -
+    name: gml_GlobalScript_scr_spelltext
+    chapters: [2]
+    note: final SnowGrave's flavor text
+  -
+    name: gml_Object_obj_spell_snowgrave_Draw_0
+    chapters: [2]
+    note: final SnowGrave's usage visuals
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/berdlycyberfield
+    name: First Berdly encounter - Cyber Field
+  -
+    url: /encounters/berdlycybercity
+    name: Second Berdly encounter - Cyber City, normal route
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-krisdown
+        name: When Kris is first downed
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: glare
+        name: Glare
+      -
+        id: wake
+        act_icon: Noelle
+        name: Wake
+      -
+        id: naction
+        class: noelle act
+        name: N-Action
+  -
+    name: Magic
+    subheadings:
+      -
+        id: snowgrave
+        name: Using Noelle's spell SnowGrave
+---
+{% comment %} global.encounterno = 82 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly blocks the way!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<p class="note">No flavor text is provided. The screen remains blank.</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-krisdown">When Kris is first downed</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>N-Noelle, look!<span class="break"></span> Kris is down!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Now's your chance to<span class="break"></span> come back over here!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>N... Noelle?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(I can...<span class="break"></span> still...<span class="break"></span> hear...<span class="break"></span> their voice...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>Enemy Weakness: ICE</d-text>
+		<d-text>Try your strongest ice spell.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="glare">
+	<h2>Glare</h2>
+
+	<h3>First time</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You glared at Berdly!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Berdly" variant="dark" emotion="3"></d-sprite>
+		<d-text asterisk>Wh... what!? Trying to psyche me out, Kris!?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Berdly" variant="dark" emotion="D"></d-sprite>
+		<d-text asterisk>W-well... It's not working!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly's DEFENSE dropped!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 13% <span class="yellow">Mercy</span>. His Defense lowers by 5.</p>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You glared at Berdly!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>His DEFENSE dropped!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 13% <span class="yellow">Mercy</span>. His Defense lowers by 5.</p>
+
+	<p class="note">Upon successfully reaching 100% <span class="yellow">Mercy</span>, <a href="{{ '/chapters/chapter2/secondalleyway#postfight-nonfatal' | relative_url }}">the encounter automatically ends with the Weird Route being aborted</a>.</p>
+</section>
+
+<section class="d-section" id="wake">
+	<h2>{% include acticon chara="Noelle" -%} Wake</h2>
+
+	<h3>First time</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Noelle to concentrate!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="W"></d-sprite>
+		<d-text asterisk>Concentrate on what...?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Her MAGIC increased!</d-text>
+	</d-box>
+	<p class="note">Noelle's Magic increases by 3.</p>
+
+	<h3>Second to tenth time</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Noelle to concentrate!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Her MAGIC increased!</d-text>
+	</d-box>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Noelle to concentrate!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But nothing happened!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="naction">
+	<h2 class="noelle act">N-Action</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle tried to talk to Berdly!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But it failed.</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="snowgrave">
+	<h2>Using Noelle's spell SnowGrave</h2>
+
+	<h3 id="snowgrave-description">Description</h3>
+	<h4>With the <a href="{{ '/misc/weapons#thornring' | relative_url }}">Thorn Ring</a> equipped</h4>
+	<d-box theme="battledesc">
+		<d-text>Fatal</d-text>
+		<d-text class="orange">100% TP</d-text>
+	</d-box>
+	<h4>Without the Thorn Ring equipped</h4>
+	<d-box theme="battledesc">
+		<d-text>Fatal</d-text>
+		<d-text class="orange">200% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="snowgrave-usage">Usage</h3>
+	<h4 id="snowgrave-usage1">First time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="c"></d-sprite>
+		<d-text asterisk>S... Snowgrave?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="e"></d-sprite>
+		<d-text asterisk>I... I don't know that spell.</d-text>
+	</d-box>
+	<p class="note">The screen returns to Noelle's MAGIC menu.</p>
+
+	<h4 id="snowgrave-usage2">Second time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="e"></d-sprite>
+		<d-text asterisk>I'm telling you, I... I...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="W"></d-sprite>
+		<d-text asterisk>I don't know what you're talking about.</d-text>
+	</d-box>
+	<p class="note">The screen returns to Noelle's MAGIC menu.</p>
+
+	<h4 id="snowgrave-usage3">Third time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="W"></d-sprite>
+		<d-text asterisk>I'm telling you, stop!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="Z"></d-sprite>
+		<d-text asterisk>I... I don't know what you're talking about!</d-text>
+	</d-box>
+	<p class="note">The screen returns to Noelle's MAGIC menu.</p>
+
+	<h4 id="snowgrave-usage4">Fourth time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="W"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="V"></d-sprite>
+		<d-text asterisk>Fine. You want to see what happens so bad?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="f"></d-sprite>
+		<d-text asterisk>Watch what happens when I cast a spell I don't know!</d-text>
+	</d-box>
+	<p class="note">The screen returns to Noelle's MAGIC menu.</p>
+
+	<h4 id="snowgrave-usage5">Fifth time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle cast SNOWGRAVE!</d-text>
+	</d-box>
+	<p class="note">As with her other spells, Noelle lifts her hands up, sending up a burst of magic, but then she goes still. The music fades out.</p>
+
+	<p class="note">Noelle's body briefly flashes white and her eyes open, now solid white. Across from her, Berdly stops moving as well, watching her with wide eyes. Noelle floats to the center of the screen as magical sparks continuously leave her hands and rise up above with the eerie chiming of bells.</p>
+
+	<p class="note">The screen is overlaid with blue as snow rages past, with a twisting column of ice and snow flooding over Berdly. When the column of snow passes, it leaves behind a solid block of ice encasing Berdly and dealing immense damage.</p>
+
+	<p class="note">The snowstorm fades and Noelle drops to the ground, falling to her knees. Her hands are together - perhaps clasped, perhaps touching the Thorn Ring. For a long moment, there is silence.</p>
+
+	<d-box theme="battlemenu">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">Still kneeling, Noelle turns towards Kris. Berdly's ice crystal dims slightly.</p>
+
+	<d-box theme="battlemenu">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>What...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>What happened?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>There was so much snow, I couldn't see anything...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>I...</d-text>
+	</d-box>
+
+	<p class="note">Noelle stands, facing away from the viewer. Another moment of silence.</p>
+
+	<d-box theme="battlemenu">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>I don't feel so good.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>I think</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>I'm going to go home.</d-text>
+	</d-box>
+
+	<p class="note">Noelle walks away unsteadily, disappearing off the top of the screen. <a href="{{ '/chapters/chapter2/secondalleyway#postfight-fatal' | relative_url }}">The encounter ends</a> with no victory message appearing and no D$/EXP earned.</p>
+</section>

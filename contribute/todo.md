@@ -104,6 +104,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/darkworldintro` - Entering the Cyber World and meeting Queen
 		* `/drive1` - First part of the Kris/Queen/Noelle drive, pre-Spamton
 		* `/drive2` - Second part of the Kris/Queen/Noelle drive, post-Spamton
+		* `/mansionexterior` - Outside Queen's mansion
+			* `#weirdroute` - Weird route variant
 		* `/fountain` - Sealing the fountain
 		* `/fountainweird` - Sealing the fountain (Weird Route)
 		* `/shelter` - End of chapter scene with Susie confronting Snowy/MK
@@ -143,7 +145,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* gml_Object_obj_tasque_manager_enemy_Step_0 `/tasquemanager`
 			* gml_Object_obj_mauswheel_enemy_Step_0 `/mauswheel`
 			* gml_Object_obj_rouxls_enemy_Step_0 `/rouxls1` or `/rouxlsch2` (pirate hat fight)
-			* gml_Object_obj_berdlyb2_enemy_Step_0 `/berdly2` or `/berdlyalley`
 			* gml_Object_obj_queen_enemy_Step_0/gml_Object_obj_berdlyplug_enemy_Step_0 `/queen`
 			* gml_Object_obj_gigaqueen_enemy_Step_0 `/gigaqueen`
 			* gml_Object_obj_dojo_spareenemy_Step_0 `/jigsawjoe` or `/dojospare` (dojo's spare challenge)

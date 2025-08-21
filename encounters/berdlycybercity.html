@@ -1,0 +1,341 @@
+---
+title: Berdly encounter - Cyber City, normal route
+
+description: >
+  <p>Flavor text and dialogue for the battle against Berdly in the Cyber City alleyway on the normal route.</p>
+
+sources:
+  -
+    name: gml_Object_obj_berdlyb2_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/berdlycyberfield
+    name: First Berdly encounter - Cyber Field
+  -
+    url: /encounters/berdlycybercityweird
+    name: Second Berdly encounter - Cyber City, Weird Route
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-turn
+        name: With specific turns
+      -
+        id: dialogue-attack
+        name: With specific attacks
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: playdumb
+        name: Play Dumb
+      -
+        id: playsmart
+        act_icon: Noelle
+        name: Play Smart
+      -
+        id: naction
+        class: noelle act
+        name: N-Action
+---
+{% comment %} global.encounterno = 82 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly blocks the way!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly thanks Noelle profusely.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly tries to entice Noelle to his side by gyrating his hips!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly preens condescendingly.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly laughs and goes to his mind palace.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly crushes his Smart Scouter out of frustration.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like frozen chicken.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-turn">With specific turns</h3>
+	<h4>Turn 1</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Kris! I get it!<span class="break"></span> Your head's gotten big<span class="break"></span> from solving that puzzle<span class="break"></span> by DUMB LUCK!</d-text>
+	</d-box>
+
+	<h4>Turn 2</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>So now you think<span class="break"></span> it's your chance to<span class="break"></span> usurp me at my weakest...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>By taking my most<span class="break"></span> precious thing... Noelle!</d-text>
+	</d-box>
+
+	<h4>Turn 3</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>But guess what, Kris!<span class="break"></span> I have one or more things<span class="break"></span> you will NEVER have!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Behold!!!<span class="break"></span> Comrades!!!</d-text>
+	</d-box>
+	<p class="note">2 <a href="{{ '/encounters/werewire' | relative_url }}">Werewires</a> join the encounter.</p>
+
+	<h4>Turn 4</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>That's right, Kris!<span class="break"></span> Unlike YOU, I have a<span class="break"></span> LOVING TEAM behind me!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>And you'll never beat<span class="break"></span> US fighting alone!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If both Werewires have been defeated</h5>
+	<p>By using Noelle's SleepMist.</p>
+	<p></p>
+	<p class="note">A pause.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>... h-hey, wait, where'd<span class="break"></span> the other guys go!?</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<h4>Turn 5</h4>
+	<h5>If one or both Werewires remain</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Kris... you're outmatched!<span class="break"></span> My team is rich in<span class="break"></span> natural resources!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Intelligence, yes.<span class="break"></span> Smarts, yes.<span class="break"></span> Nipples, future YES.</d-text>
+	</d-box>
+	<h5>If both Werewires have been defeated</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>My... my allies are gone?<span class="break"></span> Ha! They're probably just...<span class="break"></span> Helping Queen search for me!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Sh... shut up, Kris! Shut up!<span class="break"></span> I don't care if you're not<span class="break"></span> saying anything!</d-text>
+	</d-box>
+
+	<h4>Turn 6</h4>
+	<h5>If one or both Werewires remain</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Noelle, this might hurt,<span class="break"></span> but it's to save you!</d-text>
+	</d-box>
+	<h6>If Noelle has not been downed</h6>
+	<d-box theme="battletalk">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(Help.)</d-text>
+	</d-box>
+	<h5>If both Werewires have been defeated</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>S-summon more guys!?<span class="break"></span> I... I don't need to do that!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Just WAIT! The original<span class="break"></span> ones are gonna come<span class="break"></span> back any minute now!</d-text>
+	</d-box>
+
+	<h4>Turn 7 or later, if Noelle has taken damage</h4>
+	<p>Noelle's dialogue plays only if she's not downed.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Noelle</d-speaker>
+			<d-text>WHY ARE<span class="break"></span> YOU HITTING<span class="break"></span> ME!?</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Berdly</d-speaker>
+			<d-text>Don't worry,<span class="break"></span> it's part<span class="break"></span> of my<span class="break"></span> calculations!</d-text>
+		</d-box>
+	</div>
+
+	<hr>
+
+	<h3 id="dialogue-attack">With specific attacks</h3>
+	<p>These dialogues play from turn 7 onwards. See the <a href="{% include wikilink page='Berdly#Attacks' %}">Deltarune Wiki</a> for descriptions of each attack.</p>
+
+	<h4>Tornado</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Partake, Kris!<span class="break"></span> The Zephyr of<span class="break"></span> Punishment!</d-text>
+	</d-box>
+
+	<h4>Spear Blast</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Holy Halbird!<span class="break"></span> Grant me strength!</d-text>
+	</d-box>
+
+	<h4>Chirashi</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>See if you can<span class="break"></span> dodge this, Kris!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>BERDLY - He usually only gets this mad when you play games together.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="playdumb">
+	<h2>Play Dumb</h2>
+
+	<h3>First time</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You acted like you were an idiot next to Berdly's genius!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Berdly" variant="dark" emotion="0"></d-sprite>
+		<d-text asterisk>Ahh, Kris... A shame I must defeat someone so lowly...</d-text>
+	</d-box>
+	<p class="note">Berdly gains 8% <span class="yellow">Mercy</span>.</p>
+
+	<h3>Subsequent times</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You did several math problems incorrectly!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You pretended to knit a home-made dunce cap!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You grunted like a primitive animal!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<p class="note">The following flavor text plays only once and does not repeat.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You pretended to spill your IQ points on the floor!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You got Noelle to pretend to pick them up!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="I"></d-sprite>
+		<d-text asterisk>(Why me!?)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Berdly liked that!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 8% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="playsmart">
+	<h2>{% include acticon chara="Noelle" -%} Play Smart</h2>
+
+	<h3>First and second time</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You encouraged Noelle to use her mind!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Her MAGIC increased! Berdly found her smarts appealing!</d-text>
+	</d-box>
+	<p class="note">Noelle's Magic stat increases by 3 for the remainder of this encounter. Berdly gains 16% <span class="yellow">Mercy</span>.</p>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle acted smart!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 16% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="naction">
+	<h2 class="noelle act">N-Action</h2>
+
+	<h3>First time</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle tried to talk to Berdly!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Noelle" emotion="I"></d-sprite>
+		<d-text asterisk>Umm, Berdly, I'm glad you're trying to help me...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Berdly" variant="dark" emotion="J"></d-sprite>
+		<d-text asterisk>No need to thank me, dearest Noelle!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle accidentally complimented Berdly!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 10% <span class="yellow">Mercy</span>.</p>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle accidentally complimented Berdly!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 10% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of fight</h2>
+
+	<p>Upon reaching 100% <span class="yellow">Mercy</span>, <a href="{{ '/chapters/chapter2/secondalleyway#postfightnormal' | relative_url }}">the encounter immediately ends</a>.</p>
+</section>
