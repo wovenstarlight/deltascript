@@ -17,9 +17,13 @@ sources:
     chapters: [1]
     note: final goodbye to others
   -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [1]
+    note: final goodbye to C. Round
+  -
     name: gml_Object_obj_npc_facing_Other_10
     chapters: [1]
-    note: final goodbye to Lancer
+    note: final goodbye to Lancer, pre-final talk to Ralsei
   -
     name: gml_Object_obj_kingcutscene_Step_0
     chapters: [1]
@@ -466,6 +470,14 @@ sources:
 		<d-speaker>Top Chef</d-speaker>
 		<d-text asterisk>Yes! That's my arbitrary rule!</d-text>
 	</d-box>
+
+	<h4>C. Round</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Because you rescued it, it grew to respect you...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Well, actually, maybe it shrunk to respect you.)</d-text>
+	</d-box>
 </section>
 
 <section class="d-section" id="final-lancer">
@@ -557,18 +569,82 @@ sources:
 <section class="d-section" id="final-ralsei">
 	<h2>Final goodbye to Ralsei</h2>
 
-	<p class="note">Kris and Susie turn to look at Ralsei.</p>
+	<h3 id="final-ralsei-prelancer">Interacting with Ralsei before talking to Lancer</h3>
+	<p>Available only if no Darkners were lost.</p>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Kris...? Susie...? You came back...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Ummm, well...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="3"></d-sprite>
+		<d-text asterisk>Kris just wanted to say bye, y'know...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Oh!!! Actually...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>... Everyone here wanted to say goodbye, too.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Please let me know when you leave, alright?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Yeah, yeah, we'll try not to skip you.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Kris... Susie...? Are you leaving?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Nah, we have to talk to Lancer first.</d-text>
+	</d-box>
 
 	<hr>
 
-	<h3 id="final-nonviolent">If no Darkners were lost</h3>
+	<h3 id="final-ralsei-postlancer">Interacting with Ralsei after talking to Lancer</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Kris... Susie...? Are you leaving?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Hell if I know, I'm just following Kris.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Guess we'll just walk to the right if we are.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="final-ralsei-leaving">Leaving</h3>
+
+	<p class="note">Kris and Susie turn to look at Ralsei.</p>
+
+	<hr class="hr2">
+
+	<h4 id="final-nonviolent">If no Darkners were lost</h4>
 	<d-box theme="dark">
 		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
 		<d-text asterisk>Susie, Kris... Are you going to leave...?</d-text>
 	</d-box>
 	<p class="note">Ralsei comes to the center of the walkway.</p>
 
-	<h3 id="final-violent">If any Darkners were lost</h3>
+	<hr class="hr3">
+
+	<h4 id="final-violent">If any Darkners were lost</h4>
 	<d-box theme="dark">
 		<d-sprite speaker="Ralsei" variant="hat" emotion="4"></d-sprite>
 		<d-text asterisk>Susie... Kris...?</d-text>
@@ -578,7 +654,7 @@ sources:
 		<d-text asterisk>If we must say goodbye, then...</d-text>
 	</d-box>
 
-	<hr>
+	<hr class="hr2">
 
 	<p class="note">Ralsei tugs at the brim of his hat.</p>
 
