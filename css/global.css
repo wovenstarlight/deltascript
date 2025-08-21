@@ -952,6 +952,7 @@ d-box {
 	&:not(:state(compact)) {
 		/* Align text towards start */
 		grid-template-rows: auto auto 1fr;
+		word-break: keep-all;
 
 		d-box {
 			position: absolute;
