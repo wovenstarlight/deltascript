@@ -131,7 +131,12 @@ body.dim {
 .gray { color: var(--gray) }
 .lightyellow { color: var(--lightyellow) }
 /* Dark World 3D effect */
-[theme=dark], [theme=objbattle], [theme=battlemenu] {
+d-box[theme=dark],
+[theme=objbattle],
+[theme=battlemenu],
+[theme=shopleft], [theme=shopright] {
+	text-shadow: 1px 1px #03037d;
+
 	.cR, .red,
 	.cB, .blue,
 	.cY, .yellow,
@@ -145,6 +150,7 @@ body.dim {
 	.cV, .lightgreen,
 	.cI, .iceblue,
 	.gray, .lightyellow {
+		text-shadow: none;
 		background: var(--mycolor) linear-gradient(rgb(from var(--white) r g b / 0.8), rgb(from var(--mycolor) r g b / 0));
 		background-clip: text;
 		color: transparent;
@@ -152,11 +158,11 @@ body.dim {
 	}
 	.cR, .red { --mycolor: var(--red) }
 	.cB, .blue { --mycolor: var(--blue) }
-	.cY, .yellow { --mycolor: var(--yellow); --strength: 20% }
+	.cY, .yellow { --mycolor: var(--yellow) }
 	.cG, .green { --mycolor: var(--green) }
 	.cX, .black { --mycolor: var(--black) }
-	.cP, .purple { --mycolor: var(--purple) } /* unused */
-	.cM, .maroon { --mycolor: var(--maroon) } /* unused */
+	.cP, .purple { --mycolor: var(--purple) }
+	.cM, .maroon { --mycolor: var(--maroon) }
 	.cO, .orange { --mycolor: var(--orange) }
 	.cA, .lightblue { --mycolor: var(--lightblue) }
 	.cS, .pink { --mycolor: var(--pink) }
@@ -850,7 +856,7 @@ d-box, d-choices {
 			&.fullwidth {
 				width: 100%;
 				grid-column: 1 / span 2;
-				
+
 				&.center { justify-self: center }
 			}
 			&.fullwidth.fullheight { object-fit: contain }
@@ -931,7 +937,7 @@ d-box {
 	&:not(:state(compact)) {
 		/* Align text towards start */
 		grid-template-rows: auto auto 1fr;
-		
+
 		d-box {
 			position: absolute;
 			font-size: 0.6em;
@@ -944,7 +950,7 @@ d-box {
 			width: max-content;
 			/* Center content */
 			align-items: center;
-			
+
 			d-sprite img { --size: 3.2em }
 
 			d-text:first-of-type { margin-block-start: 0.5em }
@@ -1097,6 +1103,7 @@ d-text {
 		text-indent: unset;
 
 		&::before {
+			text-shadow: none;
 			position: absolute;
 			left: 0;
 			top: 0.15em;
@@ -1213,7 +1220,7 @@ d-choices {
 		&[index="2"] { top: -0.1em }
 		&[index="3"] { bottom: -0.2em }
 	}
-	
+
 	/* For 8-bit choice menus with at most 2 children, scrunch the kids together */
 	&:is([theme=eightbit], [theme="8bit"]):has(:nth-child(1):last-child, :nth-child(2):last-child) d-option {
 		&[index="0"] { left: 4.74em }
@@ -1385,7 +1392,7 @@ d-option-panel {
 	font-family: "DeltaFont Condensed", var(--font);
 	max-width: 35em;
 	margin-inline: auto;
-	
+
 	@media (min-width: 30rem) {
 		grid-template-columns: 1fr auto;
 		h3 { grid-column: 1 }
@@ -1433,7 +1440,7 @@ d-option-panel {
 		margin-block: 0.5em 1em;
 		word-break: keep-all;
 	}
-	
+
 	dl { margin-block: 0 }
 
 	.stats-text {
@@ -1441,11 +1448,11 @@ d-option-panel {
 		grid-template-columns: auto 1fr;
 		column-gap: 1ch;
 	}
-	
+
 	dt {
 		text-transform: uppercase;
 	}
-	
+
 	dd { margin: 0 }
 }
 /* #endregion */
