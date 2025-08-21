@@ -374,6 +374,9 @@ d-text[effect*=shake][asterisk] {
 [effect=shake-slight] { --intensity: 0.65 }
 [effect=shake-hard] { --intensity: 1.8 }
 /* #endregion */
+/* Chromatic aberration (color bleed) effect */
+[effect=bleed] { filter: url(#kill) }
+/* Shrink text on small screens */
 @media (max-width: 30rem) {
 	body { font-size: 0.875em }
 }

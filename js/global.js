@@ -549,6 +549,47 @@ function setUp() {
 		// Move any line breaks out of their parent shakers
 		shakeElement.querySelectorAll(".break").forEach(el => el.parentElement.insertAdjacentElement("afterend", el));
 	});
+
+	// Chromatic aberration (color bleed)
+	if (document.querySelector("[effect~=bleed]") !== null) {
+		let d = document.createElement("div");
+		d.innerHTML = `<svg height="0" width="0">
+	<filter id="kill">
+		<feColorMatrix type="matrix" result="red_" values="
+			1 0 0 0 0
+			0 0 0 0 0 
+			0 0 0 0 0 
+			0 0 0 1 0
+		"></feColorMatrix>
+		<feColorMatrix type="matrix" in="SourceGraphic" result="blue_" values="
+			0 0 0 0 0
+			0 0 0 0 0 
+			0 0 1 0 0 
+			0 0 0 1 0
+		"></feColorMatrix>
+		<feColorMatrix type="matrix" in="SourceGraphic" result="cyan_" values="
+			0 0 0 0 0
+			0 1 0 0 0 
+			0 0 1 0 0 
+			0 0 0 1 0
+		"></feColorMatrix>
+		<feColorMatrix type="matrix" result="orange_" values="
+			1 0 0 0 0
+			0 1 0 0 0 
+			0 0 0 0 0 
+			0 0 0 1 0
+		"></feColorMatrix>
+		<feOffset in="blue_" dy="0" result="blue" dx="2"></feOffset>
+		<feOffset in="red_" dy="0" result="red" dx="-1"></feOffset>
+		<feOffset dy="0" result="cyan" in="cyan_" dx="1"></feOffset>
+		<feOffset dy="0" in="orange_" result="orange" dx="0"></feOffset>
+		<feBlend in="red" in2="blue" mode="lighten" result="blend1"></feBlend>
+		<feBlend in="orange" in2="cyan" result="blend2" mode="screen"></feBlend>
+		<feBlend mode="screen" in="blend1" in2="blend2" result="blend"></feBlend>
+	</filter>
+</svg>`;
+		document.body.append(d.firstElementChild);
+	}
 }
 
 // Run setup once page elements have loaded
