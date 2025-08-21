@@ -158,93 +158,10 @@ class DialogueSprite extends HTMLElement {
 customElements.define("d-sprite", DialogueSprite);
 
 
-let shake,
-	last,
-	insideTag = false,
-	insideEntity = false;
-	insideShake = true;
-const SHAKE_CLASSES = ["s1", "s2", "s3", "s4"];
-function randomShake() {
-	let index = Math.floor(Math.random() * SHAKE_CLASSES.length);
-	while (index === last) index = Math.floor(Math.random() * SHAKE_CLASSES.length);
-	// Index now NOT the same as the last
-	last = index;
-	return SHAKE_CLASSES[index];
-}
 /** A line of text for a dialogue box. */
 class DialogueText extends HTMLElement {
 	constructor() {
 		super()
-	}
-
-	connectedCallback() {
-		if (!this.getAttribute("effect")?.startsWith("shake")) return;
-
-		setTimeout(() => {
-			this.setAttribute("aria-label", this.innerText);
-			let result = `<span class="shake">`;
-
-			for (const char of this.innerHTML) {
-				if (char === "<") {	// HTML; include everything until the end of this tag without changes
-					insideTag = true;
-					result += char;
-					continue;
-				}
-				else if (insideTag) {	// HTML; include tag ender
-					result += char;
-					if (char === ">") insideTag = false;
-					continue;
-				}
-
-				if (char === "&") {	// HTML entity; include everything until the end of this entity without changes
-					insideEntity = true;
-					result += `${		// Add shake opener if necessary
-						!insideShake ? `<span class="shake">` : ""
-					}<span class="${	// Add random shake class; never selects the same class twice in a row
-						randomShake()
-					}">${				// Add the character itself
-						char
-					}`;					// DO NOT CLOSE; entity has to be shaken as one unit!
-					if (!insideShake) insideShake = true;
-					continue;
-				}
-				else if (insideEntity && char === ";") {	// HTML entity; include entity ender
-					insideEntity = false;
-					result += `${char}</span>`;
-					continue;
-				}
-				else if (insideEntity) {	// HTML entity; keep parsing as one unit
-					result += char;
-					continue;
-				}
-
-				if (!char.trim().length) {	// Whitespace
-					if (insideShake) {
-						result += "</span>";
-						insideShake = false;
-					}
-					result += char;
-					continue;
-				}
-
-				// Non-whitespace
-				result += `${		// Add shake opener if necessary
-					!insideShake ? `<span class="shake">` : ""
-				}<span class="${	// Add random shake class; never selects the same class twice in a row
-					randomShake()
-				}">${				// Add the character itself
-					char
-				}</span>`;
-				insideShake = true;
-			}
-
-			// Got through all characters; check whether the last span is closed
-			if (insideShake) result += "</span>";
-			this.innerHTML = result;
-
-			// Move any line breaks out of their parent shakers
-			this.querySelectorAll(".break").forEach(el => el.parentElement.insertAdjacentElement("afterend", el));
-		}, 0);
 	}
 }
 customElements.define("d-text", DialogueText);
@@ -545,13 +462,93 @@ function setUp() {
 	}
 	*/
 
+	// Force-view all choices
 	document.getElementById("open-choices").addEventListener("click", () => {
 		document.querySelectorAll("d-choices").forEach(menu => menu.forced = true);
 		document.querySelectorAll("d-option-panel").forEach(panel => {
 			panel.collapsed = false;
 			panel.forced = true;
 		});
-	})
+	});
+
+	// Shaky text
+	let prevClassIndex,
+		insideTag = false,
+		insideEntity = false;
+		insideShake = true;
+	const SHAKE_CLASSES = ["s1", "s2", "s3", "s4"];
+	function randomShake() {
+		let index = Math.floor(Math.random() * SHAKE_CLASSES.length);
+		while (index === prevClassIndex) index = Math.floor(Math.random() * SHAKE_CLASSES.length);
+		// Index now NOT the same as the last
+		prevClassIndex = index;
+		return SHAKE_CLASSES[index];
+	}
+	document.querySelectorAll("[effect*=shake]").forEach(shakeElement => {
+		shakeElement.setAttribute("aria-label", shakeElement.innerText);
+		let result = `<span class="shake">`;
+
+		for (const char of shakeElement.innerHTML) {
+			if (char === "<") {	// HTML; include everything until the end of this tag without changes
+				insideTag = true;
+				result += char;
+				continue;
+			}
+			else if (insideTag) {	// HTML; include tag ender
+				result += char;
+				if (char === ">") insideTag = false;
+				continue;
+			}
+
+			if (char === "&") {	// HTML entity; include everything until the end of this entity without changes
+				insideEntity = true;
+				result += `${		// Add shake opener if necessary
+					!insideShake ? `<span class="shake">` : ""
+				}<span class="${	// Add random shake class; never selects the same class twice in a row
+					randomShake()
+				}">${				// Add the character itself
+					char
+				}`;					// DO NOT CLOSE; entity has to be shaken as one unit!
+				if (!insideShake) insideShake = true;
+				continue;
+			}
+			else if (insideEntity && char === ";") {	// HTML entity; include entity ender
+				insideEntity = false;
+				result += `${char}</span>`;
+				continue;
+			}
+			else if (insideEntity) {	// HTML entity; keep parsing as one unit
+				result += char;
+				continue;
+			}
+
+			if (!char.trim().length) {	// Whitespace
+				if (insideShake) {
+					result += "</span>";
+					insideShake = false;
+				}
+				result += char;
+				continue;
+			}
+
+			// Non-whitespace
+			result += `${		// Add shake opener if necessary
+				!insideShake ? `<span class="shake">` : ""
+			}<span class="${	// Add random shake class; never selects the same class twice in a row
+				randomShake()
+			}">${				// Add the character itself
+				char
+			}</span>`;
+			insideShake = true;
+		}
+
+		// Got through all characters; check whether the last span is closed
+		if (insideShake) result += "</span>";
+		shakeElement.innerHTML = result;
+
+		// Move any line breaks out of their parent shakers
+		shakeElement.querySelectorAll(".break").forEach(el => el.parentElement.insertAdjacentElement("afterend", el));
+	});
 }
 
 // Run setup once page elements have loaded
