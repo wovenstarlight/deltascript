@@ -1160,11 +1160,9 @@ d-text {
 /* Choice menus only */
 d-choices {
 	&:not(:state(compact)) {
-		display: grid;
+		display: block;
 		--side-width: 5em;
-		grid-template-columns: 1fr auto 1fr;
 		padding: 0;
-		align-items: center;
 		position: relative;
 
 		/* Heart-shaped selector icon
@@ -1182,6 +1180,11 @@ d-choices {
 				--size: 0.75em;
 			}
 			&[theme=battlemenu]::after { left: 11em }
+			&:is([theme=eightbit], [theme="8bit"])::after {
+				background-image: url("../assets/images/heart_8bit.png");
+				--size: 0.7em;
+				top: 1.85em;
+			}
 
 			&[offset]::after { left: calc(9em + var(--offset)) }
 			&[offset][theme=battlemenu]::after { left: calc(11em + var(--offset)) }
@@ -1209,6 +1212,12 @@ d-choices {
 		&[index="1"] { right: 0.15em }
 		&[index="2"] { top: -0.1em }
 		&[index="3"] { bottom: -0.2em }
+	}
+	
+	/* For 8-bit choice menus with at most 2 children, scrunch the kids together */
+	&:is([theme=eightbit], [theme="8bit"]):has(:nth-child(1):last-child, :nth-child(2):last-child) d-option {
+		&[index="0"] { left: 4.74em }
+		&[index="1"] { right: 4.65em }
 	}
 
 	/* Asterisk marker */
@@ -1257,6 +1266,16 @@ d-option {
 		left: -1.75ch;
 		top: 0.15em;
 	}
+
+	/* Adjust in 8-bit menus */
+	d-choices:is([theme=eightbit], [theme="8bit"]) & {
+		font-family: "DeltaFont 8-Bit", var(--font);
+		&:is(:hover, :focus)::before,
+		&[aria-expanded=true]::before {
+			background-image: url("../assets/images/heart_8bit.png");
+		}
+	}
+	d-choices:is([theme=eightbit], [theme="8bit"]):not([noninteractive]) &::before { left: -1.4ch }
 
 	/* Hide the hearts/highlights when choices are forced open */
 	d-choices:state(forced) &:not(:hover, :focus) {
