@@ -774,6 +774,7 @@ d-box, d-choices {
 			color: var(--black);
 			font-family: "DeltaFont Combat", var(--font);
 			font-size: 1em;
+			padding: 0.2em 0.3em;
 
 			d-speaker {
 				--lightyellow: color-mix(in srgb, var(--orange), var(--black));
