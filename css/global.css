@@ -370,12 +370,12 @@ d-text[effect*=shake][asterisk] {
 	text-indent: -1ch;
 	&::before { display: inline-block }
 }
-[effect=shake-veryslight] { --intensity: 0.35 }
-[effect=shake-slight] { --intensity: 0.65 }
-[effect=shake-hard] { --intensity: 1.8 }
+[effect~=shake-veryslight] { --intensity: 0.35 }
+[effect~=shake-slight] { --intensity: 0.65 }
+[effect~=shake-hard] { --intensity: 1.8 }
 /* #endregion */
 /* Chromatic aberration (color bleed) effect */
-[effect=bleed] { filter: url(#kill) }
+[effect~=bleed] { filter: url(#kill) }
 /* Shrink text on small screens */
 @media (max-width: 30rem) {
 	body { font-size: 0.875em }
