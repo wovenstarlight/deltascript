@@ -473,14 +473,17 @@ header.d-section:has(h1.visually-hidden:only-child) {
 	border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width) / var(--border-width);
 	body.dim & { border-image-source: url("../assets/images/textbox/light_dim.png") }
 
-	a, label, button {
-		display: block;
-		padding: 0.25em 1em;
+	a { text-decoration: none }
+	button {
 		background-color: transparent;
 		border: none;
 		color: inherit;
 		font: inherit;
-		text-decoration: none;
+	}
+
+	a, label, button {
+		display: block;
+		padding: 0.25em 1em;
 		position: relative;
 
 		&:hover, &:focus-within {
@@ -511,6 +514,8 @@ header.d-section:has(h1.visually-hidden:only-child) {
 
 		&::after { content: "OFF" }
 		&:has(input:checked)::after { content: "ON" }
+
+		&.gray { cursor: help }
 	}
 }
 /* #endregion */

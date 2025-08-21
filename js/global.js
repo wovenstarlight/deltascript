@@ -1,3 +1,5 @@
+let globalAnims = false;
+
 // #region Game elements
 /** A box containing a few lines of dialogue. */
 class DialogueBox extends HTMLElement {
@@ -132,6 +134,7 @@ class DialogueSprite extends HTMLElement {
 			|| (speaker === "Rouxls" && variant === "shop")
 			|| (speaker === "Spamton" && emotionIndex !== 0)
 		);
+		if (isGif) globalAnims = true;
 
 		return (
 			`<img
@@ -485,6 +488,8 @@ function setUp() {
 		return SHAKE_CLASSES[index];
 	}
 	document.querySelectorAll("[effect*=shake]").forEach(shakeElement => {
+		globalAnims = true;
+
 		shakeElement.setAttribute("aria-label", shakeElement.innerText);
 		let result = `<span class="shake">`;
 
@@ -589,6 +594,13 @@ function setUp() {
 	</filter>
 </svg>`;
 		document.body.append(d.firstElementChild);
+	}
+
+	// Gray out animation toggle if no animations are present
+	if (!globalAnims) {
+		(animToggle = document.querySelector("label[for='toggle-anim']")).title = "No animations on this page";
+		animToggle.classList.add("gray");
+		animToggle.append("*");
 	}
 }
 
