@@ -21,6 +21,10 @@ sources:
     name: gml_GlobalScript_scr_encountersetup
     chapters: [2]
     note: initial flavor text
+  -
+    name: gml_Object_obj_npc_dojo_Step_0
+    chapters: [2]
+    note: post-fight dialogue
 
 credits: >
   <p>Compiled by wovenstarlight.</p>
@@ -88,6 +92,9 @@ toc:
       -
         id: raction
         name: R-Action
+  -
+    id: postfight
+    name: After the challenge ends
 ---
 {% comment %}
 Check for encounter instances with the following regex:
@@ -358,4 +365,56 @@ Then check that the obj whose file it appears in actually exists in the canonica
 		<d-text asterisk>Ralsei stood there cutely!</d-text>
 	</d-box>
 	<p class="note">Clover gains 25% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="postfight">
+	<h2>After the challenge ends</h2>
+
+	<h3>If you won</h3>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>An amazing battle!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>As promised, here is your reward!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If the inventory is not full</h5>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>(You received ClubsSandwich!)</d-text>
+	</d-box>
+	<p class="note">The ClubsSandwich is added to the inventory.</p>
+	<hr class="hr3">
+	<h5>If the inventory is full</h5>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>Boss! Your inventory is full!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>You'll just have to try again, boss!</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>An amazing battle!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>But you already won that prize, so we don't have another!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>If you lost</h3>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>You beefed it! Better luck next time, boss!</d-text>
+	</d-box>
 </section>
