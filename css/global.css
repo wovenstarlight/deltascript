@@ -766,15 +766,16 @@ d-box, d-choices {
 			body.dim & { border-image-source: url("../assets/images/textbox/bubble_dim.png") }
 			border-image-slice: 6;
 			min-height: unset;
-			margin: 0.5em 1em;
+			height: fit-content;
 			width: fit-content;
+			margin: 0.5em 1em;
+			padding: 0.2em 0.3em;
 			display: flex;
 			flex-direction: column;
 			background-color: var(--white);
 			color: var(--black);
 			font-family: "DeltaFont Combat", var(--font);
 			font-size: 1em;
-			padding: 0.2em 0.3em;
 
 			d-speaker {
 				--lightyellow: color-mix(in srgb, var(--orange), var(--black));
