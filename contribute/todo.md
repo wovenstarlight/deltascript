@@ -102,7 +102,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/prisonbreak` - The prison scene with Susie breaking out, encountering Lancer, and freeing Kris/Ralsei
 	* `/chapter2`
 		* `/darkworldintro` - Entering the Cyber World and meeting Queen
-		* `/sweetcapncakes` - meeting Sweet Cap'n Cakes
+		* `/field2` - Cyber Field story parts after SCC up to rollercoasters; subdivide as necessary
 		* `/drive1` - First part of the Kris/Queen/Noelle drive, pre-Spamton
 		* `/drive2` - Second part of the Kris/Queen/Noelle drive, post-Spamton
 		* `/mansionexterior` - Outside Queen's mansion
