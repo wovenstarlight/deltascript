@@ -1,0 +1,454 @@
+---
+title: Tasque Manager encounter
+
+description: >
+  <p>Flavor text and dialogue for the battle against Tasque Manager.</p>
+
+sources:
+  -
+    name: gml_Object_obj_tasque_manager_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_tasque_manager_enemy_Other_24
+    chapters: [2]
+    note: unused flavor text variants
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/tasquemanagerdojo
+    name: Party Dojo - Tasque Manager encounter
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired / Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-quiz
+        name: With letter quiz attack
+      -
+        id: dialogue-jevilstail
+        name: Turn 1, if the Jevilstail is equipped to any party member
+      -
+        id: dialogue-devilsknife
+        name: Turn 1, if the Devilsknife is equipped to Susie
+      -
+        id: dialogue-violent
+        name: If a Tasque has been defeated violently
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: order
+        name: Order
+      -
+        id: orderx
+        act_icon: [Susie, Ralsei]
+        name: OrderX
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %} global.encounterno = 57 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<p>Appears with 2 Tasques.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque Manager blocks the way!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque Manager makes a list of her outfits for the next year. She only has one outfit.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque Manager is writing "manage tasks" next to every entry in her daily planner.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque Manager is straightening her whip with a hair straightener.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque Manager is making herself take priority over everything.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like live wiring.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired / Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque Manager has reached her<span class="break"></span> meticulously scheduled bedtime.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque Manager has found things<span class="break"></span> to be sufficiently organized.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Processes! Services!<span class="break"></span> Performance! Details!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Wrinkly clothing?<span class="break"></span> Let me whip it into shape!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Slouched back?<span class="break"></span> Let me whip it into shape!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Delinquent tendencies?<span class="break"></span> Let me whip it into shape!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Untied shoelaces?<span class="break"></span> Let me whip it into shape!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time, and third time onwards</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Order, order!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Second time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Hors d'oeuvre,<span class="break"></span> Hors d'oeuvre...<span class="break"></span> I mean, order, order!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Aren't my kitties just<span class="break"></span> so well behaved? Watch!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Kitties!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-quiz">With letter quiz attack</h3>
+	<p>The letters Tasque Manager calls out before electrocuting the letter grid.</p>
+	<img src="{{ '/assets/images/story/talktasquemanager/A.png' | relative_url }}" width="64" height="64" alt="Text bubble reading 'A'" />
+	<img src="{{ '/assets/images/story/talktasquemanager/B.png' | relative_url }}" width="64" height="64" alt="Text bubble reading 'B'" />
+	<img src="{{ '/assets/images/story/talktasquemanager/C.png' | relative_url }}" width="64" height="64" alt="Text bubble reading 'C'" />
+	<img src="{{ '/assets/images/story/talktasquemanager/D.png' | relative_url }}" width="64" height="64" alt="Text bubble reading 'D'" />
+
+	<hr>
+
+	<h3 id="dialogue-jevilstail">Turn 1, if the <a href="{{ '/misc/armor#jevilstail' | relative_url }}">Jevilstail</a> is equipped to any party member</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Chaos, chaos!?<span class="break"></span> No, no! Order, order!<span class="break"></span> Now get rid of that<span class="break"></span> silly tail!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-devilsknife">Turn 1, if the <a href="{{ '/misc/weapons#devilsknife' | relative_url }}">Devilsknife</a> is equipped to Susie</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Chaos, chaos!?<span class="break"></span> No, no! Order, order!<span class="break"></span> Now get rid of that<span class="break"></span> silly tail!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-violent">If a Tasque has been defeated violently</h3>
+	<h4>First time</h4>
+	<p>Meaning the first turn after the Tasque was defeated.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>How dare you<span class="break"></span> touch my pretty kitty!</d-text>
+	</d-box>
+	<p class="note">Tasque Manager loses all previously-gained <span class="yellow">Mercy</span>, resetting to 0% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Subsequent times</h4>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>How dare you!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>You've been a<span class="break"></span> bad dog...</d-text>
+	</d-box>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>TASQUE MANAGER - Obsessed with order, and abhors Chaos. Whip it good!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="order">
+	<h2>Order</h2>
+
+	<h3 id="order-ft">Flavor text</h3>
+	<p class="note">Kris is crouching down; they have dog ears and a tail, and are holding up their hands like paws.</p>
+	
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(You asked Tasque Manager to show you order. She obliges!)</d-text>
+	</d-box>
+	<p class="note">Tasque Manager gains 10% <span class="yellow">Mercy</span> if either Susie or Ralsei is up / 15% <span class="yellow">Mercy</span> if Susie and Ralsei are both downed. Immediately after this, she will use her <a href="{% include wikilink page='Tasque Manager#Attacks' %}">letter quiz attack</a>.</p>
+
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(You asked for order!)</d-text>
+	</d-box>
+	<p class="note">Tasque Manager gains 10% <span class="yellow">Mercy</span> if Susie or Ralsei is up / 15% <span class="yellow">Mercy</span> if Susie and Ralsei are both downed. Immediately after this, she will use her <a href="{% include wikilink page='Tasque Manager#Attacks' %}">letter quiz attack</a>.</p>
+
+	<h4>If a Tasque has been defeated violently</h4>
+	<p>Displayed in a single dialogue box with any other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Your act failed...)</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<hr>
+
+	<h3 id="order-ft-unused">Unused flavor text variant</h3>
+	<p class="note">Kris is crouching down; they have dog ears and a tail, and are holding up their hands like paws.</p>
+	
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris got trained like an animal!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>First and second time, and fourth time onwards</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Oh, what a<span class="break"></span> perfect little<span class="break"></span> puppy you are!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>Third time</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Hush, puppy!<span class="break"></span> No growling...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tasque Manager seemed slightly pleased at the Order!!</d-text>
+	</d-box>
+	<p class="note">Tasque Manager gains 50% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Shortened version</h4>
+	<p>Would have overridden the standard flavor text when used in the same turn as other ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris got managed!</d-text>
+	</d-box>
+	<p class="note">Tasque Manager gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="orderx">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} OrderX</h2>
+
+	<h3 id="orderx-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Everyone asked Tasque Manager to show you order. She obliges!)</d-text>
+	</d-box>
+	<p class="note">Tasque Manager gains 25% <span class="yellow">Mercy</span>. Immediately after this, she will use her <a href="{% include wikilink page='Tasque Manager#Attacks' %}">letter quiz attack</a>.</p>
+
+	<h4>If a Tasque has been defeated violently</h4>
+	<p>Displayed in a single dialogue box with any other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(You talked to Tasque Manager, but no effect...)</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie barked madly!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie's mouth froths!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Tasque Manager gains 6% <span class="yellow">Mercy</span> if either Kris or Ralsei is up / 10% <span class="yellow">Mercy</span> if Kris and Ralsei are both downed.</p>
+
+	<h4>If a Tasque has been defeated violently</h4>
+	<p>Displayed in a single dialogue box with any other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>S-Action failed!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<hr>
+
+	<h3 id="saction-ft-unused">Unused flavor text variant</h3>
+	<p class="note">Susie is crouching down with an angry expression; she has dog ears and is holding up her hands like paws. Next to her is a sign reading "BEWARE OF" followed by her battle icon.</p>
+	
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie was trained like an animal...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>First time</h5>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Play dead!? I'll teach YOU to play dead!!</d-text>
+		<d-box>
+			<d-sprite speaker="Ralsei" emotion="12"></d-sprite>
+			<d-text>A treat!! Somebody give her a treat!!</d-text>
+		</d-box>
+	</d-box>
+	<hr class="hr3">
+	<h5>Subsequent times</h5>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Play dead!? I'll teach YOU to play dead!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>What a wonderfully crafted<span class="break"></span> signpost! I'm giving it an<span class="break"></span> obedience medal!</d-text>
+	</d-box>
+	<p class="note">Tasque Manager gains 20% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Shortened version</h4>
+	<p>From the second use of this ACT onwards, would have overridden the standard flavor text when this was used in the same turn as other ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie got managed!</d-text>
+	</d-box>
+	<p class="note">Tasque Manager gains 20% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei fell in line!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei listened closely!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Tasque Manager gains 6% <span class="yellow">Mercy</span> if either Kris or Susie is up / 10% <span class="yellow">Mercy</span> if Kris and Susie are both downed.</p>
+
+	<h4>If a Tasque has been defeated violently</h4>
+	<p>Displayed in a single dialogue box with any other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>R-Action failed!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<hr>
+
+	<h3 id="raction-ft-unused">Unused flavor text variant</h3>
+	<p class="note">Ralsei has dog ears over his actual ears and is tilting his head up, eyes closed in a smile. There is a blue-ribboned gold medal pinned to his tunic.</p>
+	
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei got trained like an animal!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>First time</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Due to good behavior, he received an obedience badge.</d-text>
+		<d-box>
+			<d-sprite speaker="Susie" emotion="12"></d-sprite>
+			<d-text>Why the hell do YOU get one of those!!</d-text>
+		</d-box>
+	</d-box>
+	<hr class="hr3">
+	<h5>Subsequent times</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Due to good behavior, he received an obedience badge.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>He really<span class="break"></span> loves to do<span class="break"></span> what he's told,<span class="break"></span> doesn't he?</d-text>
+	</d-box>
+	<p class="note">Tasque Manager gains 20% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Shortened version</h4>
+	<p>From the second use of this ACT onwards, would have overridden the standard flavor text when this was used in the same turn as other ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei got managed!</d-text>
+	</d-box>
+	<p class="note">Tasque Manager gains 20% <span class="yellow">Mercy</span>.</p>
+</section>

@@ -1,0 +1,192 @@
+---
+title: Party Dojo - Tasque Manager encounter
+
+description: >
+  <p>Flavor text and dialogue for Tasque Manager's challenge at the Party Dojo.</p>
+
+sources:
+  -
+    name: gml_Object_obj_fusionmenu_Step_0
+    chapters: [2]
+    note: challenge info
+  -
+    name: gml_Object_obj_tasque_manager_enemy_Step_0
+    chapters: [2]
+    note: general flavor text/dialogue
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_npc_dojo_Step_0
+    chapters: [2]
+    note: post-fight dialogue
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/tasquemanager
+    name: Original Tasque Manager encounter
+
+toc:
+  -
+    id: challengeinfo
+    name: Challenge info
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-initial
+        name: Initial
+      -
+        id: dialogue-quiz
+        name: With letter quiz attack
+  -
+    id: postfight
+    name: After the challenge ends
+---
+{% comment %} global.encounterno = 89 {% endcomment %}
+
+<section class="d-section" id="challengeinfo">
+	<h2>Challenge info</h2>
+
+	<p>Listed as "Tasque Manager Says", with the reward being $250.</p>
+
+	<d-box theme="objmenu">
+		<d-text>Winning's as easy as A-B-C!</d-text>
+		<d-text>You've got three chances, boss!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+	
+	<h3 id="encounter">Initial encounter</h3>
+	<p>As this encounter is scripted with dialogue only, the below flavor text is unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Graze!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-initial">Initial</h3>
+	<p>Plays only before turn 1.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Processes! Services!<span class="break"></span> Performance! Details!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Wrinkly clothing?<span class="break"></span> Let me whip it into shape!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Slouched back?<span class="break"></span> Let me whip it into shape!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Delinquent tendencies?<span class="break"></span> Let me whip it into shape!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Untied shoelaces?<span class="break"></span> Let me whip it into shape!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Order, order!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If the <a href="{{ '/misc/armor#jevilstail' | relative_url }}">Jevilstail</a> is equipped to any party member</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Chaos, chaos!?<span class="break"></span> No, no! Order, order!<span class="break"></span> Now get rid of that<span class="break"></span> silly tail!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If the <a href="{{ '/misc/weapons#devilsknife' | relative_url }}">Devilsknife</a> is equipped to Susie</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text>Chaos, chaos!?<span class="break"></span> No, no! Order, order!<span class="break"></span> Now get rid of that<span class="break"></span> silly tail!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-quiz">With letter quiz attack</h3>
+	<p>The letters Tasque Manager calls out before electrocuting the letter grid.</p>
+	<img src="{{ '/assets/images/story/talktasquemanager/A.png' | relative_url }}" width="64" height="64" alt="Text bubble reading 'A'" />
+	<img src="{{ '/assets/images/story/talktasquemanager/B.png' | relative_url }}" width="64" height="64" alt="Text bubble reading 'B'" />
+	<img src="{{ '/assets/images/story/talktasquemanager/C.png' | relative_url }}" width="64" height="64" alt="Text bubble reading 'C'" />
+	<img src="{{ '/assets/images/story/talktasquemanager/D.png' | relative_url }}" width="64" height="64" alt="Text bubble reading 'D'" />
+</section>
+
+<section class="d-section" id="postfight">
+	<h2>After the challenge ends</h2>
+
+	<h3>If you won</h3>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>An amazing battle!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>As promised, here is your reward!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If the inventory is not full</h5>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>(You received $250!)</d-text>
+	</d-box>
+	<p class="note">$250 is added to your total money.</p>
+	<hr class="hr3">
+	<h5>If the inventory is full</h5>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>Boss! Your inventory is full!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>You'll just have to try again, boss!</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>An amazing battle!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>But you already won that prize, so we don't have another!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>If you lost</h3>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>Boss! Try to remember your ABCs...!</d-text>
+	</d-box>
+</section>
