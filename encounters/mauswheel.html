@@ -1,0 +1,299 @@
+---
+title: Mauswheel encounter
+
+description: >
+  <p>Flavor text and dialogue for the battle against Mauswheel.</p>
+
+sources:
+  -
+    name: gml_Object_obj_mauswheel_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_maus_split_Create_0
+    chapters: [2]
+    note: Catch/CatchX mini-Maus count
+  -
+    name: gml_Object_obj_maus_split_basket_Collision_obj_maus_liddle
+    chapters: [2]
+    note: Catch/CatchX Mercy per Maus
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-spareable
+        name: Spareable
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: catch
+        act_icon: [Susie, Ralsei]
+        custom_icon_positions: true
+        name: Catch / ACTICON ACTICON CatchX
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+      -
+        id: naction
+        class: noelle act
+        name: N-Action
+  -
+    id: end
+    name: End of fight
+    subheadings:
+      -
+        id: end-tm
+        name: If Tasque Manager was recruited
+      -
+        id: end-notm
+        name: If Tasque Manager was not recruited
+---
+{% comment %} global.encounterno = 83 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mauswheel spins into you!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mauswheel is rolling around with an annoying wheel sound.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mauswheel might make a good wreath, as a prank.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>It's a cacophony of clicks.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like a three-cheese pizza.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<p>Unused; Mauswheel does not get <span class="blue">Tired</span> at low HP, and no ACTs make it <span class="blue">Tired</span>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mauswheel's DPI is lowering.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mauswheel is just a spareable husk now.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Mauswheel</d-speaker>
+		<d-text>(I'm no cheater!<span class="break"></span> It's just cheese...)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Mauswheel</d-speaker>
+		<d-text>(We are grippable.<span class="break"></span> We are many.)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Mauswheel</d-speaker>
+		<d-text>(Rolling around at<span class="break"></span> the speed of mouse...)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Mauswheel</d-speaker>
+		<d-text>(Wired is FASTER!)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-spareable">Spareable</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Mauswheel</d-speaker>
+		<d-text>(Well, everyone's captured.)</d-text>
+		<d-text>(What does that make me?)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>MAUSWHEEL - Two mice are better than one! ... Three, maybe not.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The cursor will follow you everywhere. Keep moving!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="catch">
+	<h2>Catch / {% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} CatchX</h2>
+
+	<h3 id="catch-instructions">Instructions</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press [MENU] To Trap!!!</d-text>
+	</d-box>
+	<p class="note">50 tiny Maice move back and forth at the center of the screen. A cage (sized larger when using {% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} CatchX) at the top of the screen also goes back and forth but at a different speed. [MENU] must be pressed to drop the cage at the right time, catching the little Maice.</p>
+
+	<hr>
+
+	<h3 id="catch-caught">If you caught any mini-Maice</h3>
+	<p class="note">Mauswheel gains 2% <span class="yellow">Mercy</span> for each caught mini-Maus.</p>
+
+	<h4>If Mauswheel does not reach 100% <span class="yellow">Mercy</span> from this ACT usage</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You caught them!</d-text>
+	</d-box>
+
+	<h4>If Mauswheel reaches 100% <span class="yellow">Mercy</span> from this ACT usage</h4>
+	<p class="note"><a href="#end">The encounter ends automatically</a>.</p>
+
+	<hr>
+
+	<h3 id="catch-missed">If you caught no mini-Maice</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You missed!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie got on all fours and chased the mouse around the room like an animal!!</d-text>
+	</d-box>
+	<p class="note">Mauswheel gains 5% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei started putting peanut butter on a spoon and put it in a trap!!</d-text>
+	</d-box>
+	<p class="note">Mauswheel gains 5% <span class="yellow">Mercy</span>. A cage falls on a surprised Susie.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie was captured!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="N"></d-sprite>
+		<d-text asterisk>Susie!!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>The hell you blaming ME for!! YOU made the trap!!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<h5>Standard</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei sang a song about mice!!</d-text>
+	</d-box>
+	<p class="note">Mauswheel gains 5% <span class="yellow">Mercy</span>.</p>
+
+	<h5>Shortened version</h5>
+	<p>Overrides the standard flavor text when used in the same turn as another X-Action.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei sang a mouse song!</d-text>
+	</d-box>
+	<p class="note">Maus gains 5% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="naction">
+	<h2 class="noelle act">N-Action</h2>
+	<p>Unused; likely a leftover from the <a href="{{ '/encounters/maus' | relative_url }}">Maus encounter</a>.</p>
+
+	<h3 id="naction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle screamed quietly!</d-text>
+	</d-box>
+	<p class="note">Mauswheel gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of fight</h2>
+	<p>Automatically plays when Mauswheel reaches 100% <span class="yellow">Mercy</span> through a usage of Catch or {% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} CatchX.</p>
+
+	<h3 id="end-tm">If <a href="{{ '/encounters/tasquemanager' | relative_url }}">Tasque Manager</a> was recruited</h3>
+	<p class="note">Mauswheel begins spinning faster and faster.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mauswheel reached 100% mercy!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But, it's still rolling out of control...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Suddenly...!</d-text>
+	</d-box>
+	<p class="note">Tasque Manager and an accompanying Tasque appear in front of the party, facing Mauswheel.</p>
+	<d-box theme="battlemenu">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text asterisk>We'll take it from here!</d-text>
+	</d-box>
+	<p class="note">Mauswheel is recruited and disappears. Tasque Manager and the Tasque exit off to the right of the screen, and the encounter ends.</p>
+
+	<hr>
+
+	<h3 id="end-notm">If Tasque Manager was not recruited</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mauswheel ran out of maice!</d-text>
+	</d-box>
+	<p class="note">Mauswheel is recruited and disappears. The encounter ends.</p>
+</section>
