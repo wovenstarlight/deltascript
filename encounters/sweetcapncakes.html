@@ -1,0 +1,780 @@
+---
+title: Sweet Cap'n Cakes encounter
+
+description: >
+  <p>Flavor text and dialogue for the battle against Sweet, Cap'n, and K_K.</p>
+
+sources:
+  -
+    name: gml_Object_obj_sweet_enemy_Step_0
+    chapters: [2]
+    note: Sweet-specific flavor text/dialogue
+  -
+    name: gml_Object_obj_hatguy_enemy_Step_0
+    chapters: [2]
+    note: Cap'n-specific flavor text/dialogue
+  -
+    name: gml_Object_obj_kk_enemy_Step_0
+    chapters: [2]
+    note: K_K-specific flavor text/dialogue
+  -
+    name: gml_Object_obj_kk_enemy_Other_11
+    chapters: [2]
+    note: group flavor text, stop dancing Ralsei dialogue
+  -
+    name: gml_Object_obj_musical_controller_Step_0
+    chapters: [2]
+    note: healing flavor text/dialogue
+  -
+    name: gml_Object_obj_musical_controller_Alarm_2
+    chapters: [2]
+    note: stop dancing flavor text
+  -
+    name: gml_Object_obj_musical_controller_Alarm_1
+    chapters: [2]
+    note: stop dancing dialogue
+  -
+    name: gml_Object_obj_musical_controller_Alarm_0
+    chapters: [2]
+    note: stop dancing Susie dialogue
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_musical_battle_end_Draw_0
+    chapters: [2]
+    note: ending cutscene
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-otherenemyname
+            name: With Other_enemy_name
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-specialcondition
+        name: Special_condition
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: dance
+        name: Dance
+      -
+        id: dancex
+        act_icon: [Susie, Ralsei]
+        name: Dance X
+      -
+        id: saction
+        class: susie act
+        name: "S-Action: Dance"
+      -
+        id: raction
+        class: ralsei act
+        name: "R-Action: Dance"
+---
+{% comment %} global.encounterno = 62 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sweet Cap'n Cakes block your way!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<hr class="hr2">
+	<p class="note">80% chance:</p>
+	<h4>If no one is dancing</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sweet shimmies defiantly.</d-text>
+		<d-text asterisk>K_K is a CD player.</d-text>
+		<d-text asterisk>Cap'n spins his cap around.</d-text>
+	</d-box>
+	<h4>If only Sweet is dancing</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sweet is lost in the groove!</d-text>
+		<d-text asterisk>K_K is a CD player.</d-text>
+		<d-text asterisk>Cap'n spins his cap around.</d-text>
+	</d-box>
+	<h4>If only K_K is dancing</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sweet shimmies defiantly.</d-text>
+		<d-text asterisk>K_K is lost in the groove!</d-text>
+		<d-text asterisk>Cap'n spins his cap around.</d-text>
+	</d-box>
+	<h4>If only Cap'n is dancing</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sweet shimmies defiantly.</d-text>
+		<d-text asterisk>K_K is a CD player.</d-text>
+		<d-text asterisk>Cap'n is lost in the groove!</d-text>
+	</d-box>
+	<h4>If Sweet and K_K are dancing</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sweet is lost in the groove!</d-text>
+		<d-text asterisk>K_K is lost in the groove!</d-text>
+		<d-text asterisk>Cap'n spins his cap around.</d-text>
+	</d-box>
+	<h4>If Sweet and Cap'n are dancing</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sweet is lost in the groove!</d-text>
+		<d-text asterisk>K_K is a CD player.</d-text>
+		<d-text asterisk>Cap'n is lost in the groove!</d-text>
+	</d-box>
+	<h4>If K_K and Cap'n are dancing</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sweet shimmies defiantly.</d-text>
+		<d-text asterisk>K_K is lost in the groove!</d-text>
+		<d-text asterisk>Cap'n is lost in the groove!</d-text>
+	</d-box>
+	<h4>If Sweet, K_K, and Cap'n are all dancing</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sweet is lost in the groove!</d-text>
+		<d-text asterisk>K_K is lost in the groove!</d-text>
+		<d-text asterisk>Cap'n is lost in the groove!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">20% chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like music.</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="ft-postdance">After using the Dance / {% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Dance X ACTs</h3>
+	<p>Replaces the standard flavor text for that turn.</p>
+	<h4>After first use</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>Perhaps if we can get them all to dance, we can win?</d-text>
+	</d-box>
+	<h4>After second use</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>Kris, just keep trying to dance!</d-text>
+	</d-box>
+	<h4>After third use</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>U-umm... Kris, maybe if you... keep dancing?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-reminder">Turn 3, if the Dance / {% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Dance X ACTs were used at most twice</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>They stopped dancing!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>We need to do it again!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-actlearn">Learning <span class="susie act">S-Action</span>/<span class="ralsei act">R-Action</span></h3>
+	<p>Immediately follows the attack sequence, preceding the standard flavor text. Triggered after the fourth use of the Dance / {% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Dance X ACTs, or when Kris is downed.</p>
+	<p></p>
+	<p class="note">If Susie, Ralsei, or both are downed, they are revived with 1 HP.</p>
+	<hr class="hr2">
+	<h4>If Kris is not downed</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Hey, is this really working!?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>Maybe if Kris... um...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>Maybe if we tried ballroom dancing instead?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Hey, why the hell do we need Kris to ACT?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>If Kris is downed</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="Z"></d-sprite>
+		<d-text asterisk>K... Kris!? Hey, Kris!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>...The hell do we do now!?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>...We can't ACT if Kris is down!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Don't worry, Susie! I'll just heal them, and...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>... hey, wait. Why can't we ACT without Kris?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>B-because that's um, Kris's unique talent, so...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>You think I'm too stupid to dance by myself!?</d-text>
+	</d-box>
+
+	<p class="note">Susie begins dancing.</p>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie learned <span class="pink">S-Action</span>! She can ACT from her <span class="yellow">MAGIC</span> menu!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>S-Susie, I-I don't think you should...</d-text>
+	</d-box>
+
+	<p class="note">Susie, still dancing, moves beside Ralsei and aggressively bumps into him several times.</p>
+
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Happy feet dumbass!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei starts dancing as well.</p>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Susie made Ralsei learn <span class="lightgreen">R-Action</span> even though he didn't want to!)</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="U"></d-sprite>
+		<d-text asterisk>(I... I'm sorry, Kris!!!)</d-text>
+	</d-box>
+
+	<p class="note">Susie and Ralsei stop dancing, and Susie returns to her usual spot in the center of the lineup. The standard flavor text plays, and the encounter resumes.</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<h4>Sweet</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Sweet</d-speaker>
+		<d-text>Feel the beat,<span class="break"></span> feel the beatdown!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Sweet</d-speaker>
+		<d-text>Boom, du-boom,<span class="break"></span> du-boom,</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Sweet</d-speaker>
+		<d-text>Get mixed,<span class="break"></span> get remixed!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Sweet</d-speaker>
+		<d-text>Taste the rhythm,<span class="break"></span> prism!</d-text>
+	</d-box>
+
+	<h4>K_K</h4>
+	<d-box theme="battletalk">
+		<d-speaker>K_K</d-speaker>
+		<d-text>I like this song.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>K_K</d-speaker>
+		<d-text>Can we dance?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>K_K</d-speaker>
+		<d-text>Ring-a-ding-dong.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If Sweet and Cap'n are both at 50% HP or higher</h5>
+	<d-box theme="battletalk">
+		<d-speaker>K_K</d-speaker>
+		<d-text>Are we having fun?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>If either Sweet or Cap'n is below 50% HP</h5>
+	<d-box theme="battletalk">
+		<d-speaker>K_K</d-speaker>
+		<d-text>Does anyone want<span class="break"></span> this milk I found?</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<h4>Cap'n</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Cap'n</d-speaker>
+		<d-text>Hey, don't touch<span class="break"></span> the hat.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Cap'n</d-speaker>
+		<d-text>Isn't this mix...<span class="break"></span> schway?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Cap'n</d-speaker>
+		<d-text>Alright, alright.<span class="break"></span> Alright alright alright.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Cap'n</d-speaker>
+		<d-text>So did they pay<span class="break"></span> the venue fee?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-stopdance">When stopping dancing</h3>
+	<p>Sweet, Cap'n, and K_K automatically stop dancing after 1 turn (Dance/<span class="susie act">Dance</span>/<span class="ralsei act">Dance</span>) or 2 turns ({% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Dance X).</p>
+
+	<h4>Sweet</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Sweet snapped out of the dance!)</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Sweet</d-speaker>
+		<d-text>W-wait, I can't dance<span class="break"></span> with bad guys!!</d-text>
+	</d-box>
+
+	<h4>K_K</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(K_K snapped out of the dance!)</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>K_K</d-speaker>
+		<d-text>I forgot my next<span class="break"></span> dance move!</d-text>
+	</d-box>
+
+	<h4>Cap'n</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Cap'n snapped out of the dance!)</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cap'n</d-speaker>
+		<d-text>H-hey, I'm not gonna<span class="break"></span> dance with you!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="healing">
+	<h2>Healing</h2>
+	<p>Whenever at least one member of the trio reaches 1 HP or below, this replaces the attack sequence for that turn.</p>
+
+	<h3>If only Sweet needs healing</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Sweet</d-speaker>
+			<d-text>I'm at my acoustic limit...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>K_K</d-speaker>
+			<d-text>Have a sip.</d-text>
+		</d-box>
+	</div>
+	<p class="note">A carton of milk appears in front of Sweet, healing Sweet to max HP.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SWEET's HP went up!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>If only K_K needs healing</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>K_K</d-speaker>
+			<d-text>Mmm... I'm thirsty.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Cap'n</d-speaker>
+			<d-text>(Don't ya mean<span class="break"></span> you're WOUNDED!?)</d-text>
+		</d-box>
+	</div>
+	<p class="note">A carton of milk appears in front of K_K, healing K_K to max HP.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K_K's HP went up!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>If only Cap'n needs healing</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Cap'n</d-speaker>
+			<d-text>Owww, my hat!! They<span class="break"></span> scuffed my hat!!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Sweet</d-speaker>
+			<d-text>(Stop being dramatic<span class="break"></span> and heal!!)</d-text>
+		</d-box>
+	</div>
+	<p class="note">A carton of milk appears in front of Cap'n, healing Cap'n to max HP.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>CAPN's HP went up!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>If both Sweet and K_K need healing</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Sweet</d-speaker>
+			<d-text>Even if we're all beat, we...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>K_K</d-speaker>
+			<d-text>Can all drink from one milk.</d-text>
+		</d-box>
+	</div>
+	<p class="note">A carton of milk appears in front of K_K, healing Sweet and K_K to max HP.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SWEET's and K_K's HP went up!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>If both Sweet and Cap'n need healing</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Sweet</d-speaker>
+			<d-text>Even if we're all beat, we...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Cap'n</d-speaker>
+			<d-text>Can all drink from one milk.</d-text>
+		</d-box>
+	</div>
+	<p class="note">A carton of milk appears in front of K_K, healing Sweet and Cap'n to max HP.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SWEET's and CAPN's HP went up!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>If both K_K and Cap'n need healing</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>K_K</d-speaker>
+			<d-text>Even if we're all beat, we...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Cap'n</d-speaker>
+			<d-text>Can all drink from one milk.</d-text>
+		</d-box>
+	</div>
+	<p class="note">A carton of milk appears in front of K_K, healing K_K and Cap'n to max HP.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K_K's and CAPN's HP went up!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>If Sweet, K_K, and Cap'n all need healing</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Sweet</d-speaker>
+			<d-text>Even if we're all beat, we...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>K_K</d-speaker>
+			<d-text>Can all drink from one milk.</d-text>
+		</d-box>
+	</div>
+	<p class="note">A carton of milk appears in front of K_K, healing Sweet, K_K, and Cap'n to max HP.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SWEET's and K_K's HP went up!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>CAPN's HP went up!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-sweet">Sweet</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SWEET - The energetic one. Looks up to K_K.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-kk">K_K</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>K_K - The silly one. Looks up to the other two.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-capn">Cap'n</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>CAP'N - The smooth one. Looks up to K_K.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dance">
+	<h2>Dance</h2>
+
+	<h3 id="dance-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<p class="note">Kris and the targeted enemy both dance.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You danced!</d-text>
+	</d-box>
+	<p class="note">Depending on who was targeted:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sweet got lost in the groove!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>K_K got lost in the groove!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Cap'n got lost in the groove!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The targeted enemy dances for 1 turn.</p>
+
+	<h4>Shortened verison</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<p class="note">Kris and the targeted enemy both dance.</p>
+	<p class="note">Depending on who was targeted:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You danced with Sweet!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You danced with K_K!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You danced with Cap'n!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The targeted enemy dances for 1 turn.</p>
+
+	<hr>
+
+	<h3 id="dance-dialogue">Dialogue</h3>
+	<p class="note">Depending on who was targeted:</p>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Sweet</d-speaker>
+		<d-text>Hey, I love<span class="break"></span> this song!!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>K_K</d-speaker>
+		<d-text>Dance! Dance!<span class="break"></span> Everybody dance!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>Cap'n</d-speaker>
+		<d-text>What, you wanna<span class="break"></span> see my moves?</d-text>
+	</d-box>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="dancex">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Dance X</h2>
+
+	<h3 id="dancex-ft">Flavor text</h3>
+	<p class="note">Kris, Susie, Ralsei, and the targeted enemy all dance.</p>
+	<p class="note">Depending on who was targeted:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone danced with Sweet! They're totally lost in the groove!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone danced with K_K! They're totally lost in the groove!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone danced with Cap'n! They're totally lost in the groove!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The targeted enemy dances for 2 turns.</p>
+
+	<hr>
+
+	<h3 id="dancex-dialogue">Dialogue</h3>
+	<p>This dialogue repeats on successive turns until the targeted enemy has stopped dancing.</p>
+	<p class="note">Depending on who was targeted:</p>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Sweet</d-speaker>
+		<d-text>Hey, I love<span class="break"></span> this song!!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>K_K</d-speaker>
+		<d-text>Dance! Dance!<span class="break"></span> Everybody dance!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>Cap'n</d-speaker>
+		<d-text>What, you wanna<span class="break"></span> see my moves?</d-text>
+	</d-box>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action: Dance</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p class="note">Susie and the targeted enemy both dance.</p>
+	<p class="note">Depending on who was targeted:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie danced with Sweet!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie danced with K_K!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie danced with Cap'n!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The targeted enemy dances for 1 turn.</p>
+
+	<hr>
+
+	<h3 id="saction-dialogue">Dialogue</h3>
+	<p class="note">Depending on who was targeted:</p>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Sweet</d-speaker>
+		<d-text>Hey, I love<span class="break"></span> this song!!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>K_K</d-speaker>
+		<d-text>Dance! Dance!<span class="break"></span> Everybody dance!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>Cap'n</d-speaker>
+		<d-text>Ah-ha, if it's<span class="break"></span> a madimoizel...</d-text>
+	</d-box>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action: Dance</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p class="note">Ralsei and the targeted enemy both dance.</p>
+	<p class="note">Depending on who was targeted:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei danced with Sweet!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei danced with K_K!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei danced with Cap'n!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The targeted enemy dances for 1 turn.</p>
+
+	<hr>
+
+	<h3 id="raction-dialogue">Dialogue</h3>
+	<p class="note">Depending on who was targeted:</p>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Sweet</d-speaker>
+		<d-text>Hey, I love<span class="break"></span> this song!!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>K_K</d-speaker>
+		<d-text>Dance! Dance!<span class="break"></span> Everybody dance!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>Cap'n</d-speaker>
+		<d-text>What, you wanna<span class="break"></span> see my moves?</d-text>
+	</d-box>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of fight</h2>
+	<p>Occurs when the Dance, <span class="susie act">Dance</span>, and <span class="ralsei act">Dance</span> ACTs are used in a single turn on each of the three members of Sweet Cap'n Cakes.</p>
+	<p></p>
+	<p class="note">The following flavor text is an example; the exact labels differ depending on which ACT was used on whom.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You danced with Sweet!</d-text>
+		<d-text asterisk>Susie danced with K_K!</d-text>
+		<d-text asterisk>Ralsei danced with Cap'n!</d-text>
+	</d-box>
+	<p class="note">The music stops.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone is dancing!</d-text>
+	</d-box>
+
+	<p class="note">The screen cuts to black. <a href="{% include wikilink page='When I Get Happy I Dance Like This' %}">When I Get Happy I Dance Like This</a> plays as everyone is pictured dancing together—Kris with Sweet, Susie with K_K, Ralsei with Cap'n, followed by all of them dancing together, first in a circle and then in a line, with scribbly cuts of Sweet Cap'n Cakes in between. Everyone strikes poses as the music ends, with text overhead reading "BATTLE WON!", several music notes falling from it like confetti.</p>
+
+	<p class="note">The screen fades to black; then, with the encounter ended, it fades back in on <a href="{{ '/chapters/chapter2/sweetcapncakes#postfight' | relative_url }}">everyone standing in Cyber Field</a>.</p>
+</section>

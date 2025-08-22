@@ -102,6 +102,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/prisonbreak` - The prison scene with Susie breaking out, encountering Lancer, and freeing Kris/Ralsei
 	* `/chapter2`
 		* `/darkworldintro` - Entering the Cyber World and meeting Queen
+		* `/sweetcapncakes` - meeting Sweet Cap'n Cakes
 		* `/drive1` - First part of the Kris/Queen/Noelle drive, pre-Spamton
 		* `/drive2` - Second part of the Kris/Queen/Noelle drive, post-Spamton
 		* `/mansionexterior` - Outside Queen's mansion
@@ -139,7 +140,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* Chapter 2
 			* gml_Object_obj_werewire_enemy_Step_0 `/werewire`
 			* gml_Object_obj_swatchling_enemy_Step_0 `/swatchling`
-			* gml_Object_obj_sweet_enemy_Step_0/gml_Object_obj_hatguy_enemy_Step_0/gml_Object_obj_kk_enemy_Step_0 `/sweetcapncakes`
 			* gml_Object_obj_werewerewire_enemy_Step_0 `/werewerewire`
 			* gml_Object_obj_dojograzeenemy_Step_0 `/jigsawrydojo` or `/dojograze` (dojo's graze challenge)
 			* gml_Object_obj_rouxls_enemy_Step_0 `/rouxls1` or `/rouxlsch2` (pirate hat fight)
