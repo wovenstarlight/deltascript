@@ -385,6 +385,7 @@ d-text[effect*=shake][asterisk] {
 /* Shrink text on small screens */
 @media (max-width: 30rem) {
 	body { font-size: 0.875em }
+	#main h1 { hyphens: auto }
 }
 /* #endregion */
 
@@ -591,7 +592,6 @@ body {
 	h1 {
 		text-align: center;
 		margin: 0;
-		hyphens: auto;
 
 		&:not(:last-child) {
 			border-block-end: 0.1em solid rgb(from var(--gray) r g b / 0.1);
