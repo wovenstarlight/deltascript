@@ -1,0 +1,375 @@
+---
+title: Legend of Tenna-exclusive encounter text
+
+description: >
+  <p>Special flavor text and dialogue from Tenna that overrides individual enemies' standard flavor text. Plays during encounters in TV World when Tenna is present.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_tennabattleconvo_controller_Step_0
+    chapters: [3]
+    note: Legend of Tenna flavor text
+  -
+    name: gml_Object_obj_tennabattleconvo_controller_Create_0
+    chapters: [3]
+    note: Legend of Tenna flavor text
+
+toc:
+  -
+    id: initial
+    name: Initial encounter
+    subheadings:
+      -
+        id: initial-first
+        name: First encounter
+      -
+        id: initial-subsequent
+        name: Subsequent encounters
+  -
+    id: betweenturns
+    name: Flavor text between turns
+    subheadings:
+      -
+        id: standard
+        name: Standard
+      -
+        id: spare
+        name: After sparing an enemy
+      -
+        id: defeat
+        name: After violently defeating an enemy
+      -
+        id: nodamage
+        name: After grazing 10 or more bullets and taking no damage
+      -
+        id: downed
+        name: After one or more party members were downed
+  -
+    id: duringturns
+    name: Flavor text during turns
+    subheadings:
+      -
+        id: damage
+        name: When taking a hit that doesn't down a party member
+      -
+        id: krisdown
+        name: When Kris is downed
+      -
+        id: susiedown
+        name: When Susie is downed
+      -
+        id: ralseidown
+        name: When Ralsei is downed
+---
+<section class="d-section" id="initial">
+	<h2>Initial encounter</h2>
+
+	<h3 id="initial-first">First encounter</h3>
+	<p>Plays during the first battle against <a href="{{ '/encounters/shadowguy' | relative_url }}">Shadowguys</a> on the Desert Board.</p>
+
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>That's right!!! It's a battle scene, folks!!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>And our boys backstage have been begging to beat you down!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>But this ain't your normal Saturday night slam fest!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Perform well, and you'll get extra points!!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>For best "results", take no damage, win fast, and get gobs of TP!!!</d-text>
+	</d-box>
+	<p class="note">The party members' battle menus become usable.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>It's a battle scene! Win hard and fast for extra points!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="initial-subsequent">Subsequent encounters</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Don't let mother see THIS! ANOTHER smackdown! Only on TV Time!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Mike, hit that funky music! It's fightin' time!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>And we ARE BACK in the ring! Who will TV-TRIUMPH!?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Don't adjust your set! Kris is BLUE, and FIGHTING AGAIN!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="betweenturns">
+	<h2>Flavor text between turns</h2>
+	<p>Appears while the party members' actions for the next turns are being chosen.</p>
+
+	<h3 id="standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>This is gonna be a heck of a slugfest, folks!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Get your VHS players, this is gonna be one to tape!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Don't adjust your set!! This battle is real, folks!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>This is gonna be all out, folks! Get ready!!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>What will our heroes do next!?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>You can only get this on cable TV, folks!!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Refreshments are available in the green room!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Miss something!? The battle will be available on laserdisc!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>My nose is tingling from the excitement, folks!!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">1% chance:</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Hey you! Stop selling tickets made of toilet paper!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="spare">After sparing an enemy</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Wow!! A spare!! Love blooms in the battlefield, folks!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Our heroes score a pacifist knockdown!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>A brutal pacifist sparing from our heroes!!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Our heroes score a spare!! But where's the strike!?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="defeat">After violently defeating an enemy</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Ouch for the enemies!! Too bad they don't get healthcare, folks!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Beat so easily!? The enemies are looking at a pay cut!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>A brutal smack-down from our heroes!!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>KO!! The heel is coming out from our heroes, folks!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="nodamage">After grazing 10 or more bullets and taking no damage</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Wow!! Our heroes are grazing like goats!!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>No damage!? What amazing skill!! Can we even show this!?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Incredible dodging!! And best of all, it's on TV!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="downed">After one or more party members were downed</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>A brutal smackdown! Can our heroes survive!?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>That was rough!! Can our heroes mount a comeback!?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Don't give up, heroes!! Think of the ratings!!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Downed!? Down't worry!!! We'll edit that out in post!!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="duringturns">
+	<h2>Flavor text during turns</h2>
+
+	<h3 id="damage">When taking a hit that doesn't down a party member</h3>
+
+	<h4>First time</h4>
+	<p class="note">Accompanied by audience gasps.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Kris!! Oh no!! Toriel, don't look!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Accompanied by audience gasps.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>That's gotta hurt, folks!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Accompanied by audience gasps.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Slam for the bad guys!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Accompanied by audience gasps.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Call the IQ police, that's gotta smart!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Accompanied by audience gasps.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Just watching it hurts, folks!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Accompanied by audience gasps.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Ouch! Cover your nose, kids!!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Accompanied by audience gasps.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Watch out for the splash zone!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Accompanied by audience gasps.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>It's carnage out there, folks!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Accompanied by audience gasps.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Alert!! The curtains are on fire!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Accompanied by audience gasps.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Oh no!! Mike, don't look!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Accompanied by audience laughter.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Boo boo for bozos!</d-text>
+	</d-box>
+
+	<h4>Third time</h4>
+	<p class="note">Accompanied by audience laughter.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Ever heard of dodging!?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Accompanied by audience laughter.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Dan called! He wants his maku back!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="krisdown">When Kris is downed</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Kris!! Oh no!! Toriel, don't look!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="susiedown">When Susie is downed</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Monster girl down!!! No way!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ralseidown">When Ralsei is downed</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Fluffy boy down!!! Oh no!!!</d-text>
+	</d-box>
+</section>

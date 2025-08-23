@@ -1,0 +1,311 @@
+---
+title: Shadowguy encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Shadowguy.</p>
+
+sources:
+  -
+    name: gml_Object_obj_shadowman_enemy_Step_0
+    chapters: [3]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [3]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [3]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-shadowguy
+            name: With 1 or 2 other Shadowguys
+          -
+            id: encounter-tenna
+            name: With Tenna
+          -
+            id: encounter-shuttah
+            name: With Shuttah
+          -
+            id: encounter-pippins
+            name: With 2 Pippins
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: boogie
+        name: Boogie
+      -
+        id: sharpshoot
+        act_icon: [Susie, Ralsei]
+        name: Sharpshoot
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\(|_encounter_id = )(110|132|117|134|136|116|119|120|127)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+
+Unused encounters with blank text:
+	- 116 (Zapper)
+	- 119 (Zapper and Shuttah)
+	- 120 (Zapper and another Shadowguy)
+	- 127 (Ribbick)
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-shadowguy">With 1 or 2 other Shadowguys</h4> <!--110, 132-->
+	<h5>During Legend of Tenna boards with Tenna present</h5>
+	<p class="note">Uses the <a href="{{ '/encounters/legendoftenna#initial' | relative_url }}">Legend of Tenna-specific flavor text</a>.</p>
+
+	<h5>In the rest of TV World</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shadowguys play on in.</d-text>
+	</d-box>
+
+	<h4 id="encounter-tenna">With Tenna</h4> <!--134-->
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Wanna be an ACT-er...? Here's my CARD!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Now where the heck is my debit card?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>If you're gonna be so dramatic... then ACT!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>I Love TV. That's all you gotta say.</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<h4 id="encounter-shuttah">With Shuttah</h4> <!--117-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shadowguy and Shuttah shimmy in!</d-text>
+	</d-box>
+
+	<h4 id="encounter-pippins">With 2 Pippins</h4> <!--136-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shadowguy and Pippins dropped in!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<h5>During Legend of Tenna boards with Tenna present</h5>
+	<p class="note">Uses the <a href="{{ '/encounters/legendoftenna#flavortext-between' | relative_url }}">Legend of Tenna-specific flavor text</a>.</p>
+
+	<h4>In the rest of TV World</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shadowguy plays the blues, blues, blues.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shadowguy snaps their fingers rhythmically.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shadowguy rolls up their socks... secretly.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shadowguy's got the moves and the groove</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">3.96% (4/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like old saxophone reeds.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shadowguy is on the midnight train to Dreamsville.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shadowguy's blues look bluer and bluer.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shadowguy look seriously jazzed.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+	
+	<p>No dialogue; Shadowguys do not talk.</p>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-usage">Usage</h3>
+	<h4>During the Doom Board fight with Tenna</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SHADOWGUY - AT <img src="{{ '/assets/images/story/talkshadowguy/sharp.png' | relative_url }}" alt="♯" style="height: 0.8em; vertical-align: baseline;" /> DF <img src="{{ '/assets/images/story/talkshadowguy/flat.png' | relative_url }}" alt="♭" style="height: 0.8em; vertical-align: baseline;" /></d-text>
+		<d-text asterisk>The "Sharpshoot" act can shoot many things!</d-text>
+	</d-box>
+
+	<h4>During all other fights</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SHADOWGUY - AT <img src="{{ '/assets/images/story/talkshadowguy/sharp.png' | relative_url }}" alt="♯" style="height: 0.8em; vertical-align: baseline;" /> DF <img src="{{ '/assets/images/story/talkshadowguy/flat.png' | relative_url }}" alt="♭" style="height: 0.8em; vertical-align: baseline;" /></d-text>
+		<d-text asterisk>Battling's just a side gig. Playing on stage is the dream!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="boogie">
+	<h2>Boogie</h2>
+
+	<h3 id="boogie-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Dance, don't<span class="break"></span> get hit!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="boogie-ft">Flavor text</h3>
+	<p class="note">Kris dances while Shadowguy plays the sax.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris boogies past bullets!</d-text>
+		<d-text asterisk>SHADOWGUY gains mercy until you get hit!</d-text>
+	</d-box>
+	<p class="note">Shadowguy gains 5% <span class="yellow">Mercy</span> to start with, and until the SOUL takes damage, continues accruing <span class="yellow">Mercy</span> throughout the following attack sequence up to a maximum of 100% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="sharpshoot">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Sharpshoot</h2>
+
+	<h3 id="sharpshoot-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Light<span class="break"></span> 'em up</d-text>
+	</d-box>
+
+	<h3 id="sharpshoot-ft">Flavor text</h3>
+	<p class="note">Kris, Susie, and Ralsei all wear gangster outfits and point a finger gun at the enemies.</p>
+	<hr class="hr2">
+	<h4>Hat variant</h4>
+	<p>Always used during the encounters alongside Tenna, Shuttah, or 2 other Shadowguys.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone gets ready to knock the enemies' hats off!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Socks variant</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone gets ready to knock the enemies' socks off!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The shooting sequence begins, accompanied by the following instructions:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press directions to aim and [MENU] to shoot!</d-text>
+	</d-box>
+	<p class="note">A red crosshair appears on the screen, controlled by directions; pressing [MENU] has all party members shoot red heart-shaped bullets that pass through the crosshair. Shadowguys' hats or socks and other enemies' body parts appear brighter and can be hit by these bullets. At most 30 bullets can be shot (10 from each party member), and there is a 6-second time limit starting from when the first bullets are fired.</p>
+	<p class="note">Each bullet that hits gives 10% <span class="yellow">Mercy</span> to Shadowguys and 5% <span class="yellow">Mercy</span> to other enemy types. If any enemy has 100% <span class="yellow">Mercy</span> prior to this ACT's usage, they are automatically spared after being hit by enough bullets.</p>
+
+	<hr>
+
+	<h3 id="sharpshoot-dialogue">Dialogue</h3>
+	<p>Plays only during the encounter alongside Tenna, if Tenna was hit by any bullets.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>H-Hey!!!</d-text>
+	</d-box>
+	<p class="note">Tenna looks furious.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>How could you let<span class="break"></span> them use that act!?</d-text>
+	</d-box>
+	<p class="note">Tenna points upwards, lifting his mic to his mouth.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>You're!!! Fired!!!</d-text>
+	</d-box>
+	<p class="note">Shadowguy looks downcast and leaves the encounter.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Alright, no more<span class="break"></span> of THAT guy!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie danced!</d-text>
+	</d-box>
+	<p class="note">Shadowguy gains 30% <span class="yellow">Mercy</span> and becomes <span class="blue">Tired</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei danced!</d-text>
+	</d-box>
+	<p class="note">Shadowguy gains 30% <span class="yellow">Mercy</span> and becomes <span class="blue">Tired</span>.</p>
+</section>

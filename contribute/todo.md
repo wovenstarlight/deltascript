@@ -147,7 +147,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* gml_Object_obj_gigaqueen_enemy_Step_0 `/gigaqueen`
 			* gml_Object_obj_dojo_spareenemy_Step_0 `/jigsawjoe` or `/dojospare` (dojo's spare challenge)
 		* Chapter 3
-			* gml_Object_obj_shadowman_enemy_Step_0 `/shadowguy`
 			* gml_Object_obj_shutta_enemy_Step_0 `/shuttah`
 			* gml_Object_obj_zapper_enemy_Step_0 `/zapper`
 			* gml_Object_obj_ribbick_enemy_Step_0 `/ribbick`
