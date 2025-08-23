@@ -760,11 +760,7 @@ d-box, d-choices {
 			color: var(--gray);
 		}
 
-		&[theme=battletalk] {
-			--border-width: 0.375em;
-			border-image-source: url("../assets/images/textbox/bubble.png");
-			body.dim & { border-image-source: url("../assets/images/textbox/bubble_dim.png") }
-			border-image-slice: 6;
+		&[theme^=battletalk] {
 			min-height: unset;
 			height: fit-content;
 			width: fit-content;
@@ -793,6 +789,31 @@ d-box, d-choices {
 				--friend-pink: #a24b68; /* darkened for readability from #ffaec9 */
 				--friend-yellow: #9f9600; /* darkened for readability from #fff200 */
 			}
+		}
+		&[theme=battletalk] {
+			border-image-source: url("../assets/images/textbox/bubble.png");
+			body.dim & { border-image-source: url("../assets/images/textbox/bubble_dim.png") }
+			border-image-slice: 6;
+			--border-width: 0.375em;
+		}
+		&[theme=battletalkround] {
+			border-image-source: url("../assets/images/textbox/roundbubble.png");
+			body.dim & { border-image-source: url("../assets/images/textbox/roundbubble_dim.png") }
+			border-image-slice: 10;
+			border-width: calc(var(--border-width) - 0.6em);
+			text-align: center;
+			d-text { line-height: 1.2em }
+			/* Positions and colors defined in gml_Object_obj_tennatalkbubble_Draw_0 */
+			d-speaker:is(.tenna, .susie, .ralsei, .lancer) ~ d-text {
+				text-shadow:
+					0 1px rgb(from var(--mycolor) r g b / 0.25),
+					1px 1px rgb(from var(--mycolor) r g b / 0.25),
+					1px 0 rgb(from var(--mycolor) r g b / 0.25);
+			}
+			d-speaker.tenna ~ d-text { --mycolor: #ffff00 }
+			d-speaker.susie ~ d-text { --mycolor: #830c74 }
+			d-speaker.ralsei ~ d-text { --mycolor: #13d26f }
+			d-speaker.lancer ~ d-text { --mycolor: #5585bd }
 		}
 
 		&[theme=shopleft] { width: calc(var(--basewidth) - 7.2em) }
@@ -870,7 +891,7 @@ d-box, d-choices {
 			&.fullwidth.fullheight { object-fit: contain }
 		}
 
-		&:not([theme=objreact], [theme=battletalk]) {
+		&:not([theme=objreact], [theme^=battletalk]) {
 			&:has(
 				> d-speaker.kris,
 				> d-speaker.susie,
@@ -1072,7 +1093,8 @@ d-sprite {
 d-speaker {
 	color: var(--lightyellow);
 	&::after { content: ":" }
-	d-box:not([theme=battletalk], [theme=objreact]):not(:state(compact)) & {
+	d-box:not([theme^=battletalk], [theme=objreact]):not(:state(compact)) &,
+	d-box[theme=battletalkround]:not(:state(compact)) &:is(.tenna, .susie, .ralsei, .lancer) {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -1138,7 +1160,7 @@ d-text {
 			background: center / contain no-repeat;
 		}
 	}
-	body:not(.compact) [theme=battletalk] &:is(
+	body:not(.compact) [theme^=battletalk] &:is(
 		[asterisk="Happy" i], [asterisk="Nice" i],
 		[asterisk="Mad" i], [asterisk="Mean" i],
 		[asterisk="Sad" i], [asterisk="Shy" i]
@@ -1388,7 +1410,7 @@ d-option-panel {
 	flex-wrap: wrap;
 
 	&:has(
-		[theme=battletalk] :is(
+		[theme^=battletalk] :is(
 			[asterisk="Happy" i], [asterisk="Nice" i],
 			[asterisk="Mad" i], [asterisk="Mean" i],
 			[asterisk="Sad" i], [asterisk="Shy" i]

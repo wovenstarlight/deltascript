@@ -151,7 +151,7 @@ credits: >
 
 	<hr>
 
-	<h3>Battle themes: <code>battlemenu</code>, <code>battletalk</code>, <code>battledesc</code></h3>
+	<h3>Battle themes: <code>battlemenu</code>, <code>battledesc</code>, <code>battletalk</code>, <code>battletalkround</code></h3>
 	<p>For use in encounters.</p>
 	<p><code>battlemenu</code>: No border with solid edges. Any text that displays below the party members' names/HP/action menus. May have face sprites.</p>
 	<d-box theme="battlemenu">
@@ -168,6 +168,16 @@ credits: >
 	<d-box theme="battletalk">
 		<d-speaker>Tutorial</d-speaker>
 		<d-text>The "battletalk" box.</d-text>
+	</d-box>
+
+	<p><code>battletalkround</code>: Similar to <code>battletalk</code> but with rounded corners and centered text. The speech bubbles used during Chapter 3's various Legend of Tenna boards. Special characters get text shadows instead of speaker labels to distinguish them, as in the game.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Text shadows signify special<span class="break"></span> characters like Ralsei...</d-text>
+	</d-box>
+	<d-box theme="battletalkround">
+		<d-speaker>Tutorial</d-speaker>
+		<d-text>While other characters<span class="break"></span> get speaker labels!</d-text>
 	</d-box>
 
 	<hr>
@@ -206,14 +216,14 @@ credits: >
 	<p>Dark World border. For party members' titles in the POWER menu.</p>
 	<d-box theme="powertitle">
 		<d-text>LV8 Archivist</d-text>
-		<d-text>Keeps track of the story.</d-text>
+		<d-text>Keeps track of<span class="break"></span> the story.</d-text>
 	</d-box>
 
 	<h4><code>8bit</code>/<code>eightbit</code></h4>
 	<p>No border, solid edges. For Legend of Tenna and the original MANTLE game dialogue/narration.</p>
 	<d-box theme="8bit">
 		<d-speaker>Tutorial</d-speaker>
-		<d-text>On days like these, kids like you should be gaming hell yeahhh</d-text>
+		<d-text>On days like these, kids like you should be gaming. Hell yeahhh</d-text>
 	</d-box>
 
 	<hr>
