@@ -132,8 +132,7 @@ body.dim {
 .lightyellow { color: var(--lightyellow) }
 /* Dark World 3D effect */
 d-box[theme=dark],
-[theme=objbattle],
-[theme=battlemenu],
+d-box[theme=battlemenu],
 [theme=shopleft], [theme=shopright] {
 	text-shadow: 1px 1px #03037d;
 
