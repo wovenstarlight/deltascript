@@ -849,7 +849,7 @@ d-box, d-choices {
 			font-size: 1em;
 
 			/* For boxes with small dialogues, add spacing so dialogue doesn't overlap. ...too much, at least. */
-			&:has(d-box) { min-height: 6.5em }
+			&:has(d-box) { min-height: calc(var(--baseheight) + 1.25em) }
 		}
 
 		/* Forced line break */
@@ -979,6 +979,8 @@ d-box {
 			&[place~=right] { right: 0 }
 			&[place~=top] { top: -2.4em }
 			&[place~=left] { left: 0 }
+			d-text[asterisk] + &[place~=left] { left: 2.08em }
+			d-sprite[speaker] ~ &[place~=left] { left: 8.6em }
 			&[place~=center-x] {
 				left: 50%;
 				transform: translateX(-50%);
