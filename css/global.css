@@ -757,6 +757,10 @@ d-box, d-choices {
 		&[theme=battledesc] {
 			width: calc(var(--basewidth) - 17em);
 			color: var(--gray);
+			d-text.orange {
+				grid-row: 3;
+				align-self: end;
+			}
 		}
 
 		&[theme^=battletalk] {
