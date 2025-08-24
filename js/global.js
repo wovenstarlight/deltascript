@@ -273,6 +273,7 @@ class DialogueChoicesOption extends HTMLElement {
 
 		this.menu = this.parentElement;
 		this.menu.options.push(this);
+		this.setAttribute("theme", this.menu.getAttribute("theme"));
 
 		if (this.menu.isInteractive) {	// interactive option
 			// Set up ARIA features: Tab

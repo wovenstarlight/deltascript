@@ -1133,7 +1133,16 @@ d-text {
 		font-family: "DeltaFont Comic Sans", var(--font);
 	}
 
-	&[font=eightbit], &[font="8bit"] {
+	:is([theme^=obj], [theme^=power], [theme=battledesc], [theme=shopdesc]) & {
+		font-family: "DeltaFont Condensed", var(--font);
+	}
+
+	:is([theme^=battletalk], [theme=caller]) & {
+		font-family: "DeltaFont Combat", var(--font);
+	}
+
+	&[font=eightbit], &[font="8bit"],
+	:is([theme=eightbit], [theme="8bit"]) & {
 		font-family: "DeltaFont 8-Bit", var(--font);
 	}
 
@@ -1330,7 +1339,8 @@ d-option {
 	}
 
 	/* Adjust in 8-bit menus */
-	d-choices:is([theme=eightbit], [theme="8bit"]) & {
+	d-choices:is([theme=eightbit], [theme="8bit"]) &,
+	&:is([theme=eightbit], [theme="8bit"]) {
 		font-family: "DeltaFont 8-Bit", var(--font);
 		&:is(:hover, :focus)::before,
 		&[aria-expanded=true]::before {
