@@ -1,0 +1,370 @@
+---
+title: Rouxls encounter - Chapter 2, house-capturing game
+
+description: >
+  <p>Flavor text and dialogue for the Chapter 2 battle against Rouxls Kaard, featuring the Thrash Machine.</p>
+
+sources:
+  -
+    name: gml_Object_obj_rouxls_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_rouxls_simtown_Draw_0
+    chapters: [2]
+    note: Take House instructions
+  -
+    name: gml_Object_obj_rouxls_simtown_Step_0
+    chapters: [2]
+    note: Take House completed message
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/rouxlsch3
+    name: Second Rouxls encounter - Chapter 3, ACTing only
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-turn
+        name: With specific turns
+      -
+        id: dialogue-attack
+        name: With specific attacks
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: takehouse
+        act_icon: [Ralsei, Ralsei, Ralsei]
+        custom_icon_positions: true
+        name: Take House / ACTICON Take House 2 / ACTICON Take House 3 / ACTICON Take House 4
+      -
+        id: raction
+        class: ralsei act
+        name: "R-Action: Distract"
+  -
+    id: end
+    name: End of fight
+---
+{% comment %} encounterno = 63 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Thrash Machine reluctantly fights you!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You need more Residential Zones.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You need more Commercial Zones.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You need more Industrial Zones.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your city is lacking Parks.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your city is lacking Crime.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your city is lacking Public Transport.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Depending on the Thrash Machine's highest stat:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You can't help but notice the enemy's ship is very cool.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You can't help but notice the enemy's ship is very elegant.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You can't help but notice the enemy's ship is very lively.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You can't help but notice the enemy's ship is very cute.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You can't help but notice the enemy's ship is very hot.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You can't help but notice the enemy's ship is very gun's.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<p class="note">If the Thrash Machine is made entirely of Duck parts:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The enemy's ship seems to have fallen in love with yours.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like a model house set.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-turn">With specific turns</h3>
+	<h4>Turn 1</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>The Rouxls<span class="break"></span> (pronounced Rules)<span class="break"></span> art Simple!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Conquer Houses!<span class="break"></span> Whoeverest has the<span class="break"></span> most, Winst!</d-text>
+	</d-box>
+
+	<h4>Turn 2</h4>
+	<h5>Standard</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Soon, Victorie<span class="break"></span> will be Mineth,<span class="break"></span> and Queene will<span class="break"></span> maketh me her<span class="break"></span> Left Hande Man...</d-text>
+	</d-box>
+
+	<h5>If no houses were placed and Rouxls was hit</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>O-oweth! The houses,<span class="break"></span> thoust fool! THE<span class="break"></span> HOUSES!!!</d-text>
+	</d-box>
+
+	<h4>Turn 3</h4>
+	<h5>Standard</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Umm,<span class="break"></span> Mr. Kaard?<span class="break"></span> What happens<span class="break"></span> if WE win?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Uh oh</d-text>
+	</d-box>
+
+	<h5>If no houses were placed and Rouxls was hit at least once so far</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>STOP HITTINGETH<span class="break"></span> ME AND PLAYETH<span class="break"></span> MY MINI-GAME,<span class="break"></span> YOU ROGUES!!!</d-text>
+	</d-box>
+
+	<h4>Turn 4, if at least one house has been placed so far</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>STOP!!! STOP<span class="break"></span> BUILDINGETH HOUSES!!!<span class="break"></span> I HAVE TO WIN!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-attacks">With specific attacks</h3>
+	<p>Plays if not overridden by <a href="#dialogue-turn">turn-specific dialogue</a>. See the <a href="{% include wikilink page='Rouxls Kaard#Attacks' %}">Deltarune Wiki</a> for descriptions of each attack.</p>
+
+	<h4>Thrash Head</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Thrashst off<span class="break"></span> the Porthbow!</d-text>
+	</d-box>
+
+	<h4>Thrash Foot</h4>
+	<h5>If the Thrash Machine is made entirely of Duck parts</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Fly, mine Duckie! Fly!</d-text>
+	</d-box>
+	<h5>Otherwise</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Go forth,<span class="break"></span> my caravan!</d-text>
+	</d-box>
+
+	<h4>Puzzle Blocks</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Solveth my puzzleth,<span class="break"></span> yon Maties!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-music">Musical accompaniment</h3>
+	<p class="note">During Kris and Ralsei's turn, if the <a href="{% include wikilink page='It\'s_Pronounced_"Rules"' %}">ongoing battle music</a> reaches the ending where there is a shout of "Hey", the following speech bubble appears beside Rouxls in time with the music:</p>
+	<img src="{{ '/assets/images/story/talkrouxls/hey.png' | relative_url }}" alt="speech bubble reading 'Hey'" width="60" height="36" />
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>ROUXLS - Miniboss for hire. Will appear even if unhired.<span class="break"></span> "I eventh do Partiese"</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="takehouse">
+	<h2>Take House / {% include acticon chara="Ralsei" -%} Take House 2 / {% include acticon chara="Ralsei" -%} Take House 3 / {% include acticon chara="Ralsei" -%} Take House 4</h2>
+
+	<h3 id="takehouse-description">Description</h3>
+	<p class="note">Descriptions are blank for all ACTs, excepting TP costs for the latter 3.</p>
+	<h4>{% include acticon chara="Ralsei" -%} Take House 2</h4>
+	<d-box theme="battledesc">
+		<d-text class="orange">14% TP</d-text>
+	</d-box>
+	<h4>{% include acticon chara="Ralsei" -%} Take House 3</h4>
+	<d-box theme="battledesc">
+		<d-text class="orange">24% TP</d-text>
+	</d-box>
+	<h4>{% include acticon chara="Ralsei" -%} Take House 4</h4>
+	<d-box theme="battledesc">
+		<d-text class="orange">32% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="takehouse-ft">Flavor text</h3>
+	<h4>While houses can be taken</h4>
+	<p>A cursor appears over your most recently-taken house, or the top left house if no houses have been taken so far. This cursor can be moved using directional keys. Flavor text depends on what the cursor is positioned over.</p>
+	<h5>Initial</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Claim with [CONFIRM]!</d-text>
+		<d-text asterisk>Press arrows to move!</d-text>
+	</d-box>
+	<h5>Selectable house</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Claim with [CONFIRM]!</d-text>
+		<d-text asterisk>You can take this tile!</d-text>
+	</d-box>
+	<p class="note">Pressing [CONFIRM] turns the house red-roofed, claiming it as your own.</p>
+	<h5>Non-selectable house</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Claim with [CONFIRM]!</d-text>
+		<d-text asterisk>Too far from own territory!</d-text>
+	</d-box>
+	<h5>House taken by Rouxls</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Claim with [CONFIRM]!</d-text>
+		<d-text asterisk>Can't build on enemy territory!</d-text>
+	</d-box>
+	<h5>Non-selectable house</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Claim with [CONFIRM]!</d-text>
+		<d-text asterisk>Too far from own territory!</d-text>
+	</d-box>
+	<h5>Acid</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Claim with [CONFIRM]!</d-text>
+		<d-text asterisk>Can't build on acid!</d-text>
+	</d-box>
+	<h5>Swan boat</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Claim with [CONFIRM]!</d-text>
+		<d-text asterisk>Swan is lacking#structural support</d-text>
+	</d-box>
+	<h5>Thrash Machine (with non-Duck head)</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Claim with [CONFIRM]!</d-text>
+		<d-text asterisk>A familiar-looking machine.</d-text>
+	</d-box>
+	<h5>Thrash Machine (with Duck head)</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Claim with [CONFIRM]!</d-text>
+		<d-text asterisk>It seems to be in love with your swan.</d-text>
+	</d-box>
+	<h5>Rouxls</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Claim with [CONFIRM]!</d-text>
+		<d-text asterisk>Thoust admireth moi...?</d-text>
+	</d-box>
+
+	<h4>After houses have been taken</h4>
+	<p>1, 2, 3, or 4 houses, depending on the specific ACT used.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Finished!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action: Distract</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei distracted! Rouxls will place one less house next turn.</d-text>
+	</d-box>
+	<p class="note">Rouxls places one less house on the following turn.</p>
+
+	<h4>If this is the second use in a row</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei distracted! But it failed.</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of fight</h2>
+	<p>Plays automatically once either the player or Rouxls can't place any more houses. (If Rouxls was defeated violently, <a href="{{ '/chapters/chapter2/acidtunnel#postfight-violent' | relative_url }}">the encounter ends without any additional commentary before the post-fight cutscene</a>.)</p>
+	<p></p>
+	<p class="note">The <a href="{% include wikilink page='It\'s_Pronounced_"Rules"' %}">music</a> fades out.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="0"></d-sprite>
+		<d-text asterisk>It seemseth the Game hath been Overed!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h3>If you won</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="2"></d-sprite>
+		<d-text asterisk>And lo! I haveth the moste Real Estate!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h3>If Rouxls won</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="1"></d-sprite>
+		<d-text asterisk>What!? Howst doth you have more Houstes?!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="5"></d-sprite>
+		<d-text asterisk>CUT THE BATTLE!!!</d-text>
+	</d-box>
+
+	<p class="note"><a href="{{ '/chapters/chapter2/acidtunnel#postfight-nonviolent' | relative_url }}">The encounter ends.</a></p>
+</section>

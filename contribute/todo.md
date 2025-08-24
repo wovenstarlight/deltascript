@@ -107,6 +107,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/drive2` - Second part of the Kris/Queen/Noelle drive, post-Spamton
 		* `/mansionexterior` - Outside Queen's mansion
 			* `#weirdroute` - Weird route variant
+		* `/noellerescue` - Thinking of Susie rescuing Noelle
 		* `/fountain` - Sealing the fountain
 		* `/fountainweird` - Sealing the fountain (Weird Route)
 		* `/shelter` - End of chapter scene with Susie confronting Snowy/MK
@@ -132,7 +133,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* ~~`/armor` - Defense equipment.~~ DONE up to Chapter 4
 	* `/encounters` - Check descriptions, ACT descriptions, etc. This is probably gonna have a ton of subpages, I'd guess one for every potential enemy. At the very least, the big story-critical encounters (e.g. all boss fights) would need their own subpages which the `/chapters` pages could then link to.
 		* Include disambiguation pages for the following. Maybe we give them more descriptive names...? Double-check the URLs before creating the disambigs
-			* `/rouxls`: chapter 2 pirate hat, chapter 3 contractors
 			* `/tenna`: doom board and final showdown
 		* Chapter 1
 			* gml_Object_obj_ralseienemy_Step_0 (Unused Ralsei tutorial) `/ralsei`
@@ -140,7 +140,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* Chapter 2
 			* gml_Object_obj_werewire_enemy_Step_0 `/werewire`
 			* gml_Object_obj_swatchling_enemy_Step_0 `/swatchling`
-			* gml_Object_obj_rouxls_enemy_Step_0 `/rouxls1` or `/rouxlsch2` (pirate hat fight)
 			* gml_Object_obj_werewerewire_enemy_Step_0 `/werewerewire`
 			* gml_Object_obj_queen_enemy_Step_0/gml_Object_obj_berdlyplug_enemy_Step_0 `/queen`
 			* gml_Object_obj_gigaqueen_enemy_Step_0 `/gigaqueen`

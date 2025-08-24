@@ -1,0 +1,990 @@
+---
+title: Crossing the acid tunnel
+
+description: >
+  <p>Kris and Ralsei ride a swan boat across the lake of acid on 3F. Along the way, they distract Queen, fight Rouxls Kaard, and Ralsei opens up.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_ch2_scene21_Step_0
+    chapters: [2]
+    note: beginning
+  -
+    name: gml_Object_obj_queencar_Step_0
+    chapters: [2]
+    note: beginning, resuming ride
+  -
+    name: gml_Object_obj_ch2_scene21_puzzle_entrance_Step_0
+    chapters: [2]
+    note: boat getting blocked
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [2]
+    note: stalled boat/hand/lever interactions
+  -
+    name: gml_Object_obj_ch2_scene21_loop_Step_0
+    chapters: [2]
+    note: after the fight
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: choices
+
+toc:
+  -
+    id: beginning
+    name: Beginning the journey
+  -
+    id: obstacle
+    name: Removing the obstacle
+  -
+    id: ralseitalk
+    name: Ralsei's talk
+  -
+    id: prefight
+    name: Encountering Rouxls Kaard
+  -
+    id: postfight
+    name: After the fight
+    subheadings:
+      -
+        id: postfight-nonviolent
+        name: If the house game was played to completion
+      -
+        id: postfight-violent
+        name: If Rouxls was defeated violently
+  -
+    id: unused
+    name: Unused dialogue during Ralsei's talk
+---
+<section class="d-section" id="beginning">
+	<h2>Beginning the journey</h2>
+
+	<p class="note">The corridor Kris and Ralsei are walking through abruptly gives way to a lake of acid. Upon approaching the lake, Ralsei is startled.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>A... A giant lake of acid!?</d-text>
+	</d-box>
+
+	<p class="note">Ralsei relaxes slightly as the screen on the wall turns on to show Queen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Oh You Mean The Free Pool</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>You Will Learn To Love It Like Family</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>Why do you have this!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="O"></d-sprite>
+		<d-text asterisk>It Is My Mansion's Energy Source And Fun To Drink</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="P"></d-sprite>
+		<d-text asterisk>Bye Ha Ha Ha</d-text>
+	</d-box>
+
+	<p class="note">Queen's monitor turns off.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="E"></d-sprite>
+		<d-text asterisk>How... should we pass this!?</d-text>
+	</d-box>
+
+	<p class="note">Kris can walk over to the lever at the side and activate it, causing a swan-shaped boat to float up from the bottom of the screen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>I suppose... this... works. Haha.</d-text>
+	</d-box>
+
+	<p class="note"><a href="{% include wikilink page='Acid Tunnel of Love' %}">Acid Tunnel of Love</a> begins playing. Interacting with the lever again gives the following:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(The lever is stuck.)</d-text>
+	</d-box>
+
+	<p class="note">Interacting with the boat has Kris and Ralsei board it; they start floating along the acid lake, occasionally having to move out of the way of small islands with tiny model foliage, mountains, and houses. (Floating the boat close to the model houses turns their roofs from blue to red with a ping.)</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="M"></d-sprite>
+		<d-text asterisk>Now, we have to think of some way to distract Queen...</d-text>
+	</d-box>
+	<p class="note">The closest monitor turns on, showing Queen.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Ohhh Wow I'm So Distracted Right Now</d-text>
+	</d-box>
+
+	<p class="note">The monitor turns off. The boat travels some distance in silence.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="M"></d-sprite>
+		<d-text asterisk>What are these... Little houses?</d-text>
+	</d-box>
+	<p class="note">The closest monitor turns on, showing Queen.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Just Tropical Villas For My Guests Isn't That Thoughtful</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="X"></d-sprite>
+		<d-text asterisk>... How would anybody fit inside?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Shrink From The Acid</d-text>
+	</d-box>
+
+	<p class="note">The monitor turns off. The boat travels some distance in silence. A banana comes into view, rotating slowly above the acid ahead of the boat.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Kris Get The Banana</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="E"></d-sprite>
+		<d-text asterisk>Kr... Kris isn't going to do what you say!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h3>If you collect the banana</h3>
+	<p class="note">The monitor turns off.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Th-that's okay, Kris. It's good for you.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h3>If you don't collect the banana</h3>
+	<p class="note">After a moment, the closest monitor turns on to show Queen.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Fools I Wanted You To Avoid It</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="6"></d-sprite>
+		<d-text asterisk>Now You Will Become Potassium Deficient</d-text>
+	</d-box>
+	<p class="note">The monitor turns off.</p>
+	<hr class="hr2">
+
+	<p class="note">The boat travels further in silence. Islands on both sides bracket the boat, directing it towards a tunnel.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>... looks like we're coming up on a tunnel!</d-text>
+	</d-box>
+
+	<p class="note">In the tunnel, a giant hand statue sticks out of the acid, the opening to a corridor beside it. The boat runs into it, front squishing against the hand with a squeak. After a pause, Ralsei speaks, Kris turning to face him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>H-huh? There's something blocking the way...</d-text>
+	</d-box>
+
+	<p class="note">Kris gets off the boat into the corridor to its left, Ralsei following them and turning to them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Maybe we can find some way to get rid of this...?</d-text>
+	</d-box>
+
+	<p class="note">The boat cannot be boarded at this point; interacting with it gives the following message:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Looks like a certain bird is having a ride on the acid river.)</d-text>
+	</d-box>
+
+	<p class="note">Interacting with the hand gives the following:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>A giant hand...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+		<d-text asterisk>Sure would be nice to be pet by something like that!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="obstacle">
+	<h2>Removing the obstacle</h2>
+
+	<p class="note">The corridor leads into an <a href="{{ '/locations/cyberworld/queenmansion/housepuzzles' }}">area filled with house puzzles</a>. Solving the puzzles leads to a path overlooking the acid lake, where another hand statue stands in the acid. A lever lies at the end of the path; interacting with it causes the first hand to rise out of the acid in front of this second hand; the two of them slap together. A shortcut leading back to the puzzle area entrance opens up.</p>
+
+	<p class="note">Interacting with the lever again gives the following:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Pulling the lever back would undo the high-five.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You can't undo a high-five.)</d-text>
+	</d-box>
+
+	<p class="note">Kris and Ralsei can head back to the boat, now floating unobstructed on the acid lake. Interacting with it causes Kris and Ralsei to board the boat again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Let's go, Kris!</d-text>
+	</d-box>
+
+	<p class="note">The boat floats on.</p>
+</section>
+
+<section class="d-section" id="ralseitalk">
+	<h2>Ralsei's talk</h2>
+
+	<p class="note">The boat enters a dim tunnel illuminated from below by the glowing acid. After a brief moment, Ralsei speaks up.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="B"></d-sprite>
+		<d-text asterisk>Kris... hey, Kris.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="I"></d-sprite>
+		<d-text asterisk>... is it s-strange to say...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>It's nice spending time alone with you like this...?</d-text>
+	</d-box>
+
+	<d-choices theme="dark">
+		<d-option index="0" text="I feel\sthe same"></d-option>
+		<d-option index="1" text="It's strange"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="D"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<p class="note">Ralsei turns to the side, facing the player.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+			<d-text asterisk>I'm happy hearing you say that, Kris...</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Ralsei turns to the side, facing away from the player.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="D"></d-sprite>
+			<d-text asterisk>Err, then, I, err -</d-text>
+		</d-box>
+		<p class="note">A fractional pause; Ralsei turns away from Kris.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="U"></d-sprite>
+			<d-text asterisk>Ah, s-sarcastic! I was just being sarcastic!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+			<d-text asterisk>Haha, sorry about that!</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<p class="note">Ralsei turns back towards Kris.</p>
+	<d-box theme="dark" id="firstimpressions">
+		<d-sprite speaker="Ralsei" emotion="B"></d-sprite>
+		<d-text asterisk>When we first met, I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>I was so nervous about first impressions.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>I even hid my face so you wouldn't see...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>"How do I even be a friend...?"</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>All I have to do is be nice... is what I thought.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="B"></d-sprite>
+		<d-text asterisk>But I'm starting to realize, being friends...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Is more than that, isn't it?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Susie... sometimes she isn't nice at all!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>She's selfish, she's rude, she's sarcastic...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>But...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Isn't it wonderful that she's... her?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="I"></d-sprite>
+		<d-text asterisk>Is what I... started thinking, today.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>And of course, Kris. It's nice that... you're you.</d-text>
+	</d-box>
+
+	<d-choices theme="dark">
+		<d-option index="0" text="It's nice\sthat Ralsei\sis Ralsei"></d-option>
+		<d-option index="1" text="..."></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="D"></d-sprite>
+			<d-text asterisk>H... huh???</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+			<d-text asterisk>No one's... no one's ever said that to me before...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="O"></d-sprite>
+			<d-text asterisk>I... I...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+			<d-text asterisk>I mean, e-everything's a first for me, but...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="O"></d-sprite>
+			<d-text asterisk>Hearing it from you, um...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+			<d-text asterisk>It... it means a lot. Haha.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="D"></d-sprite>
+			<d-text asterisk>...?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+			<d-text asterisk>It's... just like you to be quiet right now.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="P"></d-sprite>
+			<d-text asterisk>Haha.... hahaha!!!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+			<d-text asterisk>That's right, isn't it?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>It's so... you-like!!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>... I guess I like you-like things... haha.</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="I"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>I just wonder what... being "Ralsei-like" even is...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="5"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Sorry! Haha, I got off-track.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Let's just enjoy the ride, Kris. Haha.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="prefight">
+	<h2>Encountering Rouxls Kaard</h2>
+	<p class="note">After Ralsei finishes talking, there's a long pause. The tunnel opens up into a wider room, with an island at its center that blocks the swan boat's passage; as the boat comes close, the camera pans over to show the whole island. The island is covered in model houses, the top left one with a red roof, the bottom right one with a blue roof, and all others colorless.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>W... wow, Kris! Look at all those houses!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>I wonder what'll happen if we change their color!</d-text>
+	</d-box>
+
+	<p class="note">The screen darkens slightly as someone speaks.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Ge hahahaha... Thoust WORMS reallyst thoughtst...</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text asterisk>Thoust had seeneth the Lastest of Me???</d-text>
+	</d-box>
+
+	<p class="note">The screen brightens as Rouxls Kaard teleports in on the other side of the island, wearing a pirate hat and standing atop a gray ship. <a href="{% include wikilink page='It\'s Pronounced "Rules"' %}">His theme</a> starts playing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="3"></d-sprite>
+		<d-text asterisk>Chips Ahoyeth, Landlubbers!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="2"></d-sprite>
+		<d-text asterisk>Arrrrrr-t thou ready-eth to visiteth Davith Jones' Lockre???</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="M"></d-sprite>
+		<d-text asterisk>Could... Could you NOT speak with more than one accent?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="1"></d-sprite>
+		<d-text asterisk>Yeahth, alright.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="C"></d-sprite>
+		<d-text asterisk>Oh, Mr. Rouxls! I just remembered! Lancer! He's not well!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="6"></d-sprite>
+		<d-text asterisk>O dear. Didst thou, erm, tryeth Burpinge him???</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="1"></d-sprite>
+		<d-text asterisk>Perhapsth give him a sip of Medieval Ginger Ale??</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="0"></d-sprite>
+		<d-text asterisk>... Waite! I hath NOT time to spare on such Frivolitese!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="1"></d-sprite>
+		<d-text asterisk>I must Conquere this Islande and defeast Thou!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="4"></d-sprite>
+		<d-text asterisk>Then, giftingeth her a succulent Island Presente,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="3"></d-sprite>
+		<d-text asterisk>The Beautious Queene shall reward ME -</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="5"></d-sprite>
+		<d-text asterisk>By Makingeth Me Her Left-Hand-Man!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="6"></d-sprite>
+		<d-text asterisk>Hahaha!! Me!! The ULTIMATE Minion!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="2"></d-sprite>
+		<d-text asterisk>Now, beholdeth! The forme of thoun Destroyere!</d-text>
+	</d-box>
+
+	<p class="note">Rouxls's "ship" is revealed to be a false facade; it falls away, revealing that what Rouxls is actually standing on is the Thrash Machine.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="2"></d-sprite>
+		<d-text asterisk>... whatevereth this Thing is!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei briefly reels in shock.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="U"></d-sprite>
+		<d-text asterisk>Th... This again!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="3"></d-sprite>
+		<d-text asterisk>Haha, squirming with Jealousy at my Battle Caravane!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="4"></d-sprite>
+		<d-text asterisk>'Tis an Effigie of an Ancient God of Combate,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="6"></d-sprite>
+		<d-text asterisk>I rescuedeth it from The King's Trash Heape,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="1"></d-sprite>
+		<d-text asterisk>And fixedeth it up in this Worldes' Scrap Shoppe!!</d-text>
+	</d-box>
+
+	<hr class="hr2">
+	<h3>If the Thrash Machine isn't made entirely out of Duck parts</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="M"></d-sprite>
+		<d-text asterisk>It's, um... It's actually a rejected, uh, design we made...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="3"></d-sprite>
+		<d-text asterisk>Ha ha, and Soone, THOU shalt tasteth Rejection --</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="1"></d-sprite>
+		<d-text asterisk>Firsthandeth, in the form of varieth Bulletst!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h3>If the Thrash Machine is made entirely out of Duck parts</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="M"></d-sprite>
+		<d-text asterisk>Um... that's... just a duck.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="5"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="6"></d-sprite>
+		<d-text asterisk>I knoweth what it art, Ruffiane!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="1"></d-sprite>
+		<d-text asterisk>Go forth!! My Squeakie Duckie!!</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<p class="note">Rouxls brandishes a pirate saber; Kris and Ralsei prepare for battle as <a href="{{ '/encounters/rouxlsch2' | relative_url }}">Rouxls draws them into an encounter</a>.</p>
+</section>
+
+<section class="d-section" id="postfight">
+	<h2>After the fight</h2>
+
+	<h3 id="postfight-nonviolent">If the house game was played to completion</h3>
+	<h4>If you won or reached a draw</h4>
+	<hr class="hr2">
+	<h5>If you won</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="2"></d-sprite>
+		<d-text asterisk>Ah.... Ahh, ha ha ha...!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="6"></d-sprite>
+		<d-text asterisk>So thou hast triumphed...</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>If you reached a draw</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="2"></d-sprite>
+		<d-text asterisk>Ah.... Ahh, ha ha ha...!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="0"></d-sprite>
+		<d-text asterisk>So we hath an EQUAL number of houses!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="4"></d-sprite>
+		<d-text asterisk>I suppose thou THINKETH, that MEANSETH...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="2"></d-sprite>
+		<d-text asterisk>Thou have matched my Abilitiese!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If the Thrash Machine isn't made entirely out of Duck parts</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="5"></d-sprite>
+		<d-text asterisk>NOT!! You have only seen but One-Percentile of my Weapon's Abilities!!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>If the Thrash Machine is made entirely out of Duck parts</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="5"></d-sprite>
+		<d-text asterisk>NOT!! That plump duck art not but The Appetizemente!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="1"></d-sprite>
+		<d-text asterisk>Watch!! Watch your growing and huge Destructione!!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Dialogue proceeds to <a href="#truepower">Rouxls revealing his true power</a>.</p>
+
+	<h4>If Rouxls won</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="2"></d-sprite>
+		<d-text asterisk>Finally, I've WON!! GEHAHAHAHA!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="5"></d-sprite>
+		<d-text asterisk>How doth it feeleth, WORMS!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="3"></d-sprite>
+		<d-text asterisk>To be bestedeth, by the Beste?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="4"></d-sprite>
+		<d-text asterisk>To be laid LOWE, by the Duke of Puzzles?!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="5"></d-sprite>
+		<d-text asterisk>Ahaha... HAHAHAHAHA!!!</d-text>
+	</d-box>
+	<p class="note">A pause. Ralsei turns to the side.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>Er, um...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>So, um, what happens now?</d-text>
+	</d-box>
+	<p class="note">Ralsei looks at Rouxls. A longer pause.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="1"></d-sprite>
+		<d-text asterisk>What?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Umm, you had more houses... so...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>What... does that even do?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="3"></d-sprite>
+		<d-text asterisk>Hahaha! Gladeth thou asked!</d-text>
+	</d-box>
+	<p class="note">A long pause.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="X"></d-sprite>
+		<d-text asterisk>You don't have any plan, do you.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="1"></d-sprite>
+		<d-text asterisk>SHUTTETH YON UPPETH!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="5"></d-sprite>
+		<d-text asterisk>And BEHOLD... My TRUETH POWER!!!</d-text>
+	</d-box>
+	<p class="note">Dialogue proceeds to <a href="#truepower">Rouxls revealing his true power</a>.</p>
+
+	<hr>
+
+	<h3 id="postfight-violent">If Rouxls was defeated violently</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="4"></d-sprite>
+		<d-text asterisk>So thou hath beateneth The Crappeth out of Me.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="3"></d-sprite>
+		<d-text asterisk>I supposest that means thou thinkest thoust hath Won?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>Umm... morally, no.</d-text>
+		<d-text asterisk>Physically... yes.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="1"></d-sprite>
+		<d-text asterisk>Well shivereth my timbereth, you little Bimbo!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="2"></d-sprite>
+		<d-text asterisk>For in a battle of TRUE Powere, Rouxls... shall RULE!</d-text>
+	</d-box>
+	<p class="note">Dialogue proceeds to <a href="#truepower">Rouxls revealing his true power</a>.</p>
+
+	<hr>
+
+	<h3 id="truepower">Rouxls reveals his true power</h3>
+	<p class="note">Ralsei reels in shock as Rouxls begins to glow white, magic gathering around him.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="2"></d-sprite>
+		<d-text asterisk>Geh ha ha ha ha!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="1"></d-sprite>
+		<d-text asterisk>Beholde, Worms...!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="5"></d-sprite>
+		<d-text asterisk>The REALE Power of Rouxls Kaard...!!!</d-text>
+	</d-box>
+	<p class="note">Rouxls floats up off the Thrash Machine... and almost immediately, his body turns to stone all the way up to his neck.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="5"></d-sprite>
+		<d-text asterisk>GOD</d-text>
+	</d-box>
+	<p class="note">Rouxls falls out of the air, landing on the island. After a brief moment, he falls over, causing the middle of the island to explode and sending the Thrash Machine flying.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="5"></d-sprite>
+		<d-text asterisk>DAMMIT</d-text>
+	</d-box>
+
+	<p class="note">The camera pans back over to focus on the swan boat. Kris turns to Ralsei as he speaks.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>Ah...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="M"></d-sprite>
+		<d-text asterisk>That's right, Rouxls isn't compatible with this world, either.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Well, let's go, Kris.</d-text>
+	</d-box>
+
+	<p class="note">They resume the ride, floating past Rouxls. Further down the tunnel is a camera standing on an island by the wall. The boat stops next to it.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>Looks like the ride's almost over, Kris...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>O-oh, there's a camera! Should we, um... pose!?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Do not pose"></d-option>
+		<d-option index="1" text="Hug Ralsei"></d-option>
+		<d-option index="2" text="Peace sign"></d-option>
+		<d-option index="3" text="Rude gesture"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+			<d-text asterisk>That's OK, Kris! Let's keep going.</d-text>
+		</d-box>
+		<p class="note">Ralsei's title changes to <a href="{{ '/misc/powermenu#lv2blankprince' | relative_url }}">Blank Prince</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Kris turns to Ralsei and hugs him, making him blush.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="D"></d-sprite>
+			<d-text asterisk>K... Kris!?</d-text>
+		</d-box>
+		<p class="note">The camera flashes, taking a photo. Kris lets go of Ralsei and takes a step back.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="D"></d-sprite>
+			<d-text asterisk>D... did it r-really take a picture of that!?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+			<d-text asterisk>Umm, l... let's keep going!</d-text>
+		</d-box>
+		<p class="note">Ralsei's title changes to <a href="{{ '/misc/powermenu#lv2hugprince' | relative_url }}">Hug Prince</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<p class="note">Kris and Ralsei turn towards the player, away from the camera; Kris holds up a peace sign while Ralsei waves, beaming. The camera flashes, taking a photo. Kris and Ralsei both turn back to the front of the boat.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>I bet it must have been a wonderful picture...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="U"></d-sprite>
+			<d-text asterisk>What? ... We were facing the wrong way?!</d-text>
+		</d-box>
+		<p class="note">Ralsei's title changes to <a href="{{ '/misc/powermenu#lv2poseprince' | relative_url }}">Pose Prince</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="3" theme="dark">
+		<p class="note">Kris turns to the camera and gives it a rude gesture, unseen by the player. Ralsei looks shocked.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+			<d-text asterisk>K-Kris!?</d-text>
+		</d-box>
+		<p class="note">The camera flashes, taking a photo. Kris lowers their hand, turning back to the front of the boat. A pause.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="U"></d-sprite>
+			<d-text asterisk>D... did it r-really take a picture of that!?</d-text>
+		</d-box>
+		<p class="note">Ralsei calms, facing forward again.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+			<d-text asterisk>Umm, l... let's keep going!</d-text>
+		</d-box>
+		<p class="note">Ralsei's title changes to <a href="{{ '/misc/powermenu#lv2rudeprince' | relative_url }}">Rude Prince</a>.</p>
+	</d-option-panel>
+
+	<p class="note">The boat continues on in silence for a moment.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="1"></d-sprite>
+		<d-text asterisk>ART THOU JUST GOING TO LEAVETH ME HERE!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" variant="pirate" emotion="6"></d-sprite>
+		<d-text asterisk>THOU AREN'T EVEN GOING TO SHOWETH ME THE PICTURE!?</d-text>
+	</d-box>
+
+	<p class="note">The boat reaches the other side of the acid lake, and Kris and Ralsei get off the boat. The camera focuses on them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>... that was a nice boatride, wasn't it, Kris?</d-text>
+	</d-box>
+
+	<p class="note">Control returns to the player. Interacting with the boat gives the following:</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(Looks like it's completed its migration.)</d-text>
+	</d-box>
+
+	<p class="note">At this point, Kris and Ralsei can head down the corridor, where they can <a href="{{ '/chapters/chapter2/noellerescue' | relative_url }}">stop to wonder what Susie is doing</a>. </p>
+</section>
+
+<section class="d-section" id="unused">
+	<h2>Unused dialogue during Ralsei's talk</h2>
+	<p>Based on its placement in the code, this exchange may have been intended to go before <a href="#firstimpressions">Ralsei talking about first impressions</a>.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>... what are you thinking about right now?</d-text>
+	</d-box>
+
+	<d-choices theme="dark">
+		<d-option index="0" text="Thinking\sof [Giftee]"></d-option>
+		<d-option index="1" text="Thinking\sof you"></d-option>
+		<d-option index="2" text="?"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Would have been "Thinking of Susie", "Thinking of Noelle", or "Thinking of Berdly" depending on who you gave the gift to. There's no code accounting for if you gave it to Ralsei, in which case this option would still be available and would've simply read "Thinking of ".</p>
+		<hr class="hr2">
+		<h3>If thinking of Susie</h3>
+		<p class="note">Ralsei turns away from Kris.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>Ah, just as I expected, haha.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+			<d-text asterisk>I feel warm... thinking about how you care about her.</d-text>
+		</d-box>
+		<p class="note">Ralsei turns to the side, facing the player.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>Kris, you can tell me anything anytime, OK?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>(...)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>(... and they stopped talking...)</d-text>
+		</d-box>
+		<hr class="hr3">
+		<h3>If thinking of Noelle</h3>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>Ah, just as I expected, haha.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="3"></d-sprite>
+			<d-text asterisk>She's a nice girl, isn't she?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="I"></d-sprite>
+			<d-text asterisk>Even though she doesn't understand it,</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+			<d-text asterisk>It seems she's already strong at this world's magic.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>I believe she can control the "Ice" element.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+			<d-text asterisk>... Kris, if you ask her nicely,</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+			<d-text asterisk>Maybe she'll make you a popsicle! Haha!</d-text>
+		</d-box>
+		<hr class="hr3">
+		<h3>If thinking of Berdly</h3>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+			<d-text asterisk>That's, um.... That's right.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="M"></d-sprite>
+			<d-text asterisk>This ride, um... it sort of looks like...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+			<d-text asterisk>A bit bird-like?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+			<d-text asterisk>... umm, what part of him are you thinking about?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+			<d-text asterisk>(I suppose I don't mind no answer, either...)</d-text>
+		</d-box>
+		<hr class="hr2">
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Ralsei turns to the side, facing the player.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="D"></d-sprite>
+			<d-text asterisk>H... huh!?</d-text>
+		</d-box>
+		<p class="note">Ralsei turns away from Kris.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+			<d-text asterisk>I mean, I'm thinking of you too, of course...</d-text>
+		</d-box>
+		<p class="note">Ralsei turns back towards the front, facing Kris.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="D"></d-sprite>
+			<d-text asterisk>I mean, er -- you're right in front of me, but...</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<p class="note">Ralsei turns to the side, facing the player.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+			<d-text asterisk>Oh, err, sorry! Did I say something strange?</d-text>
+		</d-box>
+		<p class="note">Ralsei turns back towards the front, facing Kris.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>I'm happy you and Susie are friends, Kris.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="3"></d-sprite>
+			<d-text asterisk>She's a nice girl, isn't she...?</d-text>
+		</d-box>
+	</d-option-panel>
+</section>
