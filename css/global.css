@@ -1020,6 +1020,10 @@ d-box {
 				top: 50%;
 				transform: translate(-50%, -50%);
 			}
+			d-text[asterisk] + &[place~=center-x],
+			d-text[asterisk] + &[place~=center] { left: calc(50% + 1.04em) }
+			d-sprite[speaker] ~ &[place~=center-x],
+			d-sprite[speaker] ~ &[place~=center] { left: calc(50% + 4.3em) }
 
 			@media (min-width: 30rem) {
 				&[place~=bottom][place~=center-x] { bottom: -1.7em }
