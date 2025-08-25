@@ -101,8 +101,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/thrashing` Susie & Lancer joint fight's pre-/post-encounter dialogue
 		* `/prisonbreak` - The prison scene with Susie breaking out, encountering Lancer, and freeing Kris/Ralsei
 	* `/chapter2`
-		* `/projecttime` - Light World scenes going from leaving castle town to entering Cyber World
-		* `/darkworldintro` - Entering the Cyber World and meeting Queen
+		* `/arcadegame` - Arcade game with Queen
 		* `/field2` - Cyber Field story parts after SCC up to rollercoasters; subdivide as necessary
 		* `/drive1` - First part of the Kris/Queen/Noelle drive, pre-Spamton
 		* `/drive2` - Second part of the Kris/Queen/Noelle drive, post-Spamton

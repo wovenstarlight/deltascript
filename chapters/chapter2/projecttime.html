@@ -1,0 +1,462 @@
+---
+title: Working on the group project
+
+description: >
+  <p>Kris and Susie head to the library to work on their group project, but find something else waiting for them.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_ch2_scene7_Step_0
+    chapters: [2]
+    note: school
+  -
+    name: gml_GlobalScript_scr_litemuseb
+    chapters: [2]
+    note: calling Toriel
+  -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [2]
+    note: Undyne
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2]
+    note: traffic jam cars
+  -
+    name: gml_Object_obj_ch2_scene8_Step_0
+    chapters: [2]
+    note: library
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: choices
+
+toc:
+  -
+    id: school
+    name: Leaving school
+  -
+    id: prelibrary
+    name: Before going to the library
+    subheadings:
+      -
+        id: calltoriel
+        name: Calling Toriel
+      -
+        id: trafficjam
+        name: Traffic jam
+  -
+    id: library
+    name: Inside the library
+---
+<section class="d-section" id="school">
+	<h2>Leaving school</h2>
+
+	<p class="note">Upon arriving back in the Light World, Kris and an unsmiling Susie stand outside the supply closet doors.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Well, damn. GUESS we gotta do our project.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="B"></d-sprite>
+		<d-text asterisk>(Sigh...)</d-text>
+	</d-box>
+	<p class="note">Susie looks at Kris, smiling.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Least we got Lancer, right!?</d-text>
+	</d-box>
+	<p class="note">A pause. Susie looks around.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>... Lancer? Where are you?</d-text>
+	</d-box>
+	<p class="note">Susie loses her smile.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Damn, guess he skipped out after all, huh.</d-text>
+	</d-box>
+	<p class="note">Susie walks away from the supply closet, Kris a step behind.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Hmm... so, where should we do this?</d-text>
+	</d-box>
+	<p class="note">She looks at Kris. A slight pause.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>... what? The Library?</d-text>
+	</d-box>
+	<p class="note">Susie turns to the side.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Ugh... Well, alright.</d-text>
+	</d-box>
+	<p class="note">She walks off towards the entrance. Control returns to the player.</p>
+</section>
+
+<section class="d-section" id="prelibrary">
+	<h2>Before going to the library</h2>
+
+	<p>Kris can explore the school, <a href="#calltoriel">call Toriel to let her know about the library visit</a>, or <a href="#trafficjam">check out the traffic jam outside the library</a>.</p>
+
+	<hr>
+
+	<h3 id="calltoriel">Calling Toriel</h3>
+	<h4>First time only, if you didn't call before delivering the trash orb to Castle Town</h4>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>Ah, Kris! You are going to do your project...?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="1"></d-sprite>
+		<d-text asterisk>Oh, are you calling to ask for my help!?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="4"></d-sprite>
+		<d-text asterisk>I will go find our homemade scented glue-sticks!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="8"></d-sprite>
+		<d-text asterisk>... Oh? You have a partner this time?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="9"></d-sprite>
+		<d-text asterisk>Kris!! That's wonderful!!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="4"></d-sprite>
+		<d-text asterisk>I hope they like butterscotch-scented gluesticks!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Click...)</d-text>
+	</d-box>
+
+	<h4>Otherwise</h4>
+	<d-box theme="light">
+		<d-text asterisk>(Ring, ring...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>Kris, do not worry about going to the library.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="5"></d-sprite>
+		<d-text asterisk>If Berdly harasses you about our debt...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="4"></d-sprite>
+		<d-text asterisk>I will come and throw a smoke bomb so you can escape.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="0"></d-sprite>
+		<d-text asterisk>... maybe not. Hee hee hee. Try your best, honey.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Click...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="trafficjam">Traffic jam</h3>
+	<p class="note">Undyne is benchpressing a car in the road, with many other cars blocking the crossroads.</p>
+
+	<h4>Talking to Undyne</h4>
+	<h5>First time</h5>
+	<d-box theme="light">
+		<d-sprite speaker="Undyne" emotion="1"></d-sprite>
+		<d-text asterisk>Damn, I was just directing traffic as normal...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Undyne" emotion="2"></d-sprite>
+		<d-text asterisk>When a little dog drove one of those toy cars...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Undyne" emotion="1"></d-sprite>
+		<d-text asterisk>Into the middle of the street and started doing donuts!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Undyne" emotion="4"></d-sprite>
+		<d-text asterisk>In the chaos, all the cars in town got jammed up!!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Undyne" emotion="0"></d-sprite>
+		<d-text asterisk>Thankfully, no one was hurt... but...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Undyne" emotion="2"></d-sprite>
+		<d-text asterisk>Ordinary citizens like you gotta get outta here!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Undyne" emotion="5"></d-sprite>
+		<d-text asterisk>I've got some heavy lifting to do!!!</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="light">
+		<d-sprite speaker="Undyne" emotion="5"></d-sprite>
+		<d-text asterisk>Don't interrupt me when I'm lifting!!!</d-text>
+	</d-box>
+
+	<h4>Talking to Snail Guy</h4>
+	<h5>First time</h5>
+	<d-box theme="light">
+		<d-speaker>Snail Guy</d-speaker>
+		<d-text asterisk>Traffic's moving at a snail's pace.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Snail Guy</d-speaker>
+		<d-text asterisk>I love snails. Could today get any better!?</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="light">
+		<d-speaker>Snail Guy</d-speaker>
+		<d-text asterisk>Wow, my first traffic jam!!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Snail Guy</d-speaker>
+		<d-text asterisk>I can't help but feel a sense of pride...</d-text>
+	</d-box>
+
+	<h4>Talking to Donut Guy</h4>
+	<h5>First time</h5>
+	<d-box theme="light">
+		<d-speaker>Donut Guy</d-speaker>
+		<d-text asterisk>I heard a dog was doing "donuts" so I sped over here.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Donut Guy</d-speaker>
+		<d-text asterisk>But I just learned "Donuts" is actually the name of a special attack for cars.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Donut Guy</d-speaker>
+		<d-text asterisk>Why is my life stuck in a loop of doughy disappointment...?</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="light">
+		<d-speaker>Donut Guy</d-speaker>
+		<d-text asterisk>My life, like a donut, is stuck in a loop of doughy disappointment...</d-text>
+	</d-box>
+
+	<h4>Interacting with the other cars</h4>
+	<h5>First time only, if you met the man behind the tree in Chapter 1</h5>
+	<p>Plays as long as you interacted with the man, whether or not you got the <a href="{{ '/misc/darkitems#egg' | relative_url }}">Egg</a>.</p>
+	<d-box theme="light">
+		<d-text asterisk>(Looks like a car.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(There is even a man inside this one.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(He waves at you happily.)</d-text>
+	</d-box>
+
+	<h5>Otherwise</h5>
+	<d-box theme="light">
+		<d-text asterisk>(Looks like a car.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="library">
+	<h2>Inside the library</h2>
+
+	<p class="note">Kris enters the library. Susie stands some distance ahead and turns to face them when she speaks.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Alright. We're here.</d-text>
+	</d-box>
+
+	<p class="note">She walks into the center of the library.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>School. Goddamn. Project.</d-text>
+	</d-box>
+
+	<p class="note">She walks to the bookshelf on the left, closer to the counter. Kris walks further into the library, turning to look at her.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Books. God. Damn. Crazy about them.</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to Kris.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">Susie turns away from the shelf, no longer smiling.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Hey, Kris, where the hell IS everybody?</d-text>
+	</d-box>
+
+	<p class="note">She walks over to Kris.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Something seems kinda... off.</d-text>
+	</d-box>
+
+	<p class="note">A long pause. Then Susie runs over to the computer lab doors.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>Screw it let's just go play Space Pinball in the computer lab</d-text>
+	</d-box>
+
+	<p class="note">She throws open the doors, but beyond them lies pitch darkness that casts the library into eerie shadow. Susie backs away slowly, and <a href="{% include wikilink page='The Door' %}">vaguely ominous music</a> plays.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>H... huh...?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>It's like...</d-text>
+	</d-box>
+
+	<p class="note">Susie backs away further and Kris steps up beside her. They look at each other.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>... the inside of the closet?</d-text>
+	</d-box>
+
+	<p class="note">They look back to the doors.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Kris, you don't think this could be...</d-text>
+	</d-box>
+
+	<p class="note">They approach the doors, then turn to each other.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>... another Dark World?</d-text>
+	</d-box>
+
+	<p class="note">They both look back at the doors. A slight pause.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Well.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Guess this means we can't start our project.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>... unless.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>You know. Kris.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>If there's a Dark Fountain in there.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>You can seal it...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>And it'll turn back into the computer lab, right?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>... So what's it gonna be, Kris?</d-text>
+	</d-box>
+	<d-choices theme="light">
+		<d-option index="0" text="Let's go!#Let's go!"></d-option>
+		<d-option index="1" text="We can use#the computer#at my#house"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="2"></d-sprite>
+			<d-text asterisk>Yeah, let's just drop the act!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="9"></d-sprite>
+			<d-text asterisk>Our last adventure was great, right?!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+			<d-text asterisk>I couldn't stop thinking about having another!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+			<d-text asterisk>I don't know what's in there, but...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+			<d-text asterisk>We can't live if we don't find out, right!?</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="V"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="V"></d-sprite>
+			<d-text asterisk>Kris, you're right.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="W"></d-sprite>
+			<d-text asterisk>Like, you said a correct fact.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="V"></d-sprite>
+			<d-text asterisk>But you made a mistake.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="X"></d-sprite>
+			<d-text asterisk>The mistake of knowing me.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="X"></d-sprite>
+			<d-text asterisk>'Cause when I see a big pit,</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="X"></d-sprite>
+			<d-text asterisk>All I wanna do is jump in.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="V"></d-sprite>
+			<d-text asterisk>And as long as you're with me...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+			<d-text asterisk>I'm dragging you in too!</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<p class="note">Kris and Susie look at each other.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>C'mon, Kris!!</d-text>
+	</d-box>
+
+	<p class="note">They turn to the door, and with a quick run-up, leap into the <a href="{{ '/chapters/chapter2/darkworldintro' | relative_url }}">Dark World</a>.</p>
+</section>
