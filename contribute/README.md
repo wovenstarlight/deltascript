@@ -72,6 +72,16 @@ Goes from `0-9`, followed by uppercase `A-Z` (representing 10-35), followed by l
 
 You can use the letters or enter numbers 10-61 into `<d-sprite emotion="#">`; either one is fine. Since you should be copying from the dialogue files directly, the `\\E?` code will often be in the dialogue string already, so you can just copy/paste the specific letter/digit in.
 
+### Exceptions
+Some `global.fe` indexes for certain characters got updated from Chapter 2 to Chapter 3 onwards. Keep these in mind when formatting dialogue from Chapter 2!
+* Susie
+	* Sprite `N` (23) -> `f` (41)
+	* Sprite `R` (27) -> `g` (42)
+	* Sprite `S` (28) -> `h` (43)
+	* Sprite `T` (29) -> `i` (44)
+	* Sprite `U` (30) -> `B` (11)
+	* Sprite `a` (36) -> `j` (45)
+
 ### Variable `global.typer`, or the `\\T?` command
 Indicates the speech sound to play as text is printed in the dialogue box, I think? Can be changed directly via setting `global.typer = #`, or by including an `\\T?` command in the dialogue string itself.
 
