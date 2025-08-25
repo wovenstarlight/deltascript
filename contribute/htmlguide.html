@@ -93,11 +93,11 @@ credits: >
 					<li><code>index = 0 | 1 | 2 | 3</code>: Placement of option (corresponds to left/right/top/bottom)</li>
 					<li><code>text</code>: Option text. Replace instances of <code>#</code> with the following:
 					<ul>
-						<li><code>\s</code> for a linebreak between words</li>
+						<li><code>\s</code> for a linebreak between words (optionally, as <code>#</code> also works the same way)</li>
 						<li><code>\b</code> for a linebreak within a word</li>
 						<li><code>\h</code> to hide the next character in compact mode</li>
 					</ul>
-					Example: When talking to Onion, the options for your own name are <code>"Kris"</code> and <code>"Hippo-#potamus"</code>. The latter would be formatted as <code>&lt;d-option index="1" text="Hippo\h-\bpotamus"&gt;</code>. The <code>\b</code> means it'll be split with a hyphen in full-size mode, and the <code>\h</code> means it'll display as <code>Hippopotamus</code> without the hyphen in compact mode's single-line format.
+					Example: When talking to Onion, the options for your own name are <code>"Kris"</code> and <code>"Hippo-#potamus"</code>. The latter would be formatted as <code>&lt;d-option index="1" text="Hippo\h-\bpotamus"&gt;</code>. The <code>\b</code> means it'll be split with the hyphen in full-size mode, and the <code>\h</code> means it'll display as <code>Hippopotamus</code> without the hyphen in compact mode's single-line format.
 					</li>
 					<li><code>conditional</code>: For when an option only appears under specific conditions</li>
 				</ul></td>

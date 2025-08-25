@@ -27,7 +27,7 @@ Dialogue is stored as strings *(if you haven't programmed before, that just mean
 | :----: | ------- | -------- |
 | `^#` | Pause for a little bit<br>The number represents how long to pause<br>Irrelevant, delete these | `^1`, `^2`, ... |
 | `&` | Forced linebreak (textbox)<br>Generally indicates that text should be split into different `<d-text>`s, unless it's purely for visual format | `"* Line 1&* Line 2"`<br>...turns into...<br>`* Line 1`<br>`* Line 2`<br><br>`"* This is a long line and is only&split for visual reasons."`<br>...turns into...<br>`* This is a long line and is only split for visual reasons.` |
-| `#` | Forced linebreak (choice menu)<br>Should be replaced with `\s`, `\b`, and `\h` as appropriate. See the HTML guide for more on that | `"No No No#No No No#No No No"`<br>...turns into...<br>`No No No`<br>`No No No`<br>`No No No` |
+| `#` | Forced linebreak (choice menu)<br>Can be replaced with `\s`, `\b`, and `\h` as appropriate. See the HTML guide for more on that | `"No No No#No No No#No No No"`<br>...can turn into...<br>`No No No`<br>`No No No`<br>`No No No` |
 | `/` | End of a single textbox (i.e. wait for user to press CONFIRM) |
 | `%` | End of a conversation/chunk. Sometimes gets repeated, as in `%%` |
 | `\\C#` | Open a choice menu<br>`#` represents number of choices<br>Choices 0–3 are ordered left/right/up/down | `\C2`: 2 choices<br>`\C3`: 3 choices<br>`\C4`: 4 choices |

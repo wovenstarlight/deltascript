@@ -321,9 +321,9 @@ class DialogueChoicesOption extends HTMLElement {
 
 		// Add actual text label
 		this.innerHTML = this.getAttribute("text")
-			.replaceAll(new RegExp(`(^[#\\s]*|[#\\s]*$)`, "g"), "")	// Trim starting/trailing whitespace
+			.replaceAll(/(^(#|\s|\\s)*|(#|\s|\\s)*$)/g, "")	// Trim starting/trailing whitespace
 			// Next, convert all remaining linebreaks...
-			.replaceAll("\\s", ` ${BREAK}`)	// ...to spaces
+			.replaceAll(/(#|\\s)/g, ` ${BREAK}`)	// ...to spaces
 			.replaceAll("\\b", BREAK)	// ...to newlines without spaces
 			.replaceAll(/\\h(.)/g, (_, p1) => `<span class="hide">${p1}</span>`);	// ...and hide any characters involved in linebreaking
 		
