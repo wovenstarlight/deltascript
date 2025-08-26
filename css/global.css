@@ -711,6 +711,7 @@ d-box, d-choices {
 		&[theme=battlemenu], &[theme=battledesc],
 		&[theme=eightbit], &[theme="8bit"] {
 			border-image-source: url("../assets/images/textbox/plain.png");
+			&:has(.hideoverflow) { clip-path: xywh(0.25em 0.25em calc(100% - 0.5em) calc(100% - 0.5em)) }
 		}
 
 		&[theme^=obj], &[theme=battlemenu] { width: calc(var(--basewidth) + 4em) }
@@ -862,12 +863,6 @@ d-box, d-choices {
 		&[theme=eightbit], &[theme="8bit"] {
 			width: calc(var(--basewidth) - 4.39em);
 			font-family: "DeltaFont 8-Bit", var(--font);
-		}
-
-		&.hideoverflow {
-			white-space: pre;
-			max-width: 100%;
-			overflow: hidden;
 		}
 
 		@media (max-width: 30rem) {
@@ -1221,6 +1216,8 @@ d-text {
 		background-image: url("../assets/images/faces/clover/sad.png");
 		content: "(Shy)";
 	}
+
+	&.hideoverflow { white-space: pre }
 
 	img.inline {
 		height: 1em;
