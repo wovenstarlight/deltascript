@@ -1,0 +1,168 @@
+---
+title: Solving the keyboard puzzle
+
+description: >
+  <p>A forcefield powered by a keyboard puzzle blocks the party's way through Cyber Field.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_ch2_keyboardpuzzle_controller_Step_0
+    chapters: [2]
+    note: post-solve dialogue
+  -
+    name: gml_Object_obj_controller_keyboard_puzzle_2_Step_0
+    chapters: [2]
+    note: entry and hint
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [2]
+    note: Susie/Ralsei talks
+
+toc:
+  -
+    id: enter
+    name: Entering the puzzle room
+  -
+    id: during
+    name: While solving the puzzle
+    subheadings:
+      -
+        id: susie
+        name: Talking to Susie
+      -
+        id: ralsei
+        name: Talking to Ralsei
+  -
+    id: solve
+    name: Solving the puzzle
+---
+<section class="d-section" id="enter">
+	<h2>Entering the puzzle room</h2>
+
+	<p class="note">Upon approaching the puzzle, the party stops.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Wait, is this another puzzle? You do it.</d-text>
+	</d-box>
+
+	<p class="note">Susie and Ralsei go to stand in the corners of the room and wait for Kris to complete the puzzle, which asks them to spell "AGREE2ALL".</p>
+
+	<p class="note">Failing the puzzle 8 times causes Ralsei to give the following hint:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Um... Kris?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Maybe you can press the same key more than once?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="during">
+	<h2>While solving the puzzle</h2>
+
+	<h3 id="susie">Talking to Susie</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>The hell is that, a driver's license number?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Heh, can we use it and drive your mom's car?</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Uhh, maybe we could make your mom's car cooler first.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>I'm thinking, like... purple? With flames.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ralsei">Talking to Ralsei</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Kris, we'll stand here so you can spell freely!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Kris, spell a swear!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Umm, I... I don't think they can with these letters.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Oh.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>... wait, you checked?</d-text>
+		<d-box>
+			<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+			<d-text>Umm, Kris, do your best!</d-text>
+		</d-box>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Kris, please spell some nice words!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="solve">
+	<h2>Solving the puzzle</h2>
+
+	<p class="note">Upon completing the puzzle, the screen showing the puzzle has been solved switches from showing the usual scroll with a checkmark to showing Queen's face, accompanied by a hoot of laughter.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>You Typed: Agree 2 All</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Thank You For Agreeing 2 This Peon Release Form</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="C"></d-sprite>
+		<d-text asterisk>Now You Are All Legally My Minions</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>And I Can Use Your Likeness For Funny Statues</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>What if we just... don't do what you say?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="6"></d-sprite>
+		<d-text asterisk>In That Case I Would Be Forced To</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="F"></d-sprite>
+		<d-text asterisk>Use Another Guy Probably</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Uh. Better get started on that then.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="6"></d-sprite>
+		<d-text asterisk>Okay But I'm Still Going To Use Your Likeness</d-text>
+	</d-box>
+
+	<p class="note">Offscreen, the forcefield blocking the northeastern path disappears. The party can progress via the newly-unlocked teacup rides, where they are eventually <a href="{{ '/chapters/chapter2/sweetcapncakes' | relative_url }}">accosted by a trio of musical Darkners</a>.</p>
+</section>
