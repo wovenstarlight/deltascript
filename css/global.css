@@ -1164,12 +1164,12 @@ d-text {
 		&::before {
 			text-shadow: none;
 			position: absolute;
-			left: 0;
-			top: 0.15em;
+			top: 0.05em;
+			left: -0.35em;
 			content: "";
 			color: transparent;
-			width: var(--size, 1em);
-			height: var(--size, 1em);
+			width: var(--size, 1.25em);
+			height: var(--size, 1.25em);
 			background: center / contain no-repeat;
 		}
 	}
