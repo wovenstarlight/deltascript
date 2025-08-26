@@ -1,4 +1,4 @@
-let globalAnims = false;
+let globalAnims = document.querySelector("d-text[asterisk='Sweet' i], d-text[asterisk='Cap\\'n' i], d-text[asterisk='Capn' i], d-text[asterisk='K_K' i], d-text[asterisk='KK' i]") === null;
 
 // #region Game elements
 /** A box containing a few lines of dialogue. */
