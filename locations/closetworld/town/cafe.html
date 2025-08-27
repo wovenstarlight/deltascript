@@ -1,0 +1,1246 @@
+---
+title: Café
+
+description: >
+  <p>Narration and dialogue for the Castle Town Café, including all dialogue from recruits.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_GlobalScript_scr_recruit_info
+    chapters: [2, 4]
+    note: individual interactions
+  -
+    name: gml_Object_obj_npc_cafe_Other_10
+    chapters: [2, 4]
+    note: paired interactions
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2, 4]
+    note: more individual interactions
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2, 4]
+    note: counter-manning interactions
+
+toc:
+  -
+    name: Café runners
+    subheadings:
+      -
+        id: topchef
+        name: Top Chef
+      -
+        id: swatch
+        name: Swatch
+  -
+    name: Customers and visitors
+    subheadings:
+      -
+        id: rudinn
+        name: Rudinn
+      -
+        id: hathy
+        name: Hathy
+      -
+        id: ponman
+        name: Ponman
+      -
+        id: rabbick
+        name: Rabbick
+      -
+        id: bloxer
+        name: Bloxer
+      -
+        id: jigsawry
+        name: Jigsawry
+      -
+        id: rudinnranger
+        name: Rudinn Ranger
+      -
+        id: headhathy
+        name: Head Hathy
+      -
+        id: ambyulance
+        name: Ambyu-Lance
+      -
+        id: poppup
+        name: Poppup
+      -
+        id: tasque
+        name: Tasque
+      -
+        id: werewire
+        name: Werewire
+      -
+        id: maus
+        name: Maus
+      -
+        id: virovirokun
+        name: Virovirokun
+      -
+        id: swatchling
+        name: Swatchling
+      -
+        id: werewerewire
+        name: Werewerewire
+      -
+        id: tasquemanager
+        name: Tasque Manager
+      -
+        id: mauswheel
+        name: Mauswheel
+      -
+        id: shadowguy
+        name: Shadowguy
+      -
+        id: shuttah
+        name: Shuttah
+      -
+        id: zapper
+        name: Zapper
+      -
+        id: ribbick
+        name: Ribbick
+      -
+        id: watercooler
+        name: Watercooler
+      -
+        id: pippins
+        name: Pippins
+      -
+        id: elnina
+        name: Elnina
+      -
+        id: lanino
+        name: Lanino
+      -
+        id: guei
+        name: Guei
+      -
+        id: balthizard
+        name: Balthizard
+      -
+        id: bibliox
+        name: Bibliox
+      -
+        id: mizzle
+        name: Mizzle
+      -
+        id: wicabel
+        name: Wicabel
+      -
+        id: winglade
+        name: Winglade
+      -
+        id: organikk
+        name: Organikk
+      -
+        id: missmizzle
+        name: Miss Mizzle
+  -
+    name: Others
+    subheadings:
+      -
+        id: jukebox
+        name: Jukebox
+---
+<section class="d-section" id="topchef">
+	<h2>Top Chef</h2>
+	<p>Only present and manning the counter at the start of Chapter 2.</p>
+
+	<hr class="hr2">
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-speaker>Top Chef</d-speaker>
+		<d-text asterisk>Mama Miba!! I wanted to run the Bakery, but...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Top Chef</d-speaker>
+		<d-text asterisk>Someone is already working there!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Top Chef</d-speaker>
+		<d-text asterisk>A cafe that serves pastries... What a disgrace...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Top Chef</d-speaker>
+		<d-text asterisk>What sort of humiliating thing will happen next!?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-speaker>Top Chef</d-speaker>
+		<d-text asterisk>Mon amigas! Welcome to the bakery... I wish.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="dark">
+		<d-option index="0" text="Check#Recruits"></d-option>
+		<d-option index="1" text="Prize"></d-option>
+		<d-option index="2" text="Nothing"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The Recruits menu opens, allowing you to view recruits and place them in the café's various seats.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<h3>If you returned the <a href="{{ '/misc/darkitems#topcake' | relative_url }}">Top Cake</a> to Top Chef in Chapter 1</h3>
+		<h4>If the inventory is not full and you don't already have a <a href="{{ '/misc/darkitems#spincake' | relative_url }}">Spin Cake</a></h4>
+		<h5>First time</h5>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>Mama miba!  You returned my cake to me...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>Mwah! I will never forget your kindness!!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>Every day, I will give you dizzying flavors!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>Every day, the flavors will become stronger!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>That's the power of [Baker's Arms]!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>(You got Spincake.)</d-text>
+		</d-box>
+		<p class="note">The Spin Cake is added to the inventory.</p>
+		<h5>Subsequent times</h5>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>Would you like to take my cake for a spin?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>Like night and day, the cake and the world revolve!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>(You got Spincake.)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>Come again another day! Haha hiha!</d-text>
+		</d-box>
+		<p class="note">The Spin Cake is added to the inventory.</p>
+
+		<h4>If the inventory is full and you don't already have a Spin Cake</h4>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>Mozzarella! You are carrying too many items! No cake for you!</d-text>
+		</d-box>
+
+		<h4>If you already have a Spin Cake</h4>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>I can only generate one Spincake at a time.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>Please finish your cake and I will give you another!</d-text>
+		</d-box>
+
+		<hr>
+
+		<h3>If you didn't return the Top Cake to Top Chef in Chapter 1</h3>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>Mama mina! As long as ze purple girl is by your side!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>There will be no prizes from moi... ma-mia!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="0"></d-sprite>
+			<d-text asterisk>Who cares? Ralsei can make me a cake.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>B... But my uniqueness... as a baker...!!!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Top Chef</d-speaker>
+			<d-text asterisk>(Sniff) D-don't mind my pastries, are a little extra salty today, everyone!!</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<p class="note">Dialogue ends here.</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="swatch">
+	<h2>Swatch</h2>
+	<p>Manning the counter from the end of Chapter 2 onwards.</p>
+
+	<h3 id="swatch2">Chapter 2</h3>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<h5>If the <a href="{{ '/encounters/swatchling' | relative_url }}">Swatchlings</a> were recruited</h5>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Good evening, boss.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>We found a strange hooligan trying to turn the cafe...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Into a second bakery.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>He was spinning and crying as my men carried him out.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>We do not predict any further difficulties.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Now, please. You've worked hard, boss. Relax and enjoy yourself...</d-text>
+	</d-box>
+	<h5>If the Swatchlings weren't recruited</h5>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Good evening, boss.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>I found a strange hooligan trying to turn the cafe...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Into a second bakery.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>It was a cruel struggle, but I managed to remove him.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>... If only my men were here...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>My apologies. This is no time to reminisce.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Now, please. You've worked hard, boss. Relax and enjoy yourself...</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Good evening, boss. Please, relax and enjoy yourself...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="dark">
+		<d-option index="0" text="Check#Recruits"></d-option>
+		<d-option index="1" text="Recommendation"></d-option>
+		<d-option index="2" text="Exit"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The Recruits menu opens, allowing you to view recruits and place them in the café's various seats.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">At random:</p>
+		<hr class="hr2">
+		<p class="note">Available only if Kris is in the party.</p>
+		<d-box theme="dark">
+			<d-speaker>Swatch</d-speaker>
+			<d-text asterisk>For the young human, we recommend a chocolate blueberry latte...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Swatch</d-speaker>
+			<d-text asterisk>Boss, please try not to use all of the sugar./</d-text>
+		</d-box>
+		<hr class="hr3">
+		<p class="note">Available only if Susie is in the party.</p>
+		<d-box theme="dark">
+			<d-speaker>Swatch</d-speaker>
+			<d-text asterisk>For the young monster, we recommend the blackberry tart...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Swatch</d-speaker>
+			<d-text asterisk>This way, even if you eat it quickly, you won't notice the stains./</d-text>
+		</d-box>
+		<hr class="hr3">
+		<p class="note">Available only if Ralsei is in the party.</p>
+		<d-box theme="dark">
+			<d-speaker>Swatch</d-speaker>
+			<d-text asterisk>For the young prince, we recommend the vanilla green tea.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Swatch</d-speaker>
+			<d-text asterisk>... There's not much to go off besides your color.</d-text>
+		</d-box>
+		<hr class="hr3">
+		<p class="note">Available only if Noelle is in the party, and therefore unused.</p>
+		<d-box theme="dark">
+			<d-speaker>Swatch</d-speaker>
+			<d-text asterisk>For the young deer, we recommend the cinnamon eggnog.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Swatch</d-speaker>
+			<d-text asterisk>We've shaved candy cane on top for extra flavor.</d-text>
+		</d-box>
+		<hr class="hr2">
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<p class="note">Dialogue ends here.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="swatch4">Chapter 4</h3>
+	<hr class="hr2">
+	<h4 id="swatch4-standard">Standard</h4>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Good day, boss.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4 id="swatch4-cat">Cat Café</h4>
+	<p class="note">The café is cat-themed if <a href="{{ '/encounters/tasquemanager' | relative_url }}">Tasque Manager</a>, <a href="{{ '/encounters/tasque' | relative_url }}">Tasques</a>, and <a href="{{ '/encounters/shadowguy' | relative_url }}">Shadowguys</a> were all recruited.</p>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Much to my chagrin, it seems we've become a Cat Cafe.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>What is it that I must say...? ... "nya," was it?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>I hope it is to your liking. Would you like anything?</d-text>
+	</d-box>
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Good day, boss. Or rather, "nya."</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="dark">
+		<d-option index="0" text="Check#Recruits"></d-option>
+		<d-option index="1" text="Recommendation"></d-option>
+		<d-option index="2" text="Exit"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The Recruits menu opens, allowing you to view recruits and place them in the café's various seats.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">At random:</p>
+		<hr class="hr2">
+		<p class="note">Available only if Kris is in the party.</p>
+		<d-box theme="dark">
+			<d-speaker>Swatch</d-speaker>
+			<d-text asterisk>For the young human, we recommend the tiramisu cat ears.</d-text>
+		</d-box>
+		<hr class="hr3">
+		<p class="note">Available only if Susie is in the party.</p>
+		<d-box theme="dark">
+			<d-speaker>Swatch</d-speaker>
+			<d-text asterisk>For the young monster, we recommend the black tail churros.</d-text>
+		</d-box>
+		<hr class="hr3">
+		<p class="note">Available only if Ralsei is in the party.</p>
+		<d-box theme="dark">
+			<d-speaker>Swatch</d-speaker>
+			<d-text asterisk>For the young prince, we recommend the mochi paw pastries.</d-text>
+		</d-box>
+		<hr class="hr3">
+		<p class="note">Available only if Noelle is in the party, and therefore unused.</p>
+		<d-box theme="dark">
+			<d-speaker>Swatch</d-speaker>
+			<d-text asterisk>For the young deer, we recommend the paw print sundae.</d-text>
+		</d-box>
+		<hr class="hr2">
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<p class="note">Dialogue ends here.</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="rudinn">
+	<h2>Rudinn</h2>
+
+	<h3 id="rudinn-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Hey, boss! I'll have a Dark Candy Starfait!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="rudinn-hathy">When seated with Hathy</h3>
+	<p>See also <a href="#hathy-rudinn">Hathy's corresponding flavor text</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Sure is great to be here with my best friend Hathy.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="rudinn-rudinnranger">When seated with Rudinn Ranger</h3>
+	<p>See also <a href="#rudinnranger-rudinn">Rudinn Ranger's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Sigh... does this guy have to one-up me on everything!?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="hathy">
+	<h2>Hathy</h2>
+
+	<h3 id="hathy-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Hathy is going to order a heart-foam latte.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="hathy-rudinn">When seated with Rudinn</h3>
+	<p>See also <a href="#rudinn-hathy">Rudinn's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Hathy seems fine.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="hathy-headhathy">When seated with Head Hathy</h3>
+	<p>See also <a href="#headhathy-hathy">Head Hathy's corresponding flavor text</a>.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Hathy is letting Head Hathy have a sip of her latte.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="ponman">
+	<h2>Ponman</h2>
+
+	<h3 id="ponman-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Looks like it wants to osmose some flavorful cubes.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="rabbick">
+	<h2>Rabbick</h2>
+
+	<h3 id="rabbick-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Looks like it wants to be dabbed with rubbing alcohol.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="rabbick-swatchling">When seated with Swatchling</h3>
+	<p>See also <a href="#swatchling-rabbick">Swatchling's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text asterisk>(I'm the dust off his shoulder.)</d-text>
+		<d-text asterisk>(Sukkiri.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="rabbick-ribbick">When seated with Ribbick</h3>
+	<p>See also <a href="#ribbick-rabbick">Ribbick's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text asterisk>(Ribbit, ribbit... Oops, forget I said that.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="bloxer">
+	<h2>Bloxer</h2>
+
+	<h3 id="bloxer-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Bloxer</d-speaker>
+		<d-text asterisk>Everything tastes better with a normally-shaped body!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="jigsawry">
+	<h2>Jigsawry</h2>
+
+	<h3 id="jigsawry-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text asterisk>Lemonade? ... Please.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="rudinnranger">
+	<h2>Rudinn Ranger</h2>
+
+	<h3 id="rudinnranger-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text asterisk>Boss...? You're treating me...? Oh, you shouldn't have! (smile)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="rudinnranger-rudinn">When seated with Rudinn</h3>
+	<p>See also <a href="#rudinn-rudinnranger">Rudinn's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text asterisk>I'll have a double Starfait. No, triple. Oh, hi, boss! (Smile)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="headhathy">
+	<h2>Head Hathy</h2>
+
+	<h3 id="headhathy-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Head Hathy drinks an ice tea in silence...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="headhathy-hathy">When seated with Hathy</h3>
+	<p>See also <a href="#hathy-headhathy">Hathy's corresponding flavor text</a>.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Head Hathy doesn't seem so alone...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="headhathy-werewerewire">When seated with Werewerewire</h3>
+	<p>See also <a href="#werewerewire-headhathy">Werewerewire's corresponding flavor text</a>.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(... it seems relaxed its partner is so quiet.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="ambyulance">
+	<h2>Ambyu-Lance</h2>
+
+	<h3 id="ambyulance-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Ambyu-Lance</d-speaker>
+		<d-text asterisk>Pipooo! Nothing beats a nice shot of espresso... Want me to give you a "shot", too!?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ambyulance-virovirokun">When seated with Virovirokun</h3>
+	<p>See also <a href="#virovirokun-ambyulance">Virovirokun's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Ambyu-Lance</d-speaker>
+		<d-text asterisk>We don't get along... but we can drink together.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="poppup">
+	<h2>Poppup</h2>
+
+	<h3 id="poppup-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Poppup</d-speaker>
+		<d-text asterisk>NOMU NOMU.</d-text>
+		<d-text asterisk>BERRY GOOD!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="tasque">
+	<h2>Tasque</h2>
+
+	<h3 id="tasque-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's drinking K_K's electric milk JPEG.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tasque-maus">When seated with Maus</h3>
+	<p>See also <a href="#maus-tasque">Maus's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Tasque</d-speaker>
+		<d-text asterisk>[Miaouw]</d-text>
+	</d-box>
+	<p class="note">Accompanied by an electronic meow.</p>
+
+	<hr>
+
+	<h3 id="tasque-visitor">As a café visitor</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Seems well behaved.)</d-text>
+	</d-box>
+	<p class="note">Accompanied by an electronic meow.</p>
+</section>
+
+<section class="d-section" id="werewire">
+	<h2>Werewire</h2>
+
+	<h3 id="werewire-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It has some kind of energy drink.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="werewire-werewerewire">When seated with Werewerewire</h3>
+	<p>See also <a href="#werewerewire-werewire">Werewerewire's corresponding flavor text</a>.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(... it seems annoyed that its energy drink has been crushed.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="maus">
+	<h2>Maus</h2>
+
+	<h3 id="maus-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's drinking melted cheese.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="maus-tasque">When seated with Tasque</h3>
+	<p>See also <a href="#tasque-maus">Tasque's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Maus</d-speaker>
+		<d-text asterisk>[Brrrrrrrr....]</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="virovirokun">
+	<h2>Virovirokun</h2>
+
+	<h3 id="virovirokun-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text asterisk>Wanna share my soda? We'll both get sick that way... Hee hee.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="virovirokun-ambyulance">When seated with Ambyu-Lance</h3>
+	<p>See also <a href="#ambyulance-virovirokun">Ambyu-Lance's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text asterisk>I'll get you next time, pipo! ... Want some more sugar?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="swatchling">
+	<h2>Swatchling</h2>
+
+	<h3 id="swatchling-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Boss? Shall we sit down and enjoy a nice earl grey?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="swatchling-rabbick">When seated with Rabbick</h3>
+	<p>See also <a href="#rabbick-swatchling">Rabbick's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>We'll make sure to clean our plates.</d-text>
+		<d-text asterisk>(Sukkiri.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="swatchling-zapper">When seated with Zapper</h3>
+	<p>See also <a href="#zapper-swatchling">Zapper's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Oh, boss. This brutish boor can't even handle a little tea...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="swatchling-all">When all seats are occupied by Swatchlings</h3>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Boss, are you enjoying your <span class="yellow">Butler Cafe</span>?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="swatchling-visitor">Chapter 2, as a café visitor</h3>
+	<p>Appears at the side of the cafe, dressed in red, if Swatchlings were recruited.</p>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Good evening, boss. Today's meal is Crisped #E23D28.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>It's been deep-fried with the finest JPEG artifacting...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>I hope it suits your palette... er, palate.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="werewerewire">
+	<h2>Werewerewire</h2>
+
+	<h3 id="werewerewire-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(... it's crushing its energy drink with its hand...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="werewerewire-werewire">When seated with Werewire</h3>
+	<p>See also <a href="#werewire-werewerewire">Werewire's corresponding flavor text</a>.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's crushing many of the surrounding drinks.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="werewerewire-headhathy">When seated with Head Hathy</h3>
+	<p>See also <a href="#headhathy-werewerewire">Head Hathy's corresponding flavor text</a>.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="werewerewire-headhathy-divorce">When seated at a single table while Head Hathy is seated at the pair table</h3>
+	<p>Overrides the standard flavor text if you previously interacted with Werewerewire or Head Hathy while they were seated together.</p>
+	<h4>If Head Hathy's partner is not a Werewire</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(... it's staring at the southern seats and crushing its drink hard.)</d-text>
+	</d-box>
+	<h4>If Head Hathy's partner is a Werewire</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(... looks like it's about to flip its table over.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="tasquemanager">
+	<h2>Tasque Manager</h2>
+	<p>Appears as a visitor in the café if recruited, and cannot be placed at the tables.</p>
+
+	<h3 id="tasquemanager2">Chapter 2</h3>
+	<p>Appears at the end of Chapter 2 with a Tasque, only if Tasques were also recruited. See also <a href="#tasque-visitor">Tasque's corresponding flavor text</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text asterisk>Boss, this Cafe is so unrefined. So plain.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text asterisk>Why don't we make it into an animal cafe?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text asterisk>... you can be one of the animals, too, boss.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="mauswheel">
+	<h2>Mauswheel</h2>
+
+	<h3 id="mauswheel-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's getting electricity from the melted cheese like a water wheel)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="shadowguy">
+	<h2>Shadowguy</h2>
+
+	<h3 id="shadowguy-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Seems to just be enjoying the musical ambience.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="shadowguy-ambyulance">When seated with Ambyu-Lance</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Seems to just be enjoying the musical ambulance.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="shuttah">
+	<h2>Shuttah</h2>
+
+	<h3 id="shuttah-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>Shush! Don't do the move... I am photographing the drink!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="zapper">
+	<h2>Zapper</h2>
+
+	<h3 id="zapper-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Say da word, boss... I'll give dis drink a sip it won't forget.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="zapper-swatchling">When seated with Swatchling</h3>
+	<p>See also <a href="#swatchling-zapper">Swatchling's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Dis pretty boy ain't nothin', boss. Watch me down dis tea!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="ribbick">
+	<h2>Ribbick</h2>
+
+	<h3 id="ribbick-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Looks like it want to be dabbed with rubbing alcohol.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ribbick-rabbick">When seated with Rabbick</h3>
+	<p>See also <a href="#rabbick-ribbick">Rabbick's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Ribbick</d-speaker>
+		<d-text asterisk>(Rabbit, rabbit... Oops, forget I said that.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="watercooler">
+	<h2>Watercooler</h2>
+
+	<h3 id="watercooler-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Seems like they're drinking water.)</d-text>
+		<d-text asterisk>(... feels questionable.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="watercooler-flirt">When seated at a single table, if you used the Flirt ACT against the second Watercooler</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Seems like you're invited for drinks... but you're busy now.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="pippins">
+	<h2>Pippins</h2>
+
+	<h3 id="pippins-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>This drink's not mine? It's fine. I'm just keeping it warm.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="elnina">
+	<h2>Elnina</h2>
+
+	<h3 id="elnina-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Elnina</d-speaker>
+		<d-text asterisk>Oh no, where's Lanino? He better not be having a team relationship...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="elnina-lanino">When seated with Lanino</h3>
+	<p>See also <a href="#lanino-elnina">Lanino's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Elnina</d-speaker>
+		<d-text asterisk>Did it hurt when you fell? Your tag says you're... um, the moon.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="elnina-mizzle">When seated with Mizzle</h3>
+	<p>See also <a href="#mizzle-elnina">Mizzle's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Elnina</d-speaker>
+		<d-text asterisk>Haha, Kris! I think I've got a new BESTIE!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Elnina</d-speaker>
+		<d-text asterisk>Like I'm saying, water girls are the WAVE!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="elnina-missmizzle">When seated with Miss Mizzle</h3>
+	<p>See also <a href="#missmizzle-elnina">Miss Mizzle's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Elnina</d-speaker>
+		<d-text asterisk>Haha, Kris! I think I've got a new BESTIE!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Elnina</d-speaker>
+		<d-text asterisk>Like I'm saying, water girls are the WAVE!! Here, selfie!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="elnina-notdate">When seated at the pair table with anyone other than Lanino, Mizzle, and Miss Mizzle</h3>
+	<d-box theme="dark">
+		<d-speaker>Elnina</d-speaker>
+		<d-text asterisk>Kris! This doesn't look like a date, does it!? It's not!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="elnina-divorce">When seated at a single table while Lanino is seated at the pair table</h3>
+	<d-box theme="dark">
+		<d-speaker>Elnina</d-speaker>
+		<d-text asterisk>What is that moon doing!? I'll have to make him jealous, too!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="lanino">
+	<h2>Lanino</h2>
+
+	<h3 id="lanino-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Lanino</d-speaker>
+		<d-text asterisk>Haven't been on a date alone for a while! ... which, isn't a date.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="lanino-elnina">When seated with Elnina</h3>
+	<p>See also <a href="#elnina-lanino">Elnina's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Lanino</d-speaker>
+		<d-text asterisk>Oh my rain... you put me on Cloud 9. Which, is the best cloud.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="lanino-mizzle">When seated with Mizzle</h3>
+	<p>See also <a href="#mizzle-lanino">Mizzle's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Lanino</d-speaker>
+		<d-text asterisk>Hmm... something about you seems... different tonight, Elnina.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Lanino</d-speaker>
+		<d-text asterisk>What is it... a new hatcut? Oh, it's splendid!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="lanino-missmizzle">When seated with Miss Mizzle</h3>
+	<p>See also <a href="#missmizzle-lanino">Miss Mizzle's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Lanino</d-speaker>
+		<d-text asterisk>I'm not sure why you're so aggressive tonight, Elnina...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Lanino</d-speaker>
+		<d-text asterisk>But - my stars - I kind of LIKE it!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="lanino-notdate">When seated at the pair table with anyone other than Elnina, Mizzle, and Miss Mizzle</h3>
+	<d-box theme="dark">
+		<d-speaker>Lanino</d-speaker>
+		<d-text asterisk>Kris... um, help! I'm not ready for a team relationship again...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="lanino-divorce">When seated at a single table while Elnina is seated at the pair table</h3>
+	<d-box theme="dark">
+		<d-speaker>Lanino</d-speaker>
+		<d-text asterisk>Oh my rain!? What is she DOING with that rogue!?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="guei">
+	<h2>Guei</h2>
+
+	<h3 id="guei-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Guei is sipping the melted wax from the ambient candles.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="guei-mizzle">When seated with Mizzle or Miss Mizzle</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Guei's vibes seemed dampened...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="balthizard">
+	<h2>Balthizard</h2>
+
+	<h3 id="balthizard-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Balthizard</d-speaker>
+		<d-text asterisk>R e l a x...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(It's drinking nothing but straight tea powder.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="balthizard-guei">When seated with Guei</h3>
+	<d-box theme="dark">
+		<d-speaker>Balthizard</d-speaker>
+		<d-text asterisk>C h i l l... b u d d y...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="bibliox">
+	<h2>Bibliox</h2>
+
+	<h3 id="bibliox-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Bibliox</d-speaker>
+		<d-text asterisk>Mumble... oh, the ancheint texts...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(He's reading the menu.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="mizzle">
+	<h2>Mizzle</h2>
+
+	<h3 id="mizzle-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Mizzle</d-speaker>
+		<d-text asterisk>Oh, is this tapwater? Ho hum...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="mizzle-missmizzle">When seated with Miss Mizzle</h3>
+	<p>See also <a href="#missmizzle-mizzle">Miss Mizzle's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Mizzle</d-speaker>
+		<d-text asterisk>(Oh, anyone but her...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="mizzle-elnina">When seated with Elnina</h3>
+	<p>See also <a href="#elnina-mizzle">Elnina's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Mizzle</d-speaker>
+		<d-text asterisk>(Who is this city bob? She lacks the elegance of a fairy)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="mizzle-lanino">When seated with Lanino</h3>
+	<p>See also <a href="#lanino-mizzle">Lanino's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Mizzle</d-speaker>
+		<d-text asterisk>(Who is this beautiful yet stupid man? A fine prince?)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="wicabel">
+	<h2>Wicabel</h2>
+
+	<h3 id="wicabel-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Wicabel</d-speaker>
+		<d-text asterisk>Bubell, bubell!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(She's musically striking the side of the cup with a spoon.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="winglade">
+	<h2>Winglade</h2>
+
+	<h3 id="winglade-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Winglade</d-speaker>
+		<d-text asterisk>check this out</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(It's carved your initials in the table...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="organikk">
+	<h2>Organikk</h2>
+
+	<h3 id="organikk-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Organikk</d-speaker>
+		<d-text asterisk>Oh, tea, tea!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Organikk</d-speaker>
+		<d-text asterisk>Am I 1% tea, or has it become 99% me?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="missmizzle">
+	<h2>Miss Mizzle</h2>
+
+	<h3 id="missmizzle-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Miss Mizzle</d-speaker>
+		<d-text asterisk>Oh, young hero. I beseeth thee; where is the VIP Chamber?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="missmizzle-mizzle">When seated with Mizzle</h3>
+	<p>See also <a href="#mizzle-missmizzle">Mizzle's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Mizzle</d-speaker>
+		<d-text asterisk>O, paired with a regular sort. Well then, be my apprentice!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="missmizzle-elnina">When seated with Elnina</h3>
+	<p>See also <a href="#elnina-missmizzle">Elnina corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Mizzle</d-speaker>
+		<d-text asterisk>Amusing. What are these "sylphies", you so speak of?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="missmizzle-lanino">When seated with Lanino</h3>
+	<p>See also <a href="#lanino-missmizzle">Lanino's corresponding dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Mizzle</d-speaker>
+		<d-text asterisk>You brute! You betray your love, and treat me like a commoner!?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="jukebox">
+	<h2>Jukebox</h2>
+	<p>Present during Chapter 2.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(The jukebox is broken.)</d-text>
+		<d-text asterisk>(Feels like you might never find a working one...)</d-text>
+	</d-box>
+</section>
