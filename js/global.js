@@ -1,4 +1,4 @@
-let globalAnims = document.querySelector("d-text[asterisk='Sweet' i], d-text[asterisk='Cap\\'n' i], d-text[asterisk='Capn' i], d-text[asterisk='K_K' i], d-text[asterisk='KK' i]") === null;
+let globalAnims = false;
 
 // #region Game elements
 /** A box containing a few lines of dialogue. */
@@ -599,6 +599,7 @@ function setUp() {
 	}
 
 	// Gray out animation toggle if no animations are present
+	globalAnims ||= document.querySelector("d-text[asterisk='Sweet' i], d-text[asterisk='Cap\\'n' i], d-text[asterisk='Capn' i], d-text[asterisk='K_K' i], d-text[asterisk='KK' i]") !== null;
 	if (!globalAnims) {
 		(animToggle = document.querySelector("label[for='toggle-anim']")).title = "No animations on this page";
 		animToggle.classList.add("gray");
