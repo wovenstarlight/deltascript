@@ -1283,7 +1283,7 @@ d-choices {
 	}
 
 	/* For 8-bit choice menus with at most 2 children, scrunch the kids together */
-	&:is([theme=eightbit], [theme="8bit"]):has(:nth-child(1):last-child, :nth-child(2):last-child) d-option {
+	&:is([theme=eightbit], [theme="8bit"]):has(> :nth-child(1):last-child, > :nth-child(2):last-child) d-option {
 		&[index="0"] { left: 4.74em }
 		&[index="1"] { right: 4.65em }
 	}
