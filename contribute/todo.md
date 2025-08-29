@@ -107,6 +107,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/mansionexterior` - Outside Queen's mansion
 			* `#weirdroute` - Weird route variant
 		* `/noellerescue` - Thinking of Susie rescuing Noelle
+		* `/confrontingqueen` - First battle with Queen feat. Berdly
 		* `/fountain` - Sealing the fountain
 		* `/fountainweird` - Sealing the fountain (Weird Route)
 		* `/shelter` - End of chapter scene with Susie confronting Snowy/MK
@@ -140,7 +141,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* gml_Object_obj_werewire_enemy_Step_0 `/werewire`
 			* gml_Object_obj_swatchling_enemy_Step_0 `/swatchling`
 			* gml_Object_obj_werewerewire_enemy_Step_0 `/werewerewire`
-			* gml_Object_obj_queen_enemy_Step_0/gml_Object_obj_berdlyplug_enemy_Step_0 `/queen`
 			* gml_Object_obj_gigaqueen_enemy_Step_0 `/gigaqueen`
 			* gml_Object_obj_dojograzeenemy_Step_0 `/jigsawrydojo` or `/dojograze` (dojo's graze challenge)
 			* gml_Object_obj_dojo_spareenemy_Step_0 `/jigsawjoe` or `/dojospare` (dojo's spare challenge)

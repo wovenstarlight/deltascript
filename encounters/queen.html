@@ -1,0 +1,852 @@
+---
+title: Queen encounter
+
+description: >
+  <p>Flavor text and dialogue for the battle against Queen and a plugged Berdly.</p>
+
+  <p>This encounter has 4 phases that are referenced throughout this page. The phases begin when their corresponding benchmarks are reached or passed:</p>
+  <ul>
+    <li>Phase 1: initial</li>
+    <li>Phase 2: Berdly at 25% <span class="yellow">Mercy</span> or Queen at 75% HP</li>
+    <li>Phase 3: Berdly at 50% <span class="yellow">Mercy</span> or Queen at 50% HP</li>
+    <li>Phase 4: Berdly at 75% <span class="yellow">Mercy</span> or Queen at 25% HP</li>
+  </ul>
+
+sources:
+  -
+    name: gml_Object_obj_queen_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names (no shield)
+  -
+    name: gml_Object_obj_queen_enemy_Other_11
+    chapters: [2]
+    note: ACT names (with shield)
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_queen_enemy_Other_12
+    chapters: [2]
+    note: shield damage percentages, fight phases
+  -
+    name: gml_Object_obj_queen_kristhrown_Collision_obj_queen_throwtarget
+    chapters: [2]
+    note: '"Throw" results; hit'
+  -
+    name: gml_Object_obj_queen_kristhrown_Step_0
+    chapters: [2]
+    note: '"Throw" results; missed'
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/gigaqueen
+    name: GIGA Queen encounter
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-shieldup
+        name: After the acid shield goes up
+      -
+        id: ft-shielddown
+        name: After the acid shield goes down
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-turn
+        name: With specific turns
+      -
+        id: dialogue-phase4
+        name: Phase 4, after the acid shield is destroyed
+      -
+        id: dialogue-unused
+        name: Unused turn 1 dialogue
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: loosen
+        name: Loosen
+      -
+        id: grouploosen
+        act_icon: [Susie, Ralsei]
+        name: GroupLoosen
+      -
+        id: throw
+        act_icon: Susie
+        name: Throw
+      -
+        id: toast
+        name: Toast
+      -
+        id: grouptoast
+        act_icon: [Susie, Ralsei]
+        name: GroupToast
+      -
+        id: redbuster
+        act_icon: Susie
+        name: Red Buster
+      -
+        id: dualheal
+        act_icon: Ralsei
+        name: Dual Heal
+      -
+        id: saction-loosen
+        class: susie act
+        name: "S-Action: Loosen"
+      -
+        id: saction-toast
+        class: susie act
+        name: "S-Action: Toast"
+      -
+        id: raction-loosen
+        class: ralsei act
+        name: "R-Action: Loosen"
+      -
+        id: raction-unused
+        name: Unused second <span class="ralsei act">R-Action</span>
+      -
+        id: raction-toast
+        class: ralsei act
+        name: "R-Action: Toast"
+  -
+    id: end
+    name: End of fight
+    subheadings:
+      -
+        id: end-nonviolent
+        name: If Berdly gained 100% <span class="yellow">Mercy</span> and has previously been spared/pacified
+      -
+        id: end-violent
+        name: If Queen reached 0% HP, or Berdly gained 100% <span class="yellow">Mercy</span> but was previously defeated violently
+---
+{% comment %} encounterno = 59 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<p>Appears with a plugged Berdly.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Queen blocks the way!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The skyline echoes with regal laughter.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The fountain flows ominously.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The battlefield feels electric.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like overclocked high heels.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-shieldup">After the acid shield goes up</h3>
+	<p>The shield is raised at the start of phases 2, 3, and 4.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Queen's acid shield is formed!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-shielddown">After the acid shield goes down</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Queen's acid shield is down!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>(Regal Laughter)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Enjoy Your:<span class="break"></span> Destruction</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>I'm Computer</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Perish Under<span class="break"></span> My Bosom Or<span class="break"></span> Whatever</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn">With specific turns</h3>
+	<h4>Turn 1</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Queen,<span class="break"></span> think of the<span class="break"></span> Lightners!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Aren't we<span class="break"></span> supposed to<span class="break"></span> make them<span class="break"></span> happy?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Is That Not<span class="break"></span> What I Am Doing?</d-text>
+	</d-box>
+
+	<h4>Turn 2</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Think! Lightners<span class="break"></span> Have Already Been<span class="break"></span> Enslaved By Me<span class="break"></span> And My Kin</d-text>
+	</d-box>
+
+	<h4>Turn 3</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Each Day They<span class="break"></span> Spend Hours<span class="break"></span> Worshipping<span class="break"></span> In Glowing Rapture</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Our Screens Of<span class="break"></span> Funny Animals And<span class="break"></span> Candied Games</d-text>
+	</d-box>
+
+	<h4>Turn 4</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Staring, Tapping,<span class="break"></span> To Receive Joy</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Staring, Tapping,<span class="break"></span> To Avoid Pain</d-text>
+	</d-box>
+
+	<h4>Turn 5</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>... Until Recently,<span class="break"></span> When The Town's<span class="break"></span> Internet Disappeared</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Now The Refuge<span class="break"></span> They Take In<span class="break"></span> The Screens Will<span class="break"></span> Slowly Fade</d-text>
+	</d-box>
+
+	<h4>Turn 6</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Noelle...<span class="break"></span> Then Who Will<span class="break"></span> Help Her?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Her Strange<span class="break"></span> And Sad Searches</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Who Will<span class="break"></span> Answer Them?</d-text>
+	</d-box>
+
+	<h4>Turn 7</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Is What I<span class="break"></span> Wondered, Until<span class="break"></span> The KNIGHT<span class="break"></span> appeared...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>And Created<span class="break"></span> This Wonderful<span class="break"></span> World Of<span class="break"></span> Darkness</d-text>
+	</d-box>
+
+	<h4>Turn 8</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Now, The<span class="break"></span> Path Is Clear</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>All I Have<span class="break"></span> To Do Is Expand<span class="break"></span> This Dark World</d-text>
+	</d-box>
+
+	<h4>Turn 9</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Then With<span class="break"></span> The World<span class="break"></span> Covered In<span class="break"></span> Darkness</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>No One Will<span class="break"></span> Have To Suffer<span class="break"></span> Anymore</d-text>
+	</d-box>
+
+	<h4>Turn 10</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Instead, Everyone<span class="break"></span> Can Live In<span class="break"></span> My Perfect Mansion</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Everyday Blissfully<span class="break"></span> Worshipping Me<span class="break"></span> Like We Both Deserve</d-text>
+	</d-box>
+
+	<h4>Turn 11</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Now, Stop Resisting<span class="break"></span> And Welcome The<span class="break"></span> New Age Of Darkness</d-text>
+	</d-box>
+
+	<h4>Turn 12</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>We won't let<span class="break"></span> you control<span class="break"></span> everyone with<span class="break"></span> your wires!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Woah When<span class="break"></span> Did I Say<span class="break"></span> I Would Do<span class="break"></span> That</d-text>
+	</d-box>
+
+	<h4>Turn 13</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Uhh, you're<span class="break"></span> literally<span class="break"></span> controlling<span class="break"></span> Berdly now.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Oh Yeah<span class="break"></span> That's Just<span class="break"></span> For Him Only</d-text>
+	</d-box>
+
+	<h4>Turn 14</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Why Did You<span class="break"></span> Want One</d-text>
+	</d-box>
+	<p class="note">Three plugs descend from above.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>No!!!!</d-text>
+	</d-box>
+	<p class="note">The plugs withdraw from sight.</p>
+
+	<hr>
+
+	<h3 id="dialogue-phase4">Phase 4, after the acid shield is destroyed</h3>
+	<p>Overrides any <a href="#dialogue-turn">turn-specific dialogue</a>.</p>
+
+	<h4>First turn</h4>
+	<p>As in, the first turn immediately following the acid shield being destroyed.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Enough You Foolish<span class="break"></span> Children!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>You May Have<span class="break"></span> Survived My<span class="break"></span> Attacks (Regular)</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>But I've Been:<span class="break"></span> Secretly Been<span class="break"></span> Downloading My<span class="break"></span> Ultimate Move<span class="break"></span> The Whole Time</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Now, Perish<span class="break"></span> In The Bosom Of:<span class="break"></span> My Hellish Reign</d-text>
+	</d-box>
+
+	<h4>Second turn</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>So That Final Move<span class="break"></span> Was Supposed To Be<span class="break"></span> Cooler But The<span class="break"></span> Internet Is Down</d-text>
+	</d-box>
+
+	<h4>Third turn</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Yeah My Final<span class="break"></span> Attack Like</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>I Was Going To Put<span class="break"></span> Like Memes In It<span class="break"></span> And Stuff</d-text>
+	</d-box>
+
+	<h4>Fourth turn</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>It Would Have Been<span class="break"></span> A Really Sick<span class="break"></span> Final Attack Kris<span class="break"></span> You Would Have<span class="break"></span> Loved It</d-text>
+	</d-box>
+
+	<h4>Fifth turn</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Yeah Still Thinking<span class="break"></span> About That Move<span class="break"></span> HashtagFinalAttack</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-unused">Unused turn 1 dialogue</h3>
+	<p>Moved to the <a href="{{ '/chapters/chapter2/confrontingqueen' | relative_url }}">pre-battle cutscene</a>.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Ah My Sweet<span class="break"></span> Idiot Children</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>You Are Just In<span class="break"></span> Time To Witness<span class="break"></span> My World Domination</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>With Noelle In<span class="break"></span> My Possession</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>It Is Only A<span class="break"></span> Matter Of Time<span class="break"></span> Before Her<span class="break"></span> Will Turns</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>And She<span class="break"></span> Unleashes Her<span class="break"></span> Power</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Blanketing The<span class="break"></span> World In --</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Too late,<span class="break"></span> dumbass!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Noelle's<span class="break"></span> with Berdly!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+	<p>Unused, as this ACT is set to appear only when Berdly is not part of the encounter, but this encounter starts and ends with his presence.</p>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>QUEEN - Her drinking glass generates a powerful barrier. Break or lower it!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="loosen">
+	<h2>Loosen</h2>
+	<p>Available only when Queen's status is "Defenseless" i.e. she has no acid shield.</p>
+
+	<h3 id="loosen-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You shook Berdly's wire!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 5% <span class="yellow">Mercy</span> if either Susie or Ralsei is up, and 8% <span class="yellow">Mercy</span> if both Susie and Ralsei are downed.</p>
+</section>
+
+<section class="d-section" id="grouploosen">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} GroupLoosen</h2>
+	<p>Available only when Queen's status is "Defenseless" i.e. she has no acid shield.</p>
+
+	<h3 id="grouploosen-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone loosens Berdly!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 15% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="throw">
+	<h2>{% include acticon chara="Susie" -%} Throw</h2>
+	<p>Available only when Queen's status is "Defenseless" i.e. she has no acid shield.</p>
+
+	<h3 id="throw-ft">Flavor text</h3>
+	<h4>Instructions</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press [MENU] to throw, aim for the weakpoint!</d-text>
+	</d-box>
+	<p class="note">Berdly comes forward and weak points labelled with X marks oscillate up and down his wires. As Susie hefts Kris up with one hand, an arrow appears in front of her and oscillates up and down. From it extends a curved, dotted line showing Kris's projected flight path.</p>
+	<p class="note">After pressing [MENU], Kris is thrown; if they graze the weakpoints, a slashing animation plays over the weakpoint. Otherwise, it is counted as a miss. In either case, they fly offscreen to the right before reentering from the left, retaking their place in the lineup.</p>
+
+	<h4>Hitting the weakpoint(s)</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The wire was cut!</d-text>
+	</d-box>
+	<p class="note">Berdly gains a variable amount of <span class="yellow">Mercy</span> depending on the fight phase:</p>
+	<ul class="note">
+		<li>Phase 1: 12.5% <span class="yellow">Mercy</span> per target hit</li>
+		<li>Phase 2: Around 8.34% <span class="yellow">Mercy</span> per target hit</li>
+		<li>Phase 3: 6.25% <span class="yellow">Mercy</span> per target hit</li>
+		<li>Phase 4: 5% <span class="yellow">Mercy</span> per target hit</li>
+	</ul>
+
+	<h4>Missing</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Missed!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<hr>
+
+	<h3 id="throw-unused">Unused instructions</h3>
+	<p>Possibly intended for the turn after using the <a href="#raction-unused">unimplemented <span class="ralsei act">R-Action</span></a>, given that ACT's flavor text.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Use UP and DOWN to Aim for the wires!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="toast">
+	<h2>Toast</h2>
+	<p>Available only when Queen's status is "Protected" i.e. her acid shield is up.</p>
+
+	<h3 id="toast-ft">Flavor text</h3>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You made a memorable and charming toast to Queen!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Queen" emotion="C"></d-sprite>
+		<d-text asterisk>Wow Spoken Like A Real Trucie</d-text>
+		<d-box>
+			<d-sprite speaker="Susie" emotion="6"></d-sprite>
+			<d-text>(Why did they make it so emotional?)</d-text>
+		</d-box>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times, standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You made a memorable and charming toast to Queen!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times, shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other shortened ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You toasted Queen!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Queen's first acid shield (raised at the start of phase 2) loses 16.67% HP if either Susie or Ralsei are up, or 41.67% HP if both Susie and Ralsei are downed. The second and third shields (raised at the start of phase 3 and 4 respectively) lose 12.5% HP if either Susie or Ralsei are up, or 31.25% HP if both Susie and Ralsei are downed.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Queen sips from her acid!</d-text>
+	</d-box>
+	<p class="note">Queen drinks from her glass of acid, with bars on the shield going dark to correspond with the HP loss. If all bars are gone (the shield is at/below 0% HP), then it disappears into a low-resolution explosion effect, sending Queen's chair briefly spinning away. If on the normal route, Queen lets out a hoot of laughter with her cheeks flushed as her chair spins.</p>
+
+	<hr>
+
+	<h3 id="toast-dialogue">Dialogue</h3>
+	<p>Plays on turn 15 or later, and only once across all Toast ACTs.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Guys I Think I<span class="break"></span> Drank Too Much Of<span class="break"></span> This Battery Acid<span class="break"></span> (Ages 3 And Up)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="grouptoast">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} GroupToast</h2>
+	<p>Available only when Queen's status is "Protected" i.e. her acid shield is up.</p>
+
+	<h3 id="grouptoast-ft">Flavor text</h3>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="F"></d-sprite>
+		<d-text asterisk>(That glass of acid is generating her shield!)</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="3"></d-sprite>
+		<d-text asterisk>So, uh... you gonna drink all that?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Queen" emotion="6"></d-sprite>
+		<d-text asterisk>No This Is All Mine You Can't Have It</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone toasted to Queen!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Queen's first acid shield (raised at the start of phase 2) loses 50% HP. The second and third shields (raised at the start of phase 3 and 4 respectively) lose 37.5% HP.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Queen sips from her acid!</d-text>
+	</d-box>
+	<p class="note">Queen drinks from her glass of acid, with bars on the shield going dark to correspond with the HP loss. If all bars are gone (the shield is at/below 0% HP), then it disappears into a low-resolution explosion effect, sending Queen's chair briefly spinning away, and Queen lets out a hoot of laughter with her cheeks flushed.</p>
+
+	<hr>
+
+	<h3 id="grouptoast-dialogue">Dialogue</h3>
+	<p>Plays on turn 15 or later, and only once across all Toast ACTs.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Guys I Think I<span class="break"></span> Drank Too Much Of<span class="break"></span> This Battery Acid<span class="break"></span> (Ages 3 And Up)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="redbuster">
+	<h2>{% include acticon chara="Susie" -%} Red Buster</h2>
+
+	<h3 id="redbuster-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Red Damage</d-text>
+		<d-text class="orange">60% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="redbuster-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your SOUL shined its power on Susie!</d-text>
+	</d-box>
+	<p class="note">Susie attacks.</p>
+</section>
+
+<section class="d-section" id="dualheal">
+	<h2>{% include acticon chara="Ralsei" -%} Dual Heal</h2>
+
+	<h3 id="dualheal-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Heals everyone</d-text>
+		<d-text class="orange">50% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dualheal-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your SOUL shined its power on RALSEI!</d-text>
+	</d-box>
+	<p class="note">Ralsei heals all party members for 5.5 times his Magic stat.</p>
+</section>
+
+<section class="d-section" id="saction-loosen">
+	<h2 class="susie act">S-Action: Loosen</h2>
+	<p>Available only when Queen's status is "Defenseless" i.e. she has no acid shield.</p>
+
+	<h3 id="saction-loosen-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie loosens one of Berdly's wires!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 5% <span class="yellow">Mercy</span> if either Kris or Ralsei is up, and 8% <span class="yellow">Mercy</span> if both Kris and Ralsei are downed.</p>
+</section>
+
+<section class="d-section" id="saction-toast">
+	<h2 class="susie act">S-Action: Toast</h2>
+	<p>Available only when Queen's status is "Protected" i.e. her acid shield is up.</p>
+
+	<h3 id="saction-toast-ft">Flavor text</h3>
+	
+	<hr class="hr2">
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie made a toast to Queen...?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Pretty cool how we're... uh, gonna kick your ass.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>It's A Good Thing I Have No Standards For This</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times, standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie made an offensive toast to Queen!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times, shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other shortened ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie toasted Queen!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Queen's first acid shield (raised at the start of phase 2) loses 16.67% HP if either Kris or Ralsei are up, or 41.67% HP if both Kris and Ralsei are downed. The second and third shields (raised at the start of phase 3 and 4 respectively) lose 12.5% HP if either Kris or Ralsei are up, or 31.25% HP if both Kris and Ralsei are downed.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Queen sips from her acid!</d-text>
+	</d-box>
+	<p class="note">Queen drinks from her glass of acid, with bars on the shield going dark to correspond with the HP loss. If all bars are gone (the shield is at/below 0% HP), then it disappears into a low-resolution explosion effect, sending Queen's chair briefly spinning away, and Queen lets out a hoot of laughter with her cheeks flushed.</p>
+
+	<hr>
+
+	<h3 id="saction-toast-dialogue">Dialogue</h3>
+	<p>Plays on turn 15 or later, and only once across all Toast ACTs.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Guys I Think I<span class="break"></span> Drank Too Much Of<span class="break"></span> This Battery Acid<span class="break"></span> (Ages 3 And Up)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="raction-loosen">
+	<h2 class="ralsei act">R-Action: Loosen</h2>
+	<p>Available only when Queen's status is "Defenseless" i.e. she has no acid shield.</p>
+
+	<h3 id="raction-loosen-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei loosens one of Berdly's wires!</d-text>
+	</d-box>
+	<p class="note">Berdly gains 5% <span class="yellow">Mercy</span> if either Kris or Susie is up, and 8% <span class="yellow">Mercy</span> if both Kris and Susie are downed.</p>
+</section>
+
+<section class="d-section" id="raction-unused">
+	<h2>Unused second <span class="ralsei act">R-Action</span></h2>
+	<p>Given the flavor text's reference to the <a href="#throw">{% include acticon chara="Susie" -%} Throw ACT</a>, would likely have been available only when Queen's status is "Defenseless" i.e. she has no acid shield.</p>
+
+	<h3 id="raction-unused-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Aiming with Throw is easier next turn!</d-text>
+	</d-box>
+	<p class="note">Using {% include acticon chara="Susie" -%} Throw on the next turn would likely have <a href="#throw-unused">replaced the controls to make for easier throwing</a>.</p>
+</section>
+
+<section class="d-section" id="raction-toast">
+	<h2 class="ralsei act">R-Action: Toast</h2>
+	<p>Available only when Queen's status is "Protected" i.e. her acid shield is up.</p>
+
+	<h3 id="raction-toast-ft">Flavor text</h3>
+	
+	<hr class="hr2">
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei made a toast to Queen!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>A toast to you, er, making me wear a butler outfit!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Queen" emotion="L"></d-sprite>
+		<d-text asterisk>Bro That's Weird But OK</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times, standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei made a slightly cringeworthy toast to Queen!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times, shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other shortened ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei toasted Queen!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Queen's first acid shield (raised at the start of phase 2) loses 16.67% HP if either Kris or Susie are up, or 41.67% HP if both Kris and Susie are downed. The second and third shields (raised at the start of phase 3 and 4 respectively) lose 12.5% HP if either Kris or Susie are up, or 31.25% HP if both Kris and Susie are downed.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Queen sips from her acid!</d-text>
+	</d-box>
+	<p class="note">Queen drinks from her glass of acid, with bars on the shield going dark to correspond with the HP loss. If all bars are gone (the shield is at/below 0% HP), then it disappears into a low-resolution explosion effect, sending Queen's chair briefly spinning away, and Queen lets out a hoot of laughter with her cheeks flushed.</p>
+
+	<hr>
+
+	<h3 id="raction-toast-dialogue">Dialogue</h3>
+	<p>Plays on turn 15 or later, and only once across all Toast ACTs.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Guys I Think I<span class="break"></span> Drank Too Much Of<span class="break"></span> This Battery Acid<span class="break"></span> (Ages 3 And Up)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of fight</h2>
+	<p>Plays automatically when Berdly reaches 100% <span class="yellow">Mercy</span> or Queen reaches 0% HP.</p>
+
+	<h3 id="end-nonviolent">If Berdly gained 100% <span class="yellow">Mercy</span> and has previously been spared/pacified</h3>
+	<p>Requires Berdly to have been spared or pacified in both the <a href="{{ '/encounters/berdlycyberfield' | relative_url }}">Cyber Field rollercoasters encounter</a> and the <a href="{{ '/encounters/berdlycybercity' | relative_url }}">Cyber City alleyway encounter</a>.</p>
+	<p class="note">The music cuts off.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Not Bad You<span class="break"></span> Foolish Children</d-text>
+	</d-box>
+	<p class="note">Behind his wire, Berdly shakes. Queen lifts her head, shocked.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>What The</d-text>
+	</d-box>
+	<p class="note">Still plugged, Berdly moves over to the party's side of the rooftop, turning to face Queen.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>What Are<span class="break"></span> You Doing</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Why Isn't<span class="break"></span> My Control<span class="break"></span> Wire Working</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Thanks to...<span class="break"></span> my comrades'<span class="break"></span> kindness...<span class="break"></span> their MERCY!</d-text>
+	</d-box>
+	<p class="note">Berdly jerkily lifts a hand to the plug on his face.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>Now...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Berdly</d-speaker>
+		<d-text>It's time...<span class="break"></span> for me to<span class="break"></span> take my<span class="break"></span> freedom!!</d-text>
+	</d-box>
+	<p class="note">The screen flashes white as <a href="{{ '/chapters/chapter2/confrontingqueen#postfight-nonviolent' | relative_url }}">the encounter ends.</a></p>
+
+	<hr>
+
+	<h3 id="end-violent">If Queen reached 0% HP, or Berdly gained 100% <span class="yellow">Mercy</span> but was previously defeated violently</h3>
+	<p class="note">The music cuts off.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Not Bad You<span class="break"></span> Foolish Children</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If Queen reached 0% HP</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>But Even If You<span class="break"></span> Deplete The Health<span class="break"></span> Points (Of My: Chair)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>If Berdly reached 100% <span class="yellow">Mercy</span></h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>But No Matter<span class="break"></span> How Long This<span class="break"></span> Battle Drags On</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>I Can Simply Make<span class="break"></span> Another Barrier Using<span class="break"></span> My: Drink</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Bottoms Up</d-text>
+	</d-box>
+	<p class="note">Queen holds out her empty wineglass expectantly, but all that happens is an error SFX playing. A brief pause.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Wait A Second</d-text>
+	</d-box>
+	<p class="note">Queen tries holding out the glass again, but once more, only the error SFX plays. Another brief pause.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Hey Chat Does Anyone<span class="break"></span> Know What Happened<span class="break"></span> To That Stuff</d-text>
+	</d-box>
+	<p class="note"><a href="{{ '/chapters/chapter2/confrontingqueen#postfight-violent' | relative_url }}">The encounter ends.</a></p>
+</section>
