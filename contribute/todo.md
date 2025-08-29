@@ -90,7 +90,11 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/closetworld` - Supply closet dark world, contains Castle Town and ??????
 		* `/cardkingdom` - Chapter 1 dark world
 		* `/cyberworld` - Chapter 2 dark world
+			* `/housepuzzles` - the section in the middle of the acid lake that has all the house bridge puzzles, the one werewire and swatchling, and the maus puzzle
+			* `/basement`
+				* `#machine` - You already know who it isssss
 		* `/tvworld` - Chapter 3 dark world
+			* `/greenroom` - Duh
 		* `/darksanctuary` - Chapter 4 dark worlds. I think for this one we can include all three sanctuaries' subpages
 		* Ach how do we even subdivide these pages
 * Chapters `/chapters`
