@@ -1,0 +1,281 @@
+---
+title: Queen's mansion - Basement
+
+description: >
+  <p>Narration for the basement of Queen's mansion, where the mysterious machine is found.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_forcefield_Other_10
+    chapters: [2]
+    note: forcefield
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [2]
+    note: power source, locked door, alcoves, machine
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: choices
+  -
+    name: gml_Object_obj_treasure_room_Create_0
+    chapters: [2]
+    note: treasure chest setup
+  -
+    name: gml_Object_obj_treasure_room_Other_10
+    chapters: [2]
+    note: treasure chest interaction
+  -
+    name: gml_GlobalScript_scr_itemget_anytype_text
+    chapters: [2]
+    note: treasure chest interaction
+  -
+    name: gml_GlobalScript_scr_weaponinfo
+    chapters: [2]
+    note: Puppet Scarf info
+  -
+    name: gml_GlobalScript_scr_armorinfo
+    chapters: [2]
+    note: Dealmaker info
+
+see_also:
+  -
+    url: /chapters/chapter2/spamtonneo
+    name: Spamton NEO encounter in basement
+
+toc:
+  -
+    id: chestwest
+    name: Western treasure chest
+  -
+    id: powersource
+    name: Forcefield power source
+  -
+    id: lockeddoor
+    name: Unused locked door
+  -
+    id: forcefield
+    name: Forcefield
+  -
+    id: alcoves
+    name: Empty alcoves
+  -
+    id: machine
+    name: Machine
+    subheadings:
+      -
+        id: machine-initial
+        name: Initial
+      -
+        id: machine-emptydisk
+        name: After obtaining the Empty Disk
+      -
+        id: machine-loadeddisk
+        name: After obtaining the Loaded Disk
+      -
+        id: machine-insertdisk
+        name: After the Loaded Disk has been inserted into the machine
+  -
+    id: chesteast
+    name: Eastern treasure chest
+---
+<section class="d-section" id="chestwest">
+	<h2>Western treasure chest</h2>
+	<p>Present in one of the rooms in the western area, alongside empty treasure chests holding only dust.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(You opened the treasure chest.)</d-text>
+		<d-text asterisk>(Inside was <span class="yellow">1 Dark Dollars</span>.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(<span class="yellow">1 Dark Dollars</span> was added to your <span class="yellow">MONEY HOLE</span>.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(The chest is empty.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="powersource">
+	<h2>Forcefield power source</h2>
+	<p>Present in the lower section of the western area.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Sounds like a forcefield powering down.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Nothing happened.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="lockeddoor">
+	<h2>Unused locked door</h2>
+	<p>Unused text, for a locked door that would've been present in the western area's first hallway.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>The door rattles but doesn't open.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="forcefield">
+	<h2>Forcefield</h2>
+	<p>Initially blocking the way to the eastern side of the basement; disappears after its power source is turned off on the western side.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It appears to be some kind of forcefield.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="alcoves">
+	<h2>Empty alcoves</h2>
+	<p>Present in the far northeastern area. Includes all alcoves except the one on the far right.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>There's nothing interesting.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="machine">
+	<h2>Machine</h2>
+	<p>Initially present in the far northeastern area, in the alcove on the far right.</p>
+
+	<h3 id="machine-initial">Initial</h3>
+	<p class="note">Something shines in the machine's chest.</p>
+	<d-box theme="dark">
+		<d-text asterisk>There's something shining inside the old machine... take it?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(The EmptyDisk was added to your KEY ITEMS.)</d-text>
+		</d-box>
+		<p class="note">The <a href="{{ '/misc/darkitems#emptydisk' | relative_url }}">Empty Disk</a> is added to the inventory, and the light in the machine's chest disappears permanently.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Nothing happens.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="machine-emptydisk">After obtaining the Empty Disk</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="machine-loadeddisk">After obtaining the <a href="{{ '/misc/darkitems#loadeddisk' | relative_url }}">Loaded Disk</a></h3>
+	<d-box theme="dark">
+		<d-text asterisk>(There's a slot for a disk here.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Insert the LoadedDisk?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(You put the disk into the broken down mechanism.)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(...)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(Nothing happened.)</d-text>
+		</d-box>
+		<p class="note">The Loaded Disk is removed from the inventory. From this point onwards, attempting to leave the basement will trigger the <a href="{{ '/chapters/chapter2/spamtonneo#prefight' | relative_url }}">Spamton NEO encounter</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Nothing happens.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="machine-insertdisk">After the Loaded Disk has been inserted into the machine</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(You tapped the mechanism.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... Nothing happened.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You shook the mechanism.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You hit it.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You kicked it.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Nothing happened.)</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="chesteast">
+	<h2>Eastern treasure chest</h2>
+	<p>Present in the transformed eastern hallway after fighting <a href="{{ '/chapters/chapter2/spamtonneo' | relative_url }}">Spamton NEO</a>, if the relevant equipment inventory was full at the time of the encounter.</p>
+
+	<h3>First time</h3>
+	<h4>If Spamton NEO was defeated</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(You opened the treasure chest.)</d-text>
+		<d-text asterisk>(Inside was <span class="yellow">PuppetScarf</span>.)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If the weapon inventory isn't full</h5>
+	<d-box theme="dark">
+		<d-text asterisk>(<span class="yellow">PuppetScarf</span> was added to your <span class="yellow">WEAPONs</span>.)</d-text>
+	</d-box>
+	<p class="note">The <a href="{{ '/misc/weapons#puppetscarf' | relative_url }}">PuppetScarf</a> is added to the inventory.</p>
+	<hr class="hr3">
+	<h5>If the weapon inventory is full</h5>
+	<d-box theme="dark">
+		<d-text asterisk>(You have too many <span class="yellow">WEAPONs</span> to take <span class="yellow">PuppetScarf</span>.)</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<h4>If Spamton NEO was spared</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(You opened the treasure chest.)</d-text>
+		<d-text asterisk>(Inside was <span class="yellow">Dealmaker</span>.)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If the armor inventory isn't full</h5>
+	<d-box theme="dark">
+		<d-text asterisk>(<span class="yellow">Dealmaker</span> was added to your <span class="yellow">ARMORs</span>.)</d-text>
+	</d-box>
+	<p class="note">The <a href="{{ '/misc/armor#dealmaker' | relative_url }}">Dealmaker</a> is added to the inventory.</p>
+	<hr class="hr3">
+	<h5>If the armor inventory is full</h5>
+	<d-box theme="dark">
+		<d-text asterisk>(You have too many <span class="yellow">ARMORs</span> to take <span class="yellow">Dealmaker</span>.)</d-text>
+	</d-box>
+	<hr class="hr2">
+</section>
