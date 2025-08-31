@@ -1,0 +1,445 @@
+---
+title: Knight encounter
+
+description: >
+  <p>Flavor text and dialogue for the battle against the Roaring Knight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_knight_enemy_Step_0
+    chapters: [3]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [3]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [3]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: ft-attack
+        name: With specific attacks
+      -
+        id: ft-downed
+        name: Party member downed
+  -
+    id: dialogue
+    name: Dialogue
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: holdbreath
+        name: HoldBreath
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %} encounterno = 115 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+	
+	<h3 id="ft-specific">With specific attacks</h3>
+	<p>The attack rotation and therefore the accompanying flavor text is largely scripted. Unless overridden by <a href="#ft-downed">flavor text for downed party members</a>, the below lines play out sequentially. (See the <a href="{% include wikilink page='Knight#Attacks' %}">Deltarune Wiki</a> for descriptions of each attack.)</p>
+
+	<h4 id="starstorm1">Initial encounter (Phase 1, Star Storm)</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The Roaring Knight appeared.</d-text>
+	</d-box>
+
+	<h5>Unused attack-specific variant</h5>
+	<p>Hint towards the type of attack, similar to other turns. Gets overridden by the initial encounter text.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You felt lightheaded.</d-text>
+		<d-text asterisk>You saw silver stars...</d-text>
+	</d-box>
+		
+	<h4 id="trackingswords1">Phase 1, Tracking Swords</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You felt something hovering close behind your head...</d-text>
+	</d-box>
+		
+	<h4 id="boxsplitter1">Phase 1, Box Splitter</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Suddenly, the north wind blew fiercely.</d-text>
+	</d-box>
+		
+	<h4 id="swordtunnel1">Phase 1, Sword Tunnel</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your vision narrows.</d-text>
+	</d-box>
+		
+	<h4 id="rotatingslash1">Phase 1, Rotating Slash</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your chest feels tight.</d-text>
+	</d-box>
+
+	<h4 id="starstorm2">Phase 2, Star Storm</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You felt lightheaded.</d-text>
+		<d-text asterisk>You saw golden stars...</d-text>
+	</d-box>
+		
+	<h4 id="boxsplitter2">Phase 2, Box Splitter</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Suddenly, the north and east winds blew fiercely.</d-text>
+	</d-box>
+		
+	<h4 id="swordtunnel2">Phase 2, Sword Tunnel</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your vision narrows.</d-text>
+		<d-text asterisk>... Your head is spinning.</d-text>
+	</d-box>
+		
+	<h4 id="trackingswords2">Phase 2, Tracking Swords</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You feel surrounded.</d-text>
+	</d-box>
+		
+	<h4 id="rotatingslash2">Phase 2, Rotating Slash</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You felt your chest twisting.</d-text>
+	</d-box>
+
+	<h4 id="starstorm3">Phase 3, Star Storm</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You felt lightheaded.</d-text>
+		<d-text asterisk>You felt a migraine coming on...</d-text>
+	</d-box>
+		
+	<h4 id="boxsplitter3">Phase 3, Box Splitter</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Suddenly, a tempest.</d-text>
+	</d-box>
+		
+	<h4 id="trackingswords3">Phase 3, Tracking Swords</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your vision narrows.</d-text>
+		<d-text asterisk>... The world revolves around you.</d-text>
+	</d-box>
+		
+	<h4 id="swordtunnel3">Phase 3, Sword Tunnel</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You feel cornered.</d-text>
+	</d-box>
+		
+	<h4 id="rotatingslash3">Phase 3/4, Rotating Slash</h4>
+	<p>This attack occurs on turn 15 as a part of Phase 3. If Phase 4 is entered prior to turn 15, then this attack occurs as the first turn of Phase 4.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your heartbeat becomes twisted.</d-text>
+	</d-box>
+
+	<h4 id="chargeup">Phase 4, Charge-up</h4>
+	<p class="note">The Knight does not attack on its turn, instead charging up.</p>
+	<hr class="hr2">
+	<h5>If Susie is not down</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie grew pale.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>If Susie is down</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie struggled to give some kind of warning.</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<h4 id="roaring">Phase 4, Roaring</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The Knight's hands glow a strange color...</d-text>
+	</d-box>
+
+	<h4 id="postroaring">Phase 4, after Roaring</h4>
+	<h5>If any hits were taken during the entire fight</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The enemy suddenly let down its guard!</d-text>
+	</d-box>
+
+	<h5>If no hits were taken during the entire fight</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris coughed.</d-text>
+		<d-text asterisk>The enemy slowly tilted its head...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-downed">Party member downed</h3>
+	<p>The below messages override the attack-specific flavor text above. If more than one party member is downed/swooned, all applicable flavor text will be presented as a single flavor text box in the usual order of Kris → Susie → Ralsei.</p>
+	<h4>Kris downed</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris kneeled in silence.</d-text>
+	</d-box>
+	<h4>Susie swooned</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie was hurt and beaten.</d-text>
+	</d-box>
+	<h4>Ralsei swooned</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei became a pile of fluff.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+	<p>From turn 6, Susie begins speaking before the Knight attacks; dialogue progresses with every additional turn where Susie is not downed. Her lines are listed here under the first turn number they can be played during.</p>
+
+	<h3 id="dialogue-turn6">Turn 6</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Heheh...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Didn't... think<span class="break"></span> we'd still be<span class="break"></span> standing, did you?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn7">Turn 7</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Thing is,<span class="break"></span> you actually...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>You actually messed up,<span class="break"></span> picking a fight with US!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn8">Turn 8</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>You? You're all<span class="break"></span> damn alone...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Me? I got...<span class="break"></span> Kris and Ralsei<span class="break"></span> behind me.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn9">Turn 9</h3>
+	<h4>If either Kris or Ralsei is not downed</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Even... even if<span class="break"></span> you knock me down...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>As long as Kris,<span class="break"></span> Ralsei, are here...</d-text>
+	</d-box>
+	<h4>If Kris and Ralsei are both downed</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Even... even if<span class="break"></span> you knock them down...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>As long as<span class="break"></span> I'm here...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn10">Turn 10</h3>
+	<hr class="hr2">
+	<h4>If either Kris or Ralsei is not downed</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>As long as Kris has got<span class="break"></span> a hand to lift me up with...</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>If Kris and Ralsei are both downed</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>As long as I'm here to<span class="break"></span> lift them back up...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Heh... you're never gonna<span class="break"></span> win, you hear me?!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn11">Turn 11</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>So... give up.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn12">Turn 12</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>You know you can't<span class="break"></span> win... so... give up!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn13">Turn 13</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... You won't even...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... say a thing, huh...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn14">Turn 14</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... heh... heheheh...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Man, I'm done talking.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... people like you...<span class="break"></span> just piss me off.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-usage">Usage</h3>
+	<h4 id="check-usage1">First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris analyzed the enemy!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But Kris<br> couldn't learn anything.</d-text>
+	</d-box>
+
+	<h4 id="check-usage2">Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris points into the distance.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Nothing happened.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="holdbreath">
+	<h2>HoldBreath</h2>
+
+	<h3 id="holdbreath-ft1">First time</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris held their breath.</d-text>
+		<d-text asterisk>Their heartbeat quickened.</d-text>
+		<d-text asterisk>The SOUL now moves faster.</d-text>
+	</d-box>
+	<p class="note">The SOUL grows faster for the rest of the encounter.</p>
+
+	<hr>
+
+	<h3 id="holdbreath-ft2">Subsequent times</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris held their breath...</d-text>
+		<d-text asterisk>Kris smiled.</d-text>
+		<d-text asterisk>Nothing happened.</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie talked to the Knight!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="J"></d-sprite>
+		<d-text asterisk>I don't know what the hell you are, but...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="J"></d-sprite>
+		<d-text asterisk>Leave Toriel alone! You hear me!?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="W"></d-sprite>
+		<d-text asterisk>... Fine, you don't wanna listen?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="X"></d-sprite>
+		<d-text asterisk>Then we'll just. Have to do things the hard way.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Susie will not ACT any more.)</d-text>
+	</d-box>
+	<p class="note"><span class="susie act">S-Action</span> is removed from Susie's MAGIC menu and cannot be used again.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft1">First time</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei tried talking...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Please... please, don't do this...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="e"></d-sprite>
+		<d-text asterisk>If the Roaring happens, then... then...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="Z"></d-sprite>
+		<d-text asterisk>Please... stop...!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(... but nothing happened.)</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<hr>
+
+	<h3 id="raction-ft2">Subsequent times</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei tried talking...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="8"></d-sprite>
+		<d-text asterisk>Please, stop...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(... but nothing happened.)</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>

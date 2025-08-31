@@ -91,8 +91,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/cardkingdom` - Chapter 1 dark world
 		* `/cyberworld` - Chapter 2 dark world
 			* `/housepuzzles` - the section in the middle of the acid lake that has all the house bridge puzzles, the one werewire and swatchling, and the maus puzzle
-			* `/basement`
-				* `#machine` - You already know who it isssss
 		* `/tvworld` - Chapter 3 dark world
 			* `/greenroom` - Duh
 		* `/darksanctuary` - Chapter 4 dark worlds. I think for this one we can include all three sanctuaries' subpages
@@ -158,7 +156,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* gml_Object_obj_ribbick_enemy_Step_0 `/ribbick`
 			* gml_Object_obj_rouxls_ch3_enemy_Step_0 `/rouxls2` or `/rouxlsch3` (contracts)
 			* gml_Object_obj_tenna_enemy_Step_0 `/tenna2` or `/tennafinal`
-			* gml_Object_obj_knight_enemy_Step_0 `/knight`
 		* Chapter 4
 			<!-- Dark Sanctuary: Guei, Balthizard, Bibliox, Jackenstein, Mizzle, Miss Mizzle, Hammer of Justice -->
 			* gml_Object_obj_guei_enemy_Step_0 `/guei`
