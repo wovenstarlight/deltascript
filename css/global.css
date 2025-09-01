@@ -793,6 +793,7 @@ d-box, d-choices {
 				--jevil: #3c3c97; /* darkened for readbility from #6d6dc0 */
 				--friend-pink: #a24b68; /* darkened for readability from #ffaec9 */
 				--friend-yellow: #9f9600; /* darkened for readability from #fff200 */
+				--gerson: #3d7a06; /* darkened for readability from #65aa26 */
 			}
 		}
 		&[theme=battletalk] {
