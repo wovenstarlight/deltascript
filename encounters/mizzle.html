@@ -1,0 +1,392 @@
+---
+title: Mizzle encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Mizzle.</p>
+
+sources:
+  -
+    name: gml_Object_obj_mizzle_enemy_Step_0
+    chapters: [4]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [4]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [4]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-mizzle
+            name: With another Mizzle
+          -
+            id: encounter-balthizardguei
+            name: With Balthizard and Guei
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-awake
+        name: When awake
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: dazzle
+        name: Dazzle
+      -
+        id: embezzle
+        act_icon: Susie
+        name: Embezzle
+      -
+        id: nuzzle
+        act_icon: Ralsei
+        name: Nuzzle
+      -
+        id: lullabyx
+        act_icon: [Susie, Ralsei]
+        name: LullabyX
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(153|159|165|166|167|171|184|185|189)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-mizzle">With another Mizzle</h4> <!--153-->
+	<h5>If all Mizzles are awake</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mizzle was woken up!</d-text>
+	</d-box>
+
+	<h5>If the last Mizzle is asleep</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mizzle is sleeping peacefully!</d-text>
+	</d-box>
+
+	<h4 id="encounter-balthizardguei">With Balthizard and Guei</h4> <!--189-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Water, fire, air.</d-text>
+	</d-box>
+
+	<!-- UNUSED:
+		- 159: Bibliox
+		- 165: Guei
+		- 166: Balthizard
+		- 167: Organikk
+		- 177: Wicabel
+		- 184: Two other Mizzles
+		- 185: Solo
+	-->
+
+	<hr>
+
+	<h3 id="ft-awake">When awake</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mizzle sings effervescently.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mizzle ho-hums, ho-hums.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mizzle uses a ring left by a cup as a magic circle.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mizzle contemplates going back in her container.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like the rainbow made by the sprinkler.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mizzle is dozing.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mizzle's hat is melting.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mizzle turns the hue of unsweetened caffeine-free pink lemonade.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<p>When <span class="blue">Tired</span>.</p>
+	<img src="{{ '/assets/images/story/talkmizzle/z.png' | relative_url }}" width="64" alt="Z" />
+
+	<hr>
+
+	<h3 id="dialogue-awake">When awake</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Mizzle</d-speaker>
+		<d-text>Who's there?<span class="break"></span> Who's there?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Mizzle</d-speaker>
+		<d-text>Water you<span class="break"></span> doing?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Mizzle</d-speaker>
+		<d-text>What is it?<span class="break"></span> What is it?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Mizzle</d-speaker>
+		<d-text>Am I still<span class="break"></span> dreaming?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>MIZZLE - A sleepy water spirit. When TIRED, use Ralsei's PACIFY!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dazzle">
+	<h2>Dazzle</h2>
+
+	<h3 id="dazzle-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>35% Mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dazzle-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You DAZZLEd MIZZLE!</d-text>
+	</d-box>
+	<p class="note">Kris points as per the usual ACT animation; chiming sparkles appear in front of them.</p>
+	<p class="note">If <span class="blue">Tired</span>, Mizzle wakes up and gains 50% <span class="yellow">Mercy</span>. If not <span class="blue">Tired</span>, Mizzle gains 35% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="embezzle">
+	<h2>{% include acticon chara="Susie" -%} Embezzle</h2>
+
+	<h3 id="embezzle-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>TIRE, steal item</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="embezzle-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie EMBEZZLED an item!</d-text>
+	</d-box>
+	<p class="note">Susie jumps onto the targeted Mizzle (who gains 35% <span class="yellow">Mercy</span> and becomes <span class="blue">Tired</span>), then jumps back. The flavor text continues to one of the below outcomes.</p>
+
+	<h4 id="embezzle-success">Successfully embezzled</h4>
+	<p class="note">30.69% (31/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Stole 100 Dark Dollars!</d-text>
+	</d-box>
+	<p class="note">$100 is added to your total money.</p>
+	<hr class="hr2">
+	<p class="note">29.7% (30/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Stole Scarlixir!</d-text>
+	</d-box>
+	<p class="note"><a href="{{ '/misc/darkitems#scarlixir' }}">Scarlixir</a> is added to the inventory.</p>
+	<hr class="hr2">
+	<p class="note">29.7% (30/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Stole Darker Candy!</d-text>
+	</d-box>
+	<p class="note"><a href="{{ '/misc/darkitems#darkercandy' }}">Darker Candy</a> is added to the inventory.</p>
+	<hr class="hr2">
+	<p class="note">9.9% (10/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Stole Revive Mint!</d-text>
+	</d-box>
+	<p class="note"><a href="{{ '/misc/darkitems#revivemint' }}">Revive Mint</a> is added to the inventory.</p>
+
+	<h4 id="embezzle-fail">Failure</h4>
+	<p>49.5% chance if Mizzle was not <span class="blue">Tired</span>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But, she failed!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<h4 id="embezzle-broke">Nothing to steal</h4>
+	<p>If Mizzle was previously successfully {% include acticon chara="Susie" -%} Embezzled from.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But, there was nothing to steal!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<h4 id="embezzle-inventoryfull">Inventory full</h4>
+	<p>Not including storage.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But, your items are full!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="nuzzle">
+	<h2>{% include acticon chara="Ralsei" -%} Nuzzle</h2>
+
+	<h3 id="nuzzle-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>TIRE by fluffy move</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="nuzzle-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei NUZZLEd MIZZLE!</d-text>
+	</d-box>
+	<p class="note">Ralsei moves up to the targeted Mizzle and nuzzles her, then gets back in line.</p>
+	<hr class="hr2">
+	<h4>If Mizzle was awake</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>MIZZLE became TIRED!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Mizzle gains 35% <span class="yellow">Mercy</span> and becomes <span class="blue">Tired</span>.</p>
+</section>
+
+<section class="d-section" id="lullabyx">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} LullabyX</h2>
+
+	<h3 id="lullabyx-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Sing to everyone<span class="break"></span>...?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="lullabyx-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone sang a LULLABY!</d-text>
+	</d-box>
+	<p class="note">Ralsei clasps his hands and sings sweetly. After a moment, Susie attempts to join in, but her singing shocks Ralsei and causes any <span class="blue">Tired</span> Mizzles to wake up and gain 50% <span class="yellow">Mercy</span>; any Mizzles that were already awake gain 35% <span class="yellow">Mercy</span>.</p>
+	<hr class="hr2">
+	<h4>If only one Mizzle was awoken</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>MIZZLE woke up!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>If more than one Mizzle was awoken</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>MIZZLEs woke up!</d-text>
+	</d-box>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie gargles loudly!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie breaks a wet floor sign!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie snores while awake!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Mizzle gains 20% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei sips politely!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei puts a wet floor sign!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei makes toothpaste!!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Mizzle gains 25% <span class="yellow">Mercy</span>.</p>
+</section>

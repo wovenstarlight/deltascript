@@ -159,7 +159,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* Chapter 4
 			* gml_Object_obj_guei_enemy_Step_0 `/guei`
 			* gml_Object_obj_jackenstein_enemy_Step_0 `/jackenstein`
-			* gml_Object_obj_mizzle_enemy_Step_0 `/mizzle`
 			* gml_Object_obj_holywatercooler_enemy_Step_0 `/missmizzle`
 			* gml_Object_obj_hammer_of_justice_enemy_Step_0 `/hammerofjustice`
 			* gml_Object_obj_halo_enemy_Step_0 `/winglade`
