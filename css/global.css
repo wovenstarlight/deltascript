@@ -712,7 +712,7 @@ d-box, d-choices {
 		&[theme=battlemenu], &[theme=battledesc],
 		&[theme=eightbit], &[theme="8bit"] {
 			border-image-source: url("../assets/images/textbox/plain.png");
-			&:has(.hideoverflow) { clip-path: xywh(0.25em 0.25em calc(100% - 0.5em) calc(100% - 0.5em)) }
+			&:has(.hideoverflow, d-box) { clip-path: xywh(0.25em 0.25em calc(100% - 0.5em) calc(100% - 0.5em)) }
 		}
 
 		&[theme^=obj], &[theme=battlemenu] { width: calc(var(--basewidth) + 4em) }
@@ -871,7 +871,7 @@ d-box, d-choices {
 			font-size: 1em;
 
 			/* For boxes with small dialogues, add spacing so dialogue doesn't overlap. ...too much, at least. */
-			&:has(d-box) { min-height: calc(var(--baseheight) + 1.25em) }
+			&:has(d-box) { padding-block-end: 2.25em }
 		}
 
 		/* Forced line break */
@@ -1026,6 +1026,20 @@ d-box {
 				&[place~=bottom][place~=center-x] { bottom: -1.7em }
 				&[place~=top][place~=center-x] { top: -1.7em }
 			}
+		}
+		
+		@media (max-width: 30rem) {
+			d-box d-text { font-size: 1.25em }
+		}
+
+		&[theme=battlemenu] d-box:not(
+			[place],
+			[place~=bottom],
+			[place~=top]
+		),
+		&[theme=battlemenu] d-box[place~=bottom] {
+			bottom: -3.6em;
+			d-sprite img { --size: 4.75em }
 		}
 	}
 
