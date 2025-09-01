@@ -157,20 +157,16 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* gml_Object_obj_rouxls_ch3_enemy_Step_0 `/rouxls2` or `/rouxlsch3` (contracts)
 			* gml_Object_obj_tenna_enemy_Step_0 `/tenna2` or `/tennafinal`
 		* Chapter 4
-			<!-- Dark Sanctuary: Guei, Balthizard, Bibliox, Jackenstein, Mizzle, Miss Mizzle, Hammer of Justice -->
 			* gml_Object_obj_guei_enemy_Step_0 `/guei`
-			* gml_Object_obj_balthizard_enemy_Step_0 `/balthizard`
 			* gml_Object_obj_bibliox_enemy_Step_0 `/bibliox`
 			* gml_Object_obj_jackenstein_enemy_Step_0 `/jackenstein`
 			* gml_Object_obj_mizzle_enemy_Step_0 `/mizzle`
 			* gml_Object_obj_holywatercooler_enemy_Step_0 `/missmizzle`
 			* gml_Object_obj_hammer_of_justice_enemy_Step_0 `/hammerofjustice`
-			<!-- 2nd Sanctuary: Winglade, Organikk, Wicabel, Sound of Justice -->
 			* gml_Object_obj_halo_enemy_Step_0 `/winglade`
 			* gml_Object_obj_organ_enemy_Step_0 `/organikk`
 			* gml_Object_obj_bell_enemy_Step_0 `/wicabel`
 			* gml_Object_obj_sound_of_justice_enemy_Step_0 `/soundofjustice`
-			<!-- 3rd Sanctuary: Titan Spawn, Titan -->
 			* gml_Object_obj_titan_spawn_enemy_Step_0 `/titanspawn`
 			* gml_Object_obj_titan_enemy_Step_0 `/titan`
 			* gml_Object_obj_elnina_rematch_enemy_Step_0/gml_Object_obj_lanino_rematch_enemy_Step_0 `/weatherdojo` (Dojo variant)

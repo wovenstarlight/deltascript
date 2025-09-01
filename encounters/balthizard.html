@@ -1,0 +1,456 @@
+---
+title: Balthizard encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Balthizard.</p>
+
+sources:
+  -
+    name: gml_Object_obj_balthizard_enemy_Step_0
+    chapters: [4]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [4]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [4]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: prefight
+    name: Before the fight, when escorting Gerson
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-balthizard
+            name: With another Balthizard
+          -
+            id: encounter-guei
+            name: With Guei
+          -
+            id: encounter-mizzleguei
+            name: With Mizzle and Guei
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-lightup
+        name: When lit up
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-lightup
+        name: When lit up
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: shake
+        name: Shake
+      -
+        id: shakex
+        act_icon: Susie
+        name: ShakeX
+      -
+        id: lightup
+        act_icon: Ralsei
+        name: LightUp
+      -
+        id: oldman
+        act_icon: Gerson
+        name: OldMan
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(global\.encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(151|158|162|166|168|189)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="prefight">
+	<h2>Before the fight, when escorting Gerson</h2>
+	<p>Plays only while escorting Gerson to his study, during the dual-Balthizard encounter in the many-windowed hall.</p>
+
+	<p class="note">The encounter begins with the party on the left, two Balthizards on the right, and the old man Gerson standing at the bottom-center of the space between them, facing the party.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Hm, what's<span class="break"></span> all this now?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>H-hey!!</d-text>
+		<d-text>We're fighting!!<span class="break"></span> Get out of here!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>I see, I see.<span class="break"></span> Well, you kids<span class="break"></span> have fun!</d-text>
+	</d-box>
+
+	<p class="note">The music pauses as Gerson walks offscreen to the right, the Balthizards watching him go. After he leaves, the music resumes and <a href="#encounter-balthizard">the encounter continues</a>.</p>
+</section>
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-balthizard">With another Balthizard</h4> <!--151-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Balthizard swings in!</d-text>
+	</d-box>
+
+	<h4 id="encounter-guei">With Guei</h4> <!--158-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like scented candles.</d-text>
+	</d-box>
+
+	<h4 id="encounter-mizzleguei">With Mizzle and Guei</h4> <!--189-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Water, fire, air.</d-text>
+	</d-box>
+
+	<!-- UNUSED:
+		- 162: with Winglade
+		- 166: With Mizzle
+		- 168: With Organikk
+	-->
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Balthizard clambers slowly.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Balthizard releases a plume of sickly sweet nostalgia.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Balthizard breathes a fog of sunbeam on warm wood.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Balthizard spins the scent of a rainy, grassy day.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Balthizard coughs plumes like old pillows on golden hair.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lightup">When <a href="#lightup">lit up</a></h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Balthizard burns with taco-scented excitement.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Balthizard releases a scent of candles and chamomile.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Balthizard coughs scentlessly.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Balthizard laughs plumes of heart-shaped gas.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Balthizard</d-speaker>
+		<d-text>Slow down.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Balthizard</d-speaker>
+		<d-text>Take it easy.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Balthizard</d-speaker>
+		<d-text>Glory,<span class="break"></span> memory.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Balthizard</d-speaker>
+		<d-text>Sit back,<span class="break"></span> relax.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-lightup">When lit up</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Balthizard</d-speaker>
+		<d-text>Let's burn<span class="break"></span> rubber!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Balthizard</d-speaker>
+		<d-text>Strike while<span class="break"></span> the iron<span class="break"></span> is hot!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Balthizard</d-speaker>
+		<d-text>Inferno,<span class="break"></span> Inferno!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>BALTHIZARD - An ancient aromancer. Punishes intruders with beautiful scent.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="shake">
+	<h2>Shake</h2>
+
+	<h3 id="shake-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Left <span class="break"></span>  Right= Mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="shake-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press Left and Right rapidly to shake!</d-text>
+	</d-box>
+	<p class="note">A 6-second timer appears. Pressing left/right causes Balthizard's head to shake from side to side, gaining up to 60% <span class="yellow">Mercy</span> in one use. If the <span class="yellow">Mercy</span> gathered while using this ACT adds up to a total of 100%, the ACT ends early. If Balthizard was already at 100% <span class="yellow">Mercy</span>, it's automatically spared upon using this ACT.</p>
+
+	<hr>
+
+	<h3 id="shake-dialogue">Dialogue</h3>
+	<h4>When not lit up</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Balthizard</d-speaker>
+		<d-text>A nice<span class="break"></span> massage.</d-text>
+	</d-box>
+	<h4>When lit up</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Balthizard</d-speaker>
+		<d-text>What a<span class="break"></span> blast!<span class="break"></span> Hoh hoh!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="shakex">
+	<h2>{% include acticon chara="Susie" -%} ShakeX</h2>
+
+	<h3 id="shakex-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Left <span class="break"></span>  Right= Mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="shakex-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press Left and Right rapidly to shake!</d-text>
+	</d-box>
+	<p class="note">A 6-second timer appears. Pressing left/right causes Balthizard's head to shake from side to side, gaining up to 90% <span class="yellow">Mercy</span> in one use. If the <span class="yellow">Mercy</span> gathered while using this ACT adds up to a total of 100%, the ACT ends early. If Balthizard was already at 100% <span class="yellow">Mercy</span>, it's automatically spared upon using this ACT.</p>
+
+	<hr>
+
+	<h3 id="shakex-dialogue">Dialogue</h3>
+	<h4>When not lit up</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Balthizard</d-speaker>
+		<d-text>A nice<span class="break"></span> massage.</d-text>
+	</d-box>
+	<h4>When lit up</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Balthizard</d-speaker>
+		<d-text>What a<span class="break"></span> blast!<span class="break"></span> Hoh hoh!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="lightup">
+	<h2>{% include acticon chara="Ralsei" -%} LightUp</h2>
+
+	<h3 id="lightup-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>50% <span class="break"></span>  TIRE others</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="lightup-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei lit up!</d-text>
+	</d-box>
+	<p class="note">Ralsei lifts a hand to cast magic, with flames spilling out from his raised hand. The screen briefly flashes white, fading slowly back in to reveal the targeted Balthizard now emitting flames and smoke from its horns.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The room got smokey!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If at least one other enemy is not already <span class="blue">Tired</span></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Other enemies became TIRED!</d-text>
+	</d-box>
+	<p class="note">Other enemies become <span class="blue">Tired</span> if they aren't already.</p>
+	<hr class="hr2">
+	<p class="note">Balthizard gains 50% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3 id="lightup-dialogue">Dialogue</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Balthizard</d-speaker>
+		<d-text>Ah! That<span class="break"></span> wakes<span class="break"></span> me up!!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="oldman">
+	<h2>{% include acticon chara="Gerson" -%} OldMan</h2>
+	<p>Available only while escorting Gerson to his study, during the dual-Balthizard encounter in the many-windowed hall.</p>
+
+	<h3 id="oldman-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>I'm<span class="break"></span> old!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="oldman-ft">Flavor text</h3>
+	<h4>First time across all Balthizards in the encounter</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You used Old Man.</d-text>
+	</d-box>
+	<p class="note">The battle music pauses, and Gerson walks backwards into the encounter from the right with thumping footsteps, the Balthizards watching him come. Gerson turns to the party and the music resumes.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>How's it going?<span class="break"></span> Ya winning, kids?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Not now, old<span class="break"></span> man! We're in<span class="break"></span> the middle of<span class="break"></span> this!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I was about to...<span class="break"></span> dang it, you<span class="break"></span> made me forget!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Susie forgot what she was about to do! Her move got cancelled!)</d-text>
+	</d-box>
+	<p class="note">Susie's action for this turn gets skipped. Gerson turns to the Balthizards.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Now you go easy<span class="break"></span> on them, you hear?<span class="break"></span> They're still<span class="break"></span> learnin'.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(The enemies' attack power went down!)</d-text>
+	</d-box>
+	<p class="note">Both Balthizards gain 50% <span class="yellow">Mercy</span> and their attack goes down by 1. The music pauses as Gerson walks offscreen to the left, the Balthizards once again watching him go. After he leaves, the music resumes and the encounter continues.</p>
+
+	<h4>Second time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You used Old Man.</d-text>
+	</d-box>
+	<p class="note">The battle music pauses, and Gerson walks into the encounter from the left with thumping footsteps, the Balthizards watching him come. Gerson turns to the party and the music resumes.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>You kids mus' be<span class="break"></span> getting hungry<span class="break"></span> battling.</d-text>
+		<d-text>Some candy?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hell yeah,<span class="break"></span> we'd --</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>No!</d-text>
+		<d-text>No way, we don't<span class="break"></span> need that now!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Suit yourself!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone except Susie got candy!</d-text>
+	</d-box>
+	<p class="note">Kris, Ralsei, and both Balthizards are healed for 50 HP each. Both Balthizards gain 50% <span class="yellow">Mercy</span>. The music pauses as Gerson walks offscreen to the left. After he leaves, the music resumes and the encounter continues.</p>
+
+	<h4>Third time onwards</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Called the OldMan! Nothing happened!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie shakes Balthizard!</d-text>
+	</d-box>
+	<p class="note">Balthizard gains 30% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei shakes Balthizard!</d-text>
+	</d-box>
+	<p class="note">Balthizard gains 30% <span class="yellow">Mercy</span>.</p>
+</section>
