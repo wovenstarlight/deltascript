@@ -164,7 +164,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* gml_Object_obj_organ_enemy_Step_0 `/organikk`
 			* gml_Object_obj_bell_enemy_Step_0 `/wicabel`
 			* gml_Object_obj_sound_of_justice_enemy_Step_0 `/soundofjustice`
-			* gml_Object_obj_titan_spawn_enemy_Step_0 `/titanspawn`
 			* gml_Object_obj_titan_enemy_Step_0 `/titan`
 			* gml_Object_obj_elnina_rematch_enemy_Step_0/gml_Object_obj_lanino_rematch_enemy_Step_0 `/weatherdojo` (Dojo variant)
 			* gml_Object_obj_mike_attack_controller_Step_0 `/mike`

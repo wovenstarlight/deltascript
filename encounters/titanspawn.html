@@ -1,0 +1,292 @@
+---
+title: Titan Spawn encounter
+
+description: >
+  <p>Flavor text and dialogue for the battle against the Titan Spawn.</p>
+
+sources:
+  -
+    name: gml_Object_obj_titan_spawn_enemy_Step_0
+    chapters: [4]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [4]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [4]
+    note: initial flavor text
+  -
+    name: gml_GlobalScript_scr_spelltext
+    chapters: [4]
+    note: DualHeal casting, sparing
+  -
+    name: gml_GlobalScript_scr_spell
+    chapters: [4]
+    note: DualHeal effects
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tensionup
+        name: At 64% TP or higher
+      -
+        id: ft-spare
+        name: Trying to spare
+  -
+    id: dialogue
+    name: General dialogue
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: brighten
+        act_icon: [Susie, Ralsei]
+        name: Brighten
+      -
+        id: dualheal
+        act_icon: [Susie, Ralsei]
+        name: DualHeal
+      -
+        id: banish
+        name: Banish
+      -
+        id: saction
+        class: susie act
+        name: "S-Action: WakeKris"
+      -
+        id: raction
+        class: ralsei act
+        name: "R-Action: ReviveKris"
+---
+{% comment %} encounterno = 177 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<p>Appears with another Titan Spawn.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Darkness constricts you...</d-text>
+		<d-text asterisk><span class="yellow">TP</span> Gain reduced outside of <span class="green">???</span></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You hear your heart beating in your ears.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>When did you start being yourself?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>It sputtered in a voice like crushed glass.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei mutters to himself to stay calm.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">3.96% (4/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like adrenaline.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tensionup">At 64% TP or higher</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The atmosphere feels tense...</d-text>
+		<d-text asterisk>(You can use <span class="yellow">BANISH</span>!)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spare">Trying to spare</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But, it was not something that can understand MERCY.</d-text>
+	</d-box>
+	<p class="note">The Titan Spawn is not spared and gains no <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+	
+	<p>No dialogue; Titan Spawn do not talk.</p>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Consider strategy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TITAN SPAWN - AT 30 DF 200</d-text>
+		<d-text asterisk>A shard of fear. Appears in places of deep dark.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If TP is below 64%</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Expose it to LIGHT... and gather COURAGE to gain TP.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Then, "<span class="yellow">BANISH</span>" it!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>If TP is at 64% or higher</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The atmosphere feels tense...</d-text>
+		<d-text asterisk>(You can use <span class="yellow">BANISH</span>!)</d-text>
+	</d-box>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="brighten">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Brighten</h2>
+
+	<h3 id="brighten-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Powerup light</d-text>
+		<d-text class="orange">4% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="brighten-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris's SOUL shone brighter!</d-text>
+	</d-box>
+	<p class="note">The SOUL appears and the party members glow white for a brief moment, powering up. During the next turn, the SOUL emits light over a larger radius.</p>
+</section>
+
+<section class="d-section" id="dualheal">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} DualHeal</h2>
+
+	<h3 id="dualheal-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Heal party</d-text>
+		<d-text class="orange">16% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dualheal-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your SOUL shined its power on RALSEI and SUSIE!</d-text>
+	</d-box>
+	<p class="note">The SOUL appears and the party members glow white for a brief moment, powering up; Susie and Ralsei both prepare their healing magic.</p>
+	<hr class="hr2">
+	<h4>First four times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei and Susie cast DUAL HEAL! Effectiveness of DUAL HEAL has lowered!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Fifth time onwards</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei and Susie cast DUAL HEAL!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">All party members are healed for a varying amount of HP. The amount healed is the combination of Susie and Ralsei's magic stats, with a multiplier that depends on the number of times this ACT has been used:</p>
+	<ul class="note">
+		<li>First use: 9×</li>
+		<li>Second use: 6×</li>
+		<li>Third use: 4.8×</li>
+		<li>Fourth use: 1.8×</li>
+		<li>Fifth use onwards: 1.2×</li>
+	</ul>
+</section>
+
+<section class="d-section" id="banish">
+	<h2>Banish</h2>
+
+	<h3 id="banish-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Defeat enemy</d-text>
+		<d-text class="orange">64% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="banish-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris's SOUL emitted a brilliant light!</d-text>
+	</d-box>
+	<p class="note">The SOUL appears where Kris stands and glows a brilliant white, the light briefly flooding the screen. When the light clears, any Titan Spawn present are gone, having been purified.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action: WakeKris</h2>
+
+	<h3 id="saction-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Revive Kris</d-text>
+		<d-text class="orange">16% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie used Wake Up!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time only</h4>
+	<p class="note">(No sprite is provided; the regular typing SFX is used instead of Susie's voice.)</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Hey, dumbass! Get up!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Susie swipes an empty hand through the air, presumably smacking Kris to wake them up.</p>
+	<hr class="hr2">
+	<h4>If Kris was downed</h4>
+	<p class="note">Kris is revived with 1 HP.</p>
+	<hr class="hr3">
+	<h4>If Kris was not downed</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(But, Kris wasn't DOWNed...)</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action: ReviveKris</h2>
+
+	<h3 id="raction-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Revive Kris</d-text>
+		<d-text class="orange">16% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei used Reviver!</d-text>
+	</d-box>
+	<p class="note">A spotlight shines over Kris, and a small winged Ralsei flutters down to pat them rapidly on the head. If they were downed, Kris is revived with 30% HP (rounded up). If they were not downed, Kris is healed for 50% of their maximum HP (rounded up).</p>
+</section>
