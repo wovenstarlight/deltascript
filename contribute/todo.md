@@ -158,7 +158,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* gml_Object_obj_tenna_enemy_Step_0 `/tenna2` or `/tennafinal`
 		* Chapter 4
 			* gml_Object_obj_guei_enemy_Step_0 `/guei`
-			* gml_Object_obj_bibliox_enemy_Step_0 `/bibliox`
 			* gml_Object_obj_jackenstein_enemy_Step_0 `/jackenstein`
 			* gml_Object_obj_mizzle_enemy_Step_0 `/mizzle`
 			* gml_Object_obj_holywatercooler_enemy_Step_0 `/missmizzle`

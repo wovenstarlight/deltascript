@@ -1,0 +1,313 @@
+---
+title: Bibliox encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Bibliox.</p>
+
+sources:
+  -
+    name: gml_Object_obj_bibliox_enemy_Step_0
+    chapters: [4]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [4]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [4]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_proofread_controller_new_Create_0
+    chapters: [4]
+    note: Proofread options
+  -
+    name: gml_Object_obj_proofread_controller_new_Draw_0
+    chapters: [4]
+    note: Proofread flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-bibliox
+            name: With another Bibliox
+          -
+            id: encounter-winglade
+            name: With Winglade
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: proofread
+        name: Proofread
+      -
+        id: easyproof
+        act_icon: Ralsei
+        name: EasyProof
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(152|159|161|162|170)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-bibliox">With another Bibliox</h4> <!--152-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bibliox opens up!</d-text>
+	</d-box>
+
+	<h4 id="encounter-winglade">With Winglade</h4> <!--161-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>The flapping of wings and pages fills the room.</d-text>
+	</d-box>
+
+	<!-- UNUSED:
+		- 159: with Mizzle
+		- 164: with Guei
+		- 170: with Wicabel
+	-->
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bibliox rearranges bookmarks in his beard.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bibliox conjures letters in the air.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bibliox augurs with alphabet soup.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bibliox mumbles a hymn... but, the lyrics were mistaken.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bibliox is mumbling and bumbling.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like parchment.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bibliox can't keep its pages open.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<p>Unused, as Bibliox gets <span class="blue">Tired</span> at low HP and that flavor text overrides this.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bibliox looks ragged.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bibliox's beard flaps happily.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Bibliox</d-speaker>
+		<d-text>Mumble,<span class="break"></span> mumble...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Bibliox</d-speaker>
+		<d-text>To by, or<span class="break"></span> not to by?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Bibliox</d-speaker>
+		<d-text>Lauren Ipsome,<span class="break"></span> Lauren Ipsome.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Bibliox</d-speaker>
+		<d-text>It was the best<span class="break"></span> of times, it<span class="break"></span> was the blurst<span class="break"></span> of times.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Bibliox</d-speaker>
+		<d-text>Human soles,<span class="break"></span> monster soles,<span class="break"></span> Book soles...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Bibliox</d-speaker>
+		<d-text>... whose do we?<span class="break"></span> Whose do we<span class="break"></span> decimal...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>BIBLIOX - A worldly wizard that cast spells by spelling.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Unfortunately prone to typos.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="proofread">
+	<h2>Proofread</h2>
+
+	<h3 id="proofread-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Fix typo for<span class="break"></span> MERCY</d-text>
+	</d-box>
+
+	<h3 id="proofread-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Select the right spelling!</d-text>
+	</d-box>
+	<p class="note">A set of three attempts at spelling the same word appear; only one is correct. The cursor automatically cycles through which option it's selecting; [CONFIRM] must be pressed when the correctly-spelled word is selected, before the timer (around 3 seconds) runs out.</p>
+	<details class="note">
+		<summary>Word sets</summary>
+		<ul class="note">
+			<li><span class="white">GALLERY</span> (with incorrect alternatives <span class="white">GALLURY</span> and <span class="white">GALLORY</span>)</li>
+			<li><span class="white">ROOTS</span> (with incorrect alternatives <span class="white">REETS</span> and <span class="white">RAATS</span>)</li>
+			<li><span class="white">FESTIVAL</span> (with incorrect alternatives <span class="white">FESTIAVL</span> and <span class="white">FESTAVIL</span>)</li>
+			<li><span class="white">FLASHBACK</span> (with incorrect alternatives <span class="white">FLESHBECK</span> and <span class="white">FLOSHBOCK</span>)</li>
+			<li><span class="white">SWORD</span> (with incorrect alternatives <span class="white">SORWD</span> and <span class="white">SOWRD</span>)</li>
+			<li><span class="white">GUARDIAN</span> (with incorrect alternatives <span class="white">GAURDIAN</span> and <span class="white">GAURDAIN</span>)</li>
+			<li><span class="white">ATRIUM</span> (with incorrect alternatives <span class="white">ATRUIM</span> and <span class="white">ARTIUM</span>)</li>
+			<li><span class="white">SYNTHESIS</span> (with incorrect alternatives <span class="white">SYNTEHSIS</span> and <span class="white">SINTHESIS</span>)</li>
+			<li><span class="white">AMPHITHEATER</span> (with incorrect alternatives <span class="white">AMPITHEATER</span> and <span class="white">AMPITHEATRE</span>)</li>
+		</ul>
+	</details>
+
+	<h4 id="proofread-ft-correct">Answering correctly</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Success!</d-text>
+	</d-box>
+	<p class="note">Bibliox gains 100% <span class="yellow">Mercy</span>.</p>
+
+	<h4 id="proofread-ft-incorrect">Answering incorrectly</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... but, it was misspelled!</d-text>
+	</d-box>
+	<p class="note">An error SFX plays; nothing happens.</p>
+
+	<h4 id="proofread-ft-timeout">Running out of time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Out of time!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="easyproof">
+	<h2>{% include acticon chara="Ralsei" -%} EasyProof</h2>
+
+	<h3 id="easyproof-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>More time to fix</d-text>
+	</d-box>
+
+	<h3 id="easyproof-ft">Flavor text</h3>
+	<p class="note">Identical to the <a href="#proofread-ft">Proofread ACT</a>, but with a timer of around 6 seconds, and if any answer is chosen before time runs out, Bibliox also becomes <span class="blue">Tired</span>.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie attempted to read!</d-text>
+	</d-box>
+	<p class="note">Bibliox gains 15% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3 id="saction-ft-unused">Unused flavor text variant</h3>
+	<p>Intended to play on the first use of <span class="susie act">S-Action</span>, but one of the variables it requires never gets set.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie attempted to read!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... But there were no pictures!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... Susie fell asleep!!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>Susie?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei wore reading glasses!</d-text>
+	</d-box>
+	<p class="note">Bibliox gains 30% <span class="yellow">Mercy</span>.</p>
+</section>
