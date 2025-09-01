@@ -144,8 +144,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* gml_Object_obj_swatchling_enemy_Step_0 `/swatchling`
 			* gml_Object_obj_werewerewire_enemy_Step_0 `/werewerewire`
 			* gml_Object_obj_gigaqueen_enemy_Step_0 `/gigaqueen`
-			* gml_Object_obj_dojograzeenemy_Step_0 `/jigsawrydojo` or `/dojograze` (dojo's graze challenge)
-			* gml_Object_obj_dojo_spareenemy_Step_0 `/jigsawjoe` or `/dojospare` (dojo's spare challenge)
 		* Chapter 3
 			* gml_Object_obj_elnina_enemy_Step_0/gml_Object_obj_lanino_enemy_Step_0 `/weather` (initial fight)
 			* gml_Object_obj_pippins_enemy_Step_0 `/pippins`
@@ -165,9 +163,13 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* gml_Object_obj_bell_enemy_Step_0 `/wicabel`
 			* gml_Object_obj_sound_of_justice_enemy_Step_0 `/soundofjustice`
 			* gml_Object_obj_titan_enemy_Step_0 `/titan`
-			* gml_Object_obj_elnina_rematch_enemy_Step_0/gml_Object_obj_lanino_rematch_enemy_Step_0 `/weatherdojo` (Dojo variant)
 			* gml_Object_obj_mike_attack_controller_Step_0 `/mike`
-		* gml_Object_obj_multiboss_enemy1_Step_0/gml_Object_obj_multiboss_enemy2_Step_0/gml_Object_obj_multiboss_enemy3_Step_0 `/multiboss` &LeftArrow; no idea what these are. test enemies? the mikes...?
+		* Party dojo
+			* gml_Object_obj_dojograzeenemy_Step_0 `/jigsawrydojo` or `/dojograze` (dojo's graze challenge, ch2)
+			* gml_Object_obj_dojo_spareenemy_Step_0 `/jigsawjoe` or `/dojospare` (dojo's spare challenge, ch2)
+			* the ch2 allstars fight...?
+			* gml_Object_obj_elnina_rematch_enemy_Step_0/gml_Object_obj_lanino_rematch_enemy_Step_0 `/weatherdojo` (Dojo variant, ch4)
+		* gml_Object_obj_multiboss_enemy1_Step_0/gml_Object_obj_multiboss_enemy2_Step_0/gml_Object_obj_multiboss_enemy3_Step_0 `/multiboss` &LeftArrow; no idea what these are. test enemies?
 		* gml_Object_obj_multiboss_controller_enemy1_Step_0/gml_Object_obj_multiboss_controller_enemy2_Step_0/gml_Object_obj_multiboss_controller_enemy3_Step_0 `/multibosscontroller` &LeftArrow; no idea what these are. test enemies?
 		* Figure out where these go because I don't have the brain power atm: ch3 gml_Object_obj_b1enemy_Step_0, allch gml_Object_obj_baseenemy_Step_0
 	* ~~`/recruits` - Profiles for recruited enemies~~ DONE up to Chapter 4
