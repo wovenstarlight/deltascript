@@ -290,6 +290,7 @@ hr {
 		position: relative;
 		margin-block: 2em;
 		overflow: visible;
+		width: 100%;
 		height: 0.2em;
 		background: linear-gradient(to right, var(--white) calc(50% - 3em), transparent  calc(50% - 2em) calc(50% + 2em), var(--white) calc(50% + 3em));
 
@@ -308,7 +309,7 @@ hr {
 
 	&.hr2, &.hr3 {
 		color: var(--gray);
-		width: 35.4em;
+		width: calc(var(--basewidth) + 11em);
 		margin-inline-start: 0;
 		margin-block: 1em;
 	}
