@@ -1,0 +1,568 @@
+---
+title: Jackenstein encounter
+
+description: >
+  <p>Flavor text and dialogue for the battle against Jackenstein.</p>
+
+sources:
+  -
+    name: gml_Object_obj_jackenstein_enemy_Step_0
+    chapters: [4]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [4]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [4]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_takingtoolong_Draw_0
+    chapters: [4]
+    note: jack-o'-lantern voice lines
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tensionup
+        name: At 60% TP or above
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-attack
+        name: With specific attacks
+      -
+        id: dialogue-unleash
+        name: After using the Unleash ACT for the first time
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: unleash
+        name: Unleash
+      -
+        id: scaredycat
+        name: ScaredyCat
+      -
+        id: saction
+        class: susie act
+        name: "S-Action: TreasureHunt"
+      -
+        id: raction
+        class: ralsei act
+        name: "R-Action: LightUp"
+---
+{% comment %} encounterno = 174 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Darkness constricts you...</d-text>
+		<d-text asterisk><span class="yellow">TP</span> Gain reduced outside of <span class="yellow">TREASURE!</span></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You are in the DARK ZONE.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everything seems OK.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Too dark to see near the walls.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Too dark to see near the walls.</d-text>
+		<d-text asterisk>There's a pit here!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If Ralsei is not down</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Too dark to see near the walls.</d-text>
+		<d-text asterisk>There's something fluffy in here!</d-text>
+		<d-box>
+			<d-sprite speaker="Ralsei" emotion="D"></d-sprite>
+			<d-text>K... Kris?</d-text>
+		</d-box>
+	</d-box>
+	<hr class="hr3">
+	<h4>If Ralsei is down</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Too dark to see near the walls.</d-text>
+		<d-text asterisk>There's something fluffy in here!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If Susie is not down</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Too dark to see near the walls.</d-text>
+		<d-text asterisk>There's something very Susie-like in here!</d-text>
+		<d-box>
+			<d-sprite speaker="Susie" emotion="5"></d-sprite>
+			<d-text>That's ME, dumbass!</d-text>
+		</d-box>
+	</d-box>
+	<hr class="hr3">
+	<h4>If Susie is down</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Too dark to see near the walls.</d-text>
+		<d-text asterisk>There's something very Susie-like in here!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Too dark to see near the walls.</d-text>
+		<d-text asterisk>There's a texture of a dog playing maracas in here!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Too dark to see near the walls.</d-text>
+		<d-text asterisk>There's something miniboss-shaped in here!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">3% chance, if Chapter 2's Weird Route was completed:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You can imagine Berdly in your head warning you about Grues.</d-text>
+		<d-text asterisk>Smells like rotting fruit.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tensionup">At 60% TP or above</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The atmosphere feels tense... (You can use <span class="yellow">UNLEASH</span>!)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-attack">With specific attacks</h3>
+	<p>The attack sequence is scripted; see the <a href="{% include wikilink page='Jackenstein#Attacks' %}">Deltarune Wiki</a> for descriptions of each maze. The following dialogue plays sequentially unless interrupted by uses of the <a href="#unleash">Unleash ACT</a> or <a href="#dialogue-unleash">Jackenstein's reaction to said ACT</a>.</p>
+
+	<h4>First maze: Starter</h4>
+	<h5>Before the attack</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>... GHO HO HO...<span class="break"></span> THERE'S NO ESCAIPE<span class="break"></span> FROM THE [DARK ZONE]</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>UNLESS... <span class="break"></span> YOU LEAVE</d-text>
+	</d-box>
+
+	<h4>Second maze: 3×2</h4>
+	<h5>Before the attack</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>...GO BACK...<span class="break"></span> ... YOUR TAKING...<span class="break"></span> TOO LONG...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>YOUR TAKING...<span class="break"></span> TOO LONG...!!!</d-text>
+	</d-box>
+
+	<h5>During the attack</h5>
+	<d-box theme="fade">
+		<d-speaker>Jack-o'-lantern</d-speaker>
+		<d-text effect="shake">YOUR TAKING TOO LONG</d-text>
+	</d-box>
+	<p class="note">This voiced line is followed by laughter.</p>
+
+	<h4>Third maze: Normal</h4>
+	<h5>Before the attack</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>WHAT THE HEACK<span class="break"></span> WAS THAT PUMKIN<span class="break"></span> THAT WAS SCAIRY!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>JUST KIDDING <span class="break"></span> THAT WAS MINE :)</d-text>
+	</d-box>
+
+	<h5>During the attack</h5>
+	<d-box theme="fade">
+		<d-speaker>Jack-o'-lantern</d-speaker>
+		<d-text effect="shake">YOUR TAKING TOO LONG</d-text>
+	</d-box>
+	<p class="note">This voiced line is followed by laughter. (If <a href="#scaredycat">ScaredyCat</a> was used, the voice line is sped up.)</p>
+
+	<h4>Fourth maze: Chimney</h4>
+	<h5>Before the attack</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>OH NO!!! I CAN'T<span class="break"></span> FIND MY PUMKIN...!!<span class="break"></span> BUT MAYBE...<span class="break"></span> IT WILL FIND...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>... YOU</d-text>
+	</d-box>
+
+	<h5>During the attack</h5>
+	<d-box theme="fade">
+		<d-speaker>Jack-o'-lantern</d-speaker>
+		<d-text effect="shake">YOUR TAKING TOO LONG</d-text>
+	</d-box>
+	<p class="note">This voiced line is followed by laughter. (If ScaredyCat was used, the voice line is sped up.)</p>
+
+	<h4>Fifth maze: Too long</h4>
+	<h5>Before the attack</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>GO... BACK...<span class="break"></span> BEFORE LONG...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>... GO BACK!!!<span class="break"></span> BEFORE LONG!!!</d-text>
+	</d-box>
+
+	<h5>During the attack</h5>
+	<h6>If ScaredyCat was not used</h6>
+	<d-box theme="fade">
+		<d-speaker>Jack-o'-lantern</d-speaker>
+		<d-text class="text-center-expand" effect="shake">YOUR&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; LONG</d-text>
+	</d-box>
+	<p class="note">In this voiced line, upon saying "LONG", the jack-o'-lantern becomes notably stretched out. The line is followed by laughter.</p>
+
+	<h6>If ScaredyCat was used</h6>
+	<d-box theme="fade">
+		<d-speaker>Jack-o'-lantern</d-speaker>
+		<d-text class="text-center-expand" effect="shake">LO&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NG</d-text>
+	</d-box>
+	<p class="note">This voiced line is sped up and followed by laughter.</p>
+
+	<h4>Sixth maze: No pumpkin</h4>
+	<h5>Before the attack</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>YOU DIDN'T GO BACK</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>:(</d-text>
+	</d-box>
+
+	<h4>Seventh maze: Two pumpkins</h4>
+	<h5>Before the attack</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>NO MOIRE MISTER<span class="break"></span> NAICE GUIY...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>INSTEAD.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>MR. VERY<span class="break"></span> NAICE GUY</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>LEAVE :)</d-text>
+	</d-box>
+
+	<h5>During the attack</h5>
+	<h6>If ScaredyCat was not used</h6>
+	<d-box theme="fade">
+		<d-speaker>Smiling jack-o'-lantern</d-speaker>
+		<d-text class="text-center-expand">YOUR TAKING TOO LONG</d-text>
+	</d-box>
+	<p class="note">The smiling variant jack-o'-lantern speaks this line in a high-pitched, smooth voice. It follows the SOUL for a while without damaging it; after a moment, the original jack-o'-lantern appears.</p>
+	<d-box theme="fade">
+		<d-speaker>Jack-o'-lantern</d-speaker>
+		<d-text class="text-center-expand">YOUR TAKING TOO LONG</d-text>
+		<d-text class="text-center-expand" effect="shake">IS<span class="break"></span> &nbsp; &nbsp; &nbsp;TAKING TOO LONG</d-text>
+	</d-box>
+	<p class="note">The first quoted line is spoken in the smiling jack-o'-lantern's high voice, with the rest being in the original jack-o'-lantern's voice. The original jack-o'-lantern then laughs.</p>
+
+	<h6>If ScaredyCat was used</h6>
+	<d-box theme="fade">
+		<d-speaker>Smiling jack-o'-lantern</d-speaker>
+		<d-text>YOUR</d-text>
+	</d-box>
+	<p class="note">Before the smiling jack-o'-lantern can continue, it is destroyed in an explosion by the original jack-o'-lantern.</p>
+	<d-box theme="fade">
+		<d-speaker>Jack-o'-lantern</d-speaker>
+		<d-text effect="shake">YOUR TAKING TOO LONG</d-text>
+	</d-box>
+	<p class="note">This voiced line is sped up and followed by laughter.</p>
+
+	<h4>Eighth maze: Tutu</h4>
+	<h5>Before the attack</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>ENOUGH!!! MY<span class="break"></span> PATIANCE RUNS THIN</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>NO MORE KEYS!!!<span class="break"></span> DRESS IN HUMILIATION</d-text>
+	</d-box>
+
+	<h5>During the attack</h5>
+	<hr class="hr2">
+	<h6>If ScaredyCat was not used</h6>
+	<d-box theme="fade">
+		<d-speaker>Jack-o'-lantern</d-speaker>
+		<d-text effect="shake">YOUR TAKING TOO TOO</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h6>If ScaredyCat was used</h6>
+	<d-box theme="fade">
+		<d-speaker>Jack-o'-lantern</d-speaker>
+		<d-text effect="shake">TUTU</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">This voiced line is followed by laughter as the jack-o'-lantern chases after the SOUL, which drops the tutu along the way. The jack-o'-lantern picks up the tutu and upon reaching the soul, the battle music and laughter stops as the lantern turns to the SOUL. Blushing, it places the tutu back on the SOUL.</p>
+	<d-box theme="fade">
+		<d-speaker>Jack-o'-lantern</d-speaker>
+		<d-text effect="shake">YOUR&nbsp; &nbsp; &nbsp; &nbsp; TOO TOO</d-text>
+	</d-box>
+	<p class="note">The jack-o'-lantern turns to leave; after a moment, it comes chasing back after the SOUL as the music and laughter resume.</p>
+
+	<h4>Ninth and final maze: Miniature pumpkins</h4>
+	<h5>Before the attack</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>... FOOL THAT YOU ARE...<span class="break"></span> YOU REALIZE NOT WHAT<span class="break"></span> FRAIGHTFUL FOARCES<span class="break"></span> AWAIT YOU...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>TONAIGHT, ON THE MOST<span class="break"></span> HAUNTED OF NAIGHTS...<span class="break"></span> I SHALL INFLICT YOU WITH<span class="break"></span> MY GRAITEST CURSE...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>THE SAME THING I WAS<span class="break"></span> USING THE WHOLE TIME</d-text>
+	</d-box>
+
+	<h5>During the attack</h5>
+	<h6>If ScaredyCat was not used</h6>
+	<p class="note">Each of the miniature pumpkins voice the following line in high-pitched voices:</p>
+	<d-box theme="fade">
+		<d-speaker>Mini jack-o'-lanterns</d-speaker>
+		<d-text effect="shake">YOUR TAKING TOO LONG</d-text>
+	</d-box>
+	<p class="note">The line is followed by laughter.</p>
+	<h6>If ScaredyCat was used</h6>
+	<p class="note">Each of the miniature pumpkins speak "LONG" in high-pitched voices, though the following is the actual text displayed:</p>
+	<d-box theme="fade">
+		<d-speaker>Mini jack-o'-lanterns</d-speaker>
+		<d-text effect="shake">LONG TAKING TOO LONG</d-text>
+	</d-box>
+	<p class="note">The line is followed by laughter.</p>
+
+	<h4>Treasure Rain</h4>
+	<h5>First time</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>YOAR STILL HEAR...?<span class="break"></span> INTERESTING...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>INTERESTING...<span class="break"></span> BUT IT SUCKS... :(</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>FINE... BE TRAPPED<span class="break"></span> IN THE [DARK ZONE]...<span class="break"></span> FOAREVER!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-unleash">After using the <a href="#unleash">Unleash ACT</a> for the first time</h3>
+	<p>Overrides the <a href="#dialogue-attack">dialogue corresponding to the attack being used this turn</a>.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>NO!!! THE LAIGHT!!!<span class="break"></span> IT HAS EFFECTS<span class="break"></span> ON ME!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>STOP USING THAT!!!<span class="break"></span> TEARRIBLE!!!<span class="break"></span> GO TO [DARK]!!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Consider strategy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>JACKENSTEIN - An unsightly beast that lives in total darkness.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Gather <span class="yellow">TREASURE</span> to gain TP, and use "UNLEASH" to light him up!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You CHECKed Jackenstein...</d-text>
+		<d-text asterisk>You remember that <span class="yellow">DEFEND</span>ing gives you TP!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You remember Susie and Ralsei might have their own ACTs as well...!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="unleash">
+	<h2>Unleash</h2>
+
+	<h3 id="unleash-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Reveal weakness</d-text>
+		<d-text class="orange">60% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="unleash-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris's SOUL emitted a brilliant light!</d-text>
+	</d-box>
+	<p class="note">The SOUL appears where Kris stands and glows a brilliant white, the light briefly flooding the screen. Instead of the next scripted attack, a blank 3×3 "maze" is presented, where the SOUL can approach the jack-o'-lantern directly.</p>
+	<p class="note">In the first use of this ACT, the jack-o'-lantern approaches the SOUL laughing, but its smile turns into a look of dismay upon grazing the SOUL, and it declares "YOUR TOO BRIGHT".</p>
+	<p class="note">The jack-o'-lantern flees from the SOUL, looking frightened and exclaiming garbled variations of "MAMMA MIA" upon being grazed. Each time the jack-o'-lantern is grazed, Jackenstein gains 1% <span class="yellow">Mercy</span>, up to a maximum of 35% <span class="yellow">Mercy</span> for the first two uses and 30% <span class="yellow">Mercy</span> for the third use.</p>
+
+	<hr>
+
+	<h3 id="unleash-dialogue">Dialogue</h3>
+	<h4>First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>YOU DAIRE BRING<span class="break"></span> LAIGHTS TO MY<span class="break"></span> LAIRE!? HA HA...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>IN THIS PLAICE<span class="break"></span> OF TRUE DARK...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>LAIGHT HAS NO<span class="break"></span> AFFECT ON ME!!!</d-text>
+	</d-box>
+
+	<h4>Second time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>NO!!! NOT THE<span class="break"></span> LAIGHT!!! IT<span class="break"></span> BURNS!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>TO THINK MY<span class="break"></span> OWN PELLETS<span class="break"></span> WOULD BE USED<span class="break"></span> AGAINST ME</d-text>
+	</d-box>
+
+	<h4>Third time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>NO!!! THE LAIGHT!!<span class="break"></span> DON'T BROING IT<span class="break"></span> CLOASE TO MY FAICE!!!</d-text>
+	</d-box>
+
+	<h4>Fourth time onwards</h4>
+	<p>Unused, as three uses of Unleash </p>
+	<d-box theme="battletalk">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text>NO!!! NOT THE<span class="break"></span> LAIGHT!!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="scaredycat">
+	<h2>ScaredyCat</h2>
+	<p>Available after first encountering Jackenstein on any SAVE file. On the current SAVE file, this can mean rematches against Jackenstein after dying the first time. On other SAVE files, this means saving after winning against Jackenstein.</p>
+
+	<h3 id="scaredycat-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Def.Down</d-text>
+		<d-text>Speed Up</d-text>
+		<d-text class="orange">2% TP</d-text>
+	</d-box>
+
+	<h3 id="scaredycat-ft">Flavor text</h3>
+	<p class="note">During the next turn, the SOUL moves faster from the start and attacks deal 50% more damage. If the jack-o'-lantern appears, its voice line is shortened and the SOUL does not experience a boost in speed.</p>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your heart pumped nervously!</d-text>
+		<d-text asterisk>SPEED increased for 1 turn!</d-text>
+		<d-text asterisk>Everyone's DEFENSE down!</d-text>
+	</d-box>
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Scared! SPEED up, DEF down!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action: TreasureHunt</h2>
+
+	<h3 id="saction-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Easier pickup</d-text>
+		<d-text class="orange">2% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p class="note">During the next turn, the SOUL can attract treasure from a distance.</p>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie sniffs out treasure! It's easier to pick stuff up!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<p>Displayed in a single dialogue box with <span class="ralsei act">R-Action</span>'s flavor text if both are used in the same turn, in the order Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie sniffs out treasure!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action: LightUp</h2>
+
+	<h3 id="raction-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Increase light</d-text>
+		<d-text class="orange">1% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p class="note">During the next turn, the SOUL emits light over a larger radius.</p>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei lit up! The light grew larger and stronger!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<p>Displayed in a single dialogue box with <span class="susie act">S-Action</span>'s flavor text if both are used in the same turn, in the order Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei lit up! Light grew!</d-text>
+	</d-box>
+</section>
