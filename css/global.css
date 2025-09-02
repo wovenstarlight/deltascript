@@ -757,7 +757,7 @@ d-box, d-choices {
 		&[theme=battlemenu] > d-sprite + d-text { max-width: calc(var(--basewidth) - 6.4em - 1ch) }
 
 		&[theme=battledesc] {
-			width: calc(var(--basewidth) - 17em);
+			width: calc(var(--basewidth) - 16.5em);
 			color: var(--gray);
 			d-text.orange {
 				grid-row: 3;
