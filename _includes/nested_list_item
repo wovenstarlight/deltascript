@@ -1,14 +1,21 @@
 {% assign mysplit = include.this.splitter | default: "/" -%}
+{% assign myname = include.this.name | split: "{END_LINK}" -%}
 
 <li>
-	{% if include.this.url -%}
+	{% if include.this.url and include.this.override_base_url -%}
+		<a href="{{ include.this.url | relative_url }}">
+	{%- elsif include.this.url -%}
 		<a href="{{ include.parent | append: mysplit | append: include.this.url | replace: '//', '/' | relative_url }}">
 	{%- endif %}
 	
-	{{- include.this.name -}}
+	{{- myname | first -}}
 	
-	{% if include.this.url -%}
+	{% if include.this.url != null -%}
 		</a>
+	{%- endif -%}
+
+	{% if myname.size > 1 -%}
+		{{- myname | last -}}
 	{%- endif %}
 
 
