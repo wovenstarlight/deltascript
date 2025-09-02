@@ -127,51 +127,53 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* `/chapter5`
 	* `/chapter6`
 	* `/chapter7`
+* `/encounters` - Check descriptions, ACT descriptions, etc. This is probably gonna have a ton of subpages, I'd guess one for every potential enemy. At the very least, the big story-critical encounters (e.g. all boss fights) would need their own subpages which the `/chapters` pages could then link to.
+	* OK SO. The rule I've settled on is that if dialogue has the fancy silver border then it doesn't count as part of the encounter, it's instead a pre-/post-fight cutscene which will get its own page under `/chapters`. So only include the dialouge that's actually using the encounter UI on these pages.
+		* Some of the chapter 1 pages don't follow this rule yet but that's going to be fixed don't worry
+	* Include disambiguation pages for the following. Maybe we give them more descriptive names...? Double-check the URLs before creating the disambigs
+		* `/tenna`: doom board and final showdown
+	* Chapter 1
+		* gml_Object_obj_ralseienemy_Step_0 (Unused Ralsei tutorial) `/ralsei`
+		* gml_Object_obj_clubsenemy_old_Step_0 (old Clover fight) `/cloverunused`, crosslink `/clover`
+	* Chapter 2
+		* gml_Object_obj_werewire_enemy_Step_0 `/werewire`
+		* gml_Object_obj_swatchling_enemy_Step_0 `/swatchling`
+		* gml_Object_obj_werewerewire_enemy_Step_0 `/werewerewire`
+		* gml_Object_obj_gigaqueen_enemy_Step_0 `/gigaqueen`
+	* Chapter 3
+		* gml_Object_obj_elnina_enemy_Step_0/gml_Object_obj_lanino_enemy_Step_0 `/weather` (initial fight)
+		* gml_Object_obj_pippins_enemy_Step_0 `/pippins`
+		* gml_Object_obj_shutta_enemy_Step_0 `/shuttah`
+		* gml_Object_obj_watercooler_enemy_Step_0 `/watercooler`
+		* gml_Object_obj_zapper_enemy_Step_0 `/zapper`
+		* gml_Object_obj_tenna_board4_enemy_Step_0 `/tenna1` or `/tennadoom` (doom board)
+		* gml_Object_obj_ribbick_enemy_Step_0 `/ribbick`
+		* gml_Object_obj_rouxls_ch3_enemy_Step_0 `/rouxls2` or `/rouxlsch3` (contracts)
+		* gml_Object_obj_tenna_enemy_Step_0 `/tenna2` or `/tennafinal`
+	* Chapter 4
+		* gml_Object_obj_guei_enemy_Step_0 `/guei`
+		* gml_Object_obj_holywatercooler_enemy_Step_0 `/missmizzle`
+		* gml_Object_obj_hammer_of_justice_enemy_Step_0 `/hammerofjustice`
+		* gml_Object_obj_halo_enemy_Step_0 `/winglade`
+		* gml_Object_obj_organ_enemy_Step_0 `/organikk`
+		* gml_Object_obj_bell_enemy_Step_0 `/wicabel`
+		* gml_Object_obj_sound_of_justice_enemy_Step_0 `/soundofjustice`
+		* gml_Object_obj_titan_enemy_Step_0 `/titan`
+		* gml_Object_obj_mike_attack_controller_Step_0 `/mike`
+	* Party dojo
+		* gml_Object_obj_dojograzeenemy_Step_0 `/jigsawrydojo` or `/dojograze` (dojo's graze challenge, ch2)
+		* gml_Object_obj_dojo_spareenemy_Step_0 `/jigsawjoe` or `/dojospare` (dojo's spare challenge, ch2)
+		* the ch2 allstars fight...?
+		* gml_Object_obj_elnina_rematch_enemy_Step_0/gml_Object_obj_lanino_rematch_enemy_Step_0 `/weatherdojo` (Dojo variant, ch4)
+	* gml_Object_obj_multiboss_enemy1_Step_0/gml_Object_obj_multiboss_enemy2_Step_0/gml_Object_obj_multiboss_enemy3_Step_0 `/multiboss` &LeftArrow; no idea what these are. test enemies?
+	* gml_Object_obj_multiboss_controller_enemy1_Step_0/gml_Object_obj_multiboss_controller_enemy2_Step_0/gml_Object_obj_multiboss_controller_enemy3_Step_0 `/multibosscontroller` &LeftArrow; no idea what these are. test enemies?
+	* Figure out where these go because I don't have the brain power atm: ch3 gml_Object_obj_b1enemy_Step_0, allch gml_Object_obj_baseenemy_Step_0
 * Miscellaneous pages... `/misc`
 	* ~~`/darkitems` - Consumables, key items, etc. Descriptions, usage text and reactions from the party members. Shop descriptions too, if we can find them?~~ DONE up to Chapter 4
 	* ~~`/lightitems` - Light World items. Crosslink to Dark World equivalents.~~ DONE up to Chapter 4
 	* Equipment: Descriptions, reactions from the party members, shop descriptions. LW/DW equivalents. Originally intended to be at `/equipment` but goddamn it got long so we're splitting it up
 		* ~~`/weapons` - Attack equipment.~~ DONE up to Chapter 4
 		* ~~`/armor` - Defense equipment.~~ DONE up to Chapter 4
-	* `/encounters` - Check descriptions, ACT descriptions, etc. This is probably gonna have a ton of subpages, I'd guess one for every potential enemy. At the very least, the big story-critical encounters (e.g. all boss fights) would need their own subpages which the `/chapters` pages could then link to.
-		* Include disambiguation pages for the following. Maybe we give them more descriptive names...? Double-check the URLs before creating the disambigs
-			* `/tenna`: doom board and final showdown
-		* Chapter 1
-			* gml_Object_obj_ralseienemy_Step_0 (Unused Ralsei tutorial) `/ralsei`
-			* gml_Object_obj_clubsenemy_old_Step_0 (old Clover fight) `/cloverunused`, crosslink `/clover`
-		* Chapter 2
-			* gml_Object_obj_werewire_enemy_Step_0 `/werewire`
-			* gml_Object_obj_swatchling_enemy_Step_0 `/swatchling`
-			* gml_Object_obj_werewerewire_enemy_Step_0 `/werewerewire`
-			* gml_Object_obj_gigaqueen_enemy_Step_0 `/gigaqueen`
-		* Chapter 3
-			* gml_Object_obj_elnina_enemy_Step_0/gml_Object_obj_lanino_enemy_Step_0 `/weather` (initial fight)
-			* gml_Object_obj_pippins_enemy_Step_0 `/pippins`
-			* gml_Object_obj_shutta_enemy_Step_0 `/shuttah`
-			* gml_Object_obj_watercooler_enemy_Step_0 `/watercooler`
-			* gml_Object_obj_zapper_enemy_Step_0 `/zapper`
-			* gml_Object_obj_tenna_board4_enemy_Step_0 `/tenna1` or `/tennadoom` (doom board)
-			* gml_Object_obj_ribbick_enemy_Step_0 `/ribbick`
-			* gml_Object_obj_rouxls_ch3_enemy_Step_0 `/rouxls2` or `/rouxlsch3` (contracts)
-			* gml_Object_obj_tenna_enemy_Step_0 `/tenna2` or `/tennafinal`
-		* Chapter 4
-			* gml_Object_obj_guei_enemy_Step_0 `/guei`
-			* gml_Object_obj_holywatercooler_enemy_Step_0 `/missmizzle`
-			* gml_Object_obj_hammer_of_justice_enemy_Step_0 `/hammerofjustice`
-			* gml_Object_obj_halo_enemy_Step_0 `/winglade`
-			* gml_Object_obj_organ_enemy_Step_0 `/organikk`
-			* gml_Object_obj_bell_enemy_Step_0 `/wicabel`
-			* gml_Object_obj_sound_of_justice_enemy_Step_0 `/soundofjustice`
-			* gml_Object_obj_titan_enemy_Step_0 `/titan`
-			* gml_Object_obj_mike_attack_controller_Step_0 `/mike`
-		* Party dojo
-			* gml_Object_obj_dojograzeenemy_Step_0 `/jigsawrydojo` or `/dojograze` (dojo's graze challenge, ch2)
-			* gml_Object_obj_dojo_spareenemy_Step_0 `/jigsawjoe` or `/dojospare` (dojo's spare challenge, ch2)
-			* the ch2 allstars fight...?
-			* gml_Object_obj_elnina_rematch_enemy_Step_0/gml_Object_obj_lanino_rematch_enemy_Step_0 `/weatherdojo` (Dojo variant, ch4)
-		* gml_Object_obj_multiboss_enemy1_Step_0/gml_Object_obj_multiboss_enemy2_Step_0/gml_Object_obj_multiboss_enemy3_Step_0 `/multiboss` &LeftArrow; no idea what these are. test enemies?
-		* gml_Object_obj_multiboss_controller_enemy1_Step_0/gml_Object_obj_multiboss_controller_enemy2_Step_0/gml_Object_obj_multiboss_controller_enemy3_Step_0 `/multibosscontroller` &LeftArrow; no idea what these are. test enemies?
-		* Figure out where these go because I don't have the brain power atm: ch3 gml_Object_obj_b1enemy_Step_0, allch gml_Object_obj_baseenemy_Step_0
 	* ~~`/recruits` - Profiles for recruited enemies~~ DONE up to Chapter 4
 	* ~~`/savepoints` - Youuuu guessed it. Save point text. The power of X fills you and all that.~~ DONE up to Chapter 4
 	* Maybe something for general menu text...?
