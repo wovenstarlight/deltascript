@@ -1036,8 +1036,8 @@ d-box {
 			[place],
 			[place~=bottom],
 			[place~=top]
-		),
-		&[theme=battlemenu] d-box[place~=bottom] {
+		):has(d-sprite),
+		&[theme=battlemenu] d-box[place~=bottom]:has(d-sprite) {
 			bottom: -3.6em;
 			d-sprite img { --size: 4.75em }
 		}
