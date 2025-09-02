@@ -1,0 +1,581 @@
+---
+title: Spells
+
+description: >
+  <p>Descriptions and usage text for special abilities learned and used by the party members. Includes descriptions from the POWER menu.</p>
+  <p>Usage messages including "[Character]" can substitute the names "Susie"/"Ralsei"/"Noelle", depending on who the spell was cast by.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /misc/powermenu
+    name: POWER menu
+
+sources:
+  -
+    name: gml_GlobalScript_scr_spellinfo
+    chapters: [1, 2, 3, 4]
+    note: spell descriptions
+  -
+    name: gml_GlobalScript_scr_spell
+    chapters: [1, 2, 3, 4]
+    note: spell effects
+  -
+    name: gml_GlobalScript_scr_gamestart
+    chapters: [1, 2, 3, 4]
+    note: character assignments
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [1, 2, 4]
+    note: Red Buster/Dual Heal battle descriptions/costs
+
+toc:
+  -
+    name: First seen in Chapter 1
+    subheadings:
+      -
+        id: rudesword
+        name: Rude Sword (UNUSED)
+      -
+        id: healprayer
+        name: Heal Prayer
+      -
+        id: pacify
+        name: Pacify
+      -
+        id: rudebuster
+        name: Rude Buster
+      -
+        id: redbuster
+        act_icon: Susie
+        name: Red Buster
+      -
+        id: dualheal
+        act_icon: [Susie, Ralsei]
+        custom_icon_positions: true
+        name: ACTICON /ACTICON Dual Heal
+      -
+        id: act
+        name: ACT
+  -
+    name: First seen in Chapter 2
+    subheadings:
+      -
+        id: sleepmist
+        name: Sleep Mist
+      -
+        id: iceshock
+        name: Ice Shock
+      -
+        id: snowgrave
+        name: Snow Grave
+      -
+        id: ultimateheal
+        name: Ultimate Heal
+  -
+    name: First seen in Chapter 3
+    subheadings:
+      -
+        id: ultraheal
+        name: Ultra Heal
+  -
+    name: First seen in Chapter 4
+    subheadings:
+      -
+        id: okheal
+        name: OK Heal
+      -
+        id: heal
+        name: Heal
+      -
+        id: betterheal
+        name: Better Heal
+---
+<section class="d-section" id="rudesword"> <!-- id 1 -->
+	<h2>Rude Sword</h2>
+	<p>Unused spell that's not available in the playable game, but included for completion. Appears as "RudeSword" in battle.</p>
+
+	<h3 id="rudesword-description">Description</h3>
+	<h4 id="rudesword-description-overworld">Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Deals moderate Rude-elemental damage to<span class="break"></span> one foe. Depends on Attack & Magic.</d-text>
+	</d-box>
+
+	<h4 id="rudesword-description-battle">In battle</h4>
+	<h5>Chapters 1 to 3</h5>
+	<d-box theme="battledesc">
+		<d-text>Rude Damage</d-text>
+		<d-text class="orange">50% TP</d-text>
+	</d-box>
+
+	<h5>Chapter 4 onwards</h5>
+	<d-box theme="battledesc">
+		<d-text>Rude damage</d-text>
+		<d-text class="orange">50% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="rudesword-usage">Usage</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] cast RUDE BUSTER!</d-text>
+	</d-box>
+	<p class="note">Deals damage to a single enemy.</p>
+</section>
+
+<section class="d-section" id="healprayer"> <!-- id 2 -->
+	<h2>Heal Prayer</h2>
+	<p>Available to Ralsei and Noelle from the start of the game.</p>
+
+	<h3 id="healprayer-description">Description</h3>
+	<h4 id="healprayer-description-overworld">Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Heavenly light restores a little HP to<span class="break"></span> one party member. Depends on Magic.</d-text>
+	</d-box>
+
+	<h4 id="healprayer-description-battle">In battle</h4>
+	<h5>Chapters 1 to 3</h5>
+	<d-box theme="battledesc">
+		<d-text>Heal<span class="break"></span> Ally</d-text>
+		<d-text class="orange">32% TP</d-text>
+	</d-box>
+
+	<h5>Chapter 4 onwards</h5>
+	<d-box theme="battledesc">
+		<d-text>Heal<span class="break"></span> ally</d-text>
+		<d-text class="orange">32% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="healprayer-usage">Usage</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[Character] cast HEAL PRAYER!</d-text>
+	</d-box>
+	<p class="note">Heals a single party member.</p>
+</section>
+
+<section class="d-section" id="pacify"> <!-- id 3 -->
+	<h2>Pacify</h2>
+	<p>Available to Ralsei from the start of the game.</p>
+
+	<h3 id="pacify-description">Description</h3>
+	<h4 id="pacify-description-overworld">Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>SPARE a tired enemy by putting them to sleep.</d-text>
+	</d-box>
+
+	<h4 id="pacify-description-battle">In battle</h4>
+	<d-box theme="battledesc">
+		<d-text>Spare TIRED foe</d-text>
+		<d-text class="orange">16% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="pacify-usage">Usage</h3>
+	<h4>If the targeted enemy is <span class="blue">Tired</span></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei cast PACIFY!</d-text>
+	</d-box>
+	<p class="note">The enemy is spared.</p>
+
+	<h4>If the targeted enemy is not <span class="blue">Tired</span> and has less than 100% <span class="yellow">Mercy</span></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei cast PACIFY!</d-text>
+		<d-text asterisk>But the enemy wasn't <span class="blue">TIRED</span>...</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<h4>If the targeted enemy is not <span class="blue">Tired</span> and has 100% <span class="yellow">Mercy</span></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei cast PACIFY!</d-text>
+		<d-text asterisk>But the foe wasn't <span class="blue">TIRED</span>... try <span class="yellow">SPARING</span>!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="rudebuster"> <!-- id 4 -->
+	<h2>Rude Buster</h2>
+	<p>Available to Susie from the start of the game.</p>
+
+	<h3 id="rudebuster-description">Description</h3>
+	<h4 id="rudebuster-description-overworld">Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Deals moderate Rude-elemental damage to<span class="break"></span> one foe. Depends on Attack & Magic.</d-text>
+	</d-box>
+
+	<h4 id="rudebuster-description-battle">In battle</h4>
+	<h5>Chapters 1 to 3</h5>
+	<h6>Standard</h6>
+	<d-box theme="battledesc">
+		<d-text>Rude Damage</d-text>
+		<d-text class="orange">50% TP</d-text>
+	</d-box>
+
+	<h6>With the <a href="{{ '/misc/weapons#devilsknife' | relative_url }}">Devilsknife</a> equipped</h6>
+	<d-box theme="battledesc">
+		<d-text>Rude Damage</d-text>
+		<d-text class="orange">40% TP</d-text>
+	</d-box>
+
+	<h5>Chapter 4 onwards</h5>
+	<h6>Standard</h6>
+	<d-box theme="battledesc">
+		<d-text>Rude damage</d-text>
+		<d-text class="orange">50% TP</d-text>
+	</d-box>
+
+	<h6>With the Devilsknife equipped</h6>
+	<d-box theme="battledesc">
+		<d-text>Rude damage</d-text>
+		<d-text class="orange">40% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="rudebuster-usage">Usage</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie used RUDE BUSTER!</d-text>
+	</d-box>
+	<p class="note">Deals damage to a single enemy.</p>
+</section>
+
+<section class="d-section" id="redbuster"> <!-- id 5 -->
+	<h2>{% include acticon chara="Susie" -%} Red Buster</h2>
+	<p>Can only be cast through Kris's ACT menu. Appears as "{% include acticon chara="Susie" -%} RedBuster" in-game.</p>
+	<p>Available to Susie during the battles against King and Queen.</p>
+
+	<h3 id="redbuster-description">Description</h3>
+	<h4 id="redbuster-description-overworld">Overworld</h4>
+	<p>No overworld description, as this spell appears only during specific encounters.</p>
+
+	<h4 id="redbuster-description-battle">In battle</h4>
+	<h5>Chapters 1 to 3</h5>
+	<d-box theme="battledesc">
+		<d-text>Red Damage</d-text>
+		<d-text class="orange">60% TP</d-text>
+	</d-box>
+
+	<h5>Chapter 4 onwards</h5>
+	<d-box theme="battledesc">
+		<d-text>Red damage</d-text>
+		<d-text class="orange">60% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="redbuster-usage">Usage</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie used RED BUSTER!</d-text>
+	</d-box>
+	<p class="note">Deals damage to a single enemy.</p>
+</section>
+
+<section class="d-section" id="dualheal"> <!-- id 6 -->
+	<h2>{% include acticon chara="Susie" -%}/{% include acticon chara="Ralsei" -%} Dual Heal</h2>
+	<p>Can only be cast through Kris's ACT menu. Appears as "{% include acticon chara="Ralsei" -%} DualHeal" (Chapters 1 & 2) / "{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} DualHeal" (Chapter 4 onwards) in-game.</p>
+	<p>Available to Ralsei during the battles against King and Queen, and to Susie & Ralsei during the battles against the Titan Spawn and Titan.</p>
+
+	<h3 id="dualheal-description">Description</h3>
+	<h4 id="dualheal-description-overworld">Overworld</h4>
+	<p>No overworld description, as this spell appears only during specific encounters.</p>
+
+	<h4 id="dualheal-description-battle">In battle</h4>
+	<h5>Chapters 1 & 2</h5>
+	<d-box theme="battledesc">
+		<d-text>Heals everyone</d-text>
+		<d-text class="orange">50% TP</d-text>
+	</d-box>
+
+	<h5>Chapter 4</h5>
+	<d-box theme="battledesc">
+		<d-text>Heals everyone</d-text>
+		<d-text class="orange">16% TP</d-text>
+	</d-box>
+
+	<h5>Unused variant</h5>
+	<p>Fallback value across all chapters. Gets overridden when including the spells for actual encounters. (No TP cost was provided.)</p>
+	<d-box theme="battledesc">
+		<d-text>Heal All 30 HP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dualheal-usage">Usage</h3>
+	<p class="note">Heals all party members.</p>
+	<h4>Chapters 1 to 3</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei cast DUAL HEAL!</d-text>
+	</d-box>
+
+	<h4>Chapter 4 onwards</h4>
+	<h5>First to fourth uses in a single encounter</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei and Susie cast DUAL HEAL! Effectiveness of DUAL HEAL has lowered!</d-text>
+	</d-box>
+	<h5>Fifth use onwards</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei and Susie cast DUAL HEAL!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="act"> <!-- id 7 -->
+	<h2>ACT</h2>
+	<p>Available to Kris from the start of the game.</p>
+
+	<h3 id="act-description">Description</h3>
+	<h4 id="act-description-overworld">Overworld</h4>
+	<h5>Chapter 1</h5>
+	<d-box theme="objmenu">
+		<d-text>Do all sorts of things.</d-text>
+		<d-text>It isn't magic.</d-text>
+	</d-box>
+
+	<h5>Chapter 2</h5>
+	<d-box theme="objmenu">
+		<d-text>You can do many things.</d-text>
+		<d-text>Don't confuse it with magic.</d-text>
+	</d-box>
+
+	<h5>Chapter 3</h5>
+	<d-box theme="objmenu">
+		<d-text>Many different skills.</d-text>
+		<d-text>It has nothing to do with magic.</d-text>
+	</d-box>
+
+	<h5>Chapter 4</h5>
+	<d-box theme="objmenu">
+		<d-text>Execute various behaviors.</d-text>
+		<d-text>It can't be considered magic.</d-text>
+	</d-box>
+
+	<h4 id="act-description-battle">In battle</h4>
+	<p>Unused, as the base ACT ability does not appear in battle. It instead appears as a variety of individual, enemy-specific ACTs. See the <a href="{{ '/encounters/' | relative_url }}">individual encounter pages</a> for the list of ACTs available to each enemy.</p>
+	<d-box theme="battledesc">
+		<d-text>Use<span class="break"></span> action</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="act-usage">Usage</h3>
+	<p class="note">Effects vary depending on the enemy targeted and the specific ACT used.</p>
+</section>
+
+<section class="d-section" id="sleepmist"> <!-- id 8 -->
+	<h2>Sleep Mist</h2>
+	<p>Available to Noelle from Chapter 2 onwards. Appears as "SleepMist" in the overworld.</p>
+
+	<h3 id="sleepmist-description">Description</h3>
+	<h4 id="sleepmist-description-overworld">Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A cold mist sweeps through,<span class="break"></span> sparing all TIRED enemies.</d-text>
+	</d-box>
+
+	<h4 id="sleepmist-description-battle">In battle</h4>
+	<d-box theme="battledesc">
+		<d-text>Spare TIRED foes</d-text>
+		<d-text class="orange">32% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sleepmist-usage">Usage</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle cast SLEEPMIST!</d-text>
+	</d-box>
+	<p class="note">Spares all <span class="blue">Tired</span> enemies.</p>
+</section>
+
+<section class="d-section" id="iceshock"> <!-- id 9 -->
+	<h2>Ice Shock</h2>
+	<p>Available to Noelle from Chapter 2 onwards. Appears as "IceShock" in-game.</p>
+
+	<h3 id="iceshock-description">Description</h3>
+	<h4 id="iceshock-description-overworld">Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Deals magical ICE damage to<span class="break"></span> one enemy.</d-text>
+	</d-box>
+
+	<h4 id="iceshock-description-battle">In battle</h4>
+	<h5>Standard</h5>
+	<d-box theme="battledesc">
+		<d-text>Damage<span class="break"></span> w/ ICE</d-text>
+		<d-text class="orange">16% TP</d-text>
+	</d-box>
+
+	<h5>With the <a href="{{ '/misc/weapons#thornring' | relative_url }}">Thorn Ring</a> equipped</h5>
+	<d-box theme="battledesc">
+		<d-text>Damage<span class="break"></span> w/ ICE</d-text>
+		<d-text class="orange">8% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="iceshock-usage">Usage</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle cast ICESHOCK!</d-text>
+	</d-box>
+	<p class="note">Deals damage to a single enemy.</p>
+</section>
+
+<section class="d-section" id="snowgrave"> <!-- id 10 -->
+	<h2>Snow Grave</h2>
+	<p>Available to Noelle from Chapter 2 onwards.</p>
+
+	<h3 id="snowgrave-description">Description</h3>
+	<h4 id="snowgrave-description-overworld">Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Deals the fatal damage to<span class="break"></span> all of the enemies.</d-text>
+	</d-box>
+
+	<h4 id="snowgrave-description-battle">In battle</h4>
+	<h5>Standard</h5>
+	<d-box theme="battledesc">
+		<d-text>Fatal</d-text>
+		<d-text class="orange">200% TP</d-text>
+	</d-box>
+
+	<h5>With the <a href="{{ '/misc/weapons#thornring' | relative_url }}">Thorn Ring</a> equipped</h5>
+	<d-box theme="battledesc">
+		<d-text>Fatal</d-text>
+		<d-text class="orange">100% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="snowgrave-usage">Usage</h3>
+	<p class="note">In Chapter 2, this spell is only available during the <a href="{{ '/encounters/berdlycybercityweird#snowgrave' | relative_url }}">second Berdly encounter on the Weird Route</a> and has special, nonstandard dialogue. Below is the standard narration for usage.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle cast SNOWGRAVE!</d-text>
+	</d-box>
+	<p class="note">Deals damage to all enemies.</p>
+</section>
+
+<section class="d-section" id="ultimateheal"> <!-- id 11 -->
+	<h2>Ultimate Heal</h2>
+	<p>Available to Susie during the second half of Chapter 2, after she and Ralsei reunite with Kris. Appears as "UltimatHeal" in-game.</p>
+
+	<h3 id="ultimateheal-description">Description</h3>
+	<h4 id="ultimateheal-description-overworld">Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Heals 1 party member to the<span class="break"></span> best of Susie's ability.</d-text>
+	</d-box>
+
+	<h4 id="ultimateheal-description-battle">In battle</h4>
+	<d-box theme="battledesc">
+		<d-text>Best healing</d-text>
+		<d-text class="orange">100% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ultimateheal-usage">Usage</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie cast ULTIMATEHEAL!</d-text>
+	</d-box>
+	<p class="note">Heals a single party member.</p>
+</section>
+
+<section class="d-section" id="ultraheal"> <!-- id 11 -->
+	<h2>Ultra Heal</h2>
+	<p>Available to Susie during Chapter 3. Appears as "UltraHeal" in-game.</p>
+
+	<h3 id="ultraheal-description">Description</h3>
+	<h4 id="ultraheal-description-overworld">Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>An awesome healing spell.</d-text>
+		<d-text>... right?</d-text>
+	</d-box>
+
+	<h4 id="ultraheal-description-battle">In battle</h4>
+	<d-box theme="battledesc">
+		<d-text>Best healing</d-text>
+		<d-text class="orange">90% TP</d-text>
+	</d-box>
+	<p class="note">Cost is reduced by 1% TP per use for the first 5 uses, leading to a minimum cost of 85% TP.</p>
+
+	<hr>
+
+	<h3 id="ultraheal-usage">Usage</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie cast ULTRAHEAL!</d-text>
+	</d-box>
+	<p class="note">Heals a single party member.</p>
+</section>
+
+<section class="d-section" id="okheal"> <!-- id 11 -->
+	<h2>OK Heal</h2>
+	<p>Available to Susie at the start of Chapter 4 up to meeting Ralsei in the Dark Sanctuary, and from healing Jackenstein onwards. Appears as "OKHeal" in-game.</p>
+
+	<h3 id="okheal-description">Description</h3>
+	<h4 id="okheal-description-overworld">Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>It's not the best healing spell, but<span class="break"></span> it may have its uses.</d-text>
+	</d-box>
+
+	<h4 id="okheal-description-battle">In battle</h4>
+	<d-box theme="battledesc">
+		<d-text>OK<span class="break"></span> healing</d-text>
+		<d-text class="orange">85% TP</d-text>
+	</d-box>
+	<p class="note">Cost is reduced by 1% TP after 1, 4, 7, 10, and 13 uses (including any uses during Chapter 3), leading to a minimum cost of 80% TP.</p>
+
+	<hr>
+
+	<h3 id="okheal-usage">Usage</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie cast OKHEAL!</d-text>
+	</d-box>
+	<p class="note">Heals a single party member.</p>
+</section>
+
+<section class="d-section" id="heal"> <!-- id 11 -->
+	<h2>Heal</h2>
+	<p>Available to Susie during Chapter 4, after meeting Ralsei in the Dark Sanctuary up to and including the fight against Jackenstein.</p>
+
+	<h3 id="heal-description">Description</h3>
+	<h4 id="heal-description-overworld">Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>It seems the user doesn't<span class="break"></span> want to use this spell.</d-text>
+	</d-box>
+
+	<h4 id="heal-description-battle">In battle</h4>
+	<d-box theme="battledesc">
+		<d-text>Can't<span class="break"></span> use</d-text>
+		<d-text class="orange">102% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="heal-usage">Usage</h3>
+	<p>Cannot be used in battle due to the excessive TP cost.</p>
+</section>
+
+<section class="d-section" id="betterheal"> <!-- id 11 -->
+	<h2>Better Heal</h2>
+	<p>Available to Susie from Chapter 4 onwards, after defeating the <a href="{{ '/encounters/hammerofjustice' | relative_url }}">Hammer of Justice</a> or the <a href="{{ '/encounters/soundofjustice' | relative_url }}">Sound of Justice</a>. Appears as "BetterHeal" in-game.</p>
+
+	<h3 id="betterheal-description">Description</h3>
+	<h4 id="betterheal-description-overworld">Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>A healing spell that has grown<span class="break"></span> with practice and confidence.</d-text>
+	</d-box>
+
+	<h4 id="betterheal-description-battle">In battle</h4>
+	<d-box theme="battledesc">
+		<d-text>Heal<span class="break"></span> ally</d-text>
+		<d-text class="orange">80% TP</d-text>
+	</d-box>
+	<p class="note">Cost is reduced by 1% TP after 1, 4, 7, 10, and 13 uses (including any uses during Chapter 3), leading to a minimum cost of 75% TP.</p>
+
+	<hr>
+
+	<h3 id="betterheal-usage">Usage</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie cast BetterHeal!</d-text>
+	</d-box>
+	<p class="note">Heals a single party member.</p>
+</section>
