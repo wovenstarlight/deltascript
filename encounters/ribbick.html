@@ -1,0 +1,366 @@
+---
+title: Ribbick encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Ribbick.</p>
+
+sources:
+  -
+    name: gml_Object_obj_ribbick_enemy_Step_0
+    chapters: [3]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [3]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [3]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-ribbick
+            name: With 1 or 2 other Ribbicks
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-isblown
+        name: After being dirtied
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: croakon
+        name: CroakOn
+      -
+        id: croakonx
+        act_icon: Ralsei
+        name: CroakOnX
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(125|126|127|128|129|130|131)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4> <!--125-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ribbick hopped into view!</d-text>
+	</d-box>
+
+	<h4 id="encounter-ribbick">With 1 or 2 other Ribbicks</h4> <!--126/131-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ribbicks hopped into view!</d-text>
+	</d-box>
+
+	<!-- UNUSED:
+		- 127: Shadowguy
+		- 128: Shuttah
+		- 129: Zapper
+		- 130: Pippins
+	-->
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ribbick wants to be friends with a dancing trash can.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The battlefield is filled with the smell of pungent mustard.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ribbick enriches the back stage floor with nutrients.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ribbick emits a groany must.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ribbick's getting dangerously clean.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ribbick is dirtier than ever, but that's fine.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<p>If Ribbick has been recruited, then in the encounter with 1 other Ribbick, one of the Ribbicks is actually a disguised <a href="{{ '/encounters/rabbick' | relative_url }}">Rabbick</a>, indicated by the disguised enemy using the <a href="{{ '/encounters/rabbick#dialogue-standard' | relative_url }}">standard Rabbick dialogue</a> instead of the Ribbick dialogue below.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Ribbick</d-speaker>
+		<d-text>Guruuuu---</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Ribbick</d-speaker>
+		<d-text>Woof.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Ribbick</d-speaker>
+		<d-text>Sizzy snuzz,<span class="break"></span> what's the buzz?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Ribbick</d-speaker>
+		<d-text>Hip, hip</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">4.95% (5/101) chance:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Ribbick</d-speaker>
+		<d-text>A lost<span class="break"></span> and lost<span class="break"></span> and lost girl.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">4.95% (5/101) chance:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Ribbick</d-speaker>
+		<d-text>A crying<span class="break"></span> and crying<span class="break"></span> and crying boy.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-isblown">After being dirtied</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Ribbick</d-speaker>
+		<d-text>A messy and<span class="break"></span> unfocused girl.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Ribbick</d-speaker>
+		<d-text>A rowdy and<span class="break"></span> dirty girl.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Ribbick</d-speaker>
+		<d-text>A poorly<span class="break"></span> trimmed boy.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Ribbick</d-speaker>
+		<d-text>A quiet and<span class="break"></span> smelly boy.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>RIBBICK - This dusty frog needs a bit of an autumn dirtying.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="croakon">
+	<h2>CroakOn</h2>
+
+	<h3 id="croakon-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Mercy<span class="break"></span> by mashing</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="croakon-ft">Flavor text</h3>
+	<h4>If Ribbick was not already at 100% <span class="yellow">Mercy</span></h4>
+	<h5>Instructions</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press [MENU] repeatedly!</d-text>
+	</d-box>
+	<p class="note">A timer lasting roughly 2 seconds counts down, starting from when [MENU] is first pressed. <span class="yellow">Mercy</span> builds up with every press of [MENU] but depletes if time passes without [MENU] being pressed again, so the key must be pressed repeatedly and quickly to build up lasting <span class="yellow">Mercy</span>. The ACT ends early if 64% <span class="yellow">Mercy</span> is reached.</p>
+	{%- comment -%}
+	Ok so as far as I understand it's +12 every keypress, and -1 every frame => -30 per second at 30fps, ACT ends early upon reaching 100, and all values are 64%ed to get the final values. so:
+		- 64% of +12 => +7.68
+		- 64% of -30 => -19.2
+		- 64% of 100 is obviously 64%
+	but i'm not sure i'm reading that per-frame loss right especially, so i'm gonna hold off on putting this in the actual text
+	{%- endcomment -%}
+
+	<h5>Successfully croaked on</h5>
+	<p>If [MENU] was pressed at least once before the timer ran out.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It became even dirtier!</d-text>
+	</d-box>
+
+	<h5>Successfully croaked on and reached 100% <span class="yellow">Mercy</span></h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It revealed its dirtier self!</d-text>
+	</d-box>
+	<p class="note">Ribbick shrinks in size and looks happy.</p>
+
+	<h5>Successfully croaked on to reach 100% <span class="yellow">Mercy</span> on a disguised Rabbick</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>What the!? It was an imposter!</d-text>
+	</d-box>
+	<p class="note">"Ribbick" turns into a spareable, happy Rabbick.</p>
+
+	<h5>Failed to croak</h5>
+	<p>If [MENU] was not pressed rapidly enough and the gathered <span class="yellow">Mercy</span> depleted to 0%.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Nothing happened!</d-text>
+	</d-box>
+
+	<h4>If Ribbick was already at 100% <span class="yellow">Mercy</span></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The enemy was blown away!</d-text>
+	</d-box>
+	<p class="note">Ribbick is automatically spared.</p>
+</section>
+
+<section class="d-section" id="croakonx">
+	<h2>{% include acticon chara="Ralsei" -%} CroakOnX</h2>
+	<p>Appears as "{% include acticon chara="Ralsei" -%} CroakOn<span class="red">X</span>" if the <a href="{{ '/misc/darkitems#tripticket' | relative_url }}">TripTicket</a> has been obtained.</p>
+
+	<h3 id="croakonx-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Targets all by mashing</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="croakonx-ft">Flavor text</h3>
+	<p>Identical to <a href="#croakon">CroakOn</a>, but targeting all Ribbicks instead of just one.</p>
+
+	<hr>
+
+	<h3 id="croakonx-escape">Escaping</h3>
+	<p>Available only if the <a href="{{ '/misc/darkitems#tripticket' | relative_url }}">TripTicket</a> has been obtained.</p>
+	<p></p>
+	<p class="note">Moving the selection cursor to this ACT and pressing [Left] will result in the SOUL cursor gaining legs and walking off to the left until it can no longer be seen.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Escaped...</d-text>
+	</d-box>
+	<p class="note">The screen fades to black, then fades back in on <a href="{{ '/chapters/chapter3/egg#man' | relative_url }}">Mancountry</a>.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>50%<span class="break"></span> Mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p class="note">Ribbick gains 50% <span class="yellow">Mercy</span>.</p>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie dirties the enemy further! It seemed to like it!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<p>Displayed in a single dialogue box with <span class="susie act">S-Action</span>'s flavor text if both are used in the same turn, in the order Susie → Ralsei.</p>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie generates filth!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie shows gum from her shoe!!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie says dirty words!</d-text>
+	</d-box>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>25%<span class="break"></span> and<span class="break"></span> Tired</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p class="note">Ribbick gains 25% <span class="yellow">Mercy</span> and becomes <span class="blue">Tired</span>.</p>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei tried to clean the enemy! It became TIRED...</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<p>Displayed in a single dialogue box with <span class="susie act">S-Action</span>'s flavor text if both are used in the same turn, in the order Susie → Ralsei.</p>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei tries tidying up!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei uses a feather duster!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei croaks sympathetically!</d-text>
+	</d-box>
+	<hr class="hr2">
+</section>
