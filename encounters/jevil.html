@@ -6,21 +6,8 @@ description: >
 
 sources:
   -
-    name: gml_GlobalScript_scr_text
-    chapters: [1]
-    note: intro speeches
-  -
-    name: gml_Object_obj_event_room_Step_0
-    chapters: [1]
-    note: door opening narration
-  -
-    name: gml_Object_obj_jokerbattleevent_Step_0
-    chapters: [1]
-    note: prefight/postfight speech
-  -
     name: gml_Object_obj_joker_Step_0
     chapters: [1]
-    note: flavor text/combat dialogue
   -
     name: gml_GlobalScript_scr_monstersetup
     chapters: [1]
@@ -35,24 +22,8 @@ credits: >
 
 toc:
   -
-    id: firstmeeting
-    name: First meeting
-    subheadings:
-      -
-        id: firsttime
-        name: First time
-      -
-        id: instructions
-        name: Subsequent times before obtaining the Door Key
-  -
-    id: opendoor
-    name: Opening the door
-  -
-    id: prefight
-    name: Before the fight
-  -
     id: flavortext
-    name: Flavor text
+    name: General flavor text
     subheadings:
       -
         id: encounter
@@ -61,252 +32,46 @@ toc:
         id: ft-standard
         name: Standard
       -
+        id: ft-chaosbomb
+        name: Phase 4, immediately before Chaos Bomb
+      -
+        id: ft-finalchaos
+        name: Phase 4, immediately before Final Chaos
+      -
+        id: ft-phase5
+        name: Phase 5
+      -
         id: ft-tired
         name: Tired
-      -
-        id: ft-check
-        name: Check
-      -
-        id: ft-pirouette
-        name: Pirouette
-      -
-        id: ft-hypnosis
-        act_icon: [Susie, Ralsei]
-        name: Hypnosis
   -
     id: dialogue
-    name: Dialogue
+    name: General dialogue
     subheadings:
       -
         id: dialogue-standard
         name: Standard
       -
-        id: dialogue-specific
+        id: dialogue-attack
         name: With specific attacks
   -
-    id: postfight
-    name: After the fight
+    name: ACTs
     subheadings:
       -
-        id: defeat-fight
-        name: If you defeated Jevil by fighting
+        id: check
+        name: Check
       -
-        id: defeat-pacify
-        name: If you defeated Jevil by pacifying
+        id: pirouette
+        name: Pirouette
+      -
+        id: hypnosis
+        act_icon: [Susie, Ralsei]
+        name: Hypnosis
 ---
-<section class="d-section" id="firstmeeting">
-	<h2>First meeting</h2>
-
-	<h3 id="firsttime">First time</h3>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>BOO HOO, BOO HOO, UEE HEE HEE.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>SO LONELY, LONELY, I BE...</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>BUT LO, THREE VISITORS STANDING INSIDE?</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>WHO ARE YOU FEW?</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
-		<d-text asterisk>Nice to meet you! I'm Ralsei, this is Kris, and...</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
-		<d-text asterisk>So, what the hell are you doing in there?</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>I AM INNOCENT, INNOCENT.</d-text>
-		<d-text asterisk>I JUST WANTED TO PLAY A GAME, GAME.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>BUT THE BORING KINGS FOUND SUCH FUN TO BE A TROUBLE.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>AS PUNISHMENT, THEY CRAVED TO IMPRISON MY BODY.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>BUT I'M FAST, FAST, CLEVER, CLEVER.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>THEY LOST THE CHASE, AND LOCKED UP THEIR ENTIRE RACE,</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>BUILDING A PRISON AROUND THE WHOLE WORLD. NOW I'M THE ONLY FREE ONE.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
-		<d-text asterisk>Huh? Free? But you're clearly the one behind bars...</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>THINGS DON'T SEEM SUCH FROM HERE, LIGHTNERS!</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
-		<d-text asterisk>Well, sounds like you don't need any help, then.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>THAT IS UN-SO.</d-text>
-		<d-text asterisk>I GROW LONELY IN MY LITTLE FREEDOM.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>SO, SHALL YOU PLAY A GAME WITH ME, ME...?</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>I'LL SHOW YOU WHAT IT MEANS TO BE FREE!</d-text>
-	</d-box>
-
-	<d-choices theme="dark">
-		<d-option index="0" text="Play\sa game"></d-option>
-		<d-option index="1" text="Do not\splay a\sgame"></d-option>
-	</d-choices>
-
-	<d-option-panel index="0" theme="dark">
-		<p class="note">Dialogue skips to <a href="#instructions">Jevil's instructions</a>, then ends.</p>
-	</d-option-panel>
-	<d-option-panel index="1" theme="dark">
-		<d-box theme="dark">
-			<d-speaker>Jevil</d-speaker>
-			<d-text asterisk>BOO HOO, BOO HOO, UEE HEE HEE!!</d-text>
-		</d-box>
-		<d-box theme="dark">
-			<d-speaker>Jevil</d-speaker>
-			<d-text asterisk>HOW CAN YOU REFUSE, WHEN YOU ARE ALREADY PLAYING...?</d-text>
-		</d-box>
-		<p class="note">Dialogue ends here.</p>
-	</d-option-panel>
-
-	<p class="note">You can now <a href="{{ '/locations/cardkingdom/field/seap#strangeprisoner' | relative_url }}">ask Seam about Jevil and the key</a>.</p>
-
-	<hr>
-
-	<h3 id="instructions">Subsequent times before obtaining the <a href="{{ '/misc/darkitems#doorkey' | relative_url }}">Door Key</a></h3>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>FIND THE KEY, AND I'LL LET YOU BE FREE, FREE.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>THE KEY IS HIDDEN FROM THE EYES. THE OLD SHOPKEEPER KNOWS A SECRET.</d-text>
-	</d-box>
-</section>
-
-<section class="d-section" id="opendoor">
-	<h2>Opening the door</h2>
-	<p>Plays when you first return to the door with the repaired Door Key.</p>
-
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>UEE HEE HEE, THE KEY, THE KEY.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>A MARVELLOUS FUN IS ABOUT TO BREAK FREE.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>WON'T YOU LET YOURSELF OUTSIDE?</d-text>
-	</d-box>
-
-	<d-choices theme="dark">
-		<d-option index="0" text="Use Key"></d-option>
-		<d-option index="1" text="Do not"></d-option>
-	</d-choices>
-
-	<d-option-panel index="0" theme="dark">
-		<d-box theme="dark">
-			<d-text asterisk>(You put the Door Key in front of the Door.)</d-text>
-		</d-box>
-	</d-option-panel>
-	<d-option-panel index="1" theme="dark">
-		<d-box theme="dark">
-			<d-speaker>Jevil</d-speaker>
-			<d-text asterisk>YOU CAME TOO FAR! YOUR CHOICE HAS RUN OUT!</d-text>
-		</d-box>
-	</d-option-panel>
-
-	<p class="note">The Door Key is removed from the inventory. A door forms in the prison gate.</p>
-
-	<d-box theme="dark">
-		<d-text asterisk>(The Door Key created a Door.)</d-text>
-	</d-box>
-
-	<p class="note">The door opens outward and can be entered.</p>
-</section>
-
-<section class="d-section" id="prefight">
-	<h2>Before the fight</h2>
-
-	<p class="note">Kris, Susie, and Ralsei enter Jevil's room.</p>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>UEE HEE!</d-text>
-		<d-text asterisk>VISITORS, VISITORS!</d-text>
-		<d-text asterisk>NOW WE CAN PLAY, PLAY!</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>THEN, AFTER YOU, I CAN PLAY WITH EVERYONE ELSE, TOO!</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
-		<d-text asterisk>So what are we playing, exactly...?</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>OH, IT'S JUST A SIMPLE NUMBERS GAME.</d-text>
-	</d-box>
-	<p class="note">Jevil laughs as a scythe sweeps past the party members, who narrowly dodge, Susie and Ralsei looking shocked.</p>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>WHEN YOUR HP DROPS TO 0, YOU LOSE!</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
-		<d-text asterisk>So that's the kinda game you wanna play, huh...?</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
-		<d-text asterisk>Then, I gotta warn you...</d-text>
-	</d-box>
-	<p class="note">Kris, Susie, and Ralsei draw their weapons.</p>
-	<d-box theme="dark">
-		<d-sprite speaker="Susie" variant="noeyes" emotion="3"></d-sprite>
-		<d-text asterisk>You're dealing with a couple of sharks.</d-text>
-	</d-box>
-	<p class="note">Jevil laughs.</p>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>UEE HEE HEE! SHARK-TO-SHARK! I WOULDN'T HAVE IT ANY OTHER WAY!</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>NOW, NOW!!</d-text>
-		<d-text asterisk>LET THE GAMES BEGIN!!</d-text>
-	</d-box>
-	<p class="note">The fight begins.</p>
-</section>
+{% comment %} encounterno = 25 {% endcomment %}
 
 <section class="d-section" id="flavortext">
-	<h2>Flavor text</h2>
-	<p>Mentions of "phases" on this page are referencing the <a href="{% include wikilink page='Jevil#Attacks' %}">attack phases outlined by the Deltarune Wiki</a>.</p>
+	<h2>General flavor text</h2>
+	<p>See the <a href="{% include wikilink page='Jevil#Attacks' %}">Deltarune Wiki</a> for definitions of the attack phases mentioned here.</p>
 
 	<h3 id="encounter">Initial encounter</h3>
 	<d-box theme="battlemenu">
@@ -319,27 +84,40 @@ toc:
 	<d-box theme="battlemenu">
 		<d-text asterisk>The world is spinning, spinning.</d-text>
 	</d-box>
+	<hr class="hr2">
 	<d-box theme="battlemenu">
 		<d-text asterisk>The air crackles with freedom.</d-text>
 	</d-box>
+	<hr class="hr2">
 	<d-box theme="battlemenu">
 		<d-text asterisk>JEVIL is laughing incomprehensibly.</d-text>
 	</d-box>
+	<hr class="hr2">
 	<d-box theme="battlemenu">
 		<d-text asterisk>It feels like a whirlwind.</d-text>
 	</d-box>
+	<hr class="hr2">
 	<d-box theme="battlemenu">
 		<d-text asterisk>Smells like chaos.</d-text>
 	</d-box>
-	<h4>Phase 4, immediately before Chaos Bomb</h4>
+
+	<hr>
+
+	<h3 id="ft-chaosbomb">Phase 4, immediately before Chaos Bomb</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>CHAOS BOMB was prepared FOR YOU.</d-text>
 	</d-box>
-	<h4>Phase 4, immediately before Final Chaos</h4>
+
+	<hr>
+
+	<h3 id="ft-finalchaos">Phase 4, immediately before Final Chaos</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Something terrible is coming...!</d-text>
 	</d-box>
-	<h4>Phase 5</h4>
+
+	<hr>
+
+	<h3 id="ft-phase5">Phase 5</h3>
 	<d-box theme="battlemenu">
 		<d-text asterisk>JEVIL's pulling out all the stops!</d-text>
 	</d-box>
@@ -350,167 +128,13 @@ toc:
 	<d-box theme="battlemenu">
 		<d-text asterisk>JEVIL is truly exhausted!</d-text>
 	</d-box>
-
-	<hr>
-
-	<h3 id="ft-check">Check</h3>
-	<d-box theme="battlemenu">
-		<d-text asterisk>JEVIL </d-text>
-		<d-text asterisk>There is no strategy to defeat the enemy. Good luck!</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-pirouette">Pirouette</h3>
-	<h4>Description</h4>
-	<d-box theme="battledesc">
-		<d-text>Random Chaos</d-text>
-		<d-text class="orange">20% TP</d-text>
-	</d-box>
-
-	<h4>Usage</h4>
-	<p class="note">Increases Jevil's Tiredness by 0.5.</p>
-
-	<d-box theme="battlemenu">
-		<d-text asterisk>Kris spun around!</d-text>
-		<d-text asterisk>JEVIL got slightly more TIRED, and...!</d-text>
-	</d-box>
-	<hr class="hr2">
-	<p class="note">Pirouette's effects rotate through the following depending on the turn. Using Pirouette on turn 10 has the same effect as on turn 1, turn 11 has the same effect as on turn 2, and so on.</p>
-
-	<h5>Turn 1</h5>
-	<d-box theme="battlemenu">
-		<d-text asterisk>What!</d-text>
-		<d-text asterisk>It was just foley!</d-text>
-	</d-box>
-	<p class="note">Accompanied by an explosion, car honk, or toilet flush SFX.</p>
-
-	<h5>Turn 2</h5>
-	<d-box theme="battlemenu">
-		<d-text asterisk>JEVIL felt at ease!</d-text>
-		<d-text asterisk>JEVIL's defense dropped!</d-text>
-	</d-box>
-	<p class="note">Jevil's defense lowers by 4, up to a maximum reduction of 16.</p>
-
-	<h5>Turn 3</h5>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Awkward! Upcoming attack will hurt rapidly!</d-text>
-	</d-box>
-	<p class="note">Invincibility frames are reduced by 60% for this turn.</p>
-
-	<h5>Turn 4</h5>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Tranquil!</d-text>
-		<d-text asterisk>The dance defended the party!</d-text>
-	</d-box>
-	<p class="note">Jevil's attack is reduced by 30% for this turn.</p>
-
-	<h5>Turn 5</h5>
-	<d-box theme="battlemenu">
-		<d-text asterisk>What!</d-text>
-		<d-text asterisk>It's nothing but a useless bird!</d-text>
-	</d-box>
-	<p class="note">A bird flies across the screen.</p>
-
-	<h5>Turn 6</h5>
-	<d-box theme="battlemenu">
-		<d-text asterisk>It felt comforting!</d-text>
-	</d-box>
-	<p class="note">Heals a random party member for 25–55 HP.</p>
-
-	<h5>Turn 7</h5>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Everyone's HP got jumbled up!</d-text>
-	</d-box>
-	<p class="note">The party members' HP bars are shuffled, so that each party member takes on the current/maximum HP of another party member. Negative HP is split among all party members and anyone who is downed is revived with 1 HP. (Party members get their original HP bars back at the end of this encounter.)</p>
-
-	<h5>Turn 8</h5>
-	<d-box theme="battlemenu">
-		<d-text asterisk>JEVIL's upcoming move got powered up!</d-text>
-	</d-box>
-	<p class="note">Jevil's attack is boosted by 25% for this turn.</p>
-
-	<h5>Turn 9</h5>
-	<d-box theme="battlemenu">
-		<d-text asterisk>A perfect 10!</d-text>
-	</d-box>
-	<p class="note">Heals all party members for 36–50 HP.</p>
-
-	<h5>Unused</h5>
-	<d-box theme="battlemenu">
-		<d-text asterisk>Something happened!</d-text>
-	</d-box>
-
-	<hr class="hr2">
-
-	<h5>If Jevil is <span class="blue">Tired</span></h5>
-	<p>If Jevil's Tiredness is 9 or higher.</p>
-	<d-box theme="battlemenu">
-		<d-text asterisk>JEVIL's looking exhausted!</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="ft-hypnosis">{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Hypnosis</h3>
-	<h4>Description</h4>
-	<d-box theme="battledesc">
-		<d-text>Induce TIRED</d-text>
-		<d-text class="orange">50% TP</d-text>
-	</d-box>
-
-	<h4>Usage</h4>
-	<p class="note">Increases Jevil's Tiredness by 1. Jevil's attack is reduced by 30% for this turn.</p>
-
-	<h5>If Jevil is not <span class="blue">Tired</span></h5>
-	<p>If Jevil's Tiredness is less than 9.</p>
-	<p class="note">At random:</p>
-	<hr class="hr3">
-	<d-box theme="battlemenu">
-		<d-text asterisk>Ralsei chanted something!</d-text>
-		<d-text asterisk>JEVIL's next attack weakened!</d-text>
-		<d-text asterisk>JEVIL became more TIRED!</d-text>
-	</d-box>
-	<hr class="hr3">
-	<d-box theme="battlemenu">
-		<d-text asterisk>Susie spun something around!</d-text>
-		<d-text asterisk>JEVIL's next attack weakened!</d-text>
-		<d-text asterisk>JEVIL became more TIRED!</d-text>
-	</d-box>
-	<hr class="hr3">
-	<d-box theme="battlemenu">
-		<d-text asterisk>Kris gazed strangely!</d-text>
-		<d-text asterisk>JEVIL's next attack weakened!</d-text>
-		<d-text asterisk>JEVIL became more TIRED!</d-text>
-	</d-box>
-
-	<h5>If Jevil is <span class="blue">Tired</span></h5>
-	<p>If Jevil's Tiredness is 9 or higher.</p>
-	<p class="note">At random:</p>
-	<hr class="hr3">
-	<d-box theme="battlemenu">
-		<d-text asterisk>Ralsei chanted something!</d-text>
-		<d-text asterisk>JEVIL's next attack weakened!</d-text>
-		<d-text asterisk>JEVIL's looking exhausted!</d-text>
-	</d-box>
-	<hr class="hr3">
-	<d-box theme="battlemenu">
-		<d-text asterisk>Susie spun something around!</d-text>
-		<d-text asterisk>JEVIL's next attack weakened!</d-text>
-		<d-text asterisk>JEVIL's looking exhausted!</d-text>
-	</d-box>
-	<hr class="hr3">
-	<d-box theme="battlemenu">
-		<d-text asterisk>Kris gazed strangely!</d-text>
-		<d-text asterisk>JEVIL's next attack weakened!</d-text>
-		<d-text asterisk>JEVIL's looking exhausted!</d-text>
-	</d-box>
 </section>
 
 <section class="d-section" id="dialogue">
-	<h2>Dialogue</h2>
+	<h2>General dialogue</h2>
 
 	<h3 id="dialogue-standard">Standard</h3>
-	<p>Plays when no attack-specific dialogue (<a href="#dialogue-specific">see below</a>) takes precedence.</p>
+	<p>Plays when no attack-specific dialogue (<a href="#dialogue-attack">see below</a>) takes precedence.</p>
 	<d-box theme="battletalk">
 		<d-speaker>Jevil</d-speaker>
 		<d-text>A CHAOS,<span class="break"></span> CHAOS!</d-text>
@@ -546,7 +170,7 @@ toc:
 
 	<hr>
 
-	<h3 id="dialogue-specific">With specific attacks</h3>
+	<h3 id="dialogue-attack">With specific attacks</h3>
 	<p>Each of the below lines plays only the first time its associated attack is used.</p>
 	<h4 id="dialogue-p1t1">Phase 1, 5 spades attack</h4>
 	<d-box theme="battletalk">
@@ -638,125 +262,161 @@ toc:
 	</d-box>
 </section>
 
-<section class="d-section" id="postfight">
-	<h2>After the fight</h2>
+<section class="d-section" id="check">
+	<h2>Check</h2>
 
-	<h3 id="defeat-fight">If you defeated Jevil by fighting</h3>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>HA HA HA.</d-text>
-		<d-text asterisk>WHAT FUN!!!</d-text>
+	<d-box theme="battlemenu">
+		<d-text asterisk>JEVIL </d-text>
+		<d-text asterisk>There is no strategy to defeat the enemy. Good luck!</d-text>
 	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>YOU'RE FAST, FAST, STRONG, STRONG.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>BUT THERE ARE YET FASTER, YET STRONGER.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>THE HAND OF THE KNIGHT IS DRIFTING FORWARD.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>SOON, THE "QUEEN" RETURNS, AND HELL'S ROAR BUBBLES FROM THE DEPTHS...</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>LIGHTNERS, CAN YOU STOP IT?</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>UEE HEE HEE!</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>EITHER WAY, A MISCHIEF-MISCHIEF, A CHAOS-CHAOS...!</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>LIGHTNERS!</d-text>
-		<d-text asterisk>FROM INSIDE YOUR LITTLE CELL!!</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>TAKE ME AND DO YOUR STRONGEST---!</d-text>
+</section>
+
+<section class="d-section" id="pirouette">
+	<h2>Pirouette</h2>
+
+	<h3 id="pirouette-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Random Chaos</d-text>
+		<d-text class="orange">20% TP</d-text>
 	</d-box>
 
-	<h3 id="defeat-pacify">If you defeated Jevil by pacifying</h3>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>WHAT FUN!!!</d-text>
-		<d-text asterisk>I'M EXHAUSTED!!!</d-text>
-		<d-text asterisk>YOU KIDS TIRED ME UP!!</d-text>
+	<hr>
+
+	<h3 id="pirouette-ft">Flavor text</h3>
+	<p class="note">Increases Jevil's Tiredness by 0.5.</p>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris spun around!</d-text>
+		<d-text asterisk>JEVIL got slightly more TIRED, and...!</d-text>
 	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>NOW I WILL SLEEP FOR THE OTHER 100 YEARS.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>UNFORTUNATELY, YOU KIDS CANNOT HAVE SUCH A PLEASANT DREAM.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>FROM NOW, A NIGHTMARE WILL AWAKEN IN YOUR HEARTS.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>IN THE SHADOW OF THE KNIGHT'S HAND...</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>LIGHTNERS, CAN YOU STOP IT?</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>UEE HEE HEE!</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>EITHER WAY, A MISCHIEF-MISCHIEF, A CHAOS-CHAOS...!</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>LIGHTNERS!</d-text>
-		<d-text asterisk>FROM INSIDE YOUR LITTLE CELL!!</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Jevil</d-speaker>
-		<d-text asterisk>TAKE THIS AND DO YOUR STRONGEST---!</d-text>
-	</d-box>
+
+	<p class="note">Pirouette's effects rotate through the following depending on the turn. Using Pirouette on turn 10 has the same effect as on turn 1, turn 11 has the same effect as on turn 2, and so on.</p>
 
 	<hr class="hr2">
-
-	<p class="note">Jevil transforms into the Devilsknife, accompanied by the voice line "METAMORPHOSIS!", and disappears. The following line is accompanied by Jevil's laughter.</p>
-
-	<d-box theme="dark">
-		<d-text asterisk>(You got ShadowCrystal.)</d-text>
+	<h4>Turn 1</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>What!</d-text>
+		<d-text asterisk>It was just foley!</d-text>
 	</d-box>
-
+	<p class="note">Accompanied by an explosion, car honk, or toilet flush SFX.</p>
+	<hr class="hr3">
+	<h4>Turn 2</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>JEVIL felt at ease!</d-text>
+		<d-text asterisk>JEVIL's defense dropped!</d-text>
+	</d-box>
+	<p class="note">Jevil's defense lowers by 4, up to a maximum reduction of 16.</p>
+	<hr class="hr3">
+	<h4>Turn 3</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Awkward! Upcoming attack will hurt rapidly!</d-text>
+	</d-box>
+	<p class="note">Invincibility frames are reduced by 60% for this turn.</p>
+	<hr class="hr3">
+	<h4>Turn 4</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Tranquil!</d-text>
+		<d-text asterisk>The dance defended the party!</d-text>
+	</d-box>
+	<p class="note">Jevil's attack is reduced by 30% for this turn.</p>
+	<hr class="hr3">
+	<h4>Turn 5</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>What!</d-text>
+		<d-text asterisk>It's nothing but a useless bird!</d-text>
+	</d-box>
+	<p class="note">A bird flies across the screen.</p>
+	<hr class="hr3">
+	<h4>Turn 6</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It felt comforting!</d-text>
+	</d-box>
+	<p class="note">Heals a random party member for 25–55 HP.</p>
+	<hr class="hr3">
+	<h4>Turn 7</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone's HP got jumbled up!</d-text>
+	</d-box>
+	<p class="note">The party members' HP bars are shuffled, so that each party member takes on the current/maximum HP of another party member. Negative HP is split among all party members and anyone who is downed is revived with 1 HP. (Party members get their original HP bars back at the end of this encounter.)</p>
+	<hr class="hr3">
+	<h4>Turn 8</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>JEVIL's upcoming move got powered up!</d-text>
+	</d-box>
+	<p class="note">Jevil's attack is boosted by 25% for this turn.</p>
+	<hr class="hr3">
+	<h4>Turn 9</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>A perfect 10!</d-text>
+	</d-box>
+	<p class="note">Heals all party members for 36–50 HP.</p>
+	<hr class="hr3">
+	<h4>Unused</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Something happened!</d-text>
+	</d-box>
 	<hr class="hr2">
-
-	<h3>If defeated through fighting</h3>
-	<d-box theme="dark">
-		<d-text asterisk>(DEVILSKNIFE was added to your WEAPONs.)</d-text>
+	<h4>If this use of Pirouette made Jevil <span class="blue">Tired</span></h4>
+	<p>If Jevil's Tiredness is 9 or higher.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>JEVIL's looking exhausted!</d-text>
 	</d-box>
-	<p class="note">Devilsknife is added to the inventory.</p>
-	<h3>If defeated through pacifying</h3>
-	<d-box theme="dark">
-		<d-text asterisk>(JEVILSTAIL was added to your ARMORs.)</d-text>
-	</d-box>
-	<p class="note">Jevilstail is added to the inventory.</p>
-	<h3>In both cases, if you have no room in your weapon/armor inventory respectively</h3>
-	<d-box theme="dark">
-		<d-text asterisk>(A strange chest appeared outside the room...)</d-text>
-	</d-box>
-	<p class="note">This chest will contain the Devilsknife/Jevilstail.</p>
-
 	<hr class="hr2">
+</section>
 
-	<p class="note">The screen fades to black, then fades back in with the party members standing on the prison floor. The prison gate is gone completely.</p>
+<section class="d-section" id="hypnosis">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Hypnosis</h2>
+
+	<h3 id="hypnosis-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Induce TIRED</d-text>
+		<d-text class="orange">50% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="hypnosis-ft">Flavor text</h3>
+	<p class="note">Increases Jevil's Tiredness by 1. Jevil's attack is reduced by 30% for this turn.</p>
+
+	<h4>If Jevil is not <span class="blue">Tired</span></h4>
+	<p>If Jevil's Tiredness is less than 9.</p>
+	<p class="note">At random:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei chanted something!</d-text>
+		<d-text asterisk>JEVIL's next attack weakened!</d-text>
+		<d-text asterisk>JEVIL became more TIRED!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie spun something around!</d-text>
+		<d-text asterisk>JEVIL's next attack weakened!</d-text>
+		<d-text asterisk>JEVIL became more TIRED!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris gazed strangely!</d-text>
+		<d-text asterisk>JEVIL's next attack weakened!</d-text>
+		<d-text asterisk>JEVIL became more TIRED!</d-text>
+	</d-box>
+
+	<h4>If Jevil is <span class="blue">Tired</span></h4>
+	<p>If Jevil's Tiredness is 9 or higher.</p>
+	<p class="note">At random:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei chanted something!</d-text>
+		<d-text asterisk>JEVIL's next attack weakened!</d-text>
+		<d-text asterisk>JEVIL's looking exhausted!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie spun something around!</d-text>
+		<d-text asterisk>JEVIL's next attack weakened!</d-text>
+		<d-text asterisk>JEVIL's looking exhausted!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris gazed strangely!</d-text>
+		<d-text asterisk>JEVIL's next attack weakened!</d-text>
+		<d-text asterisk>JEVIL's looking exhausted!</d-text>
+	</d-box>
 </section>
