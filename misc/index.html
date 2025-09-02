@@ -1,61 +1,68 @@
 ---
 title: Miscellaneous
+
+layout: indexpage
+base_url: "/misc/"
+
 description: >
   <p>Pages that aren't story-specific or locked to a certain location.</p>
-toc:
+
+items:
   -
     id: possessions
     name: Possessions
+    sublist:
+      -
+        url: weapons
+        name: Weapons{END_LINK} - Attack-focused equipment for the party
+      -
+        url: armor
+        name: Armor{END_LINK} - Defense-focused equipment for the party
+      -
+        url: darkitems
+        name: Dark World items{END_LINK}, including key items
+      -
+        url: lightitems
+        name: Light World items
+      -
+        url: cellphone
+        name: Cell Phone{END_LINK} - Dialogue for making calls
   -
     id: events
     name: Events
+    sublist:
+      -
+        url: encounters
+        name: Encounters{END_LINK} - Flavor text, dialogue, ACTs, and responses
+        override_base_url: true
+      # -
+      #   url: gameover
+      #   name: Game Over messages{END_LINK} - standard and unique dialogue upon dying
   -
-    id: interface
-    name: Interface
+    id: menus
+    name: Menus
+    sublist:
+      -
+        name: Party-specific
+        sublist:
+          # -
+          #   url: powermenu
+          #   name: POWER menu{END_LINK} - Character titles and stats
+          # TODO: Other menus...?
+      -
+        name: Enemy- and location-based
+        sublist:
+          -
+            url: recruits
+            name: Recruits{END_LINK} - Darkner profiles
+          -
+            url: savepoints
+            name: Save points{END_LINK} - Narration accompanying save points
   -
     id: other
     name: Other
+    sublist:
+      -
+        url: unused
+        name: UNUSED{END_LINK} - Text found in the game files
 ---
-<section class="d-section" id="possessions">
-	<h2>Possessions</h2>
-
-	<ul>
-		<li><a href="{{ '/misc/weapons' | relative_url }}">Weapons</a> - Offensive equipment for the party</li>
-		<li><a href="{{ '/misc/armor' | relative_url }}">Armor</a> - Defensive equipment for the party</li>
-		<li><a href="{{ '/misc/darkitems' | relative_url }}">Dark World items</a>, including key items</li>
-		<li><a href="{{ '/misc/lightitems' | relative_url }}">Light World items</a></li>
-		<li><a href="{{ '/misc/cellphone' | relative_url }}">Cell Phone</a> - Dialogue for making calls</li>
-	</ul>
-</section>
-
-<section class="d-section" id="events">
-	<h2>Events</h2>
-
-	<ul>
-		<li><a href="{{ '/encounters' | relative_url }}">Encounters</a> - Flavor text, dialogue, ACTs, and responses</li>
-		<!-- <li><a href="{{ '/misc/gameover' | relative_url }}">Game Over messages</a> - standard and unique dialogue upon dying</li> -->
-	</ul>
-</section>
-
-<section class="d-section" id="interface">
-	<h2>Interface</h2>
-
-	<ul>
-		<li><a href="{{ '/misc/savepoints' | relative_url }}">Save points</a> - Narration accompanying save points</li>
-		<li><a href="{{ '/misc/recruits' | relative_url }}">Recruits</a> - Character profiles</li>
-		<!-- <li><a href="{{ '/misc/powermenu' | relative_url }}">POWER menu</a> - Levels and stats</li> -->
-		<!-- TODO: Other menus...? -->
-	</ul>
-</section>
-
-<section class="d-section" id="other">
-	<h2>Other</h2>
-
-	<ul>
-		<li><a href="{{ '/misc/unused' | relative_url }}">UNUSED</a> - Text found in the game files</li>
-	</ul>
-</section>
-
-<section class="d-section">
-	<p class="note">More to come...!</p>
-</section>
