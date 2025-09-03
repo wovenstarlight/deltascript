@@ -119,7 +119,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/islandboard`
 		* `/doomboard`
 		* `/cityboard` - The unused version of Board 3
-		* `/egg/` - all steps to obtaining the egg
 	* `/chapter4`
 		* `/noellevisit` - Noelle's house intro. Update this link on other pages if you end up splitting it further
 		* `/bathroomweird` - maybe merge with below for an `outroweird`
