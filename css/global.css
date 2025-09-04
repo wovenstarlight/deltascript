@@ -1549,4 +1549,41 @@ d-option-panel {
 
 	dd { margin: 0 }
 }
+/* Malius' fusion list */
+.fusionlist {
+	display: block;
+	background-color: var(--black);
+	border: var(--border-width) solid transparent;
+	border-image: url("/deltascript/assets/images/textbox/light.png") 16 / var(--border-width);
+	body.dim & { border-image-source: url("/deltascript/assets/images/textbox/light_dim.png") }
+	font-size: 1.2em;
+	font-family: "DeltaFont Condensed", var(--font);
+	width: 100%;
+	max-width: 30em;
+	margin-inline: auto;
+	
+	thead, tbody { display: contents }
+	
+	tr {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		max-width: 20em;
+		margin-inline: auto;
+		--row-padding: 0.5em;
+		tbody &:has(th:first-child) {
+			padding-block-start: var(--row-padding);
+			border-block-start: 0.2em solid var(--white);
+		}
+		&:has(th:last-child, td:only-child) { padding-block-end: var(--row-padding) }
+	}
+	
+	th {
+		text-align: start;
+		font-weight: normal;
+	}
+
+	td:first-child { grid-column: 2 }
+	
+	a:not(:hover, :focus) { text-decoration: none }
+}
 /* #endregion */

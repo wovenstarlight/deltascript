@@ -102,7 +102,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 					* ~~`/seap`~~ DONE up to Chapter 4
 					* ~~`/cafe`~~ DONE up to Chapter 4
 					* `/partydojo` (see_also link to the Party Dojo section on the encounters index)
-					* `/topbakery`
+					* ~~`/topbakery`~~ DONE up to Chapter 4
 					* `/musicshop`
 					* `/tvstudio`
 				* `/cliffs` - to the west
