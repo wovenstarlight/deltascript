@@ -86,7 +86,18 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/cyberworld` - Chapter 2 dark world
 			* `/housepuzzles` - the section in the middle of the acid lake that has all the house bridge puzzles, the one werewire and swatchling, and the maus puzzle
 		* `/tvworld` - Chapter 3 dark world
-			* `/greenroom` - Duh
+			* `/greenroom`
+				* `/mainroom` - The central room
+				* `/rewardsroom` - ABC-Rank rewards room
+				* `/cooler` - C-Rank rewards room
+				* `/ballmachine` - B-Rank rewards room
+					* `#1225` - `gacharoom_unknown`
+				* `/arcade` - A-Rank rewards room
+				* `/srankchangingroom` - S-Rank rewards room
+				* `/backstage` - Backstage area
+				* `/trankroom` - T-Rank room
+				* `/zrankroom` - Z-Rank room
+				* `/redcarpethall` - area south of green room, has shuttah + vending machine + pippins/zapper
 		* `/darksanctuary` - Chapter 4 dark worlds. I think for this one we can include all three sanctuaries' subpages
 		* Ach how do we even subdivide these pages
 * Chapters `/chapters`
