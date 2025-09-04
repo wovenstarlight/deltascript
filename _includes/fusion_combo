@@ -1,0 +1,49 @@
+{% comment %} RESULT {% endcomment %}
+{%- if include.resulttype == "armor" -%}
+	{%- assign resultpage = "armor" -%}
+{%- elsif include.resulttype == "weapon" or include.resulttype == "weapons" -%}
+	{%- assign resultpage = "weapons" -%}
+{%- else -%} {% comment %} Item or Key Item {% endcomment %}
+	{%- assign resultpage = "darkitems" -%}
+{%- endif -%}
+
+{%- assign resultanchor = include.resultanchor -%}
+{%- if resultanchor == nil -%}
+	{%- assign resultanchor = include.resultname | replace: " ", "" |  replace: "-", "" |  replace: ".", "" | downcase -%}
+{%- endif -%}
+
+{% comment %} INGREDIENT 1 {% endcomment %}
+{%- if include.ingredient1type == "armor" -%}
+	{%- assign ingredient1page = "armor" -%}
+{%- elsif include.ingredient1type == "weapon" or include.ingredient1type == "weapons" -%}
+	{%- assign ingredient1page = "weapons" -%}
+{%- else -%} {% comment %} Item or Key Item {% endcomment %}
+	{%- assign ingredient1page = "darkitems" -%}
+{%- endif -%}
+
+{%- assign ingredient1anchor = include.ingredient1anchor -%}
+{%- if ingredient1anchor == nil -%}
+	{%- assign ingredient1anchor = include.ingredient1name | replace: " ", "" |  replace: "-", "" |  replace: ".", "" | downcase -%}
+{%- endif -%}
+
+{% comment %} INGREDIENT 2 {% endcomment %}
+{%- if include.ingredient2type == "armor" -%}
+	{%- assign ingredient2page = "armor" -%}
+{%- elsif include.ingredient2type == "weapon" or include.ingredient2type == "weapons" -%}
+	{%- assign ingredient2page = "weapons" -%}
+{%- else -%} {% comment %} Item or Key Item {% endcomment %}
+	{%- assign ingredient2page = "darkitems" -%}
+{%- endif -%}
+
+{%- assign ingredient2anchor = include.ingredient2anchor -%}
+{%- if ingredient2anchor == nil -%}
+	{%- assign ingredient2anchor = include.ingredient2name | replace: " ", "" |  replace: "-", "" |  replace: ".", "" | downcase -%}
+{%- endif -%}
+
+<tr>
+	<th rowspan="2"><a href="{{ '/misc/' | append: resultpage | append: '#' | append: resultanchor | relative_url }}">{{ include.resultname }}</a></th>
+	<td><a href="{{ '/misc/' | append: ingredient1page | append: '#' | append: ingredient1anchor | relative_url }}">{{ include.ingredient1name }}</a></td>
+</tr>
+<tr>
+	<td><a href="{{ '/misc/' | append: ingredient2page | append: '#' | append: ingredient2anchor | relative_url }}">{{ include.ingredient2name }}</a></td>
+</tr>
