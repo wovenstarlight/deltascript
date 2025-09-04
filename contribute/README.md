@@ -165,10 +165,10 @@ Other global variables you'll spot in the code:
 	* `scr_getchar(n)` adds the character corresponding to `n` in the first available party slot.
 	* `scr_losechar()`, as I understand it, removes all but the first party member. Simplifies party cleanup when Susie and Ralsei both run off and leave Kris alone.
 * `scr_get_input_name(n)` gives the platform-specific names for various buttons:
-	* `scr_get_input_name(0)` gives `[DOWN]`
-	* `scr_get_input_name(1)` gives `[RIGHT]`
-	* `scr_get_input_name(2)` gives `[UP]`
-	* `scr_get_input_name(3)` gives `[LEFT]`
+	* `scr_get_input_name(0)` gives `[Down]`
+	* `scr_get_input_name(1)` gives `[Right]`
+	* `scr_get_input_name(2)` gives `[Up]`
+	* `scr_get_input_name(3)` gives `[Left]`
 	* `scr_get_input_name(4)` gives `[CONFIRM]` (i.e. `[Z]` on PC)
 	* `scr_get_input_name(5)` gives `[CANCEL]` (i.e. `[X]` on PC)
 	* `scr_get_input_name(6)` gives `[MENU]` (i.e. `[C]` on PC)
