@@ -82,6 +82,32 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* Maybe just a general "Streets" page for the interactions that can't be tied to specific buildings
 	* Dark Worlds
 		* `/closetworld` - Supply closet dark world, contains Castle Town and ??????
+			* `/castle` - Ralsei's castle
+				* `/courtyard` - front courtyard
+				* 1F
+					* `/entrancehall`
+					* probably also the Dark Fountain area if that ever opens up
+				* 2F
+					* ~~`/krisroom`~~ DONE up to Chapter 4
+					* ~~`/susieroom`~~ DONE up to Chapter 4
+					* ~~`/krissusieroom` - Chapter 4 exclusive~~ DONE
+					* `/lancerroom`
+				* 3F
+					* `/queenroom`
+					* `/tennaroom`
+					* ~~`/ralseiroom`~~ DONE up to Chapter 4
+				* `/basement` - LIVING QUARTERS FOR BAD GUYS
+			* `/town` - Everything outside Ralsei's castle
+				* Town square (maybe gets its own page for interactions?)
+					* ~~`/seap`~~ DONE up to Chapter 4
+					* ~~`/cafe`~~ DONE up to Chapter 4
+					* `/partydojo` (see_also link to the Party Dojo section on the encounters index)
+					* `/topbakery`
+					* `/musicshop`
+					* `/tvstudio`
+				* `/cliffs` - to the west
+				* `/trainingground` - to the east
+				* `/greatdoor` - to the far east
 		* `/cardkingdom` - Chapter 1 dark world
 		* `/cyberworld` - Chapter 2 dark world
 			* `/housepuzzles` - the section in the middle of the acid lake that has all the house bridge puzzles, the one werewire and swatchling, and the maus puzzle
