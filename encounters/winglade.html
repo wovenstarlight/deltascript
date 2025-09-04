@@ -1,0 +1,317 @@
+---
+title: Winglade encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Winglade.</p>
+
+sources:
+  -
+    name: gml_Object_obj_halo_enemy_Step_0
+    chapters: [4]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [4]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [4]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-winglade
+            name: With another Winglade
+          -
+            id: encounter-bibliox
+            name: With Bibliox
+          -
+            id: encounter-organikk
+            name: With Organikk
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-spareable
+        name: Spareable
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: spin
+        name: Spin
+      -
+        id: spins
+        act_icon: Susie
+        name: SpinS
+      -
+        id: whirl
+        act_icon: [Susie, Ralsei]
+        name: Whirl
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(155|161|162|172|173|191)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+
+Unused encounters with blank text:
+	- 162 (Balthizard)
+	- 172 (Wicabel)
+	- 173 (Guei)
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-winglade">With another Winglade</h4> <!--155-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Winglade cuts in!</d-text>
+	</d-box>
+
+	<h4 id="encounter-bibliox">With Bibliox</h4> <!--161-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>The flapping of wings and pages fills the room.</d-text>
+	</d-box>
+
+	<h4 id="encounter-organikk">With Organikk</h4> <!--191-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Steel clangs in a song.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Winglade molts and revolts.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Winglade watches distrustfully.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Winglade draws flowers with its blade.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Winglade rotates aggressively.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like old down pillow.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Winglade's eye flutters shut.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<p>Unused, as Winglade gets <span class="blue">Tired</span> at low HP and that flavor text overrides this.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Winglade sheds feathers heavily.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Winglade flutters trustfully.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+	<p>Winglade's dialogue, unlike other enemies's, appears in a circle around their bodies. For ease of reading, their dialogue is presented in the usual speech bubbles here.</p>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Winglade</d-speaker>
+		<d-text>Halo, goodeye!</d-text>
+		<d-text>Halo, goodeye!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Winglade</d-speaker>
+		<d-text>Halo, are you listening?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Winglade</d-speaker>
+		<d-text>You oppose the revolution?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Winglade</d-speaker>
+		<d-text>Open your eyes</d-text>
+		<d-text>Open your eyes</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-spareable">Spareable</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Winglade</d-speaker>
+		<d-text>Viva la revolution!</d-text>
+		<d-text>Viva la revolution!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Winglade</d-speaker>
+		<d-text>To spin, is to trust</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>WINGLADE - A radical blade with feathers at the hilt.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="spin">
+	<h2>Spin</h2>
+
+	<h3 id="spin-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Spin<span class="break"></span> 50%<span class="break"></span> mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="spin-ft">Flavor text</h3>
+	<p class="note">Kris pirouettes.</p>
+	<hr class="hr2">
+	<h4>If you won against <a href="{{ '/encounters/jevil' | relative_url }}">Jevil</a></h4>
+	<p>Whether through violence or pacifying.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You spun masterfully!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Otherwise</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You spun hypnotically!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The targeted Winglade gains 50% <span class="yellow">Mercy</span>. All other enemies gain 10% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="spins">
+	<h2>{% include acticon chara="Susie" -%} SpinS</h2>
+
+	<h3 id="spins-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>60%<span class="break"></span> Mercy<span class="break"></span> to all</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="spins-ft">Flavor text</h3>
+	<p class="note">Kris and Susie both pirouette.</p>
+	<hr class="hr2">
+	<h4>If you won against <a href="{{ '/encounters/jevil' | relative_url }}">Jevil</a></h4>
+	<p>Whether through violence or pacifying.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Susie spun masterfully!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Otherwise</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Susie spun hypnotically!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">All enemies gain 60% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="whirl">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Whirl</h2>
+
+	<h3 id="whirl-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>SPARE<span class="break"></span> all!</d-text>
+		<d-text class="orange">64% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="whirl-ft">Flavor text</h3>
+	<p class="note">Kris, Susie, and Ralsei all pirouette. A vortex tall enough to span the screen forms over them, slowly moving over to the enemies and hovering over them for a moment.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone spun masterfully!</d-text>
+		<d-text asterisk>It's a whirlwind...!</d-text>
+	</d-box>
+	<p class="note">All enemies in the encounter are automatically spared.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p class="note">Susie pirouettes.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie wobbles like a top!</d-text>
+	</d-box>
+	<p class="note">Winglade gains 40% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei rotates like a gyro!</d-text>
+	</d-box>
+	<p class="note">The targeted Winglade gains 50% <span class="yellow">Mercy</span>. All other enemies gain 10% <span class="yellow">Mercy</span>.</p>
+</section>
