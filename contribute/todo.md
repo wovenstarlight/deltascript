@@ -136,7 +136,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* gml_Object_obj_gigaqueen_enemy_Step_0 `/gigaqueen`
 	* Chapter 3
 		* gml_Object_obj_elnina_enemy_Step_0/gml_Object_obj_lanino_enemy_Step_0 `/weather` (initial fight)
-		* gml_Object_obj_pippins_enemy_Step_0 `/pippins`
 		* gml_Object_obj_shutta_enemy_Step_0 `/shuttah`
 		* gml_Object_obj_watercooler_enemy_Step_0 `/watercooler`
 		* gml_Object_obj_zapper_enemy_Step_0 `/zapper`

@@ -1,0 +1,469 @@
+---
+title: Pippins encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Pippinses.</p>
+
+sources:
+  -
+    name: gml_Object_obj_pippins_enemy_Step_0
+    chapters: [3]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [3]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [3]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-otherenemyname
+            name: With Other_enemy_name
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-specialcondition
+        name: Special_condition
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: bet
+        name: Bet
+      -
+        id: cheat
+        act_icon: Susie
+        name: Cheat
+      -
+        id: bribe
+        act_icon: Ralsei
+        name: Bribe
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(122|123|130|136|137)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+
+Unused encounters with blank text:
+	- 130 (Ribbick)
+	- 137 (Zapper) (seems to have been intended for the unused LoT City Board)
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-pippins">With another Pippins</h4> <!--122-->
+	<p>Occurs only on the Legend of Tenna: Island Board.</p>
+	<h5>With Tenna present</h5>
+	<p class="note">Uses the <a href="{{ '/encounters/legendoftenna#initial-subsequent' | relative_url }}">Legend of Tenna-specific flavor text</a>.</p>
+
+	<h5>Without Tenna present</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Pippins rolls in your way!</d-text>
+	</d-box>
+
+	<h4 id="encounter-pippinses">With 2 other Pippinses</h4>
+	<p>See the <a href="#controllerswap">controller swap encounter</a>.</p>
+
+	<h4 id="encounter-shadowguypippins">With Shadowguy and another Pippins</h4> <!--136-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shadowguy and Pippins dropped in!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<h4>During Legend of Tenna boards with Tenna present</h4>
+	<p class="note">Uses the <a href="{{ '/encounters/legendoftenna#flavortext-between' | relative_url }}">Legend of Tenna-specific flavor text</a>.</p>
+
+	<h4>In the rest of TV World</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Pippins attempts to engage you in a life or death rock paper scissors match.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Pippins bounces like popcorn.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Pippins' existence ambiently makes the scene become Rated T.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Pippins scratches off tickets made of toilet paper.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Pippins regrets mortgaging its 2 green houses.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Pippins is betting the other enemies they'll lose.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">3.96% (4/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like bad luck.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Pippins seems down on its luck.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="controllerswap">Swapped controllers argument</h3>
+	<p>Plays during the Island Board encounter against 3 Pippinses, immediately after Ralsei realizes Kris and Susie's controllers are swapped. This dialogue replaces general flavor text for the first several turns.</p>
+
+	<h4>First turn (Initial encounter)</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="W"></d-sprite>
+		<d-text>Susie, you can't use Kris's controller!</d-text>
+	</d-box>
+
+	<h4>Second turn</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text>What's the problem? Kris likes playing as me better anyway.</d-text>
+	</d-box>
+
+	<h4>Third turn</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="D"></d-sprite>
+		<d-text>K... Kris? Likes... playing as Susie? ... but won't it be confusing?</d-text>
+	</d-box>
+
+	<h4>Fourth turn</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text>Confusing Ralsei's the best part of the game so far, right, Kris?</d-text>
+	</d-box>
+
+	<h4>Fifth turn</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="O"></d-sprite>
+		<d-text asterisk>Well, if it's fun! ... But, I still think... Kris should be Kris.</d-text>
+	</d-box>
+
+	<h4>Subsequent turns</h4>
+	<p class="note">Uses <a href="#ft-standard">standard</a>/<a href="#ft-lowhp">low HP</a> flavor text as applicable.</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Pippins</d-speaker>
+		<d-text>Will I win?<span class="break"></span> Or will I win... BIG?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Pippins</d-speaker>
+		<d-text>Raise the stakes and<span class="break"></span> ROLL ROLL ROLL!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Pippins</d-speaker>
+		<d-text>Rock me, spill me,<span class="break"></span> shock and thrill me!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">9.9% (10/101) chance if there are 2 or fewer Pippinses present in the encounter:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Pippins</d-speaker>
+		<d-text>Life is a numbers game...<span class="break"></span> You ever heard that?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">40% chance if there are 3 Pippinses present in the encounter:</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Pippins</d-speaker>
+			<d-text>Don't or dien't!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Pippins</d-speaker>
+			<d-text>Does or dice!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Pippins</d-speaker>
+			<d-text>Don't or dien't!</d-text>
+		</d-box>
+	</div>
+
+	<h4>Unused trio dialogue variant</h4>
+	<p>This is the originally intended version of the triplet dialogue just above, but for reasons I can't figure out, the third Pippins's dialogue overwrites the first Pippins's.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Pippins</d-speaker>
+			<d-text>It's a lucky's world!<span class="break"></span> Do or die!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Pippins</d-speaker>
+			<d-text>Does or dice!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Pippins</d-speaker>
+			<d-text>Don't or dien't!</d-text>
+		</d-box>
+	</div>
+
+	<hr>
+
+	<h3 id="dialogue-sharpshoot">After being hit by <a href="{{ '/encounters/shadowguy#sharpshoot' | relative_url }}">{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Sharpshoot</a></h3>
+	<d-box theme="battletalk">
+		<d-speaker>Pippins</d-speaker>
+		<d-text>Ya, what a rush!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>PIPPINS - AT <img src="{{ '/assets/images/story/talkpippins/d6.png' | relative_url }}" alt="⚅" style="height: 0.8em; vertical-align: baseline;" /> DF <img src="{{ '/assets/images/story/talkpippins/d3.png' | relative_url }}" alt="⚂" style="height: 0.8em; vertical-align: baseline;" /></d-text>
+		<d-text asterisk>This crooked gambler from Card Castle always bets it all!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="bet">
+	<h2>Bet</h2>
+
+	<h3 id="bet-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Touch Green<span class="break"></span> 4 Mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bet-ft">Flavor text</h3>
+	<p class="note">In the subsequent turn, Pippins's dice will briefly flash green; if a die is touched while it's green, it disappears and Pippins gains 35% <span class="yellow">Mercy</span>.</p>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You bet you could touch the Dice when it's a GREEN 4!</d-text>
+	</d-box>
+
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other shortened ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Bet: Touch the GREEN 4's!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bet-dialogue">Dialogue</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Pippins</d-speaker>
+		<d-text>YEAH! Touch<span class="break"></span> these 4's and<span class="break"></span> taste the THRILL!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Pippins</d-speaker>
+		<d-text>Put it all on<span class="break"></span> Green 4! Alright!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="cheat">
+	<h2>{% include acticon chara="Susie" -%} Cheat</h2>
+
+	<h3 id="cheat-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>TIRE Enemies, but...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="cheat-ft">Flavor text</h3>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie drew 4 dots on all the dice! The enemies got TIRED!</d-text>
+	</d-box>
+	<p class="note">All enemies become <span class="blue">Tired</span>. Any Pippinses present look dismayed.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Who's the highroller<span class="break"></span> now, idiot!?</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<p class="note">On the second use of this ACT, either the Kris or Ralsei variant is randomly chosen to play. On the third use, if the Kris variant was previously chosen, then the Ralsei variant plays; otherwise, and on subsequent uses, either variant is randomly chosen.</p>
+	<h5>Ralsei variant</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie got bored of cheating and drew a mustache on Ralsei!</d-text>
+	</d-box>
+	<p class="note">A dark gray mustache appears over Ralsei's sprite and remains there until the encounter ends.</p>
+	<h5>Kris variant</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie got bored of cheating and drew dead eyes on Kris!</d-text>
+	</d-box>
+	<p class="note">Red crosses appear over Kris's eyes and remain there until the encounter ends.</p>
+
+	<hr>
+
+	<h3 id="cheat-dialogue">Dialogue - First time only</h3>
+	<p class="note">In the below dialogue, the speech bubbles appear for the Pippinses in enemy slot 1, 2, and 3, respectively. If there is no enemy in that slot, or the enemy is not a Pippins, the corresponding dialogue does not play.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Pippins</d-speaker>
+			<d-text>(You do know<span class="break"></span> that makes my<span class="break"></span> attack stronger...)</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Pippins</d-speaker>
+			<d-text>(This girl...<span class="break"></span> she boggles<span class="break"></span> the mind.)</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Pippins</d-speaker>
+			<d-text>(What have you<span class="break"></span> done, you<span class="break"></span> yatzy!?)</d-text>
+		</d-box>
+	</div>
+</section>
+
+<section class="d-section" id="bribe">
+	<h2>{% include acticon chara="Ralsei" -%} Bribe</h2>
+
+	<h3 id="bribe-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Give 150 POINTs<span class="break"></span> to SPARE</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bribe-ft">Flavor text</h3>
+	<h4>If you have 150 or more POINTs</h4>
+	<h5>First time</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei used 150 POINTs to BRIBE the enemy!</d-text>
+	</d-box>
+	<p class="note">150 POINTs are deducted. Ralsei reels with shock.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>B-Bribe? Umm, no, I...<span class="break"></span> This is just a peace<span class="break"></span> offering!</d-text>
+	</d-box>
+	<p class="note">The below line is spoken by all Pippinses present in the encounter:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Pippins</d-speaker>
+		<d-text>Bribe, wow, is this legal?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>That's dirty, dude.</d-text>
+	</d-box>
+	<p class="note">Ralsei jolts.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>W-wait, maybe<span class="break"></span> I shouldn't...</d-text>
+	</d-box>
+	<p class="note">The targeted Pippins is spared, and Ralsei jolts again.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>WAIT!!!</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei used 150 POINTs to BRIBE the enemy!</d-text>
+	</d-box>
+	<p class="note">150 POINTs are deducted. Ralsei reels with shock.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It's, it's not a...</d-text>
+	</d-box>
+	<p class="note">The targeted Pippins is spared.</p>
+
+	<h4>If you have less than 150 POINTs</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You don't have enough points to bribe Pippins!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p class="note">Pippins gains 50% <span class="yellow">Mercy</span>.</p>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie shook Pippins around! They kind of liked it!</d-text>
+	</d-box>
+
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other shortened ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie shook Pippins!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p class="note">Pippins gains 50% <span class="yellow">Mercy</span>.</p>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei swore not to cheat!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie swore to cheat! (That didn't help...)</d-text>
+	</d-box>
+
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other shortened ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei swore not to cheat!</d-text>
+	</d-box>
+</section>
