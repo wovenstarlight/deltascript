@@ -997,34 +997,50 @@ d-box {
 
 			/* Specify placements (defaulting to bottom right) */
 			&:not([place]), &:not([place~=bottom], [place~=top]),
-			&[place~=bottom] { bottom: -2.4em }
+			&[place~=bottom] {
+				bottom: calc(-2.4em - var(--offset-y, 0em));
+			}
 			&:not([place]), &:not([place~=right], [place~=left]),
-			&[place~=right] { right: 0 }
-			&[place~=top] { top: -2.4em }
-			&[place~=left] { left: 0 }
-			d-text[asterisk] + &[place~=left] { left: 2.08em }
-			d-sprite[speaker] ~ &[place~=left] { left: 8.6em }
+			&[place~=right] {
+				right: calc(-1 * var(--offset-x, 0em));
+			}
+			&[place~=top] {
+				top: calc(-2.4em + var(--offset-y, 0em));
+			}
+			&[place~=left] {
+				left: var(--offset-x, 0em);
+			}
+			d-text[asterisk] + &[place~=left] {
+				left: calc(2.08em + var(--offset-x, 0em));
+			}
+			d-sprite[speaker] ~ &[place~=left] {
+				left: calc(8.6em + var(--offset-x, 0em));
+			}
 			&[place~=center-x] {
-				left: 50%;
+				left: calc(50% + var(--offset-x, 0em));
 				transform: translateX(-50%);
 			}
 			&[place~=center-y] {
-				top: 50%;
+				top: calc(50% + var(--offset-y, 0em));
 				transform: translateY(-50%);
 			}
 			&[place~=center] {
-				left: 50%;
-				top: 50%;
+				left: calc(50% + var(--offset-x, 0em));
+				top: calc(50% + var(--offset-y, 0em));
 				transform: translate(-50%, -50%);
 			}
 			d-text[asterisk] + &[place~=center-x],
-			d-text[asterisk] + &[place~=center] { left: calc(50% + 1.04em) }
+			d-text[asterisk] + &[place~=center] {
+				left: calc(50% + 1.04em + var(--offset-x, 0em));
+			}
 			d-sprite[speaker] ~ &[place~=center-x],
-			d-sprite[speaker] ~ &[place~=center] { left: calc(50% + 4.3em) }
+			d-sprite[speaker] ~ &[place~=center] {
+				left: calc(50% + 4.3em + var(--offset-x, 0em));
+			}
 
 			@media (min-width: 30rem) {
-				&[place~=bottom][place~=center-x] { bottom: -1.7em }
-				&[place~=top][place~=center-x] { top: -1.7em }
+				&[place~=bottom][place~=center-x] { bottom: calc(-1.7em - var(--offset-y, 0em)) }
+				&[place~=top][place~=center-x] { top: calc(-1.7em + var(--offset-y, 0em)) }
 			}
 		}
 		

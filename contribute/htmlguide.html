@@ -21,13 +21,15 @@ credits: >
 				<td>Text box</td>
 				<td><ul>
 					<li><code>theme</code>: Changes the border. <a href="#themes">See below for names/descriptions of available themes.</a></li>
-					<li>If small dialogue, then optionally <code>place</code>; may have one or more of the following values, separated by spaces
+					<li><code>place</code>: Optional for small dialogue. May have one or more of the following values, separated by spaces
 						<ul>
 							<li><code>right</code> (default), <code>left</code>, or <code>center-x</code></li>
 							<li><code>bottom</code> (default), <code>top</code>, or <code>center-y</code></li>
 							<li><code>center</code> (shorthand for <code>center-x center-y</code>)</li>
 						</ul>
 					</li>
+					<li><code>offset-x</code>: Horizontal offset. Positive <code>%</code> values to shift it right (e.g. <code>offset-x="10%"</code>), negative to shift left (e.g. <code>offset-x="-10%"</code>)</li>
+					<li><code>offset-y</code>: Vertical offset. Positive <code>%</code> values to shift it down (e.g. <code>offset-y="10%"</code>), negative to shift up (e.g. <code>offset-y="-10%"</code>)</li>
 				</ul></td>
 				<td><ul>
 					<li>If dialogue: either <code>d-sprite</code> or <code>d-speaker</code></li>

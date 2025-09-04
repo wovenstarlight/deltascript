@@ -21,6 +21,20 @@ class DialogueBox extends HTMLElement {
 			this._internals.states.delete("compact");
 		}
 	}
+
+	connectedCallback() {
+		const ox = this.getAttribute("offset-x"),
+			oy = this.getAttribute("offset-y");
+		if (ox !== null || oy !== null) {
+			this.setAttribute("style", `${
+				ox !== null ? `--offset-x: ${ox}` : ""
+			}${
+				ox !== null && oy !== null ? "; " : ""
+			}${
+				oy !== null ? `--offset-y: ${oy}` : ""
+			}`);
+		}
+	}
 }
 customElements.define("d-box", DialogueBox);
 
