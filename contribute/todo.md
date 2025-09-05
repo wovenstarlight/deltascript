@@ -180,7 +180,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* gml_Object_obj_rouxls_ch3_enemy_Step_0 `/rouxls2` or `/rouxlsch3` (contracts)
 		* gml_Object_obj_tenna_enemy_Step_0 `/tenna2` or `/tennafinal`
 	* Chapter 4
-		* gml_Object_obj_guei_enemy_Step_0 `/guei`
 		* gml_Object_obj_holywatercooler_enemy_Step_0 `/missmizzle`
 		* gml_Object_obj_hammer_of_justice_enemy_Step_0 `/hammerofjustice`
 		* gml_Object_obj_sound_of_justice_enemy_Step_0 `/soundofjustice`

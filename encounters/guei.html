@@ -1,0 +1,375 @@
+---
+title: Guei encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Guei.</p>
+
+sources:
+  -
+    name: gml_Object_obj_guei_enemy_Step_0
+    chapters: [4]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [4]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [4]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-guei
+            name: With another Guei
+          -
+            id: encounter-balthizard
+            name: With Balthizard
+          -
+            id: encounter-balthizardmizzle
+            name: With Balthizard and Mizzle
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+      -
+        id: ft-cane
+        act_icon: Gerson
+        custom_icon_positions: true
+        name: After the first use of ACTICON OldMan, if the party took damage
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: exercism
+        name: Exercism
+      -
+        id: xercism
+        act_icon: Ralsei
+        name: Xercism
+      -
+        id: oldman
+        act_icon: Gerson
+        name: OldMan
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(150|158|163|164|165|173|189)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+
+Unused encounters with blank text:
+	- 163 (Organikk)
+	- 164 (Bibliox)
+	- 165 (Mizzle)
+	- 173 (Winglade)
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-guei">With another Guei</h4> <!--150-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Guei wisps in your way!</d-text>
+	</d-box>
+
+	<h4 id="encounter-balthizard">With Balthizard</h4> <!--158-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like scented candles.</d-text>
+	</d-box>
+
+	<h4 id="encounter-balthizardmizzle">With Balthizard and Mizzle</h4> <!--189-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Water, fire, air.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Guei turns its head like a bird.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Guei rattles its claws.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Guei wags its tail.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Guei howls hauntingly.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like teens.</d-text>
+		<d-text asterisk>Smells like spirits.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<h4>If you have 16% or more TP</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Guei looks <span class="blue">TIRED</span>. Perhaps Ralsei's MAGIC, <span class="blue">PACIFY</span> would be effective...</d-text>
+	</d-box>
+
+	<h4>If you have less than 16% TP</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Guei looks <span class="blue">TIRED</span>. <span class="yellow">DEFEND</span> to gain <span class="yellow">TP</span>, then try Ralsei's MAGIC, <span class="blue">PACIFY</span>...!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<p>Unused, as Guei gets <span class="blue">Tired</span> at low HP and that flavor text overrides this.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Guei's flames flicker weakly.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Guei looks satisfied in some odd way.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-cane">After the first use of <a href="#oldman">{% include acticon chara="Gerson" -%} OldMan</a>, if the party took damage</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>Damn, that stupid cane made us get hit!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<p class="note">Guei cycles through the follow dialogues in order, unless <a href="#exercism">Exercism</a> / <a href="#xercism">{% include acticon chara="Ralsei" -%} Xercism</a> is used, in which case it automatically skips to the last, then resumes the cycle from the start:</p>
+	<img src="{{ '/assets/images/story/talkguei/0.png' | relative_url }}" alt="鬼" height="64" />
+	<hr class="hr2">
+	<img src="{{ '/assets/images/story/talkguei/1.png' | relative_url }}" alt="我鬼" height="64" />
+	<hr class="hr2">
+	<img src="{{ '/assets/images/story/talkguei/2.png' | relative_url }}" alt="我很鬼" height="64" />
+	<hr class="hr2">
+	<img src="{{ '/assets/images/story/talkguei/3.png' | relative_url }}" alt="你鬼嗎" height="64" />
+	<hr class="hr2">
+	<img src="{{ '/assets/images/story/talkguei/4.png' | relative_url }}" alt="你喜歡鬼嗎" height="64" />
+	<hr class="hr2">
+	<img src="{{ '/assets/images/story/talkguei/5.png' | relative_url }}" alt="你喜歡鬼嗎" height="64" />
+	<hr class="hr2">
+	<img src="{{ '/assets/images/story/talkguei/6.png' | relative_url }}" alt="哦 哦 哦！" height="64" />
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>GUEI - A strange spirit said to appear when the moon waxes.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="exercism">
+	<h2>Exercism</h2>
+
+	<h3 id="exercism-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>20% & Delayed TIRED</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="exercism-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You started the exercism!</d-text>
+		<d-text asterisk>You encouraged Guei to exercise!</d-text>
+	</d-box>
+	<p class="note">Guei gains 20% <span class="yellow">Mercy</span>. After its turn, it becomes <span class="blue">Tired</span>.</p>
+
+	<hr>
+
+	<h3 id="exercism-dialogue">Dialogue</h3>
+	<img src="{{ '/assets/images/story/talkguei/6.png' | relative_url }}" alt="哦 哦 哦！" height="64" />
+</section>
+
+<section class="d-section" id="xercism">
+	<h2>{% include acticon chara="Ralsei" -%} Xercism</h2>
+
+	<h3 id="xercism-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>60% & Delayed TIRED</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="xercism-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone encouraged Guei to exercise!</d-text>
+	</d-box>
+	<p class="note">Guei gains 60% <span class="yellow">Mercy</span>. After its turn, it becomes <span class="blue">Tired</span>.</p>
+
+	<hr>
+
+	<h3 id="xercism-dialogue">Dialogue</h3>
+	<img src="{{ '/assets/images/story/talkguei/6.png' | relative_url }}" alt="哦 哦 哦！" height="64" />
+</section>
+
+<section class="d-section" id="oldman">
+	<h2>{% include acticon chara="Gerson" -%} OldMan</h2>
+
+	<h3 id="oldman-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>I'm<span class="break"></span> old!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="oldman-ft">Flavor text</h3>
+	<h4>First time across all Gueis in the encounter</h4>
+	<p class="note">The battle music pauses, and Gerson walks into the encounter from the left with thumping footsteps. He turns to the party and the music resumes.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>How's it goin'?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Get out of here!!<span class="break"></span> These guys are tough!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Alright,<span class="break"></span> alright...</d-text>
+	</d-box>
+	<p class="note">The music pauses as Gerson begins leaving the encounter towards the left, but stops and turns towards the Gueis as his cane flies out of his hand, falling into the center of the encounter.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Whoops,<span class="break"></span> dropped my cane.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Ya mind getting<span class="break"></span> that for me?</d-text>
+	</d-box>
+	<p class="note">Gerson walks offscreen to the left. The music resumes and the encounter continues. In the following turn, the cane is present inside the bullet box and moves to indicate spots that the Gueis's bullets will not hit.</p>
+
+	<h4>Second time, if you haven't attacked any Guei</h4>
+	<p class="note">The battle music pauses, and Gerson (lacking his cane) walks into the encounter from the left with thumping footsteps, this time along the top instead of along the bottom. Gerson turns to the party and the music resumes.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Hmm, you called<span class="break"></span> it a battle,<span class="break"></span> but I don't<span class="break"></span> see much fightin'.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>We don't hurt<span class="break"></span> the enemies,<span class="break"></span> we SPARE them!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Spare, huh?<span class="break"></span> Like this?</d-text>
+	</d-box>
+	<p class="note">Gerson turns to the Gueis and regains his cane long enough to wave it at them. They are automatically spared, described as being "<span class="green">RECRUITED BY OLDMAN</span>". Susie and Ralsei look stunned.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Y... you<span class="break"></span> recruited them!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Huh,<span class="break"></span> whaddya know,<span class="break"></span> it works!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>I'll let you<span class="break"></span> kids finish<span class="break"></span> your battle!<span class="break"></span> Geh heh heh!</d-text>
+	</d-box>
+	<p class="note">The music pauses as Gerson walks offscreen to the left. After he leaves, Susie and Ralsei look calmer.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(But, the battle was already over.)</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(The Old Man received 438 Dark Dollars.)</d-text>
+	</d-box>
+	<p class="note">The encounter ends.</p>
+
+	<h4>Second time onwards, if you attacked any Guei</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Called the OldMan! Nothing happened!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p class="note">Guei gains 40% <span class="yellow">Mercy</span>.</p>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie told a story about the living dead!</d-text>
+	</d-box>
+
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other X-Actions. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie told a ghost story!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p class="note">Guei gains 40% <span class="yellow">Mercy</span>.</p>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei told a family-friendly story about a lovable yet lonely ghost!</d-text>
+	</d-box>
+
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other X-Actions. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei quoted a holy book!</d-text>
+	</d-box>
+</section>
