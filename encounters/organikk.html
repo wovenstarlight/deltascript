@@ -1,0 +1,365 @@
+---
+title: Organikk encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Organikk.</p>
+
+sources:
+  -
+    name: gml_Object_obj_organ_enemy_Step_0
+    chapters: [4]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [4]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [4]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-organikk
+            name: With another Organikk
+          -
+            id: encounter-wicabel
+            name: With Wicabel
+          -
+            id: encounter-organikkwicabel
+            name: With another Organikk and Wicabel
+          -
+            id: encounter-winglade
+            name: With Winglade
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-spareable
+        name: Spareable
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: perform
+        name: Perform
+      -
+        id: harmonizesus
+        act_icon: Susie
+        name: Harmonize
+      -
+        id: harmonizeral
+        act_icon: Ralsei
+        name: Harmonize
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(156|157|163|167|168|169|187|188|191)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+
+Unused encounters with blank text:
+	- 163 (Guei)
+	- 167 (Mizzle)
+	- 168 (Balthizard)
+	- 169 (Wicabel)
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-organikk">With another Organikk</h4> <!--156-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Organikk accosts you!</d-text>
+	</d-box>
+
+	<h4 id="encounter-wicabel">With Wicabel</h4>
+	<h5>2nd Sanctuary, in the gallery</h5> <!--157-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>It's a cacophony.</d-text>
+	</d-box>
+
+	<h5>2nd Sanctuary, before the study</h5> <!--187-->
+	<p>No initial flavor text was actually provided for this encounter; the below is the fallback text.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It is known.</d-text>
+	</d-box>
+
+	<h4 id="encounter-organikkwicabel">With another Organikk and Wicabel</h4> <!--188-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>It's a cacophony!</d-text>
+	</d-box>
+
+	<h4 id="encounter-winglade">With Winglade</h4> <!--191-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Steel clangs in a song.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Organikk toots philosophically.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Organikk divinates through echolocation.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Organikk claps with one hand.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Organikk considers the meaning of the stars and sky.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like brass and satin.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Organikk extolls the virtues of naptime.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Organikk extolls the virtues of having low HP.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Organikk extolls the virtues of mercy.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Organikk</d-speaker>
+		<d-text>I am the<span class="break"></span> philosopher.<span class="break"></span> Amen.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Organikk</d-speaker>
+		<d-text>Listen!<span class="break"></span> The song of<span class="break"></span> legend plays.<span class="break"></span> Amen.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Organikk</d-speaker>
+		<d-text>The truth<span class="break"></span> sung in<span class="break"></span> glass.<span class="break"></span> Amen.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Organikk</d-speaker>
+		<d-text>The tale<span class="break"></span> which must<span class="break"></span> be followed.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Organikk</d-speaker>
+		<d-text>The tail<span class="break"></span> which must<span class="break"></span> not be<span class="break"></span> followed.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Organikk</d-speaker>
+		<d-text>Do re mii<span class="break"></span> Do re yuu<span class="break"></span> Do re mon.<span class="break"></span> Amen.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Organikk</d-speaker>
+		<d-text>It was<span class="break"></span> glowing.<span class="break"></span> The voice<span class="break"></span> was glowing!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Organikk</d-speaker>
+		<d-text>What is<span class="break"></span> DELTARUNE?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Organikk</d-speaker>
+		<d-text>What isn't<span class="break"></span> DELTARUNE?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Organikk</d-speaker>
+		<d-text>What am I?<span class="break"></span> Am I a butterfly?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Organikk</d-speaker>
+		<d-text>What am I?<span class="break"></span> Am I a man?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Organikk</d-speaker>
+		<d-text>Why are we<span class="break"></span> fighting?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Organikk</d-speaker>
+		<d-text>How could we<span class="break"></span> ever make<span class="break"></span> peace?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-spareable">Spareable</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Organikk</d-speaker>
+		<d-text>The answer...<span class="break"></span> ... was LOVE?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Organikk - A philosopher. Why he's fighting you is one of life's questions.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="perform">
+	<h2>Perform</h2>
+
+	<h3 id="perform-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Musical mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="perform-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You performed a tune! It was mildly effective!</d-text>
+	</d-box>
+	<p class="note">Organikk gains 35% <span class="yellow">Mercy</span>.</p>
+
+	<h4>If you've previously used <a href="{{ '/encounters/wicabel#tuning' | relative_url }}">Wicabel's Tuning / {% include acticon chara="Susie" -%} Tuningx2</a></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You performed a tune! It was super effective!</d-text>
+	</d-box>
+	<p class="note">Organikk gains 100% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="harmonizesus">
+	<h2>{% include acticon chara="Susie" -%} Harmonize</h2>
+
+	<h3 id="harmonizesus-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Musical, touch GREEN</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="harmonizesus-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You tried to harmonize!</d-text>
+		<d-text asterisk>Touch the GREEN!</d-text>
+	</d-box>
+	<p class="note">Green bars appear at various positions in the battle box during the following turn. If the SOUL makes contact with these, all Organikks, Winglades, and Wicabels in the encounter gain <span class="yellow">Mercy</span>, with the targeted Organikk gaining <span class="yellow">Mercy</span> at a higher rate. Winglades and Wicabels gain at most 50% <span class="yellow">Mercy</span> per use of this ACT; there is no similar limit for Organikks. Any Winglades become <span class="blue">Tired</span>.</p>
+</section>
+
+<section class="d-section" id="harmonizeral">
+	<h2>{% include acticon chara="Ralsei" -%} Harmonize</h2>
+
+	<h3 id="harmonizeral-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Musical, touch GREEN</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="harmonizeral-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You tried to harmonize!</d-text>
+		<d-text asterisk>Touch the GREEN!</d-text>
+	</d-box>
+	<p class="note">Green bars appear at various positions in the battle box during the following turn. If the SOUL makes contact with these, all Organikks, Winglades, and Wicabels in the encounter gain <span class="yellow">Mercy</span>, with the targeted Organikk gaining <span class="yellow">Mercy</span> at a higher rate. Winglades and Wicabels gain at most 50% <span class="yellow">Mercy</span> per use of this ACT; there is no similar limit for Organikks. Any Winglades become <span class="blue">Tired</span>.</p>
+</section>
+
+<section class="d-section" id="chorus">
+	<h2>{% include acticon chara="Ralsei" -%} Unused ACT</h2>
+	<p>Flavor text for a combination ACT with Ralsei, possibly named "Chorus" given that there's an unused variable "chorus" linked to this ACT. It seems to be an older version of <a href="#harmonizeral">{% include acticon chara="Ralsei" -%} Harmonize</a>.</p>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei attempted to harmonize!</d-text>
+	</d-box>
+
+	<p>The ACT would've functioned similarly to the <a href="#harmonizesus">{% include acticon chara="Susie" -%} Harmonize</a> / <a href="#harmonizeral">{% include acticon chara="Ralsei" -%} Harmonize</a> ACTs, with the SOUL gathering <span class="yellow">Mercy</span> by hovering over green bars in the bullet box. Other Organikks (if not targeted by a Harmonize ACT in the same turn), Winglades, and Wicabels would have gained at most 50% <span class="yellow">Mercy</span> per use of this ACT; there would have been no similar limit for the targeted Organikk. Organikks (if not targeted by a Harmonize ACT in the same turn) and Wicabels would have become <span class="blue">Tired</span>.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie played random notes!</d-text>
+	</d-box>
+	<p class="note">Organikk gains 20% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p class="note">The music pauses as Ralsei sings.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei sang sweetly!</d-text>
+	</d-box>
+	<p class="note">Organikk gains 50% <span class="yellow">Mercy</span>.</p>
+</section>
