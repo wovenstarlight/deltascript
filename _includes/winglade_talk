@@ -1,0 +1,6 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve" viewBox="0 0 190 190" class="winglade">
+	<path id="circlePath" d="M 80, 95 m -60, 0 a 60,60 0 0,1 150,0 a 60,60 0 0,1 -150,0 " fill="none"></path>
+	<text fill="currentColor">
+		<textPath xlink:href="#circlePath">{{ include.text }}</textPath>
+	</text>
+</svg>

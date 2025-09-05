@@ -165,44 +165,23 @@ Unused encounters with blank text:
 
 <section class="d-section" id="dialogue">
 	<h2>General dialogue</h2>
-	<p>Winglade's dialogue, unlike other enemies's, appears in a circle around their bodies. For ease of reading, their dialogue is presented in the usual speech bubbles here.</p>
+	<p>Winglade's dialogue, unlike other enemies's, appears in a circle around their bodies.</p>
 
 	<h3 id="dialogue-standard">Standard</h3>
-	<d-box theme="battletalk">
-		<d-speaker>Winglade</d-speaker>
-		<d-text>Halo, goodeye!</d-text>
-		<d-text>Halo, goodeye!</d-text>
-	</d-box>
+	{% include winglade_talk text="Halo, goodeye!&nbsp; &nbsp; &nbsp; &nbsp; Halo, goodeye!" %}
 	<hr class="hr2">
-	<d-box theme="battletalk">
-		<d-speaker>Winglade</d-speaker>
-		<d-text>Halo, are you listening?</d-text>
-	</d-box>
+	{% include winglade_talk text="Halo, are you listening?" %}
 	<hr class="hr2">
-	<d-box theme="battletalk">
-		<d-speaker>Winglade</d-speaker>
-		<d-text>You oppose the revolution?</d-text>
-	</d-box>
+	{% include winglade_talk text="You oppose the revolution?" %}
 	<hr class="hr2">
-	<d-box theme="battletalk">
-		<d-speaker>Winglade</d-speaker>
-		<d-text>Open your eyes</d-text>
-		<d-text>Open your eyes</d-text>
-	</d-box>
+	{% include winglade_talk text="Open your eyes&nbsp; &nbsp; &nbsp; &nbsp; Open your eyes" %}
 
 	<hr>
 
 	<h3 id="dialogue-spareable">Spareable</h3>
-	<d-box theme="battletalk">
-		<d-speaker>Winglade</d-speaker>
-		<d-text>Viva la revolution!</d-text>
-		<d-text>Viva la revolution!</d-text>
-	</d-box>
+	{% include winglade_talk text="Viva la revolution! &nbsp; Viva la revolution!" %}
 	<hr class="hr2">
-	<d-box theme="battletalk">
-		<d-speaker>Winglade</d-speaker>
-		<d-text>To spin, is to trust</d-text>
-	</d-box>
+	{% include winglade_talk text="To spin, is to trust" %}
 </section>
 
 <section class="d-section" id="check">

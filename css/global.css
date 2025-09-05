@@ -1467,6 +1467,18 @@ d-option-panel {
 		margin-block-start: 0.75em;
 	}
 }
+/* Winglade encounter dialogue */
+@keyframes rotate {
+	0% { transform: rotate(0deg) }
+	100% { transform: rotate(360deg) }
+}
+.winglade {
+	--size: 12em;
+	width: var(--size);
+	height: var(--size);
+	font-family: "DeltaFont Combat", var(--font);
+	body:not(.noanim) & { animation: rotate 15s linear infinite }
+}
 /* Character icons for ACTs */
 .acticon {
 	height: 0.75em;
