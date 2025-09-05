@@ -87,10 +87,13 @@ toc:
 ---
 {% comment %}
 Check for encounter instances with the following regex:
-(global\.encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(NUMBER_GOES_HERE)\b
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(NUMBER_GOES_HERE)\b
 For example, you can find instances of the Jigsawry/Rudinn/Hathy enconuter with the following:
-(global\.encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(23)\b
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(23)\b
 Then check that the obj whose file it appears in actually exists in the canonical rooms!
+
+Unused encounters with blank text:
+	- # (Other_enemy_name)
 {% endcomment %}
 
 <section class="d-section" id="flavortext">
