@@ -183,7 +183,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* gml_Object_obj_guei_enemy_Step_0 `/guei`
 		* gml_Object_obj_holywatercooler_enemy_Step_0 `/missmizzle`
 		* gml_Object_obj_hammer_of_justice_enemy_Step_0 `/hammerofjustice`
-		* gml_Object_obj_bell_enemy_Step_0 `/wicabel`
 		* gml_Object_obj_sound_of_justice_enemy_Step_0 `/soundofjustice`
 		* gml_Object_obj_titan_enemy_Step_0 `/titan`
 		* gml_Object_obj_mike_attack_controller_Step_0 `/mike`

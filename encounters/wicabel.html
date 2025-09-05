@@ -1,0 +1,295 @@
+---
+title: Wicabel encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Wicabel.</p>
+
+sources:
+  -
+    name: gml_Object_obj_bell_enemy_Step_0
+    chapters: [4]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [4]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [4]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: solowicabel
+            name: Solo / With another Wicabel
+          -
+            id: organikk
+            name: With Organikk
+          -
+            id: organikks
+            name: With 2 Organikks
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-spareable
+        name: Spareable
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: tuning
+        name: Tuning
+      -
+        id: tuningx2
+        act_icon: Susie
+        name: Tuningx2
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(154|157|169|170|171|172|187|188|190)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+
+Unused encounters with blank text:
+	- 169 (Organikk)
+	- 170 (Bibliox)
+	- 171 (Mizzle)
+	- 172 (Winglade)
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solowicabel">Solo / With another Wicabel</h4> <!--190/154-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Wicabel clangs in your way!</d-text>
+	</d-box>
+
+	<h4 id="encounter-organikk">With Organikk</h4>
+	<h5>2nd Sanctuary, in the gallery</h5> <!--157-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>It's a cacophony.</d-text>
+	</d-box>
+
+	<h5>2nd Sanctuary, before the study</h5> <!--187-->
+	<p>No initial flavor text was actually provided for this encounter; the below is the fallback text.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It is known.</d-text>
+	</d-box>
+
+	<h4 id="encounter-organikks">With 2 Organikks</h4> <!--188-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>It's a cacophony!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Wicabel rings a haunting hex.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Wicabel creates a cursing clamor.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Wicabel spins like a musicbox ballerina.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Wicabel emits classical music.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like damp wood and rust.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Wicabel chimes a sleeping spell.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<p>Unused, as Wicabel gets <span class="blue">Tired</span> at low HP and that flavor text overrides this.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Wicabel harkens hexes hoarsely.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Wicabel plays peacefully.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+	<p class="note">Wicabel's dialogue is accompanied by musical chiming, as from a music box.</p>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Wicabel</d-speaker>
+		<d-text>Bubell,<span class="break"></span> bubell,<span class="break"></span> toil and<span class="break"></span> trubell.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Wicabel</d-speaker>
+		<d-text>Trembell<span class="break"></span> with<span class="break"></span> trebell.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Wicabel</d-speaker>
+		<d-text>Wobbell,<span class="break"></span> rumbell,<span class="break"></span> tinkle and<span class="break"></span> tumbell!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Wicabel</d-speaker>
+		<d-text>Lament-a-bell,<span class="break"></span> Miser-a-bell,<span class="break"></span> Un-stop-a-bell!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-spareable">Spareable</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Wicabel</d-speaker>
+		<d-text>I am humbelled.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>WICABEL - A metal mage. When out of tune, she's unpredictabell.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="tuning">
+	<h2>Tuning</h2>
+
+	<h3 id="tuning-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Good timing= mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tuning-ft">Flavor text</h3>
+	<h4>Instructions</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press button with the right timing!</d-text>
+	</d-box>
+	<p class="note">A meter appears with a tuning fork over it, with text below reading "<span class="white">HIT IT!</span>". A bar slides across the meter; [CONFIRM] must be pressed while the bar is at the center, which will cause Kris to swing their sword, slashing across the tuning fork and making it shake.</p>
+
+	<h4>Outcome</h4>
+	<hr class="hr2">
+	<h5>Perfectly-centered hit</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Perfectly in tune!</d-text>
+		<d-text asterisk>All musical ACTs became stronger!</d-text>
+	</d-box>
+	<p class="note">Wicabel gains 70% <span class="yellow">Mercy</span>.</p>
+	<hr class="hr3">
+	<h5>Off-center hit</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Somewhat in tune!</d-text>
+		<d-text asterisk>All musical ACTs became stronger!</d-text>
+	</d-box>
+	<p class="note">Wicabel gains 60% or less <span class="yellow">Mercy</span> depending on the precision of the hit. If you missed, Wicabel gains no <span class="yellow">Mercy</span>.</p>
+	<hr class="hr3">
+	<h5>Very off-center hit / Miss</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>A bit off-tune!</d-text>
+		<d-text asterisk>All musical ACTs became stronger!</d-text>
+	</d-box>
+	<p class="note">Wicabel gains 9% or less <span class="yellow">Mercy</span> depending on the precision of the hit. If you missed, Wicabel gains no <span class="yellow">Mercy</span>.</p>
+	<hr class="hr2">
+	<p class="note"><a href="{{ '/encounters/organikk#perform' | relative_url }}">Organikk's Perform and Harmonize ACTs</a> become more effective.</p>
+</section>
+
+<section class="d-section" id="tuningx2">
+	<h2>{% include acticon chara="Susie" -%} Tuningx2</h2>
+
+	<h3 id="tuningx2-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Tuning twice</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tuningx2-ft">Flavor text</h3>
+	<p class="note">Identical to the <a href="#tuning-ft">Tuning ACT</a>, but you are given two chances at hitting the tuning fork. The first hit gives a maximum of 60% <span class="yellow">Mercy</span> for a perfect hit, while the second hit gives a maximum of 70%. Perfect hits also cause other enemies to gain 20% <span class="yellow">Mercy</span></p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie hammers a bell!</d-text>
+	</d-box>
+	<p class="note">Wicabel gains 40% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei tapped a bell!</d-text>
+	</d-box>
+	<p class="note">Wicabel gains 20% <span class="yellow">Mercy</span>.</p>
+</section>
