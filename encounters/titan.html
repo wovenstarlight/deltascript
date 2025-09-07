@@ -1,0 +1,720 @@
+---
+title: Titan encounter
+# may someday need to change this to "Titan encounter - Chapter 4" or similar...
+
+description: >
+  <p>Flavor text and dialogue for the battle against the Titan.</p>
+
+  <p>This encounter has 8 phases that are referenced throughout this page. The phases begin when their corresponding condition is achieved.</p>
+  <ul>
+    <li>Phase 1: initial</li>
+    <li>Phase 2: shield destroyed, first time</li>
+    <li>Phase 3: shield regenerated, first time</li>
+    <li>Phase 4: shield destroyed, second time</li>
+    <li>Phase 5: shield regenerated, second time</li>
+    <li>Phase 6: shield destroyed, third time</li>
+    <li>Phase 7: Titan at 50% HP or less</li>
+    <li>Phase 8: Gerson joins the party</li>
+  </ul>
+  <p>If the Titan is not sufficiently damaged during the first 6 phases, Phase 6 will continue until Phase 7's condition is met. If the Titan is sufficiently damaged during any of the first 6 phases, the fight automatically skips ahead to Phase 7.</p>
+
+sources:
+  -
+    name: gml_Object_obj_titan_enemy_Step_0
+    chapters: [4]
+    note: initial ACTs' flavor text, cutscene/candy revived HP values
+  -
+    name: gml_Object_obj_titan_enemy_Other_10
+    chapters: [4]
+    note: phase-specific flavor text
+  -
+    name: gml_Object_obj_titan_enemy_Create_0
+    chapters: [4]
+    note: phase-specific flavor text
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [4]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [4]
+    note: initial flavor text
+  -
+    name: gml_GlobalScript_scr_spelltext
+    chapters: [4]
+    note: DualHeal casting, sparing
+  -
+    name: gml_GlobalScript_scr_spell
+    chapters: [4]
+    note: DualHeal effects
+  -
+    name: gml_Object_obj_titan_enemy_Other_11
+    chapters: [4]
+    note: cutscene/candy revived HP values
+  -
+    name: gml_GlobalScript_scr_heal
+    chapters: [4]
+    note: cutscene/candy revived HP values
+  -
+    name: gml_Object_obj_titan_heal_Create_0
+    chapters: [4]
+    note: Phase 7 heal values
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-phase1
+        name: Phase 1
+        subheadings:
+          -
+            id: swarm1
+            name: Swarm
+          -
+            id: centipedes1
+            name: Centipedes
+          -
+            id: hands1
+            name: Hands
+      -
+        id: ft-phase35
+        name: Phases 3 and 5
+        subheadings:
+          -
+            id: centipedes2
+            name: Centipedes
+          -
+            id: swarm2
+            name: Swarm
+          -
+            id: hands2
+            name: Hands
+      -
+        id: ft-tensionup
+        name: "Phases 1, 3, and 5: At 80% TP or higher"
+      -
+        id: ft-shielddown
+        name: Phases 2, 4, and 6
+      -
+        id: ft-shieldup
+        name: "Phases 3 and 5: First turn after the shield is restored"
+        subheadings:
+          -
+            id: ft-shieldup1
+            name: First time - Phase 3
+          -
+            id: ft-shieldup2
+            name: Second time - Phase 5
+          -
+            id: ft-shieldupsusdown
+            name: When Susie is down - Either phase
+      -
+        id: ft-phase7
+        name: Phase 7
+      -
+        id: ft-phase8
+        name: Phase 8
+      -
+        id: ft-spare
+        name: Trying to spare
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-phase7
+        name: Phase 7
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: brighten
+        act_icon: [Susie, Ralsei]
+        name: Brighten
+      -
+        id: dualheal
+        act_icon: [Susie, Ralsei]
+        name: DualHeal
+      -
+        id: unleash
+        name: Unleash
+      -
+        id: dualbuster
+        act_icon: [Susie, Gerson]
+        name: DualBuster
+      -
+        id: susiesidea
+        act_icon: Susie
+        name: Susie's Idea
+      -
+        id: saction
+        class: susie act
+        name: "S-Action: WakeKris"
+      -
+        id: raction
+        class: ralsei act
+        name: "R-Action: ReviveKris"
+---
+{% comment %} encounterno = 175 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<p>Overrides <a href="#swarm1">Phase 1's Swarm flavor text</a>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Darkness constricts you...</d-text>
+		<d-text asterisk><span class="yellow">TP</span> Gain reduced outside of <span class="green">???</span></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-phase1">Phase 1</h3>
+	<p>Specific attacks in each phase are accompanied by particular flavor text. See the <a href="{% include wikilink page='Knight#Attacks' %}">Deltarune Wiki</a> for descriptions of each attack named in this section and the ones below.</p>
+
+	<h4 id="swarm1">Swarm</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The ground shudders.</d-text>
+		<d-text asterisk>A swarm is coming.</d-text>
+	</d-box>
+
+	<h4 id="centipedes1">Centipedes</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The darkness gives a long gaze, which slithered like a snake.</d-text>
+	</d-box>
+
+	<h4 id="hands1">Hands</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>For a moment,</d-text>
+		<d-text asterisk>You felt your heart being gripped.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-phase35">Phases 3 and 5</h3>
+	<h4 id="centipedes2">Centipedes</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The darkness slithers.</d-text>
+	</d-box>
+
+	<h4 id="swarm2">Swarm</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Darkness flows.</d-text>
+		<d-text asterisk>A swarm is coming.</d-text>
+	</d-box>
+
+	<h4 id="hands2">Hands</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The Titan's hands began to move once more.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tensionup">Phases 1, 3, and 5: At 80% TP or higher</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The atmosphere feels tense... (You can use <span class="yellow">UNLEASH</span>!)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-shielddown">Phases 2, 4, and 6</h3>
+	<p>When the Titan's shield is destroyed.</p>
+
+	<h4>When Ralsei is up</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="E"></d-sprite>
+		<d-text asterisk>ATTACK!! Its DEFENSE is down!!</d-text>
+	</d-box>
+
+	<h5>Unused Phase 6 variant</h5>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="F"></d-sprite>
+		<d-text asterisk><span class="red">Attack</span>! This is our chance!!</d-text>
+	</d-box>
+
+	<h4>When Ralsei is down</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Titan's DEFENSE dropped massively! ATTACKs are super effective!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-shieldup">Phases 3 and 5: First turn after the shield is restored</h3>
+	<p>Overrides the <a href="#ft-phase35">attack-specific flavor text for Phases 3 and 5</a> for the first turn immediately after the Titan regenerates its shield.</p>
+
+	<h4 id="ft-shieldup1">First time - Phase 3</h4>
+	<p>Plays only if Susie is up.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="I"></d-sprite>
+		<d-text asterisk>Damn! Its shield is back... Kris, take it down again!</d-text>
+	</d-box>
+
+	<h4 id="ft-shieldup2">Second time - Phase 5</h4>
+	<p>Plays only if Susie is up.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="J"></d-sprite>
+		<d-text asterisk>We almost got it! Keep taking down its shield, Kris!</d-text>
+	</d-box>
+
+	<h4 id="ft-shieldupsusdown">When Susie is down - Either phase</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-phase7">Phase 7</h3>
+	<p>While the Titan is regenerating.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-phase8">Phase 8</h3>
+	<p>After the Old Man, Gerson, joins the fight.</p>
+
+	<h4>First turn, and immediately after using <a href="#dualbuster">{% include acticon chara="Susie" -%} {% include acticon chara="Gerson" -%} DualBuster</a></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your soul is shining... a new ACT appeared!</d-text>
+	</d-box>
+
+	<h4>If any party members were downed on the previous turn</h4>
+	<p>"[Character(s)]" may be replaced by any of the following, depending on who was downed. At most two party members can be downed per turn; the party is targeted in the order Ralsei → Susie → Kris, with Kris unable to go below 1 HP, so they are never downed in this phase.</p>
+	<ul>
+		<li>"Kris" <span class="gray">(unused, see above)</span></li>
+		<li>"Susie"</li>
+		<li>"Ralsei"</li>
+		<li>"Kris and Susie" <span class="gray">(unused, see above)</span></li>
+		<li>"Kris and Ralsei" <span class="gray">(unused, see above)</span></li>
+		<li>"Susie and Ralsei"</li>
+	</ul>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Old Man gave [Character(s)] candy!</d-text>
+	</d-box>
+	<p class="note">The downed party member(s) are revived at a sixth of their maximum HP.</p>
+	{%- comment %} Technically they're revived at 5 HP (see obj_titan_enemy's event_user(1)/Other_11) but scr_heal() works such that if you're revived to below a sixth then you automatically get boosted to a sixth. So yay extra heal power {% endcomment %}
+
+	<h4>Otherwise</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spare">Trying to spare</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But, it was not something that can understand MERCY.</d-text>
+	</d-box>
+	<p class="note">The Titan is not spared and gains no <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-phase7">Phase 7</h3>
+	<p>Dialogue for Phase 7 is entirely scripted; the Titan does not attack, only using its turn to heal while the party talks.</p>
+
+	<h4>First turn</h4>
+	<p class="note">Immediately upon reaching 50% HP, the battle music fades. Instead of the Titan attacking, the screen flashes white, the Titan tinted slightly red. The screen flashes again; this time, a rumbling starts as the Titan's form distorts and shudders, its body and wings now steadily pulsing red. (Any party members downed are revived at a sixth of their maximum HP.) After a moment, Susie draws back slightly, startled.</p>
+	{%- comment %} see oldman's candy above re: why it's a sixth of max HP {% endcomment %}
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Did... Did<span class="break"></span> we do it...?</d-text>
+	</d-box>
+	<p class="note">The rumbling stops and the Titan grows still, the red pulsing ending. Scattering feathers, the Titan's many wings fold in around its body. Susie looks frightened.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>H-hey, wait!<span class="break"></span> What is it...<span class="break"></span> doing...?</d-text>
+	</d-box>
+	<p class="note">The Titan absorbs the many Spawn that appear around it and heals for 15% of its maximum HP. Ralsei lowers his head.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It's...<span class="break"></span> regenerating.</d-text>
+	</d-box>
+
+	<h4>Second turn</h4>
+	<p class="note">Susie looks frightened.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hey, Ralsei,<span class="break"></span> how do we<span class="break"></span> stop it!?</d-text>
+	</d-box>
+	<p class="note">Ralsei bows his head.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>I...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>I don't<span class="break"></span> know...</d-text>
+	</d-box>
+	<p class="note">The Titan absorbs Spawn to heal for another 15% HP.</p>
+
+	<h4>Third turn</h4>
+	<p class="note">Ralsei bows his head.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>It seems...<span class="break"></span> it seems we<span class="break"></span> were only...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>... damaging its<span class="break"></span> outer shell.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>As long as<span class="break"></span> the inside is<span class="break"></span> intact...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>This battle...<span class="break"></span> will just keep...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+	<p class="note">The Titan absorbs Spawn to heal for 50% HP, and its wings unfurl to reveal its body, shielded once more.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>I suppose...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>We just have to...<span class="break"></span> keep on fighting.</d-text>
+	</d-box>
+	<p class="note">A long pause. And then a hammer flies in from offscreen left, slamming into the Titan's shield with a flash of light and leaving it deeply cracked as tiny shards go flying. All party members jump when it hits, with Susie and Ralsei looking shocked. A voice speaks from offscreen left.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>What're y'all<span class="break"></span> givin' up for?</d-text>
+	</d-box>
+	<p class="note">The camera swings over to the left to reveal the Hammer of Justice standing with a hand on his hip and his hammer braced against the ground, with <a href="{% include wikilink page='Need a hand!?' %}">his theme</a> fading in right on cue. The party members turn to face him and Susie and Ralsei look stunned.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>You're not out<span class="break"></span> of ideas yet,<span class="break"></span> are ya?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Old... old man!<span class="break"></span> I thought you<span class="break"></span> were...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>I was lookin'<span class="break"></span> for a change a'<span class="break"></span> scenery...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>But this is a<span class="break"></span> bit ridiculous.</d-text>
+	</d-box>
+	<p class="note">Gerson lifts up his hammer.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>C'mon, let's<span class="break"></span> get this fellow!</d-text>
+	</d-box>
+	<p class="note">Susie and Ralsei straighten up, once again ready for battle.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... yeah!</d-text>
+	</d-box>
+	<p class="note">Gerson advances to join the line formed by the party members, and they turn back towards the Titan to resume the fight. The previous ACTs are all removed, replaced by <a href="#dualbuster">{% include acticon chara="Susie" -%} {% include acticon chara="Gerson" -%} DualBuster</a>.</p>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+	<p>Available only during Phases 1–7.</p>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Consider strategy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<h4>Phases 1, 3, and 5</h4>
+	<p>While the Titan's shield is up.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TITAN - AT 40 DF 800</d-text>
+		<d-text asterisk>The fear of dark, which appears in many forms.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If TP is below 80%</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Use ACTS to survive...</d-text>
+		<d-text asterisk>Expose darkness to LIGHT... and gather COURAGE to gain TP.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Then, use "<span class="yellow">UNLEASH</span>" to reveal the WEAK POINT!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>If TP is at 80% or higher</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The atmosphere feels tense...</d-text>
+		<d-text asterisk>(You can use UNLEASH!)</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<h4>Phases 2, 4, and 6</h4>
+	<p>While the Titan's shield is down.</p>
+	<h5>First time</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TITAN - AT 40 DF 0</d-text>
+		<d-text asterisk>The fear of dark, which appears in many forms.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="Z"></d-sprite>
+		<d-text asterisk>Kris!! What are you doing!? Attack!!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="Z"></d-sprite>
+		<d-text asterisk>I'm... I'm sorry, but this is serious...!</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You wasted time looking at the Titan.</d-text>
+	</d-box>
+
+	<h4>Phase 7</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TITAN - It seems capable of regenerating if not fatally wounded</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="brighten">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Brighten</h2>
+	<p>Available only during Phases 1–7.</p>
+
+	<h3 id="brighten-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Powerup light</d-text>
+		<d-text class="orange">4% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="brighten-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris's SOUL shone brighter!</d-text>
+	</d-box>
+	<p class="note">The SOUL appears and the party members glow white for a brief moment, powering up. During the next turn, the SOUL emits light over a larger radius.</p>
+</section>
+
+<section class="d-section" id="dualheal">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} DualHeal</h2>
+	<p>Available only during Phases 1–7.</p>
+
+	<h3 id="dualheal-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Heal<span class="break"></span> party</d-text>
+		<d-text class="orange">16% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dualheal-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your SOUL shined its power on RALSEI and SUSIE!</d-text>
+	</d-box>
+	<p class="note">The SOUL appears and the party members glow white for a brief moment, powering up; Susie and Ralsei both prepare their healing magic.</p>
+	<hr class="hr2">
+	<h4>First four times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei and Susie cast DUAL HEAL! Effectiveness of DUAL HEAL has lowered!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Fifth time onwards</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei and Susie cast DUAL HEAL!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">All party members are healed for a varying amount of HP. The amount healed is the combination of Susie and Ralsei's magic stats, with a multiplier that depends on the number of times this ACT has been used:</p>
+	<ul class="note">
+		<li>First use: 9×</li>
+		<li>Second use: 6×</li>
+		<li>Third use: 4.8×</li>
+		<li>Fourth use: 1.8×</li>
+		<li>Fifth use onwards: 1.2×</li>
+	</ul>
+</section>
+
+<section class="d-section" id="unleash">
+	<h2>Unleash</h2>
+	<p>Available only during Phases 1–6.</p>
+
+	<h3 id="unleash-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Reveal weakness</d-text>
+		<d-text class="orange">80% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="unleash-ft">Flavor text</h3>
+	<h4>During Phases 1, 3, and 5</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your SOUL emitted a brilliant light!</d-text>
+	</d-box>
+	<p class="note">The SOUL appears where Kris stands and glows a brilliant white, the light briefly flooding the screen. When the light clears, the star-shaped shield over the Titan's face shatters to pieces and disappears.</p>
+
+	<h4>During Phases 2, 4, and 6</h4>
+	<p>When the Titan's shield is already down.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="Z"></d-sprite>
+		<d-text asterisk>Kris!! What are you doing!? Attack!!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="dualbuster">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Gerson" -%} DualBuster</h2>
+	<p>Available only during Phase 8. Gets replaced by <a href="#susiesidea">{% include acticon chara="Susie" -%} Susie's Idea</a>.</p>
+
+	<h3 id="dualbuster-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Double magic</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dualbuster-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your SOUL shone on the Old Man and Susie!</d-text>
+	</d-box>
+	<p class="note">The SOUL appears and Kris, Susie, and Gerson glow white for a brief moment, powering up. Susie and Gerson attack simultaneously, destroying the Titan's cracked shield (on the first use only) and dealing significant damage to the Titan.</p>
+
+	<hr>
+
+	<h3 id="dualbuster-dialogue">Dialogue</h3>
+	<h4>First use</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Geheh,<span class="break"></span> not bad!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Heheh,<span class="break"></span> right?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... still, we've<span class="break"></span> only harmed<span class="break"></span> the outside..</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Then ya<span class="break"></span> know what<span class="break"></span> to do,<span class="break"></span> right?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+
+	<h4>Second use</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Kris! I got<span class="break"></span> an idea...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>But, uh...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>You're gonna<span class="break"></span> have to put<span class="break"></span> your life in<span class="break"></span> my hands.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... kinda,<span class="break"></span> literally.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... damn, what<span class="break"></span> am I asking for!?</d-text>
+	</d-box>
+	<p class="note">Susie, who has looked serious so far throughout this encounter, begins smiling again.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>We both know<span class="break"></span> I got this,<span class="break"></span> right!?<span class="break"></span> Let's go!!</d-text>
+	</d-box>
+	<p class="note">This ACT is replaced by <a href="#susiesidea">{% include acticon chara="Susie" -%} Susie's Idea</a>.</p>
+</section>
+
+<section class="d-section" id="susiesidea">
+	<h2>{% include acticon chara="Susie" -%} Susie's Idea</h2>
+	<p>Available only during Phase 8. Replaces <a href="#dualbuster">{% include acticon chara="Susie" -%} {% include acticon chara="Gerson" -%} DualBuster</a>.</p>
+
+	<h3 id="susiesidea-ft">Flavor text and dialogue</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press [CONFIRM] to throw!</d-text>
+	</d-box>
+	<p class="note">As Susie hefts Kris up with one hand, an arrow appears in front of her and oscillates up and down. From it extends a curved, dotted line showing Kris's projected flight path. Upon pressing [CONFIRM], rather than Kris being thrown, Susie heaves them up over her head using both hands.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... Nah screw it!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Get dunked on!!!</d-text>
+	</d-box>
+	<p class="note">Susie's face turns serious as she crouches, then leaps forward, Kris still held overhead. As they approach the Titan's bare face, the screen fades to white; the sound abruptly cuts out and the screen fades to black. The underside of bubbling darkness fades into view; after a moment, Kris and Susie fall out of it, plummeting headfirst down a vortex of darkness.</p>
+	<p class="note">As they spin through the air, the SOUL appears between them, bright red in the dark. It flashes a brilliant white, casting Kris and Susie in shadow. The glow strengthens violently, breaking through the darkness surrounding them, until the screen is consumed by light and <a href="{{ '/chapters/chapter4/confrontingthetitan#postfight' | relative_url }}">the encounter ends</a>.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action: WakeKris</h2>
+
+	<h3 id="saction-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Revive Kris</d-text>
+		<d-text class="orange">16% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie used Wake Up!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time only</h4>
+	<p class="note">(No sprite is provided; the regular typing SFX is used instead of Susie's voice.)</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Hey, dumbass! Get up!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Susie swipes an empty hand through the air, presumably smacking Kris to wake them up.</p>
+	<hr class="hr2">
+	<h4>If Kris was downed</h4>
+	<p class="note">Kris is revived with 1 HP.</p>
+	<hr class="hr3">
+	<h4>If Kris was not downed</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(But, Kris wasn't DOWNed...)</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action: ReviveKris</h2>
+
+	<h3 id="raction-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Revive Kris</d-text>
+		<d-text class="orange">16% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei used Reviver!</d-text>
+	</d-box>
+	<p class="note">A spotlight shines over Kris, and a small winged Ralsei flutters down to pat them rapidly on the head. If they were downed, Kris is revived with 30% HP (rounded up). If they were not downed, Kris is healed for 50% of their maximum HP (rounded up).</p>
+</section>
