@@ -155,6 +155,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/bathroomweird` - maybe merge with below for an `outroweird`
 		* `/holidayoutro` - leaving the Holidays' house. May need a `weird` variant
 		* `/darkworldintro` - sanctuary entrance
+		* `/finalconfrontation` - from confronting the knight to after defeating the titan
+			* `#posttitan` - after titan fight
 	* `/chapter5`
 	* `/chapter6`
 	* `/chapter7`
