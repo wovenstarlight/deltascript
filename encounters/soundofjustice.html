@@ -1,0 +1,352 @@
+---
+title: Sound of Justice encounter
+
+description: >
+  <p>Flavor text and dialogue for the battle against Sound of Justice, described in-game as "???".</p>
+
+  <p>This encounter has 2 phases that are referenced throughout this page:</p>
+  <ul>
+    <li>Phase 1: Susie fighting alone</li>
+    <li>Phase 2: Kris and Susie fighting together</li>
+  </ul>
+
+  <p>If at any point during Phase 1, Susie is downed, Susie is revived with 1 HP and <a href="#intermission">the encounter automatically progresses to Phase 2</a>.</p>
+
+sources:
+  -
+    name: gml_Object_obj_sound_of_justice_enemy_Step_0
+    chapters: [4]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [4]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [4]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_dw_churchb_nongerson_Step_0
+    chapters: [4]
+    note: intermission
+  -
+    name: gml_GlobalScript_scr_spelltext
+    chapters: [4]
+    note: sparing
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: ft-initial
+        name: Phase 2, first turn
+      -
+        id: ft-subsequent
+        name: Phase 2, subsequent turns
+      -
+        id: ft-spare
+        name: Trying to spare
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-turn
+        name: With specific turns
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: talk
+        name: Talk
+  -
+    id: fight
+    name: Trying to FIGHT
+    subheadings:
+      -
+        id: fight-kris
+        name: Having Kris attack
+      -
+        id: fight-susie
+        name: Having Susie attack
+  -
+    id: end
+    name: End of fight
+---
+{% comment %} encounterno = 176 (phase 1) | 186 (phase 2) {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+	<p>No flavor text plays during Phase 1; turns advance automatically with no opportunities for flavor text to display.</p>
+
+	<h3 id="ft-initial">Phase 2, first turn</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Darkness constricts you...</d-text>
+		<d-text asterisk><span class="yellow">TP</span> Gain reduced!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-subsequent">Phase 2, subsequent turns</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The air crackles with sound.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spare">Trying to spare</h3>
+	<p>Only works for Kris. If you have Susie attempt to spare the Sound of Justice, nothing happens.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris spared ???!</d-text>
+		<d-text asterisk>But its name wasn't <span class="yellow">YELLOW</span>...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-turn">With specific turns</h3>
+	<p>Dialogue for this battle is scripted, with specific lines playing for specific phase turns.</p>
+	<h4 id="dialogue-p1t1">Phase 1, turn 1</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Old man... what...<span class="break"></span> what are you doing?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Why are you...<span class="break"></span> Attacking me?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>You aren't...<span class="break"></span> Trying to teach<span class="break"></span> me something, are you?</d-text>
+	</d-box>
+
+	<h4 id="dialogue-p1t2">Phase 1, turn 2</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>H... Hey, what's<span class="break"></span> the big idea!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>It's me, Susie!<span class="break"></span> I'm your...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I'm your friend,<span class="break"></span> right!?</d-text>
+	</d-box>
+
+	<h4 id="dialogue-p1t3">Phase 1, turn 3</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I wrote your letter<span class="break"></span> for you, don't you...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Don't you<span class="break"></span> recognize me...?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hey, say something...<span class="break"></span> Say something already!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>COME ON, SAY<span class="break"></span> SOMETHING, ALREADY!!!</d-text>
+	</d-box>
+	<p class="note">Susie strikes with her axe, but the Sound of Justice dodges.</p>
+	
+	<h4 id="dialogue-p1t4">Phase 1, turn 4</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I...<span class="break"></span> I'm telling you...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I don't want to<span class="break"></span> hurt you, so... just...</d-text>
+	</d-box>
+	<p class="note">After the Sound of Justice attacks, the encounter interface briefly disappears and the battle music fades out.</p>
+	<p class="note" id="intermission">The Sound of Justice's eye flashes and it takes an echoing step forward before leaping to attack Susie. She dodges, but stumbles and falls into a crouch. The Sound of Justice's eye flashes again and it swings once more. But this time, its hammer comes down with a heavy thud on Kris's shield, briefly illuminating them; they successfully throw the Sound of Justice off, sending it spinning backwards, and the encounter resumes, music and all.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Kris!? Kris, hey!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Kris, there's<span class="break"></span> something wrong...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>There's something wrong<span class="break"></span> with the old man...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>We have to...<span class="break"></span> figure out how to<span class="break"></span> get through to him...</d-text>
+	</d-box>
+
+	<h4 id="dialogue-p2t1">Phase 2, turn 1</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Kris... why...<span class="break"></span> Why doesn't he<span class="break"></span> recognize me?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>We have to stop<span class="break"></span> him... before<span class="break"></span> anyone gets hurt.</d-text>
+	</d-box>
+
+	<h4 id="dialogue-p2t2">Phase 2, turn 2</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I knew I...<span class="break"></span> I screwed up.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I screwed up<span class="break"></span> making this<span class="break"></span> Dark World.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Trying to...<span class="break"></span> See him again.<span class="break"></span> Even though he's<span class="break"></span> already...</d-text>
+	</d-box>
+
+	<h4 id="dialogue-p2t3">Phase 2, turn 3</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Old man, listen!<span class="break"></span> I... I screwed up!<span class="break"></span> I know! But I...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>We can bring you<span class="break"></span> to our Castle Town!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>If we bring you<span class="break"></span> there, you'll be...<span class="break"></span> You'll be all better!</d-text>
+	</d-box>
+
+	<h4 id="dialogue-p2t4">Phase 2, turn 4</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>So we don't have<span class="break"></span> to hurt you...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>And you...<span class="break"></span> don't have<span class="break"></span> to hurt us!</d-text>
+	</d-box>
+
+	<h4 id="dialogue-p2t5">Phase 2, turn 5</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... If...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>If Ralsei shows up,<span class="break"></span> he can use Pacify,<span class="break"></span> right, Kris!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>All we have to do...<span class="break"></span> is wait for the old<span class="break"></span> man... to get tired...</d-text>
+	</d-box>
+
+	<h4 id="dialogue-p2t6">Phase 2, turn 6</h4>
+	<p class="note"><a href="#end">Susie has an idea.</a></p>
+</section>
+
+<section class="d-section" id="talk">
+	<h2>Talk</h2>
+
+	<h3 id="talk-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>???</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="talk-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(You talked... but nothing happened.)</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="fight">
+	<h2>Trying to FIGHT</h2>
+	<p>Responses to Kris or Susie being instructed to FIGHT.</p>
+
+	<h3 id="fight-kris">Having Kris attack</h3>
+	<h4>First time</h4>
+	<p class="note">Kris attacks, but misses.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>K-Kris!? Kris,<span class="break"></span> what the hell are you doing?!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Th... That's<span class="break"></span> the old man!</d-text>
+	</d-box>
+	<p class="note">Proceeds to the <a href="#dialogue-turn">assigned dialogue for the current turn</a>.</p>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(You try to attack...)</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(... But Susie stood in your way!)</d-text>
+	</d-box>
+	<p class="note">Kris does not attack.</p>
+
+	<hr>
+
+	<h3 id="fight-susie">Having Susie attack</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>You want me to...<span class="break"></span> huh!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>What the hell?<span class="break"></span> I'm not doing that!</d-text>
+	</d-box>
+	<p class="note">Susie does not attack, and her FIGHT button becomes grayed out and unselectable for the rest of the encounter. Dialogue proceeds to the <a href="#dialogue-turn">assigned dialogue for the current turn</a>.</p>
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of fight</h2>
+	<p>Plays during turn 6 of Phase 2, or overrides earlier scripted dialogue if Susie's <a href="{{ '/misc/spells#heal' | relative_url }}">Heal</a>/<a href="{{ '/misc/spells#betterheal' | relative_url }}">Better Heal</a> is used on an earlier turn.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Screw it! Old man...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>If it's really<span class="break"></span> you, I know...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I know something<span class="break"></span> you've gotta recognize!</d-text>
+	</d-box>
+
+	<p class="note">The battle music fades out. An orb of weak green light appears between Susie's hands, dimly illuminating her.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Heheh...<span class="break"></span> see this?!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>You didn't forget my<span class="break"></span> green sparkles, did you!?</d-text>
+	</d-box>
+
+	<p class="note">Susie launches her healing blast at the enemy; it hits its mark, but the light it gives off as it heals the Sound of Justice reveals its true identity. Susie, still faintly illuminated by her charged magic, gasps and lurches back in horror. The light of her magic fades, casting both her and the Sound of Justice back into darkness.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Wh...<span class="break"></span> What the hell...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>What happened<span class="break"></span> to his...</d-text>
+	</d-box>
+
+	<p class="note"><a href="{{ '/chapters/chapter4/soundofjustice#postfight' | relative_url }}">The encounter ends.</a></p>
+</section>

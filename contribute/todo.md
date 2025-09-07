@@ -155,6 +155,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/bathroomweird` - maybe merge with below for an `outroweird`
 		* `/holidayoutro` - leaving the Holidays' house. May need a `weird` variant
 		* `/darkworldintro` - sanctuary entrance
+		* `/soundofjustice` - SoJ fight (continuing into Ralsei scene)
+			* `#postfight`
 		* `/finalconfrontation` - from confronting the knight to after defeating the titan
 			* `#posttitan` - after titan fight
 	* `/chapter5`
@@ -184,7 +186,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* Chapter 4
 		* gml_Object_obj_holywatercooler_enemy_Step_0 `/missmizzle`
 		* gml_Object_obj_hammer_of_justice_enemy_Step_0 `/hammerofjustice`
-		* gml_Object_obj_sound_of_justice_enemy_Step_0 `/soundofjustice`
 		* gml_Object_obj_mike_attack_controller_Step_0 `/mike`
 	* Party dojo
 		* gml_Object_obj_dojograzeenemy_Step_0 `/jigsawrydojo` or `/dojograze` (dojo's graze challenge, ch2)
