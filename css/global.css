@@ -28,6 +28,10 @@
 	font-family: "DeltaFont 8-Bit";
 	src: url("../assets/fonts/fnt_8bit.otf");
 }
+@font-face {
+	font-family: "DeltaFont Prophecy";
+	src: url("../assets/fonts/fnt_legend.otf");
+}
 :root { /* Global colors and fonts */
 	background-color: black;
 	color: white;
@@ -835,14 +839,13 @@ d-box, d-choices {
 
 		&[theme=shopright] { padding-inline: 0.4em }
 
-		&[theme=fade] {
+		&[theme=fade], &[theme=prophecy] {
 			border: unset;
-			min-height: calc(var(--baseheight) - 2em);
 			width: calc(var(--basewidth) - 2em);
 			max-width: calc(100% - 3 * var(--border-width));
 
 			margin: calc(var(--border-width) + 0.2em) calc(var(--border-width) + 0.5em);
-			:is([theme=fade], d-option-panel) + & { margin-block-start: calc((2 * var(--border-width)) + 0.2em) }
+			:is([theme=fade], [theme=prophecy], d-option-panel) + & { margin-block-start: calc((2 * var(--border-width)) + 0.2em) }
 			:is(h2, h3, h4, h5, h6, p, ul, ol) + & { margin-block-start: calc(var(--border-width) + 1rem) }
 			&:has(+ h2, + h3, + h4, + h5, + h6, + p, + ul, + ol) { margin-block-end: calc(var(--border-width) + 1rem) }
 
@@ -852,6 +855,8 @@ d-box, d-choices {
 				calc(0.5 * var(--border-width))	/* spread out a bit */
 				var(--black);
 		}
+		&[theme=fade] { min-height: calc(var(--baseheight) - 2em) }
+		&[theme=prophecy] { min-height: unset }
 
 		&[theme=caller] {
 			--border-width: 1rem;
@@ -967,6 +972,11 @@ d-box, d-choices {
 
 			d-text ~ d-box { padding-inline-start: 3ch }
 		}
+	}
+
+	&[theme=prophecy] {
+		text-align: center;
+		align-items: center;
 	}
 }
 /* Dialogue boxes only */
@@ -1179,6 +1189,15 @@ d-text {
 		font-family: var(--font-8bit);
 	}
 
+	[theme=prophecy] & {
+		font-family: "DeltaFont Prophecy", var(--font-base);
+		background: #42d0ff url("../assets/images/story/prophecy.png") repeat center / contain;
+		background-clip: text;
+		color: rgb(from #42d0ff r g b / 0.5);
+		body:not(.noanim) & { animation: bgshift 10s linear infinite }
+		body:not(.dim) & { filter: brightness(1.75) saturate(1.5) }
+	}
+
 	&[asterisk] {
 		padding-inline-start: 2ch;
 		text-indent: -2ch;
@@ -1262,6 +1281,10 @@ d-text {
 		width: auto;
 		vertical-align: text-bottom;
 	}
+}
+@keyframes bgshift {
+	0% { background-position-x: 0 }
+	100% { background-position-x: 100% }
 }
 /* Choice menus only */
 d-choices {
