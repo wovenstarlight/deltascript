@@ -21,14 +21,14 @@
 	src: url("../assets/fonts/fnt_comicsans.otf");
 }
 @font-face {
-	font-family: "DeltaFont Combat";
+	font-family: "DeltaFont Dotum";
 	src: url("../assets/fonts/fnt_dotumche.otf");
 }
 @font-face {
 	font-family: "DeltaFont 8-Bit";
 	src: url("../assets/fonts/fnt_8bit.otf");
 }
-:root { /* Global colors and font */
+:root { /* Global colors and fonts */
 	background-color: black;
 	color: white;
 	line-height: 1.5;
@@ -78,6 +78,13 @@
 	--tenna: #da1f52;
 	--eram: #f26522;
 	--gerson: #65aa26;
+
+	--font-base: "DeltaFont", "Courier New", Courier, monospace;
+	--font-condensed: "DeltaFont Condensed", var(--font-base);
+	--font-tiny: "DeltaFont Tiny", var(--font-base);
+	--font-sans: "DeltaFont Comic Sans", var(--font-base);
+	--font-dotum: "DeltaFont Dotum", var(--font-base);
+	--font-8bit: "DeltaFont 8-Bit", var(--font-base);
 }
 /* Dim colors */
 body.dim {
@@ -225,11 +232,11 @@ d-box[theme=battlemenu],
 /* #endregion */
 /* #endregion */
 /* #region Font-specific classes */
-.fnt-condensed { font-family: "DeltaFont Condensed", var(--font) }
-.fnt-tiny { font-family: "DeltaFont Tiny", var(--font) }
-.fnt-sans { font-family: "DeltaFont Comic Sans", var(--font) }
-.fnt-combat { font-family: "DeltaFont Combat", var(--font) }
-.fnt-eightbit, .fnt-8bit { font-family: "DeltaFont 8-Bit", var(--font) }
+.fnt-condensed { font-family: var(--font-condensed) }
+.fnt-tiny { font-family: var(--font-tiny) }
+.fnt-sans { font-family: var(--font-sans) }
+.fnt-combat { font-family: var(--font-dotum) }
+.fnt-eightbit, .fnt-8bit { font-family: var(--font-8bit) }
 /* #endregion */
 h1, h2, h3, h4, h5, h6 { font-weight: normal }
 h2, h3, h4, h5, h6 {
@@ -533,14 +540,13 @@ body {
 	background: var(--black) url("../assets/images/bg.png") center repeat fixed;
 	color: var(--white);
 	/* Font */
-	--font: "DeltaFont", "Courier New", Courier, monospace;
-	font-family: var(--font);
+	font-family: var(--font-base);
 	--border-width: 1.2rem;
 	--baseheight: 6.5em;
 	--basewidth: 24.4em;
 
 	&.dyslexic {
-		font-family: "OpenDyslexic", var(--font);
+		font-family: "OpenDyslexic", var(--font-base);
 		font-size: 0.875em;
 		--border-width: 2em;
 	}
@@ -647,7 +653,7 @@ body {
 	li {
 		counter-increment: toc;
 		&::marker {
-			font-family: "DeltaFont Condensed", var(--font);
+			font-family: var(--font-condensed);
 			content: counters(toc, ".") ".  ";
 		}
 	}
@@ -718,7 +724,7 @@ d-box, d-choices {
 		&[theme^=obj], &[theme=battlemenu] { width: calc(var(--basewidth) + 4em) }
 
 		&[theme^=obj], &[theme^=power], &[theme=battledesc], &[theme=shopdesc] {
-			font-family: "DeltaFont Condensed", var(--font);
+			font-family: var(--font-condensed);
 		}
 
 		&[theme=objreact] {
@@ -775,7 +781,7 @@ d-box, d-choices {
 			flex-direction: column;
 			background-color: var(--white);
 			color: var(--black);
-			font-family: "DeltaFont Combat", var(--font);
+			font-family: var(--font-dotum);
 			font-size: 1em;
 
 			d-speaker {
@@ -858,13 +864,13 @@ d-box, d-choices {
 			padding: 0.5em 1em;
 			display: flex;
 			flex-direction: column;
-			font-family: "DeltaFont Combat", var(--font);
+			font-family: var(--font-dotum);
 			font-size: 1em;
 		}
 
 		&[theme=eightbit], &[theme="8bit"] {
 			width: calc(var(--basewidth) - 4.39em);
-			font-family: "DeltaFont 8-Bit", var(--font);
+			font-family: var(--font-8bit);
 		}
 
 		@media (max-width: 30rem) {
@@ -980,7 +986,7 @@ d-box {
 		d-box {
 			position: absolute;
 			font-size: 0.6em;
-			font-family: "DeltaFont Condensed", var(--font);
+			font-family: var(--font-condensed);
 			/* Reset full-size features */
 			background-color: transparent;
 			border-image: unset;
@@ -1152,25 +1158,25 @@ d-text {
 	line-height: 1.4;
 
 	&[font=tiny] {
-		font-family: "DeltaFont Tiny", var(--font);
+		font-family: var(--font-tiny);
 		max-width: 10.6em;
 	}
 
 	&[font=sans] {
-		font-family: "DeltaFont Comic Sans", var(--font);
+		font-family: var(--font-sans);
 	}
 
 	:is([theme^=obj], [theme^=power], [theme=battledesc], [theme=shopdesc]) & {
-		font-family: "DeltaFont Condensed", var(--font);
+		font-family: var(--font-condensed);
 	}
 
 	:is([theme^=battletalk], [theme=caller]) & {
-		font-family: "DeltaFont Combat", var(--font);
+		font-family: var(--font-dotum);
 	}
 
 	&[font=eightbit], &[font="8bit"],
 	:is([theme=eightbit], [theme="8bit"]) & {
-		font-family: "DeltaFont 8-Bit", var(--font);
+		font-family: var(--font-8bit);
 	}
 
 	&[asterisk] {
@@ -1333,7 +1339,7 @@ d-choices {
 /* Options in choice menus */
 d-option {
 	display: block;
-	font-family: "DeltaFont Condensed", var(--font);
+	font-family: var(--font-condensed);
 
 	/* Selectable options */
 	d-choices:not([noninteractive]) &,
@@ -1370,7 +1376,7 @@ d-option {
 	/* Adjust in 8-bit menus */
 	d-choices:is([theme=eightbit], [theme="8bit"]) &,
 	&:is([theme=eightbit], [theme="8bit"]) {
-		font-family: "DeltaFont 8-Bit", var(--font);
+		font-family: var(--font-8bit);
 		&:is(:hover, :focus)::before,
 		&[aria-expanded=true]::before {
 			background-image: url("../assets/images/heart_8bit.png");
@@ -1476,7 +1482,7 @@ d-option-panel {
 	--size: 12em;
 	width: var(--size);
 	height: var(--size);
-	font-family: "DeltaFont Combat", var(--font);
+	font-family: var(--font-dotum);
 	body:not(.noanim) & { animation: rotate 15s linear infinite }
 }
 /* Character icons for ACTs */
@@ -1495,7 +1501,7 @@ d-option-panel {
 	border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width);
 	body.dim & { border-image-source: url("../assets/images/textbox/light_dim.png") }
 	font-size: 1.2em;
-	font-family: "DeltaFont Condensed", var(--font);
+	font-family: var(--font-condensed);
 	max-width: 35em;
 	margin-inline: auto;
 
@@ -1541,7 +1547,7 @@ d-option-panel {
 	}
 	.desc {
 		font-size: 0.9em;
-		font-family: "DeltaFont Combat", var(--font);
+		font-family: var(--font-dotum);
 		max-width: calc(var(--basewidth) - 3.4em);
 		margin-block: 0.5em 1em;
 		word-break: keep-all;
@@ -1569,7 +1575,7 @@ d-option-panel {
 	border-image: url("/deltascript/assets/images/textbox/light.png") 16 / var(--border-width);
 	body.dim & { border-image-source: url("/deltascript/assets/images/textbox/light_dim.png") }
 	font-size: 1.2em;
-	font-family: "DeltaFont Condensed", var(--font);
+	font-family: var(--font-condensed);
 	width: 100%;
 	max-width: 30em;
 	margin-inline: auto;
