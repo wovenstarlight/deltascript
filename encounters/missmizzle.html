@@ -1,0 +1,929 @@
+---
+title: Holy&shy;water&shy;Cooler / Miss Mizzle encounter
+
+description: >
+  <p>Flavor text and dialogue for the battle against HolywaterCooler / Miss Mizzle.</p>
+
+sources:
+  -
+    name: gml_Object_obj_holywatercooler_enemy_Step_0
+    chapters: [4]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [4]
+    note: HolywaterCooler ACT names
+  -
+    name: gml_Object_obj_holywatercooler_enemy_Draw_0
+    chapters: [4]
+    note: Miss Mizzle ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [4]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: prefight
+    name: Before the fight
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+        subheadings:
+          -
+            id: ft-standard-holywatercooler
+            name: As HolywaterCooler
+          -
+            id: ft-standard-missmizzle
+            name: As Miss Mizzle
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+        subheadings:
+          -
+            id: dialogue-standard-holywatercooler
+            name: As HolywaterCooler
+          -
+            id: dialogue-standard-missmizzle
+            name: As Miss Mizzle
+      -
+        id: dialogue-fight
+        name: When attacked as HolywaterCooler
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        name: As HolywaterCooler
+        subheadings:
+          -
+            id: flirt
+            name: Flirt
+          -
+            id: begformercy
+            name: BegForMercy
+          -
+            id: chat
+            act_icon: [Susie, Ralsei]
+            name: Chat
+      -
+        name: As Miss Mizzle
+        subheadings:
+          -
+            id: dazzle
+            name: Dazzle
+          -
+            id: embezzle
+            act_icon: Susie
+            name: Embezzle
+          -
+            id: nuzzle
+            act_icon: Ralsei
+            name: Nuzzle
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %} encounterno = 183 {% endcomment %}
+
+<section class="d-section" id="prefight">
+	<h2>Before the fight</h2>
+
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>... What?<span class="break"></span> A battle?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>I merely wanted to<span class="break"></span> investigate the water<span class="break"></span> container...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>And suddenly,<span class="break"></span> you have drawn<span class="break"></span> me into a battle?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>You are brash,<span class="break"></span> young soldier!<span class="break"></span> If you seek<span class="break"></span> my love...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>You must prove<span class="break"></span> yourself worthy<span class="break"></span> of a princess.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>This is not your typical watercooler!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<h4 id="ft-standard-holywatercooler">As HolywaterCooler</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You feel a strong presence from the watercooler.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The watercooler babbles to itself sesquipedalianarily.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The watercooler considers the precise gemstone to compare its own hue to.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The watercooler stays its breath, too precious to waste... and keeps talking.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The watercooler emits an aura of magnanimous condescension.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">3.96% (4/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like water with holes in it.</d-text>
+	</d-box>
+
+	<h4 id="ft-standard-missmizzle">As Miss Mizzle</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You hear the sound of raindrops.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You hear a distant thunder.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Waves crash far, far, far below.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">3.96% (4/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like a rainstorm.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<h4 id="dialogue-standard-holywatercooler">As HolywaterCooler</h4>
+	<p class="note">This first line is forced on the first turn of the encounter (unless overridden by <a href="#dialogue-fight">dialogue for being attacked</a>), and joins the randomly-chosen pool on subsequent turns with a doubled chance of occurring (around 14.28% instead of 7.14%):</p>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Buble</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Bubie</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Bable</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Babie</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Beble</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Bebie</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Bible</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Bibie</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Boble</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Bobie</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Buble</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Bubie</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Booble</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Boobie</d-text>
+	</d-box>
+
+	<h4 id="dialogue-standard-missmizzle">As Miss Mizzle</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Miss Mizzle</d-speaker>
+		<d-text>Glory, glory.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-mercy">Upon reaching 60% <span class="yellow">Mercy</span></h3>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>It seems your affection<span class="break"></span> has caused some change<span class="break"></span> in my form...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Ah, it's breaking!</d-text>
+	</d-box>
+
+	<p class="note">HolywaterCooler turns into Miss Mizzle.</p>
+
+	<h4>Unused variant</h4>
+	<p>Seems to have been intended as the first line of a multi-line speech. Though this dialogue is declared in the code, it never actually gets rendered as a speech bubble, so dialogue skips ahead to the lines above.</p>
+	{%- comment %} scr_enemyblcon never gets called in this branch, it just sets ballooncon and goes ahead {% endcomment %}
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Ah! What is this?<span class="break"></span> The chamber can<span class="break"></span> no longer hold me.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-fight">When attacked as HolywaterCooler</h3>
+	<p>Overrides <a href="#dialogue-standard-holywatercooler">standard dialogue</a>.</p>
+	<h4>First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Oh, you brutes!<span class="break"></span> You scoundrels!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Those who seek to<span class="break"></span> conquer hearts by<span class="break"></span> force shall find no<span class="break"></span> pure tincture,</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>But instead a bitter<span class="break"></span> poison, of gnashing<span class="break"></span> teeth and regret.</d-text>
+	</d-box>
+
+	<h4>Second time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>What? You treat me<span class="break"></span> like an egg, that<span class="break"></span> you should break me,</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>To reveal some hidden<span class="break"></span> beauty in gold and<span class="break"></span> softened ivory.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Nay, for love is<span class="break"></span> made of eggshells,</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>And should your love<span class="break"></span> be true, you would<span class="break"></span> already know what<span class="break"></span> lies inside.</d-text>
+	</d-box>
+
+	<h4>Third time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Disgusting.</d-text>
+	</d-box>
+
+	<h4>Fourth time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>What have you done?<span class="break"></span> You have broken my<span class="break"></span> chamber!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Now I will seem as<span class="break"></span> all the others...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Oh, young soldiers,<span class="break"></span> how cruel you are,<span class="break"></span> that in your quest<span class="break"></span> to make me yours,</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>You would reduce<span class="break"></span> me to this terrible<span class="break"></span> state...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>...<span class="break"></span> Goodbye...</d-text>
+	</d-box>
+
+	<p class="note">HolywaterCooler turns into Miss Mizzle.</p>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<h4>As HolywaterCooler</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>HOLYWATERCOOLER - Just seems like a Watercooler with an ego.</d-text>
+	</d-box>
+
+	<h4>As Miss Mizzle</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>MISS MIZZLE - A Mizzle transformed with affection.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="flirt">
+	<h2>Flirt</h2>
+	<p>Available only for HolywaterCooler.</p>
+
+	<h3 id="flirt-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>???</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="flirt-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You FLIRTED with HolyWatercooler!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Romantic are<span class="break"></span> your words...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If you flirted with the second Watercooler in TV World</h4>
+	<p>(Requires you to not have spoken to the person behind the nearby curtain after fighting said Watercooler, due to some weirdness in how the flag tracking whether you flirted with the Watercooler is handled.)</p>
+	<h5>First time</h5>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Too romantic! Have<span class="break"></span> you FLIRTED with<span class="break"></span> another WaterCooler?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Wipe your mouth<span class="break"></span> before you speak<span class="break"></span> with one as I,</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>For your phrases,<span class="break"></span> soggy with<span class="break"></span> experience,</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Dribble like<span class="break"></span> shiny oil from<span class="break"></span> your lips.</d-text>
+	</d-box>
+	<p class="note">Miss Mizzle gains 5% <span class="yellow">Mercy</span>.</p>
+
+	<h5>Second time</h5>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Disgusting.</d-text>
+	</d-box>
+	<p class="note">Miss Mizzle gains 5% <span class="yellow">Mercy</span>.</p>
+
+	<h5>Third time onwards</h5>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Disgusting.</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+	<hr class="hr3">
+	<h4>If you didn't flirt with the second Watercooler in TV World</h4>
+	<h5>First time</h5>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Young soldier,<span class="break"></span> your words are<span class="break"></span> sweet like honeydew.<span class="break"></span> Is it the first<span class="break"></span> time you have<span class="break"></span> spoken to a lady<span class="break"></span> such as I?</d-text>
+	</d-box>
+	<d-choices theme="battlemenu">
+		<d-option index="0" text="First time"></d-option>
+		<d-option index="1" text="I flirt#with everyone"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>A young knight's<span class="break"></span> first love...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>No wellspring<span class="break"></span> may be so pure.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>I shall accept your<span class="break"></span> affection from afar,</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>And store it humbly<span class="break"></span> in a masonry jar.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>On lonely eves, when<span class="break"></span> I hear naught<span class="break"></span> but the bubbling<span class="break"></span> of my heart,</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>I should open it and<span class="break"></span> listen once more,</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>To the tender whispers<span class="break"></span> of your kindness.</d-text>
+		</d-box>
+		<p class="note">HolywaterCooler gains 20% <span class="yellow">Mercy</span>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>You think then, that<span class="break"></span> I shall drink the words</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>From those that would<span class="break"></span> flatter and cajole<span class="break"></span> and find them sweet?</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>Nay! You would do well<span class="break"></span> to save such tangy powders<span class="break"></span> for a man or woman<span class="break"></span> of the tap.</d-text>
+		</d-box>
+		<p class="note">HolywaterCooler gains 5% <span class="yellow">Mercy</span>.</p>
+	</d-option-panel>
+
+	<h5>Second time</h5>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Young knight, your words<span class="break"></span> were accepted once before.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Already, they are<span class="break"></span> bottled up in a masonry jar,</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Where, aged with time,<span class="break"></span> they will one day<span class="break"></span> be opened in a far season<span class="break"></span> To blossom<span class="break"></span> with the whisper<span class="break"></span> of old grapes.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Continue babbling, and<span class="break"></span> the chalice shall overflow<span class="break"></span> into turbulence,<span class="break"></span> and lose all meaning.</d-text>
+	</d-box>
+	<p class="note">HolywaterCooler gains 10% <span class="yellow">Mercy</span>.</p>
+
+	<h5>Third time</h5>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Disgusting.</d-text>
+	</d-box>
+	<p class="note">Miss Mizzle gains 5% <span class="yellow">Mercy</span>.</p>
+
+	<h5>Fourth time onwards</h5>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Disgusting.</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="flirt-dialogue">Dialogue</h3>
+	<p class="note">HolywaterCooler does not say anything (i.e. no <a href="#dialogue-standard-holywatercooler">standard dialogue</a>) before her turn when this ACT is used. (<a href="#dialogue-fight">Dialogue for being attacked</a> is not affected and will play regardless of ACT usage.)</p>
+</section>
+
+<section class="d-section" id="begformercy">
+	<h2>BegForMercy</h2>
+	<p>Available only for HolywaterCooler.</p>
+
+	<h3 id="begformercy-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>???</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="begformercy-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You begged for mercy...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Blessed are those<span class="break"></span> who kneel to me,<span class="break"></span> for my waves shall<span class="break"></span> cleanse you.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Close your eyes,<span class="break"></span> for as long as you<span class="break"></span> adore my purity,<span class="break"></span> no harm shall<span class="break"></span> follow you.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(HolyWatercooler took mercy on you!)</d-text>
+	</d-box>
+	<p class="note">HolywaterCooler gains 10% <span class="yellow">Mercy</span> and all party members are healed for 50 HP. HolywaterCooler does not attack this turn.</p>
+	<hr class="hr3">
+	<h4>Second time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Again you pray!<span class="break"></span> With renewed vigor,</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>But now your hands<span class="break"></span> shake with<span class="break"></span> carbonated nerves</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>And fear<span class="break"></span> drips down your face<span class="break"></span> in painted horror.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>You beg not<span class="break"></span> for salvation<span class="break"></span> by my purity, but</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>For fear of some<span class="break"></span> ugliness you see<span class="break"></span> reflected<span class="break"></span> in the glass.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Once again<span class="break"></span> I shall show mercy,<span class="break"></span> but no more.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(HolyWatercooler took mercy on you!)</d-text>
+	</d-box>
+	<p class="note">HolywaterCooler gains 10% <span class="yellow">Mercy</span> and all party members are healed for 50 HP. HolywaterCooler does not attack this turn.</p>
+	<hr class="hr3">
+	<h5>Third time</h5>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Disgusting.</d-text>
+	</d-box>
+	<p class="note">Miss Mizzle gains 5% <span class="yellow">Mercy</span>.</p>
+	<hr class="hr3">
+	<h5>Fourth time onwards</h5>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Disgusting.</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="begformercy-dialogue">Dialogue</h3>
+	<p class="note">HolywaterCooler does not say anything (i.e. no <a href="#dialogue-standard-holywatercooler">standard dialogue</a>) before her turn when this ACT is used. (<a href="#dialogue-fight">Dialogue for being attacked</a> is not affected and will play regardless of ACT usage.)</p>
+</section>
+
+<section class="d-section" id="chat">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Chat</h2>
+	<p>Available only for HolywaterCooler.</p>
+
+	<h3 id="chat-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>???</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="chat-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone chatted around the Watercooler!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>All around me<span class="break"></span> did you chatter,<span class="break"></span> but your tepid words</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Have not once<span class="break"></span> been decantered<span class="break"></span> in my direction.<span class="break"></span> Your ignorance<span class="break"></span> bescorns me...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>HolywaterCooler</d-speaker>
+		<d-text>Speak well of my nature,<span class="break"></span> and you shall be spared.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Second time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Seems like you should choose a topic...)</d-text>
+	</d-box>
+	<d-choices theme="battlemenu">
+		<d-option index="0" text="Recruit"></d-option>
+		<d-option index="1" text="Beauty"></d-option>
+		<d-option index="2" text="Cactuses are better"></d-option>
+		<d-option index="3" text="Flowers"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>Ah, I see...<span class="break"></span> So you offer yourselves<span class="break"></span> to be my recruits.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>Despite my stature,<span class="break"></span> I hardly hold a court here,</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>For, given respect even<span class="break"></span> by Lightners, I have all<span class="break"></span> I could desire.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>But, should you behave<span class="break"></span> with quiet dedication,</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>There may be<span class="break"></span> some use for you yet.<span class="break"></span> Impress me!</d-text>
+		</d-box>
+		<p class="note">HolywaterCooler gains 15% <span class="yellow">Mercy</span>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<h5>If <a href="#flirt">Flirt</a> has been used twice before, or you said you flirt with everyone</h5>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>Again you court me,<span class="break"></span> but your words float thin<span class="break"></span> on your intentions<span class="break"></span> puddle-shallow.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>The estate of a fairy<span class="break"></span> cannot be shared<span class="break"></span> with mortals<span class="break"></span> whose tongues<span class="break"></span> are cracked and dry!</d-text>
+		</d-box>
+		<p class="note">HolywaterCooler gains 5% <span class="yellow">Mercy</span>.</p>
+
+		<hr class="hr2">
+
+		<h5>If <a href="#flirt">Flirt</a> has been used at most once before and, if given the option, you said it was your first time flirting</h5>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>Remember me not<span class="break"></span> as a vainglory,</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>Though my face, shining<span class="break"></span> back both sun and moon<span class="break"></span> is brighter and more<span class="break"></span> holy than all stars,</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>And as such, my beauty<span class="break"></span> is more<span class="break"></span> of an objective science,<span class="break"></span> that cannot be denied.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>Well said.</d-text>
+		</d-box>
+		<p class="note">HolywaterCooler gains 15% <span class="yellow">Mercy</span>.</p>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>Disgusting.</d-text>
+		</d-box>
+		<p class="note">HolywaterCooler gains 5% <span class="yellow">Mercy</span>.</p>
+	</d-option-panel>
+	<d-option-panel index="3" theme="dark">
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>The Bluest Flower,<span class="break"></span> A disciple of my speech</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>Shy to no camera,<span class="break"></span> And a specimen of</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>Elegance and kindness.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>HolywaterCooler</d-speaker>
+			<d-text>Should you meet,<span class="break"></span> Please give my regards.</d-text>
+		</d-box>
+		<p class="note">HolywaterCooler gains 15% <span class="yellow">Mercy</span>.</p>
+	</d-option-panel>
+	<hr class="hr3">
+	<h4>Third time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Everyone talked around the watercooler, explicitly about watercoolers!)</d-text>
+	</d-box>
+	<p class="note">HolywaterCooler gains 12% <span class="yellow">Mercy</span>.</p>
+	<hr class="hr3">
+	<h4>Fourth time onwards</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Everyone talked around the watercooler, explicitly about watercoolers!)</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="chat-dialogue">Dialogue</h3>
+	<p class="note">HolywaterCooler does not say anything (i.e. no <a href="#dialogue-standard-holywatercooler">standard dialogue</a>) before her turn when this ACT is used. (<a href="#dialogue-fight">Dialogue for being attacked</a> is not affected and will play regardless of ACT usage.)</p>
+</section>
+
+<section class="d-section" id="dazzle">
+	<h2>Dazzle</h2>
+	<p>Available only for Miss Mizzle.</p>
+
+	<h3 id="dazzle-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>???</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dazzle-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You DAZZLEd MISS MIZZLE!</d-text>
+	</d-box>
+	<p class="note">Kris points as per the usual ACT animation; chiming sparkles appear in front of them.</p>
+	<p class="note">Miss Mizzle gains 8% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="embezzle">
+	<h2>{% include acticon chara="Susie" -%} Embezzle</h2>
+	<p>Available only for Miss Mizzle.</p>
+
+	<h3 id="embezzle-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Chance<span class="break"></span> to steal item</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="embezzle-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie EMBEZZLED an item!</d-text>
+	</d-box>
+	<p class="note">Susie jumps onto Miss Mizzle (who gains 8% <span class="yellow">Mercy</span>), then jumps back. The flavor text continues to one of the below outcomes.</p>
+
+	<h4 id="embezzle-success">Successfully embezzled</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Stole BitterTear!!</d-text>
+	</d-box>
+	<p class="note"><a href="{{ '/misc/darkitems#bittertear' | relative_url }}">Bitter Tear</a> is added to the inventory.</p>
+
+	<h4 id="embezzle-fail">Failure</h4>
+	<p>35.64% (36/101) chance.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But, she failed!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<h4 id="embezzle-broke">Nothing to steal</h4>
+	<p>If Miss Mizzle was previously successfully {% include acticon chara="Susie" -%} Embezzled from.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But, there was nothing to steal!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<h4 id="embezzle-inventoryfull">Inventory full</h4>
+	<p>Not including storage.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But, your items are full!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="nuzzle">
+	<h2>{% include acticon chara="Ralsei" -%} Nuzzle</h2>
+	<p>Available only for Miss Mizzle.</p>
+
+	<h3 id="nuzzle-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>???</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="nuzzle-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei NUZZLEd MISS MIZZLE!</d-text>
+	</d-box>
+	<p class="note">Ralsei moves up to Miss Mizzle and nuzzles her, then gets back in line.</p>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>MISS MIZZLE got a little bit tired...!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>MISS MIZZLE became TIRED!</d-text>
+	</d-box>
+	<p class="note">Miss Mizzle becomes <span class="blue">Tired</span>.</p>
+	<hr class="hr2">
+	<p class="note">Miss Mizzle gains 8% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<h4>As HolywaterCooler</h4>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie face-crushes a cup!!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie puts cups on Ralsei!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie puts cups on Kris's eyes!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Miss Mizzle gains 4% <span class="yellow">Mercy</span>.</p>
+
+	<h4>As Miss Mizzle</h4>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie gargles loudly!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie breaks a wet floor sign!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie snores while awake!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Miss Mizzle gains 4% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<h4>As HolywaterCooler</h4>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei absorbs trace calcium!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei cleans Susie's spill!!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei labels everyone's cups!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Miss Mizzle gains 4% <span class="yellow">Mercy</span>.</p>
+
+	<h4>As Miss Mizzle</h4>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei sips politely!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei puts a wet floor sign!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei makes toothpaste!!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Miss Mizzle gains 4% <span class="yellow">Mercy</span>.</p>
+</section>
