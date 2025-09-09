@@ -159,8 +159,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* `#postfight`
 		* `/finalconfrontation` - from confronting the knight to after defeating the titan
 			* `#posttitan` - after titan fight
-		* `/lastprophecy` - You Know What This Is.
-			* `#smiling` - it's ok not to smile/good keep smiling
+		* `/return` - back to the church
 	* `/chapter5`
 	* `/chapter6`
 	* `/chapter7`

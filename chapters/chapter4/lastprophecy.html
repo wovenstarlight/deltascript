@@ -1,0 +1,628 @@
+---
+title: Discovering the Last Prophecy
+
+description: >
+  <p>After finishing off the Titan, the party makes their way to the end.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_ch4_DCC02_Step_0
+    chapters: [4]
+    note: post-fight
+  -
+    name: gml_Object_obj_ch4_DCC03_Step_0
+    chapters: [4]
+    note: last prophecy
+  -
+    name: gml_Object_obj_dw_churchc_final_prophecy_Create_0
+    chapters: [4]
+    note: list of visible prophecies
+  -
+    name: gml_GlobalScript_scr_prophecytext
+    chapters: [4]
+    note: text of visible prophecies
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [4]
+    note: subsequent Ralsei talks, standard backtracking
+---
+<section class="d-section" id="postfight">
+	<h2>After the fight</h2>
+
+	<p class="note">The screen, white from the blinding radiance of the SOUL, fades out into a round Sanctuary room somewhat similar to the one where the Knight created the Titan's Fountain. Kris and Susie are both crouching at its center.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>W... We did it...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<p class="note">Kris stands, followed by Susie. A pause. Then they look at each other.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>... hey Kris, what's the deal with that red heart thing...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>Is that... your...</d-text>
+	</d-box>
+	<p class="note">Susie lowers her head slightly. A longer pause. Then she looks startled.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>W-wait a sec! The old man!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Z"></d-sprite>
+		<d-text asterisk>C'mon!! We... we still gotta talk to him!</d-text>
+	</d-box>
+	<p class="note">Susie runs off through the northern path, Kris watching her go. A pause. Then they turn towards the south upon hearing Ralsei's voice.</p>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>Kris!</d-text>
+	</d-box>
+	<p class="note">Ralsei comes into the room, walking up to Kris. He ducks his head, smiling.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Kris... Kris, you're alright...!</d-text>
+	</d-box>
+	<p class="note">He lifts his head.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>I can't believe... it actually worked!</d-text>
+	</d-box>
+	<p class="note">Ralsei ducks his head again, briefly losing his smile.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="B"></d-sprite>
+		<d-text asterisk>We... actually defeated a Titan...!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="I"></d-sprite>
+		<d-text asterisk>If we can do that, then...</d-text>
+	</d-box>
+	<p class="note">Ralsei lifts his head as he speaks, but then looks surprised. He glances slightly to the right, towards the northern path.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="l"></d-sprite>
+		<d-text asterisk>Kris, w... where's Susie?</d-text>
+	</d-box>
+	<p class="note">After a slight pause, Ralsei draws back, shocked. A longer pause. Then he turns to the north and sprints after Susie as he yells:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="g"></d-sprite>
+		<d-text asterisk>SUSIE, WAIT!!</d-text>
+	</d-box>
+	<p class="note">Kris watches him go. After a pause, control is returned to the player to lead Kris north after their friends.</p>
+</section>
+
+<section class="d-section" id="lastprophecy">
+	<h2>Discovering the Last Prophecy</h2>
+
+	<p class="note">In the next room, unlike before, the prophecies are pulsing red and a low, tense heartbeat is playing. Kris hurries down the path into the room, turning at the first bend where a prophecy panel floats:</p>
+
+	<d-box theme="prophecy">
+		<d-text>THE LAST PROPHECY.</d-text>
+		<d-text>THE STORY'S END.</d-text>
+	</d-box>
+
+	<p class="note">Ralsei stands a few steps further down the path, staring at the prophecy panel.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="l"></d-sprite>
+		<d-text asterisk>No...</d-text>
+	</d-box>
+
+	<p class="note">He sprints off to the right, yelling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="g"></d-sprite>
+		<d-text asterisk>SUSIE, STOP!!!</d-text>
+	</d-box>
+
+	<p class="note">Control is returned to the player, who can have Kris follow after Ralsei, walking past a few more prophecy panels:</p>
+
+	<d-box theme="prophecy">
+		<d-text>AND THEN. WHEN ALL HOPE<span class="break"></span> IS LOST FOR THE TALE</d-text>
+	</d-box>
+	<d-box theme="prophecy">
+		<d-text>THE FINAL TRAGEDY UNVEILS.</d-text>
+	</d-box>
+	<d-box theme="prophecy">
+		<d-text>TO SAVE THE WORLDS,<span class="break"></span> THERE IS ONLY ONE WAY.</d-text>
+	</d-box>
+
+	<p class="note">Ralsei is standing just a little past this last prophecy panel, looking further down the path, eyes wide. As Kris approaches him (control being taken from the player), the camera pans over to focus on him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="g"></d-sprite>
+		<d-text asterisk>SUSIE, DON'T LOOK--</d-text>
+	</d-box>
+
+	<p class="note">Ralsei flinches back as a prophecy panel up ahead, out of sight, is shattered, sending a ripple throughout the room that stops the pulsing red lighting and returns the prophecy panels to their usual blue. The heartbeat music is cut short.</p>
+
+	<p class="note">Looking distressed, head bowed slightly, Ralsei rushes forward to where Susie stands amidst shards of glass, her back to the player and her right fist dripping blood. As Kris follows, stopping just beyond the glass shards, Ralsei hurries up to Susie and puts a hand on her shoulder, rubbing as though to comfort her. He speaks in a rush, dialogue advancing on its own without player input:</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="l"></d-sprite>
+		<d-text asterisk>S-Susie, I'm sorry, I--</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="g"></d-sprite>
+		<d-text asterisk>I, I'm sorry, I--</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="h"></d-sprite>
+		<d-text asterisk>I'm sorry, I--</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>Shut up.</d-text>
+	</d-box>
+
+	<p class="note">Ralsei flinches and freezes when Susie speaks, then takes a step back, returning his hands behind his back. A pause. Suddenly, Susie throws her head back and laughs, and Ralsei looks up, surprised, as <a href="{% include wikilink page='13am' %}">soft music</a> begins playing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="W"></d-sprite>
+		<d-text asterisk>The hell are you apologizing for?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="X"></d-sprite>
+		<d-text asterisk>You're worried about THAT!? Seriously!?</d-text>
+	</d-box>
+
+	<p class="note">Susie's laughter slows to a stop. She lowers her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="X"></d-sprite>
+		<d-text asterisk>... this stupid prophecy?</d-text>
+	</d-box>
+
+	<p class="note">She laughs again, then goes still.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>Like something like that would happen.</d-text>
+	</d-box>
+
+	<p class="note">A slight pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>I wouldn't let it happen... Kris wouldn't let it happen...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="W"></d-sprite>
+		<d-text asterisk>And obviously YOU wouldn't let it happen.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>So...</d-text>
+	</d-box>
+
+	<p class="note">She lowers her head and turns around to face Ralsei, who lowers his head when she speaks, his face growing more downcast as she continues.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="W"></d-sprite>
+		<d-text asterisk>Why wouldn't you laugh?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>It's just stupid.</d-text>
+	</d-box>
+
+	<p class="note">Susie lifts her right hand and cups Ralsei's cheek, lifting his head. He looks at her, startled.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>So stop crying, 'k?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Everything's gonna be all right.</d-text>
+	</d-box>
+
+	<p class="note">A pause. Ralsei's face falls again as Susie pulls away and turns around, taking a few steps forward with her hands behind her head, wearing a grin.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>Heh.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>Hey, Kris.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Let's go seal the fountain, OK?</d-text>
+	</d-box>
+
+	<p class="note">At Susie's last words, Ralsei's face falls further. As she walks off towards the fountain, Ralsei turns back to where the prophecy once hung in the air, his head still turned slightly towards her. Kris takes a few steps towards Ralsei, but says nothing, and control is returned to the player.</p>
+</section>
+
+<section class="d-section" id="ralsei">
+	<h2>Talking to Ralsei</h2>
+
+	<h3>First time</h3>
+
+	<p class="note">Ralsei stands in front of the broken prophecy panel, head turned towards the path to leave. Kris stands at his side, facing him.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>Susie...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>... she's...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>She's a really really nice person, Kris.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>How can she be so kind...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>... how?</d-text>
+	</d-box>
+
+	<p class="note">A long pause.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>I'm sorry, Kris.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>I'm sorry I didn't say the whole prophecy at first.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>I just</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>I thought if I said something different</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>If we did something different</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>If we were just kind enough</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>Perhaps by the time we got here... it would change.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>But... but no matter what we do...</d-text>
+	</d-box>
+
+	<p class="note">A slight pause. Ralsei turns to Kris, his head bowed.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="f"></d-sprite>
+		<d-text asterisk>Our fate...</d-text>
+	</d-box>
+
+	<p class="note">After a moment, Ralsei lifts his head, smiling, his cheek bloodied. Another slight pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="e"></d-sprite>
+		<d-text asterisk>... is already decided.</d-text>
+	</d-box>
+
+	<p class="note">A pause. Ralsei falls to his knees, hands coming up over his eyes, shoulders rising and falling with unheard sobs.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>S-sorry... don't look at me... I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>I don't mean to always...</d-text>
+	</d-box>
+	<p class="note">Ralsei goes still.</p>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>Make everything about me...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>I'm sorry. I...</d-text>
+	</d-box>
+
+	<p class="note">He wipes a sleeve over his face, then lowers his arms, smiling. The blood on his cheek is fainter now.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="Q"></d-sprite>
+		<d-text asterisk>Everything's OK, Kris. Look, I...</d-text>
+	</d-box>
+	<d-box theme="dark" id="smiling">
+		<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="P"></d-sprite>
+		<d-text asterisk>I'm smiling!</d-text>
+	</d-box>
+
+	<p class="note">A pause.</p>
+
+	<d-choices theme="dark">
+		<d-option index="0" text="It's okay#not to smile"></d-option>
+		<d-option index="1" text="Good.#Keep smiling"></d-option>
+	</d-choices>
+
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Kris takes a step closer and kneels in front of Ralsei, putting their left arm around him.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="O"></d-sprite>
+			<d-text asterisk>K... Kris? Kris, you...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="a"></d-sprite>
+			<d-text asterisk>Haha...</d-text>
+		</d-box>
+
+		<p class="note">A pause. Ralsei's head lowers and he looks sad.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="n"></d-sprite>
+			<d-text asterisk>I... I'm scared...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="m"></d-sprite>
+			<d-text asterisk>It's getting harder and harder</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="e"></d-sprite>
+			<d-text asterisk>To just stand there smiling all the time.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="f"></d-sprite>
+			<d-text asterisk>To be the one</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="m"></d-sprite>
+			<d-text asterisk>Pretending I'm not afraid, too.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="f"></d-sprite>
+			<d-text asterisk>But</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="c"></d-sprite>
+			<d-text asterisk>I</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="Q"></d-sprite>
+			<d-text asterisk>Being with you two...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="n"></d-sprite>
+			<d-text asterisk>I...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="Q"></d-sprite>
+			<d-text asterisk>The more I'm with you two, I realize...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="e"></d-sprite>
+			<d-text asterisk>Friendship... isn't just...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="m"></d-sprite>
+			<d-text asterisk>About being happy all the time.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="n"></d-sprite>
+			<d-text asterisk>It's something far, far greater than I could've imagined...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="n"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+
+		<p class="note">A pause.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="n"></d-sprite>
+			<d-text asterisk>I... I want to. I want to believe again.</d-text>
+		</d-box>
+
+		<hr class="hr2">
+
+		<h4>On the normal route</h4>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="p"></d-sprite>
+			<d-text asterisk>I want to believe... it can change!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="o"></d-sprite>
+			<d-text asterisk>That there isn't just one ending!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="n"></d-sprite>
+			<d-text asterisk>Susie's hope... Her naive hope...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="Q"></d-sprite>
+			<d-text asterisk>It's... infectious, isn't it, Kris?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="n"></d-sprite>
+			<d-text asterisk>... So, until we see fate with our own eyes...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="Q"></d-sprite>
+			<d-text asterisk>Let's believe, too.</d-text>
+		</d-box>
+
+		<hr class="hr3">
+
+		<h4>On the Weird Route</h4>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="q"></d-sprite>
+			<d-text asterisk>I want to believe... it can change!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="o"></d-sprite>
+			<d-text asterisk>That there isn't just one ending!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="m"></d-sprite>
+			<d-text asterisk>But...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="Q"></d-sprite>
+			<d-text asterisk>What would that be...?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="e"></d-sprite>
+			<d-text asterisk>If there was something else, what would it be...?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="f"></d-sprite>
+			<d-text asterisk>And how do we know</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="l"></d-sprite>
+			<d-text asterisk>It wouldn't be something even worse?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="f"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="a"></d-sprite>
+			<d-text asterisk>... Kris...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="e"></d-sprite>
+			<d-text asterisk>Nevermind. I'll see you tomorrow, okay?</d-text>
+		</d-box>
+
+		<hr class="hr2">
+
+		<p class="note">A pause. Kris pulls away and gets to their feet, taking a step back. Ralsei also stands and gives Kris a smile.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="Q"></d-sprite>
+			<d-text asterisk>... Kris, you can go to the fountain now.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="Q"></d-sprite>
+			<d-text asterisk>Susie's waiting.</d-text>
+		</d-box>
+
+		<p class="note">Ralsei turns back to face to the spot where the prophecy panel was, and control is returned to the player.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="Q"></d-sprite>
+			<d-text asterisk>Of... of course! You can count on me!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="j"></d-sprite>
+			<d-text asterisk>I'll... make sure we...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="j"></d-sprite>
+			<d-text asterisk>... have a wonderful adventure tomorrow!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="j"></d-sprite>
+			<d-text asterisk>The next day, too...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="j"></d-sprite>
+			<d-text asterisk>After all, that's what you want, isn't it?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="j"></d-sprite>
+			<d-text asterisk> ...</d-text>
+		</d-box>
+		<p class="note">Ralsei stands and turns back to face to the spot where the prophecy panel was, and control is returned to the player.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="Q"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="leaving">
+	<h2>Leaving the Sanctuary</h2>
+
+	<h3 id="backtrack">Backtracking to the previous room</h3>
+	<p class="note">Attempting to backtrack to the round room results in Kris stopping at the entrance as though blocked by an obstacle. The entrance can be interacted with:</p>
+
+	<h4 id="backtrack-standard">Standard</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(It seems the way is blocked.)</d-text>
+	</d-box>
+
+	<h4 id="backtrack-dess">First time after Susie sees the last prophecy</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(It seems the way is blocked.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You put out your hand...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(And, just out of view, just perfectly out of view,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>Another hand pressed against yours</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>And pushed you back.)</d-text>
+	</d-box>
+	<p class="note">Unheard at 0% volume, the strumming of Dess's guitar plays.</p>
+
+	<hr>
+
+	<h3 id="leavingralsei">Ralsei's parting words</h3>
+	<p>Plays if <a href="#smiling">Ralsei was told "it's okay to keep smiling"</a>.</p>
+
+	<p class="note">As Kris goes to leave, a few steps past Ralsei, Ralsei turns towards them and speaks with his head ducked. Kris stops to listen without turning around.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="0"></d-sprite>
+		<d-text asterisk>Umm... Kris?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="I"></d-sprite>
+		<d-text asterisk>You were</d-text>
+	</d-box>
+
+	<p class="note">Ralsei raises his head, smiling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="nohat/blood" emotion="Q"></d-sprite>
+		<d-text asterisk>You were cool when you played the piano earlier!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns back to where the prophecy once was, and control is returned to the player.</p>
+
+	<hr>
+
+	<h3 id="final">Leaving towards the Fountain</h3>
+	<p class="note">The player can take Kris further down the path, past the shattered prophecy and Ralsei. One last prophecy panel floats beside the path:</p>
+
+	<d-box theme="prophecy">
+		<d-text>ONLY THEN,<span class="break"></span> WILL THE WORLDS BE SAVED.</d-text>
+	</d-box>
+
+	<p class="note">And after passing this, Kris can go through <a href="{{ '/chapters/chapter4/fountain' | relative_url }}">the door leading to the fountain</a>.</p>
+</section>
