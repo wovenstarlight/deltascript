@@ -1115,6 +1115,7 @@ d-sprite {
 		width: var(--size);
 		height: var(--size);
 		object-fit: contain;
+		font-family: var(--font-condensed);
 		body:not(.noanim) &[src$=".gif"] + &[src$=".png"],
 		body.noanim &[src$=".gif"],
 		d-box:state(compact) & { display: none }
