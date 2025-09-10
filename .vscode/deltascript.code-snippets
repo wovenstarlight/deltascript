@@ -141,7 +141,7 @@
 		"prefix": "battle-talk",
 		"body": [
 			"<d-box theme=\"battletalk\">",
-			"\t<d-speaker>$1</d-speaker>",
+			"\t<d-speaker>${1|Susie,Ralsei,Noelle,Lancer,Kris|}</d-speaker>",
 			"\t<d-text>$0</d-text>",
 			"</d-box>"
 		]
