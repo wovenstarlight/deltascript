@@ -1,0 +1,675 @@
+---
+title: Hammer of Justice encounter
+
+description: >
+  <p>Flavor text and dialogue for the battle against the Old Man, Gerson Boom.</p>
+
+  <p>Turn numbers are referenced throughout this page; this count includes the two optional turns at the start of the battle — turn 1, which occurs only the first time the Hammer of Justice is battled, and turn 2, which occurs only if damage is taken during turn 1. As such, rematches against the Hammer of Justice begin from what this page counts as "Turn 3", and numbering continues from there.</p>
+
+sources:
+  -
+    name: gml_Object_obj_hammer_of_justice_enemy_Step_0
+    chapters: [4]
+    note: flavor text, dialogue conditions
+  -
+    name: gml_Object_obj_hammer_of_justice_enemy_Create_0
+    chapters: [4]
+    note: dialogue contents
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [4]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [4]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_gerson_item_steal_anim_Step_0
+    chapters: [4]
+    note: using items
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: 
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-fightprompt
+        name: Turn 4, if you haven't attacked yet
+      -
+        id: ft-fight
+        name: After FIGHTing for the second time
+      -
+        id: ft-heal
+        name: After using OK Heal for the first time
+      -
+        id: ft-rudebuster
+        name: After using Rude Buster for the first time
+      -
+        id: ft-items
+        name: After using an item for the first time
+      -
+        id: ft-progress
+        name: Progressing the fight
+        subheadings:
+          -
+            id: ft-progress25
+            name: After getting 25 stars
+          -
+            id: ft-progress50
+            name: After getting 50 stars
+          -
+            id: ft-progress75
+            name: After getting 75 stars
+  -
+    id: dialogue
+    name: Dialogue
+  -
+    id: rudebuster
+    name: Using Rude Buster
+  -
+    id: items
+    name: Attempting to use items
+  -
+    id: end
+    name: End of fight
+---
+{% comment %} encounterno = 160 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(The bell of justice rings...)<span class="break"></span> (ATTACK to show what you've got!)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<p>Listed in priority order; that is, any given line of flavor text will override the lines immediately below it within this subsection.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The air crackles green with freedom.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The bells ring in justice...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">6.93% (7/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The bell of justice is ringing... it's for you.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">1.98% (2/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The bell of justice tolls... for a frog. No, a turtle!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">1.98% (2/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The white wind howls!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">1.98% (2/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like steel and leather.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">9.9% (10/101) chance from turn 10 onwards:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It's one shell of a battle!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p>9.9% (10/101) chance when Susie's HP is higher than 80%:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie rolls her head confidently.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p>9.9% (10/101) chance when Susie's HP is lower than 40%:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie grits her teeth.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-fightprompt">Turn 4, if you haven't attacked yet</h3>
+	<p>Overrides all other flavor text.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>(Hey Kris, if this guy wants a haircut, let's ATTACK...!)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-fight">After FIGHTing for the second time</h3>
+	<p>Overrides all below flavor text, as well as <a href="#ft-standard">standard flavor text</a>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The opponent seems impressed with Susie's guts!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-heal">After using <a href="{{ '/misc/spells#okheal' | relative_url }}">OK Heal</a> for the first time</h3>
+	<p>Overrides all below flavor text, as well as <a href="#ft-standard">standard flavor text</a>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The opponent's seems very impressed with Susie's magic...!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-rudebuster">After using <a href="#rudebuster">Rude Buster</a> for the first time</h3>
+	<p>Overrides all below flavor text, as well as <a href="#ft-standard">standard flavor text</a>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The opponent is reeling from the Rude Buster!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-items">After using an item for the first time</h3>
+	<p>Overrides the below flavor text, as well as <a href="#ft-standard">standard flavor text</a>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your ITEMs were taken!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-progress">Progressing the fight</h3>
+	<p>Various actions can impress the Hammer of Justice, indicated by <span class="yellow">Mercy</span> stars appearing over his head (see the <a href="{% include wikilink page='Hammer of Justice#Strategy' %}">Deltarune Wiki</a> for a list of effective actions). The fight progresses as more stars are acquired.</p>
+	<p>Flavor text in this section overrides the <a href="#ft-standard">standard flavor text</a>.</p>
+	<h4 id="ft-progress25">After getting 25 stars</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Things are finally starting to get serious!</d-text>
+	</d-box>
+
+	<h4 id="ft-progress50">After getting 50 stars</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>A bead of sweat forms on the old man's forehead...</d-text>
+	</d-box>
+
+	<h4 id="ft-progress75">After getting 75 stars</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The opponent is finally slowing down! ... or speeding up!?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+	<p>Dialogue for this battle is entirely scripted.</p>
+
+	<h3 id="dialogue1">Turn 1</h3>
+	<p>This turn occurs only the first time the Hammer of Justice is battled.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>So you got moves,<span class="break"></span> so what?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>You're facing a hero.<span class="break"></span> There isn't anything<span class="break"></span> that's gonna stand<span class="break"></span> in our way!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>So the story goes,<span class="break"></span> so the story goes.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>But ain't every story<span class="break"></span> better with a little<span class="break"></span> twist?</d-text>
+	</d-box>
+	<p class="note">The battle box appears, and Gerson swings his hammer at the SOUL, sending an arrow-shaped wave of green magic over it and turning the SOUL green. A small axe appears to act as its shield. Susie jolts, lurching back in alarm.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>H... huh?<span class="break"></span> Something<span class="break"></span> feels... off...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>You won't<span class="break"></span> learn anything<span class="break"></span> runnin' away,<span class="break"></span> y'know!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>If you've got<span class="break"></span> guts, let's see<span class="break"></span> how you deal<span class="break"></span> facing everything<span class="break"></span> head-on!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>(Kris, help<span class="break"></span> me out!)</d-text>
+	</d-box>
+
+	<h4>Unused variant for subsequent attempts</h4>
+	<p>A shortened version of the introduction intended for the second attempt onwards at this fight. Since turn 1 doesn't play during subsequent attempts, though, this version of the dialogue never plays.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>If you've got guts,<span class="break"></span> c'mon and let your<span class="break"></span> axe do the talking!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue2">Turn 2</h3>
+	<p>This turn occurs only the first time the Hammer of Justice is battled, and only if damage was taken during turn 1.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>You gotta BLOCK, you<span class="break"></span> understand?!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>(Kris, don't mess<span class="break"></span> this up)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue3">Turn 3</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>As long as you're GREEN,<span class="break"></span> you can't run away!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Unless you FACE DANGER<span class="break"></span> HEAD ON... These bullets<span class="break"></span> will do you in!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue4">Turn 4</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Did you ever hear<span class="break"></span> that old tale?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Yes, the old tale,<span class="break"></span> based upon the<span class="break"></span> prophecy...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Lord of the Hammer.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Think I heard about it.<span class="break"></span> What happens?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue5">Turn 5</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Chapter 1<span class="break"></span> The March of<span class="break"></span> the Dark King.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>The heroes defeat<span class="break"></span> the king and<span class="break"></span> stop the dragon.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue6">Turn 6</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Chapter 2<span class="break"></span> The City of<span class="break"></span> the Shining.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>The heroes do<span class="break"></span> battle in chariots<span class="break"></span> to save the Queen.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue7">Turn 7</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Chapter 3, The<span class="break"></span> Isles of<span class="break"></span> Northernlight.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>The heroes travel<span class="break"></span> among the islands<span class="break"></span> and catch a glimpse<span class="break"></span> of a lost land.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue8">Turn 8</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Chapter 4, The<span class="break"></span> Trials of the<span class="break"></span> Holy Hammer.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>A great smith gives<span class="break"></span> the heroes a<span class="break"></span> terrible weapon.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue9">Turn 9</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Chapter 5, The<span class="break"></span> Field of Pink<span class="break"></span> and Gold.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>The vast garden is<span class="break"></span> charred in an inferno<span class="break"></span> of jealousy.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue10">Turn 10</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>...What happens next?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Geheheh! Who knows?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>There was only one more<span class="break"></span> chapter... After that,</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>It all stopped.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue11">Turn 11</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>That next book, it<span class="break"></span> never did get written.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>The story, it became so<span class="break"></span> grand, so overwhelming,</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Some say it swallowed up<span class="break"></span> the author himself.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue12">Turn 12</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>The ones who could write<span class="break"></span> the next, the youth,<span class="break"></span> the pen was lying<span class="break"></span> there for them to<span class="break"></span> pick up.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>To make the next page.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>...they never did.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue13">Turn 13</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>But you, my dear?<span class="break"></span> I see a story lit<span class="break"></span> up in your eyes...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Burnin' bright...<span class="break"></span> Burnin' black.<span class="break"></span> Burnin' up<span class="break"></span> everything.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue14">Turn 14</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>The bell's ringin' now.<span class="break"></span> Seems we've reached<span class="break"></span> the final rounds.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>So... how do you<span class="break"></span> think it all ends?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>No, how do you want<span class="break"></span> it to end?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue15">Turn 15</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>An ending, huh...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>...If I could choose…<span class="break"></span> I guess...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I wouldn't have an<span class="break"></span> ending!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>It's just better if<span class="break"></span> stuff just...<span class="break"></span> goes on forever, right?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue16">Turn 16</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Gah ha ha ha<span class="break"></span> ha ha ha!!! Well<span class="break"></span> ain't that somethin'.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>At this late hour,<span class="break"></span> with the bells ringing<span class="break"></span> out their justice.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>You choose eternity.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue17">Turn 17</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Miss, hold on<span class="break"></span> dearly to that thought.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>For the tides of fate<span class="break"></span> are drawing close.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>And soon, an ocean<span class="break"></span> of ink shall wash<span class="break"></span> across the pages.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue18">Turn 18</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Before, you said you<span class="break"></span> fancied yourself a<span class="break"></span> hero, didn't ya?<span class="break"></span> Hmmm... That's<span class="break"></span> real interesting.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue19">Turn 19</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Now, I don't know<span class="break"></span> much about "heroes"...<span class="break"></span> ... But I know that<span class="break"></span> whatever ya call 'em,<span class="break"></span> there is someone.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Someone who'll never<span class="break"></span> give up trying to<span class="break"></span> do the right thing,<span class="break"></span> no matter what.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue20">Turn 20</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>There's no prophecy<span class="break"></span> or legend 'bout anyone<span class="break"></span> like that.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>It's just something<span class="break"></span> I know is true.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Now, where's my<span class="break"></span> haircut!? Geh ha ha!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue21">Turn 21</h3>
+	<p>The fight automatically proceeds to this turn once 84 <span class="yellow">Mercy</span> stars are obtained.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>But... there is one<span class="break"></span> thing that can<span class="break"></span> overwrite the dark.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>A white pen,<span class="break"></span> known as hope.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Miss! I believe...<span class="break"></span> this is what you hold.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Me? Nah, Kris<span class="break"></span> has the pen.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>My weapon's like a<span class="break"></span> hairbrush or something.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Geh-hahahahaha!<span class="break"></span> Is that so?<span class="break"></span> Is that SO???</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Yep.<span class="break"></span> Now shut up<span class="break"></span> and give me<span class="break"></span> that axe!</d-text>
+	</d-box>
+	<p class="note">If you survive the ensuing attack, after the battle box disappears, the fight automatically proceeds to the <a href="#end">ending cutscene</a>.</p>
+
+	<hr>
+
+	<h3 id="dialogue22">Subsequent turns (UNUSED)</h3>
+	<p>Enough <span class="yellow">Mercy</span> stars are obtained by surviving the last few turns to automatically trigger the end of the battle, so this dialogue never plays.</p>
+	<p></p>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Now, where's my<span class="break"></span> haircut? Geh ha ha!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>You aren't givin' up<span class="break"></span> now, are ya?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Put some shell into<span class="break"></span> it, will ya?</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="dialogue-unused">Unused dialogue</h3>
+	<p>Seems to be continuing a scrapped conversation; whatever it links to has been deleted or overwritten.</p>
+	{%- comment %} maybe whatever ballooncon = 31 / 32 were? although that chain seems to be complete with just 31→32... {% endcomment %}
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>... y'know, since<span class="break"></span> you're gonna<span class="break"></span> lose if ya<span class="break"></span> don't, gahah!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="rudebuster">
+	<h2>Using Rude Buster</h2>
+	<p>See the <a href="{{ '/misc/spells#rudebuster' | relative_url }}">Spells page</a> for more information on this spell, including description and cost.</p>
+
+	<h3 id="rudebuster-usage">Usage</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie used RUDE BUSTER!</d-text>
+	</d-box>
+	<p class="note">Susie lets loose a standard Rude Buster attack, sending an arrow of magic at Gerson. However, when it reaches him, he strikes it with his hammer and sends it back at Susie, with a warning message reading "<span class="red">PRESS &lt;CONFIRM&gt;</span>". The first time this happens, the deflected attack slows down to give enough time to read this warning.</p>
+	<p class="note">If [CONFIRM] is pressed in time, Susie counter-deflects the attack back at Gerson. This back-and-forth repeats once more for each time Rude Buster has been successfully counter-deflected.</p>
+
+	<h4 id="rudebuster-success">Successfully counter-deflecting</h4>
+	<p class="note">If Rude Buster is successfully deflected enough times, Gerson spins from the force of the attack, but takes no damage. 8 <span class="yellow">Mercy</span> stars are obtained. The fight proceeds to the <a href="#dialogue">appropriate dialogue for that turn</a>.</p>
+
+	<h4 id="rudebuster-fail">Failing to counter-deflect, first time</h4>
+	<p class="note">If Rude Buster is not counter-deflected the first time it's used, it strikes Susie, making her flinch back as she takes damage.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Wh... what kind<span class="break"></span> of cheap trick<span class="break"></span> was that!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Sorry, thought you'd hit<span class="break"></span> it back! Geh heh heh!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Oh yeah!? I'll show<span class="break"></span> you!! Kris, let's use<span class="break"></span> it again!!</d-text>
+	</d-box>
+	<p class="note">6 <span class="yellow">Mercy</span> stars are obtained. The fight proceeds to the <a href="#dialogue">appropriate dialogue for that turn</a>.</p>
+</section>
+
+<section class="d-section" id="items">
+	<h2>Attempting to use <a href="{{ '/misc/darkitems' | relative_url }}">items</a></h2>
+
+	<p class="note">Susie begins using the item, pulling a shining something from her pocket and tossing it up in front of herself. But Gerson disappears and reappears in front of her, plucking the shine out of the air before it can take effect.</p>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie used the &lt;ITEM&gt;<span class="break"></span>... but it was stolen!</d-text>
+	</d-box>
+
+	<p class="note">The item has no effect and is not removed from the inventory. Gerson reappears in his usual spot, laughing.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Woah there!<span class="break"></span> I ain't usin' items,<span class="break"></span> so fair's fair,<span class="break"></span> ain't it!?</d-text>
+	</d-box>
+
+	<p class="note">The ITEM button becomes grayed out and unselectable for the rest of the encounter. The fight proceeds to the <a href="#dialogue">appropriate dialogue for that turn</a>.</p>
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of fight</h2>
+
+	<p class="note">The battle box for turn 21 disappears and the music fades out.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>... Alright,<span class="break"></span> I figured it out.</d-text>
+	</d-box>
+
+	<p class="note">Susie crouches slightly, hands cupped around the air.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>You wanna see what<span class="break"></span> I got, then...</d-text>
+	</d-box>
+
+	<p class="note">An orb of green magic appears between her palms, thrumming as it's charged up.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Take THIS!!!</d-text>
+	</d-box>
+
+	<p class="note">Susie lets the healing blast loose — but at a slight angle, so that it passes over Gerson's head. He pauses as it does so, looking up at it.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Gerson</d-speaker>
+		<d-text>Ha, ya missed.</d-text>
+	</d-box>
+
+	<p class="note">But as he's distracted speaking, Susie hefts her axe and slices clean through his beard hairs, shocking Gerson. As the slash echoes for another few seconds, the screen fades to white and <a href="{{ '/chapters/chapter4/hammerofjustice#postfight' | relative_url }}">the encounter ends</a>.</p>
+</section>
