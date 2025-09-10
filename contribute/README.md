@@ -193,8 +193,8 @@ sources:
     chapters: [1, 2, ...]
   -
     name: More list items with name/chapter pairings; each item is indicated by a hyphen. Indentation is very important - keep it consistent!
-    url: [1]
+    chapters: [1]
   -
     name: Add all the files you reference, including for character actions during cutscenes.
-    url: [4]
+    chapters: [4]
 ```
