@@ -291,7 +291,7 @@ toc:
 	</d-box>
 
 	<h4>If any party members were downed on the previous turn</h4>
-	<p>"[Character(s)]" may be replaced by any of the following, depending on who was downed. At most two party members can be downed per turn; the party is targeted in the order Ralsei → Susie → Kris, with Kris unable to go below 1 HP, so they are never downed in this phase.</p>
+	<p>"&lt;Character(s)&gt;" may be replaced by any of the following, depending on who was downed. At most two party members can be downed per turn; the party is targeted in the order Ralsei → Susie → Kris, with Kris unable to go below 1 HP, so they are never downed in this phase.</p>
 	<ul>
 		<li>"Kris" <span class="gray">(unused, see above)</span></li>
 		<li>"Susie"</li>
@@ -301,7 +301,7 @@ toc:
 		<li>"Susie and Ralsei"</li>
 	</ul>
 	<d-box theme="battlemenu">
-		<d-text asterisk>Old Man gave [Character(s)] candy!</d-text>
+		<d-text asterisk>Old Man gave &lt;Character(s)&gt; candy!</d-text>
 	</d-box>
 	<p class="note">The downed party member(s) are revived at a sixth of their maximum HP.</p>
 	{%- comment %} Technically they're revived at 5 HP (see obj_titan_enemy's event_user(1)/Other_11) but scr_heal() works such that if you're revived to below a sixth then you automatically get boosted to a sixth. So yay extra heal power {% endcomment %}
