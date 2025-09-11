@@ -764,7 +764,7 @@ d-box, d-choices {
 		&[theme=powertitle] { width: calc(var(--basewidth) - 11.4em) }
 
 		&[theme=battlemenu] > d-text { max-width: calc(var(--basewidth) - 2.4em) }
-		&[theme=battlemenu] > d-sprite + d-text { max-width: calc(var(--basewidth) - 6.4em - 1ch) }
+		&[theme=battlemenu] > d-sprite:not([speaker=Tenna]) + d-text { max-width: calc(var(--basewidth) - 6.4em - 1ch); }
 
 		&[theme=battledesc] {
 			width: calc(var(--basewidth) - 16.5em);
