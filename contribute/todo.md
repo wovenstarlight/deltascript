@@ -149,6 +149,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/desertboard`
 		* `/islandboard`
 		* `/doomboard`
+		* `/intotvworld` - After escaping the Doom Board via Zapper
 		* `/cityboard` - The unused version of Board 3
 	* `/chapter4`
 		* `/noellevisit` - Noelle's house intro. Update this link on other pages if you end up splitting it further
@@ -179,7 +180,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* Chapter 3
 		* gml_Object_obj_elnina_enemy_Step_0/gml_Object_obj_lanino_enemy_Step_0 `/weather` (initial fight)
 		* gml_Object_obj_shutta_enemy_Step_0 `/shuttah`
-		* gml_Object_obj_zapper_enemy_Step_0 `/zapper`
 		* gml_Object_obj_tenna_board4_enemy_Step_0 `/tenna1` or `/tennadoom` (doom board)
 		* gml_Object_obj_rouxls_ch3_enemy_Step_0 `/rouxls2` or `/rouxlsch3` (contracts)
 		* gml_Object_obj_tenna_enemy_Step_0 `/tenna2` or `/tennafinal`

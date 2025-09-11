@@ -1,0 +1,463 @@
+---
+title: Zapper encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Zapper.</p>
+
+sources:
+  -
+    name: gml_Object_obj_zapper_enemy_Step_0
+    chapters: [3]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [3]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [3]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_tenna_board4_enemy_Step_0
+    chapters: [3]
+    note: Doom Board standard flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-zapper
+            name: With another Zapper
+          -
+            id: encounter-shuttah
+            name: With Shuttah
+          -
+            id: encounter-tenna
+            name: With Tenna
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+      -
+        id: dialogue-sharpshoot
+        act_icon: [Susie, Ralsei]
+        custom_icon_positions: true
+        name: After being hit by ACTICON ACTICON Sharpshoot
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: volumeup
+        name: VolumeUp
+      -
+        id: mute
+        name: Mute
+      -
+        id: offbutton
+        act_icon: [Susie, Ralsei]
+        name: OffButton
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(112|116|118|119|120|129|135|137|138)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+
+Unused encounters with blank text:
+	- 116 (Shadowguy)
+	- 119 (Shuttah, Shadowguy)
+	- 120 (2 Shadowguys)
+	- 129 (Ribbick)
+	- 137 (Pippins)
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4> <!-- 138-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Zapper blocked the way!</d-text>
+	</d-box>
+
+	<h4 id="encounter-zapper">With another Zapper</h4> <!--112-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Zappers blocked the way!</d-text>
+	</d-box>
+
+	<h4 id="encounter-shuttah">With Shuttah</h4> <!--118-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>It's an infrared photo shoot.</d-text>
+	</d-box>
+
+	<h4 id="encounter-tenna">With Tenna</h4> <!--135-->
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Wanna be an ACT-er...? Here's my CARD!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Now where the heck is my debit card?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>If you're gonna be so dramatic... then ACT!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>I Love TV. That's all you gotta say.</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<h4>Normal</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Zapper clicks and clacks, zip and zaps.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Zapper quickly presses the buttons on its chest.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Zapper keeps just popping all night long.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Zapper checks if Tenna is watching.</d-text>
+	</d-box>
+
+	<h4>During the Doom Board fight with Tenna present</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>All you have to do is speak your mind!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Look me in the nose and SAY IT!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Sorry, what was that?! Couldn't hear you!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Our contestants have been very naughty!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Zapper's seeing visions of Lanino.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Zapper's buttons feel mushy.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Zapper blushes in infrared, too.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Zapper</d-speaker>
+		<d-text>Hoofah<span class="break"></span> doofah.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Zapper</d-speaker>
+		<d-text>Yeah, yeah,<span class="break"></span> Mr. Tenna's<span class="break"></span> orders.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Zapper</d-speaker>
+		<d-text>Yeah, yeah,<span class="break"></span> show your ID!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Zapper</d-speaker>
+		<d-text>Deez buttons<span class="break"></span> ain't for<span class="break"></span> show, twerps.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-sharpshoot">After being hit by <a href="{{ '/encounters/shadowguy#sharpshoot' | relative_url }}">{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Sharpshoot</a></h3>
+	<d-box theme="battletalk">
+		<d-speaker>Zapper</d-speaker>
+		<d-text>My buttons... pushed.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+	<p>Appears as "{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Check" during the joint battle against Tenna on the Doom Board.</p>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>ZAPPER - "Hoofer", "Clicker-Clacker", any name, it'll do the work.</d-text>
+	</d-box>
+
+	<h4>During the Doom Board fight with Tenna</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>ZAPPER - When it changes channels, who knows where you'll end up?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="volumeup">
+	<h2>VolumeUp</h2>
+	<p>Appears as "{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} VolumeUp" during the joint battle against Tenna on the Doom Board.</p>
+
+	<h3 id="volumeup-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Bullets give big TP...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="volumeup-ft">Flavor text</h3>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You turned up the volume!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<p class="note">A meter labelled <span class="green">VOLUME</span> appears just above the party's battle menus, showing the volume being increased. The battle music gets louder.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The bullets increased in volume, too...!<span class="break"></span> (But, they'll give more TP!)</d-text>
+	</d-box>
+	<p class="note">Zapper's bullets are larger during the next turn. After the enemy's turn ends, the volume meter reappears briefly to show the volume lowering back to its original value, with the battle music quieting simultaneously.</p>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The bullets increased in volume! Try getting close to gather TP!</d-text>
+	</d-box>
+	<p class="note">A meter labelled <span class="green">VOLUME</span> appears just above the party's battle menus, showing the volume being increased. The battle music gets louder.</p>
+	<p class="note">Zapper's bullets are larger during the next turn. After the enemy's turn ends, the volume meter reappears briefly to show the volume lowering back to its original value, with the battle music quieting simultaneously.</p>
+
+	<hr>
+
+	<h3 id="volumeup-dialogue">Dialogue</h3>
+	<p class="note">In the below dialogue, the speech bubbles appear for the Zappers in enemy slot 1, 2, and 3, respectively. If there is no enemy in that slot, or the enemy is not a Zapper, the corresponding dialogue does not play.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Zapper</d-speaker>
+			<d-text>CAN SOMEONE<span class="break"></span> TURN THAT<span class="break"></span> BACK DOWN?</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Zapper</d-speaker>
+			<d-text>WHAT? I CAN'T<span class="break"></span> HEAR YOU!!!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Zapper</d-speaker>
+			<d-text>TURN IT UP??<span class="break"></span> OKAY, YOU DA BOSS!</d-text>
+		</d-box>
+	</div>
+</section>
+
+<section class="d-section" id="mute">
+	<h2>Mute</h2>
+	<p>Appears as "{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Mute" during the joint battle against Tenna on the Doom Board.</p>
+
+	<h3 id="mute-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Tire enemies</d-text>
+		<d-text class="orange">32% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="mute-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You hit the MUTE button!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<p class="note">A meter labelled <span class="green">VOLUME</span> appears just above the party's battle menus, showing the volume being decreased to 0. The battle music stops for the rest of the encounter.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>All foes became TIRED!</d-text>
+	</d-box>
+	<p class="note">Zapper gains 75% <span class="yellow">Mercy</span>. All enemies (excluding Tenna during the Doom Board encounter) become <span class="blue">Tired</span>.</p>
+
+	<hr>
+
+	<h3 id="mute-dialogue">Dialogue</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Zapper</d-speaker>
+		<d-text>&nbsp; &nbsp; &nbsp; &nbsp;</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="offbutton">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} OffButton</h2>
+
+	<h3 id="offbutton-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Turn<span class="break"></span> it off</d-text>
+		<d-text class="orange">100% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="offbutton-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You hit the OFF button!</d-text>
+	</d-box>
+	<p class="note">The screen turns off, music stopping.</p>
+	<hr class="hr2">
+	<h4>Standard</h4>
+	<p class="note">The screen fades back in to show the encounter, and all enemies are automatically spared. The encounter ends.</p>
+	<hr class="hr3">
+	<h4>During the Doom Board fight with Tenna</h4>
+	<p class="note">After a pause, the screen fades back in to show the encounter, but with the Zapper gone and the party members missing from inside their gachapon capsules. After a pause, Tenna grins painfully wide.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>H-huh!?</d-text>
+	</d-box>
+	<p class="note">Clutching his head and twisting in distress, Tenna approaches the capsules.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Susie...?<span class="break"></span> Kris...?<span class="break"></span> Hey...?<span class="break"></span> HEY!!!</d-text>
+	</d-box>
+	<p class="note">Increasingly frantic, Tenna moves faster.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>DON'T TELL ME<span class="break"></span> YOU DIDN'T LIKE<span class="break"></span> YOUR CUSTOM MADE<span class="break"></span> TOY BALLS!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Hey, Mike?</d-text>
+	</d-box>
+	<p class="note">As Tenna addresses Mike, he slows down, then goes entirely still with his next line.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Could you, uh, cancel<span class="break"></span> my 4am shock therapy<span class="break"></span> session?</d-text>
+	</d-box>
+	<p class="note">He leans forward, whispering conspiratorially.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Cause it looks<span class="break"></span> like it's<span class="break"></span> happening right<span class="break"></span> now.</d-text>
+	</d-box>
+	<p class="note">As an alarm plays, red light flashing slowly from the top of the screen, Tenna clutches his head in a panic.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>ALL HANDS ON DECK!!!<span class="break"></span> EVERYONE FIND THE<span class="break"></span> LIGHTNERS!!!</d-text>
+	</d-box>
+	<p class="note">Tenna leaves offscreen to the right, and <a href="{{ '/chapters/chapter3/intotvworld' | relative_url}}">the encounter ends</a>.</p>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie mashed random buttons!</d-text>
+	</d-box>
+	<p class="note">Reeling with a whine and flashing through colors, Zapper gains 25% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3 id="saction-dialogue">Dialogue</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Zapper</d-speaker>
+		<d-text>D-don't touch<span class="break"></span> that, you's!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei enabled captions!</d-text>
+	</d-box>
+	<p class="note">The following text displays at the top of the encounter, above where the bullet board normally appears:</p>
+	<hr class="hr2">
+	<h4>Standard</h4>
+	<d-box theme="plain">
+		<d-text class="fnt-combat text-center-expand">(funky music plays)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>During the Doom Board fight with Tenna</h4>
+	<d-box theme="plain">
+		<d-text class="fnt-combat text-center-expand">(Tense music plays)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Zapper gains 25% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3 id="raction-dialogue">Dialogue</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Zapper</d-speaker>
+		<d-text>Hey, I can<span class="break"></span> see da music.!</d-text>
+	</d-box>
+</section>
