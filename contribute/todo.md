@@ -119,7 +119,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 				* `/ballmachine` - B-Rank rewards room
 					* `#1225` - `gacharoom_unknown`
 				* `/arcade` - A-Rank rewards room
-				* `/srankchangingroom` - S-Rank rewards room
+				* `/starchangingroom` - S-Rank rewards room
 				* `/backstage` - Backstage area
 				* `/trankroom` - T-Rank room
 				* `/zrankroom` - Z-Rank room
