@@ -179,7 +179,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* Chapter 3
 		* gml_Object_obj_elnina_enemy_Step_0/gml_Object_obj_lanino_enemy_Step_0 `/weather` (initial fight)
 		* gml_Object_obj_shutta_enemy_Step_0 `/shuttah`
-		* gml_Object_obj_watercooler_enemy_Step_0 `/watercooler`
 		* gml_Object_obj_zapper_enemy_Step_0 `/zapper`
 		* gml_Object_obj_tenna_board4_enemy_Step_0 `/tenna1` or `/tennadoom` (doom board)
 		* gml_Object_obj_rouxls_ch3_enemy_Step_0 `/rouxls2` or `/rouxlsch3` (contracts)

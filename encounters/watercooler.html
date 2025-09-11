@@ -1,0 +1,333 @@
+---
+title: Watercooler encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against the Watercooler.</p>
+
+sources:
+  -
+    name: gml_Object_obj_watercooler_enemy_Step_0
+    chapters: [3]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [3]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [3]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/moonwarmer
+    name: Moonwarmer encounter (unused Watercooler variant)
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: begformercy
+        name: BegForMercy
+      -
+        id: actcool
+        act_icon: [Susie, Ralsei]
+        name: ActCool
+      -
+        id: flirt
+        name: Flirt
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %} encounterno = 139 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>A strong aura emanates from the Watercooler.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The watercooler shows no mercy.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The watercooler doesn't do anything in particular.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The watercooler leaves an icy silence.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The watercooler cools water, coolly.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like the faucet.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The watercooler's bubbles rest on the surface.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The watercooler looks like it needs a refill.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The watercooler's water blushes a cranberry pink.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<p class="note">Forced on the first turn of the encounter, and joins the randomly-chosen pool on subsequent turns with a double chance of occurring:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Watercooler</d-speaker>
+		<d-text>Buble</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Double chance:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Watercooler</d-speaker>
+		<d-text>Bubie</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Watercooler</d-speaker>
+		<d-text>Bable</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Watercooler</d-speaker>
+		<d-text>Babie</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Watercooler</d-speaker>
+		<d-text>Beble</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Watercooler</d-speaker>
+		<d-text>Bebie</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Watercooler</d-speaker>
+		<d-text>Bible</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Watercooler</d-speaker>
+		<d-text>Bibie</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Watercooler</d-speaker>
+		<d-text>Boble</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Watercooler</d-speaker>
+		<d-text>Bobie</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Watercooler</d-speaker>
+		<d-text>Booble</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Watercooler</d-speaker>
+		<d-text>Boobie</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You CHECKed the watercooler...</d-text>
+		<d-text asterisk>The water was confirmed to be <span class="blue">cool</span>.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="begformercy">
+	<h2>BegForMercy</h2>
+
+	<h3 id="begformercy-ft">Flavor text</h3>
+	<h4>First time across all Watercooler encounters</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You begged for mercy...</d-text>
+		<d-text asterisk>... but the watercooler showed none.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You thought of some better, different ACTs to try next, instead.</d-text>
+	</d-box>
+	<p class="note">The <a href="#actcool">{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} ActCool</a> and <a href="#flirt">Flirt</a> ACTs become available.</p>
+
+	<h4>Second time across all Watercooler encounters</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You begged for mercy...</d-text>
+		<d-text asterisk>... but the watercooler showed none.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>This is probably because your NAME isn't YELLOW.</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<h4>Subsequent times across all Watercooler encounters</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You begged for mercy...</d-text>
+		<d-text asterisk>This doesn't do anything.</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="actcool">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} ActCool</h2>
+	<p>Available after using <a href="#begformercy">BegForMercy</a> at least once across all Watercooler encounters.</p>
+
+	<h3 id="actcool-ft">Flavor text</h3>
+	<p class="note">The party, wearing their gangster outfits and holding cups of water, stand around the Watercooler.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone chatted around the watercooler.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The watercooler felt included!</d-text>
+	</d-box>
+	<p class="note">The Watercooler gains 25% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="flirt">
+	<h2>Flirt</h2>
+	<p>Available after using <a href="#begformercy">BegForMercy</a> at least once across all Watercooler encounters.</p>
+
+	<h3 id="flirt-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told the watercooler it should actually be called a watercoolest.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You took a slow sip of water and then asked if it cooled it itself.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You asked the watercooler, "water" they doing later.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The Watercooler gains 10% <span class="yellow">Mercy</span> if either Susie or Ralsei is up, and 14% <span class="yellow">Mercy</span> if both Susie and Ralsei are downed.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The water turns pink for a second.</d-text>
+	</d-box>
+	<p class="note">The Watercooler's water briefly flashes pink; if it reaches 100% <span class="yellow">Mercy</span> from this use of Flirt, the water remains pink.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie face-crushes a cup!!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie puts cups on Ralsei!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie puts cups on Kris's eyes!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The Watercooler gains 6% <span class="yellow">Mercy</span> if either Kris or Ralsei is up, and 10% <span class="yellow">Mercy</span> if both Kris and Ralsei are downed.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei absorbs trace calcium!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei cleans Susie's spill!!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei labels everyone's cups!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The Watercooler gains 6% <span class="yellow">Mercy</span> if either Kris or Susie is up, and 10% <span class="yellow">Mercy</span> if both Kris and Susie are downed.</p>
+</section>

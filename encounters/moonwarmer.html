@@ -1,0 +1,401 @@
+---
+title: Moonwarmer encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against the Moonwarmer, a variant on the Watercooler.</p>
+  <p>Unused in the actual game, but documented for completion.</p>
+
+sources:
+  -
+    name: gml_Object_obj_watercooler_enemy_Step_0
+    chapters: [3]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [3]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [3]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/watercooler
+    name: Watercooler encounter
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-standard
+        name: Standard
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-standard
+        name: Standard
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: begformercy
+        name: BegForMercy
+      -
+        id: actwarmer
+        act_icon: [Susie, Ralsei]
+        name: ActWarmer
+      -
+        id: flirt
+        name: Flirt
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %} encounterno = 140 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>A strong aura emanates from the Moonwarmer.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-standard">Standard</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The moonwarmer shows no mercy.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The moonwarmer doesn't do anything in particular.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The moonwarmer leaves a hot silence.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The moonwarmer warms moons, warmly.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like the faucet.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The moonwarmer's bubbles rest on the surface.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The moonwarmer looks like it needs a refill.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The moonwarmer's water blushes a cranberry pink.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-standard">Standard</h3>
+	<p>Randomly chosen from the dialogues below.</p>
+
+	<h4>8× chance</h4>
+	<p class="note">Forced on the first turn of the encounter:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Moon</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Moom</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Mon</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Mom</d-text>
+	</d-box>
+
+	<h4>4× chance</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Moono</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Moomo</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Mono</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Momo</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Man</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Mam</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Noon</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Noom</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Non</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Nom</d-text>
+	</d-box>
+
+	<h4>2× chance</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Mano</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Mamo</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Noono</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Noomo</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Nono</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Nomo</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Nan</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Nam</d-text>
+	</d-box>
+
+	<h4>1× chance</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Nano</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Moonwarmer</d-speaker>
+		<d-text>Namo</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You CHECKed the moonwarmer...</d-text>
+		<d-text asterisk>The warms was confirmed to be <span class="yellow">moon</span>.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="begformercy">
+	<h2>BegForMercy</h2>
+
+	<h3 id="begformercy-ft">Flavor text</h3>
+	<h4>First time across all Moonwarmer/Watercooler encounters</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You begged for mercy...</d-text>
+		<d-text asterisk>... but the moonwarmer showed none.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You thought of some better, different ACTs to try next, instead.</d-text>
+	</d-box>
+	<p class="note">The <a href="#actwarmer">{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} ActWarmer</a> and <a href="#flirt">Flirt</a> ACTs become available.</p>
+
+	<h4>Second time across all Moonwarmer/Watercooler encounters</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You begged for mercy...</d-text>
+		<d-text asterisk>... but the moonwarmer showed none.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>This is probably because your NAME isn't YELLOW.</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<h4>Subsequent times across all Moonwarmer/Watercooler encounters</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You begged for mercy...</d-text>
+		<d-text asterisk>This doesn't do anything.</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="actwarmer">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} ActWarmer</h2>
+	<p>Available after using <a href="#begformercy">BegForMercy</a> at least once across all Moonwarmer encounters. Unchanged from the <a href="{{ '/encounters/watercooler#actwarmer' | relative_url }}">Watercooler's version of this ACT</a>, despite the now-inapplicable flavor text.</p>
+
+	<h3 id="actwarmer-ft">Flavor text</h3>
+	<p class="note">The party, wearing their gangster outfits and holding cups of water, stand around the Moonwarmer.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone chatted around the watercooler.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The watercooler felt included!</d-text>
+	</d-box>
+	<p class="note">The Moonwarmer gains 25% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="flirt">
+	<h2>Flirt</h2>
+	<p>Available after using <a href="#begformercy">BegForMercy</a> at least once across all Moonwarmer encounters.</p>
+
+	<h3 id="flirt-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told the moonwarmer it should actually be called a moonwarmest...?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You took a slow sip of warms and asked if it ever mooned...?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>You asked the moonwarmer,"hotter"they doing later...?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The Moonwarmer gains 10% <span class="yellow">Mercy</span> if either Susie or Ralsei is up, and 14% <span class="yellow">Mercy</span> if both Susie and Ralsei are downed.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The water turns pink for a second.</d-text>
+	</d-box>
+	<p class="note">The Moonwarmer's water(?) briefly flashes pink; if it reaches 100% <span class="yellow">Mercy</span> from this use of Flirt, the water(?) remains pink.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+	<p>Unchanged from the <a href="{{ '/encounters/watercooler#saction' | relative_url }}">Watercooler's version of this ACT</a>.</p>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie face-crushes a cup!!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie puts cups on Ralsei!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie puts cups on Kris's eyes!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The Moonwarmer gains 6% <span class="yellow">Mercy</span> if either Kris or Ralsei is up, and 10% <span class="yellow">Mercy</span> if both Kris and Ralsei are downed.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+	<p>Unchanged from the <a href="{{ '/encounters/watercooler#raction' | relative_url }}">Watercooler's version of this ACT</a>.</p>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei absorbs trace calcium!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei cleans Susie's spill!!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei labels everyone's cups!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The Moonwarmer gains 6% <span class="yellow">Mercy</span> if either Kris or Susie is up, and 10% <span class="yellow">Mercy</span> if both Kris and Susie are downed.</p>
+</section>
