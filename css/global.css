@@ -80,6 +80,8 @@
 	--friend-pink: #ffaec9;
 	--friend-yellow: #fff200;
 	--tenna: #da1f52;
+	--lanino: #fcce6c;
+	--elnina: #9bc3fe;
 	--eram: #f26522;
 	--gerson: #65aa26;
 
@@ -114,6 +116,8 @@ body.dim {
 	--berdly: #558ed5; /* from Light World sprite */
 	--toriel: #5e5492;
 	--jevil: #6d6dc0;
+	--lanino: #b89d64; /* CUSTOM-PICKED, NOT FROM SPRITE */
+	--elnina: #7497ca; /* CUSTOM-PICKED, NOT FROM SPRITE */
 }
 /* #region Color-specific classes */
 .cR, .red { color: var(--red) }
@@ -230,6 +234,8 @@ d-box[theme=battlemenu],
 }
 /* Chapter 3 */
 .tenna { color: var(--tenna) }
+.lanino { color: var(--lanino) }
+.elnina { color: var(--elnina) }
 .eram { color: var(--eram) }
 /* Chapter 4 */
 .gerson { color: var(--gerson) }
@@ -805,6 +811,13 @@ d-box, d-choices {
 				--friend-pink: #a24b68; /* darkened for readability from #ffaec9 */
 				--friend-yellow: #9f9600; /* darkened for readability from #fff200 */
 				--gerson: #3d7a06; /* darkened for readability from #65aa26 */
+				--lanino: #b45c1c; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readability from #fcce6c */
+				--elnina: #2f66b7; /* darkened for readability from #9bc3fe */
+
+				body.dim & {
+					--lanino: #7b3502; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readbility from above*/
+					--elnina: #174891; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readbility from above*/
+				}
 			}
 		}
 		&[theme=battletalk] {

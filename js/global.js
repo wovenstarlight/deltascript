@@ -71,6 +71,8 @@ class DialogueSpeaker extends HTMLElement {
 				case "Queen":
 				case "Spamton":
 				case "Tenna":
+				case "Lanino":
+				case "Elnina":
 				// eram's down below cuz we're not sure eram's Da Actual Name
 				case "Gerson":
 					this.classList.add(this.innerText.toLowerCase());
