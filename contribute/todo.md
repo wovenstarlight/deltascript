@@ -168,7 +168,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* `/chapter6`
 	* `/chapter7`
 * `/encounters` - Check descriptions, ACT descriptions, etc. This is probably gonna have a ton of subpages, I'd guess one for every potential enemy. At the very least, the big story-critical encounters (e.g. all boss fights) would need their own subpages which the `/chapters` pages could then link to.
-	* OK SO. The rule I've settled on is that if dialogue has the fancy silver border then it doesn't count as part of the encounter, it's instead a pre-/post-fight cutscene which will get its own page under `/chapters`. So only include the dialouge that's actually using the encounter UI on these pages.
+	* OK SO. The rule I've settled on is that if dialogue has the fancy silver border then it doesn't count as part of the encounter, it's instead a pre-/post-fight cutscene which will get its own page under `/chapters`. So only include the dialogue that's actually using the encounter UI on these pages.
 		* Some of the chapter 1 pages don't follow this rule yet but that's going to be fixed don't worry
 	* Include disambiguation pages for the following. Maybe we give them more descriptive names...? Double-check the URLs before creating the disambigs
 		* `/tenna`: doom board and final showdown
@@ -183,7 +183,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* Chapter 3
 		* gml_Object_obj_shutta_enemy_Step_0 `/shuttah`
 		* gml_Object_obj_tenna_board4_enemy_Step_0 `/tenna1` or `/tennadoom` (doom board)
-		* gml_Object_obj_rouxls_ch3_enemy_Step_0 `/rouxls2` or `/rouxlsch3` (contracts)
+		* gml_Object_obj_rouxls_ch3_enemy_Step_0 `/rouxlsch3` (contracts)
 		* gml_Object_obj_tenna_enemy_Step_0 `/tenna2` or `/tennafinal`
 	* Party dojo
 		* gml_Object_obj_dojograzeenemy_Step_0 `/jigsawrydojo` or `/dojograze` (dojo's graze challenge, ch2)
