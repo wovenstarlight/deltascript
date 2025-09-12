@@ -1,0 +1,698 @@
+---
+title: '"Mike" encounter'
+
+description: >
+  <p>Flavor text and dialogue for the battle against Small Mike, Cowboy Hat Mike, and Cat Mike.</p>
+
+# k so in the files they're just called mike_small / mike_big / mike_medium but that's dumb as hell so we're not doing that
+# small mike / cat mike / cowboy mike is my personal preference but fsr wiki went with Cowboy Hat Mike so uh. sure ig
+
+sources:
+  -
+    name: gml_Object_obj_mike_attack_controller_Create_0
+    chapters: [4]
+    note: flavor text
+  -
+    name: gml_Object_obj_mike_attack_controller_Step_0
+    chapters: [4]
+    note: dialogue
+  -
+    name: gml_Object_obj_mike_attack_controller_Alarm_5
+    chapters: [4]
+    note: pet heal amounts
+  -
+    name: gml_Object_obj_mike_hand_Draw_0
+    chapters: [4]
+    note: Kris's fruits
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-neutral
+        name: Neutral
+        subheadings:
+          -
+            id: ft-neutral-smallmike
+            name: Against Small Mike
+          -
+            id: ft-neutral-catmike
+            name: Against Cat Mike
+          -
+            id: ft-neutral-cowboyhatmike
+            name: Against Cowboy Hat Mike
+          -
+            id: ft-neutral-all
+            name: Against all Mikes
+      -
+        id: ft-final
+        name: Immediately before the final attack
+  -
+    id: dialogue
+    name: Dialogue
+  -
+    name: Using the Maus
+    subheadings:
+      -
+        id: petkris
+        name: Petting Kris
+      -
+        id: petsusie
+        name: Petting Susie
+      -
+        id: petralsei
+        name: Petting Ralsei
+      -
+        id: petmike
+        name: Petting Mike
+---
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It's Mike!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<h4 id="ft-neutral-smallmike">Against Small Mike</h4>
+	<p>During turns 2–3.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mike keeps talking loudly, as he always does.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mike combs his head back.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mike is definitely a microphone!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like dried gel pen.</d-text>
+	</d-box>
+
+	<h4 id="ft-neutral-catmike">Against Cat Mike</h4>
+	<p>During turns 4–6.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mike dances silently, as he always does.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mike seems to be a little too into the jazz music.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mike is definitely a cat!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like dried gel pen.</d-text>
+	</d-box>
+
+	<h4 id="ft-neutral-cowboyhatmike">Against Cowboy Hat Mike</h4>
+	<p>During turns 7–9.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mike is definitely a cowboy!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mike seems slightly uncomfortable in their jacket.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mike considers manipulating the volume.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like dried gel pen.</d-text>
+	</d-box>
+
+	<h4 id="ft-neutral-all">Against all Mikes</h4>
+	<p>During turns 10–11.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mike is definitely...!?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sounds like feedback.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Which one's the real Mike!?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like dried gel pen.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-final">Immediately before the final attack</h3>
+	<p>During turn 12.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mike(s) are getting ready to turn it up!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+	<p>Dialogue for this battle is entirely scripted.</p>
+
+	<p>Small Mike speaks notably faster than Cat Mike and Cowboy Mike, signalled by his speech bubbles being printed at a higher rate.</p> <!-- text_speed = 2 VS text_speed = 0.1 for the other two -->
+
+	<h3 id="dialogue-turn1">Turn 1</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Hey, nice to<span class="break"></span> meetcha!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>It's me, Motormouth Mike!<span class="break"></span> The Micro Phone who<span class="break"></span> croons and groans!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Nice of you to drop by...<span class="break"></span> NOT! NOT AT ALL,<span class="break"></span> NO no no!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Look with your private<span class="break"></span> eyes! This is a private<span class="break"></span> room, a private room,<span class="break"></span> see!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>We are live, we are on<span class="break"></span> air, we are recording,<span class="break"></span> YOU are background<span class="break"></span> noise! Get out!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>... Or these 48 volts<span class="break"></span> ain't gonna be just<span class="break"></span> for show!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn2">Turn 2</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>That's right!<span class="break"></span> That's right!<span class="break"></span> It's me, Mike!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Always has been,<span class="break"></span> always will be!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>They call me<span class="break"></span> motormouth because<span class="break"></span> I NEVER stop talking!<span class="break"></span> EVER! Hahaha!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>I'm sure you heard me.<span class="break"></span> You did, didncha!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>You can't tune me<span class="break"></span> out, nosiree,<span class="break"></span> yessiree!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>I'm always on the air,<span class="break"></span> in the air, all around<span class="break"></span> you, even within you!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>NOW GET OUT!!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn3">Turn 3</h3>
+	<h4>Before attacking</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Mike all day,<span class="break"></span> Mike all night!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>I'm the best and most<span class="break"></span> beloved, Tenna's<span class="break"></span> favorite! Hahaha!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Always there for him!</d-text>
+		<d-text>Never not there!</d-text>
+		<d-text>I'm always there!</d-text>
+		<d-text>Never not!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>I do his therapy,<span class="break"></span> his psychology,<span class="break"></span> his analogies,<span class="break"></span> his first aid,<span class="break"></span> his last aid,</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>His lemonade,<span class="break"></span> his grenades,<span class="break"></span> his eyedrops,<span class="break"></span> his nose drops,<span class="break"></span> His cough drops!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>I tuck him in at<span class="break"></span> night, I play<span class="break"></span> his bedtime<span class="break"></span> programs, I sing<span class="break"></span> his theme song,</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>And most of all,<span class="break"></span> I record everything<span class="break"></span> he ever says,</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>And even some<span class="break"></span> things he never says!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Now GET OUT!!!</d-text>
+	</d-box>
+
+	<h4>After attacking</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Huff... puff...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>I think Mike...</d-text>
+		<d-text>Needs a little break...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>I'll be back...</d-text>
+		<d-text>In a sec...</d-text>
+	</d-box>
+	<p class="note">Small Mike leaves the encounter to the right. After a moment, Cat Mike enters the encounter from the right.</p>
+
+	<hr>
+
+	<h3 id="dialogue-turn4">Turn 4</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Cat Mike</d-speaker>
+		<d-text>. . .</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn5">Turn 5</h3>
+	<p class="note">Small Mike's dialogue appears over Cat Mike's head, with the speech bubble's tail pointing offscreen.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Hey, don't look shocked!</d-text>
+		<d-text>It's me, Mike!</d-text>
+		<d-text>Mike, who famously<span class="break"></span> loves to talk!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>I'm going to talk<span class="break"></span> right now! Listen!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cat Mike</d-speaker>
+		<d-text>. . .</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Did you hear?<span class="break"></span> That was great,<span class="break"></span> right!? Real<span class="break"></span> verbose!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn6">Turn 6</h3>
+	<p class="note">Small Mike's dialogue appears over Cat Mike's head, with the speech bubble's tail pointing offscreen.</p>
+	<h4>Before attacking</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>So I look a little<span class="break"></span> different.</d-text>
+		<d-text>Well what's the big<span class="break"></span> deal!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>I just changed my<span class="break"></span> outfit! That little<span class="break"></span> costume was so<span class="break"></span> cramped!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>That's what was<span class="break"></span> tiring me out!<span class="break"></span> I still feel<span class="break"></span> miserable!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cat Mike</d-speaker>
+		<d-text>. . .</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Miserable, I said.<span class="break"></span> MISERABLE.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cat Mike</d-speaker>
+		<d-text>:-(</d-text>
+	</d-box>
+	<p class="note">Cat Mike frowns sadly.</p>
+
+	<h4>After attacking</h4>
+	<p class="note">When Cat Mike reappears, he's smiling again.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>All right, that's<span class="break"></span> enough already.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>I'm not feeling<span class="break"></span> quite myself!!!</d-text>
+		<d-text>I think I really<span class="break"></span> need to take a break.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cat Mike</d-speaker>
+		<d-text>. . .</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>I said, I think<span class="break"></span> MIKE really needs<span class="break"></span> to TAKE A BREAK!!!</d-text>
+	</d-box>
+	<p class="note">Cat Mike leaves the encounter to the right. After a moment, Cowboy Hat Mike enters the encounter from the right.</p>
+
+	<hr>
+
+	<h3 id="dialogue-turn7">Turn 7</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>Nice to meet ya.</d-text>
+		<d-text>It's me.</d-text>
+		<d-text>Big mouth Mike.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>Dey calls me dat,<span class="break"></span> 'cause I don'ts<span class="break"></span> shaddup, see?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>Dis is a private room.<span class="break"></span> We got private…<span class="break"></span> uh, eyes. We been...<span class="break"></span> investigatin' you.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>we, uh...</d-text>
+		<d-text>We like what we see.<span class="break"></span> Keep it up.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn8">Turn 8</h3>
+	<p class="note">Small Mike's dialogue appears over Cat Mike's head, with the speech bubble's tail pointing offscreen.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>Uhh...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>Nice to meet ya.<span class="break"></span> Some more.</d-text>
+		<d-text>I'm still Mike.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>Big Mouth Mike.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Sorry, I mean<span class="break"></span> motormouth Mike!!<span class="break"></span> My name's<span class="break"></span> motormouth Mike!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>Yea. Modern mouth<span class="break"></span> Mike. You know.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn9">Turn 9</h3>
+	<h4>Before attacking</h4>
+	<p class="note">Small Mike's dialogue appears over Cat Mike's head, with the speech bubble's tail pointing offscreen.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>Nice to meet you.<span class="break"></span> Some more again.<span class="break"></span> It's me.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>Modern Mike. And I,<span class="break"></span> my mouth is big.<span class="break"></span> Because I talk a lot.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Motormouth!!!<span class="break"></span> Motormouth Mike!!!<span class="break"></span> My name is motormouth!!<span class="break"></span> Mike!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>Yeah. What he's said.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>I'm motor Mike.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>MOTORMOUTH!!!!!!</d-text>
+	</d-box>
+
+	<h4>After attacking</h4>
+	<p class="note">Small Mike's dialogue initially appears over Cat Mike's head, with the speech bubble's tail pointing offscreen.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>What does Mike say<span class="break"></span> next.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Don't ask that, idiot!!<span class="break"></span> YOU'RE mike!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>Oh yeahs.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>So whys can't I say<span class="break"></span> whatever's I want?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>All right, that's it!!</d-text>
+	</d-box>
+	<p class="note">Cowboy Hat Mike leaves the encounter to the right. After a moment, all three Mikes enter the encounter from the right — Cat Mike at the top, Small Mike in the center, and Cowboy Hat Mike at the bottom.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Look, I admit it!<span class="break"></span> There's more than<span class="break"></span> one Mike!!! More<span class="break"></span> than one!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>And now that you know,<span class="break"></span> there's no way we can<span class="break"></span> let you out of here<span class="break"></span> alive!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn10">Turn 10</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Usually, we split<span class="break"></span> this all up!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>One Mike does all<span class="break"></span> the talking...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>One Mike is the<span class="break"></span> muscles...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cat Mike</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>And one Mike, uh,<span class="break"></span> listens!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>You gotta have<span class="break"></span> a Mike that listens.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn11">Turn 11</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Everyone thinks<span class="break"></span> there's only one Mike.<span class="break"></span> One!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>But there ain't.<span class="break"></span> There's, uh...<span class="break"></span> Two.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Three!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>Sorry. I forget him<span class="break"></span> cause he doesn't talk.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn12">Turn 12</h3>
+	<h4>Before attacking</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>But we can't let this<span class="break"></span> get out! No...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>If people knew there<span class="break"></span> was more than one<span class="break"></span> Mike...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Everybody would want<span class="break"></span> to be Mike!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Well, we're not letting<span class="break"></span> that happen!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Boys... It's time for<span class="break"></span> our ultimate attack!!</d-text>
+	</d-box>
+
+	<h4>After attacking</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>That ain't worked<span class="break"></span> so good.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>Boss, can we just<span class="break"></span> use our normal<span class="break"></span> attacks?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>What? No, no way!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>I mean, wait.</d-text>
+		<d-text>These ARE<span class="break"></span> our normal attacks!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Cowboy Hat Mike</d-speaker>
+		<d-text>All right, take out<span class="break"></span> your gun, buddy!!!</d-text>
+	</d-box>
+	<p class="note">Small Mike jumps in surprise, frowning and turning around to face the other two as they're consumed in white dust clouds as a goofy scrambling SFX plays. After a few moments, the clouds fade to reveal Cat Mike and Cowboy Hat Mike as Shadowguy and Zapper, the former waving his gun in the air.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Small Mike</d-speaker>
+		<d-text>Wait, timeout, timeout!!!</d-text>
+	</d-box>
+	<p class="note"><a href="{{ '/chapters/chapter4/mike#postfight' | relative_url }}">The encounter ends.</a></p>
+</section>
+
+<section class="d-section" id="petkris">
+	<h2>Petting Kris</h2>
+
+	<h3 id="petkris-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The Maus offered you a Fruit Bonus!</d-text>
+	</d-box>
+	<p class="note">The Maus squeezes into a fist, then opens up to reveal...</p>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<p class="note">...an apple. Kris is healed for 120 HP.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It was effective!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Second time</h4>
+	<p class="note">...a banana. Kris is healed for 80 HP.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It was sort of effective!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<p class="note">...a small spaceship. Kris is healed for 40 HP.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It was crunchy, and not very fruit like!</d-text>
+	</d-box>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="petsusie">
+	<h2>Petting Susie</h2>
+
+	<h3 id="petsusie-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The Maus was bitten!</d-text>
+	</d-box>
+	<p class="note">Susie looks aggressive and the Maus briefly cowers, looking pained.</p>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Touch me and you'll lose a finger, dumb ass!</d-text>
+	</d-box>
+	<p class="note">Susie is healed for 120 HP.</p>
+	<hr class="hr3">
+	<h4>Second time</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Lay off, idiot!</d-text>
+	</d-box>
+	<p class="note">Susie is healed for 80 HP.</p>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<p class="note">Susie is healed for 40 HP.</p>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="petralsei">
+	<h2>Petting Ralsei</h2>
+
+	<h3 id="petralsei-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei got pet!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<p class="note">Ralsei looks startled.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>Ahahah! That tickles!</d-text>
+	</d-box>
+	<p class="note">Ralsei is healed for 120 HP.</p>
+	<hr class="hr3">
+	<h4>Second time</h4>
+	<p class="note">Ralsei looks startled.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>Haha, i-is it okay to receive this much attention!?</d-text>
+	</d-box>
+	<p class="note">Ralsei is healed for 80 HP.</p>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<p class="note">Ralsei lies facedown on the ground as a splat SFX plays.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... petting overdose!</d-text>
+	</d-box>
+	<p class="note">Ralsei is healed for 40 HP.</p>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="petmike">
+	<h2>Petting Mike</h2>
+
+	<h3 id="petmike-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Mike got pet!</d-text>
+	</d-box>
+	<p class="note">Mike blushes.</p>
+</section>

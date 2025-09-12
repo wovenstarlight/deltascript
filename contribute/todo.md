@@ -161,6 +161,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/finalconfrontation` - from confronting the knight to after defeating the titan
 			* `#posttitan` - after titan fight
 		* `/return` - back to the church
+		* `/mike` - Getting into Mike's room in TV Studio
+			* `#postfight`
 	* `/chapter5`
 	* `/chapter6`
 	* `/chapter7`
@@ -183,8 +185,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* gml_Object_obj_tenna_board4_enemy_Step_0 `/tenna1` or `/tennadoom` (doom board)
 		* gml_Object_obj_rouxls_ch3_enemy_Step_0 `/rouxls2` or `/rouxlsch3` (contracts)
 		* gml_Object_obj_tenna_enemy_Step_0 `/tenna2` or `/tennafinal`
-	* Chapter 4
-		* gml_Object_obj_mike_attack_controller_Step_0 `/mike`
 	* Party dojo
 		* gml_Object_obj_dojograzeenemy_Step_0 `/jigsawrydojo` or `/dojograze` (dojo's graze challenge, ch2)
 		* gml_Object_obj_dojo_spareenemy_Step_0 `/jigsawjoe` or `/dojospare` (dojo's spare challenge, ch2)
