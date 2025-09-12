@@ -77,6 +77,9 @@
 	--rouxls: #637de3; /* CUSTOM-PICKED, NOT FROM SPRITE; lightened for readability from #0f0062 */
 	--jevil: #8a95c8; /* mixed for readability from #6d6dc0 and #a6bdd0 */
 	--queen: #00a2e8;
+	--sweet: #e9c040;
+	--capn: #4092cc;
+	--kk: #5bc762;
 	--friend-pink: #ffaec9;
 	--friend-yellow: #fff200;
 	--tenna: #da1f52;
@@ -116,6 +119,7 @@ body.dim {
 	--berdly: #558ed5; /* from Light World sprite */
 	--toriel: #5e5492;
 	--jevil: #6d6dc0;
+	--sweet: #bb941a; /* CUSTOM-PICKED, NOT FROM SPRITE */
 	--lanino: #b89d64; /* CUSTOM-PICKED, NOT FROM SPRITE */
 	--elnina: #7497ca; /* CUSTOM-PICKED, NOT FROM SPRITE */
 }
@@ -227,6 +231,9 @@ d-box[theme=battlemenu],
 .jevil { color: var(--jevil) }
 /* Chapter 2 */
 .queen { color: var(--queen) }
+.sweet { color: var(--sweet) }
+.capn { color: var(--capn) } 
+.kk { color: var(--kk) }
 .spamton {
 	color: transparent;
 	background-image: linear-gradient(to right, var(--friend-pink), var(--friend-yellow));
@@ -810,13 +817,19 @@ d-box, d-choices {
 				--queen: #1263bc;
 				--rouxls: #3620b0; /* CUSTOM-PICKED, NOT FROM SPRITE; lightened for readability from #0f0062 */
 				--jevil: #3c3c97; /* darkened for readbility from #6d6dc0 */
+				--sweet: #b69325; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readability from #e9c040 */
+				--capn: #615eb9; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readability from #6c6ab3 */
+				--kk: #3e7d4a;
 				--friend-pink: #a24b68; /* darkened for readability from #ffaec9 */
 				--friend-yellow: #9f9600; /* darkened for readability from #fff200 */
-				--gerson: #3d7a06; /* darkened for readability from #65aa26 */
 				--lanino: #b45c1c; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readability from #fcce6c */
 				--elnina: #2f66b7; /* darkened for readability from #9bc3fe */
+				--gerson: #3d7a06; /* darkened for readability from #65aa26 */
 
 				body.dim & {
+					--sweet: #604800; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readability from #e9c040 */
+					--capn: #154e75; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readability from #6c6ab3 */
+					--kk: #1b551f;
 					--lanino: #7b3502; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readbility from above*/
 					--elnina: #174891; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readbility from above*/
 				}
