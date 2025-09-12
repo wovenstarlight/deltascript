@@ -297,7 +297,9 @@ a { /* Global links */
 	text-decoration: 0.1em solid underline;
 
 	/* Yellow on hover */
-	&:hover, &:focus-within { color: var(--lightyellow); }
+	&:hover, &:focus-within { color: var(--lightyellow) }
+	/* …unless it's already yellow, in which case - Orange on hover */
+	&:is(.lightyellow, .noelle.act):is(:hover, :focus-within) { color: var(--orange) }
 }
 hr {
 	max-width: 100%;
@@ -770,7 +772,7 @@ d-box, d-choices {
 		&[theme=powertitle] { width: calc(var(--basewidth) - 11.4em) }
 
 		&[theme=battlemenu] > d-text { max-width: calc(var(--basewidth) - 2.4em) }
-		&[theme=battlemenu] > d-sprite:not([speaker=Tenna]) + d-text { max-width: calc(var(--basewidth) - 6.4em - 1ch); }
+		&[theme=battlemenu] > d-sprite:not([speaker=Tenna]) + d-text { max-width: calc(var(--basewidth) - 6.4em - 1ch) }
 
 		&[theme=battledesc] {
 			width: calc(var(--basewidth) - 16.5em);
