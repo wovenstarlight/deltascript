@@ -1,0 +1,598 @@
+---
+title: Party Dojo - Lanino and Elnina encounter
+
+description: >
+  <p>Flavor text and dialogue for Lanino and Elnina's challenge at the Party Dojo.</p>
+
+sources:
+  -
+    name: gml_Object_obj_fusionmenu_Step_0
+    chapters: [4]
+    note: challenge info
+  -
+    name: gml_Object_obj_lanino_rematch_enemy_Step_0
+    chapters: [4]
+    note: Lanino-specific ACT flavor text
+  -
+    name: gml_Object_obj_elnina_rematch_enemy_Step_0
+    chapters: [4]
+    note: Elnina-specific ACT flavor text
+  -
+    name: gml_Object_obj_elnina_lanino_rematch_controller_Step_0
+    chapters: [4]
+    note: general flavor text and dialogue
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [4]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [4]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_npc_dojo_Step_0
+    chapters: [4]
+    note: post-fight dialogue
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/weather
+    name: Original Lanino and Elnina encounter
+
+toc:
+  -
+    id: challengeinfo
+    name: Challenge info
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-neutral
+        name: Neutral
+      -
+        id: ft-mercyup
+        name: At 90% Mercy or higher
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-neutral
+        name: Neutral
+      -
+        id: dialogue-mercyup90
+        name: At 90% Mercy
+      -
+        id: dialogue-mercyup95
+        name: At 95% Mercy
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: telescope
+        name: Telescope
+      -
+        id: sunglasses
+        name: Sunglasses
+      -
+        id: umbrella
+        name: Umbrella
+      -
+        id: warmhat
+        name: WarmHat
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+  -
+    id: end
+    name: End of fight
+  -
+    id: postfight
+    name: After the challenge ends
+---
+{% comment %} encounterno = 178 {% endcomment %}
+
+<section class="d-section" id="challengeinfo">
+	<h2>Challenge info</h2>
+
+	<p>Listed as "Lanino&Elnina", with the reward being an <a href="{{ '/misc/darkitems#execbuffet' | relative_url }}">Exec Buffet</a>.</p>
+
+	<d-box theme="objmenu">
+		<d-text>The weather always sticks together!</d-text>
+		<d-text>Predict the forecast and win!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>This time, the weather sticks together!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<h4>Forecast is rainy</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The forecast whispers nothings like sweet droplets.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>Forecast is snowy</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The forecast sparkles with cold beauty.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>Forecast is sunny</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The forecast burns with hot passion.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>Forecast is moons</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The forecast shines with a soft romantic glow.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-mercyup">At 90% <span class="yellow">Mercy</span> or higher</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Lanino and Elnina are hyping each other up! Just survive!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-neutral">Neutral</h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Tonight's weather<span class="break"></span> is...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>Tonight's weather<span class="break"></span> is...</d-text>
+		</d-box>
+	</div>
+	<hr class="hr2">
+	<h4>Forecast is rainy</h4>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Drop.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>Moisturous drop.</d-text>
+		</d-box>
+	</div>
+	<hr class="hr3">
+	<h4>Forecast is snowy</h4>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Crystal.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>Shinerous crystal.</d-text>
+		</d-box>
+	</div>
+	<hr class="hr3">
+	<h4>Forecast is sunny</h4>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Sun.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>Brilliant sun.</d-text>
+		</d-box>
+	</div>
+	<hr class="hr3">
+	<h4>Forecast is moons</h4>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Moon.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>Glorious moon.</d-text>
+		</d-box>
+	</div>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="dialogue-mercyup90">At 90% <span class="yellow">Mercy</span></h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>So you've caught on<span class="break"></span> to our forecasts!<span class="break"></span> Nice work, you<span class="break"></span> little sunshines!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>But, winning us over<span class="break"></span> won't be that easy!<span class="break"></span> Here comes the rain...!</d-text>
+		</d-box>
+	</div>
+	<p class="note">Surviving this turn results in Lanino and Elnina each gaining 5% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3 id="dialogue-mercyup95">At 95% <span class="yellow">Mercy</span></h3>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Haha, nice try,<span class="break"></span> but the weather's <span class="break"></span> only warming up!<span class="break"></span> Elnina, tell them <span class="break"></span> what's next!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>Wait. Can I just<span class="break"></span> say... that we are<span class="break"></span> doing so amazing<span class="break"></span> right now?</d-text>
+		</d-box>
+	</div>
+	<p class="note">Lanino and Elnina both blush, smiling.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Oh, Elnina...<span class="break"></span> You're amazing.<span class="break"></span> Amazingly cool,<span class="break"></span> that is.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>And I love the<span class="break"></span> romantic music<span class="break"></span> they have<span class="break"></span> in this Dojo.</d-text>
+		</d-box>
+	</div>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Oh, Elnina,<span class="break"></span> me too! Me too!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>Anyway, here's<span class="break"></span> our last attack!</d-text>
+		</d-box>
+	</div>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>The Two Celestial<span class="break"></span> Bodies, The<span class="break"></span> Perfect Forever<span class="break"></span> Couple!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>The Two Celestial<span class="break"></span> Bodies, The<span class="break"></span> Perfect Forever<span class="break"></span> Couple!</d-text>
+		</d-box>
+	</div>
+	<p class="note">Surviving this turn results in Lanino and Elnina each gaining 5% <span class="yellow">Mercy</span>, taking them to 100% <span class="yellow">Mercy</span> and <a href="#end">ending the encounter</a>.</p>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<h4>Lanino</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Lanino - The sight of Elnina makes him want to be singin' in the rain.</d-text>
+	</d-box>
+
+	<h4>Elnina</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>ELNINA - She's just over the moon for Lanino.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="telescope">
+	<h2>Telescope</h2>
+	<p>Available for Lanino.</p>
+
+	<h3 id="telescope-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Blocks bullets</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="telescope-ft">Flavor text</h3>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You looked at the sky and took...</d-text>
+		<d-text asterisk>A telescope!</d-text>
+	</d-box>
+	<p class="note">Lanino and Elnina each gain 8% <span class="yellow">Mercy</span>. During the following attack phase, the SOUL has a small telescope above it; if bullets collide with this, Lanino and Elnina gain additional <span class="yellow">Mercy</span>, the rate of which is higher if the forecasted attack for this turn was moons. (Any additionally gained <span class="yellow">Mercy</span> will be reset if the SOUL is hit by a red flame.)</p>
+	<p class="note">The <span class="mercy">Mercy</span> gained from this ACT can result in a total of at most 90% <span class="yellow">Mercy</span> for each partner.</p>
+
+	<h5>Unused followup</h5>
+	<p>Would have played after the above flavor text.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Blocking moons shows your care for the weather report!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Took a telescope to block moons!</d-text>
+	</d-box>
+	<p class="note">As before, Lanino and Elnina gain 8% <span class="yellow">Mercy</span> or more, up to a maximum <span class="yellow">Mercy</span> value of 90%.</p>
+</section>
+
+<section class="d-section" id="sunglasses">
+	<h2>Sunglasses</h2>
+	<p>Available for Lanino.</p>
+
+	<h3 id="sunglasses-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Blocks bullets</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sunglasses-ft">Flavor text</h3>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You looked at the sky and took...</d-text>
+		<d-text asterisk>Sunglasses!</d-text>
+	</d-box>
+	<p class="note">Lanino and Elnina each gain 8% <span class="yellow">Mercy</span>. During the following attack phase, the SOUL has a small pair of sunglasses above it; if bullets collide with this, Lanino and Elnina gain additional <span class="yellow">Mercy</span>, the rate of which is higher if the forecasted attack for this turn was suns. (Any additionally gained <span class="yellow">Mercy</span> will be reset if the SOUL is hit by a red flame.)</p>
+	<p class="note">The <span class="mercy">Mercy</span> gained from this ACT can result in a total of at most 90% <span class="yellow">Mercy</span> for each partner.</p>
+
+	<h5>Unused followup</h5>
+	<p>Would have played after the above flavor text.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Blocking suns shows your care for the weather report!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Took sunglasses to block suns!</d-text>
+	</d-box>
+	<p class="note">As before, Lanino and Elnina gain 8% <span class="yellow">Mercy</span> or more, up to a maximum <span class="yellow">Mercy</span> value of 90%.</p>
+</section>
+
+<section class="d-section" id="umbrella">
+	<h2>Umbrella</h2>
+	<p>Available for Elnina.</p>
+
+	<h3 id="umbrella-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Blocks bullets</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="umbrella-ft">Flavor text</h3>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You looked at the sky and took...</d-text>
+		<d-text asterisk>An umbrella!</d-text>
+	</d-box>
+	<p class="note">Lanino and Elnina each gain 8% <span class="yellow">Mercy</span>. During the following attack phase, the SOUL has a small umbrella above it; if bullets collide with this, Lanino and Elnina gain additional <span class="yellow">Mercy</span>, the rate of which is higher if the forecasted attack for this turn was drops. (Any additionally gained <span class="yellow">Mercy</span> will be reset if the SOUL is hit by a red flame.)</p>
+	<p class="note">The <span class="mercy">Mercy</span> gained from this ACT can result in a total of at most 90% <span class="yellow">Mercy</span> for each partner.</p>
+
+	<h5>Unused followup</h5>
+	<p>Would have played after the above flavor text.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Blocking rain shows your care for the weather report!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Took an umbrella to block rain!</d-text>
+	</d-box>
+	<p class="note">As before, Lanino and Elnina gain 8% <span class="yellow">Mercy</span> or more, up to a maximum <span class="yellow">Mercy</span> value of 90%.</p>
+</section>
+
+<section class="d-section" id="warmhat">
+	<h2>WarmHat</h2>
+	<p>Available for Elnina.</p>
+
+	<h3 id="warmhat-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Blocks bullets</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="warmhat-ft">Flavor text</h3>
+	<h4>First time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You looked at the sky and took...</d-text>
+		<d-text asterisk>A warm hat!</d-text>
+	</d-box>
+	<p class="note">Lanino and Elnina each gain 8% <span class="yellow">Mercy</span>. During the following attack phase, the SOUL has a small hat above it; if bullets collide with this, Lanino and Elnina gain additional <span class="yellow">Mercy</span>, the rate of which is higher if the forecasted attack for this turn was crystals. (Any additionally gained <span class="yellow">Mercy</span> will be reset if the SOUL is hit by a red flame.)</p>
+	<p class="note">The <span class="mercy">Mercy</span> gained from this ACT can result in a total of at most 90% <span class="yellow">Mercy</span> for each partner.</p>
+
+	<h5>Unused followup</h5>
+	<p>Would have played after the above flavor text.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Blocking snow shows your care for the weather report!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Took a warm hat to block snow!</d-text>
+	</d-box>
+	<p class="note">As before, Lanino and Elnina gain 8% <span class="yellow">Mercy</span> or more, up to a maximum <span class="yellow">Mercy</span> value of 90%.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie dreamed of sunny days!</d-text>
+	</d-box>
+	<p class="note">Lanino and Elnina each gain 8% <span class="yellow">Mercy</span>, up to a maximum <span class="yellow">Mercy</span> value of 90%.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei hoped for starry nights!</d-text>
+	</d-box>
+	<p class="note">Lanino and Elnina each gain 8% <span class="yellow">Mercy</span>, up to a maximum <span class="yellow">Mercy</span> value of 90%.</p>
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of fight</h2>
+	<p>Triggers immediately upon reaching 100% <span class="yellow">Mercy</span>.</p>
+
+	<p class="note">Lanino looks ecstatic, while Elnina is wide-eyed.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Wow. Again, perfect<span class="break"></span> chemistry with<span class="break"></span> that attack.<span class="break"></span> Just perfect.</d-text>
+	</d-box>
+	<p class="note">Elnina looks ecstatic as well.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Oh, I felt it!<span class="break"></span> I felt sparks<span class="break"></span> flying!</d-text>
+	</d-box>
+	<p class="note">Elnina smiles more calmly, while Lanino blushes.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Me too, haha.</d-text>
+	</d-box>
+	<p class="note">The battle music begins fading out as Elnina looks spooked.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+	<p class="note">Lanino looks similarly spooked.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Except for.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Except for<span class="break"></span> that lamp...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Yes, that was<span class="break"></span> really weird...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Yeah, I didn't<span class="break"></span> like that...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>It did make the<span class="break"></span> attack stronger.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>It did.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>But it was weird.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>We didn't like it.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>I think.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>What?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>It was bad.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Yeah.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>... probably.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>What?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Battle's over!</d-text>
+	</d-box>
+	<p class="note">The encounter ends.</p>
+</section>
+
+<section class="d-section" id="postfight">
+	<h2>After the challenge ends</h2>
+
+	<h3>If you won</h3>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>An amazing battle!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>As promised, here is your reward!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If the inventory is not full</h5>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>(You received ExecBuffet!)</d-text>
+	</d-box>
+	<p class="note">The <a href="{{ '/misc/darkitems#execbuffet' | relative_url }}">Exec Buffet</a> is added to your total money.</p>
+	<hr class="hr3">
+	<h5>If the inventory is full</h5>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>Boss! Your inventory is full!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>You'll just have to try again, boss!</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>An amazing battle!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>But you already won that prize, so we don't have another!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>If you lost</h3>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>You beefed it! Better luck next time, boss!</d-text>
+	</d-box>
+</section>

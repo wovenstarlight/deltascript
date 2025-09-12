@@ -1,0 +1,916 @@
+---
+title: Lanino and Elnina encounter
+
+description: >
+  <p>Flavor text and dialogue for the Legend of Tenna - Desert Board battle against Lanino and Elnina.</p>
+
+  <p id="turn3def">This fight is largely scripted. For simplicity, this page uses "Turn 3" as the beginning of the primary confrontation, but said turn actually triggers under two conditions:</p>
+  <ul>
+    <li>Turn 3 at the earliest, after I Love TV has been said at least once to either partner</li>
+    <li>Turn 7, if I Love TV has never been said to either partner</li>
+  </ul>
+  <p>Headings on this page are named assuming "Turn 3" actually occurs on the true third turn, with subsequent turns numbered accordingly.</p>
+
+sources:
+  -
+    name: gml_Object_obj_elnina_enemy_Step_0
+    chapters: [3]
+    note: Elnina Check/ILoveTV/X-Actions
+  -
+    name: gml_Object_obj_lanino_enemy_Step_0
+    chapters: [3]
+    note: Lanino Check/ILoveTV/X-Actions
+  -
+    name: gml_Object_obj_elnina_lanino_controller_Step_0
+    chapters: [3]
+    note: general flavor text, dialogue
+  -
+    name: gml_Object_obj_elnina_lanino_controller_Alarm_6
+    chapters: [3]
+    note: turn 4 flavor text
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [3]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [3]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_dbulletcontroller_Step_0
+    chapters: [3]
+    note: turn 7 mid-attack dialogue
+
+see_also:
+  -
+    url: /encounters/weatherdojo
+    name: Party Dojo - Lanino and Elnina encounter
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: prefight
+    name: Before the fight
+    subheadings:
+      -
+        id: prefight-initial
+        name: First attempt
+      -
+        id: prefight-subsequent
+        name: Subsequent attempts
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-turn
+        name: With specific turns
+  -
+    id: dialogue
+    name: General dialogue
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: ilovetv
+        name: ILoveTV
+      -
+        id: ilovetvx
+        act_icon: [Susie, Ralsei]
+        name: ILoveTVX
+      -
+        id: saction
+        class: susie act
+        name: "S-Action: IloveTV"
+      -
+        id: raction
+        class: ralsei act
+        name: "R-Action: IloveTV"
+---
+{% comment %} encounterno = 113 {% endcomment %}
+
+<section class="d-section" id="prefight">
+	<h2>Before the fight</h2>
+
+	<h3 id="prefight-initial">First attempt</h3>
+	<p class="note">The encounter begins with the party on the left and Lanino and Elnina on the right, as is typical. At the top of the screen is a counter starting at "<span class="red">00</span>", styled to resemble digital clock numbers. Tenna enters the encounter from the bottom of the screen.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>This battle has<span class="break"></span> a SPECIAL win<span class="break"></span> condition for<span class="break"></span> our contestants!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>All you have to<span class="break"></span> do is say "I love<span class="break"></span> to watch TV" 99<span class="break"></span> times and you will<span class="break"></span> win!</d-text>
+	</d-box>
+	<p class="note">As Tenna mentions the required count, Ralsei reels with shock. Tenna heads offscreen towards the bottom.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Ninety... Ni-</d-text>
+	</d-box>
+	<p class="note">The encounter begins.</p>
+
+	<hr>
+
+	<h3 id="prefight-subsequent">Subsequent attempts</h3>
+	<p>If you died to Lanino and Elnina and had to fight them again.</p>
+	<p class="note">The encounter begins with the party on the left and Lanino and Elnina on the right, as is typical. At the top of the screen is a counter starting at "<span class="red">00</span>", styled to resemble digital clock numbers. Tenna enters the encounter from the bottom of the screen.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Okay, look,<span class="break"></span> you get it.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Say I LOVE<span class="break"></span> TV 99 times<span class="break"></span> and you win.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>By the way<span class="break"></span> YOU TWO, PLEASE<span class="break"></span> try to stay<span class="break"></span> professional.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>It'd be a REAL<span class="break"></span> SHAME to see<span class="break"></span> an almost literal<span class="break"></span> word-for-word<span class="break"></span> repeat of last<span class="break"></span> time!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Let's hear it!! "I LOVE TV!!!"!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-turn">With specific turns</h3>
+	<h4>Turns 1 (looped) and 3</h4>
+	<p class="note">"<span class="white">#</span>" is replaced by the number of I Love TVs said, in the range 0–6.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Keep it up guys! That's # I love TV's! But this couple won't let you win so easily!</d-text>
+	</d-box>
+
+	<h4>Turn 2</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>These two are a professional power couple!!! Nothing can stop the weather!!</d-text>
+	</d-box>
+
+	<h4>Turn 4</h4>
+	<h5>If Elnina was favored</h5>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Did someone mess with the humidity!?</d-text>
+	</d-box>
+	<h5>If Lanino was favored</h5>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Hey, is it me or is it getting hot in here?</d-text>
+	</d-box>
+
+	<h4>Turn 5</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>It's normal for couples to fight sometimes! C'mon Kris, tell 'em!</d-text>
+	</d-box>
+
+	<h4>Turn 6</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Rouxls" emotion="0"></d-sprite>
+		<d-text asterisk>Sorrye, I just wanderedeth in here. Are those two... Single?</d-text>
+	</d-box>
+
+	<h4>Turn 7</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>One weather's better than two!! Haha!! Less confusing for the kids!!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+	<p>Dialogue for this battle is entirely scripted.</p>
+
+	<h3 id="dialogue-turn1">Turn 1</h3>
+	<p class="note">Lanino and Elnina both hold their pointers towards their left, pointing at the party with their other hands.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Tonight's weather<span class="break"></span> is...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>Tonight's weather<span class="break"></span> is...</d-text>
+		</d-box>
+	</div>
+	<p class="note">They sweep the pointers to their right, their other hands spread out as if presenting something.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>... Moon.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>... Crystals.</d-text>
+		</d-box>
+	</div>
+
+	<hr>
+
+	<h3 id="dialogue-turn2">Turn 2</h3>
+	<p class="note">Lanino and Elnina both hold their pointers towards their left, pointing at the party with their other hands.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Tonight's weather<span class="break"></span> is...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>Tonight's weather<span class="break"></span> is...</d-text>
+		</d-box>
+	</div>
+	<p class="note">They sweep the pointers to their right, their other hands spread out as if presenting something.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>... Sun.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>... Drop.</d-text>
+		</d-box>
+	</div>
+	<p class="note">If the "I Love TV" counter remains at 0, then the fight loops back to Turn 1; this looping repeats a maximum of twice for a total of 6 normal turns, before the fight forcibly progresses to Turn 3.</p>
+
+	<hr>
+
+	<h3 id="dialogue-turn3">Turn 3</h3>
+	<p><a href="#turn3def">(See the page intro above for the expanded definition of "Turn 3".)</a></p>
+
+	<h4 id="dialogue-turn3pre">Before attacking</h4>
+	<h5>If "I Love TV" has never been said, or if "I Love TV" has been said to Lanino and Elnina an equal number of times</h5>
+	<p class="note">Lanino and Elnina both hold their pointers towards their left, pointing at the party with their other hands.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Tonight's weather<span class="break"></span> is...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>Tonight's weather<span class="break"></span> is...</d-text>
+		</d-box>
+	</div>
+	<p class="note">They sweep the pointers to their right, their other hands spread out as if presenting something.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>... Moon.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>... Drop.</d-text>
+		</d-box>
+	</div>
+
+	<h5>If "I Love TV" has been said more frequently to Lanino</h5>
+	<p class="note">Elnina holds her pointer towards her left, pointing at the party with her other hand.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Tonight's weather<span class="break"></span> is...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>Tonight's weather<span class="break"></span> is...</d-text>
+		</d-box>
+	</div>
+	<p class="note">Elnina sweeps the pointer to her right, her other hand spread out as if presenting something. A pause.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>... Lanino? Your pose...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Ah, right! Just, er...</d-text>
+	</d-box>
+	<p class="note">As he speaks, Lanino takes his sunglasses off, blushing.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>They kept choosing ME for the<span class="break"></span> ACT. Any... cool reason why?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Not to rain on your parade,<span class="break"></span> amore, but it's probably just<span class="break"></span> because you're first in the<span class="break"></span> order.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>R-right! You're right as rain,<span class="break"></span> sweet cloud o' mine.</d-text>
+	</d-box>
+	<p class="note">Lanino remains blushing and sunglasses-less for the duration of the attack.</p>
+
+	<h5>If "I Love TV" has been said more frequently to Elnina</h5>
+	<p class="note">Lanino holds his pointers towards his left, pointing at the party with his other hand.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Tonight's weather<span class="break"></span> is...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>Tonight's weather<span class="break"></span> is...</d-text>
+		</d-box>
+	</div>
+	<p class="note">Lanino sweeps the pointer to his right, his other hand spread out as if presenting something. A pause.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>... Elnina? Your pose...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Oh, um...<span class="break"></span> sorry, just...</d-text>
+	</d-box>
+	<p class="note">As she speaks, Elnina takes her sunglasses off, blushing.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Couldn't help but<span class="break"></span> notice they keep<span class="break"></span> ACTing on me...<span class="break"></span> any cool reason?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Oh, dewdrop.<span class="break"></span> It's just brownian<span class="break"></span> motion. Their<span class="break"></span> choices... are<span class="break"></span> random.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>R-right! Not<span class="break"></span> enough info to<span class="break"></span> predict anything!<span class="break"></span> Haha!</d-text>
+	</d-box>
+	<p class="note">Elnina remains blushing and sunglasses-less for the duration of the attack.</p>
+
+	<h4 id="dialogue-turn3post">After attacking</h4>
+	<hr class="hr2">
+	<h5>If "I Love TV" was said more frequently to Lanino</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>So... um...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Whose attack<span class="break"></span> did you like<span class="break"></span> better just now?</d-text>
+	</d-box>
+	<p class="note">Elnina takes off her sunglasses, looking angry.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Wh... what the!<span class="break"></span> Don't ask that!</d-text>
+	</d-box>
+	<p class="note">Lanino looks alarmed.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>S-sorry!</d-text>
+	</d-box>
+	<p class="note">A pause. Elnina blushes, smiling.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>... obviously it<span class="break"></span> was mine anyway,<span class="break"></span> right?! Pick!!!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>If "I Love TV" was said more frequently to Elnina, or an equal number of times to both partners</h5>
+	<p class="note">If she hasn't already, then Elnina takes off her glasses, blushing.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>So... Um...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Whose attack<span class="break"></span> did you like<span class="break"></span> better just now?</d-text>
+	</d-box>
+	<p class="note">Lanino takes off his sunglasses, looking angry.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Wh... what the!<span class="break"></span> Don't ask that!</d-text>
+	</d-box>
+	<p class="note">Elnina looks alarmed.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>S-sorry!</d-text>
+	</d-box>
+	<p class="note">A pause. Lanino blushes, smiling.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>... obviously it<span class="break"></span> was mine anyway,<span class="break"></span> right?! Pick!!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="battlemenu">
+		<d-option index="0" text="Rain"></d-option>
+		<d-option index="1" text="Shine"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Elnina has been favored; she flashes gold briefly as a powering-up SFX plays. She looks ecstatic, while Lanino looks downcast.</p>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>... Haha, just<span class="break"></span> like I thought!<span class="break"></span> Who wants more<span class="break"></span> Sun on a desert<span class="break"></span> level!?</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Lanino has been favored; he flashes gold briefly as a powering-up SFX plays. He looks ecstatic, while Elnina looks downcast.</p>
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>... Rain, rain,<span class="break"></span> go away...<span class="break"></span> isn't that how<span class="break"></span> it goes!?</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="dialogue-turn4">Turn 4</h3>
+	<h4>If Elnina was favored</h4>
+	<p class="note">Elnina is smiling and gesturing with the pointer as before, while Lanino stands still, looking downcast.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Today's weather is,<span class="break"></span> (ugh)...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>Today's weather is,<span class="break"></span> haha...</d-text>
+		</d-box>
+	</div>
+	<p class="note">Elnina looks ecstatic while announcing the attack, which can be either of the following:</p>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>EXTRA DEXTRA Moon!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>EXTRA DEXTRA Sun!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The attack begins; Elnina's bullets are much larger and more numerous than before, unbalancing the attack. An angry Lanino pulls back, teeth clenched.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Wh-what<span class="break"></span> the!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>It's<span class="break"></span> ruining<span class="break"></span> MY attack!</d-text>
+	</d-box>
+
+	<h4>If Lanino was favored</h4>
+	<p class="note">Lanino is smiling and gesturing with the pointer as before, while Elnina stands still, looking downcast.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Today's weather is,<span class="break"></span> haha...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>Today's weather is,<span class="break"></span> (ugh)...</d-text>
+		</d-box>
+	</div>
+	<p class="note">Lanino looks ecstatic while announcing the attack, which can be either of the following:</p>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>TRUEST Drop!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>TRUEST Crystal!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The attack begins; Lanino's bullets are much larger and more numerous than before, unbalancing the attack. An angry Elnina pulls back, teeth clenched.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Wh-what<span class="break"></span> the!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>It's<span class="break"></span> ruining<span class="break"></span> MY attack!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn5">Turn 5</h3>
+	<h5>Before attacking</h5>
+	<h5>If Elnina was favored</h5>
+	<p class="note">Elnina is smiling and gesturing with the pointer as before, while Lanino stands still, looking angry.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>(Grumble)...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>Today's weather is,<span class="break"></span> ohoho...</d-text>
+		</d-box>
+	</div>
+	<p class="note">Elnina looks ecstatic while announcing the attack, which can be either of the following:</p>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>EXTRA DEXTRA Moon!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>EXTRA DEXTRA Sun!</d-text>
+	</d-box>
+
+	<h5>If Lanino was favored</h5>
+	<p class="note">Lanino is smiling and gesturing with the pointer as before, while Elnina stands still, looking angry.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Today's weather is,<span class="break"></span> ohoho...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>(Grumble)...</d-text>
+		</d-box>
+	</div>
+	<p class="note">Lanino looks ecstatic while announcing the attack, which can be either of the following:</p>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>TRUEST Drop!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>TRUEST Crystal!</d-text>
+	</d-box>
+
+	<h4>After attacking</h4>
+	<hr class="hr2">
+	<h5>If Elnina was favored</h5>
+	<p class="note">As Lanino talks, Elnina looks sad.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>You KNOW this<span class="break"></span> is extreme, right!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>They said they liked<span class="break"></span> your attack ONCE!</d-text>
+	</d-box>
+	<p class="note">Elnina cries while speaking.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Aren't we partners?<span class="break"></span> You should be happy<span class="break"></span> for me, sweetheart!</d-text>
+	</d-box>
+	<p class="note">Lanino looks sad.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>If Lanino was favored</h5>
+	<p class="note">As Elnina talks, Lanino looks sad.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>You KNOW this<span class="break"></span> is extreme, right!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>They said they liked<span class="break"></span> your attack ONCE!</d-text>
+	</d-box>
+	<p class="note">Lanino cries while speaking.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Aren't we partners?<span class="break"></span> You should be happy<span class="break"></span> for me, sweetheart!</d-text>
+	</d-box>
+	<p class="note">Elnina looks sad.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Tenna enters the encounter from the bottom of the screen.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Listen you two!!!<span class="break"></span> The weather,<span class="break"></span> always sticks together!!!</d-text>
+	</d-box>
+	<p class="note">Lanino and Elnina look angry.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>Shut up!!!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>Shut up!!!</d-text>
+		</d-box>
+	</div>
+	<p class="note">Tenna is thrown offscreen to the left.</p>
+
+	<hr>
+
+	<h3 id="dialogue-turn6">Turn 6</h3>
+	<h4>If Elnina was favored</h4>
+	<h5>Before attacking</h5>
+	<p class="note">Elnina looks ecstatic, while Lanino is morose.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>...</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>FINALLY! REAL<span class="break"></span> weather fans!<span class="break"></span> SUN isn't even<span class="break"></span> a weather! It<span class="break"></span> just... sits there<span class="break"></span> and looks hot!</d-text>
+		</d-box>
+	</div>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>And the MOON?<span class="break"></span> Puts me to<span class="break"></span> SLEEP! WEATHER<span class="break"></span> girls are the<span class="break"></span> WAVE, got it?</d-text>
+	</d-box>
+
+	<h5>After attacking</h5>
+	<p class="note">Lanino begins crying.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Do you... really<span class="break"></span> think that about<span class="break"></span> the moon?</d-text>
+	</d-box>
+	<p class="note">Elnina looks startled.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>H-huh? Uh...</d-text>
+	</d-box>
+	<p class="note">Lanino looks angry.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Well, hope<span class="break"></span> you like CRYSTALS,<span class="break"></span> because you made<span class="break"></span> yourself CLEAR!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>WE'RE THROUGH!!!</d-text>
+	</d-box>
+	<p class="note">Lanino leaves the encounter to the right.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+	<p class="note">Elnina is silent for a few moments. Then she grins.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Who needs a<span class="break"></span> dry biscuit<span class="break"></span> like him anyway!?</d-text>
+	</d-box>
+
+	<h4>If Lanino was favored</h4>
+	<h5>Before attacking</h5>
+	<p class="note">Lanino looks ecstatic, while Elnina is morose.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Lanino</d-speaker>
+			<d-text>It's nice I<span class="break"></span> finally get to<span class="break"></span> shine on my<span class="break"></span> own, you know?<span class="break"></span> Instead of just<span class="break"></span> being... behind<span class="break"></span> the clouds!</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Elnina</d-speaker>
+			<d-text>...</d-text>
+		</d-box>
+	</div>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>ANY Darkner can<span class="break"></span> do a rain attack...<span class="break"></span> but a MOON<span class="break"></span> attack...? Eclipses<span class="break"></span> your HEART!</d-text>
+	</d-box>
+
+	<h5>After attacking</h5>
+	<p class="note">Elnina begins crying.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>... Y-you really<span class="break"></span> think ANYONE can<span class="break"></span> do a RAIN attack...</d-text>
+	</d-box>
+	<p class="note">Lanino looks startled.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>H-huh? Uh...</d-text>
+	</d-box>
+	<p class="note">Elnina looks angry.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Fine... I get<span class="break"></span> it... I'm just<span class="break"></span> raining on your<span class="break"></span> parade...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Goodbye...</d-text>
+	</d-box>
+	<p class="note">Elnina leaves the encounter to the right.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+	<p class="note">Lanino is silent for a few moments. Then he grins.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Who needs a<span class="break"></span> wet blanket<span class="break"></span> like her anyway!?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn7">Turn 7</h3>
+	<hr class="hr2">
+
+	<h4>If Elnina was favored</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>HA!! They're just<span class="break"></span> jealous!! Who needs<span class="break"></span> their attack!!!<span class="break"></span> WATCH!!!!</d-text>
+	</d-box>
+
+	<p class="note">The attack begins, with Elnina sending out large bullets. After a few moments, she speaks:</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Nice move,<span class="break"></span> huh, Lanino!?</d-text>
+	</d-box>
+
+	<p class="note">Her bullets grow slightly smaller, and then smaller again, as her expression turns to a startled one. The battle music begins fading out.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>...<span class="break"></span> Lanino?</d-text>
+	</d-box>
+
+	<p class="note">A moment later, Elnina looks sad, and her bullets disappear altogether.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>... oh...</d-text>
+	</d-box>
+
+	<p class="note">A pause. The battle box disappears, and the music is gone.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Oh no...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>What have I done...<span class="break"></span> it's so dark without<span class="break"></span> his shine...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>Our oasis<span class="break"></span> of love...</d-text>
+	</d-box>
+	<p class="note">Elnina begins crying.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>I froze<span class="break"></span> it over...</d-text>
+	</d-box>
+
+	<hr class="hr3">
+
+	<h4>If Lanino was favored</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>HA! No one damping<span class="break"></span> my vibes now!! Time<span class="break"></span> for the SUN to be<span class="break"></span> a STAR!!!</d-text>
+	</d-box>
+
+	<p class="note">The attack begins, with Lanino sending out large bullets. After a few moments, he speaks:</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Nice move,<span class="break"></span> huh, Elnina!?</d-text>
+	</d-box>
+
+	<p class="note">His bullets grow slightly smaller, and then smaller again, as his expression turns to a startled one. The battle music begins fading out.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>...<span class="break"></span> Elnina?</d-text>
+	</d-box>
+
+	<p class="note">A moment later, Lanino looks sad, and his bullets disappear altogether.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>...<span class="break"></span> oh...</d-text>
+	</d-box>
+
+	<p class="note">A pause. The battle box disappears, and the music is gone.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Oh no...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>What have I done...<span class="break"></span> I'm nothing without<span class="break"></span> her beside me...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Our oasis<span class="break"></span> of love...</d-text>
+	</d-box>
+	<p class="note">Lanino begins crying.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>I made it<span class="break"></span> into a desert...</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<p class="note">A pause. Then Tenna appears from the top of the screen, dropping into the middle of the encounter with a thud.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>WOW looks like<span class="break"></span> we are out<span class="break"></span> of time!</d-text>
+	</d-box>
+
+	<p class="note">Repeatedly and incredibly fast, Tenna says the following:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text class="fnt-condensed">HAHA!! I LOVE<span class="break"></span> WATCHING TV!!</d-text>
+	</d-box>
+	<p class="note">He repeats this enough times to take the I Love TV counter to 99, at which point it chimes and turns gold, then disappears.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Ok battle's over folks<span class="break"></span> See you later!!!</d-text>
+	</d-box>
+
+	<p class="note">Tenna and the favored partner (Elnina/Lanino, depending on your choice) rapidly leave offscreen to the right, and <a href="{{ '/chapters/chapter3/desertboard#weatherpostfight' }}">the encounter ends</a>.</p>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<h4>Lanino</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Lanino - The sight of Elnina makes him want to be singin' in the rain.</d-text>
+	</d-box>
+
+	<h4>Elnina</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>ELNINA - She's just over the moon for Lanino.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="ilovetv">
+	<h2>ILoveTV</h2>
+	<p>Available for both Lanino and Elnina.</p>
+
+	<h3 id="ilovetv-ft">Flavor text</h3>
+	<p class="note">Depending on who was targeted:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris says I Love TV to Elnina!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris says I Love TV to Lanino!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The "I Love TV" counter goes up by 1.</p>
+</section>
+
+<section class="d-section" id="ilovetvx">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} ILoveTVX</h2>
+
+	<h3 id="ilovetvx-ft">Flavor text</h3>
+	<p class="note">Depending on who was targeted:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone said I Love TV to Elnina!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone said I Love TV to Lanino!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The "I Love TV" counter goes up by 3.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action: IloveTV</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie said "I Love TV!"</d-text>
+	</d-box>
+	<p class="note">The "I Love TV" counter goes up by 1.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action: IloveTV</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei said "I Love TV!"</d-text>
+	</d-box>
+	<p class="note">The "I Love TV" counter goes up by 1.</p>
+</section>
