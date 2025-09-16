@@ -1,0 +1,591 @@
+---
+title: Rouxls encounter - Chapter 3, ACTing only
+
+description: >
+  <p>Flavor text and dialogue for the Chapter 3 battle against Rouxls Kaard, featuring Shadowguys and the Weather duo.</p>
+
+  <p>This encounter has 4 phases that are referenced throughout this page. The phases begin when their corresponding benchmarks are reached:</p>
+  <ul>
+    <li>Phase 0: initial</li>
+    <li>Phase 1: Option to LANCER becomes available</li>
+    <li>Phase 2: Cat-eared Shadowguys join the encounter</li>
+    <li>Phase 3: Elnina and Lanino join the encounter</li>
+  </ul>
+
+sources:
+  -
+    name: gml_Object_obj_rouxls_ch3_enemy_Step_0
+    chapters: [3]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [3]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [3]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_dbulletcontroller_Step_0
+    chapters: [3]
+    note: phase 3 mid-attack dialogue
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/rouxlsch3
+    name: First Rouxls encounter - Chapter 2, house-capturing game
+
+toc:
+  -
+    id: prefight
+    name: Before the fight
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: ft-phase01
+        name: Phases 0 and 1
+      -
+        id: ft-phase23
+        name: Phases 2 and 3
+      -
+        id: ft-yarn
+        name: If hit by yarn at least twice during Phase 2
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-phase12
+        name: During Phases 1 and 2
+      -
+        id: dialogue-phase1end
+        name: End of Phase 1
+      -
+        id: dialogue-phase2end
+        name: End of Phase 2
+      -
+        id: phase3
+        name: During Phase 3
+  -
+    id: act
+    name: ACTing
+  -
+    id: lancer
+    name: LANCERing(?)
+  -
+    id: end
+    name: End of fight
+---
+{% comment %} encounterno = 114 {% endcomment %}
+
+<section class="d-section" id="prefight">
+	<h2>Start of fight</h2>
+
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>I must defeast thou, so TV Guy recognizes my Glorye!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>But feare not. The four of us needst not Attacke.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>For what is a Showe... If thou dost not ACT?</d-text>
+	</d-box>
+
+	<p class="note">Rouxls holds out the Rules Card, which gleams. The party's battle menus have all their buttons replaced by the ACT button.</p>
+</section>
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="ft-phase01">Phases 0 and 1</h3>
+	<p>Includes the initial encounter.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(With the effect of the RULES CARD, you can only ACT!)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-phase23">Phases 2 and 3</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Dodge ROUXLSes, select LANCERs!)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-yarn">If hit by yarn at least twice during Phase 2</h3>
+	<p class="note">Immediately upon the second hit, Ralsei is wrapped into a ball of white yarn, his glasses and horns barely visible. Upon the end of the turn, the following dialogue plays:</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="O"></d-sprite>
+		<d-text asterisk>Kris, Susie, I'm sorry! I've become a big cuddly ball...!</d-text>
+	</d-box>
+	{% comment %} they fucked up here and put emotion="C" (i.e. 12) but Rouxls only has 7 sprites so it wrapped around, restarted counting from sprite 0 instead of the nonexistent sprite 8, and ended up picking sprite 5. didn't know it autowrapped! huh {% endcomment %}
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>I don't thinketh, THIS is what I askedst for.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>Likest, Yarne? You don't even havest Gun's?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>Okaye. Okaye. I see. I see.</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>Your a little bit Fired, byst the way...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>NEXTST!!!</d-text>
+	</d-box>
+	<p class="note">The cat-eared Shadowguys leave the encounter to the right.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>Don't worry guys, I'll get a refund on that one.</d-text>
+	</d-box>
+	<p class="note">Ralsei is freed from the yarn ball, which leaves the encounter to the left. The scene proceeds to <a href="#dialogue-phase2end">Phase 2's ending dialogue</a>.</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+	<p>Unless specified otherwise, dialogue in this section plays strictly after the party has used their turn and before the enemy's attack phase begins.</p>
+
+	<h3 id="dialogue-phase12">During Phases 1 and 2</h3>
+	<p>Phase 1 is scripted to begin on Turn 3; this dialogue plays on successive turns, unless Phase 3 is entered early.</p>
+
+	<h4>Turn 3</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Fretteth noth, my Recruitse.<span class="break"></span> From nowst on, thine Salarye<span class="break"></span> shall be Most Resplendent.</d-text>
+	</d-box>
+
+	<h4>Turn 4</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>You see-eth,I hath secretly<span class="break"></span> "Trading Cards" with TV GUY...<span class="break"></span> One "Rules Card" for his<span class="break"></span> "Debith Card".</d-text>
+	</d-box>
+
+	<h4>Turn 5</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>TV guy shall Learnst<span class="break"></span> about his missing<span class="break"></span> Debith Card when<span class="break"></span> he looketh in his<span class="break"></span> wallet.</d-text>
+	</d-box>
+
+	<h4>Turn 6</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>But as his 2nd in command,<span class="break"></span> Surely Mr. TV shalt<span class="break"></span> Approveth, and teacheth<span class="break"></span> me the ways of his "PIN".</d-text>
+	</d-box>
+
+	<h4>Turn 7</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>So yese. Thoun shalth not<span class="break"></span> gettingeth Paid yet.</d-text>
+	</d-box>
+
+	<h4>Turn 8 onwards</h4>
+	<h5>During Phase 1</h5>
+	<p>Unused, as with a minimum of 20% <span class="yellow">Mercy</span> gained every turn, Phase 1 ends by Turn 5 at the latest.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>No violense...<span class="break"></span> Only Gun's.</d-text>
+	</d-box>
+
+	<h5>During Phase 2</h5>
+	<p class="note">(Rouxls is not present in the enemy lineup during Phase 2, as he was during Phase 1; he backs out of the enemy's lineup while the attack is ongoing.)</p>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Hope these Guyse<span class="break"></span> have Gun's. I'm<span class="break"></span> not Lookinge.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-phase1end">End of Phase 1</h3>
+	<p>When the bunny-eared Shadowguys are recruited.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>It's fine...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Not only do<span class="break"></span> I have more<span class="break"></span> guys where that<span class="break"></span> came from,</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>but I also have<span class="break"></span> more cards!</d-text>
+	</d-box>
+	<p class="note">Rouxls throws out five cards that flutter to the ground. A pause. The cards flash and two cat-eared Shadowguys enter the encounter from the right, beginning Phase 2.</p>
+
+	<hr>
+
+	<h3 id="dialogue-phase2end">End of Phase 2</h3>
+	<hr class="hr2">
+	<h4>If the cat-eared Shadowguys gained 100% <span class="yellow">Mercy</span></h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Okay, you may<span class="break"></span> hath recruitedst<span class="break"></span> away some of<span class="break"></span> my Goones.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>If <a href="#ft-yarn">the party was hit by yarn twice</a> and the cat-eared Shadowguys were fired</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>You may hath<span class="break"></span> gotten rid<span class="break"></span> of my Goones.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>But can thou<span class="break"></span> defeast...<span class="break"></span> The powere...<span class="break"></span> of Love?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Honeyes!!!<span class="break"></span> Oh my Honeyes!!!!</d-text>
+	</d-box>
+	<p class="note">Elnina and Lanino, both looking dispirited, enter the encounter from the right, beginning Phase 3.</p>
+
+	<hr>
+
+	<h3 id="phase3">During Phase 3</h3>
+	<h4>First turn</h4>
+	<h5>Before attacking</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>I feelst it. Mm.<span class="break"></span> We're strongere,<span class="break"></span> We're growinge,<span class="break"></span> As a Throuple.</d-text>
+	</d-box>
+
+	<h5>While attacking</h5>
+	<p class="note">After a moment, Rouxls speaks:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Go left?</d-text>
+	</d-box>
+	<p class="note">A pause.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Go left?</d-text>
+	</d-box>
+	<p class="note">Lanino and Elnina's attacks focus entirely on the left side of the bullet box, leaving the right free for the SOUL to seek refuge in.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>GO RIGHT?</d-text>
+	</d-box>
+	<p class="note">The pattern is mirrored, with attacks now focused on the right while the left side is safe. A pause.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Okay. Guyse?<span class="break"></span> Pauseth? Pauseth for<span class="break"></span> a second?</d-text>
+	</d-box>
+	<p class="note">Elnina and Lanino look wide-eyed at Rouxls when he speaks, and their bullets slow to a halt. Rouxls holds out something, and a red crosshair appears on the bullet board, moving in small circles to draw attention to itself.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>So I haveth a<span class="break"></span> Laser Pointere.</d-text>
+	</d-box>
+	<p class="note">Elnina and Lanino look over at the bullet board with wide eyes.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>If you could<span class="break"></span> juste... Followe that?</d-text>
+	</d-box>
+	<p class="note">Rouxls faces forward again, the laser pointer's crosshair disappearing briefly. Elnina and Lanino smile more confidently.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Everyone readye?<span class="break"></span> Okaye go.</d-text>
+	</d-box>
+	<p class="note">After a moment, the attack resumes, with the pointer now moving around the bullet board, growing erratic at times. Regardless, the bullets follow it consistently. Rouxls speaks over the rest of the attack at brief intervals:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Just follow...<span class="break"></span> follow...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Over here...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>A little<span class="break"></span> over there?</d-text>
+	</d-box>
+
+	<h4>Second turn</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>I'm so proude to be dating<span class="break"></span> the Sun AND the Moon...<span class="break"></span> What? You're not the Moon?<span class="break"></span> You're a CLOUD? WHAT?</d-text>
+	</d-box>
+
+	<h4>Third turn</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Guyse, I've beenst Traininge<span class="break"></span> thou with yon Pointere all<span class="break"></span> day. Try a LITTLE harder?</d-text>
+	</d-box>
+
+	<h4>Fourth turn onwards</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Beholde...<span class="break"></span> Yon powere of LOVE!</d-text>
+	</d-box>
+
+	<h4>Unused dialogue, while attacking</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Follow<span class="break"></span> my laser<span class="break"></span> pointer!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="act">
+	<h2>ACTing</h2>
+	<p>The only option available during Phase 0.</p>
+
+	<h3 id="acting1">Turn 1</h3>
+	<h4>Flavor text</h4>
+	<p class="note">The party members and Rouxls line up at the center of the encounter; they dance for a few moments.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone acted out their performance!</d-text>
+	</d-box>
+	<p class="note">The party members and Rouxls return to their original positions.</p>
+
+	<h4>Dialogue</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Yes, yes! Non-violense!<span class="break"></span> Bigge 'ups', my friends.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Now for my ACT,<span class="break"></span> I shalt hire people,</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>to shooteth you.</d-text>
+	</d-box>
+	<p class="note">Two hatless, bunny-eared <a href="{{ '/encounters/shaodwguy' | relative_url }}">Shadowguys</a> enter the encounter from the right.</p>
+
+	<hr>
+
+	<h3 id="acting2">Turn 2</h3>
+	<p class="note">The party members, Rouxls, and the Shadowguys line up at the center of the encounter; they dance for a few moments.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone acted out their performance!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Hooh!<span class="break"></span> Whate a battle,<span class="break"></span> art I Righte?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Hey, we're gonna get our asses kicked just dancing around!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="C"></d-sprite>
+		<d-text asterisk>Th... there must be something we can do...!</d-text>
+	</d-box>
+	<p class="note">Everyone shifts over as Lancer joins the dance line, spinning.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>Ho ho ho! A dance battle? Deal me in!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Lancer! Hey!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="C"></d-sprite>
+		<d-text asterisk>L-Lancer, help us! Rouxls used his Rules Card and...</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>I see, I see! Don't worry! I'm on the case!</d-text>
+	</d-box>
+	<p class="note">The battle music pauses. Lancer stops spinning and holds up the Ace of Spades card, glowing briefly as a power-up SFX plays, followed by an echoing splat SFX. </p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Lancer used the LANCER Card! Now you can... LANCER?)</d-text>
+	</d-box>
+	<p class="note">Phase 1 begins. From the next turn onwards, <a href="#lancer">the option to LANCER</a> is also available in each party member's battle menu, cycling through the row of ACT options.</p>
+	<p class="note">The party members, Rouxls, and the Shadowguys return to their original positions.</p>
+
+	<h4>Dialogue</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Lancer, don'st bother<span class="break"></span> Lesser Daddy when he's<span class="break"></span> harming your friends.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="lancer">
+	<h2>LANCERing(?)</h2>
+	<p>Available from Phase 1 onwards.</p>
+
+	<h3 id="lancer-ft">Flavor text</h3>
+	<p class="note">Lancer enters the encounter from the left, taking a spot ahead of the party. Rouxls's allies similarly move forward towards the center of the encounter.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Lancer recruits the enemies to your side!)</d-text>
+	</d-box>
+	<p class="note">Depending on how many times you selected LANCER instead of ACT in the party's battle menus:</p>
+	<hr class="hr2">
+	<h4>No LANCERs</h4>
+	<p class="note">A splat SFX plays as Lancer falls to his hands and knees. Rouxls's allies gain 20% <span class="yellow">Mercy</span> each.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(But it wasn't too effective...)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>One or two LANCERs</h4>
+	<p class="note">One or two spades (depending on the number of LANCERs) are drawn in towards Lancer, who flashes white and begins spinning, drawing back towards the party. Rouxls's allies are lured after him slightly and gain 35% <span class="yellow">Mercy</span> (one LANCER) / 45% <span class="yellow">Mercy</span> (two LANCERs) each.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(It's working!)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Three LANCERs</h4>
+	<p class="note">Three spades are drawn in towards Lancer, who flashes white and begins spinning, drawing back towards the party. Rouxls's allies are lured after him slightly and gain 60% <span class="yellow">Mercy</span> each.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(It's highly effective!)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Lancer leaves the encounter to the left, and depending on how much <span class="yellow">Mercy</span> Rouxls's allies now have:</p>
+	<hr class="hr2">
+	<h4>If Rouxls's allies have less than 100% <span class="yellow">Mercy</span></h4>
+	<p class="note">The enemies retake their place in the lineup.</p>
+	<hr class="hr3">
+	<h4>If Rouxls's allies have 100% <span class="yellow">Mercy</span></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(The enemies joined you!)</d-text>
+	</d-box>
+	<p class="note">The enemies move to the left side of the encounter, joining the party, and turn to face Rouxls.</p>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of fight</h2>
+	<p>Plays immediately upon Lanino and Elnina reaching 100% <span class="yellow">Mercy</span>, after Lancer's successful intervention.</p>
+
+	<p class="note">Lanino and Elnina withdraw to the enemy's side of the encounter, wide-eyed.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Look! Lanino and<span class="break"></span> Elnina are...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Gehahah... Separate?<span class="break"></span> US? No, I think:<span class="break"></span> Freakinge Not.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>I think thou Missedst<span class="break"></span> thine Vitale Fact...<span class="break"></span> Thereupon, the<span class="break"></span> THREE OF US.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Art in a Teame<span class="break"></span> Relationshipe.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Just liketh you Guyse.</d-text>
+	</d-box>
+	<p class="note">Susie and Ralsei both jump in surprise, Susie looking shocked while Ralsei blushes.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Susie</d-speaker>
+			<d-text>The hell are you<span class="break"></span> talking about?</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Ralsei</d-speaker>
+			<d-text>L... like us!?</d-text>
+		</d-box>
+	</div>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Wait, you guyse<span class="break"></span> artn't a Thinge?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>No.</d-text>
+	</d-box>
+	<p class="note">Susie and Ralsei both look calmer when Lanino speaks, looking downcast.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Umm, I...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Not nowe Honeye.<span class="break"></span> I'm processinge<span class="break"></span> thise.</d-text>
+	</d-box>
+	<p class="note">The battle music fades out as Lanino moves over to the party's side of the encounter, then turns to face Elnina and Rouxls.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>Don't... don't<span class="break"></span> call me honey<span class="break"></span> anymore.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>La... Lanino!?</d-text>
+	</d-box>
+	<p class="note"><a href="{% include wikilink page='Confession' wiki='undertale' %}">Slow piano music</a> begins playing.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>I'm sorry, Elnina...<span class="break"></span> I'm... I'm going to<span class="break"></span> the other side..</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>I...</d-text>
+	</d-box>
+	<p class="note">Lanino's eyes widen when Elnina speaks. She then moves over to join the party as well, looking upset as she faces Rouxls.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>I'm going too!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>I thought YOU<span class="break"></span> were the one<span class="break"></span> who liked Rouxls,<span class="break"></span> so I...</d-text>
+	</d-box>
+	<p class="note">Lanino moves over in front of Elnina, facing her. A slight pause.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>I'm sorry,<span class="break"></span> my sunshine!</d-text>
+	</d-box>
+	<p class="note">Lanino looks upset.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>I'm sorry,<span class="break"></span> my dewdrop!</d-text>
+	</d-box>
+	<p class="note">Elnina, gaze still lowered, blushes as she smiles.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Elnina</d-speaker>
+		<d-text>The weather<span class="break"></span> should always...</d-text>
+	</d-box>
+	<p class="note">Lanino mirrors her expression.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lanino</d-speaker>
+		<d-text>stick<span class="break"></span> together...</d-text>
+	</d-box>
+
+	<p class="note">A pause. When Rouxls speaks, Lanino turns to him.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Ah... ha<span class="break"></span> ha ha ha!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>Just as planned.<span class="break"></span> The two Loverse...<span class="break"></span> are reunited.</d-text>
+	</d-box>
+	<p class="note">Rouxls takes off his chef's hat and bows.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Rouxls</d-speaker>
+		<d-text>I shall now...<span class="break"></span> Taketh my leave...</d-text>
+	</d-box>
+	<p class="note">Rouxls slowly begins exiting the encounter towards the right. But before he can leave entirely, Lancer enters the encounter from the left with a slide whistle SFX, coming to a stop in front of him.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Lancer</d-speaker>
+		<d-text>Hey, Lesser Dad!<span class="break"></span> Lesser Dad!</d-text>
+	</d-box>
+	<p class="note">Lancer turns towards the Shadowguys in the party.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Lancer</d-speaker>
+		<d-text>The guys with big guns want<span class="break"></span> to know when they're gonna<span class="break"></span> get paid!</d-text>
+	</d-box>
+
+	<p class="note">Lanino and Elnina watch with wide eyes as Rouxls exits the encounter at great speed and, after a moment, the recruited Shadowguys follow with their guns raised. Lancer turns to watch them go, then turns back to the party and slides backwards out of the encounter to the right while Susie laughs. <a href="{{ '/chapters/chapter3/rouxls#postfight' | relative_url }}">The encounter ends.</a></p>
+</section>
