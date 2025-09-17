@@ -3,7 +3,7 @@
 Nothing right now!
 
 ## Page design
-* Add the OpenDyslexia toggle back in. Requires checking all the site features with it enabled and confirming that everything's sized properly.
+Nothing right now!
 
 ## Specific pages
 * Home page could use cleanup/more information. Some sections that might be nice to have:

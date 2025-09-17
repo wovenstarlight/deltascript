@@ -32,6 +32,14 @@
 	font-family: "DeltaFont Prophecy";
 	src: url("../assets/fonts/fnt_legend.otf");
 }
+@font-face {
+	font-family: "OpenDyslexic Mono";
+	src: url("../assets/fonts/OpenDyslexicMono-Regular.otf");
+}
+@font-face {
+	font-family: "OpenDyslexic";
+	src: url("../assets/fonts/OpenDyslexic-Regular.woff2");
+}
 :root { /* Global colors and fonts */
 	background-color: black;
 	color: white;
@@ -94,6 +102,7 @@
 	--font-sans: "DeltaFont Comic Sans", var(--font-base);
 	--font-dotum: "DeltaFont Dotum", var(--font-base);
 	--font-8bit: "DeltaFont 8-Bit", var(--font-base);
+	--font-prophecy: "DeltaFont Prophecy", var(--font-base);
 	
 	--prophecy-size: 40em;
 }
@@ -263,7 +272,10 @@ d-box[theme=battlemenu],
 .fnt-condensed { font-family: var(--font-condensed) }
 .fnt-tiny { font-family: var(--font-tiny) }
 .fnt-sans { font-family: var(--font-sans) }
-.fnt-combat { font-family: var(--font-dotum) }
+.fnt-combat {
+	font-family: var(--font-dotum);
+	body.dyslexic & { font-weight: bold }
+}
 .fnt-eightbit, .fnt-8bit { font-family: var(--font-8bit) }
 /* #endregion */
 h1, h2, h3, h4, h5, h6 { font-weight: normal }
@@ -576,9 +588,16 @@ body {
 	--basewidth: 24.4em;
 
 	&.dyslexic {
-		font-family: "OpenDyslexic", var(--font-base);
-		font-size: 0.875em;
-		--border-width: 2em;
+		--font-base: "OpenDyslexic Mono", "DeltaFont", "Courier New", Courier, monospace;
+		--font-condensed: "OpenDyslexic", "DeltaFont Condensed", var(--font-base);
+		--font-tiny: "OpenDyslexic Mono", "DeltaFont Tiny", var(--font-base);
+		--font-sans: "OpenDyslexic Mono", "DeltaFont Comic Sans", var(--font-base);
+		--font-dotum: "OpenDyslexic Mono", "DeltaFont Dotum", var(--font-base);
+		--font-8bit: "OpenDyslexic Mono", "DeltaFont 8-Bit", var(--font-base);
+		--font-prophecy: "OpenDyslexic", "DeltaFont Prophecy", var(--font-base);
+		font-size: 0.91em;
+		--basewidth: 26.6em;
+		--baseheight: 6.6em;
 	}
 
 	/* Normalize */
@@ -728,6 +747,11 @@ d-box, d-choices {
 
 		padding: 0.1em 0.2em;
 		font-size: 1.2em;
+		body.dyslexic &:not(
+			[theme=objreact],
+			[theme^=battletalk],
+			[theme=caller]
+		) { font-size: 1.3186em }
 		line-height: 1;
 		min-height: var(--baseheight);
 		width: var(--basewidth);
@@ -752,6 +776,8 @@ d-box, d-choices {
 		}
 
 		&[theme^=obj], &[theme=battlemenu] { width: calc(var(--basewidth) + 4em) }
+		
+		body.dyslexic &[theme^=obj] { width: calc(var(--basewidth) + 10em) }
 
 		&[theme^=obj], &[theme^=power], &[theme=battledesc], &[theme=shopdesc] {
 			font-family: var(--font-condensed);
@@ -761,8 +787,9 @@ d-box, d-choices {
 			display: flex;
 			align-items: center;
 			min-height: unset;
-			width: calc(var(--basewidth + 6em));
 			padding: 0;
+			width: calc(var(--basewidth) + 6em);
+			body.dyslexic & { width: calc(var(--basewidth) + 12.5em) }
 
 			d-speaker {
 				display: block;
@@ -812,6 +839,7 @@ d-box, d-choices {
 			background-color: var(--white);
 			color: var(--black);
 			font-family: var(--font-dotum);
+			body.dyslexic & { font-weight: bold }
 			font-size: 1em;
 
 			d-speaker {
@@ -911,6 +939,7 @@ d-box, d-choices {
 			display: flex;
 			flex-direction: column;
 			font-family: var(--font-dotum);
+			body.dyslexic & { font-weight: bold }
 			font-size: 1em;
 		}
 
@@ -921,9 +950,15 @@ d-box, d-choices {
 
 		@media (max-width: 30rem) {
 			font-size: 1em;
+			body.dyslexic &[theme] { font-size: 0.9em }
 
 			/* For boxes with small dialogues, add spacing so dialogue doesn't overlap. ...too much, at least. */
 			&:has(d-box) { padding-block-end: 2.25em }
+			/* has top>center OR top>bottom/default OR center>bottom/default */
+			&:has(d-box[place~=top]):has(d-box[place~=center], d-box[place~=center-y], d-box[place~=bottom], d-box:not([place~=top], [place~=center], [place~=bottom])),
+			&:has(d-box[place~=center], d-box[place~=center-y]):has(d-box[place~=bottom], d-box:not([place~=top], [place~=center], [place~=bottom])) { padding-block-end: 3.75em }
+			/* has top, center, AND bottom/default */
+			&:has(d-box[place~=top]):has(d-box[place~=center], d-box[place~=center-y]):has(d-box[place~=bottom], d-box:not([place~=top], [place~=center], [place~=bottom])) { padding-block-end: 5.5em }
 		}
 
 		/* Forced line break */
@@ -1102,8 +1137,11 @@ d-box {
 				&[place~=top][place~=center-x] { top: calc(-1.7em + var(--offset-y, 0em)) }
 			}
 		}
-		
+
+		body.dyslexic & & { font-size: 0.6em }
+
 		@media (max-width: 30rem) {
+			body.dyslexic & & { font-size: 0.5em }
 			d-box d-text { font-size: 1.25em }
 		}
 
@@ -1227,6 +1265,7 @@ d-text {
 
 	:is([theme^=battletalk], [theme=caller]) & {
 		font-family: var(--font-dotum);
+		body.dyslexic & { font-weight: bold }
 	}
 
 	&[font=eightbit], &[font="8bit"],
@@ -1235,12 +1274,13 @@ d-text {
 	}
 
 	[theme=prophecy] & {
-		font-family: "DeltaFont Prophecy", var(--font-base);
+		font-family: var(--font-prophecy);
 		background: #42d0ff url("../assets/images/story/prophecy.png") repeat center / var(--prophecy-size) auto;
 		background-clip: text;
 		color: rgb(from #42d0ff r g b / 0.5);
 		body:not(.noanim) & { animation: bgshift 10s linear infinite }
 		body:not(.dim) & { filter: brightness(1.75) saturate(1.5) }
+		body.dyslexic & { font-size: 0.66em }
 	}
 	body:not(.noanim) [theme=prophecy]:nth-child(odd) &:nth-child(even),
 	body:not(.noanim) [theme=prophecy]:nth-child(even) &:nth-child(odd) { animation-delay: 3s }
@@ -1569,6 +1609,7 @@ d-option-panel {
 	width: var(--size);
 	height: var(--size);
 	font-family: var(--font-dotum);
+	body.dyslexic & { font-weight: bold }
 	body:not(.noanim) & { animation: rotate 15s linear infinite }
 }
 /* Character icons for ACTs */
@@ -1634,6 +1675,7 @@ d-option-panel {
 	.desc {
 		font-size: 0.9em;
 		font-family: var(--font-dotum);
+		body.dyslexic & { font-weight: bold }
 		max-width: calc(var(--basewidth) - 3.4em);
 		margin-block: 0.5em 1em;
 		word-break: keep-all;
