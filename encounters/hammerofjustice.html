@@ -443,7 +443,8 @@ toc:
 	</d-box>
 	<d-box theme="battletalk">
 		<d-speaker>Susie</d-speaker>
-		<d-text>...If I could choose…<span class="break"></span> I guess...</d-text>
+		<!-- they put in an ellipsis but as a single character instead of ..., and the font doesn't have … so it just doesn't display in-game. RIP. Character still takes up room though so I'm adding a non-breaking space -->
+		<d-text>...If I could choose<!--…-->&nbsp;<span class="break"></span> I guess...</d-text>
 	</d-box>
 	<d-box theme="battletalk">
 		<d-speaker>Susie</d-speaker>
