@@ -1,0 +1,151 @@
+---
+title: Generic interactions
+
+description: >
+  <p>Interactions for items that are typically standard across all chapters.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_treasure_room_Other_10
+    chapters: [1, 2, 3, 4]
+    note: treasure chest interaction
+  -
+    name: gml_GlobalScript_scr_itemget_anytype_text
+    chapters: [1, 2, 3, 4]
+    note: equipment/item/money get narration
+---
+<section class="d-section" id="treasurechest">
+	<h2>Treasure chests</h2>
+
+	<h3 id="treasurechest-item">Closed chest containing a regular item</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(You opened the treasure chest.)</d-text>
+		<d-text asterisk>(Inside was <span class="yellow">&lt;Item&gt;</span>.)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If the inventory isn't full</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(<span class="yellow">&lt;Item&gt;</span> was added to your <span class="yellow">ITEMs</span>.)</d-text>
+	</d-box>
+	<p class="note">The item is added to the inventory; the chest is now <a href="#treasurechest-open">open</a>.</p>
+	<hr class="hr3">
+	<h4>If the inventory is full but storage isn't full</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(<span class="yellow">&lt;Item&gt;</span> was added to your <span class="yellow">STORAGE</span>.)</d-text>
+	</d-box>
+	<p class="note">The item is added to the inventory; the chest is now <a href="#treasurechest-open">open</a>.</p>
+	<hr class="hr3">
+	<h4>If both the inventory and storage are full</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(You have too many <span class="yellow">ITEMs</span> to take <span class="yellow">&lt;Item&gt;</span>.)</d-text>
+	</d-box>
+	<p class="note">The treasure chest closes back up.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="treasurechest-keyitem">Closed chest containing a key item</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(You opened the treasure chest.)</d-text>
+		<d-text asterisk>(Inside was <span class="yellow">&lt;Key Item&gt;</span>.)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If the key item inventory isn't full</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(<span class="yellow">&lt;Key Item&gt;</span> was added to your <span class="yellow">KEY ITEMs</span>.)</d-text>
+	</d-box>
+	<p class="note">The key item is added to the inventory; the chest is now <a href="#treasurechest-open">open</a>.</p>
+	<hr class="hr3">
+	<h4>If the key item inventory is full</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(You have too many <span class="yellow">KEY ITEMs</span> to take <span class="yellow">&lt;Key Item&gt;</span>.)</d-text>
+	</d-box>
+	<p class="note">The treasure chest closes back up.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="treasurechest-armor">Closed chest containing armor</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(You opened the treasure chest.)</d-text>
+		<d-text asterisk>(Inside was <span class="yellow">&lt;Armor&gt;</span>.)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If the armor inventory isn't full</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(<span class="yellow">&lt;Armor&gt;</span> was added to your <span class="yellow">ARMORs</span>.)</d-text>
+	</d-box>
+	<p class="note">The armor is added to the inventory; the chest is now <a href="#treasurechest-open">open</a>.</p>
+	<hr class="hr3">
+	<h4>If the armor inventory is full</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(You have too many <span class="yellow">ARMORs</span> to take <span class="yellow">&lt;Armor&gt;</span>.)</d-text>
+	</d-box>
+	<p class="note">The treasure chest closes back up.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="treasurechest-weapon">Closed chest containing a weapon</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(You opened the treasure chest.)</d-text>
+		<d-text asterisk>(Inside was <span class="yellow">&lt;Weapon&gt;</span>.)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If the weapon inventory isn't full</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(<span class="yellow">&lt;Weapon&gt;</span> was added to your <span class="yellow">WEAPONs</span>.)</d-text>
+	</d-box>
+	<p class="note">The weapon is added to the inventory; the chest is now <a href="#treasurechest-open">open</a>.</p>
+	<hr class="hr3">
+	<h4>If the weapon inventory is full</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(You have too many <span class="yellow">WEAPONs</span> to take <span class="yellow">&lt;Weapon&gt;</span>.)</d-text>
+	</d-box>
+	<p class="note">The treasure chest closes back up.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="treasurechest-armor">Closed chest containing money</h3>
+	<p>(If the chest contains D$1, it will read "1 Dark Dollars".)</p>
+	<d-box theme="dark">
+		<d-text asterisk>(You opened the treasure chest.)</d-text>
+		<d-text asterisk>(Inside was <span class="yellow">&lt;#&gt; Dark Dollars</span>.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(<span class="yellow">&lt;#&gt; Dark Dollars</span> was added to your <span class="yellow">MONEY HOLE</span>.)</d-text>
+	</d-box>
+	<p class="note">$&lt;#&gt; is added to your total money; the chest is now <a href="#treasurechest-open">open</a>.</p>
+
+	<hr>
+
+	<h3 id="treasurechest-nothing">Closed chest containing nothing</h3>
+	{%- comment %} #mynothing {% endcomment %}
+	<d-box theme="dark">
+		<d-text asterisk>(You opened the treasure chest.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Inside was nothing.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="treasurechest-open">Open chest</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(The chest is empty.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="treasurechest-fallback">Unused fallback</h3>
+	<p>For if the chest is somehow neither open nor closed.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It won't open.)</d-text>
+	</d-box>
+</section>
+
+{% comment %} TODO: Add more generic interactions? What else stays the same… {% endcomment %}

@@ -23,15 +23,7 @@ sources:
   -
     name: gml_Object_obj_treasure_room_Create_0
     chapters: [2]
-    note: treasure chest setup
-  -
-    name: gml_Object_obj_treasure_room_Other_10
-    chapters: [2]
-    note: treasure chest interaction
-  -
-    name: gml_GlobalScript_scr_itemget_anytype_text
-    chapters: [2]
-    note: treasure chest interaction
+    note: treasure chest
   -
     name: gml_GlobalScript_scr_weaponinfo
     chapters: [2]
@@ -83,24 +75,9 @@ toc:
     name: Eastern treasure chest
 ---
 <section class="d-section" id="chestwest">
-	<h2>Western treasure chest</h2>
-	<p>Present in one of the rooms in the western area, alongside empty treasure chests holding only dust.</p>
+	<h2>Western treasure chests</h2>
 
-	<h3>First time</h3>
-	<d-box theme="dark">
-		<d-text asterisk>(You opened the treasure chest.)</d-text>
-		<d-text asterisk>(Inside was <span class="yellow">1 Dark Dollars</span>.)</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-text asterisk>(<span class="yellow">1 Dark Dollars</span> was added to your <span class="yellow">MONEY HOLE</span>.)</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3>Subsequent times</h3>
-	<d-box theme="dark">
-		<d-text asterisk>(The chest is empty.)</d-text>
-	</d-box>
+	<p class="note">The sole chest in the eastern room, as well as one of the two chests in the western room, are empty and hold only dust. The second of the two chests in the western room contains $1 and uses <a href="{{ '/misc/generic#treasurechest-money' | relative_url }}">generic text</a>.</p>
 </section>
 
 <section class="d-section" id="powersource">
@@ -241,41 +218,9 @@ toc:
 <section class="d-section" id="chesteast">
 	<h2>Eastern treasure chest</h2>
 	<p>Present in the transformed eastern hallway after fighting <a href="{{ '/chapters/chapter2/spamtonneo' | relative_url }}">Spamton NEO</a>, if the relevant equipment inventory was full at the time of the encounter.</p>
-
-	<h3>First time</h3>
-	<h4>If Spamton NEO was defeated</h4>
-	<d-box theme="dark">
-		<d-text asterisk>(You opened the treasure chest.)</d-text>
-		<d-text asterisk>(Inside was <span class="yellow">PuppetScarf</span>.)</d-text>
-	</d-box>
-	<hr class="hr2">
-	<h5>If the weapon inventory isn't full</h5>
-	<d-box theme="dark">
-		<d-text asterisk>(<span class="yellow">PuppetScarf</span> was added to your <span class="yellow">WEAPONs</span>.)</d-text>
-	</d-box>
-	<p class="note">The <a href="{{ '/misc/weapons#puppetscarf' | relative_url }}">PuppetScarf</a> is added to the inventory.</p>
-	<hr class="hr3">
-	<h5>If the weapon inventory is full</h5>
-	<d-box theme="dark">
-		<d-text asterisk>(You have too many <span class="yellow">WEAPONs</span> to take <span class="yellow">PuppetScarf</span>.)</d-text>
-	</d-box>
-	<hr class="hr2">
-
-	<h4>If Spamton NEO was spared</h4>
-	<d-box theme="dark">
-		<d-text asterisk>(You opened the treasure chest.)</d-text>
-		<d-text asterisk>(Inside was <span class="yellow">Dealmaker</span>.)</d-text>
-	</d-box>
-	<hr class="hr2">
-	<h5>If the armor inventory isn't full</h5>
-	<d-box theme="dark">
-		<d-text asterisk>(<span class="yellow">Dealmaker</span> was added to your <span class="yellow">ARMORs</span>.)</d-text>
-	</d-box>
-	<p class="note">The <a href="{{ '/misc/armor#dealmaker' | relative_url }}">Dealmaker</a> is added to the inventory.</p>
-	<hr class="hr3">
-	<h5>If the armor inventory is full</h5>
-	<d-box theme="dark">
-		<d-text asterisk>(You have too many <span class="yellow">ARMORs</span> to take <span class="yellow">Dealmaker</span>.)</d-text>
-	</d-box>
-	<hr class="hr2">
+	<p class="note">Uses generic text for treasure chests:</p>
+	<ul class="note">
+		<li><a href="{{ '/misc/generic#treasurechest-weapon' | relative_url }}">weapon variant</a> for the <a href="{{ '/misc/weapons#puppetscarf' | relative_url }}">PuppetScarf</a> if Spamton NEO was defeated</li>
+		<li><a href="{{ '/misc/generic#treasurechest-armor' | relative_url }}">armor variant</a> for the <a href="{{ '/misc/armor#dealmaker' | relative_url }}">Dealmaker</a> if Spamton NEO was spared</li>
+	</ul>
 </section>
