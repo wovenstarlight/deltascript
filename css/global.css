@@ -880,7 +880,6 @@ d-box, d-choices {
 
 		&[theme=fade], &[theme=prophecy] {
 			border: unset;
-			width: calc(var(--basewidth) - 2em);
 			max-width: calc(100% - 3 * var(--border-width));
 
 			margin: calc(var(--border-width) + 0.2em) calc(var(--border-width) + 0.5em);
@@ -894,7 +893,10 @@ d-box, d-choices {
 				calc(0.5 * var(--border-width))	/* spread out a bit */
 				var(--black);
 		}
-		&[theme=fade] { min-height: calc(var(--baseheight) - 2em) }
+		&[theme=fade] {
+			width: calc(var(--basewidth) - 2em);
+			min-height: calc(var(--baseheight) - 2em);
+		}
 		&[theme=prophecy] { min-height: unset }
 
 		&[theme=caller] {
