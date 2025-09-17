@@ -243,6 +243,15 @@ d-box[theme=battlemenu],
 .tenna { color: var(--tenna) }
 .lanino { color: var(--lanino) }
 .elnina { color: var(--elnina) }
+.weather {
+	color: transparent;
+	background-image: linear-gradient(
+		to right,
+		var(--lanino) 20%,
+		var(--elnina) 80%
+	);
+	background-clip: text;
+}
 .eram { color: var(--eram) }
 /* Chapter 4 */
 .gerson { color: var(--gerson) }
@@ -1175,6 +1184,7 @@ d-sprite {
 /* Speaker labels */
 d-speaker {
 	color: var(--lightyellow);
+	text-shadow: none;
 	&::after { content: ":" }
 	d-box:not([theme^=battletalk], [theme=objreact]):not(:state(compact)) &,
 	d-box[theme=battletalkround]:not(:state(compact)) &:is(.tenna, .susie, .ralsei, .lancer) {

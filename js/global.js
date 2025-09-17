@@ -95,6 +95,10 @@ class DialogueSpeaker extends HTMLElement {
 					this.classList.add("spamton");
 					break;
 
+				case "Lanino and Elnina":
+					this.classList.add("weather");
+					break;
+
 				case "Shadow Mantle holder":
 					this.classList.add("eram");
 					break;
