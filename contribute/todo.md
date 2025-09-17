@@ -160,8 +160,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/darkworldintro` - sanctuary entrance
 		* `/soundofjustice` - SoJ fight (continuing into Ralsei scene)
 			* `#postfight`
-		* `/finalconfrontation` - from confronting the knight to after defeating the titan
-			* `#posttitan` - after titan fight
 		* `/return` - back to the church
 		* `/mike` - Getting into Mike's room in TV Studio
 			* `#postfight`
@@ -201,7 +199,9 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* ~~`/recruits` - Profiles for recruited enemies~~ DONE up to Chapter 4
 	* ~~`/savepoints` - Youuuu guessed it. Save point text. The power of X fills you and all that.~~ DONE up to Chapter 4
 	* Maybe something for general menu text...?
-	* Generic text for stuff like shops ("buy it for $### ?" and "sell it for $### ?") and opening chests and all that. May overlap with above point in some cases.
+	* `/generic` - Generic text for stuff like shops ("buy it for $### ?" and "sell it for $### ?") and opening chests and all that. May overlap with above point in some cases.
+		* `#treasurechest`
+			* `#treasurechest-item`
 	* AH... TITLES... the whole, Level 1 Dark Knight stuff. In progress at `/powermenu`
 	* ~~`/spells` - Spells listed in the POWER menu with overworld/battle descriptions and usage text~~ DONE up to Chapter 4
 	* Oh also. Death messages. Hello again ch3 Voice
