@@ -5,7 +5,7 @@
 * From the navbar, select `File > Open`.
 * Enter the following into File Explorer's path: ``%ProgramFiles(x86)%\Steam\steamapps\common\DELTARUNE`. You'll see a bunch of `chapter#_windows` folders; each of these contain a `data.win` file. There's also a `data.win` in the root folder, which corresponds to the file selection screen. Select the `data.win` file for the chapter you want to view the script/assets of.
 * All the game scripts are under the Code dropdown in the left navigation menu. These have the code for what interactions play when. You can open and start reading from basically wherever!
-	* ...Mind you, actually navigating to the script file that contains stuff you want is annoying. What I've been doing is watching a playthrough for the room that I want to get dialogue from, searching up a line of dialogue, and then reading through the rest of the file to see all the dialogue from that particular room.
+	* …Mind you, actually navigating to the script file that contains stuff you want is annoying. What I've been doing is watching a playthrough for the room that I want to get dialogue from, searching up a line of dialogue, and then reading through the rest of the file to see all the dialogue from that particular room.
 
 ### Notes
 For chapter 2 onwards, dialogue is hardcoded into the script files. But for **chapter 1**, the dialogue is all stored in `%ProgramFiles(x86)%\Steam\steamapps\common\DELTARUNE\chapter1_windows\lang\lang_en.json` in key-value format, and referenced in the code as `scr_84_get_lang_string(KEY_GOES_HERE)`. So if the code says something like:
@@ -25,14 +25,14 @@ Dialogue is stored as strings *(if you haven't programmed before, that just mean
 
 | Symbol | Meaning | Examples |
 | :----: | ------- | -------- |
-| `^#` | Pause for a little bit<br>The number represents how long to pause<br>Irrelevant, delete these | `^1`, `^2`, ... |
-| `&` | Forced linebreak (textbox)<br>Generally indicates that text should be split into different `<d-text>`s, unless it's purely for visual format | `"* Line 1&* Line 2"`<br>...turns into...<br>`* Line 1`<br>`* Line 2`<br><br>`"* This is a long line and is only&split for visual reasons."`<br>...turns into...<br>`* This is a long line and is only split for visual reasons.` |
-| `#` | Forced linebreak (choice menu)<br>Can be replaced with `\s`, `\b`, and `\h` as appropriate. See the HTML guide for more on that | `"No No No#No No No#No No No"`<br>...can turn into...<br>`No No No`<br>`No No No`<br>`No No No` |
+| `^#` | Pause for a little bit<br>The number represents how long to pause<br>Irrelevant, delete these | `^1`, `^2`, … |
+| `&` | Forced linebreak (textbox)<br>Generally indicates that text should be split into different `<d-text>`s, unless it's purely for visual format | `"* Line 1&* Line 2"`<br>…turns into…<br>`* Line 1`<br>`* Line 2`<br><br>`"* This is a long line and is only&split for visual reasons."`<br>…turns into…<br>`* This is a long line and is only split for visual reasons.` |
+| `#` | Forced linebreak (choice menu)<br>Can be replaced with `\s`, `\b`, and `\h` as appropriate. See the HTML guide for more on that | `"No No No#No No No#No No No"`<br>…can turn into…<br>`No No No`<br>`No No No`<br>`No No No` |
 | `/` | End of a single textbox (i.e. wait for user to press CONFIRM) |
 | `%` | End of a conversation/chunk. Sometimes gets repeated, as in `%%` |
 | `\\C#` | Open a choice menu<br>`#` represents number of choices<br>Choices 0–3 are ordered left/right/up/down | `\C2`: 2 choices<br>`\C3`: 3 choices<br>`\C4`: 4 choices |
 | `\\M#` | sets `global.flag[20]`, which "Controls how some characters' overworld sprites interact with their dialogue, among other things."<br/>You can just ignore this one pretty much |
-| `\\c?` | Change color to `?`<br>Replace this with `<span class="COLOR_CODE">...</span>`<br>Specific codes include:<br>`\cR`: red<br>`\cB`: blue<br>`\cY`: yellow<br>`\cG`: green<br>`\cW`: white<br>`\cX`: black<br>`\cP`: purple<br>`\cM`: maroon<br>`\cO`: orange<br>`\cA`: lightblue<br>`\cS`: pink<br>`\cV`: lightgreen<br>`\cI`: iceblue  | `"There's \\cYyellow\\cW text"`<br>...turns into...<br>`There's <span class="yellow">yellow</span> text`<br>...or...<br>`There's <span class="cY">yellow</span> text`<br><br>`"There's \\cScolored\\cW text"`<br>...turns into...<br>`There's <span class="cS">colored</span> text`<br>...or...<br>`There's <span class="pink">colored</span> text` |
+| `\\c?` | Change color to `?`<br>Replace this with `<span class="COLOR_CODE">…</span>`<br>Specific codes include:<br>`\cR`: red<br>`\cB`: blue<br>`\cY`: yellow<br>`\cG`: green<br>`\cW`: white<br>`\cX`: black<br>`\cP`: purple<br>`\cM`: maroon<br>`\cO`: orange<br>`\cA`: lightblue<br>`\cS`: pink<br>`\cV`: lightgreen<br>`\cI`: iceblue  | `"There's \\cYyellow\\cW text"`<br>…turns into…<br>`There's <span class="yellow">yellow</span> text`<br>…or…<br>`There's <span class="cY">yellow</span> text`<br><br>`"There's \\cScolored\\cW text"`<br>…turns into…<br>`There's <span class="cS">colored</span> text`<br>…or…<br>`There's <span class="pink">colored</span> text` |
 | `\\c0` | Reset color (generally to white) |
 | `\\F?` | Switch to a specific character's set of face sprites ([see below](#variable-globalfc-or-the-f-command)) |
 | `\\E?` | Switch to a specific face sprite for the currently-selected character ([see below](#variable-globalfe-or-the-e-command)) |
@@ -138,7 +138,7 @@ This function takes one argument, the character name, and automatically figures 
 
 Most arguments are pretty intuitive—either the character's name, or the first three letters of their name. The only unusual one is `queen_2`/`que_2`, which is specifically Giga Queen after you've won the fight and the bot is starting to break down.
 
-There are also some variants which set specific character faces, I think...? Ones like `scr_susface()`, `scr_ralface()` etc. In these ones, the *last* number is the `global.fe` value. So `scr_susface(5, 3)` is using the THIRD Susie sprite.
+There are also some variants which set specific character faces, I think…? Ones like `scr_susface()`, `scr_ralface()` etc. In these ones, the *last* number is the `global.fe` value. So `scr_susface(5, 3)` is using the THIRD Susie sprite.
 
 ## Decoding the flags and other variables
 The primary resource you'll need is [Flags Guide](https://github.com/Jacky720/FloweysTimeMachine/blob/deltarune/data.js).
@@ -190,7 +190,7 @@ credits: >
 sources:
   -
     name: gml_GlobalScript_script_name_here
-    chapters: [1, 2, ...]
+    chapters: [1, 2, …]
   -
     name: More list items with name/chapter pairings; each item is indicated by a hyphen. Indentation is very important - keep it consistent!
     chapters: [1]

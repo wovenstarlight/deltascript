@@ -8,7 +8,7 @@ Nothing right now!
 ## Specific pages
 * Home page could use cleanup/more information. Some sections that might be nice to have:
 	* Progress updates (what's finished/new arrivals, what's currently being focused on)
-	* Priority list (what will be worked on after the current tasks are complete, what needs attention, what's been requested...)
+	* Priority list (what will be worked on after the current tasks are complete, what needs attention, what's been requested…)
 * ch3 0.0.089/ch4 0.0.088 has typo fixes:
 	* Elnina/Lanino page: Tenna's win condition declaration
 	* Shuttah(?)'s "you have seen naught" dialogue in `obj_npc_room`
@@ -17,7 +17,7 @@ Nothing right now!
 * ch3 0.0.098:
 	* lancers get removed after leaving ball machine room (can check for `scr_keyitemremove(8)`)
 * ch4 0.0.098:
-	* Um. Okay so something gerson throws gets a Thar she blows line...? `gml_Object_obj_dw_church_darkmaze_Step_2`
+	* Um. Okay so something gerson throws gets a Thar she blows line…? `gml_Object_obj_dw_church_darkmaze_Step_2`
 	* `gml_Object_obj_npc_room_Other_10` New Top Chef dialogue for getting that SpinCake. All Lightners do is ask for Spin Cake eat hot chip and lie
 
 ### Page list
@@ -31,7 +31,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* ~~`/downstairs` - Ground floor: kitchen/living room~~ DONE up to Chapter 4
 			* ~~`/bathroom` - Downstairs bathroom~~ DONE up to Chapter 4
 			* ~~`/yard` - Front yard~~ DONE up to Chapter 4
-			* possibly someday will need `/torielroom`...?
+			* possibly someday will need `/torielroom`…?
 		* Noelle's house `/holidayresidence`
 			* ~~`/yard` - Holidays' front yard~~ DONE up to Chapter 4
 			* ~~`/interior` - The general indoors; first/second/third floor~~ DONE up to Chapter 4
@@ -40,9 +40,9 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* ~~`/noelleroom` - Noelle's room~~ DONE up to Chapter 4
 			* ~~`/dessroom` - Dess's room~~ DONE up to Chapter 4
 			* nothing interactive in the bathroom so no page for that
-			* possibly someday will need `/rudycarolroom`...?
+			* possibly someday will need `/rudycarolroom`…?
 		* School `/school`
-			* exterior...? IIRC in ch4 end Susie will stop at the doors with some dialogue...
+			* exterior…? IIRC in ch4 end Susie will stop at the doors with some dialogue…
 			* ~~`/torielclass` - Toriel's classroom~~ DONE up to Chapter 4
 			* ~~`/alphysclass` - Alphys's classroom~~ DONE up to Chapter 4
 			* ~~`/unusedclass` - Unused classroom (former card world)~~ DONE up to Chapter 4
@@ -76,9 +76,9 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* Town Hall
 		* Southwest - Graveyard
 		* Far south - Bunker
-		* QUESTION: where to put interactions that happen in the streets... do the streets themselves need pages.
+		* QUESTION: where to put interactions that happen in the streets… do the streets themselves need pages.
 			* by "interactions in the streets" i mean things like. sans outside the grocery store. rain kid playing in the puddles. the milk sicko being like "Damn your family is messy as hell" in chapter 4
-			* could put them under the building they're closest to...? But what if they're like. Not directly related to the building. I'm thinking about chapter 2 undyne "handling" the traffic jam next to the library. That wasn't involved with any nearby building
+			* could put them under the building they're closest to…? But what if they're like. Not directly related to the building. I'm thinking about chapter 2 undyne "handling" the traffic jam next to the library. That wasn't involved with any nearby building
 			* Maybe just a general "Streets" page for the interactions that can't be tied to specific buildings
 	* Dark Worlds
 		* `/closetworld` - Supply closet dark world, contains Castle Town and ??????
@@ -130,7 +130,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* Ok for this one there's enough Stuff that i'm just listing like. Pages that have been linked to from elsewhere. So you can update the URLs as/when necessary. Pages not mentioned here, just create as you like and make sure you add them to the [index](../chapters/index.html). If you're not sure whether a page already exists, search for one of its dialogue lines and see if any pages come up
 	* `/chapter1`
 		* Vessel creation up to all Castle Town scenes DONE
-		* `/field` (placeholder URL, update when created) - Field scenes... Ok IDK how to do this part honestly
+		* `/field` (placeholder URL, update when created) - Field scenes… Ok IDK how to do this part honestly
 		* `/thrashing` Susie & Lancer joint fight's pre-/post-encounter dialogue
 		* `/prisonbreak` - The prison scene with Susie breaking out, encountering Lancer, and freeing Kris/Ralsei
 	* `/chapter2`
@@ -169,7 +169,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 * `/encounters` - Check descriptions, ACT descriptions, etc. This is probably gonna have a ton of subpages, I'd guess one for every potential enemy. At the very least, the big story-critical encounters (e.g. all boss fights) would need their own subpages which the `/chapters` pages could then link to.
 	* OK SO. The rule I've settled on is that if dialogue has the fancy silver border then it doesn't count as part of the encounter, it's instead a pre-/post-fight cutscene which will get its own page under `/chapters`. So only include the dialogue that's actually using the encounter UI on these pages.
 		* Some of the chapter 1 pages don't follow this rule yet but that's going to be fixed don't worry
-	* Include disambiguation pages for the following. Maybe we give them more descriptive names...? Double-check the URLs before creating the disambigs
+	* Include disambiguation pages for the following. Maybe we give them more descriptive names…? Double-check the URLs before creating the disambigs
 		* `/tenna`: Bonus Round and final showdown
 	* Chapter 1
 		* gml_Object_obj_ralseienemy_Step_0 (Unused Ralsei tutorial) `/ralsei`
@@ -186,11 +186,11 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* Party dojo
 		* gml_Object_obj_dojograzeenemy_Step_0 `/jigsawrydojo` or `/dojograze` (dojo's graze challenge, ch2)
 		* gml_Object_obj_dojo_spareenemy_Step_0 `/jigsawjoe` or `/dojospare` (dojo's spare challenge, ch2)
-		* the ch2 allstars fight...?
+		* the ch2 allstars fight…?
 	* gml_Object_obj_multiboss_enemy1_Step_0/gml_Object_obj_multiboss_enemy2_Step_0/gml_Object_obj_multiboss_enemy3_Step_0 `/multiboss` &LeftArrow; no idea what these are. test enemies?
 	* gml_Object_obj_multiboss_controller_enemy1_Step_0/gml_Object_obj_multiboss_controller_enemy2_Step_0/gml_Object_obj_multiboss_controller_enemy3_Step_0 `/multibosscontroller` &LeftArrow; no idea what these are. test enemies?
 	* Figure out where these go because I don't have the brain power atm: ch3 gml_Object_obj_b1enemy_Step_0, allch gml_Object_obj_baseenemy_Step_0
-* Miscellaneous pages... `/misc`
+* Miscellaneous pages… `/misc`
 	* ~~`/darkitems` - Consumables, key items, etc. Descriptions, usage text and reactions from the party members. Shop descriptions too, if we can find them?~~ DONE up to Chapter 4
 	* ~~`/lightitems` - Light World items. Crosslink to Dark World equivalents.~~ DONE up to Chapter 4
 	* Equipment: Descriptions, reactions from the party members, shop descriptions. LW/DW equivalents. Originally intended to be at `/equipment` but goddamn it got long so we're splitting it up
@@ -198,10 +198,10 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* ~~`/armor` - Defense equipment.~~ DONE up to Chapter 4
 	* ~~`/recruits` - Profiles for recruited enemies~~ DONE up to Chapter 4
 	* ~~`/savepoints` - Youuuu guessed it. Save point text. The power of X fills you and all that.~~ DONE up to Chapter 4
-	* Maybe something for general menu text...?
+	* Maybe something for general menu text…?
 	* `/generic` - Generic text for stuff like shops ("buy it for $### ?" and "sell it for $### ?") and opening chests and all that. May overlap with above point in some cases.
 		* `#treasurechest`
 			* `#treasurechest-item`
-	* AH... TITLES... the whole, Level 1 Dark Knight stuff. In progress at `/powermenu`
+	* AH… TITLES… the whole, Level 1 Dark Knight stuff. In progress at `/powermenu`
 	* ~~`/spells` - Spells listed in the POWER menu with overworld/battle descriptions and usage text~~ DONE up to Chapter 4
 	* Oh also. Death messages. Hello again ch3 Voice
