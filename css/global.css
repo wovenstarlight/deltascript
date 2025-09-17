@@ -94,6 +94,8 @@
 	--font-sans: "DeltaFont Comic Sans", var(--font-base);
 	--font-dotum: "DeltaFont Dotum", var(--font-base);
 	--font-8bit: "DeltaFont 8-Bit", var(--font-base);
+	
+	--prophecy-size: 40em;
 }
 /* Dim colors */
 body.dim {
@@ -1232,12 +1234,14 @@ d-text {
 
 	[theme=prophecy] & {
 		font-family: "DeltaFont Prophecy", var(--font-base);
-		background: #42d0ff url("../assets/images/story/prophecy.png") repeat center / contain;
+		background: #42d0ff url("../assets/images/story/prophecy.png") repeat center / var(--prophecy-size) auto;
 		background-clip: text;
 		color: rgb(from #42d0ff r g b / 0.5);
 		body:not(.noanim) & { animation: bgshift 10s linear infinite }
 		body:not(.dim) & { filter: brightness(1.75) saturate(1.5) }
 	}
+	body:not(.noanim) [theme=prophecy]:nth-child(odd) &:nth-child(even),
+	body:not(.noanim) [theme=prophecy]:nth-child(even) &:nth-child(odd) { animation-delay: 3s }
 
 	&[asterisk] {
 		padding-inline-start: 2ch;
@@ -1325,7 +1329,7 @@ d-text {
 }
 @keyframes bgshift {
 	0% { background-position-x: 0 }
-	100% { background-position-x: 100% }
+	100% { background-position-x: var(--prophecy-size) }
 }
 /* Choice menus only */
 d-choices {
