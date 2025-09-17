@@ -152,8 +152,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/doomboard`
 		* `/intotvworld` - After escaping the Doom Board via Zapper
 		* `/cityboard` - The unused version of Board 3
-		* `/rouxls`
-			* `#postfight`
+		* `/tennaalone` - Final sequence where Tenna is abandoned by the remaining Darkners and even Mike
 	* `/chapter4`
 		* `/noellevisit` - Noelle's house intro. Update this link on other pages if you end up splitting it further
 		* `/bathroomweird` - maybe merge with below for an `outroweird`
