@@ -10,15 +10,12 @@ Nothing right now!
 	* Progress updates (what's finished/new arrivals, what's currently being focused on)
 	* Priority list (what will be worked on after the current tasks are complete, what needs attention, what's been requested…)
 * ch3 0.0.089/ch4 0.0.088 has typo fixes:
-	* Elnina/Lanino page: Tenna's win condition declaration
 	* Shuttah(?)'s "you have seen naught" dialogue in `obj_npc_room`
-	* Watercooler chat ACT description
 	* `obj_dw_church_waterfallroom` "if only you had something **to** help you climb"
 * ch3 0.0.098:
 	* lancers get removed after leaving ball machine room (can check for `scr_keyitemremove(8)`)
 * ch4 0.0.098:
-	* Um. Okay so something gerson throws gets a Thar she blows line…? `gml_Object_obj_dw_church_darkmaze_Step_2`
-	* `gml_Object_obj_npc_room_Other_10` New Top Chef dialogue for getting that SpinCake. All Lightners do is ask for Spin Cake eat hot chip and lie
+	* `gml_Object_obj_dw_church_darkmaze_Step_2` If Guei's OldMan is used on the same turn as both Gueis are spared, then Gerson's cane falls out of the encounter and slides over into his study, and interacting with it fast enough gets you a `Thar she blows` line
 
 ### Page list
 Brainstorming what pages we'd want. This is a changeable list! Feel free to add and edit!
