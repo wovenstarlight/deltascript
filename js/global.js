@@ -506,6 +506,7 @@ function setUp() {
 	if (localStorage.getItem("dyslexicMode")?.length) {
 		// Dyslexic mode has been set to ON
 		document.body.classList.add("dyslexic");
+		document.getElementById("toggle-opendyslexic").checked = true;
 	}
 
 	// Force-view all choices
