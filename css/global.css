@@ -33,6 +33,10 @@
 	src: url("../assets/fonts/fnt_legend.otf");
 }
 @font-face {
+	font-family: "DeltaFont TV";
+	src: url("../assets/fonts/fnt_tv.otf");
+}
+@font-face {
 	font-family: "OpenDyslexic Mono";
 	src: url("../assets/fonts/OpenDyslexicMono-Regular.otf");
 }
@@ -104,6 +108,7 @@
 	--font-dotum: "DeltaFont Dotum", var(--font-base);
 	--font-8bit: "DeltaFont 8-Bit", var(--font-base);
 	--font-prophecy: "DeltaFont Prophecy", var(--font-base);
+	--font-tv: "DeltaFont TV", var(--font-base);
 
 	--prophecy-size: 40em;
 }
@@ -279,6 +284,10 @@ d-box[theme=battlemenu],
 	body.dyslexic & { font-weight: bold }
 }
 .fnt-eightbit, .fnt-8bit { font-family: var(--font-8bit) }
+.fnt-tv {
+	color: var(--red);
+	font-family: var(--font-tv);
+}
 /* #endregion */
 h1, h2, h3, h4, h5, h6 { font-weight: normal }
 h2, h3, h4, h5, h6 {
@@ -597,6 +606,7 @@ body {
 		--font-dotum: "OpenDyslexic Mono", "DeltaFont Dotum", var(--font-base);
 		--font-8bit: "OpenDyslexic Mono", "DeltaFont 8-Bit", var(--font-base);
 		--font-prophecy: "OpenDyslexic", "DeltaFont Prophecy", var(--font-base);
+		--font-tv: "OpenDyslexic Mono", "DeltaFont TV", var(--font-base);
 		font-size: 0.91em;
 		--basewidth: 26.6em;
 		--baseheight: 6.6em;
