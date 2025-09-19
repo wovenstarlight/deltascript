@@ -30,11 +30,12 @@
 		return nums.map(num => "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".charAt(num));
 	}
 
+	// getting TP values from the 0-250 internal range to the 0-100 percent range
 	function tp(num) {
 		return Math.ceil((num / 250) * 100);
 	}
 
-
+	// getting room names from their internal IDs
 	function getRoom(chapter, ...roomIds) {
 		let roomLongIds = chapter === 1 ? {
 			10283: "room_krisroom",
@@ -1908,6 +1909,257 @@
 			: `No such chapter!`
 		);
 		else console.log(roomIds.map(id => roomShortIds[id]).join("\n"));
+	}
+
+	// getting object names from their internal IDs
+	const ITEMS = [
+		{},
+		{ id: "darkcandy", name_full: "Dark Candy" },
+		{ id: "revivemint", name_full: "Revive Mint", name_short: "ReviveMint" },
+		{ id: "glowshard", name_full: "Glowshard" },
+		{ id: "manual", name_full: "Manual" },
+		{ id: "brokencakeunused", name_full: "Broken Cake", name_short: "BrokenCake" },
+		{ id: "topcake", name_full: "Top Cake" },
+		{ id: "spincake", name_full: "Spin Cake", name_short: "SpinCake" },
+		{ id: "darkburger", name_full: "Darkburger" },
+		{ id: "lancercookie", name_full: "Lancer Cookie", name_short: "LancerCookie" },
+		{ id: "gigasalad", name_full: "Giga Salad", name_short: "GigaSalad" },
+		{ id: "clubssandwich", name_full: "Clubs Sandwich", name_short: "Clubswich" },
+		{ id: "heartsdonut", name_full: "Hearts Donut", name_short: "HeartsDonut" },
+		{ id: "chocodiamond", name_full: "Choco Diamond", name_short: "ChocDiamond" },
+		{ id: "favoritesandwich", name_full: "Favorite Sandwich", name_short: "FavSandwich" },
+		{ id: "rouxlsroux", name_full: "Rouxls Roux", name_short: "RouxlsRoux" },
+		{ id: "cdbagel", name_full: "CD Bagel" },
+		{ id: "mannequin", name_full: "Mannequin" },
+		{ id: "kristea / rottentea", name_full: "Kris Tea / Rotten Tea", name_short: "N/A / RottenTea" },
+		{ id: "noelletea / rottentea", name_full: "Noelle Tea / Rotten Tea", name_short: "N/A / RottenTea" },
+		{ id: "ralseitea / rottentea", name_full: "Ralsei Tea / Rotten Tea", name_short: "N/A / RottenTea" },
+		{ id: "susietea / rottentea", name_full: "Susie Tea / Rotten Tea", name_short: "N/A / RottenTea" },
+		{ id: "ddburger", name_full: "DD-Burger" },
+		{ id: "lightcandy", name_full: "Light Candy", name_short: "LightCandy" },
+		{ id: "butlerjuice", name_full: "Butler Juice", name_short: "ButJuice" },
+		{ id: "spaghetticode", name_full: "Spaghetti Code", name_short: "SpagettiCode" },
+		{ id: "javacookie", name_full: "Java Cookie", name_short: "JavaCookie" },
+		{ id: "tensionbit", name_full: "Tension Bit", name_short: "TensionBit" },
+		{ id: "tensiongem", name_full: "Tension Gem", name_short: "TensionGem" },
+		{ id: "tensionmax", name_full: "Tension Max", name_short: "TensionMax" },
+		{ id: "revivedust", name_full: "Revive Dust", name_short: "ReviveDust" },
+		{ id: "revivebrite", name_full: "Revive Brite", name_short: "ReviveBrite" },
+		{ id: "spoison", name_full: "S.POISON" },
+		{ id: "dogdollar", name_full: "Dog Dollar", name_short: "DogDollar" },
+		{ id: "tvdinner", name_full: "TV Dinner", name_short: "TVDinner" },
+		{ id: "pipis", name_full: "Pipis" },
+		{ id: "flatsoda", name_full: "Flat Soda", name_short: "FlatSoda" },
+		{ id: "tvslop", name_full: "TV Slop", name_short: "TVSlop" },
+		{ id: "execbuffet", name_full: "Exec Buffet", name_short: "ExecBuffet" },
+		{ id: "deluxedinner", name_full: "Deluxe Dinner", name_short: "DeluxeDinner" },
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{ id: "ancientsweet", name_full: "Ancient Sweet", name_short: "AncientSweet" },
+		{ id: "rhapsotea", name_full: "Rhapsotea" },
+		{ id: "scarlixir", name_full: "Scarlixir" },
+		{ id: "bittertear", name_full: "Bitter Tear", name_short: "BitterTear" },
+	];
+	const KEYITEMS = [
+		{},
+		{ id: "cellphone", name_full: "Cell Phone" },
+		{ id: "egg", name_full: "Egg" },
+		{ id: "brokencake", name_full: "Broken Cake", name_short: "BrokenCake" },
+		{ id: "brokenkeya", name_full: "Broken Key A" },
+		{ id: "doorkey", name_full: "Door Key" },
+		{ id: "brokenkeyb", name_full: "Broken Key B" },
+		{ id: "brokenkeyc", name_full: "Broken Key C" },
+		{ id: "lancer", name_full: "Lancer" },
+		{ id: "rouxlskaard", name_full: "Rouxls Kaard" },
+		{ id: "emptydisk", name_full: "Empty Disk", name_short: "EmptyDisk" },
+		{ id: "loadeddisk", name_full: "Loaded Disk", name_short: "LoadedDisk" },
+		{ id: "keygen", name_full: "KeyGen" },
+		{ id: "shadowcrystal", name_full: "Shadow Crystal", name_short: "ShadowCrystal" },
+		{ id: "starwalker", name_full: "Starwalker" },
+		{ id: "purecrystal", name_full: "Pure Crystal", name_short: "PureCrystal" },
+		{ id: "oddcontroller", name_full: "Odd Controller", name_short: "OddController" },
+		{ id: "backstagepass", name_full: "Backstage Pass", name_short: "BackstagePass" },
+		{ id: "tripticket", name_full: "Trip Ticket", name_short: "TripTicket" },
+		{ id: "lancercontroller", name_full: "Lancer Controller", name_short: "LancerCon / LancerConX2 / LancerConX3" },
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{ id: "sheetmusic", name_full: "Sheet Music", name_short: "SheetMusic" },
+		{ id: "claimbclaws", name_full: "Claimb Claws", name_short: "ClaimbClaws" },
+	];
+	const ARMOR = [
+		{},
+		{ id: "ambercard", name_full: "Amber Card" },
+		{ id: "dicebrace", name_full: "Dice Brace" },
+		{ id: "pinkribbon", name_full: "Pink Ribbon" },
+		{ id: "whiteribbon", name_full: "White Ribbon" },
+		{ id: "ironshackle", name_full: "Iron Shackle", name_short: "IronShackle" },
+		{ id: "mousetoken", name_full: "Mouse Token", name_short: "MouseToken" },
+		{ id: "jevilstail", name_full: "Jevilstail" },
+		{ id: "silvercard", name_full: "Silver Card" },
+		{ id: "twinribbon", name_full: "Twin Ribbon", name_short: "TwinRibbon" },
+		{ id: "glowwrist", name_full: "Glow Wrist", name_short: "GlowWrist" },
+		{ id: "chainmail", name_full: "Chain Mail", name_short: "ChainMail" },
+		{ id: "bshotbowtie", name_full: "B. Shot Bowtie", name_short: "B.ShotBowtie" },
+		{ id: "spikeband", name_full: "Spike Band", name_short: "SpikeBand" },
+		{ id: "silverwatch", name_full: "Silver Watch" },
+		{ id: "tensionbow", name_full: "Tension Bow", name_short: "TensionBow" },
+		{ id: "mannequin", name_full: "Mannequin" },
+		{ id: "darkgoldband", name_full: "Dark Gold Band", name_short: "DarkGoldBand" },
+		{ id: "skymantle", name_full: "Sky Mantle", name_short: "SkyMantle" },
+		{ id: "spikeshackle", name_full: "Spike Shackle", name_short: "SpikeShackle" },
+		{ id: "frayedbowtie", name_full: "Frayed Bowtie", name_short: "FrayedBowtie" },
+		{ id: "dealmaker", name_full: "Dealmaker" },
+		{ id: "royalpin", name_full: "Royal Pin", name_short: "RoyalPin" },
+		{ id: "shadowmantle", name_full: "Shadow Mantle", name_short: "ShadowMantle" },
+		{ id: "lodestone", name_full: "Lode Stone", name_short: "LodeStone" },
+		{ id: "gingerguard", name_full: "Ginger Guard", name_short: "GingerGuard" },
+		{ id: "blueribbon", name_full: "Blue Ribbon", name_short: "BlueRibbon" },
+		{ id: "tennatie", name_full: "Tenna Tie", name_short: "TennaTie" },
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{ id: "waferguard", name_full: "Waferguard" },
+		{ id: "mysticband", name_full: "Mystic Band", name_short: "MysticBand" },
+		{ id: "powerband", name_full: "Power Band", name_short: "PowerBand" },
+		{ id: "princessribbon", name_full: "Princess Ribbon", name_short: "PrincessRBN" },
+		{ id: "goldwidow", name_full: "Gold Widow", name_short: "GoldWidow" },
+	];
+	const WEAPONS = [
+		{},
+		{ id: "woodblade", name_full: "Wood Blade" },
+		{ id: "maneax", name_full: "Mane Ax" },
+		{ id: "redscarf", name_full: "Red Scarf" },
+		{ id: "everybodyweapon", name_full: "Everybody Weapon", name_short: "EverybodyWeapon" },
+		{ id: "spookysword", name_full: "Spookysword" },
+		{ id: "braveax", name_full: "Brave Ax" },
+		{ id: "devilsknife", name_full: "Devilsknife" },
+		{ id: "trefoil", name_full: "Trefoil" },
+		{ id: "ragger", name_full: "Ragger" },
+		{ id: "daintyscarf", name_full: "Dainty Scarf", name_short: "DaintyScarf" },
+		{ id: "twistedsword", name_full: "Twisted Sword", name_short: "TwistedSwd" },
+		{ id: "snowring", name_full: "Snow Ring", name_short: "SnowRing" },
+		{ id: "thornring", name_full: "Thorn Ring", name_short: "ThornRing" },
+		{ id: "bounceblade", name_full: "Bounce Blade", name_short: "BounceBlade" },
+		{ id: "cheerscarf", name_full: "Cheer Scarf", name_short: "CheerScarf" },
+		{ id: "mechasaber", name_full: "Mecha Saber", name_short: "MechaSaber" },
+		{ id: "autoaxe", name_full: "Auto Axe", name_short: "AutoAxe" },
+		{ id: "fiberscarf", name_full: "Fiber Scarf", name_short: "FiberScarf" },
+		{ id: "ragger2", name_full: "Ragger 2", name_short: "Ragger2" },
+		{ id: "brokensword", name_full: "Broken Sword", name_short: "BrokenSwd" },
+		{ id: "puppetscarf", name_full: "Puppet Scarf", name_short: "PuppetScarf" },
+		{ id: "freezering", name_full: "Freeze Ring", name_short: "FreezeRing" },
+		{ id: "saber10", name_full: "Saber 10", name_short: "Saber10" },
+		{ id: "toxicaxe", name_full: "Toxic Axe", name_short: "ToxicAxe" },
+		{ id: "flexscarf", name_full: "Flex Scarf", name_short: "FlexScarf" },
+		{ id: "blackshard", name_full: "Black Shard", name_short: "BlackShard" },
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{ id: "jingleblade", name_full: "Jingle Blade", name_short: "JingleBlade" },
+		{ id: "scarfmark", name_full: "Scarf Mark", name_short: "ScarfMark" },
+		{ id: "justiceaxe", name_full: "Justice Axe", name_short: "JusticeAxe" },
+		{ id: "winglade", name_full: "Winglade" },
+		{ id: "absorbax", name_full: "Absorb Ax", name_short: "AbsorbAx" },
+	];
+	function getObj(...data) {
+		data.forEach(pair => {
+			switch (pair[0]) {
+				case "item":
+					me = ITEMS[pair[1]];
+					break;
+
+				case "key":
+					me = KEYITEMS[pair[1]];
+					break;
+
+				case "armor":
+					me = ARMOR[pair[1]];
+					break;
+
+				case "weapon":
+					me = WEAPONS[pair[1]];
+					break;
+
+				case "money":
+					me = `${pair[1]} Dark Dollars`;
+					break;
+
+				case "points":
+					me = `${pair[1]} POINTs`;
+					break;
+
+				case "none":
+				default:
+					me = "Nothing";
+			}
+
+			console.log(me);
+		})
 	}
 	</script>
 	{%- endif %}
