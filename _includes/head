@@ -32,11 +32,23 @@
 
 	// getting TP values from the 0-250 internal range to the 0-100 percent range
 	function tp(num) {
+		if (num === "help") {
+			console.log("Provide a number from 0–250, inclusive, and it will be turned into a TP percent value.");
+			return;
+		}
 		return Math.ceil((num / 250) * 100);
 	}
 
 	// getting room names from their internal IDs
 	function getRoom(chapter, ...roomIds) {
+		if (roomIds.length === 0 && chapter === "help") {
+			console.log(`Provide arguments:
+  chapter: 1 | 2 | 3 | 4	// the chapter the desired room(s) belongs to
+  roomIds: int[]	// the room IDs
+If room IDs are the long versions (in the 10,000s), then the first entry in roomIds should be "long".`);
+			return;
+		}
+
 		let roomLongIds = chapter === 1 ? {
 			10283: "room_krisroom",
 			10284: "room_krishallway",
@@ -2127,6 +2139,16 @@
 		{ id: "absorbax", name_full: "Absorb Ax", name_short: "AbsorbAx" },
 	];
 	function getObj(...data) {
+		if (data.length === 1 && data[0] === "help") {
+			console.log(`Provide arguments in the format:
+  [
+    objType: "item" | "key" | "armor" | "weapon" | "money" | "points" | "nothing" | string,
+    objId: int,
+  ]
+…where objId is the internal ID for the regular/key item, armor, or weapon; OR the amount of money/POINTs.`);
+			return;
+		}
+
 		data.forEach(pair => {
 			switch (pair[0]) {
 				case "item":
