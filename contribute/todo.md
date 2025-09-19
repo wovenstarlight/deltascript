@@ -12,8 +12,6 @@ Nothing right now!
 * ch3 0.0.094/ch4 0.0.094 has typo fixes:
 	* Shuttah(?)'s "you have seen naught" dialogue in `obj_npc_room`
 	* `obj_dw_church_waterfallroom` "if only you had something **to** help you climb"
-* ch3 0.0.098:
-	* lancers get removed after leaving ball machine room (can check for `scr_keyitemremove(8)`)
 * ch4 0.0.098:
 	* `gml_Object_obj_dw_church_darkmaze_Step_2` If Guei's OldMan is used on the same turn as both Gueis are spared, then Gerson's cane falls out of the encounter and slides over into his study, and interacting with it fast enough gets you a `Thar she blows` line
 
@@ -113,8 +111,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 				* `/mainroom` - The central room
 				* `/rewardsroom` - ABC-Rank rewards room
 				* `/cooler` - C-Rank rewards room
-				* `/ballmachine` - B-Rank rewards room
-					* `#1225` - `gacharoom_unknown`
 				* `/arcade` - A-Rank rewards room
 				* `/starchangingroom` - S-Rank rewards room
 				* `/backstage` - Backstage area

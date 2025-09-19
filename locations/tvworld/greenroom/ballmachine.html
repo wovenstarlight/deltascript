@@ -1,0 +1,534 @@
+---
+title: Ball Machine
+
+description: >
+  <p>Narration and dialogue for the B-Rank rewards room in TV World.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [3]
+    note: user guide
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [3]
+    note: user guide text
+  -
+    name: gml_Object_obj_room_ranking_b_Step_0
+    chapters: [3]
+    note: ball machine, POINTs machine, Trip Ticket
+  -
+    name: gml_Object_obj_room_ranking_b_Draw_0
+    chapters: [3]
+    note: gacha menu
+  -
+    name: gml_Object_obj_ch3_gachapon_Create_0
+    chapters: [3]
+    note: gacha prize list
+  -
+    name: gml_Object_obj_ch3_gachapon_Draw_0
+    chapters: [3]
+    note: gacha prize get narration/dialogue
+  -
+    name: gml_Object_obj_ch3_gachaunknown_Step_0
+    chapters: [3]
+    note: 1225 POINTs mystery room
+
+toc:
+  -
+    id: userguide
+    name: User guide
+  -
+    id: ballmachine
+    name: Ball machine
+  -
+    id: pointsmachine
+    name: POINTs machine
+    subheadings:
+      -
+        id: gacha
+        name: Gacha menu
+  -
+    id: prizes
+    name: Gacha prizes
+    subheadings:
+      -
+        id: prizes-item
+        name: Items
+      -
+        id: prizes-armor
+        name: Armor
+      -
+        id: prizes-points
+        name: 50, 100, 200, or 101 POINTs
+      -
+        id: prizes-lancer
+        name: Lancer
+      -
+        id: prizes-fortune
+        name: Fortunes
+      -
+        id: prizes-tenna
+        name: Tenna statue
+      -
+        id: prizes-dogdollar
+        name: Dog Dollar
+  -
+    id: 1225
+    name: Inserting 1225 POINTs
+  -
+    id: tripticket
+    name: Trip Ticket
+---
+<section class="d-section" id="userguide">
+	<h2>User guide</h2>
+
+	<d-box theme="dark">
+		<d-text asterisk>(The sign says "BALL MACHINE User's Guide. Read it?")</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>("Welcome to BALL MACHINE. Insert points to gain PRIZES.")</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>("The minimum is 100 POINTs. MORE POINTs increase GOLD CHANCE.")</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>("Even if you miss GOLD PRIZE, next time GOLD CHANCE increases faster!")</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>("HIT the GOLD PRIZE, GOLD CHANCE will reset... etc.")</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>("You turned to the camera and thanked Tenna for a great toy! Thanks, Tenna!")</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(... is, all part of what it said on the sign.)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(The sign says "You didn't choose to read the User's Guide. Avert eyes!")</d-text>
+		</d-box>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="ballmachine">
+	<h2>Ball machine</h2>
+	<p>Can only be interacted with via the opening at the front.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>Kris, gimme your feet. I'm shoving you up there.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>(I think we use that machine on the right...?)</d-text>
+	</d-box>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>(I think we use that machine on the right...?)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="pointsmachine">
+	<h2>POINTs machine</h2>
+
+	<h3>Basic interaction</h3>
+	<d-box theme="dark">
+		<d-text asterisk>INSERT 100+ POINTs TO PLAY.</d-text>
+	</d-box>
+	<p class="note">As the choice menu appears, a small menu to the top left displays the total money and POINTs currently possessed.</p>
+	<d-choices theme="dark" offset="10%" id="playchoice">
+		<d-option index="0" text="INSERT POINTs"></d-option>
+		<d-option index="1" text="Don't"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<h4>If you have 100 or more POINTs</h4>
+		<p class="note">Opens the <a href="#gacha">gacha menu</a>.</p>
+
+		<hr class="hr2">
+
+		<h4>If you have less than 100 POINTs</h4>
+		<d-box theme="dark">
+			<d-text asterisk>INSUFFICIENT POINTs.</d-text>
+		</d-box>
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="gacha">Gacha menu</h3>
+	<p class="note">The menu lists four fields, two in white towards the top and two in white towards the bottom. The below values are the initial defaults:</p>
+	<table class="gachamenu">
+		<tr>
+			<th>POINTs TO SPEND:</th>
+			<td>
+				100
+				{%- comment %} removing whitespace {% endcomment -%}
+				<svg xmlns="http://www.w3.org/2000/svg" width="7" height="9" preserveAspectRatio="xMidYMid meet" rendering="crispEdges" fill="currentColor"
+					aria-hidden="true" viewBox="0 0 7 9">
+					<rect x="3" y="0" width="1" height="1"></rect>
+					<rect x="2" y="1" width="3" height="1"></rect>
+					<rect x="1" y="2" width="5" height="1"></rect>
+					<rect x="0" y="3" width="7" height="1"></rect>
+					<rect x="0" y="5" width="7" height="1"></rect>
+					<rect x="1" y="6" width="5" height="1"></rect>
+					<rect x="2" y="7" width="3" height="1"></rect>
+					<rect x="3" y="8" width="1" height="1"></rect>
+				</svg>
+			</td>
+		</tr>
+		<tr>
+			<th>HELD POINTs:</th>
+			<td>&lt;#&gt;</td>
+		</tr>
+		<tr class="lightyellow">
+			<th>GOLD CHANCE:</th>
+			<td>5%</td>
+		</tr>
+		<tr class="lightyellow">
+			<th>SINCE LAST GOLD:</th>
+			<td>0</td>
+		</tr>
+	</table>
+	<p class="note">If the "GOLD CHANCE" percentage is at the maximum, it is printed in a brighter yellow as "<span class="lightyellow-gacha">GOLD CHANGE:</span> <span class="yellow">100%</span>". The "SINCE LAST GOLD" value updates to show how many POINTs you've spent on all gambling attempts since obtaining your last gold prize. If all gold prizes have been obtained, the menu instead looks as follows:</p>
+	<table class="gachamenu">
+		<tr>
+			<th>POINTs TO SPEND:</th>
+			<td>
+				100
+				{%- comment %} removing whitespace {% endcomment -%}
+				<svg xmlns="http://www.w3.org/2000/svg" width="7" height="9" preserveAspectRatio="xMidYMid meet" rendering="crispEdges" fill="currentColor"
+					aria-hidden="true" viewBox="0 0 7 9">
+					<rect x="3" y="0" width="1" height="1"></rect>
+					<rect x="2" y="1" width="3" height="1"></rect>
+					<rect x="1" y="2" width="5" height="1"></rect>
+					<rect x="0" y="3" width="7" height="1"></rect>
+					<rect x="0" y="5" width="7" height="1"></rect>
+					<rect x="1" y="6" width="5" height="1"></rect>
+					<rect x="2" y="7" width="3" height="1"></rect>
+					<rect x="3" y="8" width="1" height="1"></rect>
+				</svg>
+			</td>
+		</tr>
+		<tr>
+			<th>HELD POINTs:</th>
+			<td>&lt;#&gt;</td>
+		</tr>
+		<tr class="gray">
+			<td rowspan="2" colspan="2">NO MORE GOLD</td>
+		</tr>
+	</table>
+	<p class="note">In both cases, there is text beneath the menu reading "<span class="white">[CONFIRM] CONFIRM</span>" and "<span class="white">[CANCEL] CANCEL</span>", with the appropriate buttons substituted in depending on the platform. On PC versions, these lines read "<span class="white">[Z] CONFIRM</span>" and "<span class="white">[X] CANCEL</span>" by default.</p>
+
+	<h4>Upon inserting POINTs</h4>
+	<h5>Standard</h5>
+	<p class="note">When [CONFIRM] is selected, the scene cuts back to the Ball Machine room, showing golden coin-like POINTs being inserted into the gray slot on the front of the ball machine. The machine shakes briefly before a capsule is released from the bottom slot, floating up in front of the machine and coming apart to reveal the prize inside. <a href="#prizes">See below</a> for the narration/dialogue accompanying certain prizes.</p>
+
+	<p class="note">After the prize-specific dialogue/narration plays, if your score is still at 100 POINTs or higher, then the following narration is shown:</p>
+	<d-box theme="dark">
+		<d-text asterisk>PLAY AGAIN?</d-text>
+	</d-box>
+	<p class="note">…after which you are returned to the <a href="#playchoice">menu where you can choose to insert more POINTs</a>.</p>
+
+	<p class="note">If your score is instead below 100 POINTs after the prize-specific dialogue/narration, dialogue ends.</p>
+
+	<h5>If 1225 POINTs were inserted</h5>
+	<p class="note"><a href="#1225">See below.</a></p>
+
+	<h4>Upon backing out</h4>
+	<p class="note">When [CANCEL] is selected, the gacha menu closes, returning you to the Ball Machine room.</p>
+</section>
+
+<section class="d-section" id="prizes">
+	<h2>Gacha prizes</h2>
+	<p>Unless specified otherwise, regular prizes can be won unlimited times, while gold prizes can only be won once.</p>
+
+	<h3 id="prizes-item">Items</h3>
+	<p class="note">A small bag labelled with a question mark emerges from the capsule. If there is room in the inventory or storage, the <a href="{{ '/misc/generic#itemget' | relative_url }}">generic item get message</a> plays and the item is added to the inventory or storage, wherever there is room. Available items include:</p>
+	<ul class="note">
+		<li>Regular prizes:
+			<ul>
+				<li><a href="{{ '/misc/darkitems#glowshard' | relative_url }}">Glowshard</a></li>
+				<li><a href="{{ '/misc/darkitems#tvdinner' | relative_url }}">TV Dinner</a></li>
+				<li><a href="{{ '/misc/darkitems#tvslop' | relative_url }}">TV Slop</a></li>
+				<li><a href="{{ '/misc/darkitems#deluxedinner' | relative_url }}">Deluxe Dinner</a></li>
+			</ul>
+		</li>
+		<li>Gold prizes:
+			<ul>
+				<li><a href="{{ '/misc/darkitems#revivemint' | relative_url }}">Revive Mint</a></li>
+				<li><a href="{{ '/misc/darkitems#tensionmax' | relative_url }}">Tension Max</a></li>
+				<li><a href="{{ '/misc/darkitems#execbuffet' | relative_url }}">Exec Buffet</a></li>
+			</ul>
+		</li>
+	</ul>
+
+	<p class="note">If the inventory and storage are both full, then the following messages play instead:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(You have too many <span class="yellow">ITEMs</span> to take <span class="yellow">&lt;Item&gt;</span>.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(As a consolation, you received 100 POINTs.)</d-text>
+	</d-box>
+	<p class="note">100 POINTs are added to your score, up to a maximum of 9999 POINTs. The counter for POINTs spent since your last gold prize does not increase.</p>
+
+	<hr>
+
+	<h3 id="prizes-armor">Armor</h3>
+	<p class="note">A small bag labelled with a question mark emerges from the capsule. If there is room in the armor inventory, the <a href="{{ '/misc/generic#armorget' | relative_url }}">generic armor get message</a> plays and the armor is added to the inventory. Available armors include:</p>
+	<ul class="note">
+		<li>Regular prizes:
+			<ul>
+				<li><a href="{{ '/misc/armor#gingerguard' | relative_url }}">Ginger Guard</a></li>
+			</ul>
+		</li>
+		<li>Gold prizes:
+			<ul>
+				<li><a href="{{ '/misc/armor#tennatie' | relative_url }}">Tenna Tie</a></li>
+				<li><a href="{{ '/misc/armor#blueribbon' | relative_url }}">Blue Ribbon</a></li>
+			</ul>
+		</li>
+	</ul>
+
+	<p class="note">If the armor inventory is full, then the following messages play instead:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(You have too many <span class="yellow">ARMORs</span> to take <span class="yellow">&lt;Armor&gt;</span>.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(As a consolation, you received 100 POINTs.)</d-text>
+	</d-box>
+	<p class="note">100 POINTs are added to your score, up to a maximum of 9999 POINTs. The counter for POINTs spent since your last gold prize does not increase.</p>
+
+	<hr>
+
+	<h3 id="prizes-points">50, 100, 200, or 101 POINTs</h3>
+	<p class="note">A small bag labelled with a question mark emerges from the capsule.  The <a href="{{ '/misc/generic#pointsget' | relative_url }}">generic POINTs get message</a> plays and the POINTs are added to your score, up to a maximum of 9999 POINTs.</p>
+
+	<hr>
+
+	<h3 id="prizes-lancer">Lancer</h3>
+	<p class="note">A reversed splat SFX plays as the capsule emerges from the machine; then a normal splat SFX plays as Lancer emerges from the capsule.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="0"></d-sprite>
+		<d-text asterisk>Ho ho ho, I'm an item!</d-text>
+	</d-box>
+	<p class="note">If there is room in the key item inventory, the <a href="{{ '/misc/generic#keyitemget' | relative_url }}">generic key item get message</a> plays, but with the addition of Lancer's sprite, the removal of which seems to have been forgotten:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="0"></d-sprite>
+		<d-text asterisk>(<span class="yellow">Lancer</span> was added to your <span class="yellow">KEY ITEMs</span>.)</d-text>
+	</d-box>
+	<p class="note">…and <a href="{{ '/misc/darkitems#lancer' | relative_url }}">Lancer</a> is added to the inventory. (Prior to v0.0.098, any Lancers obtained in this way would not be removed from your inventory after leaving the Ball Machine room.)</p>
+
+	<p class="note">If the key item inventory is full, then the following messages play instead:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(You have too many <span class="yellow">KEY ITEMs</span> to take <span class="yellow">Lancer</span>.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(As a consolation, you received 100 POINTs.)</d-text>
+	</d-box>
+	<p class="note">100 POINTs are added to your score, up to a maximum of 9999 POINTs. The counter for POINTs spent since your last gold prize does not increase.</p>
+
+	<hr>
+
+	<h3 id="prizes-fortune">Fortunes</h3>
+	<p class="note">A comedic whistling SFX plays as a green question mark emerges from the capsule.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>You received a FORTUNE...</d-text>
+	</d-box>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="dark">
+		<d-text asterisk>(Looks like a dog slobbered on it)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="dark">
+		<d-text asterisk>(You'll croak before you can find the X! Signed, the Mad Croaker.)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="dark">
+		<d-text asterisk>(Mumble... mumble... Two puzzles are connected...)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="dark">
+		<d-text asterisk>(It's good you're spending points on this. They are good for anything else.)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="dark">
+		<d-text asterisk>(The aqua spirits trapped in the coolers are beautiful, and best of all, recyclable.)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="dark">
+		<d-text asterisk>(Don't let your guard down. That chair is going to kick your ass!)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="dark">
+		<d-text asterisk>(Sometimes you should take the spotlight if it heads your way. Don't be a coward!)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="dark">
+		<d-text asterisk>(These are the ranks, from lowest to highest...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(C,B,A, S, and of course T, for TV.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(T is just for bragging rights, so don't sweat it.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Anything lower than "C" is just asking for it...!)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="dark">
+		<d-text asterisk>(There are no weapons in the GAME. Kids and Adults can enjoy a like!)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="dark">
+		<d-text asterisk>(Kris felt a feeling of deja vu.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... however, the handwriting was illegible!)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Kris felt a feeling of deja vu.)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="dark">
+		<d-text asterisk>(A musical island postcard from the FLYING ACES.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(It's encouraging you to visit... but the music gets old fast.)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="dark">
+		<d-text asterisk>(... huh? There was some sort of triangle inside...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Kris returned it to the machine.)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<p class="note">EXTREMELY rare, almost negligible:</p>
+	<!-- if randomly-generated float from 0–12 gives exactly 12 instead of 11.99999 or below. IDK how many decimal points GML's random() function gives so I can't give a precise percentage -->
+	<d-box theme="dark">
+		<d-text asterisk>... but it was blank!</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="prizes-tenna">Tenna statue</h3>
+	<p class="note">A golden statue of Tenna emerges from the capsule.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(You got a GOLDEN TENNA STATUE!)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Heh, anyone call dibs?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Um...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Guess it can go in your room...?)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="prizes-dogdollar">Dog Dollar</h3>
+	<p class="note">The Annoying Dog emerges from the capsule. If there is room in the inventory or storage, the following narration plays:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(There's something in this white capsule!)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(It's fuzzy...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(It's fluffy...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... did you get an item or not?)</d-text>
+	</d-box>
+	<p class="note">…and the <a href="{{ '/misc/darkitems#dogdollar' | relative_url }}">Dog Dollar</a> is added to the inventory.</p>
+
+	<p class="note">If the inventory and storage are both full, then the following messages play instead:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(You have too many <span class="yellow">ITEMs</span> to take <span class="yellow">Dog Dollar</span>.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(As a consolation, you received 100 POINTs.)</d-text>
+	</d-box>
+	<p class="note">100 POINTs are added to your score, up to a maximum of 9999 POINTs. The counter for POINTs spent since your last gold prize does not increase.</p>
+</section>
+
+<section class="d-section" id="1225">
+	<h2>Inserting 1225 POINTs</h2>
+
+	<p class="note">Immediately upon pressing [CONFIRM], the oscillating stars in the background disappear, leaving behind a background of solid dark blue; the music also cuts out, and the arrows beside the "POINTs TO SPEND" value disappear. The screen is frozen for a few seconds.</p>
+
+	<p class="note">Abruptly, the screen cuts back to the Ball Machine room, now tinted a dim blue. The user guide sign, Susie, and Ralsei are all missing. Kris is the only one in the room, still standing in front of the POINTs machine. Nothing in the room can be interacted with, and Kris cannot leave the room.</p>
+
+	<p class="note">On the front of the Ball Machine, the red slot from which capsules emerge is missing. Instead, there is a black opening roughly the size of a door. Kris can walk up to this opening, at which point the screen will slowly fade to black.</p>
+
+	<p class="note">The screen will then fade back in on a mysterious room with a dark blue checkered background over which a maze of red-carpeted walkways sprawl as <a href="{% include wikilink page='findher' %}">a guitar version of Lost Girl</a> plays. The room has no collision, allowing Kris to move off the walkways over thin air.</p>
+
+	<p class="note">The room loops in all directions, and there is almost nothing within it. Towards the bottom right, however, is a small blue ball machine that appears completely empty. This is the only object in this entire room with collisions enabled, so that Kris cannot walk through it. Upon interacting with it from any direction, the following narration plays:</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>You used the machine.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>... The capsule came out.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>Inside was something hard like lacquer.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>It was a small, dark, triangle.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You tried to take it...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>But, it slipped through your hand</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>And you couldn't find it anymore.</d-text>
+	</d-box>
+
+	<p class="note">The music fades out quickly as soon as the previous line is completely printed, and the following narration plays slowly, unskippably, and soundlessly:</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>You couldn't find<br><br>your hand.</d-text>
+	</d-box>
+
+	<p class="note">The screen slowly fades to black. Then it fades back in on Kris standing alone at the center of the Ball Machine room, now with the ball machine and POINTs machine absent, leaving it permanently and completely empty. There is no music playing. Kris can leave the room, at which point Susie and Ralsei are back in the party and the music resumes as normal, even upon reentering the Ball Machine room.</p>
+
+	<p class="note">Upon reentering the room after this point, if the <a href="{{ '/chapters/chapter3/cityboardsword' | relative_url }}">Sword Route</a> has been completed and the <a href="{{ '/chapters/chapter3/egg#nowhere-bibliox-mantle' | relative_url }}">Bibliox in "nowhere"</a> has been spoken to, there is a <a href="#tripticket">glimmer on the ground</a> where the Ball Machine used to be.</p>
+</section>
+
+<section class="d-section" id="tripticket">
+	<h2>Trip Ticket</h2>
+	<p>Available only after visiting the <a href="#1225">secret gacha room</a>.</p>
+
+	<p class="note">There is a glimmer on the ground where the Ball Machine once stood. It can be interacted with:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(You thought you saw something on the ground... but you must've already had it.)</d-text>
+	</d-box>
+	<p class="note">With a rising chime, the <a href="{{ '/misc/darkitems#tripticket' | relative_url }}">Trip Ticket</a> is added to the inventory. The glimmer on the ground disappears.</p>
+</section>

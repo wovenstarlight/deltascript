@@ -63,6 +63,7 @@
 	--lightgreen: #80ff80;
 	--lightyellow: #ffff80;
 	--iceblue: #81c0ff;
+	--lightyellow-gacha: #f3e267;
 	/* Custom */
 	--gray: #aaa;
 	/* Character colors, picked off their Dark World sprites */
@@ -103,7 +104,7 @@
 	--font-dotum: "DeltaFont Dotum", var(--font-base);
 	--font-8bit: "DeltaFont 8-Bit", var(--font-base);
 	--font-prophecy: "DeltaFont Prophecy", var(--font-base);
-	
+
 	--prophecy-size: 40em;
 }
 /* Dim colors */
@@ -160,6 +161,7 @@ body.dim {
 .cI, .iceblue { color: var(--iceblue) }
 .gray { color: var(--gray) }
 .lightyellow { color: var(--lightyellow) }
+.lightyellow-gacha { color: var(--lightyellow-gacha) }
 /* Dark World 3D effect */
 d-box[theme=dark],
 d-box[theme=battlemenu],
@@ -776,7 +778,7 @@ d-box, d-choices {
 		}
 
 		&[theme^=obj], &[theme=battlemenu] { width: calc(var(--basewidth) + 4em) }
-		
+
 		body.dyslexic &[theme^=obj] { width: calc(var(--basewidth) + 10em) }
 
 		&[theme^=obj], &[theme^=power], &[theme=battledesc], &[theme=shopdesc] {
@@ -1031,7 +1033,7 @@ d-box, d-choices {
 		margin: 0 0 0 min(1em, 3vw);
 		gap: 0 0.5ch;
 		align-items: baseline;
-		
+
 		:not(.boxgroup) > &[theme=battletalk] { padding-inline-start: 0.5ch }
 
 		/* On smaller screens, stack dialogue instead */
@@ -1584,7 +1586,7 @@ d-option-panel {
 	) {
 		margin-block-start: 0.75em;
 	}
-	
+
 	body.compact & {
 		gap: min(1em, 3vw);
 		&:has(> :nth-child(2))::before,
@@ -1707,9 +1709,9 @@ d-option-panel {
 	width: 100%;
 	max-width: 30em;
 	margin-inline: auto;
-	
+
 	thead, tbody { display: contents }
-	
+
 	tr {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -1722,14 +1724,59 @@ d-option-panel {
 		}
 		&:has(th:last-child, td:only-child) { padding-block-end: var(--row-padding) }
 	}
-	
+
 	th {
 		text-align: start;
 		font-weight: normal;
 	}
 
 	td:first-child { grid-column: 2 }
-	
+
 	a:not(:hover, :focus) { text-decoration: none }
+}
+/* TV World - Ball Machine - gacha menu */
+.gachamenu {
+	line-height: 1.2;
+	width: fit-content;
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 0 2ch;
+	
+	body:not(.compact) & {
+		font-size: 1.2em;
+		background-color: var(--black);
+		background-clip: padding-box;
+		border: solid transparent var(--border-width);
+		border-image: url("../assets/images/textbox/dark.gif") 16 / var(--border-width)
+	}
+	body:not(.compact).dim & { border-image-source: url("../assets/images/textbox/dark_dim.gif") }
+
+	tbody, tr { display: contents }
+
+	.lightyellow { color: var(--lightyellow-gacha) }
+
+	th {
+		font-weight: normal;
+		text-align: end;
+	}
+
+	tr:nth-child(2) td { margin-block-end: 1.2em }
+	td:nth-child(2) { text-align: end }
+
+	td:only-child {
+		grid-column: 1 / span 2;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 2.4em;
+	}
+
+	svg {
+		color: #808080;
+		width: 1ch;
+		padding-inline-end: calc(1ch * 0.125);
+		height: auto;
+	}
 }
 /* #endregion */
