@@ -110,7 +110,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* `/greenroom`
 				* `/mainroom` - The central room
 				* `/rewardsroom` - ABC-Rank rewards room
-				* `/cooler` - C-Rank rewards room
 				* `/arcade` - A-Rank rewards room
 				* `/starchangingroom` - S-Rank rewards room
 				* `/backstage` - Backstage area

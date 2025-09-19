@@ -1,0 +1,105 @@
+---
+title: Cooler
+
+description: >
+  <p>Narration and dialogue for the C-Rank rewards room in TV World.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [3]
+    note: Zappers
+  -
+    name: gml_Object_obj_room_ranking_c_Step_0
+    chapters: [3]
+    note: crater (first time)
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [3]
+    note: crater (subsequent times)
+
+toc:
+  -
+    id: leftzapper
+    name: Left Zapper
+  -
+    id: watercooler
+    name: Watercooler
+  -
+    id: crater
+    name: Crater
+  -
+    id: rightzapper
+    name: Right Zapper
+---
+<section class="d-section" id="leftzapper">
+	<h2>Left Zapper</h2>
+
+	<h3>Before fighting the Watercooler</h3>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>I love da drink my favorite abundant resource!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>After fighting the Watercooler</h3>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Water... is scarce. Wars... will be fought.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="watercooler">
+	<h2>Watercooler</h2>
+	<p>Available initially.</p>
+
+	<p class="note">Immediately upon interacting with it, the Watercooler is alerted and <a href="{{ '/encounters/watercooler' | relative_url }}">draws the party into battle</a>.</p>
+	<p class="note">After the Watercooler is spared or defeated, it disappears and a <a href="#crater">crater</a> is left behind in its place.</p>
+</section>
+
+<section class="d-section" id="crater">
+	<h2>Crater</h2>
+	<p>Available only after fighting the <a href="#watercooler">Watercooler</a>.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a crater...)</d-text>
+	</d-box>
+	<p class="note">Your current score is displayed.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Inside was 200 POINTs!)</d-text>
+	</d-box>
+	<p class="note">200 POINTs are added to your score.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(200 POINTs was added to your SCORE.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(C is for Crater...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="rightzapper">
+	<h2>Right Zapper</h2>
+
+	<h3>Before fighting the Watercooler</h3>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Drink quietly... talk respectfully.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>After fighting the Watercooler</h3>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Ahh... you're da kinda person that drinks from an oasis 8 times.</d-text>
+	</d-box>
+</section>
