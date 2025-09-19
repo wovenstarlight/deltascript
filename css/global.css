@@ -13,30 +13,6 @@
 	src: url("../assets/fonts/fnt_main_condensed_extended.otf");
 }
 @font-face {
-	font-family: "DeltaFont Tiny";
-	src: url("../assets/fonts/fnt_noelletiny.otf");
-}
-@font-face {
-	font-family: "DeltaFont Comic Sans";
-	src: url("../assets/fonts/fnt_comicsans.otf");
-}
-@font-face {
-	font-family: "DeltaFont Dotum";
-	src: url("../assets/fonts/fnt_dotumche.otf");
-}
-@font-face {
-	font-family: "DeltaFont 8-Bit";
-	src: url("../assets/fonts/fnt_8bit.otf");
-}
-@font-face {
-	font-family: "DeltaFont Prophecy";
-	src: url("../assets/fonts/fnt_legend.otf");
-}
-@font-face {
-	font-family: "DeltaFont TV";
-	src: url("../assets/fonts/fnt_tv.otf");
-}
-@font-face {
 	font-family: "OpenDyslexic Mono";
 	src: url("../assets/fonts/OpenDyslexicMono-Regular.otf");
 }

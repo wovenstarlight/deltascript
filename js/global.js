@@ -437,7 +437,7 @@ class DialogueOptionPanel extends HTMLElement {
 	}
 }
 customElements.define("d-option-panel", DialogueOptionPanel);
-// #endregion
+// #endregion Game elements
 
 
 
@@ -454,12 +454,13 @@ function setAllCompact(compact) {
 
 /** Adding all event handlers to page elements. */
 function setUp() {
+	// #region Accessibility features
 	// Menu
 	document.getElementById("openmenu").addEventListener("click", () => {
 		document.getElementById("menucontents").toggleAttribute("hidden");
 	})
 
-	// Compact mode
+	// #region Compact mode
 	document.getElementById("toggle-compact").addEventListener("change", e => {
 		setAllCompact(e.currentTarget.checked);
 		localStorage.setItem("compactMode", e.currentTarget.checked ? "on" : "");
@@ -470,8 +471,9 @@ function setUp() {
 		setAllCompact(true);
 		document.getElementById("toggle-compact").checked = true;
 	}
+	// #endregion Compact mode
 
-	// Disable animations
+	// #region Disable animations
 	document.getElementById("toggle-anim").addEventListener("change", e => {
 		!e.currentTarget.checked ? document.body.classList.add("noanim") : document.body.classList.remove("noanim");
 		localStorage.setItem("noAnimations", !e.currentTarget.checked ? "on" : "");
@@ -482,8 +484,9 @@ function setUp() {
 		document.body.classList.add("noanim");
 		document.getElementById("toggle-anim").checked = false;
 	}
+	// #endregion Disable animations
 
-	// Dim mode
+	// #region Dim mode
 	document.getElementById("toggle-dim").addEventListener("change", e => {
 		e.currentTarget.checked ? document.body.classList.add("dim") : document.body.classList.remove("dim");
 		localStorage.setItem("dimMode", e.currentTarget.checked ? "on" : "");
@@ -494,8 +497,9 @@ function setUp() {
 		document.body.classList.add("dim");
 		document.getElementById("toggle-dim").checked = true;
 	}
+	// #endregion Dim mode
 
-	// Dyslexic-friendly font
+	// #region Dyslexic-friendly font
 	document.getElementById("toggle-opendyslexic").addEventListener("change", e => {
 		if (e.currentTarget.checked) document.body.classList.add("dyslexic");
 		else document.body.classList.remove("dyslexic");
@@ -508,6 +512,7 @@ function setUp() {
 		document.body.classList.add("dyslexic");
 		document.getElementById("toggle-opendyslexic").checked = true;
 	}
+	// #endregion Dyslexic-friendly font
 
 	// Force-view all choices
 	document.getElementById("open-choices").addEventListener("click", () => {
@@ -517,8 +522,49 @@ function setUp() {
 			panel.forced = true;
 		});
 	});
+	// #endregion Accessibility features
 
-	// Shaky text
+	// #region Visual display
+	// #region Extra fonts
+	const FONTS = [
+		{
+			selector: `.fnt-tiny, [font=tiny]`,
+			name: "DeltaFont Tiny",
+			file: "fnt_noelletiny.otf",
+		},
+		{
+			selector: `.fnt-sans, [font=sans]`,
+			name: "DeltaFont Comic Sans",
+			file: "fnt_comicsans.otf",
+		},
+		{
+			selector: `.fnt-combat, [theme^=battletalk], [theme=caller], .winglade, .profile`,
+			name: "DeltaFont Dotum",
+			file: "fnt_dotumche.otf",
+		},
+		{
+			selector: `.fnt-eightbit, .fnt-8bit, [theme=eightbit], [theme="8bit"], [font=eightbit], &[font="8bit"]`,
+			name: "DeltaFont 8-Bit",
+			file: "fnt_8bit.otf",
+		},
+		{
+			selector: `[theme=prophecy]`,
+			name: "DeltaFont Prophecy",
+			file: "fnt_legend.otf",
+		},
+		{
+			selector: `.fnt-tv`,
+			name: "DeltaFont TV",
+			file: "fnt_tv.otf",
+		},
+	];
+	FONTS.forEach(fnt => {
+		if (document.querySelector(fnt.selector) !== null)
+			document.fonts.add(new FontFace(fnt.name, `url("${BASE_URL}/assets/fonts/${fnt.file}")`));
+	});
+	// #endregion Extra fonts
+
+	// #region Shaky text
 	let prevClassIndex,
 		insideTag = false,
 		insideEntity = false;
@@ -598,8 +644,9 @@ function setUp() {
 		// Move any line breaks out of their parent shakers
 		shakeElement.querySelectorAll(".break").forEach(el => el.parentElement.insertAdjacentElement("afterend", el));
 	});
+	// #endregion Shaky text
 
-	// Chromatic aberration (color bleed)
+	// #region Chromatic aberration (color bleed)
 	if (document.querySelector("[effect~=bleed]") !== null) {
 		let d = document.createElement("div");
 		d.innerHTML = `<svg height="0" width="0">
@@ -639,6 +686,7 @@ function setUp() {
 </svg>`;
 		document.body.append(d.firstElementChild);
 	}
+	// #endregion Chromatic aberration (color bleed)
 
 	// Gray out animation toggle if no animations are present
 	globalAnims ||= document.querySelector("d-text[asterisk='Sweet' i], d-text[asterisk='Cap\\'n' i], d-text[asterisk='Capn' i], d-text[asterisk='K_K' i], d-text[asterisk='KK' i], svg.winglade, [theme=prophecy]") !== null;
@@ -647,9 +695,10 @@ function setUp() {
 		animToggle.classList.add("gray");
 		animToggle.append("*");
 	}
+	// #endregion Visual display
 }
 
 // Run setup once page elements have loaded
 if (document.readyState !== 'loading') setUp();
 else document.addEventListener('DOMContentLoaded', setUp);
-// #endregion
+// #endregion Setting up page functionality
