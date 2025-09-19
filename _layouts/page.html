@@ -49,10 +49,7 @@ layout: default
 		<summary>See also</summary>
 		<ul>
 			{%- for link in page.see_also %}
-			<li><a href="{{ link.url | relative_url }}">{{ link.name }}</a>
-				{%- if link.for %}, for {{ link.for }}
-				{%- endif -%}
-			</li>
+			{% include nested_list_item parent='' this=link %}
 			{%- endfor %}
 		</ul>
 	</details>

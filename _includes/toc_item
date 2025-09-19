@@ -3,32 +3,47 @@
 {% assign mylink = mylink | default: include.item.url -%}
 {% endif -%}
 
-<li>
-	{% if mylink %}<a href="#{{ mylink }}" {%- if include.item.class %} class="{{ include.item.class }}" {%- endif -%}>{% endif %}
+{%- if include.item.custom_icon_positions -%}
+	{%- capture icons -%}
+		{%- for character in include.item.act_icon -%}
+			{% include acticon chara=character -%}
+		{%- unless forloop.last -%}
+			SPLITTER
+		{%- endunless -%}
+		{%- endfor -%}
+	{%- endcapture -%}
 
-	{%- if include.item.custom_icon_positions -%}
-		{%- capture icons -%}
-			{%- for character in include.item.act_icon -%}
-				{% include acticon chara=character -%}
-			{%- unless forloop.last -%}
-				SPLITTER
-			{%- endunless -%}
-			{%- endfor -%}
-		{%- endcapture -%}
+	{%- assign icons = icons | split: "SPLITTER" -%}
+	{%- assign namestring = include.item.name | split: "ACTICON " -%}
 
-		{%- assign icons = icons | split: "SPLITTER" -%}
-		{%- assign namestring = include.item.name | split: "ACTICON " -%}
-
+	{% capture myname -%}
 		{%- for part in namestring %}{{ part }}{{ icons[forloop.index0] | default: "" }}{% endfor -%}
 		{%- if namestring.size < icons.size %}{{ icons | slice: namestring.size }}{% endif -%}
-	{%- else -%}
+	{%- endcapture %}
+{%- else -%}
+	{% capture myname -%}
 		{%- for character in include.item.act_icon -%}
 			{% include acticon chara=character -%}
 		{%- endfor -%}
 		{{- include.item.name -}}
+	{%- endcapture %}
+{%- endif -%}
+
+{% assign myname = myname | split: "{END_LINK}" -%}
+
+<li>
+	{% if mylink %}<a href="#{{ mylink }}" {%- if include.item.class %} class="{{ include.item.class }}" {%- endif -%}>{% endif %}
+
+	{{- myname | first -}}
+	
+	{% if mylink -%}
+		</a>
 	{%- endif -%}
 
-	{% if mylink %}</a>{% endif %}
+	{% if myname.size > 1 -%}
+		{{- myname | last -}}
+	{%- endif %}
+
 	{%- if include.item.subheadings %}
 	<ol>
 		{%- for subheading in include.item.subheadings %}
