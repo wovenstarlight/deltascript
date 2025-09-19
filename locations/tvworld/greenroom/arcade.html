@@ -1,0 +1,416 @@
+---
+title: Arcade
+
+description: >
+  <p>Narration and dialogue for the A-Rank rewards room in TV World.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [3]
+    note: locked game posters and doors
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [3]
+    note: unlocked game posters and doors, Pippins interaction
+  -
+    name: gml_GlobalScript_scr_get_high_score_text
+    chapters: [3]
+    note: checking high scores
+  -
+    name: gml_Object_obj_dw_ranking_minigame_door_Create_0
+    chapters: [3]
+    note: door marquees
+  -
+    name: gml_Object_obj_room_ranking_a_Step_0
+    chapters: [3]
+    note: Pippins interaction
+
+toc:
+  -
+    id: chefposter
+    name: Poster for the Cooking Challenge
+  -
+    id: chefdoor
+    name: Door to the Cooking Challenge
+  -
+    id: bandposter
+    name: Poster for Rock Video
+    subheadings:
+      -
+        id: bandposter-locked
+        name: Before completing the Island Board
+      -
+        id: bandposter-unlocked
+        name: After completing the Island Board
+  -
+    id: banddoor
+    name: Door to Rock Video
+    subheadings:
+      -
+        id: banddoor-locked
+        name: Before completing the Island Board
+      -
+        id: banddoor-unlocked
+        name: After completing the Island Board
+  -
+    id: monstermovieposter
+    name: Poster for Monster Movie
+    subheadings:
+      -
+        id: monstermovieposter-locked
+        name: Before unlocking the game
+      -
+        id: monstermovieposter-preplay
+        name: After unlocking the game, before playing for the first time
+      -
+        id: monstermovieposter-postplay
+        name: After playing for the first time
+  -
+    id: monstermoviedoor
+    name: Door to Monster Movie
+    subheadings:
+      -
+        id: monstermoviedoor-locked
+        name: Before unlocking the game
+      -
+        id: monstermoviedoor-preplay
+        name: After unlocking the game, before playing for the first time
+      -
+        id: monstermoviedoor-postplay
+        name: After playing for the first time
+---
+<section class="d-section" id="chefposter">
+	<h2>Poster for the Cooking Challenge</h2>
+	<p class="note">The poster shows Ralsei wearing a chef's hat under cursive text reading "Chefs".</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's a poster for the COOKING CHALLENGE!)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Check scores"></d-option>
+		<d-option index="1" text="Tips and Tricks"></d-option>
+		<d-option index="2" text="Nothing"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Your score and rank (Z/C/B/A/S/T) are substituted into the following.</p>
+		<d-box theme="dark">
+			<d-text asterisk>(Your highest score is &lt;#&gt;!)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(Your highest rank is &lt;RANK&gt;!)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(Here are some tips for the HIGH SCORES.)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(The taller a stack you throw, the more points you get!)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(SPECIAL GUESTS are worth more points!)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(Jumping over fire is worth 2 points...)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(And, catching food while jumping is worth 1 point!)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="chefdoor">
+	<h2>Door to the Cooking Challenge</h2>
+	<p class="note">The marquee above the door reads "<span class="fnt-tv">NOW PLAYING......COOKING SHOW</span>".</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's the door to the COOKING SHOW! Play it!?)</d-text>
+	</d-box>
+	<d-choices theme="dark" offset="10%">
+		<d-option index="0" text="Play#COOKING SHOW"></d-option>
+		<d-option index="1" text="Quit"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The doors open with a thud, and the screen fades to black, then opens to the Cooking Challenge game.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="bandposter">
+	<h2>Poster for Rock Video</h2>
+
+	<h3 id="bandposter-locked">Before completing the Island Board</h3>
+	<p class="note">The poster is blue with a white question mark.</p>
+	<d-box theme="dark">
+		<d-text asterisk>("COMING SOON!")</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bandposter-unlocked">After completing the Island Board</h3>
+	<p class="note">The poster shows Kris with their guitar in their band outfit.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a poster for the ROCK VIDEO!)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Check scores"></d-option>
+		<d-option index="1" text="Tips and Tricks"></d-option>
+		<d-option index="2" text="Nothing"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Your score and rank (Z/C/B/A/S/T) are substituted into the following.</p>
+		<d-box theme="dark">
+			<d-text asterisk>(Your highest score is &lt;#&gt;!)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(Your highest rank is &lt;RANK&gt;!)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(Tips and tricks to ROCK OUT!)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(Perfect timing means extra points! A GOLD LIGHT means you nailed the note!)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(LEFT and RIGHT can be used to play notes as well!)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(Make sure to HOLD DOWN THE BUTTON for long notes.)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="banddoor">
+	<h2>Door to Rock Video</h2>
+
+	<h3 id="banddoor-locked">Before completing the Island Board</h3>
+	<p class="note">The marquee above the door reads "<span class="fnt-tv">COMING SOON......</span>".</p>
+	<d-box theme="dark">
+		<d-text asterisk>("COMING SOON ON BOARD 2!")</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Wonder what we'll end up playing...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Guess a game about a giant question mark...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="banddoor-unlocked">After completing the Island Board</h3>
+	<p class="note">The marquee above the door reads "<span class="fnt-tv">NOW PLAYING......ROCK VIDEO</span>".</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's the door to the ROCK VIDEO! Play it!?)</d-text>
+	</d-box>
+	<d-choices theme="dark" offset="10%">
+		<d-option index="0" text="Play#ROCK VIDEO"></d-option>
+		<d-option index="1" text="Quit"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The doors open with a thud, and the screen fades to black, then opens to the Rock Video game.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="monstermovieposter">
+	<h2>Poster for Monster Movie</h2>
+
+	<h3 id="monstermovieposter-locked">Before unlocking the game</h3>
+	<p class="note">The poster is blue with a white question mark.</p>
+	<d-box theme="dark">
+		<d-text asterisk>("COMING SOON!")</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="monstermovieposter-preplay">After unlocking the game, before playing for the first time</h3>
+	<p class="note">The poster is blue with a white question mark.</p>
+	<d-box theme="dark">
+		<d-text asterisk>("COMING SOON!")</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... However, it seems you can play it immediately.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="monstermovieposter-postplay">After playing for the first time</h3>
+	<p class="note">The poster shows Susiezilla breathing fire.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a poster for the MONSTER MOVIE!)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Check scores"></d-option>
+		<d-option index="1" text="Tips and Tricks"></d-option>
+		<d-option index="2" text="Nothing"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<h4>Before completing a playthrough</h4>
+		<d-box theme="dark">
+			<d-text asterisk>(No high scores recorded! Give it a shot!)</d-text>
+		</d-box>
+
+		<hr class="hr2">
+
+		<h4>After completing a playthrough at least once</h4>
+		<p class="note">Your score, rank (Z/C/B/A/S/T), and clear time in minutes and seconds are substituted into the following.</p>
+		<d-box theme="dark">
+			<d-text asterisk>(Your highest score is &lt;#&gt;!)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(Your highest rank is &lt;RANK&gt;!)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(Your clear time is &lt;M:SS&gt;!)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(It's a giant monster movie! Bash everything!)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(Destroy all houses in one attack for BONUS POINTs!)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(Survive at the end for the highest score...!)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(There are no rewards for getting a high score though.)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="monstermoviedoor">
+	<h2>Door to Monster Movie</h2>
+
+	<h3 id="monstermoviedoor-locked">Before unlocking the game</h3>
+	<p class="note">A sunglasses-wearing Pippins stands in front of the doors, jumping up and down. Upon interacting with them, your current money and POINTs totals are displayed above the dialogue box.</p>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Hey, hey! This here's an extra special game... It's LOCKED, you know!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>That is... unless you pay 500 POINTs.</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Pay#500 points"></d-option>
+		<d-option index="1" text="Don't"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<h4>If you have 500 POINTs or more</h4>
+		<p class="note">Pippins stops jumping. 500 POINTs are deducted from your score.</p>
+		<d-box theme="dark">
+			<d-text asterisk>(You handed over 500 POINTs.)</d-text>
+		</d-box>
+		<p class="note">The party lines up in front of Pippins.</p>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Alright, alright! Now that we've got those...</d-text>
+		</d-box>
+		<p class="note">Pippins turns around and steps up to the doors.</p>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Lock opening noise... Lock opening noise...</d-text>
+		</d-box>
+		<p class="note">A beep. Pippins turns back to the party and steps to the side.</p>
+		<d-box theme="dark">
+			<d-text asterisk>Look at that, would ya! The lock's all gone!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>Not a trace! You'd hardly believe it was ever there at all!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>Well, see ya! ... no refunds!</d-text>
+		</d-box>
+		<p class="note">Pippins speeds offscreen to the right, presumably leaving the Arcade. The game is now unlocked.</p>
+
+		<hr class="hr2">
+
+		<h4>If you have less than 500 POINTs</h4>
+		<p class="note">Pippins stops jumping. The sound of POINTs being deducted plays, but none are actually taken.</p>
+		<d-box theme="dark">
+			<d-text asterisk>(You handed over 500 POINTs.)</d-text>
+		</d-box>
+		<p class="note">The party lines up in front of Pippins.</p>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Haha, thanks for the points... sucker!</d-text>
+		</d-box>
+		<p class="note">Pippins moves to the side, revealing no lock on the doors to the game. But after a moment, Pippins moves back in front of the doors.</p>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>... is what I would say if you had enough POINTs!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Gee, try being responsible and saving 'em up, would ya!?</d-text>
+		</d-box>
+		<p class="note">Nothing happens; dialogue ends.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Seriously? A REAL gamer would pay ANY transaction!</d-text>
+		</d-box>
+		<p class="note">Nothing happens. Dialogue ends.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="monstermoviedoor-preplay">After unlocking the game, before playing for the first time</h3>
+	<p class="note">The marquee above the door reads "<span class="fnt-tv">COMING SOON......</span>".</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's the door to the MYSTERY GAME! Play it!?)</d-text>
+	</d-box>
+	<d-choices theme="dark" offset="10%">
+		<d-option index="0" text="Play#MYSTERY GAME"></d-option>
+		<d-option index="1" text="Quit"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The doors open with a thud, and the screen fades to black, then opens to the Monster Movie game.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="monstermoviedoor-postplay">After playing for the first time</h3>
+	<p class="note">The marquee above the door reads "<span class="fnt-tv">NOW PLAYING......MONSTER MOVIE</span>".</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's the door to the MONSTER MOVIE! Play it!?)</d-text>
+	</d-box>
+	<d-choices theme="dark" offset="10%">
+		<d-option index="0" text="Play#MONSTER MOVIE"></d-option>
+		<d-option index="1" text="Quit"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The doors open with a thud, and the screen fades to black, then opens to the Monster Movie game.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+</section>
