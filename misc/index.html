@@ -63,7 +63,20 @@ items:
             name: Save points{END_LINK} - Narration accompanying save points
       -
         url: generic
-        name: Generic interactions{END_LINK} - Getting items/equipment/money, treasure chests
+        name: Generic interactions
+        sublist:
+          -
+            url: objectget
+            name: Getting items/equipment/money
+            splitter: "#"
+          -
+            url: treasurechest
+            name: Treasure chests
+            splitter: "#"
+          -
+            url: vendingmachine
+            name: Vending machines
+            splitter: "#"
         # what else is generic?
   -
     id: other
