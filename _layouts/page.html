@@ -2,7 +2,12 @@
 layout: default
 ---
 <header class="d-section">
-	<h1 {%- if page.hide_title %} class="visually-hidden" {%- endif %}>{{ page.title }}</h1>
+	<h1 {%- if page.hide_title %} class="visually-hidden" {%- endif %}>
+		{{- page.title -}}
+		{%- if page.layout == "disambiguation" -%}
+			{{ " " }}(disambiguation)
+		{%- endif -%}
+	</h1>
 
 	{%- if page.credits %}
 	<div id="pagecred">{{ page.credits }}</div>
