@@ -1,0 +1,600 @@
+---
+title: ABC-Rank rewards room
+
+description: >
+  <p>Narration and dialogue for the ranking hub in the Green Room.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_room_ranking_hub_Step_0
+    chapters: [3]
+    note: Zapper for higher ranks, Lanino (initial)
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [3]
+    note: Zapper for Z-Rank, locked doors
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [3]
+    note: choices
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [3]
+    note: Lanino (subsequent)
+  -
+    name: gml_Object_obj_shop_vending_reverse_Other_11
+    chapters: [3]
+    note: reverse vending machine's initial menu/options
+  -
+    name: gml_Object_obj_shop_vending_Draw_0
+    chapters: [3]
+    note: reverse vending machine's Sell option
+  -
+    name: gml_Object_obj_shop_vending_reverse_Other_12
+    chapters: [3]
+    note: reverse vending machine's Swell option
+  -
+    name: gml_Object_obj_shop_vending_ranking_Other_11
+    chapters: [3]
+    note: POINTs to D$ machine's initial menu/options
+
+see_also:
+  -
+    url: /locations/tvworld/greenroom/arcade
+    name: Arcade{END_LINK} - A-Rank rewards room
+  -
+    url: /locations/tvworld/greenroom/ballmachine
+    name: Ball Machine{END_LINK} - B-Rank rewards room
+  -
+    url: /locations/tvworld/greenroom/cooler
+    name: Cooler{END_LINK} - C-Rank rewards room
+
+toc:
+  -
+    id: zapper
+    name: Zapper
+    subheadings:
+      -
+        id: zapper-highrank
+        name: If you got a C-Rank or higher on the most recent board
+      -
+        id: zapper-zrank
+        name: If you got a Z-Rank on the most recent board
+  -
+    id: vendingreverse
+    name: Reverse vending machine
+    subheadings:
+      -
+        id: vendingreverse-initial
+        name: Initial menu
+      -
+        id: vendingreverse-sell
+        name: Sell
+        subheadings:
+          -
+            id: sellitem
+            name: Initial item sale screen
+          -
+            id: sellweapon
+            name: Initial weapon sale screen
+          -
+            id: sellarmor
+            name: Initial armor sale screen
+          -
+            id: sellempty
+            name: Selling with empty inventory
+          -
+            id: considersell
+            name: Considering a sale
+          -
+            id: confirmsale
+            name: Making a sale
+          -
+            id: cancelsale
+            name: Backing out of a sale
+          -
+            id: sellspecial
+            name: Trying to sell special items
+          -
+            id: sellfail
+            name: Empty slot
+      -
+        id: vendingreverse-swell
+        name: Swell
+      -
+        id: vendingreverse-exit
+        name: Exit
+  -
+    id: vendingexchange
+    name: POINTs to D$ vending machine
+    subheadings:
+      -
+        id: vendingexchange-initial
+        name: Initial menu
+      -
+        id: vendingexchange-exchange
+        name: Exchange
+      -
+        id: vendingexchange-exit
+        name: Exit
+  -
+    id: lanino
+    name: Lanino
+  -
+    id: arankdoor
+    name: Door to the Arcade
+  -
+    id: brankdoor
+    name: Door to the Ball Machine
+  -
+    id: crankdoor
+    name: Door to the Cooler
+---
+<section class="d-section" id="zapper">
+	<h2>Zapper</h2>
+	<p>Present behind the counter to the right before completing the Bonus Round.</p>
+
+	<h3 id="zapper-highrank">If you got a C-Rank or higher on the most recent board</h3>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Welcome to the ABC-Rank rewards room.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>How may we assist you today?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>How may we assist you?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="dark">
+		<d-option index="0" text="My rank,#my rewards?"></d-option>
+		<d-option index="1" text="What's in#each door?"></d-option>
+		<d-option index="2" text="Don't"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<h4>If you got S-Rank on the most recent board, or bought the counterfeit S-Rank for this round</h4>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>On the previous BOARD, you earned RANK S. You're a STAR!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>This means you can use door A, B, and C!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>We also recommend checking out our Star Changing Room.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>Look in the "S" Door in the Green Room below. Enjoy!</d-text>
+		</d-box>
+
+		<hr class="hr2">
+
+		<h4>If you got A-Rank on the most recent board</h4>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>On the previous Board, you earned RANK A. You're AMAZING!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>This means you can use door A, B, and C!</d-text>
+		</d-box>
+
+		<hr class="hr2">
+
+		<h4>If you got B-Rank on the most recent board</h4>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>On the previous Board, you earned RANK B. How BRAVE!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>This means you can use door B, and C!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>I'm sure you can earn Rank A next time!</d-text>
+		</d-box>
+
+		<hr class="hr2">
+
+		<h4>If you got C-Rank on the most recent board</h4>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>On the previous Board, you earned RANK C. You're CRINGE!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>You are only allowed to use door C!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>Let's try harder next time!</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>A-Door is for ARCADE. You can replay a PHYSICAL CHALLENGE for fun.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>B-Door is for BALL MACHINE. Spend points to earn random prizes!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>C-Door is for COOLER. Feel free to have a drink.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="zapper-zrank">If you got a Z-Rank on the most recent board</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Welcome to the ABC-Rank rewards room.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Unfortunately, you didn't earn rank A, B, or C.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>You... aren't allowed to use any of these doors.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>There is one room... for people like you...</d-text>
+	</d-box>
+	<p class="note">With a thud, the wall to the right disappears, opening up a path to the <a href="{{ '/locations/tvworld/greenroom/zrankroom' | relative_url }}">Z-Rank room</a>.</p>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="vendingreverse">
+	<h2>Reverse vending machine</h2>
+
+	<h3 id="vendingreverse-initial">Initial menu</h3>
+	<d-box theme="shopleft">
+		<d-text asterisk>(It's a reverse vending machine.)</d-text>
+		<d-text asterisk>(Put items in, DARK DOLLARS come out.)</d-text>
+	</d-box>
+	<p class="note">The menu on the right offers the options "<a href="#vendingreverse-sell" class="fnt-condensed">Sell</a>" (present twice), "<a href="#vendingreverse-swell" class="fnt-condensed">Swell</a>", and "<a href="#vendingreverse-exit" class="fnt-condensed">Exit</a>".</p>
+
+	<hr>
+
+	<h3 id="vendingreverse-sell">Sell</h3>
+	<d-box theme="shopright">
+		<d-text>Select an object.</d-text>
+	</d-box>
+	<p class="note">The menu on the left offers the options "<a href="#sellitem" class="fnt-condensed">Sell Items</a>", "<a href="#sellweapon" class="fnt-condensed">Sell Weapons</a>", "<a href="#sellarmor" class="fnt-condensed">Sell Armor</a>", "<a href="#sellitem" class="fnt-condensed">Sell Pocket Items</a>", and "Return".</p>
+
+	<h4 id="sellitem">Initial item sale screen</h4>
+	<d-box theme="shopright">
+		<d-text>Select<span class="break"></span> ITEM<span class="break"></span> to sell.</d-text>
+	</d-box>
+
+	<h4 id="sellweapon">Initial weapon sale screen</h4>
+	<d-box theme="shopright">
+		<d-text>Select WEAPON<span class="break"></span> to sell.</d-text>
+	</d-box>
+
+	<h4 id="sellarmor">Initial armor sale screen</h4>
+	<d-box theme="shopright">
+		<d-text>Select ARMOR<span class="break"></span> to sell.</d-text>
+	</d-box>
+
+	<h4 id="sellempty">Selling with empty inventory</h4>
+	<p>Choosing "Sell Items/Pocket Items" when you have no items, or "Sell Weapons/Armor" when you have no unequipped weapons/armor.</p>
+	<d-box theme="shopright">
+		<d-text>Nothing<span class="break"></span> to sell.</d-text>
+	</d-box>
+
+	<h4 id="considersell">Considering a sale</h4>
+	<d-box theme="shopright">
+		<d-text>Sell it for $&lt;VALUE&gt; ?</d-text>
+	</d-box>
+	<p class="note">The menu below includes the options "Yes" and "No".</p>
+
+	<h4 id="confirmsale">Making a sale</h4>
+	<p>This text is used even when you sell the last of your items/weapons/armor; in such cases, you remain on the type-specific sell screen until backing out by pressing [CANCEL].</p>
+	<d-box theme="shopright">
+		<d-text>Thank<span class="break"></span> you for<span class="break"></span> the sale.</d-text>
+	</d-box>
+
+	<h5>Unused variant</h5>
+	<p>Possibly intended as a fallback.</p>
+	<d-box theme="shopright">
+		<d-text>Object<span class="break"></span> sold.</d-text>
+	</d-box>
+
+	<h4 id="cancelsale">Backing out of a sale</h4>
+	<d-box theme="shopright">
+		<d-text>What<span class="break"></span> will<span class="break"></span> you do?</d-text>
+	</d-box>
+
+	<h4 id="sellspecial">Trying to sell special items</h4>
+	<p>Special items include:</p>
+	<ul>
+		<li><a href="{{ '/misc/darkitems#manual' | relative_url }}">The Manual</a></li>
+		<li><a href="{{ '/misc/armor#jevilstail' | relative_url }}">Jevilstail</a> & <a href="{{ '/misc/weapons#devilsknife' | relative_url }}">Devilsknife</a></li>
+		<li><a href="{{ '/misc/armor#dealmaker' | relative_url }}">Dealmaker</a> & <a href="{{ '/misc/weapons#puppetscarf' | relative_url }}">Puppet Scarf</a></li>
+		<li><a href="{{ '/misc/weapons#thornring' | relative_url }}">Thorn Ring</a></li>
+		<li><a href="{{ '/misc/armor#shadowmantle' | relative_url }}">Shadow Mantle</a></li>
+		<li><a href="{{ '/misc/weapons#twistedsword' | relative_url }}">Twisted Sword</a></li>
+		<li><a href="{{ '/misc/armor#blueribbon' | relative_url }}">Blue Ribbon</a></li>
+	</ul>
+	<d-box theme="shopright">
+		<d-text>It won't fit.</d-text>
+	</d-box>
+
+	<h4 id="sellfail">Empty slot</h4>
+	<d-box theme="shopright">
+		<d-text>No<span class="break"></span> value.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="vendingreverse-swell">Swell</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(You felt glad.)</d-text>
+	</d-box>
+	<p class="note">You are returned to the <a href="#vendingreverse-initial">initial menu</a>.</p>
+
+	<hr>
+
+	<h3 id="vendingreverse-exit">Exit</h3>
+	<p class="note">Dialogue/narration ends silently, and control is returned to the player.</p>
+</section>
+
+<section class="d-section" id="vendingexchange">
+	<h2>POINTs to D$ vending machine</h2>
+
+	<h3 id="vendingexchange-initial">Initial menu</h3>
+	<d-box theme="shopleft">
+		<d-text asterisk>(It's a vending machine.)</d-text>
+	</d-box>
+	<p class="note">The menu on the right offers the options "<a href="#vendingexchange-exchange" class="fnt-condensed">Exchange</a>" and "<a href="#vendingexchange-exit" class="fnt-condensed">Exit</a>".</p>
+
+	<hr>
+
+	<h3 id="vendingexchange-exchange">Exchange</h3>
+	<p class="note">Your current money and POINTs totals are displayed above the narration box.</p>
+	<d-box theme="dark">
+		<d-text asterisk>Exchange POINTs into $?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="50 PTs -> $50"></d-option>
+		<d-option index="1" text="200 PTs -> $250"></d-option>
+		<d-option index="2" text="1000 PTs -> $1500"></d-option>
+		<d-option index="3" text="Don't exchange"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<hr class="hr2">
+
+		<h4>If you have 50 or more POINTs</h4>
+		<p class="note">50 POINTs are deducted from your score, and $50 is added to your total money.</p>
+		<d-box theme="dark">
+			<d-text asterisk>(Points exchanged.)</d-text>
+		</d-box>
+
+		<hr class="hr3">
+
+		<h4>If you have less than 50 POINTs</h4>
+		<d-box theme="dark">
+			<d-text asterisk>(Not enough points.)</d-text>
+		</d-box>
+
+		<hr class="hr2">
+
+		<p class="note">You are returned to the <a href="#vendingexchange-initial">initial menu</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<hr class="hr2">
+
+		<h4>If you have 200 or more POINTs</h4>
+		<p class="note">200 POINTs are deducted from your score, and $250 is added to your total money.</p>
+		<d-box theme="dark">
+			<d-text asterisk>(Points exchanged.)</d-text>
+		</d-box>
+
+		<hr class="hr3">
+
+		<h4>If you have less than 200 POINTs</h4>
+		<d-box theme="dark">
+			<d-text asterisk>(Not enough points.)</d-text>
+		</d-box>
+
+		<hr class="hr2">
+
+		<p class="note">You are returned to the <a href="#vendingexchange-initial">initial menu</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<hr class="hr2">
+
+		<h4>If you have 1000 or more POINTs</h4>
+		<p class="note">1000 POINTs are deducted from your score, and $1500 is added to your total money.</p>
+		<d-box theme="dark">
+			<d-text asterisk>(Points exchanged.)</d-text>
+		</d-box>
+
+		<hr class="hr3">
+
+		<h4>If you have less than 1000 POINTs</h4>
+		<d-box theme="dark">
+			<d-text asterisk>(Not enough points.)</d-text>
+		</d-box>
+
+		<hr class="hr2">
+
+		<p class="note">You are returned to the <a href="#vendingexchange-initial">initial menu</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="3" theme="dark">
+		<p class="note">You are returned to the <a href="#vendingexchange-initial">initial menu</a>.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="vendingexchange-exit">Exit</h3>
+	<p class="note">Dialogue/narration ends silently, and control is returned to the player.</p>
+</section>
+
+<section class="d-section" id="lanino">
+	<h2>Lanino</h2>
+	<p>Present only after Round 1's Desert Board is completed.</p>
+
+	<h3>Initial</h3>
+	<d-box theme="dark">
+		<d-speaker>Lanino</d-speaker>
+		<d-text asterisk>Oh, you three! It is I, Lanino. The Green Room was, BUSY, so I'm in here.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Lanino</d-speaker>
+		<d-text asterisk>Need any, ahem, assistance from a brave and independent moon?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Weather#report"></d-option>
+		<d-option index="1" text="Nothing"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The party lines up in front of Lanino.</p>
+		<d-box theme="dark">
+			<d-speaker>Lanino</d-speaker>
+			<d-text asterisk>Certainly. Tomorrow's forecast will be SUN, followed by a light...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Lanino</d-speaker>
+			<d-text asterisk>... a light drizzle...</d-text>
+		</d-box>
+		<p class="note">Lanino bursts into tears.</p>
+		<d-box theme="dark">
+			<d-speaker>Lanino</d-speaker>
+			<d-text asterisk>OH, ELNINA! My SWEETEST CLOUD! She would have LOVED a light drizzle!</d-text>
+		</d-box>
+		<p class="note">Lanino stops crying with a sneeze, now looking downcast.</p>
+		<d-box theme="dark">
+			<d-speaker>Lanino</d-speaker>
+			<d-text asterisk>Everything reminds me of her! EVERYTHING!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Lanino</d-speaker>
+			<d-text asterisk>The water cooler... the water warmer... I tried counting sheep for a nap...</d-text>
+		</d-box>
+		<p class="note">Lanino bursts into tears again.</p>
+		<d-box theme="dark">
+			<d-speaker>Lanino</d-speaker>
+			<d-text asterisk>And all I could imagine was her face!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Lanino</d-speaker>
+			<d-text asterisk>Without her moisture, my heart and skin have become so... so, dry.</d-text>
+		</d-box>
+		<d-choices theme="dark">
+			<d-option index="0" text="You're#strong and#independent"></d-option>
+			<d-option index="1" text="Your#forecast is#love"></d-option>
+		</d-choices>
+		<d-option-panel index="0" theme="dark">
+			<p class="note">Lanino straightens up, eyes wide.</p>
+			<d-box theme="dark">
+				<d-speaker>Lanino</d-speaker>
+				<d-text asterisk>Th... that's right! I don't need her! I don't need anyone!</d-text>
+			</d-box>
+			<p class="note">Lanino grins gleefully.</p>
+			<d-box theme="dark">
+				<d-speaker>Lanino</d-speaker>
+				<d-text asterisk>We'll see how far she gets without ME coordinating her OUTFITS!</d-text>
+			</d-box>
+		</d-option-panel>
+		<d-option-panel index="1" theme="dark">
+			<p class="note">Lanino straightens up, eyes wide.</p>
+			<d-box theme="dark">
+				<d-speaker>Lanino</d-speaker>
+				<d-text asterisk>Th... that's right! I'm the most popular circle in the sky!</d-text>
+			</d-box>
+			<p class="note">Lanino grins gleefully.</p>
+			<d-box theme="dark">
+				<d-speaker>Lanino</d-speaker>
+				<d-text asterisk>Everyone knows GUYS WITH PAULDRONS are HOT STUFF! I've got this!</d-text>
+			</d-box>
+		</d-option-panel>
+		<p class="note">Lanino's expression softens to a reassured smile.</p>
+		<d-box theme="dark">
+			<d-speaker>Lanino</d-speaker>
+			<d-text asterisk>Thanks, Kris! You shone a little light on my life!</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3>After reassuring Lanino</h3>
+	<d-box theme="dark">
+		<d-speaker>Lanino</d-speaker>
+		<d-text asterisk>Thanks, Kris! You shone a little light on my life!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="arankdoor">
+	<h2>Door to the <a href="{{ '/locations/tvworld/greenroom/arcade' | relative_url }}">Arcade</a></h2>
+	<p>Only interactable if locked, with bars over the doors. Otherwise, you enter the room upon approaching the door.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(The A-rank room... it's shut tightly with aluminum bars.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You hear the desperate clatter of lost fun...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="brankdoor">
+	<h2>Door to the <a href="{{ '/locations/tvworld/greenroom/ballmachine' | relative_url }}">Ball Machine</a></h2>
+	<p>Only interactable if locked, with bars over the doors. Otherwise, you enter the room upon approaching the door.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(The B-rank room... it's shut tightly with barium bars.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You hear the desperate bouncing of prizes trapped inside...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="crankdoor">
+	<h2>Door to the <a href="{{ '/locations/tvworld/greenroom/cooler' | relative_url }}">Cooler</a></h2>
+	<p>Only interactable if locked, with bars over the doors. Otherwise, you enter the room upon approaching the door.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(The C-rank room... it's shut tightly with carbon-fiber bars.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You hear the desperate slurping of those trapped inside...)</d-text>
+	</d-box>
+</section>
