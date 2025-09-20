@@ -1379,19 +1379,16 @@ d-choices {
 				width: var(--size);
 				height: var(--size);
 				position: absolute;
-				left: 9em;
-				top: 1.7em;
+				left: calc(9em + var(--offset-x, 0em));
+				top: calc(1.7em + var(--offset-y, 0em));
 				--size: 0.75em;
 			}
-			&[theme=battlemenu]::after { left: 11em }
+			&[theme=battlemenu]::after { left: calc(11em + var(--offset-x, 0em)) }
 			&:is([theme=eightbit], [theme="8bit"])::after {
 				background-image: url("../assets/images/heart_8bit.png");
 				--size: 0.7em;
-				top: 1.85em;
+				top: calc(1.85em + var(--offset-y, 0em));
 			}
-
-			&[offset]::after { left: calc(9em + var(--offset)) }
-			&[offset][theme=battlemenu]::after { left: calc(11em + var(--offset)) }
 		}
 	}
 

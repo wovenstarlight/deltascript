@@ -273,8 +273,16 @@ class DialogueChoices extends HTMLElement {
 	connectedCallback() {
 		this.role = "tablist";
 		this.setAttribute("aria-label", "Choice menu");
-		if (this.getAttribute("offset") !== null) {
-			this.setAttribute("style", `--offset: ${this.getAttribute("offset")}`);
+		const ox = this.getAttribute("offset-x") ?? this.getAttribute("offset"),
+			oy = this.getAttribute("offset-y");
+		if (ox !== null || oy !== null) {
+			this.setAttribute("style", `${
+				ox !== null ? `--offset-x: ${ox}` : ""
+			}${
+				ox !== null && oy !== null ? "; " : ""
+			}${
+				oy !== null ? `--offset-y: ${oy}` : ""
+			}`);
 		}
 		this.isInteractive = this.getAttribute("noninteractive") === null;
 	}
