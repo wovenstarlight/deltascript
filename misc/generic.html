@@ -11,11 +11,23 @@ sources:
   -
     name: gml_GlobalScript_scr_itemget_anytype_text
     chapters: [1, 2, 3, 4]
-    note: equipment/item/money get narration
+    note: equipment/item/money get
   -
     name: gml_Object_obj_treasure_room_Other_10
     chapters: [1, 2, 3, 4]
-    note: treasure chest interaction
+    note: treasure chests
+  -
+    name: gml_Object_obj_shop_vending_Create_0
+    chapters: [3]
+    note: vending machines
+  -
+    name: gml_Object_obj_shop_vending_Draw_0
+    chapters: [3]
+    note: vending machine text conditions
+  -
+    name: gml_Object_obj_shop_vending_Other_12
+    chapters: [3]
+    note: vending machine sell/talk dialogue
 
 toc:
   -
@@ -184,4 +196,58 @@ toc:
 	</d-box>
 </section>
 
-{% comment %} TODO: Add more generic interactions? What else stays the same… {% endcomment %}
+<section class="d-section" id="vendingmachine">
+	<h2>Vending machines</h2>
+	<p>Present in Chapter 3.</p>
+
+	<h3 id="vendingmachine-initial">Initial menu</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a vending machine.)</d-text>
+	</d-box>
+	<p class="note">The menu on the right offers varying options depending on the machine, often including "<a href="#vendingmachine-buy">Buy</a>". The last option is always "<a href="#vendingmachine-exit">Exit</a>".</p>
+
+	<hr>
+
+	<h3 id="vendingmachine-buy">Buy</h3>
+	<h4 id="vendingmachine-initialbuy">Initial buying</h4>
+	<p>Also used when backing out of a purchase.</p>
+	<d-box theme="shopright">
+		<d-text>(Select<span class="break"></span> an item.)</d-text>
+	</d-box>
+
+	<h4 id="vendingmachine-confirmbuy">Making a purchase</h4>
+	<p class="note">Dark Dollars/POINTs are deducted from your total money/score, as applicable.</p>
+
+	<h5>If item goes to inventory</h5>
+	<d-box theme="shopright">
+		<d-text>(Item bought.)</d-text>
+	</d-box>
+
+	<h5>If item goes to storage</h5>
+	<d-box theme="shopright">
+		<d-text>(Item placed in STORAGE.)</d-text>
+	</d-box>
+
+	<h4 id="vendingmachine-nocurrency">Not enough currency</h4>
+	<h5>If the machine takes POINTs</h5>
+	<d-box theme="shopright">
+		<d-text>(Not<span class="break"></span> enough points.)</d-text>
+	</d-box>
+
+	<h5>If the machine takes Dark Dollars</h5>
+	<d-box theme="shopright">
+		<d-text>(Not<span class="break"></span> enough money.)</d-text>
+	</d-box>
+
+	<h4 id="vendingmachine-storagefull">Inventory/storage full</h4>
+	<d-box theme="shopright">
+		<d-text>(Not<span class="break"></span> enough space.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="vendingmachine-exit">Exit</h3>
+	<p class="note">Dialogue/narration ends silently, and control is returned to the player.</p>
+</section>
+
+{%- comment %} TODO: Add more generic interactions? What else stays the same… {% endcomment %}
