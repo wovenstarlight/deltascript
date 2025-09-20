@@ -1,3 +1,7 @@
+{% assign myurls = include.urls -%}
+{% if myurls == nil -%}
+	{% assign myurls = "" | split: "" -%}
+{% endif -%}
 {% assign mysplit = include.this.splitter | default: "/" -%}
 {% assign myname = include.this.name | split: "{END_LINK}" -%}
 
@@ -5,7 +9,7 @@
 	{% if include.this.url and include.this.override_base_url -%}
 		<a href="{{ include.this.url | relative_url }}">
 	{%- elsif include.this.url -%}
-		<a href="{{ include.parent | append: mysplit | append: include.this.url | replace: '//', '/' | relative_url }}">
+		<a href="{{ myurls | join: '' | append: mysplit | append: include.this.url | replace: '//', '/' | relative_url }}">
 	{%- endif %}
 	
 	{{- myname | first -}}
@@ -20,14 +24,17 @@
 
 
 	{%- if include.this.sublist %}
+	{% if include.this.url -%}
+		{% assign myurls = myurls | push: mysplit | push: include.this.url %}
+	{%- endif -%}
 	<ul>
 		{% for subitem in include.this.sublist -%}
-			{% assign parenturl = include.parent -%}
-			{% if include.this.url -%}
-				{% assign parenturl = parenturl | append: mysplit | append: include.this.url -%}
-			{%- endif %}
-			{% include nested_list_item parent=parenturl this=subitem %}
+			{% include nested_list_item urls=myurls this=subitem %}
 		{% endfor %}
 	</ul>
+	{%- if include.this.url -%}
+		{% comment %} pop include.this.url and mysplit {% endcomment %}
+		{% assign myurls = myurls | pop | pop %}
+	{%- endif %}
 	{%- endif %}
 </li>

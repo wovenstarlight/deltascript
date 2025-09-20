@@ -1,17 +1,25 @@
 ---
 layout: page
 ---
+{% assign urls = "" | split: "" | push: page.base_url %}
+
 {% for section in page.items -%}
 <section class="d-section" id="{{ section.url | default: section.id }}">
 	<h2>{{ section.name }}</h2>
-	{% assign sectionurl = page.base_url | append: section.url -%}
+	{% if section.url != nil -%}
+		{% assign urls = urls | push: section.url %}
+	{%- endif -%}
 
 	<ul>
 		{% for item in section.sublist -%}
-		{% include nested_list_item parent=sectionurl this=item %}
-		{% else %}
-		<li class="gray">To be added!</li>
-		{% endfor %}
+			{% include nested_list_item urls=urls this=item %}
+		{%- else -%}
+			<li class="gray">To be added!</li>
+		{%- endfor %}
 	</ul>
+
+	{%- if section.url != nil -%}
+		{% assign urls = urls | pop %}
+	{%- endif %}
 </section>
 {% endfor -%}
