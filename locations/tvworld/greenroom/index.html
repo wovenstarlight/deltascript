@@ -1,0 +1,1291 @@
+---
+title: Green Room
+
+description: >
+  <p>Narration and dialogue for the main area of the Green Room.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_shop_vending_Other_11
+    chapters: [3]
+    note: vending machine items for sale
+  -
+    name: gml_GlobalScript_scr_shop_vending
+    chapters: [3]
+    note: vending machine item descriptions
+  -
+    name: gml_GlobalScript_scr_armorinfo
+    chapters: [3]
+    note: armor D$ cost
+  -
+    name: gml_GlobalScript_scr_iteminfo
+    chapters: [3]
+    note: items D$ cost
+  -
+    name: gml_Object_obj_npc_ramb_Step_0
+    chapters: [3]
+    note: Ramb Z-Rank prize/"Talk more" dialogue
+  -
+    name: gml_Object_obj_npc_ramb_Other_10
+    chapters: [3]
+    note: other Ramb dialogue
+  -
+    name: gml_Object_obj_room_green_room_Step_0
+    chapters: [3]
+    note: petrified Ramb/S-Rank door first interactions, Zapper second interaction
+  -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [3]
+    note: Zapper after Round 2
+  -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [3]
+    note: Elnina, couch Pippins, and Lancer after Round 1
+  -
+    name: gml_Object_obj_dw_ch3_lancer_spin_Step_0
+    chapters: [3]
+    note: Lancer after Round 2 - "pick up" dialogue
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [3]
+    note: all other interactions
+  -
+    name: gml_Object_obj_room_green_room_racing_Step_0
+    chapters: [3]
+    note: left TV racing game
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [3]
+    note: choices
+
+see_also:
+  -
+    url: /locations/tvworld/greenroom/starchangingroom
+    name: Star Changing Room{END_LINK} - S-Rank rewards room
+  -
+    url: /locations/tvworld/greenroom/rewardsroom
+    name: ABC-Rank rewards room
+  -
+    url: /locations/tvworld/greenroom/redcarpethall
+    name: Red carpet hall
+
+toc:
+  -
+    id: leftdoor
+    name: Leftmost doors
+  -
+    id: lancer
+    name: Lancer
+    subheadings:
+      -
+        id: lancer-round1
+        name: After Round 1
+      -
+        id: lancer-round2
+        name: After Round 2
+  -
+    id: poster
+    name: Poster
+  -
+    id: pippins
+    name: Top left Pippins
+    subheadings:
+      -
+        id: pippins-round1
+        name: After Round 1
+      -
+        id: pippins-bonus
+        name: After the Bonus Round, if the Sword Route's second stage wasn't successfully completed
+  -
+    id: vendingmachine
+    name: Vending machine
+    subheadings:
+      -
+        id: vendingmachine-initial
+        name: Interacting with the machine
+      -
+        id: vendingmachine-buy
+        name: Buy
+        subheadings:
+          -
+            id: itemlist
+            name: Items for sale
+      -
+        id: vendingmachine-sell
+        name: Sell
+      -
+        id: vendingmachine-talk
+        name: Talk
+      -
+        id: vendingmachine-exit
+        name: Exit
+  -
+    id: ramb
+    name: Ramb
+    subheadings:
+      -
+        id: ramb-initial
+        name: Initial, after Rounds 1 and 2
+      -
+        id: ramb-round1
+        name: After Round 1, once you got your prize
+      -
+        id: ramb-round2
+        name: After Round 2, once you got your prize
+      -
+        id: ramb-bonus
+        name: After the Bonus Round, if the Sword Route's second stage wasn't successfully completed
+  -
+    id: rambcounter
+    name: Ramb's counter
+  -
+    id: srankdoor
+    name: Star Changing Room door
+    subheadings:
+      -
+        id: srankdoor-standard
+        name: Standard
+      -
+        id: srankdoor-locked
+        name: Unused locked narration
+  -
+    id: clipboard
+    name: Clipboard
+  -
+    id: zapper
+    name: Zapper
+    subheadings:
+      -
+        id: zapper-round1
+        name: After Round 1
+      -
+        id: zapper-round2
+        name: After Round 2
+  -
+    id: rightdoor
+    name: Rightmost doors
+  -
+    id: elnina
+    name: Elnina
+    subheadings:
+      -
+        id: elnina1
+        name: Initial
+      -
+        id: elnina2
+        name: After reassuring Elnina
+  -
+    id: throuple
+    name: Elnina, Rouxls, and Lanino
+    subheadings:
+      -
+        id: throuple1
+        name: First time
+      -
+        id: throuple2
+        name: Subsequent times
+  -
+    id: pippinscouch
+    name: Pippins on the couch
+  -
+    id: cactusleft
+    name: Left cactus
+  -
+    id: tvleft
+    name: Left TV
+    subheadings:
+      -
+        id: tvleft-play
+        name: After Round 1, before playing thrice or Kris winning
+      -
+        id: tvleft-noplay
+        name: After Round 1 (if the game has been played thrice or Kris has won the game) / After Round 2
+      -
+        id: tvleft-hair
+        name: After the Bonus Round (UNUSED)
+  -
+    id: tvright
+    name: Right TV
+    subheadings:
+      -
+        id: tvright-round1
+        name: After Round 1
+      -
+        id: tvright-round2
+        name: After Round 2
+  -
+    id: cactusright
+    name: Right cactus
+---
+{% comment %} Top row {% endcomment -%}
+
+<section class="d-section" id="leftdoor">
+	<h2>Leftmost doors</h2>
+	<p>Available to interact with only after the Bonus Round; otherwise, you can walk through them to the left hall for various cutscenes before the next round of TV Time.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(Looks like it's locked.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="lancer">
+	<h2>Lancer</h2>
+
+	<h3 id="lancer-round1">After Round 1</h3>
+	<p class="note">Lancer stands in front of the <a href="#leftdoor">leftmost doors</a>, facing the rest of the room. Upon interacting with him, the party gathers up in front of him, and Lancer hops in place.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Susie! Other people! You looked so cool gaming!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Lancer! You're here for real?! Uh... not real?</d-text>
+	</d-box>
+	<p class="note">Susie turns to the side, her smile gone.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>... Hey, wait, if you're in this Dark World, aren't you gonna...</d-text>
+	</d-box>
+	<p class="note">Lancer hops in place again, and she turns back to him, smiling again.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Don't worry, I've still got some time before I petrify!</d-text>
+	</d-box>
+	<p class="note">Lancer does a spin.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>Meanwhile, I got a job at the gaming factory.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>I got my own gamepad and I've only broken it 4 times!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Now, I gotta go press buttons for pennies...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="8"></d-sprite>
+		<d-text asterisk>See you in the funny stages!</d-text>
+	</d-box>
+	<p class="note">With a reversed splat SFX, Lancer squeezes backwards through the gap in the doors behind him.</p>
+
+	<hr>
+
+	<h3 id="lancer-round2">After Round 2</h3>
+	<p class="note">In the bottom right of the room, between the rightmost <a href="#tvright">TV</a> and <a href="#cactusright">cactus</a>, Lancer is on his back on the ground, spinning in place.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>Susie! Blue Kris! I'm doing my Hurricane Attack. Want to help!?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Help or#Don't Help"></d-option>
+		<d-option index="1" text="Pick#him up"></d-option>
+		<d-option index="2" text="No response"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">If Kris wasn't spinning, they begin spinning, and won't stop until choosing this dialogue option again or leaving the Green Room's main area. Otherwise, if Kris was spinning, they stop.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="2"></d-sprite>
+			<d-text asterisk>Obviously.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+			<d-text asterisk>Oooh, carry me! Carry me!</d-text>
+		</d-box>
+		<p class="note">With the item get beeping SFX, Lancer disappears.</p>
+		<d-box theme="dark">
+			<d-text asterisk>(You picked up LANCER into your LANCERs.)</d-text>
+		</d-box>
+		<p class="note">A long pause.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+			<d-text asterisk>Now, put me down! Put me down!</d-text>
+		</d-box>
+		<p class="note">With the item get beeping SFX, Lancer reappears, still spinning.</p>
+		<d-box theme="dark">
+			<d-text asterisk>(You dropped LANCER from your LANCERs.)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+			<d-text asterisk>Spin, spin, spin, spin, spin, spin, spin, spin...</d-text>
+		</d-box>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="poster">
+	<h2>Poster</h2>
+	<p>Present beside the <a href="#leftdoor">leftmost doors</a>. Reads "STAGE" below an arrow pointing at said doors.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(This way to the next BOARD!!)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="pippins">
+	<h2>Top left Pippins</h2>
+
+	<h3 id="pippins-round1">After Round 1</h3>
+	<p class="note">Pippins is jumping up and down to the right of the vending machine.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Hey! Kris, you and Asriel took me home from school, remember?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>The Rudinns? Pretty sure you lost them somewhere. ... And I mean REALLY lost.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>You wanna talk more? Shh! Let's do it in the dressing room.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="pippins-bonus">After the Bonus Round, if the <a href="{{ '/chapters/chapter3/islandboardsword' | relative_url }}">Sword Route's second stage</a> wasn't successfully completed</h3>
+	<p class="note">Pippins is initially absent; the first time you attempt to interact with Ramb, Pippins rises up from behind the counter, holding a mug, and remains there permanently.</p>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Don't bother, Kris. Ramb's already turned to stone a bit ago...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>He was a plug, but because you played with him like any other toy, it made him feel special.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Might have given him a little bit of an ego, in fact...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Wanna hear more?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<h4>First time</h4>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Always condescending to any plan, saying "what's best for Kris?"</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Couldn't get rid of him, so Tenna made him "work the stand"...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Us from Card Castle fit in fine. Him? He never really belonged.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>His first day at this stand, he joked "how about the usual?"... no one laughed!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Mixing drinks alone for himself, he wasn't allowed to handle the points...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>No one will shed a tear for him. Inside, he was probably stone already.</d-text>
+		</d-box>
+
+		<hr class="hr2">
+
+		<h4>Subsequent times</h4>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Ramb... well, he was like Tenna, I guess.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Two guys trapped in the past... just different ones.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Well, that's a relief.</d-text>
+		</d-box>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="vendingmachine">
+	<h2>Vending machine</h2>
+
+	<h3 id="vendingmachine-initial">Interacting with the machine</h3>
+	<hr class="hr2">
+	<h4>Before the Bonus Round</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(POINTs to ITEMs!)</d-text>
+		<d-text asterisk>(Use the vending machine?)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>After the Bonus Round</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Due to the devaluation of POINTs as currency...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(This machine now only accepts DARK DOLLARS.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(We apologize for the convenience.)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="dark">
+		<d-option index="0" text="Buy"></d-option>
+		<d-option index="1" text="Don't Buy"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The <a href="{{ '/misc/generic#vendingmachine-initial' | relative_url }}">initial menu </a> opens, with the options "<a href="#vendingmachine-buy" class="fnt-condensed">Buy</a>", "<a href="#vendingmachine-sell" class="fnt-condensed">Sell</a>", "<a href="#vendingmachine-talk" class="fnt-condensed">Talk</a>", and "<a href="#vendingmachine-exit" class="fnt-condensed">Exit</a>" listed on the right.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="vendingmachine-buy">Buy</h3>
+	<p class="note">Uses <a href="{{ '/misc/generic#vendingmachine-buy' | relative_url }}">generic text</a>.</p>
+
+	<h4 id="itemlist">Items for sale</h4>
+	<p class="note">Prices are in POINTs before the Bonus Round, and in Dark Dollars after the Bonus Round.</p>
+	<h5><a href="{{ '/misc/darkitems#tvdinner' | relative_url }}">TV Dinner</a></h5>
+	<p>Sold for 60 POINTs / $200.</p>
+	<d-box theme="shopdesc">
+		<d-text>ITEM</d-text>
+		<d-text>Even non-TVs can eat it</d-text>
+		<d-text>HP+100</d-text>
+	</d-box>
+	<h5><a href="{{ '/misc/darkitems#deluxedinner' | relative_url }}">Deluxe Dinner</a></h5>
+	<p>Sold for 120 POINTs / $600.</p>
+	<d-box theme="shopdesc">
+		<d-text>ITEM</d-text>
+		<d-text>Classy<span class="break"></span> meal for<span class="break"></span> big shots</d-text>
+		<d-text>HP+140</d-text>
+	</d-box>
+	<h5><a href="{{ '/misc/armor#lodestone' | relative_url }}">Lode Stone</a></h5>
+	<p>Sold for 60 POINTs / $220.</p>
+	<d-box theme="shopdesc">
+		<d-text>ARMOR</d-text>
+		<d-text>Gain more TP from bullets</d-text>
+	</d-box>
+	<h5><a href="{{ '/misc/armor#gingerguard' | relative_url }}">Ginger Guard</a></h5>
+	<p>Sold for 111 POINTs / $862.</p>
+	<d-box theme="shopdesc">
+		<d-text>ARMOR</d-text>
+		<d-text>Fragrant armor</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="vendingmachine-sell">Sell</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>You don't get money for sticking stuff in the machine, dumbass!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>That's like the first thing ANYONE tries.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Let's stick Ralsei in the machine and see how much money he costs.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="W"></d-sprite>
+		<d-text asterisk>That's STILL not how it works!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="vendingmachine-talk">Talk</h3>
+	<h4>Before the Bonus Round</h4>
+	<!-- actually it's plot < 280, before mike has abandoned tenna -->
+	<d-box theme="dark">
+		<d-text asterisk>(The vending machine did not respond.)</d-text>
+	</d-box>
+
+	<h4>After the Bonus Round</h4>
+	<!-- actually it's plot >= 280, once mike has abandoned tenna -->
+	<d-box theme="dark">
+		<d-text asterisk>(The vending machine had no response.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... well, maybe a little.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... not really.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="vendingmachine-exit">Exit</h3>
+	<p class="note">Dialogue/narration ends silently, and control is returned to the player.</p>
+</section>
+
+<section class="d-section" id="ramb">
+	<h2>Ramb</h2>
+	<p>Present behind the counter during Rounds 1 and 2. Only present behind the counter after the Bonus Round if the <a href="{{ '/chapters/chapter3/islandboardsword' | relative_url }}">Sword Route's second stage</a> wasn't successfully completed.</p>
+
+	<h3 id="ramb-initial">Initial, after Rounds 1 and 2</h3>
+	<h4>If you got C-Rank or higher</h4>
+	<p class="note">Ramb looks up from the glass he's polishing, smiling. A blue gift box sits next to him.</p>
+
+	<p class="note">In the following message, "X" is replaced by the rank you received on the last board (T/S/A/B/C).</p>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Kris! Bang-up job getting X-rank, luv! For that, a little prize...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If you have room in your inventory and/or storage, as applicable</h5>
+	<p class="note">The <a href="{{ '/misc/generic#objectget' | relative_url }}">generic text</a> plays as the prize is added to your inventory:</p>
+	<ul class="note">
+		<li><a href="{{ '/misc/generic#armorget' | relative_url }}">armor variant</a> for…
+			<ul>
+				<li>T-Rank/S-Rank's <a href="{{ '/misc/armor#pinkribbon' | relative_url }}">Pink Ribbon</a> in Round 1</li>
+				<li>T-Rank/S-Rank's <a href="{{ '/misc/armor#whiteribbon' | relative_url }}">White Ribbon</a> and C-Rank's <a href="{{ '/misc/armor#lodestone' | relative_url }}">Lode Stone</a> in Round 2</li>
+			</ul>
+		</li>
+		<li><a href="{{ '/misc/generic#itemget' | relative_url }}">item variant</a> for…
+			<ul>
+				<li>A-Rank/B-Rank's <a href="{{ '/misc/darkitems#revivemint' | relative_url }}">Revive Mint</a> and C-Rank's <a href="{{ '/misc/darkitems#tvdinner' | relative_url }}">TV Dinner</a> in Round 1</li>
+				<li>A-Rank/B-Rank's <a href="{{ '/misc/darkitems#tensiongem' | relative_url }}">Tension Gem</a> in Round 2</li>
+			</ul>
+		</li>
+	</ul>
+	<hr class="hr3">
+	<h5>If you got S-Rank or higher and the armor inventory is full</h5>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Ah, you're holding too many ARMORs, luv. Get rid of something?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>If you got A-Rank or lower and the inventory and storage are full</h5>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Ah, you're holding too many ITEMs, luv. Get rid of something?</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<p class="note">Ramb turns back to his glass.</p>
+
+	<h4>If you got Z-Rank</h4>
+	<p class="note">Ramb looks up from the glass he's polishing, smiling. A blue gift box sits next to him.</p>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Kris! Your rank... Z-Rank. Well, I suppose you gave it a good try!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Here, the gift...</d-text>
+	</d-box>
+	<p class="note">The item get beeping SFX plays as the gift box disappears.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(The giftbox was empty.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>That's right, Kris. Tenna's not too keen on that behavior...</d-text>
+	</d-box>
+	<p class="note">Ramb raises an eyebrow.</p>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Reminds him of a certain... y'know.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>... that's why HIS game's a bit of a bust, y'see?</d-text>
+	</d-box>
+	<p class="note">Ramb lowers his head.</p>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>(Just wait... I'll show you something electrifying, I will...)</d-text>
+	</d-box>
+
+	<p class="note">Ramb turns back to his glass.</p>
+
+	<hr>
+
+	<h3 id="ramb-round1">After Round 1, once you got your prize</h3>
+	<p class="note">Ramb looks up from the glass he's polishing with a smile.</p>
+	<hr class="hr2">
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Oi, Kris, luv! It's me, Ramb! You and your brother took me here from the Library!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>How're they all? Queen still bossy? Swatch still got a mohawk? And that salesman...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Right, the store, the store! If you want anything, just use your POINTs!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Kris, luv! If you've got POINTs, we've got ITEMs!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="dark" offset-y="30%">
+		<d-option index="0" text="Buy#something"></d-option>
+		<d-option index="1" text="Talk#more"></d-option>
+		<d-option index="2" text="Nothing#else"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Ramb stops smiling.</p>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>You want to buy something using your POINTs? That's lovely, Kris!</d-text>
+		</d-box>
+		<p class="note">Ramb lowers his head.</p>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>Gotta use that vending machine though. Tenna doesn't like us... touching the POINTs.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<h5>First time</h5>
+		<p class="note">Ramb looks nostalgic.</p>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>Time flies... Seems like just yesterday you and that girl had everyone here lined up.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>Queen on her side, King on your side, Tenna in back... Oh, it was chaos, CHAOS!</d-text>
+		</d-box>
+		<p class="note">Ramb lowers his head.</p>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>Heh, only kids like you two would take a laptop home just to play make believe.</d-text>
+		</d-box>
+		<p class="note">Ramb looks up again and smiles.</p>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>... how is she, Kris? Are you two...? Well, it's alright. Everyone changes. 'cept us.</d-text>
+		</d-box>
+
+		<hr class="hr2">
+
+		<h5>Subsequent times</h5>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>Kris, luv, don't you got better to do than talking to little ol' me?</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>Keep your chin up, Kris! This whole house is your friend!</d-text>
+		</d-box>
+	</d-option-panel>
+	<p class="note">Ramb turns back to his glass.</p>
+
+	<hr>
+
+	<h3 id="ramb-round2">After Round 2, once you got your prize</h3>
+	<h4>First time</h4>
+	<p class="note">Ramb looks up from the glass he's polishing with a smile.</p>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Oi, Kris! How were the games, luv?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Super fun"></d-option>
+		<d-option index="1" text="Eh"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Ramb raises an eyebrow.</p>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>I see, I see... It's all well and good if you feel that way.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>Ol' man Tenna's got to have SOMEONE appreciate him, I suppose...</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>See, I KNEW you wouldn't like it. Something's missing, right?</d-text>
+		</d-box>
+		<p class="note">Ramb raises an eyebrow.</p>
+		<hr class="hr2">
+		<h5>If the <a href="{{ '/chapters/chapter3/islandboardsword' | relative_url }}">Sword Route's second stage</a> has been successfully completed</h5>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>Some action... Some mystery... Maybe some more... freedom?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>(Just between you and me, if you can get in the S-Ranker's room...)</d-text>
+		</d-box>
+		<hr class="hr3">
+		<h5>Otherwise</h5>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>(Good thing we've got the REAL game, eh, luv?)</d-text>
+		</d-box>
+		<hr class="hr2">
+		<p class="note">A mysterious jingle plays.</p>
+	</d-option-panel>
+	<p class="note">Ramb turns back to his glass.</p>
+
+	<h4>Subsequent times</h4>
+	<p class="note">Ramb looks up from the glass he's polishing with a smile.</p>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Kris, games are supposed to be fun. Don't let it feel like a job, alright?</d-text>
+	</d-box>
+	<p class="note">Ramb turns back to his glass.</p>
+
+	<hr>
+
+	<h3 id="ramb-bonus">After the Bonus Round, if the <a href="{{ '/chapters/chapter3/islandboardsword' | relative_url }}">Sword Route's second stage</a> wasn't successfully completed</h3>
+	<p class="note">Ramb has been petrified.</p>
+
+	<h4>First time</h4>
+	<p class="note"><a href="#pippins-postbonusround">See Pippins's section above.</a></p>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>What? This guy? What do you want with him, Kris?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="rambcounter">
+	<h2>Ramb's counter</h2>
+	<p>Available to interact with after the Bonus Round, if the <a href="{{ '/chapters/chapter3/islandboardsword' | relative_url }}">Sword Route's second stage</a> was successfully completed.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(No one is stirring, not even the Maus.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="srankdoor">
+	<h2><a href="{{ '/locations/tvworld/greenroom/starchangingroom' | relative_url }}">Star Changing Room</a> door</h2>
+
+	<h3 id="srankdoor-standard">Standard</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Exclusive changing room for S-Rank players only!)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Enter"></d-option>
+		<d-option index="1" text="Do not"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Susie and Ralsei walk up behind Kris.</p>
+		<hr class="hr2">
+		<h4>First time only</h4>
+		<p class="note">Kris turns around to face Susie and Ralsei.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="K"></d-sprite>
+			<d-text asterisk>Uhh, that's like a bathroom, right?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+			<d-text asterisk>We'll just, um, go play games.</d-text>
+		</d-box>
+		<hr class="hr2">
+		<p class="note">The door clicks open and Kris walks through.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="srankdoor-locked">Unused locked narration</h3>
+	<p>Perhaps intended for a version of the S-Rank rewards room without the Zapper guarding the door…?</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Looks like it's locked.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="clipboard">
+	<h2>Clipboard</h2>
+	<p>Present only after the Bonus Round.</p>
+
+	<p class="note">A clipboard hangs on the wall next to the rightmost doors.</p>
+	<d-box theme="dark">
+		<d-text asterisk>It's a list of Tenna's remaining employees.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h3>If you haven't recruited all TV World Darkners and haven't violently defeated any of them</h3>
+	<d-box theme="dark">
+		<d-text asterisk>Looks like you haven't recruited all of them yet.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h3>If you recruited all TV World Darkners</h3>
+	<d-box theme="dark">
+		<d-text asterisk>Looks like you've recruited everyone.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h3>If you violently defeated any TV World Darkners</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Looks like some people resigned due to getting hurt on the job.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Seems you'll never recruit everyone.)</d-text>
+	</d-box>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="zapper">
+	<h2>Zapper</h2>
+	<p>Present in front of the <a href="#rightdoor">rightmost doors</a>. Available only after Rounds 1 and 2.</p>
+
+	<h3 id="zapper-round1">After Round 1</h3>
+	<d-box theme="dark">
+		<d-text asterisk>Don't do anything funny.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>Mr. Tenna's orders.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="zapper-round2">After Round 2</h3>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>No one gets inside. Mr. Tenna's orders.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time only</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>(Seems pretty suspicious to me...)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="dark">
+		<d-option index="0" text="Fight#him"></d-option>
+		<d-option index="1" text="Press his#buttons"></d-option>
+		<d-option index="2" text="Don't do anything"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>Mr. Tenna said if anyone wants to fight, don't fight 'em.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>You an' me are pals... got it? Now smile.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<h4>First time</h4>
+		<d-box theme="dark">
+			<d-text asterisk>(You played his chest like the bongos.)</d-text>
+		</d-box>
+		<p class="note">The thumping of bongos sounds. Zapper reels, offended.</p>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>HEY, HANDS OFF THE MOICHANDISE!!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>A---choo!!!</d-text>
+		</d-box>
+		<p class="note">A blushing Zapper's sneeze is heard. The screen turns off, then fades back in to reveal the party in the <a href="{{ '/locations/tvworld/greenroom/redcarpethall' | relative_url }}">red carpet hall</a>, just outside the doors to the main area of the Green Room.</p>
+
+		<hr class="hr2">
+
+		<h4>Second time</h4>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>Alright, alright, I give, I give! I'm ticklish!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>Just be outta there quick, got it?</d-text>
+		</d-box>
+		<p class="note">Zapper leaves offscreen to the left. The rightmost doors can now be entered.</p>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>What da...? You're bein' awfully suspicious.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Zapper</d-speaker>
+			<d-text asterisk>Better teach ya a lesson...</d-text>
+		</d-box>
+		<p class="note"><a href="{{ '/encounters/zapper' | relative_url }}">Zapper pulls the party into an encounter</a>; after it ends, he is absent, and the rightmost doors can be entered.</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="rightdoor">
+	<h2>Rightmost doors</h2>
+	<p>Unused, as these doors are either guarded by a <a href="#zapper">Zapper</a> or can be walked through to get to the Cold Place without any dialogue.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(Seems unnecessary to enter the conspicuous door now.)</d-text>
+	</d-box>
+</section>
+
+{% comment %} Center row {% endcomment -%}
+
+<section class="d-section" id="elnina">
+	<h2>Elnina</h2>
+	<p>Present (alone) only after Round 1.</p>
+
+	<h3 id="elnina1">Initial</h3>
+	<d-box theme="dark">
+		<d-speaker>Elnina</d-speaker>
+		<d-text asterisk>Oh, you three! It's me, Elnina! I've never felt more moisturized!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Elnina</d-speaker>
+		<d-text asterisk>The single life's never felt this cool and collected! Ask me about anything!</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Lanino"></d-option>
+		<d-option index="1" text="Nothing"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The party lines up beside Elnina.</p>
+		<d-box theme="dark">
+			<d-speaker>Elnina</d-speaker>
+			<d-text asterisk>Oh, Lanino? Well...</d-text>
+		</d-box>
+		<p class="note">Elnina bursts into tears. Beside her, Pippins stops gaming, staring at her with wide eyes and looking disturbed.</p>
+		<d-box theme="dark">
+			<d-speaker>Elnina</d-speaker>
+			<d-text asterisk>My SUNSHINE IS GONE!!! My brilliant SUNSHINE!!!</d-text>
+		</d-box>
+		<p class="note">Pippins looks to the other side, then back to her; with an strained half-smile, they put down their controller next to her and get off the couch. Pippins takes a few awkward steps away, then vaults over the couch and flees offscreen to the right.</p>
+		<p class="note">Elnina stops crying with a sneeze, now looking downcast.</p>
+		<d-box theme="dark">
+			<d-speaker>Elnina</d-speaker>
+			<d-text asterisk>Everything reminds me of him! Everything!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Elnina</d-speaker>
+			<d-text asterisk>The nighttime... the DAYTIME... I saw a big wheel of cheese and...</d-text>
+		</d-box>
+		<p class="note">Elnina bursts into tears again.</p>
+		<d-box theme="dark">
+			<d-speaker>Elnina</d-speaker>
+			<d-text asterisk>I THOUGHT IT WAS HIS FACE!!!</d-text>
+		</d-box>
+		<p class="note">She bows her head, tears beading at the edge of her eyes.</p>
+		<d-box theme="dark">
+			<d-speaker>Elnina</d-speaker>
+			<d-text asterisk>Without him to balance me, my only forecast is rain... running down my face.</d-text>
+		</d-box>
+		<d-choices theme="dark">
+			<d-option index="0" text="You're#strong and#independent"></d-option>
+			<d-option index="1" text="Your#forecast is#love"></d-option>
+		</d-choices>
+		<d-option-panel index="0" theme="dark">
+			<p class="note">Elnina sits up straight, eyes wide.</p>
+			<d-box theme="dark">
+				<d-speaker>Elnina</d-speaker>
+				<d-text asterisk>That's... that's right! I'm the wave, aren't I!? I can weather any storm MYSELF!</d-text>
+			</d-box>
+			<p class="note">Elnina grins gleefully.</p>
+			<d-box theme="dark">
+				<d-speaker>Elnina</d-speaker>
+				<d-text asterisk>We'll see how far he gets without me to do his MAKEUP!</d-text>
+			</d-box>
+		</d-option-panel>
+		<d-option-panel index="1" theme="dark">
+			<p class="note">Elnina sits up straight, eyes wide.</p>
+			<d-box theme="dark">
+				<d-speaker>Elnina</d-speaker>
+				<d-text asterisk>That's... that's right! Weather girls are the wave... aren't they!?</d-text>
+			</d-box>
+			<p class="note">Elnina grins gleefully.</p>
+			<d-box theme="dark">
+				<d-speaker>Elnina</d-speaker>
+				<d-text asterisk>A cool cloud never stays alone in the sky for long! Heheh!</d-text>
+			</d-box>
+		</d-option-panel>
+		<p class="note">Elnina's expression softens to a reassured smile.</p>
+		<d-box theme="dark">
+			<d-speaker>Elnina</d-speaker>
+			<d-text asterisk>Thanks, Kris! You're a real cucumber, you know? Umm, not a cool one, but...</d-text>
+		</d-box>
+		<p class="note">The camera pans back over to focus on the party, and control is returned to the player.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="elnina2">After reassuring Elnina</h3>
+	<d-box theme="dark">
+		<d-speaker>Elnina</d-speaker>
+		<d-text asterisk>Thanks, Kris! You're a real cucumber, you know? Umm, not a cool one, but...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="throuple">
+	<h2>Elnina, Rouxls, and Lanino</h2>
+	<p>Present only after Round 2.</p>
+
+	<p class="note">Rouxls sits between Elnina and Lanino, sharing a gaming controller with each of them; they are looking at him with wide eyes.</p>
+
+	<h3 id="throuple1">First time</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>Haha... You three STILL aren't readyeth for the Chef Game?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="X"></d-sprite>
+		<d-text asterisk>Um... we already did that.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="1"></d-sprite>
+		<d-text asterisk>What.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Yeah. Like, on the first board. Where were you?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>Doing... my Freakinge... MAKE-UP?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="4"></d-sprite>
+		<d-text asterisk>I mean... haha. I kneweth that. ACTUALLYE.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="3"></d-sprite>
+		<d-text asterisk>Perhaps, I just Liketh wearing clothing... On Purpose?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="throuple2">Subsequent times</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="6"></d-sprite>
+		<d-text asterisk>Tell them, my Loverse. Tell them of my Glorie.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Lanino</d-speaker>
+		<d-text asterisk>Uh... Elnina... really sees a lot in him, so...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Elnina</d-speaker>
+		<d-text asterisk>And, um... Lanino sees a lot in him, so...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="3"></d-sprite>
+		<d-text asterisk>They're sayingeth, I'm Hotte.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="pippinscouch">
+	<h2>Pippins on the couch</h2>
+	<p>Present only after Round 1, before Elnina is spoken to.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Why are they being so dramatic? They only got second.</d-text>
+	</d-box>
+</section>
+
+{% comment %} Bottom row {% endcomment -%}
+
+<section class="d-section" id="cactusleft">
+	<h2>Left cactus</h2>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's a convincing replica of your favorite cactus.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="tvleft">
+	<h2>Left TV</h2>
+
+	<h3 id="tvleft-play">After Round 1, before playing thrice or Kris winning</h3>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(A game system is set up, but strictly, and rules are written down...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Wanna play, Ralsei? It's got racing...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>M... me? No, I'd rather just watch you two!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Fine. Kris, let's go!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Wanna race?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="dark">
+		<d-option index="0" text="Play"></d-option>
+		<d-option index="1" text="Don't play"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Ralsei sits down on the couch; Kris and Susie get controllers and follow him. The game begins; the player can control Kris's unseen vehicle to participate, with Kris's hands bobbing up and down when their vehicle is moving.</p>
+
+		<p class="note">Once the game ends, with either Kris or Susie winning, Susie will side-eye them. A pause.</p>
+
+		<hr class="hr2">
+		<h4>If no input was given</h4>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="K"></d-sprite>
+			<d-text asterisk>... you've gotta press the buttons, dumbass.</d-text>
+		</d-box>
+		<hr class="hr3">
+		<h4>If Kris lost the game</h4>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="K"></d-sprite>
+			<d-text asterisk>Man, it's like you're not even looking at the screen.</d-text>
+		</d-box>
+		<hr class="hr3">
+		<h4>If Kris won the game</h4>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>Kris, you won!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="M"></d-sprite>
+			<d-text asterisk>How the heck... alright, we're done.</d-text>
+		</d-box>
+		<p class="note"><a href="#tvleft-noplay">(The game can no longer be played.)</a></p>
+		<hr class="hr2">
+
+		<p class="note">The party hops to their feet, and Kris and Susie return their controllers to the TV.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="K"></d-sprite>
+			<d-text asterisk>Okay, no one is any fun apparently.</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="tvleft-noplay">After Round 1 (if the game has been played thrice or Kris has won the game) / After Round 2</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Nah, I'm like good.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tvleft-hair">After the Bonus Round (UNUSED)</h3>
+	<p>Requires a flag to be active that never gets set.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>Hey, quit making your hair static on the screen!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="tvright">
+	<h2>Right TV</h2>
+
+	<h3 id="tvright-round1">After Round 1</h3>
+	<h4>Before talking to Elnina</h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Hey! Move it!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Block your brother's playing, not mine!</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Who watches TV from that close!?</d-text>
+	</d-box>
+
+	<h4>After talking to Elnina</h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Ralsei, would you lick an old screen?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>Err... umm... depends... what's on TV?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="M"></d-sprite>
+		<d-text asterisk>Ugh. Nevermind. You don't get it.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Dude, we should use magnets on Tenna. Might be cool.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tvright-round2">After Round 2</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Y'know if you lick old screens it makes rainbows?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Obviously"></d-option>
+		<d-option index="1" text="No thanks"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="8"></d-sprite>
+			<d-text asterisk>Heh, 'course you would know that... weirdo.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="H"></d-sprite>
+			<d-text asterisk>Dude, I wasn't saying we do it RIGHT NOW.</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Enough of this TV.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="cactusright">
+	<h2>Right cactus</h2>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's a cactus, but not the real thing.)</d-text>
+	</d-box>
+</section>
