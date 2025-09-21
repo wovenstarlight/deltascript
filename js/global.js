@@ -610,10 +610,17 @@ function setUp() {
 			file: "fnt_tv.otf",
 		},
 	];
+	let demandedFonts = [];
 	FONTS.forEach(fnt => {
 		if (document.querySelector(fnt.selector) !== null)
-			document.fonts.add(new FontFace(fnt.name, `url("${BASE_URL}/assets/fonts/${fnt.file}")`));
+			demandedFonts.push(`@font-face { font-family: "${fnt.name}"; src: url("${BASE_URL}/assets/fonts/${fnt.file}") }`)
 	});
+	if (demandedFonts.length) {
+		const FONT_STYLES = document.createElement("style");
+		FONT_STYLES.id = "fontsondemand";
+		FONT_STYLES.innerText = demandedFonts.join("\n");
+		document.head.append(FONT_STYLES);
+	}
 	// #endregion Extra fonts
 
 	// #region Shaky text
