@@ -452,12 +452,14 @@ class DialogueOptionPanel extends HTMLElement {
 	open(isForced = false) {
 		this.collapsed = false;
 		this.forced = isForced;
+		this.removeAttribute("hidden");
 	}
 
 	/** Close this panel. */
 	close() {
 		this.collapsed = true;
 		this.forced = false;
+		this.setAttribute("hidden", "until-found");
 	}
 
 	connectedCallback() {
@@ -471,7 +473,7 @@ class DialogueOptionPanel extends HTMLElement {
 		// Mark this as a tab panel
 		this.id = getChoiceId(this, "panel");
 		this.role = "tabpanel";
-		this.tabIndex = 0;
+		this.tabIndex = -1;
 		// Link it to its control
 		this.setAttribute("aria-labelledby", getChoiceId(this, "option"));
 		this.option = document.getElementById(this.getAttribute("aria-labelledby"));
@@ -485,6 +487,9 @@ class DialogueOptionPanel extends HTMLElement {
 
 		// Start off closed
 		this.close();
+
+		// Auto-open the associated menu if search (Ctrl+F) finds something within this panel
+		this.addEventListener("beforematch", () => this.menu.openAll());
 	}
 }
 customElements.define("d-option-panel", DialogueOptionPanel);

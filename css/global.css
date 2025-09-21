@@ -1368,6 +1368,7 @@ d-choices {
 		--side-width: 5em;
 		padding: 0;
 		position: relative;
+		margin-block-end: 0;
 
 		/* Heart-shaped selector icon
 		To be displayed when none of the options are being considered or selected */
@@ -1501,6 +1502,9 @@ d-option {
 		body.dim & { border-image-source: url("../assets/images/textbox/light_transparent_dim.png") }
 		/* Spacing */
 		margin: 0.3em;
+		d-option-panel:state(collapsed) + & { margin-block-start: 0 }	/* Let the previous option handle spacing between options */
+		&:has(+ d-option-panel:state(collapsed) + :not(d-option)),
+		&:has(+ d-option-panel:state(collapsed):last-child) { margin-block-end: 0 }	/* For the last option in a menu, let the next element handle spacing between this option and that */
 		/* Heart-shaped hover indicator */
 		padding-inline-start: 0.8em;
 		&::before { --size: 0.6em }
@@ -1523,25 +1527,32 @@ d-option {
 /* Panel containing the result of choosing an option in a choice menu */
 d-option-panel {
 	display: block;
-	border: var(--border-width) solid transparent;
-	border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width);
-	body.dim &:not([theme]), body.dim &[theme=light] { border-image-source: url("../assets/images/textbox/light_transparent_dim.png") }
 
-	&[theme=dark] { border-image-source: url("../assets/images/textbox/dark_transparent.gif") }
-	body.dim &[theme=dark] { border-image-source: url("../assets/images/textbox/dark_transparent_dim.gif") }
+	/* Last panel handles the end margin for <d-choices> */
+	body:not(.compact) &:has(+ :not(&)),
+	body:not(.compact) &:last-child {
+		margin-block-end: 0.2em;
+	}
 
-	/* Spacing */
-	margin: 0.3em 0;
-	d-choices:not(:state(compact)) ~ & { margin-inline-start: min(1.2em, 3vw) }
-	d-choices:state(compact) ~ & { margin-inline-start: min(0.8em, 2vw) }
-	padding: 0.1em;
+	&:not([hidden]) {
+		border: var(--border-width) solid transparent;
+		border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width);
+		body.dim &:not([theme]), body.dim &[theme=light] { border-image-source: url("../assets/images/textbox/light_transparent_dim.png") }
+		&[theme=dark] { border-image-source: url("../assets/images/textbox/dark_transparent.gif") }
+		body.dim &[theme=dark] { border-image-source: url("../assets/images/textbox/dark_transparent_dim.gif") }
+
+		/* Spacing */
+		padding: 0.1em;
+		margin: 0;
+		body:not(.compact) &:not(:state(collapsed)) { margin-block-start: 0.2em }
+		body:not(.compact) & { margin-inline-start: min(1.2em, 3vw) }
+		body.compact & { margin-inline-start: min(0.8em, 2vw) }
+	}
 
 	/* Expanded mode: hide collapsed panels, and labels when panels aren't forced */
-	d-choices:not(:state(compact)) ~ &:state(collapsed),
-	d-choices:not(:state(compact)) ~ &:not(:state(forced)) .selection-label,
+	body:not(.compact) &:not(:state(forced)) .selection-label,
 	/* Compact mode: hide collapsed panels, and labels regardless (the toggles will act as labels instead) */
-	d-choices:state(compact) ~ &:state(collapsed),
-	d-choices:state(compact) ~ & .selection-label {
+	body.compact & .selection-label {
 		display: none;
 	}
 
