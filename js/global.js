@@ -249,10 +249,7 @@ class DialogueChoices extends HTMLElement {
 			if (this.isInteractive) {
 				this.options.forEach(option => {
 					option.tabIndex = 0;
-					let panel = this.nextElementSibling;
-					while (panel.tagName.startsWith("D-OPTION") && panel.getAttribute("index") !== option.getAttribute("index"))
-						panel = panel.nextElementSibling;
-					panel.parentElement.insertBefore(option, panel);
+					option.panel.parentElement.insertBefore(option, option.panel);
 				});
 			}
 			else {
