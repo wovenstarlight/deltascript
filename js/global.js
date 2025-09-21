@@ -270,6 +270,30 @@ class DialogueChoices extends HTMLElement {
 		}
 	}
 
+	/** Force-open all tabs associated with this menu. */
+	openAll() {
+		// Mark this as forced-open
+		this.forced = true;
+		// Open each panel, marking them as forced-open
+		this.options.forEach(o => o.panel.open(true));
+	}
+
+	/** Open a specific tab associated with this menu. */
+	openOne(panel) {
+		// Close all other tabs
+		this.closeAll();
+		// And open the desired panel (not forced-open)
+		panel.open();
+	}
+
+	/** Close all tabs associated with this menu. */
+	closeAll() {
+		// Unmark this as forced-open
+		this.forced = false;
+		// Close each panel
+		this.options.forEach(o => o.panel.close());
+	}
+
 	connectedCallback() {
 		this.role = "tablist";
 		this.setAttribute("aria-label", "Choice menu");
@@ -298,14 +322,23 @@ const BREAK = `<span class="break"></span>`;
  * @param {DialogueChoicesOption|DialogueOptionPanel} me The object whose index to base the ID on.
  * @param {"option"|"panel"} type The type of element for which the ID is being created.
  */
-function getChoiceId(choiceMenu, me, type) {
-	return `choice${choiceMenu.count}_${type}${me.getAttribute("index")}`;
+function getChoiceId(me, type) {
+	return `choice${me.menu.count}_${type}${me.getAttribute("index")}`;
 }
 
 /** An option in a choice menu. */
 class DialogueChoicesOption extends HTMLElement {
 	constructor() {
-		super()
+		super();
+		/** The tab panel associated with this option.
+		 * @type {DialogueOptionPanel}
+		 */
+		this.panel = undefined;
+	}
+
+	/** Open the tab panel associated with this option. */
+	open() {
+		this.menu.openOne(this.panel);
 	}
 
 	connectedCallback() {
@@ -313,14 +346,15 @@ class DialogueChoicesOption extends HTMLElement {
 		if (this.menu) return;
 
 		this.menu = this.parentElement;
-		this.menu.options.push(this);
 		this.setAttribute("theme", this.menu.getAttribute("theme"));
+		// (and register this option with its menu)
+		this.menu.options.push(this);
 
 		if (this.menu.isInteractive) {	// interactive option
 			// Set up ARIA features: Tab
-			this.id = getChoiceId(this.menu, this, "option");	// Set ID
+			this.id = getChoiceId(this, "option");	// Set ID
 			this.setAttribute("role", "tab");	// Mark as tab
-			this.setAttribute("aria-controls", getChoiceId(this.menu, this, "panel"));	// Mark the panel this tab controls
+			this.setAttribute("aria-controls", getChoiceId(this, "panel"));	// Mark the panel this tab controls
 			// aria-expanded is handled entirely by the corresponding tab panel
 			// Make the first option in this menu tabbable;
 			// or, in compact mode, make them all tabbable
@@ -339,23 +373,11 @@ class DialogueChoicesOption extends HTMLElement {
 				}
 			});
 			/** Open the panel this tab controls. */
-			const openTab = () => {
-				// Unforce this menu
-				this.menu.forced = false;
-				// Close other panels
-				this.menu.options.forEach(el => {
-					const panel = document.getElementById(el.getAttribute("aria-controls"));
-					panel.collapsed = true;
-					panel.forced = false;
-				});
-				// Open this panel
-				document.querySelector(`#${this.getAttribute("aria-controls")}`).collapsed = false;
-			}
-			this.addEventListener("click", openTab);
+			this.addEventListener("click", this.open);
 			this.addEventListener("keydown", e => {
 				if (e.key === "Enter" || e.key === " ") {
 					e.preventDefault();
-					openTab();
+					this.open();
 				}
 			});
 		}
@@ -396,6 +418,10 @@ class DialogueOptionPanel extends HTMLElement {
 	constructor() {
 		super();
 		this._internals = this.attachInternals();
+		/** The option controlling this tab panel.
+		 * @type {DialogueChoicesOption}
+		 */
+		this.option = undefined;
 	}
 
 	get forced() {
@@ -423,25 +449,45 @@ class DialogueOptionPanel extends HTMLElement {
 		}
 	}
 
+	/** Open this panel.
+	 * @param {boolean} [isForced=false] `true` if all panels associated with this one's menu are being forced open. `false` if this panel is the only one of its siblings to be opened.
+	 */
+	open(isForced = false) {
+		this.collapsed = false;
+		this.forced = isForced;
+	}
+
+	/** Close this panel. */
+	close() {
+		this.collapsed = true;
+		this.forced = false;
+	}
+
 	connectedCallback() {
-		// Find the corresponding choices panel
-		let choiceMenu = this.previousElementSibling;
-		while (choiceMenu.tagName !== "D-CHOICES") choiceMenu = choiceMenu.previousElementSibling;
+		// Exit setup early if it's already been done
+		if (this.menu) return;
+
+		// Find the corresponding choices menu
+		this.menu = this.previousElementSibling;
+		while (this.menu.tagName !== "D-CHOICES") this.menu = this.menu.previousElementSibling;
 
 		// Mark this as a tab panel
-		this.id = getChoiceId(choiceMenu, this, "panel");
+		this.id = getChoiceId(this, "panel");
 		this.role = "tabpanel";
-		this.setAttribute("aria-controlledby", getChoiceId(choiceMenu, this, "option"));
 		this.tabIndex = 0;
+		// Link it to its control
+		this.setAttribute("aria-controlledby", getChoiceId(this, "option"));
+		this.option = document.getElementById(this.getAttribute("aria-controlledby"));
+		this.option.panel = this;
 
 		// Add a marker for when forced view is enabled
 		const p = document.createElement("p");
 		p.classList.add("selection-label");
-		p.innerHTML = `» Upon selecting "${document.getElementById(this.getAttribute("aria-labelledby")).innerHTML}"`;
+		p.innerHTML = `» Upon selecting "${this.option.innerHTML}"`;
 		this.prepend(p);
 
-		// Start off collapsed
-		this.collapsed = true;
+		// Start off closed
+		this.close();
 	}
 }
 customElements.define("d-option-panel", DialogueOptionPanel);
@@ -524,11 +570,7 @@ function setUp() {
 
 	// Force-view all choices
 	document.getElementById("open-choices").addEventListener("click", () => {
-		document.querySelectorAll("d-choices").forEach(menu => menu.forced = true);
-		document.querySelectorAll("d-option-panel").forEach(panel => {
-			panel.collapsed = false;
-			panel.forced = true;
-		});
+		document.querySelectorAll("d-choices").forEach(menu => menu.openAll());
 	});
 	// #endregion Accessibility features
 
