@@ -438,11 +438,11 @@ class DialogueOptionPanel extends HTMLElement {
 		if (flag) {
 			// Existence of identifier corresponds to "true"
 			this._internals.states.add("collapsed");
-			document.getElementById(this.getAttribute("aria-controlledby")).setAttribute("aria-expanded", "false");
+			document.getElementById(this.getAttribute("aria-labelledby")).setAttribute("aria-expanded", "false");
 		} else {
 			// Absence of identifier corresponds to "false"
 			this._internals.states.delete("collapsed");
-			document.getElementById(this.getAttribute("aria-controlledby")).setAttribute("aria-expanded", "true");
+			document.getElementById(this.getAttribute("aria-labelledby")).setAttribute("aria-expanded", "true");
 		}
 	}
 
@@ -473,8 +473,8 @@ class DialogueOptionPanel extends HTMLElement {
 		this.role = "tabpanel";
 		this.tabIndex = 0;
 		// Link it to its control
-		this.setAttribute("aria-controlledby", getChoiceId(this, "option"));
-		this.option = document.getElementById(this.getAttribute("aria-controlledby"));
+		this.setAttribute("aria-labelledby", getChoiceId(this, "option"));
+		this.option = document.getElementById(this.getAttribute("aria-labelledby"));
 		this.option.panel = this;
 
 		// Add a marker for when forced view is enabled
