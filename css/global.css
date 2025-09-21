@@ -1547,6 +1547,8 @@ d-option-panel {
 
 	.selection-label {
 		color: var(--gray);
+		font-style: italic;
+		font-family: var(--font-condensed);
 	}
 
 	/* First child will always be selection-label */
