@@ -292,7 +292,13 @@ h2, h3, h4, h5, h6 {
 }
 h4, h5, h6 { padding-inline-start: 0.8rem }
 h1 { font-size: 2.5em }
-h2 { font-size: 2.25em }
+h2 {
+	font-size: 2em;
+	background-color: var(--black);
+	border: 0.2rem solid;
+	width: fit-content;
+	padding: 0.1em 0.4em;
+}
 h3 { font-size: 2em }
 h4 {
 	font-size: 1.5em;
@@ -643,9 +649,36 @@ body {
 	gap: 1em;
 
 	.d-section {
-		background-color: rgb(from var(--black) r g b / 0.6);
-		backdrop-filter: blur(5px);
 		padding: 1em min(1em, 3vw);
+
+		/* Initialize positioning */
+		position: relative;
+		z-index: 0;
+
+		/* Normal sections have no cutoff at the top */
+		--top-offset: 0em;
+
+		/* ::before acts as background, so that the actual d-section box still contains the heading */
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: calc(100% - var(--top-offset));
+			background-color: rgb(from var(--black) r g b / 0.6);
+			backdrop-filter: blur(5px);
+			z-index: -1;
+		}
+
+		/* If there's a heading, add cutoff at the top for the background, so the heading overlays the section's edge
+		 The padding is retained at the top, but margin is used to visually align the top of the heading with the top of where the d-section box would normally be
+		 */
+		&:has(> h2:first-child) {
+			margin-block-start: -1em;
+			--top-offset: 3em;
+		}
 	}
 
 	h1 {
