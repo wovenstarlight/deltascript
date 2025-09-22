@@ -110,7 +110,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* `/greenroom`
 				* `/trankroom` - T-Rank room
 				* `/zrankroom` - Z-Rank room
-				* `/redcarpethall` - area south of green room, has shuttah + vending machine + pippins/zapper
 		* `/darksanctuary` - Chapter 4 dark worlds. I think for this one we can include all three sanctuaries' subpages
 		* Ach how do we even subdivide these pages
 * Chapters `/chapters`

@@ -1,0 +1,537 @@
+---
+title: Red carpet hall
+
+description: >
+  <p>Narration and dialogue for the hall located to the south of the Green Room.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [3]
+    note: Zapper, vending machine (initial), curtain, Shuttah
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [3]
+    note: Pippinses
+  -
+    name: gml_Object_obj_shortcut_door_Other_10
+    chapters: [3]
+    note: warp doors (inactive)
+  -
+    name: gml_Object_obj_shortcut_door_Step_0
+    chapters: [3]
+    note: warp doors (selecting a location)
+  -
+    name: gml_Object_obj_shop_vending_preview_Other_11
+    chapters: [3]
+    note: vending machine options and items for sale
+  -
+    name: gml_GlobalScript_scr_shop_vending
+    chapters: [3]
+    note: vending machine item descriptions
+  -
+    name: gml_Object_obj_shop_vending_preview_Other_12
+    chapters: [3]
+    note: vending machine Buy/Cel text
+  -
+    name: gml_Object_obj_room_tvland_preview_Step_0
+    chapters: [3]
+    note: Pippins with counterfeit S (successful buy)
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [3]
+    note: choices
+
+see_also:
+  -
+    url: /locations/tvworld/greenroom/
+    name: Green Room{END_LINK} (main area)
+
+toc:
+  -
+    id: warpdoor
+    name: Warp door
+  -
+    id: zapper
+    name: Zapper
+    subheadings:
+      -
+        id: zapper-round1standard
+        name: After Round 1, standard
+      -
+        id: zapper-round2standard
+        name: After Round 2, standard
+      -
+        id: zapper-counterfeit
+        name: After Rounds 1 and 2, if you purchased the counterfeit S for that round
+      -
+        id: zapper-bonus
+        name: After the Bonus Round
+  -
+    id: pippins
+    name: Pippins
+    subheadings:
+      -
+        id: pippins-round1
+        name: After Round 1
+      -
+        id: pippins-round2
+        name: After Round 2
+      -
+        id: pippins-bonus
+        name: After the Bonus Round
+  -
+    id: vendingmachine
+    name: Vending machine
+    subheadings:
+      -
+        id: vendingmachine-initial
+        name: Interacting with the machine
+      -
+        id: vendingmachine-buy
+        name: Buy
+        subheadings:
+          -
+            id: itemlist
+            name: Items for sale
+      -
+        id: vendingmachine-cel
+        name: Cel
+      -
+        id: vendingmachine-bye
+        name: Bye
+      -
+        id: vendingmachine-exit
+        name: Exit
+  -
+    id: curtain
+    name: Curtain
+  -
+    id: shuttah
+    name: Shuttah
+  -
+    id: pippinscounterfeit
+    name: Pippins selling a counterfeit S
+    subheadings:
+      -
+        id: pippinscounterfeit-standard
+        name: If you earned C-Rank or higher
+      -
+        id: pippinscounterfeit-z
+        name: If you earned Z-Rank
+---
+<section class="d-section" id="warpdoor">
+	<h2>Warp door</h2>
+	<p>Uses <a href="{{ '/misc/generic#warpdoor' | relative_url }}">generic text</a>.</p>
+
+	<h3>After Rounds 1 and 2 (Inactive)</h3>
+	<p class="note">The doorframe is empty and dark.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a lone doorframe.)</d-text>
+		<d-text asterisk>(But for some reason, you can't see through it...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>After the Bonus Round (Active)</h3>
+	<p class="note">The doorframe contains a red door, with multicolored light wisping out from the edges.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a door.)</d-text>
+		<d-text asterisk>(Where will you go?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="TV World#Entrance"></d-option>
+		<d-option index="1" text="Goulden Sam"></d-option>
+		<d-option index="2" text="Green Room"></d-option>
+		<d-option index="3" text="Cancel"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(The door opened...)</d-text>
+		</d-box>
+		<p class="note">The screen cuts to black with the sound of a door opening. After a moment, the scene fades in to the hall seen immediately after escaping Tenna in the Bonus Round, with the party standing outside the warp door present there.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(The door opened...)</d-text>
+		</d-box>
+		<p class="note">The screen cuts to black with the sound of a door opening. After a moment, the scene fades in to the midpoint of the TV World next to the Goulden Sam, with the party standing outside the warp door present there.</p>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(Amazingly, you are already there.)</d-text>
+		</d-box>
+		<p class="note">Nothing happens.</p>
+	</d-option-panel>
+	<d-option-panel index="3" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(You doorn't.)</d-text>
+		</d-box>
+		<p class="note">Nothing happens.</p>
+	</d-option-panel>
+
+	<h4>Unused fallback</h4>
+	<p>For choosing an option that's not accounted for by the code.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(But nothing happened.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="zapper">
+	<h2>Zapper</h2>
+
+	<h3 id="zapper-round1standard">After Round 1, standard</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Don't tell anyone... but dis little guy is my closest pal.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Since da Pippins are rulebreakers, we ain't s'poseda be friendly with 'em...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>But dis guy, he's real nice!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Dis guy is the only one you can trust. Remember his face.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="zapper-round2standard">After Round 2, standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Y'know, I'm a bit worried... ain't Pippinses originally from Card Castle?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>If dis guy turned ta stone, I ain't sure what I'd do...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="zapper-counterfeit">After Rounds 1 and 2, if you purchased the <a href="#pippinscounterfeit">counterfeit S</a> for that round</h3>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>I saw you buy it. Only a fool would be tricked by a counterfeit like that.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="zapper-bonus">After the Bonus Round</h3>
+	<p class="note">Zapper has turned to stone.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Some kind of stone statue.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="pippins">
+	<h2>Pippins</h2>
+
+	<h3 id="pippins-round1">After Round 1</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>One day when I accidentally broke the rules, this guy stood by my 6 sides!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Since then, I decided to play fair. ... y'know, if it helps this guy out!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Hey Kris, remember the Flying Aces? ... Well, me neither...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="pippins-round2">After Round 2</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>What happens, happens... I think I fit in just fine, don't I?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Kris, tell this bozo he's got nothin' to worry about!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>By the way, seen a ticket anywhere? Nothing... just a hunch.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="pippins-bonus">After the Bonus Round</h3>
+	<p class="note">Pippins is facing the wall, unmoving.</p>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>I don't get it... Shouldn't I have been the one to turn to stone!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>W... will he be stuck if he stays like this...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Kris, you should really hurry up and seal the fountain!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Ah, wait, Kris! Didn't you steal him from that cat girl's house?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>No, maybe I'm wrong... Ahh, I can't believe this happened...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="vendingmachine">
+	<h2>Vending machine</h2>
+
+	<h3 id="vendingmachine-initial">Interacting with the machine</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(POINTs to ITEMs!)</d-text>
+		<d-text asterisk>(Use the vending machine?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Buy"></d-option>
+		<d-option index="1" text="Don't Buy"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The <a href="{{ '/misc/generic#vendingmachine-initial' | relative_url }}">initial menu</a> opens, with the options "<a href="#vendingmachine-buy" class="fnt-condensed">Buy</a>", "<a href="#vendingmachine-cel" class="fnt-condensed">Cel</a>", "<a href="#vendingmachine-bye" class="fnt-condensed">Bye</a>", "<a href="#vendingmachine-exit" class="fnt-condensed">Exit</a>" listed on the right.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="vendingmachine-buy">Buy</h3>
+	<p class="note">Uses <a href="{{ '/misc/generic#vendingmachine-buy' | relative_url }}">generic text</a>.</p>
+
+	<h4 id="itemlist">Items for sale</h4>
+
+	<h5><a href="{{ '/misc/weapons#toxicaxe' | relative_url }}">Toxic Axe</a></h5>
+	<p class="note">Sold for 80 POINTs.</p>
+	<d-box theme="shopdesc">
+		<d-text>WEAPON</d-text>
+		<d-text>Smelly<span class="break"></span> weapon</d-text>
+	</d-box>
+
+	<h5><a href="{{ '/misc/weapons#saber10' | relative_url }}">Saber 10</a></h5>
+	<p class="note">Sold for 80 POINTs.</p>
+	<d-box theme="shopdesc">
+		<d-text>WEAPON</d-text>
+		<d-text>Tsun-type armaments</d-text>
+	</d-box>
+
+	<h5><a href="{{ '/misc/weapons#flexscarf' | relative_url }}">Flex Scarf</a></h5>
+	<p class="note">Sold for 80 POINTs.</p>
+	<d-box theme="shopdesc">
+		<d-text>WEAPON</d-text>
+		<d-text>Weaklings<span class="break"></span> can flex too</d-text>
+	</d-box>
+
+	<h5><a href="{{ '/misc/darkitems#tvslop' | relative_url }}">TV Slop</a></h5>
+	<p class="note">Sold for 30 POINTs.</p>
+	<d-box theme="shopdesc">
+		<d-text>ITEM</d-text>
+		<d-text>Full of nutrient</d-text>
+		<d-text>HP+80</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="vendingmachine-cel">Cel</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(There's a black and white animation cel of Tenna on it.)</d-text>
+	</d-box>
+	<p class="note">You are returned to the <a href="#vendingmachine-initial">initial menu</a>.</p>
+
+	<hr>
+
+	<h3 id="vendingmachine-bye">Bye</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(You said bye and left.)</d-text>
+	</d-box>
+	<p class="note">Dialogue ends, and control is returned to the player.</p>
+
+	<hr>
+
+	<h3 id="vendingmachine-exit">Exit</h3>
+	<p class="note">Dialogue/narration ends silently, and control is returned to the player.</p>
+</section>
+
+<section class="d-section" id="curtain">
+	<h2>Curtain</h2>
+	<p>Present after Round 1 only. Someone behind the curtain can be spoken to.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-speaker>Someone</d-speaker>
+		<d-text asterisk>The couch cliffs, how purple and majestic they were.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Someone</d-speaker>
+		<d-text asterisk>The dusty, the empty, such are the worlds such as those.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-speaker>Someone</d-speaker>
+		<d-text asterisk>Ooo la la. The purple worlds, you think they give the creeps.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>Prior to v0.0.094</h4>
+	<d-box theme="dark">
+		<d-speaker>Someone</d-speaker>
+		<d-text asterisk>Tsk... You have seen not but that tempered by light.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>v0.0.094 onwards</h4>
+	<d-box theme="dark">
+		<d-speaker>Someone</d-speaker>
+		<d-text asterisk>Tsk... You have seen naught but that tempered by light.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="dark">
+		<d-speaker>Someone</d-speaker>
+		<d-text asterisk>You should thank Tenna for brightening everything up.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="shuttah">
+	<h2>Shuttah</h2>
+	<p>Present after Round 2 only.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>In the once upon a time, there was a land like purple cliffs.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>A frozen waste, watery basin, a metal desert.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>But, this theater was built upon that... and, it grew.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>Not everyone liked the change. Some people left.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>Of course, that was in the days of the black-and-white.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="pippinscounterfeit">
+	<h2>Pippins selling a counterfeit S</h2>
+	<p>Present at the bottom right of the room after Rounds 1 and 2, only if you earned A-rank or lower on the most recent round. Wears sunglasses.</p>
+
+	<h3 id="pippinscounterfeit-standard">If you earned C-Rank or higher</h3>
+	<p class="note">Your current money and POINTs totals are displayed above the dialogue box.</p>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Hey! Hey, you! You wanna be an S rank, don't you...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Well, you didn't hear it from me, but I might know a way.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>I just need 1500 POINTs.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Yeah, yeah. 1500 POINTs.</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Give#1500 POINTs"></d-option>
+		<d-option index="1" text="No thanks"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<h4>If you have 1500 or more POINTs</h4>
+		<p class="note">The party groups up in front of Pippins, who stops jumping.</p>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Lessee... 1, 2, 3, 4, 5, 6... 1500! Perfect, gimme that!</d-text>
+		</d-box>
+		<p class="note">Pippins darts forwards briefly and presumably grabs the POINTs from Kris.</p>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Alright, you want an S, an "S," okay, okay, gimme a sec...</d-text>
+		</d-box>
+		<p class="note">Pippins turns around and takes a step away. A squeaking of something being scribbled. Pippins turns back around and approaches Kris.</p>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>This! Is an S... This IS an S, right? Actually, heh, it looks better than normal.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Anyway, they'll let you in with this. Pretty sure. Good "luck"! Heheheh!</d-text>
+		</d-box>
+		<p class="note">Pippins jumps clear over the party and to the other side of the stanchion barrier below, then escapes down the walkway as the party watches. Dialogue ends, and control is returned to the player.</p>
+
+		<hr class="hr2">
+
+		<h4>If you have less than 1500 POINTs</h4>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Lessee... 1, 2, 3, 4, 5, 6... Hey, this isn't enough!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>If you don't have enough now, it's too late! Try harder next time!</d-text>
+		</d-box>
+		<p class="note">Dialogue ends. Pippins remains in place.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Well, your loss. ... or, I guess you won. But poorly. Right?</d-text>
+		</d-box>
+		<p class="note">Dialogue ends. Pippins remains in place.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="pippinscounterfeit-z">If you earned Z-Rank</h3>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Hey, wanna buy an S...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Well, too bad! You got Z-Rank, didn't you?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Even I can't wash off the stench of that! Z-yew!</d-text>
+	</d-box>
+</section>
