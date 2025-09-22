@@ -458,6 +458,9 @@ class DialogueOptionPanel extends HTMLElement {
 		this.collapsed = false;
 		this.forced = isForced;
 		this.removeAttribute("hidden");
+
+		// Check that all speakers are colored
+		this.querySelectorAll("d-speaker").forEach(speaker => speaker.setColor());
 	}
 
 	/** Close this panel. */
