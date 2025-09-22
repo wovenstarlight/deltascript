@@ -1,0 +1,192 @@
+---
+title: Interstitial space
+
+description: >
+  <p>Narration and dialogue for the hall linking the Green Room to the TV Time and Legend of Tenna sets.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_room_interstitial_Step_0
+    chapters: [3]
+    note: GAME doors "ready" result, left exit
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [3]
+    note: GAME doors
+  -
+    name: gml_Object_obj_room_interstitial_Create_0
+    chapters: [3]
+    note: left exit flags
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [3]
+    note: choices
+
+see_also:
+  -
+    url: /locations/tvworld/greenroom/
+    name: Green Room{END_LINK} (main area)
+
+toc:
+  -
+    id: door
+    name: GAME doors
+    subheadings:
+      -
+        id: door-round1
+        name: After Round 1
+      -
+        id: door-round2
+        name: After Round 2
+        subheadings:
+          -
+            id: door-round2pre
+            name: Before the party speaks to Tenna
+          -
+            id: door-round2post
+            name: After the party speaks to Tenna
+  -
+    id: leftexit
+    name: Left exit
+    subheadings:
+      -
+        id: leftexit-round1
+        name: After Round 1
+      -
+        id: leftexit-round2
+        name: After Round 2
+        subheadings:
+          -
+            id: leftexit-round2pre
+            name: Before the party speaks to Tenna
+          -
+            id: leftexit-round2post
+            name: After the party speaks to Tenna
+          -
+            id: leftexit-round2postkris
+            name: After Kris speaks to Tenna
+---
+<section class="d-section" id="door">
+	<h2>"GAME" doors</h2>
+
+	<h3 id="door-round1">After Round 1</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Kris, are we all ready to start Round 2?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Still not#ready"></d-option>
+		<d-option index="1" text="Ready"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="2"></d-sprite>
+			<d-text asterisk>Yeah, what's the rush, anyway?</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Tenna drops in to the right side of the doors with a thud; the party turns towards him, Susie and Ralsei looking startled.</p>
+		<d-box theme="dark">
+			<d-speaker>Tenna</d-speaker>
+			<d-text asterisk>TV-tastic!!! Then let's rock and roll, folks!!!</d-text>
+		</d-box>
+		<p class="note">The screen fades to black, though Tenna remains visible throughout. The screen then fades back in to the primary TV Time set with the party situated behind their respective podiums, Susie and Ralsei still looking alarmed, and <a href="{{ '/chapters/chapter2/round2intro#tvtime' | relative_url }}">Round 2 begins</a>.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="door-round2">After Round 2</h3>
+	<h4 id="door-round2pre">Before the party speaks to Tenna</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="d"></d-sprite>
+		<d-text asterisk>(Seems like the next board isn't ready yet...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>(Maybe we should go talk to Tenna?)</d-text>
+	</d-box>
+
+	<h4 id="door-round2post">After the party speaks to Tenna</h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="4"></d-sprite>
+		<d-text asterisk>(... No next Board until we figure out what's going on.)</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>(Stop scratching at the door like a dog, you idiot.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+		<d-text asterisk>(Aww, Kris wants walkies...?)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="leftexit">
+	<h2>Left exit</h2>
+	<p>Leads to the Legend of Tenna set. Cannot be interacted with using [CONFIRM]; dialogue results from walking up to it.</p>
+
+	<h3 id="leftexit-round1">After Round 1</h3>
+	<p>Plays after Susie has spoken to Tenna.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>(Tenna looks busy...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="leftexit-round2">After Round 2</h3>
+	<h4 id="leftexit-round2pre">Before the party speaks to Tenna</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>... we gotta tell Tenna this is the last game.</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Let's go"></d-option>
+		<d-option index="1" text="Wait"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="D"></d-sprite>
+			<d-text asterisk>Yeah...</d-text>
+		</d-box>
+		<p class="note">The party enters the Legend of Tenna set to <a href="{{ '/chapters/chapter3/afterround2#tennagroup' | relative_url }}">talk to Tenna</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="D"></d-sprite>
+			<d-text asterisk>Uh, okay.</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<h4 id="leftexit-round2post">After the party speaks to Tenna</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>... huh? Kris, you really want to talk to Tenna?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Let me talk"></d-option>
+		<d-option index="1" text="Nah"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="D"></d-sprite>
+			<d-text asterisk>Whatever you wanna do, I guess...</d-text>
+		</d-box>
+		<p class="note">Kris alone enters the Legend of Tenna set to <a href="{{ '/chapters/chapter3/afterround2#tennakris' | relative_url }}">talk to Tenna</a>, while the other two stay behind.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="D"></d-sprite>
+			<d-text asterisk>... yeah.</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<h4 id="leftexit-round2postkris">After Kris speaks to Tenna</h4>
+	<p class="note">The Legend of Tenna set can be entered by the whole party without commentary, though there's nothing to interact with.</p>
+</section>
