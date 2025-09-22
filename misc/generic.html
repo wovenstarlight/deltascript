@@ -61,6 +61,20 @@ toc:
         id: pointsget
         name: POINTs
   -
+    id: warpdoor
+    name: Warp doors
+    subheadings:
+      -
+        id: warpdoor-inactive
+        name: Inactive
+      -
+        id: warpdoor-active
+        name: Active
+        subheadings:
+          -
+            id: warpdoor-fallback
+            name: Unused fallback
+  -
     id: treasurechest
     name: Treasure chests
     subheadings:
@@ -208,29 +222,47 @@ toc:
 	<h2>Warp doors</h2>
 	<p>The doors that let you fast-travel across the zones of each Dark World.</p>
 
+	<h3 id="warpdoor-inactive">Inactive</h3>
+	<p class="note">The doorframe is empty and dark.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a lone doorframe.)</d-text>
+		<d-text asterisk>(But for some reason, you can't see through it...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="warpdoor-active">Active</h3>
+	<p class="note">The doorframe contains a red door, with multicolored light wisping out from the edges.</p>
 	<d-box theme="dark">
 		<d-text asterisk>(It's a door.)</d-text>
 		<d-text asterisk>(Where will you go?)</d-text>
 	</d-box>
-	<p class="note">A choice menu is given with multiple locations, simulated below.</p>
+	<p class="note">A choice menu is given with multiple locations depending on the Dark World. Example options are given below:</p>
 	<d-choices theme="dark">
-		<d-option index="0" text="Different#location"></d-option>
-		<d-option index="1" text="Current#location"></d-option>
-		<d-option index="2" text="Cancel" conditional></d-option>
+		<d-option index="0" text="Current#location"></d-option>
+		<d-option index="1" text="Location 1"></d-option>
+		<d-option index="2" text="Location 2"></d-option>
+		<d-option index="3" text="Cancel" conditional></d-option>
 	</d-choices>
 	<d-option-panel index="0" theme="dark">
-		<d-box theme="dark">
-			<d-text asterisk>(The door opened...)</d-text>
-		</d-box>
-		<p class="note">The screen cuts to black with the sound of a door opening. After a moment, the scene fades in to the requested location, with the party standing outside the warp door present there.</p>
-	</d-option-panel>
-	<d-option-panel index="1" theme="dark">
 		<d-box theme="dark">
 			<d-text asterisk>(Amazingly, you are already there.)</d-text>
 		</d-box>
 		<p class="note">Nothing happens.</p>
 	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(The door opened...)</d-text>
+		</d-box>
+		<p class="note">The screen cuts to black with the sound of a door opening. After a moment, the scene fades in to the requested location, with the party standing outside the warp door present there.</p>
+	</d-option-panel>
 	<d-option-panel index="2" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(The door opened...)</d-text>
+		</d-box>
+		<p class="note">The screen cuts to black with the sound of a door opening. After a moment, the scene fades in to the requested location, with the party standing outside the warp door present there.</p>
+	</d-option-panel>
+	<d-option-panel index="3" theme="dark">
 		<p class="note">Available only from Chapter 2 onwards.</p>
 		<d-box theme="dark">
 			<d-text asterisk>(You doorn't.)</d-text>
@@ -238,9 +270,7 @@ toc:
 		<p class="note">Nothing happens.</p>
 	</d-option-panel>
 
-	<hr>
-
-	<h3>Unused fallback</h3>
+	<h4 id="warpdoor-fallback">Unused fallback</h4>
 	<p>For choosing an option that's not accounted for by the code.</p>
 	<d-box theme="dark">
 		<d-text asterisk>(But nothing happened.)</d-text>
