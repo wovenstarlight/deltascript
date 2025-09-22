@@ -1032,9 +1032,8 @@ d-box, d-choices {
 	&:state(compact) {
 		margin: 0 0 0 min(1em, 3vw);
 		gap: 0 0.5ch;
+		&:not(:has(d-speaker, d-sprite)) { gap: 0 }
 		align-items: baseline;
-
-		:not(.boxgroup) > &[theme=battletalk] { padding-inline-start: 0.5ch }
 
 		/* On smaller screens, stack dialogue instead */
 		@media (max-width: 30rem) {
