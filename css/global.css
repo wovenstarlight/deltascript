@@ -247,6 +247,19 @@ d-box[theme=battlemenu],
 	background-clip: text;
 }
 .eram { color: var(--eram) }
+.knight, .titan {
+	color: var(--black);
+	/* 2 pixels in each cardinal direction, then 1/1 pixel in each intercardinal direction */
+	text-shadow:
+		0 2px var(--white),		/* N */
+		1px 1px var(--white),	/* NE */
+		2px 0 var(--white),		/* E */
+		1px -1px var(--white),	/* SE */
+		0 -2px var(--white),	/* W */
+		-1px -1px var(--white),	/* SW */
+		-2px 0 var(--white),	/* S */
+		-1px 1px var(--white);	/* NW */
+}
 /* Chapter 4 */
 .gerson { color: var(--gerson) }
 /* #endregion */

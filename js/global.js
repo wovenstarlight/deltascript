@@ -75,8 +75,10 @@ class DialogueSpeaker extends HTMLElement {
 			case "tenna":
 			case "lanino":
 			case "elnina":
+			case "knight":
 			// eram's down below cuz we're not sure eram's Da Actual Name
 			case "gerson":
+			case "titan":
 				this.classList.add(speaking);
 				break;
 
@@ -85,10 +87,12 @@ class DialogueSpeaker extends HTMLElement {
 				break;
 
 			case "cap'n":
+			case "capn":
 				this.classList.add("capn");
 				break;
 
 			case "k_k":
+			case "kk":
 				this.classList.add("kk");
 				break;
 
@@ -97,10 +101,13 @@ class DialogueSpeaker extends HTMLElement {
 				break;
 
 			case "lanino and elnina":
+			case "elnina and lanino":
 				this.classList.add("weather");
 				break;
 
 			case "shadow mantle holder":
+			case "mantle holder":
+			case "eram":
 				this.classList.add("eram");
 				break;
 
