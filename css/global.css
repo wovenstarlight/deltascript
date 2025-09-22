@@ -274,6 +274,7 @@ h2, h3, h4, h5, h6 {
 	body:not(.compact) :is(d-box, d-choices) + & { margin-block-start: var(--adjacent-spacing) }
 	body:not(.compact) &:has(+ d-box, + d-choices) { margin-block-end: var(--adjacent-spacing) }
 }
+h3, h4, h5, h6 { font-family: var(--font-condensed) }
 h4, h5, h6 { padding-inline-start: 0.8rem }
 h1 { font-size: 2.5em }
 h2 { font-size: 2.25em }
