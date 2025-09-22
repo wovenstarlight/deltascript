@@ -45,68 +45,73 @@ class DialogueSpeaker extends HTMLElement {
 		super()
 	}
 
+	/** Set the color of this speaker label to match the speaker mentioned.
+	 * @param {string} [speaker=this.innerText] The speaker whose corresponding color should be used.
+	 */
+	setColor(speaker = this.innerText) {
+		const speaking = speaker.toLowerCase();
+		switch (speaking) {
+			case "kris":
+			case "susie":
+			case "ralsei":
+			case "noelle":
+			case "berdly":
+			case "toriel":
+			case "asgore":
+			case "sans":
+			case "papyrus":
+			case "undyne":
+			case "alphys":
+			case "mettaton":
+			case "rudy":
+			case "carol":
+			case "lancer":
+			case "king":
+			case "rouxls":
+			case "jevil":
+			case "queen":
+			case "sweet":
+			case "spamton":
+			case "tenna":
+			case "lanino":
+			case "elnina":
+			// eram's down below cuz we're not sure eram's Da Actual Name
+			case "gerson":
+				this.classList.add(speaking);
+				break;
+
+			case "rouxls kaard":
+				this.classList.add("rouxls");
+				break;
+
+			case "cap'n":
+				this.classList.add("capn");
+				break;
+
+			case "k_k":
+				this.classList.add("kk");
+				break;
+
+			case "spamton neo":
+				this.classList.add("spamton");
+				break;
+
+			case "lanino and elnina":
+				this.classList.add("weather");
+				break;
+
+			case "shadow mantle holder":
+				this.classList.add("eram");
+				break;
+
+			default:
+				break;
+		}
+	}
+
 	connectedCallback() {
 		// setTimeout used to force innerText to be parsed before this is run
-		setTimeout(() => {
-			// Add the corresponding color class where possible
-			switch (this.innerText) {
-				case "Kris":
-				case "Susie":
-				case "Ralsei":
-				case "Noelle":
-				case "Berdly":
-				case "Toriel":
-				case "Asgore":
-				case "Sans":
-				case "Papyrus":
-				case "Undyne":
-				case "Alphys":
-				case "Mettaton":
-				case "Rudy":
-				case "Carol":
-				case "Lancer":
-				case "King":
-				case "Rouxls":
-				case "Jevil":
-				case "Queen":
-				case "Sweet":
-				case "Spamton":
-				case "Tenna":
-				case "Lanino":
-				case "Elnina":
-				// eram's down below cuz we're not sure eram's Da Actual Name
-				case "Gerson":
-					this.classList.add(this.innerText.toLowerCase());
-					break;
-
-				case "Rouxls Kaard":
-					this.classList.add("rouxls");
-					break;
-
-				case "Cap'n":
-					this.classList.add("capn");
-					break;
-
-				case "K_K":
-					this.classList.add("kk");
-					break;
-
-				case "Spamton NEO":
-					this.classList.add("spamton");
-					break;
-
-				case "Lanino and Elnina":
-					this.classList.add("weather");
-					break;
-
-				case "Shadow Mantle holder":
-					this.classList.add("eram");
-					break;
-
-				default:
-					break;
-			}
-		}, 0);
+		setTimeout(() => this.setColor(), 0);
 	}
 }
 customElements.define("d-speaker", DialogueSpeaker);
