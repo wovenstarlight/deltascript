@@ -132,13 +132,22 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/shelter` - End of chapter scene with Susie confronting Snowy/MK
 		* `/handwashing` - Kris runs the tap.
 	* `/chapter3`
-		* `/desertboard`
+		* `/round1intro` - start of TV time, picking names, introduction to Desert Board
+		* `/desertboard` - all during-gameplay dialogue
 			* `#weatherpostfight`
-		* `/islandboard`
-		* `/doomboard`
+		* `/afterround1` - getting dropped in the green room, Susie talking to Tenna
+		* `/round2intro`
+			* telling Tenna you're ready for round 2
+			* `#tvtime` - introduction to Island Board
+		* `/islandboard` - all during-gameplay dialogue
+		* `/afterround2` - getting dropped in the green room again
+			* `#tennagroup` - party talking to Tenna, Susie saying to explore
+			* `#tennakris` - Kris talking to Tenna
+		* `/findingcoldplace` - first entry to the right side up to getting caught by Tenna
+		* `/bonusround` - all during-gameplay dialogue
 		* `/intotvworld` - After escaping the Bonus Round via Zapper
 		* `/cityboard` - The unused version of Board 3
-		* `/tennaalone` - Final sequence where Tenna is abandoned by the remaining Darkners and even Mike
+		* `/tennaalone` - Final sequence post-Rouxls where Tenna is abandoned by the remaining Darkners and even Mike
 	* `/chapter4`
 		* `/noellevisit` - Noelle's house intro. Update this link on other pages if you end up splitting it further
 		* `/bathroomweird` - maybe merge with below for an `outroweird`
