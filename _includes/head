@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="{{ 'css/global.css' | relative_url }}">
 	<script>const BASE_URL = "{{ site.baseurl }}";</script>
 	<script src="{{ 'js/global.js' | relative_url }}"></script>
-	<link rel="shortcut icon" href="{{  '/assets/images/logo-heart.png' | relative_url }}" type="image/x-icon">
+	<link rel="shortcut icon" href="{{  '/assets/images/logo-book.png' | relative_url }}" type="image/x-icon">
 
 	{%- if site.environment == "development" %}
 	<script>
