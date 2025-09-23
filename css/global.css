@@ -338,7 +338,7 @@ a { /* Global links */
 	/* Yellow on hover */
 	&:hover, &:focus-within { color: var(--lightyellow) }
 	/* …unless it's already yellow, in which case - Orange on hover */
-	&:is(.lightyellow, .noelle.act):is(:hover, :focus-within) { color: var(--orange) }
+	&:is(.currentpage, .lightyellow, .noelle.act):is(:hover, :focus-within) { color: var(--orange) }
 }
 hr {
 	max-width: 100%;
@@ -623,7 +623,8 @@ body {
 	padding-block: 0.5em;
 	background-color: var(--black);
 
-	a:not(:hover, :focus) { text-decoration: none }
+	a.currentpage { color: var(--yellow) }
+	a:not(.currentpage, :hover, :focus) { text-decoration: none }
 }
 /* Header */
 #sitehead {

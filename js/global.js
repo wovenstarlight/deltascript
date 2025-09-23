@@ -769,6 +769,11 @@ function setUp() {
 		animToggle.classList.add("gray");
 		animToggle.append("*");
 	}
+
+	// Highlight the current page in the top navbar, if any
+	document.querySelectorAll("#sitenav a").forEach(a => {
+		if (window.location.href === a.href) a.classList.add("currentpage");
+	})
 	// #endregion Visual display
 }
 
