@@ -1870,15 +1870,31 @@ funny-text {
 		border: none;
 		font: inherit;
 		color: inherit;
-		padding: 0;
-		margin: 0;
 		cursor: pointer;
 	}
-	figure { margin: 0 }
-	button, & > figure {
+	button, figure {
 		display: inline-block;
-		position: relative;
-		width: var(--width, 100%);
+		padding: 0;
+		margin: 0;
+	}
+	& > :is(button, figure) { position: relative }
+	&:not(.fullwidth) > :is(button, figure) { width: var(--width, 100%) }
+	&.fullwidth > :is(button, figure) { width: 100% }
+	img {
+		user-select: text;
+		display: block;
+
+		/* Full height/width positioning */
+		.left & { object-position: left }
+		.center & { object-position: center }
+		.right & { object-position: right }
+
+		body:not(.noanim) &.shaking {
+			animation-name: funnyshake;
+			animation-duration: 0.3333s;
+			animation-timing-function: steps(10, jump-none);
+			animation-iteration-count: infinite;
+		}
 	}
 	figcaption {
 		color: transparent;
@@ -1886,33 +1902,42 @@ funny-text {
 		text-shadow: none;
 		user-select: none;
 	}
-	img {
-		user-select: text;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: auto;
-		margin-block: -0.25em;
+	
+	body:not(.compact) & {
+		img {
+			width: var(--width, 100%);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+			margin-block: -0.25em;
 
-		.fullheight & {
-			height: calc(var(--baseheight) - 1.7em);
-			object-fit: contain;
+			.fullheight & {
+				height: calc(var(--baseheight) - 1.7em);
+				object-fit: contain;
+			}
 		}
-		.left & { object-position: left }
-		.center & { object-position: center }
-		.right & { object-position: right }
 	}
 	
-	img {
-		display: block;
-		width: var(--width, 100%);
+	body.compact & {
+		--img-height: 2.5em;
 
-		body:not(.noanim) &.shaking {
-			animation-name: funnyshake;
-			animation-duration: 0.3333s;
-			animation-timing-function: steps(10, jump-none);
-			animation-iteration-count: infinite;
+		button, figure {
+			vertical-align: baseline;
+			height: var(--img-height);
+			width: fit-content;
+			margin: -0.3em 0 -0.7em;
+		}
+		img {
+			height: var(--img-height);
+			width: auto;
+			object-fit: contain;
+		}
+		figcaption {
+			position: absolute;
+			top: 0;
+			left: 0;
 		}
 	}
 }
