@@ -648,7 +648,8 @@ body {
 	flex-direction: column;
 	gap: 1em;
 
-	.d-section {
+	/* Style only those sections that have something visible within them */
+	.d-section:not(:has(> :only-child.visually-hidden)) {
 		padding: 1em min(1em, 3vw);
 
 		/* Initialize positioning */
