@@ -1005,7 +1005,7 @@ d-box, d-choices {
 		.break { display: block }
 
 		img {
-			&:is(.fullheight, .fullwidth) { display: block}
+			&:is(.fullheight, .fullwidth) { display: block }
 			&.fullheight {
 				height: 100%;
 				grid-row: 1 / span 3;
@@ -1847,6 +1847,73 @@ d-option-panel {
 		width: 1ch;
 		padding-inline-end: calc(1ch * 0.125);
 		height: auto;
+	}
+}
+/* Tenna's text sprites */
+@keyframes funnyshake {
+	0% { transform: translate(0, 0) }
+	10% { transform: translate(1px, 1px) }
+	20% { transform: translate(1px, -1px) }
+	30% { transform: translate(0, 1px) }
+	40% { transform: translate(0, 0) }
+	50% { transform: translate(-1px, -1px) }
+	60% { transform: translate(-1px, 0) }
+	70% { transform: translate(0, -1px) }
+	80% { transform: translate(0, 0) }
+	90% { transform: translate(-1px, 1px) }
+}
+funny-text {
+	display: contents;
+
+	button {
+		background: none;
+		border: none;
+		font: inherit;
+		color: inherit;
+		padding: 0;
+		margin: 0;
+		cursor: pointer;
+	}
+	figure { margin: 0 }
+	button, & > figure {
+		display: inline-block;
+		position: relative;
+		width: var(--width, 100%);
+	}
+	figcaption {
+		color: transparent;
+		font-family: var(--font-condensed);
+		text-shadow: none;
+		user-select: none;
+	}
+	img {
+		user-select: text;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
+		margin-block: -0.25em;
+
+		.fullheight & {
+			height: calc(var(--baseheight) - 1.7em);
+			object-fit: contain;
+		}
+		.left & { object-position: left }
+		.center & { object-position: center }
+		.right & { object-position: right }
+	}
+	
+	img {
+		display: block;
+		width: var(--width, 100%);
+
+		body:not(.noanim) &.shaking {
+			animation-name: funnyshake;
+			animation-duration: 0.3333s;
+			animation-timing-function: steps(10, jump-none);
+			animation-iteration-count: infinite;
+		}
 	}
 }
 /* #endregion */

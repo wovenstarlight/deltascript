@@ -216,6 +216,341 @@ class DialogueText extends HTMLElement {
 customElements.define("d-text", DialogueText);
 
 
+/** Images used as part of Tenna's dialogue. */
+let audioContext, playFile;
+class FunnyText extends HTMLElement {
+	constructor() {
+		super()
+	}
+
+	initializeAudioContext() {
+		// Return early if setup has already been done
+		if (audioContext) return;
+
+		// Audio setup taken from https://css-tricks.com/form-validation-web-audio/
+		audioContext = new window.AudioContext();
+		playFile = (filepath) => {
+		  // Fetch the file
+			fetch(filepath)
+				// Read it into memory as an arrayBuffer
+				.then(response => response.arrayBuffer())
+				// Turn it from mp3/aac/whatever into raw audio data
+				.then(arrayBuffer => audioContext.decodeAudioData(arrayBuffer))
+				.then(audioBuffer => {
+				// Now we're ready to play!
+				const soundSource = audioContext.createBufferSource();
+				soundSource.buffer = audioBuffer;
+				soundSource.connect(audioContext.destination);
+				soundSource.start();
+			});
+		}
+	}
+
+	connectedCallback() {
+		this.initializeAudioContext();
+
+		let myName = this.getAttribute("name"),
+			mySound,
+			myText,
+			isJittering = true,
+			isGif = false;
+		// Sounds retrieved from gml_GlobalScript_scr_funnytext_init; text manually transcribed
+		switch (myName) {
+			case "alligator":
+				myText = "(Guess your mother's never been a fan of alligators in bikinis.)";
+				break;
+
+			case "amazing_01":
+				myText = "AMAZING";
+				mySound = "prize";
+				break;
+
+			case "big":
+				myText = "BiG";
+				mySound = "bounce";
+				break;
+
+			case "board":
+				myText = "BOARD";
+				mySound = "woodblock";
+				break;
+
+			case "bonus_round":
+				myText = "BONUS ROUND";
+				mySound = "prize";
+				break;
+
+			case "breaking_news":
+				myText = "BREAKING NEWS";
+				mySound = "whip_crack_only";
+				break;
+
+			case "brother":
+				myText = "BROTHER";
+				mySound = "brother";
+				isGif = true;
+				break;
+
+			case "city_feet":
+				myText = "(But don't ask why the cars don't have feet!)";
+				break;
+
+			case "challenge":
+				myText = "CHALLENGE";
+				mySound = "woodblock";
+				break;
+
+			case "coffee":
+				myText = "(And get me a cup of coffee.)";
+				break;
+
+			case "dark_fountain":
+				myText = "DARK FOUNTAIN";
+				mySound = "dark_fountain";
+				isGif = true;
+				break;
+
+			case "flames":
+				myText = "FLAMES";
+				mySound = "badexplosion";
+				isGif = true;
+				break;
+
+			case "free":
+				myText = "Free!";
+				break;
+
+			case "fun_loop":
+				myText = "FUN";
+				mySound = "crowd_cheer_single";
+				isGif = true;
+				break;
+
+			case "fun_o_meter":
+				myText = "FUN-O-METER";
+				mySound = "enter";
+				break;
+
+			case "game":
+				myText = "GAME";
+				mySound = "gunshot";
+				isGif = true;
+				break;
+
+			case "game_over":
+				myText = "GAME OVER!?";
+				mySound = "gunshot";
+				isGif = true;
+				break;
+
+			case "gentle":
+				myText = "(Well, okay, you can touch it. Just be gentle.)";
+				break;
+
+			case "grand_prize":
+				myText = "GRAND PRIZE";
+				mySound = "gunshot";
+				break;
+
+			case "green_room":
+				myText = "Green Room";
+				mySound = "vibraphones";
+				break;
+
+			case "hall_of_fame":
+				myText = "Hall of Fame";
+				mySound = "prize";
+				break;
+
+			case "its_tv_time":
+				myText = "IT'S!! TV!! TIME!!!"
+				mySound = "its_tv_time";
+				isGif = true;
+				isJittering = false;
+				break;
+
+			case "know_tv":
+				myText = "(And trust me, I know TV.)";
+				break;
+
+			case "love":
+				myText = "LOVE";
+				mySound = "audience_aww";
+				break;
+
+			case "lovely":
+				myText = "Lovely";
+				mySound = "audience_aww";
+				break;
+
+			case "lovers":
+				myText = "LOVERS";
+				mySound = "audience_aww";
+				isGif = true;
+				break;
+
+			case "names":
+				myText = "NAMES";
+				mySound = "names";
+				isGif = true;
+				break;
+
+			case "over":
+				myText = "OVER?";
+				mySound = "gunshot";
+				isGif = true;
+				break;
+
+			case "over_small":
+				myText = "OVER";
+				isGif = true;
+				break;
+
+			case "physical_challenge":
+				myText = "PHYSICAL CHALLENGE";
+				mySound = "bounce";
+				isGif = true;
+				break;
+
+			case "physical_challenges":
+				myText = "PHYSICAL CHALLENGES";
+				mySound = "bounce";
+				isGif = true;
+				break;
+
+			case "prizes":
+				myText = "PRIZES";
+				mySound = "gunshot";
+				break;
+
+			case "quizzes":
+				myText = "QUIZZES";
+				mySound = "vibraphones";
+				break;
+
+			case "relax":
+				myText = "Relax and Enjoy…";
+				isGif = true;
+				break;
+
+			case "rock_concert":
+				myText = "ROCK CONCERT";
+				mySound = "cd_bagel_susie";
+				isGif = true;
+				break;
+
+			case "round":
+				myText = "ROUND";
+				mySound = "gunshot";
+				isGif = true;
+				break;
+
+			case "rounds":
+				myText = "ROUNDS";
+				mySound = "gunshot";
+				break;
+
+			case "round_1":
+				myText = "ROUND 1!";
+				mySound = "gunshot";
+				break;
+
+			case "special":
+				myText = "Special";
+				mySound = "enter";
+				break;
+
+			case "star":
+				myText = "STAR";
+				mySound = "sparkle_glock";
+				break;
+
+			case "stars":
+				myText = "STARS";
+				mySound = "sparkle_glock";
+				break;
+
+			case "stop":
+				myText = "STOP";
+				mySound = "locker";
+				break;
+
+			case "susiezilla":
+				myText = "SUSIEZILLA";
+				mySound = "susiezilla";
+				isGif = true;
+				break;
+
+			case "tan":
+				myText = "(Though I would look good with a tan.)";
+				break;
+
+			case "tears":
+				myText = "TEARS";
+				mySound = "splat";
+				isGif = true;
+				break;
+
+			case "toriel":
+				myText = "TORIEL";
+				mySound = "toriel";
+				isGif = true;
+				break;
+
+			case "tv_time":
+				myText = "TV TIME";
+				break;
+
+			case "win":
+				myText = "WIN!";
+				isGif = true;
+				break;
+
+			case "win_big":
+				myText = "* WIN!";
+				mySound = "carhonk";
+				isGif = true;
+				break;
+
+			case "word":
+				myText = "WORD";
+				mySound = "prize";
+				break;
+		}
+
+		// GIF if applicable, figcaption for searchable text
+		let myImage = `<figure>${isGif ? `
+	<img src="${BASE_URL}/assets/images/story/talktenna/${myName}.gif" alt="${myText}" class="animswitch${isJittering ? ` shaking`: ""}" />` : ""}
+	<img src="${BASE_URL}/assets/images/story/talktenna/${myName}.png" alt="${myText}"${
+		isGif ? ` class="animswitch"`	// if it has a gif equivalent, it will never shake
+		: isJittering ? ` class="shaking"`
+		: ""
+	} />
+	<figcaption aria-hidden="true">${myText}</figcaption>
+</figure>`;
+		if (mySound) {
+			let btn = document.createElement("button");
+			btn.addEventListener("click", () => { playFile(`${BASE_URL}/assets/images/story/talktenna/snd/${mySound}.wav`) });
+			btn.innerHTML = myImage;
+			this.append(btn);
+		}
+		else this.innerHTML = myImage;
+
+		let styles = {
+			width: this.getAttribute("width"),
+			height: this.getAttribute("height"),
+			offset_x: this.getAttribute("offset-x") ?? this.getAttribute("offset"),
+			offset_y: this.getAttribute("offset-y"),
+		},
+			validStyles = Object.entries(styles).filter(el => el[1]);
+		if (validStyles.length)	// if any non-nullish values exist
+			this.setAttribute("style", validStyles.map(([key, val]) => `--${key.replaceAll("_", "-")}: ${val}`).join("; "));
+	}
+
+}
+customElements.define("funny-text", FunnyText);
+
+
 /** A choice menu.
  * Has the same compact mode toggle from DialogueBox, with additional functionality for moving the tab toggles around.
  */
@@ -763,7 +1098,14 @@ function setUp() {
 	// #endregion Chromatic aberration (color bleed)
 
 	// Gray out animation toggle if no animations are present
-	globalAnims ||= document.querySelector("d-text[asterisk='Sweet' i], d-text[asterisk='Cap\\'n' i], d-text[asterisk='Capn' i], d-text[asterisk='K_K' i], d-text[asterisk='KK' i], svg.winglade, [theme=prophecy]") !== null;
+	globalAnims ||= document.querySelector(`
+		d-text[asterisk="Sweet" i],
+		d-text[asterisk="Cap'n" i], d-text[asterisk="Capn" i],
+		d-text[asterisk="K_K" i], d-text[asterisk="KK" i],
+		svg.winglade,
+		[theme=prophecy],
+		funny-text:has(.shaking, .animswitch)
+	`) !== null;
 	if (!globalAnims) {
 		(animToggle = document.querySelector("label[for='toggle-anim']")).title = "No animations on this page";
 		animToggle.classList.add("gray");
