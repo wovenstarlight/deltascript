@@ -1904,6 +1904,10 @@ funny-text {
 	}
 	
 	body:not(.compact) & {
+		& > :is(button, figure) {
+			top: var(--offset-y, 0em);
+			margin-inline-start: var(--offset-x, 0em);
+		}
 		img {
 			width: var(--width, 100%);
 			position: absolute;
