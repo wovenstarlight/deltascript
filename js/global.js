@@ -252,269 +252,314 @@ class FunnyText extends HTMLElement {
 		let myName = this.getAttribute("name"),
 			mySound,
 			myText,
+			styles = {},
 			isJittering = true,
 			isGif = false;
 		// Sounds retrieved from gml_GlobalScript_scr_funnytext_init; text manually transcribed
 		switch (myName) {
-			case "alligator":
+			case "alligator":	// 1679
 				myText = "(Guess your mother's never been a fan of alligators in bikinis.)";
+				styles.width = "25ch";
 				break;
 
-			case "amazing_01":
+			case "amazing_01":	// 2602
 				myText = "AMAZING";
 				mySound = "prize";
+				styles.width = "25ch";
 				break;
 
-			case "big":
+			case "big":	// 1272
 				myText = "BiG";
 				mySound = "bounce";
+				styles.width = "6ch";
 				break;
 
-			case "board":
+			case "board":	// 3699
 				myText = "BOARD";
 				mySound = "woodblock";
+				styles.width = "8ch";
 				break;
 
-			case "bonus_round":
+			case "bonus_round":	// 4487
 				myText = "BONUS ROUND";
 				mySound = "prize";
+				styles.width = "17ch";
 				break;
 
-			case "breaking_news":
+			case "breaking_news":	// 1223
 				myText = "BREAKING NEWS";
 				mySound = "whip_crack_only";
+				styles.width = "19ch";
 				break;
 
-			case "brother":
+			case "brother":	// 2494
 				myText = "BROTHER";
 				mySound = "brother";
+				styles.width = "11ch";
 				isGif = true;
 				break;
 
-			case "city_feet":
+			case "city_feet":	// 3184
 				myText = "(But don't ask why the cars don't have feet!)";
+				styles.width = "20ch";
 				break;
 
-			case "challenge":
+			case "challenge":	// 4235
 				myText = "CHALLENGE";
 				mySound = "woodblock";
+				styles.width = "16ch";
 				break;
 
-			case "coffee":
+			case "coffee":	// 2191
 				myText = "(And get me a cup of coffee.)";
+				styles.width = "23ch";
 				break;
 
-			case "dark_fountain":
+			case "dark_fountain":	// 3984
 				myText = "DARK FOUNTAIN";
 				mySound = "dark_fountain";
+				styles.width = "29ch";
+				styles.offset_x = "-1em";
+				styles.offset_y = "-0.9em";
 				isGif = true;
 				break;
 
-			case "flames":
+			case "flames":	// 244
 				myText = "FLAMES";
 				mySound = "badexplosion";
+				styles.width = "11ch";
 				isGif = true;
 				break;
 
-			case "free":
-				myText = "Free!";
-				break;
-
-			case "fun_loop":
+			case "fun_loop":	// 2916
 				myText = "FUN";
 				mySound = "crowd_cheer_single";
+				styles.width = "7ch";
+				styles.offset_y = "-0.2em";
 				isGif = true;
 				break;
 
-			case "fun_o_meter":
+			case "fun_o_meter":	// 1087
 				myText = "FUN-O-METER";
 				mySound = "enter";
+				styles.width = "15ch";
 				break;
 
-			case "game":
+			case "game":	// 4659
 				myText = "GAME";
 				mySound = "gunshot";
+				styles.width = "8ch";
 				isGif = true;
 				break;
 
-			case "game_over":
+			case "game_over":	// 2914
 				myText = "GAME OVER!?";
 				mySound = "gunshot";
+				styles.width = "24ch";
 				isGif = true;
 				break;
 
-			case "gentle":
+			case "gentle":	// 3828
 				myText = "(Well, okay, you can touch it. Just be gentle.)";
+				styles.width = "22ch";
 				break;
 
-			case "grand_prize":
+			case "grand_prize":	// 1700
 				myText = "GRAND PRIZE";
 				mySound = "gunshot";
+				styles.width = "19ch";
 				break;
 
-			case "green_room":
+			case "green_room":	// 4037
 				myText = "Green Room";
 				mySound = "vibraphones";
+				styles.width = "19ch";
 				break;
 
-			case "hall_of_fame":
+			case "hall_of_fame":	// 4013
 				myText = "Hall of Fame";
 				mySound = "prize";
+				styles.width = "15ch";
 				break;
 
-			case "its_tv_time":
+			case "its_tv_time":	// composited from 4919/3654/228/4042/4053
 				myText = "IT'S!! TV!! TIME!!!"
 				mySound = "its_tv_time";
+				styles.width = "19ch";
 				isGif = true;
 				isJittering = false;
 				break;
 
-			case "know_tv":
+			case "know_tv":	// 1176
 				myText = "(And trust me, I know TV.)";
+				styles.width = "23ch";
 				break;
 
-			case "love":
+			case "love":	// 4793
 				myText = "LOVE";
 				mySound = "audience_aww";
+				styles.width = "8ch";
+				styles.offset_y = "-0.35em";
 				break;
 
-			case "lovely":
+			case "lovely":	// 3437
 				myText = "Lovely";
 				mySound = "audience_aww";
+				styles.width = "9ch";
+				styles.offset_y = "-0.35em";
 				break;
 
-			case "lovers":
+			case "lovers":	// 3575
 				myText = "LOVERS";
 				mySound = "audience_aww";
+				styles.width = "9ch";
+				styles.offset_y = "0.15em";
 				isGif = true;
 				break;
 
-			case "names":
+			case "names":	// 3550
 				myText = "NAMES";
 				mySound = "names";
+				styles.width = "11ch";
 				isGif = true;
 				break;
 
-			case "over":
-				myText = "OVER?";
-				mySound = "gunshot";
-				isGif = true;
-				break;
-
-			case "over_small":
+			case "over_small":	// 130
 				myText = "OVER";
+				styles.width = "7ch";
 				isGif = true;
 				break;
 
-			case "physical_challenge":
+			case "physical_challenge":	// 2693
 				myText = "PHYSICAL CHALLENGE";
 				mySound = "bounce";
+				styles.width = "25ch";
 				isGif = true;
 				break;
 
-			case "physical_challenges":
+			case "physical_challenges":	// 3886
 				myText = "PHYSICAL CHALLENGES";
 				mySound = "bounce";
+				styles.width = "24ch";
 				isGif = true;
 				break;
 
-			case "prizes":
+			case "prizes":	// 3803
 				myText = "PRIZES";
 				mySound = "gunshot";
+				styles.width = "11ch";
 				break;
 
-			case "quizzes":
+			case "quizzes":	// 127
 				myText = "QUIZZES";
 				mySound = "vibraphones";
+				styles.width = "10ch";
 				break;
 
-			case "relax":
+			case "relax":	// 1662
 				myText = "Relax and Enjoy…";
+				styles.width = "16.5ch";
 				isGif = true;
 				break;
 
-			case "rock_concert":
+			case "rock_concert":	// 4541
 				myText = "ROCK CONCERT";
 				mySound = "cd_bagel_susie";
+				styles.width = "19ch";
 				isGif = true;
 				break;
 
-			case "round":
+			case "round":	// 3055
 				myText = "ROUND";
 				mySound = "gunshot";
+				styles.width = "9ch";
 				isGif = true;
 				break;
 
-			case "rounds":
+			case "rounds":	// 3603
 				myText = "ROUNDS";
 				mySound = "gunshot";
+				styles.width = "11ch";
 				break;
 
-			case "round_1":
+			case "round_1":	// 4464
 				myText = "ROUND 1!";
 				mySound = "gunshot";
+				styles.width = "12ch";
 				break;
 
-			case "special":
+			case "special":	// 883
 				myText = "Special";
 				mySound = "enter";
+				styles.width = "7ch";
 				break;
 
-			case "star":
+			case "star":	// 1724
 				myText = "STAR";
 				mySound = "sparkle_glock";
+				styles.width = "9ch";
 				break;
 
-			case "stars":
+			case "stars":	// 700
 				myText = "STARS";
 				mySound = "sparkle_glock";
+				styles.width = "11ch";
 				break;
 
-			case "stop":
+			case "stop":	// 1817
 				myText = "STOP";
 				mySound = "locker";
+				styles.width = "5ch";
 				break;
 
-			case "susiezilla":
+			case "susiezilla":	// 2623
 				myText = "SUSIEZILLA";
 				mySound = "susiezilla";
+				styles.width = "11ch";
 				isGif = true;
 				break;
 
-			case "tan":
+			case "tan":	// 4409
 				myText = "(Though I would look good with a tan.)";
+				styles.width = "30ch";
 				break;
 
-			case "tears":
+			case "tears":	// 766
 				myText = "TEARS";
 				mySound = "splat";
+				styles.width = "12ch";
 				isGif = true;
 				break;
 
-			case "toriel":
+			case "toriel":	// 333
 				myText = "TORIEL";
 				mySound = "toriel";
+				styles.width = "10ch";
 				isGif = true;
 				break;
 
-			case "tv_time":
+			case "tv_time":	// 2843
 				myText = "TV TIME";
+				styles.width = "12ch";
 				break;
 
-			case "win":
+			case "win":	// 4661
 				myText = "WIN!";
+				styles.width = "7ch";
 				isGif = true;
 				break;
 
-			case "win_big":
+			case "win_big":	// 4472
 				myText = "* WIN!";
 				mySound = "carhonk";
+				styles.width = "17ch";
 				isGif = true;
 				break;
 
-			case "word":
+			case "word":	// 4476
 				myText = "WORD";
 				mySound = "prize";
+				styles.width = "8ch";
 				break;
 		}
 
@@ -536,15 +581,19 @@ class FunnyText extends HTMLElement {
 		}
 		else this.innerHTML = myImage;
 
-		let styles = {
-			width: this.getAttribute("width"),
-			height: this.getAttribute("height"),
-			offset_x: this.getAttribute("offset-x") ?? this.getAttribute("offset"),
-			offset_y: this.getAttribute("offset-y"),
-		},
-			validStyles = Object.entries(styles).filter(el => el[1]);
-		if (validStyles.length)	// if any non-nullish values exist
-			this.setAttribute("style", validStyles.map(([key, val]) => `--${key.replaceAll("_", "-")}: ${val}`).join("; "));
+		styles = Object.entries(Object.assign(
+			styles,							// Use any default styles
+			Object.fromEntries(				// Plus overrides from this specific instance
+				Object.entries({
+					width: this.getAttribute("width"),
+					offset_x: this.getAttribute("offset-x") ?? this.getAttribute("offset"),
+					offset_y: this.getAttribute("offset-y"),
+				})
+					.filter(el => el[1]),	// …if it has any, that is
+			)
+		));
+		if (styles.length)	// if any styles were assigned
+			this.setAttribute("style", styles.map(([key, val]) => `--${key.replaceAll("_", "-")}: ${val}`).join("; "));
 	}
 
 }
