@@ -23,17 +23,12 @@ class DialogueBox extends HTMLElement {
 	}
 
 	connectedCallback() {
-		const ox = this.getAttribute("offset-x"),
-			oy = this.getAttribute("offset-y");
-		if (ox !== null || oy !== null) {
-			this.setAttribute("style", `${
-				ox !== null ? `--offset-x: ${ox}` : ""
-			}${
-				ox !== null && oy !== null ? "; " : ""
-			}${
-				oy !== null ? `--offset-y: ${oy}` : ""
-			}`);
-		}
+		const styles = Object.fromEntries(Object.entries({
+			offset_x: this.getAttribute("offset-x") ?? this.getAttribute("offset"),
+			offset_y: this.getAttribute("offset-y"),
+		}).filter(el => el[1]));
+		if (styles.length)
+			this.setAttribute("style", styles.map(([key, val]) => `--${key.replaceAll("_", "-")}: ${val}`).join("; "));
 	}
 }
 customElements.define("d-box", DialogueBox);
@@ -690,17 +685,12 @@ class DialogueChoices extends HTMLElement {
 	connectedCallback() {
 		this.role = "tablist";
 		this.setAttribute("aria-label", "Choice menu");
-		const ox = this.getAttribute("offset-x") ?? this.getAttribute("offset"),
-			oy = this.getAttribute("offset-y");
-		if (ox !== null || oy !== null) {
-			this.setAttribute("style", `${
-				ox !== null ? `--offset-x: ${ox}` : ""
-			}${
-				ox !== null && oy !== null ? "; " : ""
-			}${
-				oy !== null ? `--offset-y: ${oy}` : ""
-			}`);
-		}
+		const styles = Object.fromEntries(Object.entries({
+			offset_x: this.getAttribute("offset-x") ?? this.getAttribute("offset"),
+			offset_y: this.getAttribute("offset-y"),
+		}).filter(el => el[1]));
+		if (styles.length)
+			this.setAttribute("style", styles.map(([key, val]) => `--${key.replaceAll("_", "-")}: ${val}`).join("; "));
 		this.isInteractive = this.getAttribute("noninteractive") === null;
 	}
 }
