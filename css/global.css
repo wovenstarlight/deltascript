@@ -376,6 +376,8 @@ hr {
 }
 d-box:not(:state(compact)) .text-center-expand,
 .text-center { text-align: center }
+d-box:not(:state(compact)) .text-right-expand,
+.text-right { text-align: right }
 img {
 	max-width: 100%;
 	&.box-width {
