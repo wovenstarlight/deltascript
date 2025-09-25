@@ -493,12 +493,14 @@ class FunnyText extends HTMLElement {
 				myText = "STAR";
 				mySound = "sparkle_glock";
 				styles.width = "9ch";
+				styles.offset_y = "-0.5em";
 				break;
 
 			case "stars":	// 700
 				myText = "STARS";
 				mySound = "sparkle_glock";
 				styles.width = "11ch";
+				styles.offset_y = "-0.5em";
 				break;
 
 			case "stop":	// 1817
