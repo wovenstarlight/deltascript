@@ -1103,9 +1103,7 @@ d-box {
 	display: grid;
 	grid-template-columns: auto 1fr;
 
-	&:has(&) {
-		position: relative;
-	}
+	&:has(&) { position: relative }
 
 	&:not(:state(compact)) {
 		/* Align text towards start */
@@ -1213,6 +1211,12 @@ d-box {
 		d-speaker::before,
 		d-box > :last-child::after { content: unset }
 	}
+
+	/* When multiple sprites are present, adjust columns */
+	&:has(> d-sprite + d-sprite) {
+		&:not(:state(compact)) { grid-template-columns: auto 1fr auto }
+		&:state(compact) { grid-template-columns: auto auto 1fr }
+	}
 }
 /* Talksprites */
 d-sprite {
@@ -1230,6 +1234,13 @@ d-sprite {
 		img { --size: calc(var(--baseheight) - 0.25em) }
 		margin-block: -1.7em -2em;
 		margin-inline: -0.25em 0;
+	}
+
+	/* When multiple sprites are present, move them to the right */
+	d-box:not(:state(compact)) & + & {
+		grid-column: 3;
+		margin-inline-end: 0;
+		margin-inline-start: 1ch;
 	}
 
 	img {
@@ -1283,6 +1294,9 @@ d-speaker {
 		grid-column: 1;
 		grid-row: 1 / span 3;
 	}
+
+	/* When multiple speakers are present, chain their tags */
+	d-box:state(compact) d-sprite + d-sprite & { grid-column: 2 }
 }
 /* Single line of text within a dialogue box
  * Automatically formats with asterisks, fonts, and speaker icons
@@ -1290,6 +1304,9 @@ d-speaker {
 d-text {
 	grid-column: 2;
 	line-height: 1.4;
+
+	/* Compact mode only: Move d-text to end after multiple speaker tags */
+	d-box:state(compact) d-sprite + d-sprite ~ & { grid-column: 3 }
 
 	&[font=tiny] {
 		font-family: var(--font-tiny);
