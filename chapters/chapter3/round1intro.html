@@ -1,0 +1,411 @@
+---
+title: Introduction to TV Time, Round 1
+
+description: >
+  <p>Mr. "Ant" Tenna introduces the party to his TV show as its newest contestants.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_dw_tv_curtain_tennanpc_Step_0
+    chapters: [3]
+    note: before the show
+  -
+    name: gml_Object_obj_ch3_GSA02_Step_0
+    chapters: [3]
+    note: start of show
+  -
+    name: gml_Object_obj_gameshow_nameentry_Draw_0
+    chapters: [3]
+    note: name entry instructions
+  -
+    name: gml_Object_obj_gameshow_nameentry_Step_0
+    chapters: [3]
+    note: name entry dialogue
+
+toc:
+  -
+    id: preshow
+    name: Before the show starts
+  -
+    id: showstart
+    name: The show begins
+  -
+    id: nameentry
+    name: Entering names
+    subheadings:
+      -
+        id: nameentry-instructions
+        name: Instructions
+      -
+        id: nameentry-tenna
+        name: Tenna's dialogue
+        subheadings:
+          -
+            id: nameentry-tenna-initial
+            name: Initial
+          -
+            id: nameentry-tenna-noinput5
+            name: If no keys have been pressed 5 seconds after the above dialogue
+          -
+            id: nameentry-tenna-noinput10
+            name: If no keys have been pressed 10 seconds after the above dialogue
+          -
+            id: nameentry-bad
+            name: If the name "PEE" or "POO" is entered
+  -
+    id: introductions
+    name: Making introductions
+  -
+    id: tvtime
+    name: Introduction to the Desert Board
+---
+<section class="d-section" id="preshow">
+	<h2>Before the show starts</h2>
+
+	<p class="note">Tenna stands at the end of the hall, dancing, and can be spoken to, upon which he points at the viewer.</p>
+	<hr class="hr2">
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Everyone got their snacks and drinks?</d-text>
+	</d-box>
+	<p class="note">Tenna straightens his tie.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Once the show starts there will be NO bathroom breaks!</d-text>
+	</d-box>
+	<p class="note">He looks pleased, hands pressed together by his face.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Are we all ready to begin the show?!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Are we ready now?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Tenna cups a hand by the side of his head, rocking back and forth.</p>
+	<d-choices theme="dark">
+		<d-option index="0" text="Ready"></d-option>
+		<d-option index="1" text="Not Ready"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Tenna grins, repeatedly throwing his hands up in excitement.</p>
+		<d-box theme="dark">
+			<d-speaker>Tenna</d-speaker>
+			<d-text asterisk>Great! Mike, hit it!</d-text>
+		</d-box>
+		<p class="note">The music cuts out, and with a thud, the screen cuts to black. <a href="#showstart">The show begins.</a></p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="showstart">
+	<h2>The show begins</h2>
+
+	<p class="note">It's dark and silent.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>(I... I'm a little nervous...)</d-text>
+	</d-box>
+
+	<p class="note">A pause.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>(Quit messing with your ears! We're about to be on!)</d-text>
+	</d-box>
+
+	<p class="note">Another pause. A spotlight turns on, revealing Tenna standing in the darkness. There's a drumroll as he speaks:</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Would everyone please give a warm welcome...</d-text>
+	</d-box>
+
+	<p class="note">Tenna shifts to the right, looking pleased.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>To today's <funny-text name="star"></funny-text> contestants!!!</d-text>
+	</d-box>
+
+	<p class="note">The lights turn on to reveal the TV Time stage, with Kris, Susie, and Ralsei standing towards the left. An audience appears, cheering; Kris and Susie strike cool poses while Ralsei curtseys. After a moment, they straighten up and Tenna points at the audience.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Everyone! Please cheer their <funny-text name="names"></funny-text>!</d-text>
+	</d-box>
+
+	<p class="note">The cheering stops abruptly, the audience going still. There are crickets chirping for a moment. Then Tenna turns to the party, straightening his tie.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Oh, right.</d-text>
+	</d-box>
+
+	<p class="note">He points upwards, holding up his mic.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>CONTESTANTS!!!</d-text>
+	</d-box>
+
+	<p class="note">Podiums drop down in front of each party member one by one; Susie and Ralsei jump in shock when theirs fall. They calm as Tenna points at them.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Your <funny-text name="names"></funny-text> please!!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="nameentry">
+	<h2>Entering names</h2>
+
+	<p class="note">If given the time, Susie will take 1 minute to submit her name and stop typing, and Ralsei will take 2 minutes for the same. If the player submits Kris's name before this, both Susie and Ralsei will automatically finish typing as well.</p>
+
+	<h3 id="nameentry-instructions">Instructions</h3>
+	<p class="note">Text to the bottom left of the screen reads:</p>
+	<d-box theme="fade">
+		<d-text>[Left]/[Right]</d-text>
+		<d-text>Change Letter</d-text>
+	</d-box>
+	<p class="note">Text to the bottom right of the screen reads:</p>
+	<d-box theme="fade">
+		<d-text class="text-right-expand">[CONFIRM] Next Letter</d-text>
+		<d-text class="text-right-expand">[CANCEL] Previous Letter</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="nameentry-tenna">Tenna's dialogue</h3>
+	<p class="note">Tenna stands idle with one hand behind his back while the party enters their names and will occasionally speak.</p>
+
+	<h4 id="nameentry-tenna-initial">Initial</h4>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Sorry, you've<span class="break"></span> only got 3 letters<span class="break"></span> to work with!!</d-text>
+	</d-box>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>I'd give you 4,<span class="break"></span> but the censors<span class="break"></span> would kill me!</d-text>
+	</d-box>
+
+	<h4 id="nameentry-tenna-noinput5">If no keys have been pressed 5 seconds after the above dialogue</h4>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Hey! You can<span class="break"></span> select your name<span class="break"></span> using the buttons<span class="break"></span> on your podium,<span class="break"></span> ya know!</d-text>
+	</d-box>
+
+	<h4 id="nameentry-tenna-noinput10">If no keys have been pressed 10 seconds after the above dialogue</h4>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>We aren't even<span class="break"></span> to the quiz first<span class="break"></span> question yet, folks!</d-text>
+	</d-box>
+
+	<h4 id="nameentry-bad">If the name "PEE" or "POO" is entered</h4>
+	<h5>First time</h5>
+	<p class="note">The podium shakes and all its letters blank out as an error buzzer plays. If Susie is still typing, she glances over briefly.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Uh oh, a no no word!</d-text>
+		<d-text>Good thing our parental<span class="break"></span> controls are installed!</d-text>
+	</d-box>
+
+	<h5>Second time</h5>
+	<p class="note">The podium shakes and as an error buzzer plays, Kris's name is set to "<span class="white">BAD</span>" and the <a href="#introductions">name entry sequence ends</a>.</p>
+</section>
+
+<section class="d-section" id="introductions">
+	<h2>Making introductions</h2>
+	<p class="note">After Kris submits their name, Susie and then Ralsei submit their names as well and look up if they haven't already. Tenna smiles and extends a hand, holding cue cards.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Alright! Now, for the introductions!!!</d-text>
+	</d-box>
+
+	<p class="note">He reads from the cue cards.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>First up, prince-from-the-dark and three time accidental fluffiest pet contest winner!</d-text>
+	</d-box>
+
+	<p class="note">Tenna extends his hand again, grinning.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>RAL-sei!!!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei presses a button to reveal the name on his podium as "<span class="white">RAL</span>", then curtseys as Susie and the audience applaud. After a moment, he stands up straight and Tenna continues reading from his cards.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Next up, Kris's friend, monster maniac, and WHERE did you wreck those pants?</d-text>
+	</d-box>
+
+	<p class="note">Tenna extends his hand again, grinning.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>SUSIE!!!</d-text>
+	</d-box>
+
+	<p class="note">Susie presses a button to reveal the name on her podium as "<span class="white">ASS</span>", then bursts into laughter while Ralsei reels in shock. </p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="W"></d-sprite>
+		<d-text asterisk>Susie!!!</d-text>
+	</d-box>
+
+	<p class="note">Tenna whispers conspiratorially to the audience.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Hey folks, looks like the censors ARE gonna kill me!</d-text>
+	</d-box>
+
+	<p class="note">A pause as the audience laughs. Susie stops laughing and she and Ralsei straighten up while Tenna continues reading from his cards.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Only on THIS show because they weren't blue enough for "The Sblurfs"...</d-text>
+	</d-box>
+
+	<p class="note">Tenna extends his hand again, grinning.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Kris!!!</d-text>
+	</d-box>
+
+	<p class="note">Kris presses a button to reveal the player's submitted name on their podium. Reactions depend on what name was chosen:</p>
+
+	<hr class="hr2">
+	<h3>If named "KRI"</h3>
+	<p class="note">The audience applauds.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Well, don't "Kri" until the ending, folks!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h3>If named "KRS"</h3>
+	<p class="note">The audience applauds.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>"KRS"? I told you! No KuRSing or the censors will kill me!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h3>If named "RAL" or "SUS"</h3>
+	<p class="note">The audience applauds.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Well, this is gonna get confusing, isn't it, folks!?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h3>If named "AAA"</h3>
+	<p class="note">The audience applauds.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>AAA!? They're already SCREAMING from DELIGHT, folks!!!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h3>If named "ASS", "PEE", "POO", "TIT", "BUT", or "BUM"</h3>
+	<p>In the case of "PEE" and "POO", you'd have to modify the game to bypass the <a href="#nameentry-bad">name check filter</a>; they can't be chosen otherwise.</p>
+	<p class="note">The audience applauds. Susie starts laughing while Ralsei ducks his head, blushing. A pause.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+		<d-text asterisk>Hahahahah, Kris, knew I could count on you!!</d-text>
+	</d-box>
+	<p class="note">Susie stops laughing and Ralsei regains his smile as the scene continues.</p>
+	<hr class="hr3">
+	<h3>If named "FUC", "FUX", "FUK", or "FCK"</h3>
+	<p>Only plays if you modify the game to remove the name check filter. Normally, if you enter the first two letters of these 'names', the game will remove "C/X/K" from the third letter's selection pool altogether to stop you from submitting these.</p>
+	<p class="note">The music cuts out. Tenna and Ralsei jolt, looking shocked, while Susie laughs. A long pause. A "TECHNICAL DIFFICULTIES" screen is displayed with a higher-pitched version of the TV Time theme, before cutting back to the main set, where Kris's podium now displays the name "FUN" and music has resumed as per normal. Dialogue skips ahead to the <a href="#tvtime">board introduction</a>.</p>
+	<hr class="hr3">
+	<h3>Otherwise</h3>
+	<p class="note">The audience applauds.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Hey, hopefully someday you can learn how to spell your own name, too!</d-text>
+	</d-box>
+	<hr class="hr2">
+</section>
+
+<section class="d-section" id="tvtime">
+	<h2>Introduction to the Desert Board</h2>
+
+	<p class="note">Tenna points up in the air.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Now that we've all been (im)properly introduced...</d-text>
+	</d-box>
+
+	<p class="note">Tenna points to the side where the party stands.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>MIKE, the <funny-text name="board"></funny-text>,<span class="break"></span> please!</d-text>
+	</d-box>
+
+	<p class="note">With a beep, the screen in the back turns on to show a pyramid in the desert. The party turns around to look while Tenna throws his hands excitedly in the air and continues.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Today's "GAME" SHOW will be... A VIRTUAL ADVENTURE through TV DESERT!</d-text>
+	</d-box>
+
+	<p class="note">He points upwards again as the screen switches with a beep to show a kid's game controller.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Each of you will use our CUTTING EDGE, PROPRIETARY CONTROLLER PADS...</d-text>
+	</d-box>
+
+	<p class="note">The screen switches back to the pyramid as Tenna resumes his idle pose.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>To control FANTASY VERSIONS OF YOURSELF in a world so REAL, you'll forget IT'S NOT!</d-text>
+	</d-box>
+
+	<p class="note">He puts his hands together in front of himself.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>On your QUEST you will fight BATTLES... quiz <funny-text name="quizzes"></funny-text>... gain POINTs...</d-text>
+	</d-box>
+
+	<p class="note">Tenna whispers conspiratorially to the audience.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>And maybe learn to <funny-text name="love"></funny-text> each other a little along the way.</d-text>
+	</d-box>
+
+	<p class="note">Tenna straightens up and points upwards, grinning as he holds his mic up.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Now, don't TOUCH THAT DIAL, and don't STOP THOSE SMILES!! Because...</d-text>
+	</d-box>
+
+	<p class="note">He points straight at the viewer as all the party members strike poses.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text><funny-text name="its_tv_time" class="fullwidth fullheight center"></funny-text></d-text>
+	</d-box>
+
+	<p class="note">The screen transitions with a radial wipe to black, and <a href="{{ '/chapters/chapter3/desertboard' | relative_url }}">the party begins playing Tenna's game</a>.</p>
+</section>

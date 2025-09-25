@@ -132,7 +132,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/shelter` - End of chapter scene with Susie confronting Snowy/MK
 		* `/handwashing` - Kris runs the tap.
 	* `/chapter3`
-		* `/round1intro` - start of TV time, picking names, introduction to Desert Board
+		* `/wakingup` - chapter intro, joining Ralsei, learning about nature of darkness, getting interrupted by Tenna
 		* `/desertboard` - all during-gameplay dialogue
 			* `#weatherpostfight`
 		* `/afterround1` - getting dropped in the green room, Susie talking to Tenna
@@ -148,6 +148,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/intotvworld` - After escaping the Bonus Round via Zapper
 		* `/cityboard` - The unused version of Board 3
 		* `/tennaalone` - Final sequence post-Rouxls where Tenna is abandoned by the remaining Darkners and even Mike
+		* preknight tenna last words - funny-text[name=grand_prize] should have [offset-y=-0.15em]
 	* `/chapter4`
 		* `/noellevisit` - Noelle's house intro. Update this link on other pages if you end up splitting it further
 		* `/bathroomweird` - maybe merge with below for an `outroweird`
