@@ -1,0 +1,130 @@
+---
+title: Z-Rank changing room
+
+description: >
+  <p>Narration and dialogue for the Z-Rank rewards room in TV World.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_room_ranking_z_hallway_Step_0
+    chapters: [3]
+    note: door enter option
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [3]
+    note: phone
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [3]
+    note: all other interactions
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [3]
+    note: choices
+
+see_also:
+  -
+    url: /locations/tvworld/greenroom/rewardsroom
+    name: ABC-Rank rewards room
+  -
+    url: /locations/tvworld/greenroom/backstage
+    name: Backstage
+
+toc:
+  -
+    id: door
+    name: Door
+  -
+    id: phone
+    name: Phone
+  -
+    id: poster
+    name: Posters
+  -
+    id: glass
+    name: Broken frame
+  -
+    id: manhole
+    name: Manhole
+---
+<section class="d-section" id="door">
+	<h2>Door</h2>
+	<p>Present at the end of the hallway leading off the <a href="{{ '/locations/tvworld/greenroom/rewardsroom' | relative_url }}">rewards hub</a>.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(The door says "Exclusive Z-RANK changing room!")</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Enter"></d-option>
+		<d-option index="1" text="Do not"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Susie and Ralsei walk up behind Kris.</p>
+		<hr class="hr2">
+		<h4>First time only</h4>
+		<p class="note">Kris turns around to face Susie and Ralsei.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="K"></d-sprite>
+			<d-text asterisk>Uhh, that's like a bathroom, right?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+			<d-text asterisk>We'll just, um, go play games.</d-text>
+		</d-box>
+		<hr class="hr2">
+		<p class="note">The door clicks open and Kris walks through.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="phone">
+	<h2>Phone</h2>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's a phone...)</d-text>
+		<d-text asterisk>(It seems to be unplugged.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="poster">
+	<h2>Posters</h2>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's an old poster. Seems like a collaboration between two stars...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Their smiles seemed so bright...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="glass">
+	<h2>Broken frame</h2>
+
+	<p class="note">Upon interacting, the smashing of glass is heard.</p>
+</section>
+
+<section class="d-section" id="manhole">
+	<h2>Manhole</h2>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's a manhole...)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Enter"></d-option>
+		<d-option index="1" text="Do not"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(You went in the manhole...)</d-text>
+		</d-box>
+		<p class="note">The screen fades to black, then fades back in on the <a href="{{ '/locations/tvworld/greenroom/backstage' | relative_url }}">backstage area</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+</section>
