@@ -925,8 +925,11 @@ function setUp() {
 		!e.currentTarget.checked ? document.body.classList.add("noanim") : document.body.classList.remove("noanim");
 		localStorage.setItem("noAnimations", !e.currentTarget.checked ? "on" : "");
 	});
-	// Autofill on initial load; auto-enable for prefers-reduced-motion havers
-	if (localStorage.getItem("noAnimations")?.length || window.matchMedia("(prefers-reduced-motion)").matches) {
+	// Auto-enable on first load for prefers-reduced-motion havers
+	if (localStorage.getItem("noAnimations") === null && window.matchMedia("(prefers-reduced-motion)").matches)
+		localStorage.setItem("noAnimations", "on");
+	// Autofill on initial load
+	if (localStorage.getItem("noAnimations")?.length) {
 		// Animations are DISABLED
 		document.body.classList.add("noanim");
 		document.getElementById("toggle-anim").checked = false;
