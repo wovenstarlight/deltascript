@@ -1941,6 +1941,9 @@ funny-text {
 				object-fit: contain;
 			}
 		}
+
+		/* Conspiratorial whispers: Two lines */
+		&:is([name=alligator], [name=city_feet], [name=gentle]) > :is(button, figure) { vertical-align: top }
 	}
 	
 	body.compact & {
@@ -1962,6 +1965,30 @@ funny-text {
 			top: 0;
 			left: 0;
 		}
+
+		/* Conspiratorial whispers: Any length */
+		&:is([name=coffee], [name=know_tv], [name=tan], [name=alligator], [name=city_feet], [name=gentle]) {
+			vertical-align: top;
+			top: 0.4em;
+		}
+		/* Conspiratorial whispers: One line */
+		&:is([name=coffee], [name=know_tv], [name=tan]) { --img-height: 1.125em }
+		/* Conspiratorial whispers: Two lines */
+		&:is([name=alligator], [name=city_feet], [name=gentle]) {
+			--img-height: 2.25em;
+			margin-block-end: 0.4em;
+		}
+	}
+
+	/* Special styling for the introductory "AMAZING" funny text */
+	d-text:has(&[name=amazing_01]) {
+		body:not(.compact) & { position: relative }
+		body.compact & .hide { display: none }
+	}
+	&[name=amazing_01] button {
+		position: absolute;
+		--offset-y: -0.4em;
+		--offset-x: 0.5ch;
 	}
 }
 /* #endregion */

@@ -255,6 +255,7 @@ class FunnyText extends HTMLElement {
 			case "alligator":	// 1679
 				myText = "(Guess your mother's never been a fan of alligators in bikinis.)";
 				styles.width = "25ch";
+				styles.offset_y = "0.4em";
 				break;
 
 			case "amazing_01":	// 2602
@@ -297,6 +298,7 @@ class FunnyText extends HTMLElement {
 			case "city_feet":	// 3184
 				myText = "(But don't ask why the cars don't have feet!)";
 				styles.width = "20ch";
+				styles.offset_y = "0.4em";
 				break;
 
 			case "challenge":	// 4235
@@ -308,6 +310,7 @@ class FunnyText extends HTMLElement {
 			case "coffee":	// 2191
 				myText = "(And get me a cup of coffee.)";
 				styles.width = "23ch";
+				styles.offset_y = "0.4em";
 				break;
 
 			case "dark_fountain":	// 3984
@@ -338,6 +341,7 @@ class FunnyText extends HTMLElement {
 				myText = "FUN-O-METER";
 				mySound = "enter";
 				styles.width = "15ch";
+				styles.offset_y = "-0.1em";
 				break;
 
 			case "game":	// 4659
@@ -357,6 +361,7 @@ class FunnyText extends HTMLElement {
 			case "gentle":	// 3828
 				myText = "(Well, okay, you can touch it. Just be gentle.)";
 				styles.width = "22ch";
+				styles.offset_y = "0.4em";
 				break;
 
 			case "grand_prize":	// 1700
@@ -388,6 +393,7 @@ class FunnyText extends HTMLElement {
 			case "know_tv":	// 1176
 				myText = "(And trust me, I know TV.)";
 				styles.width = "23ch";
+				styles.offset_y = "0.4em";
 				break;
 
 			case "love":	// 4793
@@ -500,7 +506,6 @@ class FunnyText extends HTMLElement {
 				myText = "STARS";
 				mySound = "sparkle_glock";
 				styles.width = "11ch";
-				styles.offset_y = "-0.5em";
 				break;
 
 			case "stop":	// 1817
@@ -519,6 +524,7 @@ class FunnyText extends HTMLElement {
 			case "tan":	// 4409
 				myText = "(Though I would look good with a tan.)";
 				styles.width = "30ch";
+				styles.offset_y = "0.4em";
 				break;
 
 			case "tears":	// 766
