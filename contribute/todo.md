@@ -131,7 +131,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/shelter` - End of chapter scene with Susie confronting Snowy/MK
 		* `/handwashing` - Kris runs the tap.
 	* `/chapter3`
-		* `/wakingup` - chapter intro, joining Ralsei, learning about nature of darkness, getting interrupted by Tenna
 		* `/desertboard` - all during-gameplay dialogue
 			* `#weatherpostfight`
 		* `/afterround1` - getting dropped in the green room, Susie talking to Tenna
