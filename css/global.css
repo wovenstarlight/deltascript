@@ -741,11 +741,13 @@ body {
 #pagetoc {
 	ol { counter-reset: toc }
 	li {
+		font-family: var(--font-condensed);
+		letter-spacing: 0.125ch;
 		counter-increment: toc;
 		&::marker {
-			font-family: var(--font-condensed);
 			content: counters(toc, ".") ".  ";
 		}
+		ol { margin-block-start: 0.2em }
 	}
 }
 /* Footer */
