@@ -46,6 +46,7 @@ class DialogueSpeaker extends HTMLElement {
 	setColor(speaker = this.innerText) {
 		const speaking = speaker.toLowerCase();
 		switch (speaking) {
+			// Light World
 			case "kris":
 			case "susie":
 			case "ralsei":
@@ -60,27 +61,31 @@ class DialogueSpeaker extends HTMLElement {
 			case "mettaton":
 			case "rudy":
 			case "carol":
+			// Chapter 1
 			case "lancer":
 			case "king":
 			case "rouxls":
 			case "jevil":
+			// Chapter 2
 			case "queen":
 			case "sweet":
 			case "spamton":
+			// Chapter 3
 			case "tenna":
 			case "lanino":
 			case "elnina":
 			case "knight":
-			// eram's down below cuz we're not sure eram's Da Actual Name
-			case "gerson":
+			// Chapter 4
 			case "titan":
 				this.classList.add(speaking);
 				break;
 
+			// Chapter 1
 			case "rouxls kaard":
 				this.classList.add("rouxls");
 				break;
 
+			// Chapter 2
 			case "cap'n":
 			case "capn":
 				this.classList.add("capn");
@@ -95,6 +100,7 @@ class DialogueSpeaker extends HTMLElement {
 				this.classList.add("spamton");
 				break;
 
+			// Chapter 3
 			case "lanino and elnina":
 			case "elnina and lanino":
 				this.classList.add("weather");
@@ -105,6 +111,11 @@ class DialogueSpeaker extends HTMLElement {
 			case "eram":
 				this.classList.add("eram");
 				break;
+
+			// Chapter 4
+			case "gerson":
+			case "old man":
+				this.classList.add("gerson");
 
 			default:
 				break;
