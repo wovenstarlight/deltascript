@@ -1,0 +1,1216 @@
+---
+title: Fighting the Hammer of Justice
+
+description: >
+  <p>In her quest for the rumored Magic Axe, Susie duels the old man Gerson Boom.</p>
+
+  <p>Some dialogue in this quest differs depending on whether the encounter against Jackenstein has been completed and Gerson has helped Susie relearn OK Heal.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_dw_gerson_study_Step_0
+    chapters: [3]
+    note: plaque
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [3]
+    note: study talks (post-win, first time), post-fight Gerson talk
+  -
+    name: gml_Object_obj_dw_church_secretpiano_Step_0
+    chapters: [3]
+    note: Golden Piano
+  -
+    name: gml_Object_obj_dw_church_arena_Step_0
+    chapters: [3]
+    note: pre-/post-fight cutscenes
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [3]
+    note: plaque, study talks (all), rematch choices
+
+toc:
+  -
+    id: plaque
+    name: Reading the plaque
+  -
+    id: studypre
+    name: Talking to Gerson in the study, initial
+  -
+    id: piano
+    name: Golden Piano
+  -
+    id: studyfireplace
+    name: Talking to Gerson in the study, after the fireplace entrance has been opened
+  -
+    id: prefight
+    name: Finding the axe
+  -
+    id: losing
+    name: After losing to Gerson
+    subheadings:
+      -
+        id: postloss
+        name: Immediately after losing
+        subheadings:
+          -
+            id: postloss1
+            name: First time
+          -
+            id: postloss2
+            name: Second time
+          -
+            id: postloss3
+            name: Subsequent times
+      -
+        id: rematch
+        name: Asking for a rematch
+  -
+    id: studyloss
+    name: Talking to Gerson in the study, after losing at least once
+  -
+    id: winning
+    name: After winning against Gerson
+    subheadings:
+      -
+        id: postwin
+        name: Immediately after winning
+        subheadings:
+          -
+            id: postwin1
+            name: If you won on the first try
+          -
+            id: postwin2
+            name: If you won on subsequent tries
+      -
+        id: postfight-gerson
+        name: Talking to Gerson
+      -
+        id: postfight-leave
+        name: Leaving the room
+  -
+    id: studypost
+    name: Talking to Gerson in the study, after winning
+---
+<section class="d-section" id="plaque">
+	<h2>Reading the plaque</h2>
+	<p>Located above the fireplace in Gerson's study. Available to interact with only in the original Dark Sanctuary, before playing the Golden Piano.</p>
+
+	<p class="note">If the plaque hasn't been read before, it's glinting.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>("Legend of the Magic Axe")</d-text>
+		<d-text asterisk>(Read it?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The camera pans up to focus on the plaque as Kris approaches it, Susie and Ralsei flanking them a step behind.</p>
+		<d-box theme="dark">
+			<d-text asterisk>"The Axe which nests beyond the pyre</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>Awakes from rest by golden choir</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>3 tunes bekiss'd in dulcet wire</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>Which whispers in the darkest mire."</d-text>
+		</d-box>
+
+		<hr>
+
+		<h3>First time only</h3>
+		<p class="note">A pause. Susie scratches her head.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="0"></d-sprite>
+			<d-text asterisk>... huh.</d-text>
+		</d-box>
+
+		<p class="note">Susie's hand goes still. To her side, Ralsei turns his head slightly to the side, looking away from her.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="1"></d-sprite>
+			<d-text asterisk>... uh...</d-text>
+		</d-box>
+
+		<p class="note">Susie turns to Kris and Ralsei.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="A"></d-sprite>
+			<d-text asterisk>... It sounds like there's some sort of <span class="yellow">cool axe</span>.</d-text>
+		</d-box>
+
+		<p class="note">A slight pause. Susie stops smiling; Ralsei jumps in surprise when she addresses him, facing forward again.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="C"></d-sprite>
+			<d-text asterisk>... Ralsei?</d-text>
+		</d-box>
+
+		<p class="note">A pause. Ralsei turns to her, eyes wide.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+			<d-text asterisk>Um-- huh? Sorry, maybe the old man knows something about it?</d-text>
+		</d-box>
+
+		<p class="note">A slight pause. Ralsei smiles again when Susie speaks.</p>
+
+		<hr class="hr2">
+
+		<h4>If Gerson hasn't helped Susie relearn OK Heal</h4>
+		<p class="note">Susie smiles at Ralsei.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="2"></d-sprite>
+			<d-text asterisk>Nah, screw it. We'll find it ourselves.</d-text>
+		</d-box>
+
+		<hr class="hr3">
+
+		<h4>If Gerson has helped Susie relearn OK Heal</h4>
+		<p class="note">Susie turns to look at Gerson, smiling.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="A"></d-sprite>
+			<d-text asterisk>... Yeah, maybe we could ask him.</d-text>
+		</d-box>
+
+		<hr class="hr2">
+
+		<hr>
+
+		<p class="note">The camera pans to focus on the party once more as Kris steps away from the plaque. Control returns to the player.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="studypre">
+	<h2>Talking to Gerson in the study, initial</h2>
+	<p>By choosing "<span class="fnt-condensed">Magic Axe</span>" upon talking to Gerson. (This option is only available if you've read the plaque over the fireplace.)</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Um, that plaque up there about the Magic Axe...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Oh, the young miss wanted to chat about it, did she?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If Gerson hasn't helped Susie relearn OK Heal</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>The hell did I say that?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>I see, I see. Then, I'll just talk to myself about it a bit, then!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>If Gerson has helped Susie relearn OK Heal</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>... Yeah, sure.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Legend has it... there's an axe hidden in these walls.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>And whoever wields it... will have great magic power!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>But, it ain't just hidden. It's locked away by some doohickey, yessir.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Maybe if ya search around, ya might figure somethin' out...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If Gerson hasn't helped Susie relearn OK Heal</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>If Gerson has helped Susie relearn OK Heal</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>That magic power thing... think it'd work on everyone?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Well... it's worth a shot, ain't it?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>(Kris, let's try and find that Axe if we can...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Legend has it... there's an axe hidden in these walls.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>And whoever wields it... will have great magic power!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>But, it ain't just hidden. It's locked away by some doohickey, yessir.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Maybe if ya search around, ya might figure somethin' out...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="piano">
+	<h2>Golden Piano</h2>
+
+	<h3>Sign next to the piano</h3>
+	<d-box theme="dark">
+		<d-text asterisk>Melodies three, there be.</d-text>
+		<d-text asterisk>Two in the southern towers</d-text>
+		<d-text asterisk>One where gold strikes water.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Successfully playing the piano</h3>
+
+	<p class="note">Upon playing the last note, the screen fades to black, then fades back in on the fireplace in the study. With a series of thuds, the fire disappears and the <a href="#prefight">fireplace grows tall enough for a person to pass through</a>. The screen then fades to black and back in on the party in front of the Golden Piano.</p>
+
+	<p class="note">Susie scratches her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>... Did you just hear something?</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns his head slightly towards her, and Susie's hand stops moving.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>It sounded a bit like a fireplace opening up.</d-text>
+	</d-box>
+
+	<p class="note">Susie lowers her hand and she and Ralsei face forward again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Dude, too specific. But yeah.</d-text>
+	</d-box>
+
+	<p class="note">After a moment, Kris turns away from the piano and control is returned to the player.</p>
+</section>
+
+<section class="d-section" id="studyfireplace">
+	<h2>Talking to Gerson in the study, after the fireplace entrance has been opened</h2>
+	<p>By choosing "<span class="fnt-condensed">Magic Axe</span>" upon talking to Gerson. (This option is only available if you've read the plaque over the fireplace.)</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Magic Axe? Hmm, hmm...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>By the by, ain't it getting a bit drafty in here? I wonder why.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="prefight">
+	<h2>Finding the axe</h2>
+
+	<p class="note">Upon walking through the fireplace and entering the back half of the study, the party stops when Susie notices something. The music fades out and the camera follows Susie as she hurries to the center of the room, where the <a href="{{ '/misc/weapons#justiceaxe' | relative_url }}">Justice Axe</a> rests on an anvil.</p>
+
+	<hr class="hr2">
+
+	<h3>If you learned about the Magic Axe from the plaque</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Damn... so this is the Magic Axe, huh.</d-text>
+	</d-box>
+
+	<hr class="hr3">
+
+	<h3>If you didn't read the plaque</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Damn... I dunno what this axe is, but it looks awesome!</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<p class="note">As a fanfare plays, the axe hovers off the anvil. Susie turns to the viewer and lifts her hands up, ready to catch the glittering axe. The following text plays slowly and silently:</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(You got the</d-text>
+	</d-box>
+
+	<p class="note">As soon as the last letter of "the" is printed, however, the fanfare cuts off and the axe drops back onto the anvil with a thud. Susie looks shocked as Gerson speaks from offscreen:</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Wait a tick! You gotta pay for that!</d-text>
+	</d-box>
+
+	<p class="note">Accompanied by <a href="{% include wikilink page='Gyaa Ha ha!' %}">his theme</a>, Gerson walks into the room from the left, presumably having come from his desk in the study. Susie turns to him, unsmiling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>... Pay!? The heck are you talking about?</d-text>
+	</d-box>
+
+	<p class="note">Gerson walks past Susie to the right side of the room; she steps out of his way as he passes. Once he reaches the other side, he turns back to Susie and strokes his beard as he talks.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>This is still the inside of my study, ain't it?</d-text>
+	</d-box>
+
+	<p class="note">Gerson laughs, then looks closely at Susie.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Nothin' else was free, so why'd ya think we'd start here?</d-text>
+	</d-box>
+
+	<p class="note">Susie smiles again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Haha, good one. I'm taking the axe now.</d-text>
+	</d-box>
+
+	<p class="note">Gerson jabs his cane in her face, and Susie's eyes widen.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>... don't think I'm serious? Check the price tag!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Huh...? Price... what?</d-text>
+	</d-box>
+
+	<p class="note">Gerson lowers his cane and Susie turns to the anvil and axe, putting her hands on her hips.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="B"></d-sprite>
+		<d-text asterisk>... it says it costs... uh...</d-text>
+	</d-box>
+
+	<p class="note">Susie jolts, shocked.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="E"></d-sprite>
+		<d-text asterisk>$999,999,999!?</d-text>
+	</d-box>
+
+	<p class="note">Susie, still wide-eyed, turns back to Gerson as he laughs.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Geh heh heh, didn't realize it was still on discount!</d-text>
+	</d-box>
+
+	<p class="note">Gerson closes his eyes and dips his head.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>... But I know. You worked real hard to get here. So how 'bout a trade?</d-text>
+	</d-box>
+
+	<p class="note">He lifts his head again, opening his eyes.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>If you, and you alone, can best my challenge... I give it to ya. For free.</d-text>
+	</d-box>
+
+	<p class="note">Susie smiles.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Heh, knew you'd say that. What do you want?</d-text>
+	</d-box>
+
+	<p class="note">Gerson strokes his beard.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Hmm... how about...</d-text>
+	</d-box>
+
+	<p class="note">He lowers his hand, and Susie's eyes widen when he speaks.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>... a haircut?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>... a HAIRCUT?</d-text>
+	</d-box>
+
+	<p class="note">She looks calmer, smiling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Alright, sure. Which hair you want me to cut?</d-text>
+	</d-box>
+
+	<p class="note">Gerson strokes his beard.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Oh, any of 'em.</d-text>
+	</d-box>
+
+	<p class="note">He bursts into laughter for a moment, then calms to speak.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>They're all too long, see! Just get one, and I'll give it to ya.</d-text>
+	</d-box>
+
+	<p class="note">Susie takes a few steps back.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Alright, I'll start with your beard...</d-text>
+	</d-box>
+
+	<p class="note">She swings her axe, but the music cuts off as Gerson tilts his head briefly to the side and her strike misses.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>H... huh?</d-text>
+	</d-box>
+
+	<p class="note">She swings again. Another tilt of the head and another miss.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>STAY STILL!!!</d-text>
+	</d-box>
+
+	<p class="note">Susie swings thrice in quick succession, but Gerson steps back and dodges jauntily; all three strikes miss. Gerson laughs. Susie, still bent over from her last strike, straightens up with the axe resting on one shoulder.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>... Heheheh...  I get it.</d-text>
+	</d-box>
+
+	<p class="note">She points with her free hand at Gerson.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>You think I'm gonna go easy on you, huh?</d-text>
+	</d-box>
+
+	<p class="note">She lunges forward and swings her axe at him, but Gerson disappears entirely in a blur of motion. Susie's eyes widen briefly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>What the...</d-text>
+	</d-box>
+
+	<p class="note">Susie's eyes narrow again when Gerson speaks from an unseen place.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Ah, so you wanna get serious, do ya...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Then tell me first, can you hear it?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Can you hear its song, singing from the deep...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>That... is the ringing...</d-text>
+	</d-box>
+
+	<p class="note">Susie's eyes widen when a figure appears behind her, and she drops her axe and dodges back with her arms up defensively just as the figure swings down at her with a huge hammer. She grips her axe again, ready to fight.</p>
+
+	<p class="note">On the other side of the anvil appears the hammer-wielding figure: Gerson, now clad head to toe in armor, hair in a long ponytail free of the hat. He stands facing Susie with the hammer on the ground in front of him, his hands resting on the base of its handle.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>... of the Hammer of Justice!</d-text>
+	</d-box>
+
+	<p class="note">Gerson laughs, and the <a href="{{ '/encounters/hammerofjustice' | relative_url }}">fight against the Hammer of Justice</a> begins.</p>
+</section>
+
+<section class="d-section" id="losing">
+	<h2>After losing to Gerson</h2>
+
+	<h3 id="postloss">Immediately after losing</h3>
+
+	<p class="note">When Susie takes the last hit, the screen fades to white as the encounter ends. The screen then fades back in on the study's back room, with Susie and Gerson standing in front of the anvil. Gerson is back in his usual outfit.</p>
+
+	<p class="note">After a brief moment, Susie lowers her gaze.</p>
+
+	<h4 id="postloss1">First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>... damn... I... couldn't keep up...</d-text>
+	</d-box>
+
+	<p class="note">Gerson dips his head, eyes closing.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Geheheh... well, you gave it your best shot!</d-text>
+	</d-box>
+
+	<p class="note">Gerson turns and walks up to the axe on the anvil, Susie watching him.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Here.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>... huh?</d-text>
+	</d-box>
+
+	<p class="note">Susie walks up beside Gerson.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>I saw the fire in your eyes... that's proof enough for me.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Take it. And this crystal, too.</d-text>
+	</d-box>
+
+	<p class="note">Susie hesitates. Then she puts her hands on her hips.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">She lifts one hand dismissively in the air.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Nah. Keep it.</d-text>
+	</d-box>
+
+	<p class="note">Susie and Gerson turn to face each other; Susie isn't smiling.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>... you don't want it?</d-text>
+	</d-box>
+
+	<p class="note">Susie looks down for a moment…</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>Of course I do. But...</d-text>
+	</d-box>
+
+	<p class="note">…then raises her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="W"></d-sprite>
+		<d-text asterisk>You're gonna need something to give me...</d-text>
+	</d-box>
+
+	<p class="note">She strikes a pose, grinning.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+		<d-text asterisk>... after our rematch!</d-text>
+	</d-box>
+
+	<p class="note">She turns back to Gerson, losing her smile, as he throws his head back and laughs audibly.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>... Wahahahaha!!!</d-text>
+	</d-box>
+
+	<p class="note">He lowers his head to look at her.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>You've got guts, kid! I like that!</d-text>
+	</d-box>
+
+	<p class="note">Susie walks back over to Kris and Ralsei, waiting near the entrance of the room, and retakes her place in the lineup.</p>
+
+	<h4 id="postloss2">Second time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>D... damnit!</d-text>
+	</d-box>
+
+	<p class="note">Gerson strokes his beard.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>You aren't giving up, are ya?</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to the left, where Kris stands offscreen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>Hell no! Kris, let's try again!</d-text>
+	</d-box>
+
+	<p class="note">Gerson stops stroking his beard. Susie walks back over to Kris and Ralsei, waiting near the entrance of the room, and retakes her place in the lineup.</p>
+
+	<h4 id="postloss3">Subsequent times</h4>
+
+	<p class="note">Gerson dips his head, eyes closing.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>It's all right, it's all right.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>How 'bout you give it another shot?</d-text>
+	</d-box>
+
+	<p class="note">Gerson lifts his head and opens his eyes. Susie walks back over to Kris and Ralsei, waiting near the entrance of the room, and retakes her place in the lineup.</p>
+
+	<hr>
+
+	<h3 id="rematch">Asking for a rematch</h3>
+	<p>By interacting with the anvil and Gerson, who stands beside it.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>What, ready to fight again!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Whaddya say, Kris?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Go Susie!#Go Susie!"></d-option>
+		<d-option index="1" text="Sorry, not#enough time."></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="H"></d-sprite>
+			<d-text asterisk>Get ready, 'cause I'm not gonna hold anything back!</d-text>
+		</d-box>
+		<p class="note">Gerson and Susie take their positions. The screen flashes white, the glow fading to show Gerson back in his Hammer of Justice armor, and the <a href="{{ '/encounters/hammerofjustice' | relative_url }}">fight begins again</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="A"></d-sprite>
+			<d-text asterisk>Sorry. We'll kick your ass later, old man.</d-text>
+		</d-box>
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="studyloss">
+	<h2>Talking to Gerson in the study, after losing at least once</h2>
+	<p>By choosing "<span class="fnt-condensed">Magic Axe</span>" upon talking to Gerson. (This option is only available if you've read the plaque over the fireplace.)</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>You still want the Axe? I'll give it to ya...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>... Nah. Not until I beat you.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="winning">
+	<h2>After winning against Gerson</h2>
+
+	<h3 id="postwin">Immediately after winning</h3>
+	<p class="note">The white screen fades in to the study's back room, showing Susie standing wide-eyed with a finger raised and Gerson frozen with his head thrown back and mouth gaping.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>H... How's that, old man!?</d-text>
+	</d-box>
+
+	<p class="note">Gerson closes his eyes and laughs. As he speaks, <a href="{% include wikilink page='Wise words' %}">slow guitar</a> begins playing.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Wahahahahaha!! That was the most fun I ever had!</d-text>
+	</d-box>
+
+	<p class="note">Gerson stops laughing and Susie lowers her hand.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>See how I used my healing just now!?</d-text>
+	</d-box>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Geheheheh!</d-text>
+	</d-box>
+
+	<p class="note">A pause. Susie walks up to the axe, Gerson turning to watch.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Guess this is mine now, huh.</d-text>
+	</d-box>
+
+	<p class="note">Susie reaches up to the axe.</p>
+
+	<hr class="hr2">
+
+	<h4>If the armor inventory is not full</h4>
+
+	<p class="note">She lowers her hand almost immediately as the axe disappears.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(JusticeAxe was added to your WEAPONS.)</d-text>
+	</d-box>
+
+	<p class="note">The <a href="{{ '/misc/weapons#justiceaxe' | relative_url }}">Justice Axe</a> is added to the inventory.</p>
+
+	<hr class="hr3">
+
+	<h4>If the armor inventory is full</h4>
+
+	<d-box theme="dark">
+		<d-text asterisk>(JusticeAxe was added to your WEAPONS.)</d-text>
+	</d-box>
+
+	<p class="note">The axe stays where it is, and Susie's hand remains lifted. A pause.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(... but, there wasn't enough room.)</d-text>
+	</d-box>
+
+	<p class="note">Susie whips around to look at Kris offscreen, put off.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Dammit Kris, the hell did you get so much stupid stuff?!</d-text>
+	</d-box>
+
+	<p class="note">Gerson laughs, and Susie turns to look at him.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Geh ha ha ha! Well, that Axe ain't going anywhere...</d-text>
+	</d-box>
+
+	<p class="note">Gerson stops laughing. Both he and Susie turn to the axe.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>... So just pick it up later!</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<p class="note">Gerson walks up beside Susie.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>And... take this, too.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>For some reason, I found this weird piece-a glass in my desk.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Felt like someone really wanted me to use this thing.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>But it didn't interest me, so you can take it.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(ShadowCrystal was added to your KEY ITEMS.)</d-text>
+	</d-box>
+
+	<p class="note">A <a href="{{ '/misc/darkitems#shadowcrystal' | relative_url }}">Shadow Crystal</a> is added to the inventory.</p>
+
+	<hr class="hr2">
+
+	<h4 id="postwin1">If you won on the first try</h4>
+
+	<p class="note">Gerson and Susie face each other.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>The truth is, I was gonna give you it all if you beat me or not.</d-text>
+	</d-box>
+
+	<p class="note">Gerson swings his fists enthusiastically, doing a little jump as he speaks.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>But woomph, you actually put up quite a fight!</d-text>
+	</d-box>
+
+	<p class="note">He throws his head back and laughs. Susie turns to the side and scratches her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Well, maybe you're losing your touch.</d-text>
+	</d-box>
+
+	<p class="note">Susie's hand stills and Gerson laughs unheard as he talks.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Oh, far from it!</d-text>
+	</d-box>
+
+	<p class="note">He stops laughing and strokes his beard.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>... You weren't truly fighting by yourself, were ya?</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to Gerson, unsmiling; his hand stills on his beard.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>... huh?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>... oh, you mean Kris. Yeah.</d-text>
+	</d-box>
+
+	<p class="note">Susie's gaze drops.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Guess I kinda needed their help to win.</d-text>
+	</d-box>
+
+	<p class="note">Gerson shakes his head, eyes closed.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Well, don't sell your own skills short either.</d-text>
+	</d-box>
+
+	<p class="note">He looks at Susie, who smiles.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>You're something real special yourself...</d-text>
+	</d-box>
+
+	<p class="note">She turns away, scratching her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Heh. You weren't bad either.</d-text>
+	</d-box>
+
+	<p class="note">Still smiling, she looks at Gerson again when he hops and swings his fists again.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Now go enjoy that Axe! Geh heh heh!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Alright. Heh.</d-text>
+	</d-box>
+
+	<hr class="hr3">
+
+	<h4 id="postwin2">If you won on subsequent tries</h4>
+	<hr class="hr2">
+	<h5>On second to fourth tries</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Knew it was worth having a rematch!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>On fifth try onwards</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>FINALLY!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Was starting to wonder if I'd ever win...</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<p class="note">Gerson dips his head, eyes closing.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Perseverance. Each time, you get a little better.</d-text>
+	</d-box>
+
+	<p class="note">He lifts his head and opens his eyes.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>... that's all I wanted to see.</d-text>
+	</d-box>
+
+	<p class="note">Gerson strokes his beard.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Can't think I'm gonna be the toughest thing you'll face.</d-text>
+	</d-box>
+
+	<p class="note">He lowers his hand.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>But next time, you'll be ready.</d-text>
+	</d-box>
+
+	<p class="note">Gerson swings his fists enthusiastically, doing a little jump as he speaks.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Don't give up, and give 'em hell!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Don't have to tell me that, old man!!</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<p class="note">The music fades out. The camera follows Susie as she walks over to the party members waiting near the entrance and retakes her spot in the lineup. The party can now <a href="#postfight-gerson">check on Gerson</a> or <a href="#postfight-leave">leave the room</a>.</p>
+
+	<hr>
+
+	<h3 id="postfight-gerson">Talking to Gerson</h3>
+	<p class="note">Gerson stands facing the anvil.</p>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="postfight-leave">Leaving the room</h3>
+	<p class="note">The party stops near the entrance as Gerson speaks from behind them.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Well, I'll be seeing you around now.</d-text>
+	</d-box>
+
+	<p class="note">The party turns around; Kris and Ralsei stand towards the back while Susie steps up front in front of Gerson, who's walked up to them. The camera pans to show everyone.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>... yeah. I guess we will.</d-text>
+	</d-box>
+
+	<p class="note">Susie looks down for a moment, smile dropping briefly, then takes a few steps forward.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>Why'd you... help me so much?</d-text>
+	</d-box>
+
+	<p class="note">She looks down again, smile gone.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>You didn't have to.</d-text>
+	</d-box>
+
+	<p class="note">She lifts her head with wide eyes as Gerson speaks, stroking his beard.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>You remind me a bit of someone I used to know.</d-text>
+	</d-box>
+
+	<p class="note">Susie takes a step forward, smiling again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>... Who?</d-text>
+	</d-box>
+
+	<p class="note">Gerson dips his head, eyes closing.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Just a character from that old story...</d-text>
+	</d-box>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>... Lord of the Hammer, huh. Hell if I'm reading that.</d-text>
+	</d-box>
+
+	<p class="note">Susie's smile drops and her eyes widen in realization.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>... though, wait a sec.</d-text>
+	</d-box>
+
+	<p class="note">She turns away, scratching her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Isn't that... what Dragon Blazers was based on?</d-text>
+	</d-box>
+
+	<p class="note">Gerson lifts his head and strokes his beard again, and Susie turns to look at him, smiling again.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Yep, yep. And so they changed parts of the story.</d-text>
+	</d-box>
+
+	<p class="note">Gerson dips his head, eyes closing.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Of course, the biggest fans got mad... but, isn't it interesting?</d-text>
+	</d-box>
+
+	<p class="note">He lifts his head and looks at Susie.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>The book was already just an interpretation of something else.</d-text>
+	</d-box>
+
+	<p class="note">Gerson strokes his beard, and Susie's smile fades when he speaks.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Stories can be retold. They can be changed... That's what I believe.</d-text>
+	</d-box>
+
+	<p class="note">Susie lowers her gaze, and Gerson stops stroking his beard for a moment…</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>... huh.</d-text>
+	</d-box>
+
+	<p class="note">…then resumes as he speaks.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>The words on a wall called you a hero.</d-text>
+	</d-box>
+
+	<p class="note">Susie looks up at him as he dips his head.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>... Whatever you end up being, I'm sure it'll be tremendous.</d-text>
+	</d-box>
+
+	<p class="note">He lifts his head. A pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">Susie smiles again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>... anyway, which Dragon Blazers character am I?</d-text>
+	</d-box>
+
+	<p class="note">Gerson throws his head back and laughs.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Gahahaha, right!</d-text>
+	</d-box>
+
+	<p class="note">Gerson walks past the party towards the entrance; they all turn to watch him. Gerson stops by Kris and faces the party. A pause.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>You are... the Dragon.</d-text>
+	</d-box>
+
+	<p class="note">Gerson leaves the room. Susie walks forward, retaking her spot between Kris and Ralsei.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Heheh. That's what I was hoping.</d-text>
+	</d-box>
+
+	<p class="note">Control is returned to the player, who can now head back into the study.</p>
+</section>
+
+<section class="d-section" id="studypost">
+	<h2>Talking to Gerson in the study, after winning</h2>
+
+	<h3>First time</h3>
+	<p>This dialogue plays instead of the usual choice menu.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>That crystal's got some kinda strange power.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Gave me the skeevies, so I didn't use it! Wahaha!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<p>By choosing "<span class="fnt-condensed">Magic Axe</span>" upon talking to Gerson. (This option is only available if you've read the plaque over the fireplace.)</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Enjoy yourselves! You got a lot ahead of you...</d-text>
+	</d-box>
+</section>
