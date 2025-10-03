@@ -152,6 +152,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/bathroomweird` - maybe merge with below for an `outroweird`
 		* `/holidayoutro` - leaving the Holidays' house. May need a `weird` variant
 		* `/darkworldintro` - sanctuary entrance
+		* `/hammerofjustice` - fighting gerson
+			* `#postfight`
 		* `/soundofjustice` - SoJ fight (continuing into Ralsei scene)
 			* `#postfight`
 		* `/return` - back to the church
