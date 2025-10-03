@@ -338,7 +338,7 @@ a { /* Global links */
 	/* Yellow on hover */
 	&:hover, &:focus-within { color: var(--lightyellow) }
 	/* …unless it's already yellow, in which case - Orange on hover */
-	&:is(.currentpage, .lightyellow, .noelle.act):is(:hover, :focus-within) { color: var(--orange) }
+	&:is(#sitehead .currentpage, .lightyellow, .noelle.act):is(:hover, :focus-within) { color: var(--orange) }
 }
 hr {
 	max-width: 100%;
