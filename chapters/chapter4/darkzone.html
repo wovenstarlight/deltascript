@@ -1,0 +1,1085 @@
+---
+title: Visiting the Dark Zone
+
+description: >
+  <p>The party makes it through the Northwest Library's locked gate and enters the Dark Zone.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_GlobalScript_scr_prophecytext
+    chapters: [4]
+    note: prophecy panels text
+  -
+    name: gml_Object_obj_ch4_DCA08A_Step_0
+    chapters: [4]
+    note: finding notes
+  -
+    name: gml_Object_obj_dw_church_pianopuzzle_Step_0
+    chapters: [4]
+    note: playing the piano wrong
+  -
+    name: gml_Object_obj_ch4_DCA08B_Step_0
+    chapters: [4]
+    note: playing the piano right
+  -
+    name: gml_Object_obj_ch4_DCA08C_Step_0
+    chapters: [4]
+    note: falling into darkness
+  -
+    name: gml_Object_obj_ch4_church_dark_maze_controller_Step_0
+    chapters: [4]
+    note: Dark Zone, first 3 parts
+  -
+    name: gml_Object_obj_ch4_DCA08D_Step_0
+    chapters: [4]
+    note: Dark Zone, last part; post-fight (Gerson and first Jack talk), leaving
+  -
+    name: gml_Object_obj_npc_jackenstein_Other_10
+    chapters: [4]
+    note: post-fight subsequent Jack talk
+  -
+    name: gml_Object_obj_tutorial_text_Draw_73
+    chapters: [4]
+    note: charge jump hint
+
+toc:
+  -
+    id: notes
+    name: Finding the notes to play
+    subheadings:
+      -
+        id: notes-first
+        name: First set of notes to be discovered
+      -
+        id: notes-last
+        name: Second set of notes to be discovered
+  -
+    id: piano-wrong
+    name: Playing the piano incorrectly
+    subheadings:
+      -
+        id: piano-wrong-neither
+        name: Before finding either half of the notes
+      -
+        id: piano-wrong-half
+        name: After finding one half of the notes, but not the other
+  -
+    id: piano-right
+    name: Playing the piano correctly
+    subheadings:
+      -
+        id: piano-right-neither
+        name: If you didn't find either half of the notes
+      -
+        id: piano-right-half
+        name: If you found one half of the notes, but not the other
+      -
+        id: piano-right-both
+        name: If you found both halves of the notes
+  -
+    id: gotodark
+    name: Into the darkness
+  -
+    id: darkzone
+    name: Entering the Dark Zone
+  -
+    id: postfight
+    name: After the fight
+    subheadings:
+      -
+        id: postfight-jackenstein
+        name: Jackenstein's accident
+      -
+        id: postfight-ralsei
+        name: Talking to Ralsei and Jackenstein
+      -
+        id: postfight-susie
+        name: Checking on Susie
+  -
+    id: jacktalk
+    name: Talking to Jackenstein
+    subheadings:
+      -
+        id: jacktalk1
+        name: First time
+      -
+        id: jacktalk2
+        name: Subsequent times
+  -
+    id: leaving
+    name: Leaving the Dark Zone
+    subheadings:
+      -
+        id: jumphint
+        name: Hint regarding charge jumps
+      -
+        id: treasurechest
+        name: Treasure chest
+      -
+        id: susieheal
+        name: Susie regaining OK Heal
+---
+<section class="d-section" id="notes">
+	<h2>Finding the notes to play</h2>
+	<p>Available on either side of the Northwest Library. The order in which you get the halves doesn't matter; dialogue only depends on which half was discovered first. These cutscenes only play once upon the initial discovery of each half.</p>
+
+	<h3 id="notes-first">First set of notes to be discovered</h3>
+	<p class="note">Once the party gets far enough into the room, the camera follows them as they walk forward and fan out to view a floating prophecy panel:</p>
+	<d-box theme="prophecy">
+		<d-text>A CONUNDRUM'S FIRST FOUR TONES.</d-text>
+	</d-box>
+	<p class="note">A pause.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Looks kinda like... notes?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Kris, maybe you can play 'em on a piano somewhere?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Good idea, Susie! But, doesn't the song look, um...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="I"></d-sprite>
+		<d-text asterisk>... a little unfinished?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>... huh? Yeah, guess we gotta find the other half?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>It's probably close. Let's go.</d-text>
+	</d-box>
+	<p class="note">After a slight pause, the camera pans back to focus on the party as they turn away from the prophecy to face each other, and control is returned to the player.</p>
+
+	<hr>
+
+	<h3 id="notes-last">Second set of notes to be discovered</h3>
+	<p class="note">Once the party gets far enough into the room, the camera follows them as they walk forward and fan out to view a floating prophecy panel:</p>
+	<d-box theme="prophecy">
+		<d-text>A CONUNDRUM'S LAST FOUR TONES.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Oh, Kris! It's the second half of the melody!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="I"></d-sprite>
+		<d-text asterisk>Now, you just need to play it...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Yeah, unless there's, like, a third half.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>(Um... there isn't.)</d-text>
+	</d-box>
+	<p class="note">After a slight pause, the camera pans back to focus on the party as they turn away from the prophecy to face each other, and control is returned to the player.</p>
+</section>
+
+<section class="d-section" id="piano-wrong">
+	<h2>Playing the piano incorrectly</h2>
+	<p>As in, playing any sequence of notes that's not the correct answer to this puzzle, then exiting the piano screen.</p>
+
+	<h3 id="piano-wrong-neither">Before finding either half of the notes</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Hmm... I wonder if we need to play something specific?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Perhaps there's a hint somewhere...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>... wait, it's a puzzle? Thought Kris was just jamming.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Dude, what if you just smashed all the keys?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>That'll probably work, right?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="piano-wrong-half">After finding one half of the notes, but not the other</h3>
+	<p>(Which half you have is irrelevant.)</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="6"></d-sprite>
+		<d-text asterisk>... Looks like the music is incomplete.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Maybe we need another hint...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Or, maybe you just gotta play something cooler.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="piano-right">
+	<h2>Playing the piano correctly</h2>
+
+	<p class="note">Once the correct notes are played, the barred gate to the right lifts up and disappears with a chime.</p>
+
+	<h3 id="piano-right-neither">If you didn't find either half of the notes</h3>
+	<p class="note">Ralsei turns his head slightly to the right, likely looking at Kris.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>Amazing, Kris! You already knew the answer...</d-text>
+	</d-box>
+	<p class="note">He faces forward again.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>... You must really... know a lot of things, don't you.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="piano-right-half">If you found one half of the notes, but not the other</h3>
+	<p class="note">Ralsei turns his head slightly to the right, likely looking at Kris.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>Amazing, Kris! You solved it without the second hint...</d-text>
+	</d-box>
+	<p class="note">He faces forward again.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>... You must really... be an expert on the prophecy.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="piano-right-both">If you found both halves of the notes</h3>
+	<p class="note">Susie puts her hands on her hips.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Nice, Kris!</d-text>
+	</d-box>
+	<p class="note">She gestures with a hand as Kris and Ralsei turn to her.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>All we had to do was follow the prophecy thing.</d-text>
+	</d-box>
+	<p class="note">A pause. Susie puts her hand back on her hip.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>If it's that easy, maybe we should just do whatever it says?</d-text>
+	</d-box>
+	<p class="note">Kris and Susie turn to Ralsei, who takes a step back, his smile dropping.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>How about it, Ralsei. Wanna memorize it for us?</d-text>
+	</d-box>
+	<p class="note">A slight pause. Ralsei steps forward, retaking his original position, and smiles again. Susie, however, stops smiling.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>... umm, that's okay, Susie. I already know it.</d-text>
+	</d-box>
+	<p class="note">Susie smiles again.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Oh, okay, sweet.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="gotodark">
+	<h2>Into the darkness</h2>
+
+	<p class="note">The party walks along the tops of bookshelves; the area quickly grows dark enough that only their silhouettes can be seen. Some distance into the new area, the party comes to a halt, Susie turning around to face Ralsei.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>... hey, Ralsei. If you know the whole prophecy already...</d-text>
+	</d-box>
+
+	<p class="note">Kris turns around to face the other two.</p> <!-- Ralsei stops smiling -->
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>... why didn't you just say how to do the piano?</d-text>
+	</d-box>
+
+	<p class="note">Ralsei takes a step backwards.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="C"></d-sprite>
+		<d-text asterisk>H-huh...? Well, I just thought...</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns to the side, facing away from the player.</p> <!-- Susie stops smiling -->
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>I just thought, isn't it better if I don't... say anything?</d-text>
+	</d-box>
+
+	<p class="note">A long pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">Susie steps forward, coming up right in front of Ralsei as he turns to face her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>Why?</d-text>
+	</d-box>
+
+	<p class="note">A long pause. Ralsei ducks his head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>Um...</d-text>
+	</d-box>
+
+	<p class="note">A pause. Then Ralsei hurries past Susie and Kris; they turn to watch him as he passes. He stops a step ahead of Kris and turns away from the player, seeming to look at something on the wall behind them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>H-Hey, I think I found a light!</d-text>
+	</d-box>
+
+	<p class="note">He takes a step forward and flips a switch. But when the scene is abruptly cast in light, the party is standing well past the end of the bookshelf path, hanging in open air. Susie and Ralsei jump in shock.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>Wh-whoops!!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei, Susie, and Kris plummet into the darkness one by one, and the scene fades to black. There's a cry from Susie and a splat SFX.</p>
+
+	<p class="note">After a long pause, the scene fades back in to reveal the party fallen onto another row of bookshelves; Susie is kneeling, Kris sitting hunched over, and Ralsei sprawled facedown on the "ground". The area is dark, with circles around each party member being the only illuminated spots. Ralsei twitches.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="d"></d-sprite>
+		<d-text asterisk>O... ow...</d-text>
+	</d-box>
+
+	<p class="note">He twitches again, then gets to his feet, shortly followed by Susie; neither of them are smiling. They both turn to Kris, and Susie notices something. A pause. She approaches them and kneels, lifting a hand in preparation to cast on them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>Here, lemme...</d-text>
+	</d-box>
+
+	<p class="note">Ralsei takes a step forward, then heals all three of them to maximum HP at once, regaining his smile. Susie, though, is wide-eyed and frozen. After a pause, she gets to her feet alongside Kris, still unsmiling. They both face Ralsei.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Everyone feeling better?</d-text>
+	</d-box>
+
+	<p class="note">Susie's gaze lowers.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>... uh, yeah. Thanks.</d-text>
+	</d-box>
+
+	<p class="note">Ralsei gets in line behind Susie, and control is returned to the player, who must lead the party further through the darkness.</p>
+</section>
+
+<section class="d-section" id="darkzone">
+	<h2>Entering the Dark Zone</h2>
+	<p class="note">As the party proceeds along the shelves, someone unseen speaks at various intervals.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>... LAIGHT...</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>... WHO DAIRE BRING LAIGHT HEAR...</d-text>
+	</d-box>
+
+	<hr>
+
+	<d-box theme="fade">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>... GO... BACK...</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>... YOU SUDN'T COME HERE...</d-text>
+	</d-box>
+
+	<hr>
+
+	<d-box theme="fade">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>... THIS ZOAN... IS FORBIDEN...</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>... CONTINUE AND YOU MAY FIND YOURSELF SPOOCKED IN THE DARK...</d-text>
+	</d-box>
+
+	<hr>
+
+	<p class="note">The circles of light around each party member gradually grow smaller as they proceed. Eventually, the party stops walking, and Susie and Ralsei's eyes widen as the background fades into complete blackness and the camera pans over to the right.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>... VERY WELL... IF YOU COME CLOASER TO THIS PLACE...</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>... THEN YOU MAY FIND...</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>... THE DARK...</d-text>
+	</d-box>
+
+	<p class="note">Everything fades to black for a brief moment; then Susie and Ralsei's eyes become visible again in a cartoonish manner, and to the right, the glowing orange eyes of the hidden speaker become visible.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>... HAS COME TO YOU!!!</d-text>
+	</d-box>
+
+	<p class="note">The hidden figure draws the party into an <a href="{{ '/encounters/jackenstein' | relative_url }}">encounter</a>.</p>
+</section>
+
+<section class="d-section" id="postfight">
+	<h2>After the fight</h2>
+
+	<h3 id="postfight-jackenstein">Jackenstein's accident</h3>
+	<p class="note">When the light from the last use of Unleash fades, the silhouetted form of the large, bulky enemy — Jackenstein — can be seen.</p>
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>THE LAIGHT... NOT THE LAIGHT!!!!</d-text>
+	</d-box>
+
+	<p class="note">Jackenstein's eyes begin flashing white.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>NOOOOOOO!!!</d-text>
+	</d-box>
+
+	<p class="note">His eyes radiate more intense light, flooding the screen with white, which slowly fades to reveal Jackenstein and the party standing amongst the bookshelves. Susie and Ralsei look alarmed, while Kris is impassive as always. To the right, Jackenstein is clutching his head, his head and hands shaking. After a moment, he puts his hands over his face, going still.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>N... NO... DOAN'T LOOK... I'M... I'M...</d-text>
+	</d-box>
+
+	<p class="note">He clutches his head and trembles again.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>I'M TOO SCAIREY!!!</d-text>
+	</d-box>
+
+	<p class="note">After a slight pause, Jackenstein turns around, hands covering his face again, and flees. The screen shakes as a loud crash sounds from offscreen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="C"></d-sprite>
+		<d-text asterisk>Are you all right? The chandelier... It...</d-text>
+	</d-box>
+
+	<p class="note">Kris hurries forward, a serious-looking Susie and Ralsei following, and they approach Jackenstein. Beside his head, a broken chandelier swings violently, and there is shattered glass at his feet.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>OUCHI... OHHH, IT HOARTS... IT HOARTS...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>EVERYTHING... SO BRAIGHT... CULDN'T SEE...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>HEAD HIT SHANDALIERE...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>We're sorry, we were just looking for a way...</d-text>
+	</d-box>
+
+	<p class="note">Jackenstein turns around, clutching his head and trembling again. Ralsei smiles when he speaks.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>OH... MY HEAD... IT HOARTS... IT HOARTS INSIDE</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Um, don't worry! We know how to use healing, so...</d-text>
+	</d-box>
+
+	<p class="note">Ralsei hurries up to Jackenstein and casts his healing spell. The orange face of his head briefly flashes white, surrounded by green sparkles. Jackenstein stops moving.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>HMM...</d-text>
+	</d-box>
+
+	<p class="note">A very long pause. Jackenstein suddenly throws his head back and wails harder than before, whole body shaking with the force of it; Ralsei and Susie look shocked.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>OAAAHHHH IT STILL HOARTS!!!!!!!!!</d-text>
+	</d-box>
+
+	<p class="note">Susie and Ralsei calm, though Ralsei's eyes are still wide.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="C"></d-sprite>
+		<d-text asterisk>H-huh? Sorry, I guess I'll, um, try it again...!</d-text>
+	</d-box>
+
+	<p class="note">Susie's gaze drops.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>Umm, maybe I could...</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns to look at Susie, smiling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Susie...?</d-text>
+	</d-box>
+
+	<p class="note">Susie puts her hands behind her head, grinning faux-casually.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="W"></d-sprite>
+		<d-text asterisk>Umm, nothin'. Nevermind.</d-text>
+	</d-box>
+
+	<p class="note">A slight pause. Susie turns and walks offscreen down the path; after a brief moment, Ralsei turns back to Jackenstein. The camera pans over to focus on Kris as Ralsei begins repeatedly attempting to heal Jackenstein. Control is returned to the player, who can now check in on <a href="#postfight-ralsei">Ralsei</a> or <a href="#postfight-susie">Susie</a>.</p>
+
+	<hr>
+
+	<h3 id="postfight-ralsei">Talking to Ralsei and Jackenstein</h3>
+	<p class="note">Ralsei is repeatedly trying to heal Jackenstein; the outside of his head keeps flashing with magic.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>How's this? Feel better?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>NO... STILL HOARTS...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="postfight-susie">Checking on Susie</h3>
+	<p class="note">Walking far enough to the left causes Kris to stop as the camera pans over to the left to show Susie standing with her head bowed, unsmiling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="O"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>How's the adventure, hero?</d-text>
+	</d-box>
+
+	<p class="note">At the words from offscreen, Susie lifts her head, startled. The camera pans to the side to reveal Gerson. <a href="{% include wikilink page='Wise words' %}">Slow guitar</a> begins playing as he takes a few steps forward.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>... Old man?</d-text>
+	</d-box>
+
+	<p class="note">She turns to the side away from the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>Shouldn't you be busy... writing a letter or something?</d-text>
+	</d-box>
+
+	<p class="note">She turns back to Gerson as he laughs, then jabs his cane at her, one hand on his beard.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>... Shouldn't you be helping that pumpkin fella?</d-text>
+	</d-box>
+
+	<p class="note">He lowers his cane. Susie turns away, her gaze falling as she speaks.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>Nah, Ralsei's got it covered. I... I quit.</d-text>
+	</d-box>
+
+	<p class="note">She turns back to Gerson. He strokes his beard for a moment, then stops smiling.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Quit? Quit what?</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to the side and scratches her hair.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>You know. Healing. That green sparkle thing.</d-text>
+	</d-box>
+
+	<p class="note">Gerson stops stroking his beard and takes a few steps forward, smiling again and watching Susie. When he speaks, Susie turns to him with a matching smile.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Hmm. So you don't like doing it?</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to the side away from the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>Well, uh... I dunno, actually.</d-text>
+	</d-box>
+
+	<p class="note">She turns and takes a step towards Gerson.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>At first, I was really... I was really excited I could do it.</d-text>
+	</d-box>
+
+	<p class="note">Her gaze and smile drop.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>But like... I sort of realized...</d-text>
+	</d-box>
+
+	<p class="note">Susie raises her head, smiling, and Gerson stops watching her as intently.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="T"></d-sprite>
+		<d-text asterisk>I just suck at it. Heh.</d-text>
+	</d-box>
+
+	<p class="note">Gerson strokes his beard for a moment. Then he looks at her steadily.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>What if you practiced? Put a little shell into it.</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to the side away from the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>I mean, I kind of... When people aren't looking...</d-text>
+	</d-box>
+
+	<p class="note">She scratches her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>I was kind of trying to practice a little, but...</d-text>
+	</d-box>
+
+	<p class="note">She stops moving, hand still in her hair.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>I sorta realized, y'know?</d-text>
+	</d-box>
+
+	<p class="note">She turns back to Gerson with a smile.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="T"></d-sprite>
+		<d-text asterisk>I'll never be as good as Ralsei, so what's the point?</d-text>
+	</d-box>
+
+	<p class="note">She ducks her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="R"></d-sprite>
+		<d-text asterisk>So everyone can see how... bad I am?</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to the side away from the player…</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>I should just stick to what I'm good for.</d-text>
+	</d-box>
+
+	<p class="note">…then back to Gerson, smiling at him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="T"></d-sprite>
+		<d-text asterisk>Y'know... uh... hurting people... magic.</d-text>
+	</d-box>
+
+	<p class="note">Gerson's head dips, his eyes closing.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Hm. Is that so.</d-text>
+	</d-box>
+
+	<p class="note">Head still bowed, he turns away. A pause. When he speaks, Susie's eyes widen.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Didn't take you for a purple bellied coward.</d-text>
+	</d-box>
+
+	<p class="note">She takes several steps towards him, no longer smiling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Z"></d-sprite>
+		<d-text asterisk>Coward...? Hey, what do you mean by that!?</d-text>
+	</d-box>
+
+	<p class="note">Gerson stops smiling and shakes his head.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>You're afraid of making some little green sparkles.</d-text>
+	</d-box>
+
+	<p class="note">Susie charges up in front of Gerson and snarls in frustration; he lifts his head to look at her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Look, just CASTING it isn't a big deal!</d-text>
+	</d-box>
+
+	<p class="note">Gerson turns around, stroking his beard.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Alrighty then...</d-text>
+	</d-box>
+
+	<p class="note">He takes a few steps away, then turns to face Susie again and lifts a hand in the air as he speaks.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Here.</d-text>
+	</d-box>
+
+	<p class="note">Susie straightens up, unsmiling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>What?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>I pricked my finger with my pen earlier.</d-text>
+	</d-box>
+
+	<p class="note">Susie's eyes widen when Gerson continues:</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>If yer not a coward, give me your best shot!</d-text>
+	</d-box>
+
+	<p class="note">She looks exasperated.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>Fine, if it gets you to shut up!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Take this!!</d-text>
+	</d-box>
+	
+	<p class="note">The music fades out and Susie charges up a healing blast. Just as she's about to let loose, though, a paper falls from Gerson's jacket, and he stoops to fetch it:</p>
+
+	<d-box theme="dark">
+		<d-speaker>Gerson</d-speaker>
+		<d-text asterisk>Oop, my letter!</d-text>
+	</d-box>
+
+	<p class="note">As a result, Susie's healing blast flies well over his head. The camera pans over to the right where Jackenstein is still in pain, Gerson's dialogue box disappearing almost immediately to make way for the scene.</p>
+	<p class="note">Kris and Ralsei stand in front of Jackenstein, looking at him. Ralsei looks shocked as the healing blast approaches, flying into Jackenstein's gaping mouth. His eye sockets and the inside of his mouth flash green as healing sparkles fly, and Jackenstein stops shaking. A pause. Then he stops clutching his head and leans forward again, no longer pained.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>OH!!!! THE OUCHI... THE HOART... IT'S GONE!!!</d-text>
+	</d-box>
+
+	<p class="note">An unsmiling Susie walks over, stopping in front of Kris. Ralsei turns to look at her, surprised.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>... Susie?</d-text>
+	</d-box>
+
+	<p class="note">Ralsei jumps in place, head tilted up and eyes closed in a smile.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="P"></d-sprite>
+		<d-text asterisk>Susie, that was a great idea!</d-text>
+	</d-box>
+
+	<p class="note">Susie mirrors Ralsei's gentler smile.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>H-huh?</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns to Jackenstein.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>I was wondering why my healing wasn't working...</d-text>
+	</d-box>
+
+	<p class="note">Ralsei dips his head in a sheepish smile.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>I suppose... I was only healing the outside.</d-text>
+	</d-box>
+
+	<p class="note">He turns around and takes a step towards Susie, whose smile fades.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>But Susie, your healing blast seemed to hit the spot!</d-text>
+	</d-box>
+
+	<p class="note">Susie looks stunned.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Huh?</d-text>
+	</d-box>
+
+	<p class="note">She faces Ralsei, smile still gone.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Well, heh, I was uh, actually just trying to heal that old man...</d-text>
+	</d-box>
+
+	<p class="note">A pause. Ralsei's smile fades as well.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>... Old... man?</d-text>
+	</d-box>
+
+	<p class="note">A slight pause. Kris and Susie turn around to look in the old man's direction.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Yeah, he's...</d-text>
+	</d-box>
+
+	<p class="note">The camera pans all the way to the left to show a completely empty path. When it pans back, Susie's eyes are wide.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">A long pause. Then Susie smiles.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Huh. Guess he left. Heh.</d-text>
+	</d-box>
+
+	<p class="note">A pause. Kris and Susie turn back to Ralsei as he walks up to them with a smile.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+		<d-text asterisk>Well, Mr. Jack is better, so let's be on our way!</d-text>
+	</d-box>
+
+	<p class="note">The camera refocuses on the party, and as the <a href="{% include wikilink page='Fireplace' %}">music</a> resumes, control is returned to the player.</p>
+</section>
+
+<section class="d-section" id="jacktalk">
+	<h2>Talking to Jackenstein</h2>
+
+	<p class="note">Jackenstein waits to the right.</p>
+
+	<h3 id="jacktalk1">First time</h3>
+	<p class="note">The party bunches up in front of Jackenstein.</p>
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>YOU... GIRL... YOU HELPED ME...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Hey, it was, uh...</d-text>
+	</d-box>
+
+	<p class="note">Jackenstein spreads his arms wide, then catches up all the party members in a big hug, clutching them to his chest.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>YOU THREE... MY FRAINDS!!!</d-text>
+	</d-box>
+
+	<p class="note">He sets the party members back down.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>ME NAME IS JACKENSTEIN.</d-text>
+	</d-box>
+
+	<p class="note">Jackenstein clutches his head, trembling.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>I WAS BULLYED, AND HAITED BY THE OTHERS, FROAM MY LARGE AND UGLY BODDY.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>I WAS BANNISHED TO THE DARK ZONE, ONLY TO APPEAR ON FESTIVAL NAIGHT...</d-text>
+	</d-box>
+
+	<p class="note">He leans back, whole body shaking.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>I WAIR THIS MASK, BEACAUSE MY TRUE FAICE, SCAIRES EVEN MYSELF.</d-text>
+	</d-box>
+
+	<p class="note">A pause. Jackenstein leans forward again, no longer shaking.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>DID YOU</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>DID YOU WANNA SEE IT</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Jackenstein</d-speaker>
+			<d-text asterisk>COVER YOUR EAYES...</d-text>
+		</d-box>
+		<p class="note">Susie's eyes widen as Jackenstein reaches up and grips his "head", revealed to actually be a mask as he lifts it off. Underneath, a small candle-like white head is revealed. A long pause. Then Susie calms and Ralsei beams up at Jackenstein.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+			<d-text asterisk>Umm, actually, it's kind of cu--</d-text>
+		</d-box>
+		<p class="note">Susie and Ralsei jump in shock as Jackenstein jams his mask back on and cuts Ralsei off without player input:</p>
+		<d-box theme="dark">
+			<d-speaker>Jackenstein</d-speaker>
+			<d-text asterisk>ACTUALLY IT'S TOO SCAIRY</d-text>
+		</d-box>
+		<p class="note">The party members all face Jackenstein again as he lowers his hands.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Jackenstein</d-speaker>
+			<d-text asterisk>YES. ME NEATHER.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>THE POINT IS... YOU THREE... ARE MORE DIFFERENT, THEN THE OTHERS.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>YOU ARE KAIND. MERSIFULL. AND, MOAST OF ALL...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>YOU DOAN'T KNOW HOW TO CLAIMB.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>TAKE THIS... MY FRAINDS... MY CLAIMBING SET.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You got the ClaimbClaws.)</d-text>
+	</d-box>
+	<p class="note">The <a href="{{ '/misc/darkitems#claimbclaws' | relative_url }}">Claimb Claws</a> are added to the inventory.</p>
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>IT'S TOO SMALL FOR ME</d-text>
+	</d-box>
+
+	<p class="note">The camera pans back over to the party members and control is returned to the player, who can now climb out of the Dark Zone.</p>
+
+	<hr>
+
+	<h3 id="jacktalk2">Subsequent times</h3>
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>YOUNG WOMUN... THAINK YOU FOR THE WONDERFUL HEALING.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Hey, it was nothing.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>LET ME KNOW IF I CAN EVER REPAY YOU...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jackenstein</d-speaker>
+		<d-text asterisk>I LIVE IN A HOAL</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="leaving">
+	<h2>Leaving the Dark Zone</h2>
+
+	<h3 id="jumphint">Hint regarding charge jumps</h3>
+	<p class="note">When first climbing up and approaching a bell, if no charge jumps have already been made, the following message will appear:</p>
+	<d-box theme="fade">
+		<d-text class="fnt-condensed text-right-expand">Hold [CONFIRM] : Charge Jump</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="treasurechest">Treasure chest</h3>
+	<p class="note">A treasure chest towards the lower right contains $500 and uses <a href="{{ '/misc/generic#moneyget' | relative_url }}">generic narration</a>.</p>
+
+	<hr>
+
+	<h3 id="susieheal">Susie regaining OK Heal</h3>
+	<p class="note">On the way out of the Dark Zone, Susie stops the party.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>(Hey, uh, Kris?)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>(... can't guarantee it will be any good, but, uh...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>(Y'know, feel free to ask me to heal again. If you need it.)</d-text>
+	</d-box>
+	<p class="note">Susie's unusable <a href="{{ '/misc/spells#heal' | relative_url }}">Heal</a> spell reverts to the usable <a href="{{ '/misc/spells#okheal' | relative_url }}">OK Heal</a>. The party can now leave the Northwest Library and return to the study, where the Claimb Claws have rendered the <a href="{{ '/chapters/chapter4/grandpiano' | relative_url }}">East Belltower</a> newly accessible.</p>
+</section>

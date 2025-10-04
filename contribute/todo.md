@@ -151,9 +151,10 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/noellevisit` - Noelle's house intro. Update this link on other pages if you end up splitting it further
 		* `/bathroomweird` - maybe merge with below for an `outroweird`
 		* `/holidayoutro` - leaving the Holidays' house. May need a `weird` variant
-		* `/darkworldintro` - sanctuary entrance
-		* `/hammerofjustice` - fighting gerson
-			* `#postfight`
+		* `/darkworldintro` - sanctuary entrance, running into ralsei, learning about prophecies
+		<!-- meeting gerson, getting to the study? -->
+		* `/grandpiano` - quest for the sheet music and playing not so good on big piano
+		<!-- leaving the first sanctuary? -->
 		* `/soundofjustice` - SoJ fight (continuing into Ralsei scene)
 			* `#postfight`
 		* `/return` - back to the church
