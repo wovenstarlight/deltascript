@@ -979,7 +979,13 @@ d-box, d-choices {
 					var(--white);
 			}
 		}
-		&[theme=prophecy] { min-height: unset }
+		&[theme=prophecy] {
+			min-height: unset;
+			::selection {
+				color: var(--black);
+				background-color: var(--iceblue);
+			}
+		}
 
 		&[theme=caller] {
 			--border-width: 1rem;
