@@ -1,0 +1,196 @@
+---
+title: Party Dojo - Ch2 All Stars
+
+description: >
+  <p>Flavor text and dialogue for the Chapter 2 challenge at the Party Dojo, available when all Cyber World Darkners have been recruited.</p>
+
+sources:
+  -
+    name: gml_Object_obj_fusionmenu_Step_0
+    chapters: [2]
+    note: challenge info
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: flavor text
+  -
+    name: gml_Object_obj_npc_dojo_Step_0
+    chapters: [2]
+    note: post-fight dialogue
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/werewire
+    name: Regular Werewire encounter
+  -
+    url: /encounters/poppup
+    name: Regular Poppup encounter
+  -
+    url: /encounters/ambyulance
+    name: Regular Ambyu-Lance encounter
+  -
+    url: /encounters/virovirokun
+    name: Regular Virovirokun encounter
+  -
+    url: /encounters/tasque
+    name: Regular Tasque encounter
+  -
+    url: /encounters/maus
+    name: Regular Maus encounter
+  -
+    url: /encounters/swatchling
+    name: Regular Swatchling encounter
+  -
+    url: /encounters/werewerewire
+    name: Regular Werewerewire encounter
+
+toc:
+  -
+    id: challengeinfo
+    name: Challenge info
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: ft-rounds
+        name: At the start of each round
+        subheadings:
+          -
+            id: ft-round1
+            name: Round 1 (Initial encounter)
+          -
+            id: ft-round2
+            name: Round 2
+          -
+            id: ft-round3
+            name: Round 3
+          -
+            id: ft-round4
+            name: Round 4
+          -
+            id: ft-round5
+            name: Round 5
+      -
+        id: ft-other
+        name: Otherwise
+  -
+    id: dialogue
+    name: General dialogue and available ACTs
+  -
+    id: postfight
+    name: After the challenge ends
+---
+{% comment %} encounterno = 90/91/92/93/94 {% endcomment %}
+
+<section class="d-section" id="challengeinfo">
+	<h2>Challenge info</h2>
+
+	<p>Listed as "Ch2 All Stars", with the reward being an <a href="{{ '/misc/darkitems#tensiongem' | relative_url }}">Tension Gem</a>.</p>
+
+	<d-box theme="objmenu">
+		<d-text>Face everyone in a row!</d-text>
+		<d-text>It'll take some stamina...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="ft-rounds">At the start of each round</h3>
+	<p>Each round begins immediately after all enemies in the previous round have been defeated, whether peacefully or violently.</p>
+	<h4 id="ft-round1">Round 1 (Initial encounter)</h4>
+	<p class="note">Against 2 <a href="{{ '/encounters/werewire' | relative_url }}">Werewires</a>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Round One!</d-text>
+	</d-box>
+
+	<h4 id="ft-round2">Round 2</h4>
+	<p class="note">Against a <a href="{{ '/encounters/poppup' | relative_url }}">Poppup</a>, an <a href="{{ '/encounters/ambyulance' | relative_url }}">Ambyu-Lance</a>, and a <a href="{{ '/encounters/virovirokun' | relative_url }}">Virovirokun</a>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Round Two!</d-text>
+	</d-box>
+
+	<h4 id="ft-round3">Round 3</h4>
+	<p class="note">Against 2 <a href="{{ '/encounters/tasque' | relative_url }}">Tasques</a> and a <a href="{{ '/encounters/maus' | relative_url }}">Maus</a>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Round Three!</d-text>
+	</d-box>
+
+	<h4 id="ft-round4">Round 4</h4>
+	<p class="note">Against 3 <a href="{{ '/encounters/swatchling' | relative_url }}">Swatchlings</a>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Round Four!</d-text>
+	</d-box>
+
+	<h4 id="ft-round5">Round 5</h4>
+	<p class="note">Against 2 <a href="{{ '/encounters/werewerewire' | relative_url }}">Werewerewires</a>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Final Round!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-other">Otherwise</h3>
+	<p class="note">Uses the flavor text of whichever enemies are present in the encounter. See the links <a href="#ft-rounds">above</a> for each round's enemies.</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue and available ACTs</h2>
+
+	<p class="note">Each enemy uses their personal dialogue and ACTs. See the links <a href="#ft-rounds">above</a> for each round's enemies.</p>
+</section>
+
+<section class="d-section" id="postfight">
+	<h2>After the challenge ends</h2>
+
+	<h3>If you won</h3>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>An amazing battle!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>As promised, here is your reward!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If the inventory is not full</h5>
+	<d-box theme="dark">
+		<d-text asterisk>(You received TensionGem!)</d-text>
+	</d-box>
+	<p class="note">The <a href="{{ '/misc/darkitems#tensiongem' | relative_url }}">Tension Gem</a> is added to your inventory.</p>
+	<hr class="hr3">
+	<h5>If the inventory is full</h5>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>Boss! Your inventory is full!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>You'll just have to try again, boss!</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>An amazing battle!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>But you already won that prize, so we don't have another!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>If you lost</h3>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>You beefed it! Better luck next time, boss!</d-text>
+	</d-box>
+</section>
