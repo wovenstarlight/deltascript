@@ -172,7 +172,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* gml_Object_obj_ralseienemy_Step_0 (Unused Ralsei tutorial) `/ralsei`
 		* gml_Object_obj_clubsenemy_old_Step_0 (old Clover fight) `/cloverunused`, crosslink `/clover`
 	* Chapter 2
-		* gml_Object_obj_werewire_enemy_Step_0 `/werewire`
 		* gml_Object_obj_swatchling_enemy_Step_0 `/swatchling`
 		* gml_Object_obj_werewerewire_enemy_Step_0 `/werewerewire`
 		* gml_Object_obj_gigaqueen_enemy_Step_0 `/gigaqueen`

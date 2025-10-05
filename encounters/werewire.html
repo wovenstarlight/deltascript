@@ -1,0 +1,366 @@
+---
+title: Werewire encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Werewire.</p>
+
+sources:
+  -
+    name: gml_Object_obj_werewire_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_werewire_kristhrown_Collision_obj_werewire_throwtarget
+    chapters: [2]
+    note: '"ThrowWire" results; hit'
+  -
+    name: gml_Object_obj_werewire_kristhrown_Step_0
+    chapters: [2]
+    note: '"ThrowWire" results; missed'
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/ch2allstars
+    name: Ch2 All Stars (featuring Werewire)
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-werewire
+            name: With another Werewire
+          -
+            id: encounter-virovirokuntasque
+            name: With Virovirokun and Tasque
+          -
+            id: encounter-werewiremaus
+            name: With another Werewire and a Maus
+      -
+        id: ft-neutral
+        name: Neutral
+      -
+        id: ft-spareable
+        name: Spareable
+      -
+        id: ft-miss
+        name: Missing when FIGHTing
+  -
+    id: dialogue
+    name: Dialogue
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: jigglejiggle
+        name: JiggleJiggle
+      -
+        id: throwwire
+        act_icon: Susie
+        name: ThrowWire
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+      -
+        id: naction
+        class: noelle act
+        name: N-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(53|74|75|76|95)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4> <!-- 95 -->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Werewire appeared.</d-text>
+	</d-box>
+
+	<h4 id="encounter-werewire">With another Werewire</h4> <!-- 53 -->
+	<p>(An unused encounter variant with 3 Werewires uses this same initial encounter text.)</p> <!-- 75-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Werewires swung in!</d-text>
+	</d-box>
+
+	<h4 id="encounter-werewires">With 2 other Werewire</h4> <!-- 75 -->
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Werewires swung in!</d-text>
+	</d-box>
+
+	<h4 id="encounter-virovirokuntasque">With Virovirokun and Tasque</h4> <!-- 74 -->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smorgasbord 2.</d-text>
+	</d-box>
+
+	<h4 id="encounter-werewiremaus">With another Werewire and a Maus</h4> <!-- 76 -->
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Werewire and Maus swung down like stringed superheroes!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Werewire crackles incomprehensibly.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Werewire shuffles menacingly.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Werewire dusts sparks off its shoulders.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The atmosphere is electric.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like ozone.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Werewire's wire is loose!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-miss">Missing when FIGHTing</h3>
+	<p>To be specific, this plays only when:</p>
+	<ul>
+		<li>all party members attempting to FIGHT in this turn have missed their attacks, and</li>
+		<li>when all enemies in the encounter are currently <span class="blue">Tired</span>, and</li>
+		<li>when all enemies in the encounter are at maximum HP, i.e. none of the enemies present have taken damage so far.</li>
+	</ul>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Try timing your attacks by pressing [CONFIRM]!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+
+	<p>Werewire's dialogue is exclusively various three-letter combinations of the letters "B", "Z", "T", and "!", set on an angled speech bubble in spiky letters.</p>
+	{% comment %} TODO: GIF these and add under "/images/story/talkwerewire"? Combos would be:
+		- BBB
+		- BBZ
+		- BBT
+		- BB!
+		- BZB
+		- BZZ
+		- BZT
+		- BZ!
+		- BTB
+		- BTZ
+		- BTT
+		- BT!
+		- B!B
+		- B!Z
+		- B!T
+		- B!!
+
+		- ZBB
+		- ZBZ
+		- ZBT
+		- ZB!
+		- ZZB
+		- ZZZ
+		- ZZT
+		- ZZ!
+		- ZTB
+		- ZTZ
+		- ZTT
+		- ZT!
+		- Z!B
+		- Z!Z
+		- Z!T
+		- Z!!
+
+		- TBB
+		- TBZ
+		- TBT
+		- TB!
+		- TZB
+		- TZZ
+		- TZT
+		- TZ!
+		- TTB
+		- TTZ
+		- TTT
+		- TT!
+		- T!B
+		- T!Z
+		- T!T
+		- T!!
+
+		- !BB
+		- !BZ
+		- !BT
+		- !B!
+		- !ZB
+		- !ZZ
+		- !ZT
+		- !Z!
+		- !TB
+		- !TZ
+		- !TT
+		- !T!
+		- !!B
+		- !!Z
+		- !!T
+		- !!!
+
+	…actually, maybe just make a few samples and put those. 64 GIFs is a lot.
+	{% endcomment %}
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>WEREWIRE - Controlled by the Queen's wire, it's sleepwalking through a nightmare!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="jigglejiggle">
+	<h2>JiggleJiggle</h2>
+
+	<h3 id="jigglejiggle-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<p class="note">Kris puts their hands over their head and wiggles.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You jiggled your body. The wire loosened in turn!</d-text>
+	</d-box>
+	<p class="note">Werewire gains 50% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other shortened ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei → Noelle.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You jiggled your body!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="throwwire">
+	<h2>{% include acticon chara="Susie" -%} ThrowWire</h2>
+
+	<h3 id="throwwire-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Toss Kris to free wire</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="throwwire-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press [MENU] to throw, aim for the weakpoint!</d-text>
+	</d-box>
+	<p class="note">All Werewires in the encounter come forward and weak points labelled with X marks oscillate up and down their wires. As Susie hefts Kris up with one hand, an arrow appears in front of her and oscillates up and down. From it extends a curved, dotted line showing Kris's projected flight path.</p>
+	<p class="note">After pressing [MENU], Kris is thrown; if they graze the weakpoints, a slashing animation plays over the weakpoint. Otherwise, it is counted as a miss. In either case, they fly offscreen to the right before reentering from the left, retaking their place in the lineup.</p>
+
+	<h4>Hitting the weakpoint(s)</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The wire greatly loosened!</d-text>
+	</d-box>
+	<p class="note">Any Werewires whose weakpoints were hit gain 50% <span class="yellow">Mercy</span>.</p>
+
+	<h5>Unused variant</h5>
+	<p>Likely a leftover from the <a href="{{ '/encounters/kround' | relative_url }}">K. Round encounters</a>'s Throw ACT, which made a distinction between precise and imprecise hits.</p> <!-- pretty sure obj_werewire_throwtarget is built as a copy of K.Round's obj_throwtarget, but only obj_throwtarget_Create_0 had the "good" variable get set to anything other than 1 -->
+	<d-box theme="battlemenu">
+		<d-text asterisk>The wire loosened a little!</d-text>
+	</d-box>
+
+	<h4>Missing</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Missed!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie yanked on the wire! It loosened a little bit.</d-text>
+	</d-box>
+	<p class="note">Werewire gains 25% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other shortened ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei → Noelle.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie yanked the wire!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei sang a snake-charming song to the wire! It loosened a little bit.</d-text>
+	</d-box>
+	<p class="note">Werewire gains 25% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other shortened ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei → Noelle.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei charmed the wire!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="naction">
+	<h2 class="noelle act">N-Action</h2>
+
+	<h3 id="naction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle pulled out the plug like a fairy light!</d-text>
+	</d-box>
+	<p class="note">Werewire gains 50% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other shortened ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei → Noelle.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Noelle pulled on the plug!</d-text>
+	</d-box>
+</section>
