@@ -1,0 +1,309 @@
+---
+title: Werewerewire encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Werewerewire.</p>
+
+sources:
+  -
+    name: gml_Object_obj_werewerewire_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/ch2allstars
+    name: Ch2 All Stars (featuring Werewerewire)
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-werewerewire
+            name: With another Werewerewire
+      -
+        id: ft-neutral
+        name: Neutral
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: Dialogue
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: becold
+        name: BeCold
+      -
+        id: betough
+        act_icon: Susie
+        name: BeTough
+      -
+        id: besweet
+        act_icon: Ralsei
+        name: BeSweet
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(65|81)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4> <!-- 81-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Werewerewire strongly blocks the way!</d-text>
+	</d-box>
+
+	<h4 id="encounter-werewerewire">With another Werewerewire</h4> <!-- 65 -->
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Werewerewire strongly blocks the way!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Werewerewire crackles at a level too high for you to understand.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Werewerewire shuffles coolly.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Werewerewire looks strong just standing there.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Werewerewire pretends to ignore you.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like a lightning strike.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Werewerewire's wire is loose!</d-text>
+		<d-text asterisk>... well, it would be.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>Dialogue</h2>
+
+	<p>Werewerewire's dialogue is exclusively various three-letter combinations of the letters "B", "Z", "T", and "!", set on an angled speech bubble in spiky letters.</p>
+	{% comment %} TODO: GIF these and add under "/images/story/talkwerewire"? Combos would be:
+		- BBB
+		- BBZ
+		- BBT
+		- BB!
+		- BZB
+		- BZZ
+		- BZT
+		- BZ!
+		- BTB
+		- BTZ
+		- BTT
+		- BT!
+		- B!B
+		- B!Z
+		- B!T
+		- B!!
+
+		- ZBB
+		- ZBZ
+		- ZBT
+		- ZB!
+		- ZZB
+		- ZZZ
+		- ZZT
+		- ZZ!
+		- ZTB
+		- ZTZ
+		- ZTT
+		- ZT!
+		- Z!B
+		- Z!Z
+		- Z!T
+		- Z!!
+
+		- TBB
+		- TBZ
+		- TBT
+		- TB!
+		- TZB
+		- TZZ
+		- TZT
+		- TZ!
+		- TTB
+		- TTZ
+		- TTT
+		- TT!
+		- T!B
+		- T!Z
+		- T!T
+		- T!!
+
+		- !BB
+		- !BZ
+		- !BT
+		- !B!
+		- !ZB
+		- !ZZ
+		- !ZT
+		- !Z!
+		- !TB
+		- !TZ
+		- !TT
+		- !T!
+		- !!B
+		- !!Z
+		- !!T
+		- !!!
+
+	…actually, maybe just make a few samples and put those. 64 GIFs is a lot.
+	{% endcomment %}
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>WEREWEREWIRE - It absorbed the wire and became stronger. Be careful!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="becold">
+	<h2>BeCold</h2>
+
+	<h3 id="becold-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Werewerewire locked eyes. The atmosphere is electric...</d-text>
+	</d-box>
+	<p class="note">Werewerewire gains a base value of:</p>
+	<ul class="note">
+		<li>12% <span class="yellow">Mercy</span>, if neither <a href="#saction" class="susie act">S-Action</a> or <a href="#raction" class="ralsei act">R-Action</a> were also used in this turn</li>
+		<li>7% <span class="yellow">Mercy</span> if either <a href="#saction" class="susie act">S-Action</a> or <a href="#raction" class="ralsei act">R-Action</a> were also used in this turn</li>
+	</ul>
+	<p class="note">This <span class="yellow">Mercy</span> value is multiplied by the number of times <a href="#besweet">{% include acticon chara="Ralsei" -%} BeSweet</a> has been used so far, up to a maximum of 10 times.</p>
+
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other shortened ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You watched coldly.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="betough">
+	<h2>{% include acticon chara="Susie" -%} BeTough</h2>
+
+	<h3 id="betough-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Susie told Werewerewire you'd beat them up!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The air crackles with fighting spirit!</d-text>
+	</d-box>
+	<p class="note">Werewerewire gains a base value of 16% <span class="yellow">Mercy</span>, multiplied by the number of times <a href="#besweet">{% include acticon chara="Ralsei" -%} BeSweet</a> has been used so far, up to a maximum of 10 times.</p>
+</section>
+
+<section class="d-section" id="besweet">
+	<h2>{% include acticon chara="Ralsei" -%} BeSweet</h2>
+
+	<h3 id="besweet-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei whispered sweetly to Werewerewire!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It pretended not to care, but ACTs became more effective!</d-text>
+	</d-box>
+	<p class="note">Werewerewire gains a base value of 5% <span class="yellow">Mercy</span>, multiplied by the number of times this ACT has been used so far, up to a maximum of 10 times.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie snorted "tch!"</d-text>
+	</d-box>
+	<p class="note">Werewerewire gains a base value of:</p>
+	<ul class="note">
+		<li>12% <span class="yellow">Mercy</span>, if neither <a href="#becold">BeCold</a> or <a href="#raction" class="ralsei act">R-Action</a> were also used in this turn</li>
+		<li>7% <span class="yellow">Mercy</span> if either <a href="#becold">BeCold</a> or <a href="#raction" class="ralsei act">R-Action</a> were also used in this turn</li>
+	</ul>
+	<p class="note">This <span class="yellow">Mercy</span> value is multiplied by the number of times <a href="#besweet">{% include acticon chara="Ralsei" -%} BeSweet</a> has been used so far, up to a maximum of 10 times.</p>
+
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other shortened ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie laughed "heh!"</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei winks demurely!</d-text>
+	</d-box>
+	<p class="note">Werewerewire gains a base value of:</p>
+	<ul class="note">
+		<li>12% <span class="yellow">Mercy</span>, if neither <a href="#becold">BeCold</a> or <a href="#saction" class="susie act">S-Action</a> were also used in this turn</li>
+		<li>7% <span class="yellow">Mercy</span> if either <a href="#becold">BeCold</a> or <a href="#saction" class="susie act">S-Action</a> were also used in this turn</li>
+	</ul>
+	<p class="note">This <span class="yellow">Mercy</span> value is multiplied by the number of times <a href="#besweet">{% include acticon chara="Ralsei" -%} BeSweet</a> has been used so far, up to a maximum of 10 times.</p>
+
+	<h4>Shortened version</h4>
+	<p>Overrides the standard flavor text when used in the same turn as other shortened ACTs. Displayed in a single dialogue box with the other ACTs' flavor text, in the order Kris → Susie → Ralsei.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei smiled sweetly!</d-text>
+	</d-box>
+</section>
