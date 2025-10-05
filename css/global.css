@@ -953,6 +953,8 @@ d-box, d-choices {
 		&[theme=fade], &[theme=prophecy] {
 			border: unset;
 			max-width: calc(100% - 3 * var(--border-width));
+			--background-color: var(--black);
+			background-color: var(--background-color);
 
 			margin: calc(var(--border-width) + 0.2em) calc(var(--border-width) + 0.5em);
 			:is([theme=fade], [theme=prophecy], d-option-panel) + & { margin-block-start: calc((2 * var(--border-width)) + 0.2em) }
@@ -963,20 +965,15 @@ d-box, d-choices {
 				0 0
 				calc(0.6 * var(--border-width))	/* blur */
 				calc(0.6 * var(--border-width))	/* spread */
-				var(--black);
+				var(--background-color);
 		}
 		&[theme=fade] {
 			width: calc(var(--basewidth) - 2em);
 			min-height: calc(var(--baseheight) - 2em);
 
 			&.invert {
-				background-color: var(--white);
+				--background-color: var(--white);
 				color: var(--black);
-				box-shadow:
-					0 0
-					calc(0.6 * var(--border-width))	/* blur */
-					calc(0.6 * var(--border-width))	/* spread */
-					var(--white);
 			}
 		}
 		&[theme=prophecy] {
