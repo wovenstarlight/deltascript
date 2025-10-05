@@ -65,6 +65,7 @@ class DialogueSpeaker extends HTMLElement {
 			case "lancer":
 			case "king":
 			case "rouxls":
+			case "seam":
 			case "jevil":
 			// Chapter 2
 			case "queen":
@@ -83,6 +84,10 @@ class DialogueSpeaker extends HTMLElement {
 			// Chapter 1
 			case "rouxls kaard":
 				this.classList.add("rouxls");
+				break;
+
+				case "jigsaw joe":
+				this.classList.add("jigsawjoe");
 				break;
 
 			// Chapter 2
