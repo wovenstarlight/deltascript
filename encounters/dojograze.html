@@ -1,0 +1,183 @@
+---
+title: Party Dojo - Graze Challenge 1
+
+description: >
+  <p>Flavor text and dialogue for Jigsawry's grazing challenge at the Party Dojo.</p>
+
+sources:
+  -
+    name: gml_Object_obj_fusionmenu_Step_0
+    chapters: [2]
+    note: challenge info
+  -
+    name: gml_Object_obj_dojograzeenemy_Step_0
+    chapters: [2]
+    note: general flavor text/dialogue
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_npc_dojo_Step_0
+    chapters: [2]
+    note: post-fight dialogue
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/jigsawry
+    name: Regular Jigsawry encounters
+
+toc:
+  -
+    id: challengeinfo
+    name: Challenge info
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-post
+        name: After turn 1
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-initial
+        name: Initial
+  -
+    name: ACTs (Unused)
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+  -
+    id: postfight
+    name: After the challenge ends
+---
+{% comment %} global.encounterno = 72 {% endcomment %}
+
+<section class="d-section" id="challengeinfo">
+	<h2>Challenge info</h2>
+
+	<p>Listed as "Graze Challenge 1", with the reward being $100.</p>
+
+	<d-box theme="objmenu">
+		<d-text>Get 100% TP without getting hit!</d-text>
+		<d-text>You can do it, boss!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+	
+	<h3 id="encounter">Initial encounter</h3>
+	<p>Unused, as this encounter is scripted with dialogue only.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It's a grazing adventure.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-post">After turn 1</h3>
+	<p>Unused, as the encounter ends immediately upon taking damage or reaching 100% TP during the first turn, so it's impossible to see this text.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>How'd you get past!?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-initial">Initial</h3>
+	<p>Plays before the first and only turn.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsawry</d-speaker>
+		<d-text>Graze!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+	<p>Unused.</p>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>GRAZECHALLENGE - Graze the bullets!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+	<p>Unused.</p>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie acted!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+	<p>Unused.</p>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei acted!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="postfight">
+	<h2>After the challenge ends</h2>
+
+	<h3>If you won</h3>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>An amazing battle!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>As promised, here is your reward!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You received $100!)</d-text>
+	</d-box>
+	<p class="note">$100 is added to your total money.</p>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>An amazing battle!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>But you already won that prize, so we don't have another!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>If you lost</h3>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>Boss! For bullets aimed right at you, try moving <span class="yellow">one direction bit by bit</span>...!</d-text>
+	</d-box>
+</section>
