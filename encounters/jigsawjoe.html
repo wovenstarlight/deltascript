@@ -1,0 +1,399 @@
+---
+title: Party Dojo - Jigsaw Joe
+
+description: >
+  <p>Flavor text and dialogue for Jigsaw Joe's sparing tutorial at the Party Dojo.</p>
+
+  <p>This encounter has two distinct phases, referenced throughout this page:</p>
+  <ul>
+    <li>Phase 1: Joe asks you to ACT and SPARE on the same turn</li>
+    <li>Phase 2: Joe asks you to ACT and PACIFY on the same turn</li>
+  </ul>
+
+sources:
+  -
+    name: gml_Object_obj_fusionmenu_Step_0
+    chapters: [2]
+    note: challenge info
+  -
+    name: gml_Object_obj_dojo_spareenemy_Step_0
+    chapters: [2]
+    note: general flavor text/dialogue
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_npc_dojo_Step_0
+    chapters: [2]
+    note: post-fight dialogue
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/dojograze
+    name: Party Dojo - Graze Challenge 1
+  -
+    url: /encounters/jigsawry
+    name: Regular Jigsawry encounters
+
+toc:
+  -
+    id: challengeinfo
+    name: Challenge info
+  -
+    id: prefight
+    name: Before the fight
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-phase1
+        name: Phase 1
+      -
+        id: ft-phase2
+        name: Phase 2
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-phase1
+        name: Phase 1
+      -
+        id: dialogue-phase2
+        name: Phase 2
+      -
+        id: dialogue-fallback
+        name: Fallback
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: shave
+        name: Shave
+      -
+        id: sleepystory
+        act_icon: Susie
+        name: SleepyStory
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+  -
+    id: postfight
+    name: After the challenge ends
+---
+{% comment %} global.encounterno = 100 {% endcomment %}
+
+<section class="d-section" id="challengeinfo">
+	<h2>Challenge info</h2>
+
+	<p>Listed as "Jigsaw Joe", with the reward being "Joe's Life Savings".</p>
+
+	<d-box theme="objmenu">
+		<d-text>Learn how to spare like a champ.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="prefight">
+	<h2>Before the fight</h2>
+
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>Boss!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>You can ACT<span class="break"></span> and SPARE on<span class="break"></span> the same turn!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>If you know Kris's<span class="break"></span> ACT will give an<span class="break"></span> enemy 100% mercy...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>SPARE them on<span class="break"></span> the same turn<span class="break"></span> with Susie<span class="break"></span> or Ralsei!</d-text>
+	</d-box>
+
+	<p class="note">The encounter begins in phase 1.</p>
+</section>
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+	
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Jigsaw Joe jigs in!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-phase1">Phase 1</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Jigsaw Joe looks vulnerable to ACTING and SPARING on the same turn.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-phase2">Phase 2</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Jigsaw Joe looks like he could use a bedtime story.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-phase1">Phase 1</h3>
+	<p>Plays unless some ACT-specific dialogue overrides this.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>Boss!<span class="break"></span> You gotta ACT<span class="break"></span> and SPARE on<span class="break"></span> the same turn!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-phase2">Phase 2</h3>
+	<p>Plays unless some ACT-specific dialogue overrides this.</p>
+	<h4>At 16% TP or higher</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>Boss! You're putting me<span class="break"></span> to SLEEP! I mean, you<span class="break"></span> AREN'T! Make me TIRED<span class="break"></span> and PACIFY me, boss!</d-text>
+	</d-box>
+
+	<h4>At less than 16% TP</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>Boss! If you don't<span class="break"></span> have the TP to use<span class="break"></span> PACIFY, DEFENDing<span class="break"></span> will give you TP!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-fallback">Fallback</h3>
+	<p>Unused.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>Boss!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>JIGSAW JOE - Beat him up to earn his life savings!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-dialogue">Dialogue</h3>
+	<p class="note">Jigsaw Joe looks frantic.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>Boss! Don't listen to<span class="break"></span> that! That's the wrong<span class="break"></span> ACT!! The wrong ACT!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="shave">
+	<h2>Shave</h2>
+	<p>Available during phase 1.</p>
+
+	<h3 id="shave-ft">Flavor text</h3>
+	<p class="note">Kris lifts their sword.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(You shaved Jigsaw Joe's stubble!)</d-text>
+	</d-box>
+	<p class="note">They swing, and Jigsaw Joe's stubble is shaved clean off; he gains 100% <span class="yellow">Mercy</span>.</p>
+	<hr class="hr2">
+	<h4 id="shave-ft-nospare">If neither Susie nor Ralsei spared Jigsaw Joe on the same turn</h4>
+	<p class="note">Jigsaw Joe's stubble grows back in and he loses 100% <span class="yellow">Mercy</span>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Jigsaw Joe's stubble regrew!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4 id="shave-ft-spare">If either Susie or Ralsei spared Jigsaw Joe on the same turn</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>&lt;Character&gt; spared Jigsaw Joe!</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="shave-dialogue">Dialogue</h3>
+	<h4 id="shave-dialogue-nospare">If neither Susie nor Ralsei spared Jigsaw Joe on the same turn</h4>
+	<p class="note">Jigsaw Joe looks frantic. &lt;#&gt; is replaced by the number of times Shave has been used without a simultaneous spare, from 1 up to a maximum of 99.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>It's my<span class="break"></span> &lt;#&gt; o'clock shadow!</d-text>
+	</d-box>
+
+	<h4 id="shave-dialogue-spare">If either Susie or Ralsei spared Jigsaw Joe on the same turn</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>Ohhhh, boss,<span class="break"></span> you're sparing<span class="break"></span> me!?</d-text>
+	</d-box>
+	<p class="note">Jigsaw Joe is spared. A pause. Then he reenters the encounter with the spare animation reversed and looks frantic.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>WAIT A SECOND!!!<span class="break"></span> I got something else<span class="break"></span> to remind you of!</d-text>
+	</d-box>
+	<p class="note">Jigsaw Joe looks calmer.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>Boss!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>It works the<span class="break"></span> same with making<span class="break"></span> an enemy TIRED!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>If an ACT<span class="break"></span> will make an<span class="break"></span> enemy TIRED...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>Use Ralsei's PACIFY<span class="break"></span> right away!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>At less than 16% TP only</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>Of course, PACIFY is MAGIC,<span class="break"></span> so you'll need TP.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>Spend a turn<span class="break"></span> DEFENDING to gain TP<span class="break"></span> if you have to, boss!</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<p class="note">This ACT is replaced by <a href="#sleepystory">{% include acticon chara="Susie" -%} SleepyStory</a> as phase 2 begins.</p>
+</section>
+
+<section class="d-section" id="sleepystory">
+	<h2>{% include acticon chara="Susie" -%} SleepyStory</h2>
+	<p>Available during phase 2.</p>
+
+	<h3 id="sleepystory-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie told the enemy a bedtime story about beating them up!<span class="break"></span> * The enemy became TIRED!</d-text>
+	</d-box>
+	<p class="note">Jigsaw Joe becomes <span class="blue">Tired</span> and moves at half speed.</p>
+	<hr class="hr2">
+	<h4 id="sleepystory-ft-nopacify">If Ralsei didn't pacify Jigsaw Joe on the same turn</h4>
+	<p class="note">Jigsaw Joe stops being <span class="blue">Tired</span> and moves at normal speed.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Jigsaw Joe drank coffee! Jigsaw Joe stopped being TIRED!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4 id="sleepystory-ft-pacify">If Ralsei pacified Jigsaw Joe on the same turn</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei cast PACIFY!</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="sleepystory-dialogue">Dialogue, if Jigsaw Joe was pacified on the same turn</h3>
+	<p>(If not pacified on the same turn, <a href="#dialogue-phase2">standard phase 2 dialogue</a> is used.)</p>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>You did it, Boss!<span class="break"></span> If you can manage to SPARE enemies right away...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text>Battles will go<span class="break"></span> a lot faster!<span class="break"></span> That's all!</d-text>
+	</d-box>
+	<p class="note">Jigsaw Joe is spared and <a href="#postfight">the encounter ends</a>.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+	<p>Unavailable even after returning from Cyber World, though fallback flavor text is present in the code.</p>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie acted!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+	<p>Unavailable even after returning from Cyber World, though fallback flavor text is present in the code.</p>
+
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei acted!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="postfight">
+	<h2>After the challenge ends</h2>
+
+	<h3>If you won</h3>
+
+	<h4>First time</h4>
+	<hr class="hr2">
+	<h5>If you won by sparing/pacifying</h5>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>An amazing battle!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>As promised, here is your reward!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>If you won by fighting</h5>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>Hey! That's not how you <span class="yellow">SPARE</span> someone!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>... but I guess a win is a win.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="dark">
+		<d-text asterisk>You received Joe's Life Savings ($1)!</d-text>
+	</d-box>
+	<p class="note">$1 is added to your total money.</p>
+
+	<h4>Subsequent times</h4>
+	<p>Plays regardless of whether you spared or fought.</p>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>An amazing battle!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>...I don't have any more to give. You've already taken everything I have.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>If you lost</h3>
+	<p>Unused, as Jigsaw Joe never attacks you, so there's no way to lose this challenge.</p>
+	<d-box theme="dark">
+		<d-speaker>Jigsaw Joe</d-speaker>
+		<d-text asterisk>You beefed it! Better luck next time, boss!</d-text>
+	</d-box>
+</section>
