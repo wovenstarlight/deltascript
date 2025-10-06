@@ -1,0 +1,526 @@
+---
+title: Swatchling encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Swatchling.</p>
+
+sources:
+  -
+    name: gml_Object_obj_swatchling_enemy_Step_0
+    chapters: [2]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/ch2allstars
+    name: Ch2 All Stars (featuring Swatchling)
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-swatchlings
+            name: With 1 or 2 other Swatchlings
+          -
+            id: encounter-swatchlingpoppup
+            name: With another Swatchling and Poppup
+          -
+            id: encounter-swatchlingmaus
+            name: With another Swatchling and Maus
+      -
+        id: ft-neutral
+        name: Neutral
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-initial
+        name: Turn 1
+      -
+        id: dialogue-neutral
+        name: Neutral
+      -
+        id: dialogue-change
+        name: After changing color without coordinating
+      -
+        id: dialogue-coordinated
+        name: After coordinating colors
+      -
+        id: dialogue-solo
+        name: After being left alone
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: warmify
+        name: Warmify
+      -
+        id: coldify
+        name: Coldify
+      -
+        id: saction
+        class: susie act
+        name: "S-Action: Half-Warm"
+      -
+        id: raction
+        class: ralsei act
+        name: "R-Action: Half-Cold"
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(56|64|78|80)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-swatchlings">With 1 or 2 other Swatchlings</h4> <!-- 56, 64 -->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Swatchlings bowed in!</d-text>
+	</d-box>
+
+	<h4 id="encounter-swatchlingpoppup">With another Swatchling and Poppup</h4> <!-- 78 -->
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Poppup and caretakers appeared!</d-text>
+	</d-box>
+
+	<h4 id="encounter-swatchlingmaus">With another Swatchling and Maus</h4> <!-- 80 -->
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Swatchling and vermin appeared!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<p class="note">If multiple enemies are present in the encounter:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The Swatchlings are cleaning each other off with feather dusters.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<p class="note">If a single Swatchling is the only enemy in the encounter:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Swatchling feather dusts itself.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">If multiple enemies are present in the encounter:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Swatchlings flex their backs while bending over to inspect a teacup.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<p class="note">If a single Swatchling is the only enemy in the encounter:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Swatchling flexes all of its back muscles while inspecting a teacup.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The Swatchlings wipe at the face of their chained pocketwatch, which is digital.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>The Swatchlings are adjusting their hue and saturation.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like paint and feathers.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<p>Swatchling becomes <span class="blue">Tired</span> if it's the only remaining enemy in an encounter.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The Swatchling is dreading doing all of the work by itself.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The Swatchlings are relieved their wardrobe has been coordinated.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-initial">Turn 1</h3>
+	<p class="note">In the below dialogue, the speech bubbles appear for the Swatchlings in enemy slot 1, 2, and 3, respectively. If there is no enemy in that slot, or the enemy is not a Swatchling, the corresponding dialogue does not play.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Swatchling</d-speaker>
+			<d-text>Welcome,<span class="break"></span> young masters.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Swatchling</d-speaker>
+			<d-text>We have prepared several<span class="break"></span> attack patterns for<span class="break"></span> your enjoyment.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Swatchling</d-speaker>
+			<d-text>Please enjoy them<span class="break"></span> at your convenience.</d-text>
+		</d-box>
+	</div>
+
+	<hr>
+
+	<h3 id="dialogue-neutral">Neutral</h3>
+	<h4>If currently red</h4>
+	<p class="note">66.67% (2/3) chance:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>We'll make your bed<span class="break"></span> with sheets blood red.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">33.33% (1/3) chance:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>Tut, tut.<span class="break"></span> It looks like pain.</d-text>
+	</d-box>
+
+	<h4>If currently orange</h4>
+	<p class="note">66.67% (2/3) chance:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>Please enjoy these<span class="break"></span> complimentary birds.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">33.33% (1/3) chance:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>Tut, tut.<span class="break"></span> It looks like pain.</d-text>
+	</d-box>
+
+	<h4>If currently yellow</h4>
+	<p class="note">66.67% (2/3) chance:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>We'll make yellow sweets<span class="break"></span> for you, just try<span class="break"></span> not to hurt your tooth.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">33.33% (1/3) chance:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>Tut, tut.<span class="break"></span> It looks like pain.</d-text>
+	</d-box>
+
+	<h4>If currently green</h4>
+	<p class="note">66.67% (2/3) chance:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>Would you like<span class="break"></span> some horse'dovours?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">33.33% (1/3) chance:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>Tut, tut.<span class="break"></span> It looks like pain.</d-text>
+	</d-box>
+
+	<h4>If currently blue</h4>
+	<p class="note">66.67% (2/3) chance:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>We'll shine your shoes<span class="break"></span> 'til they're black and blue.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">31.35% (95/303) chance:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>Please enjoy this<span class="break"></span> complimentary body slam.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">1.98% (2/101) chance:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>What? The lasagna<span class="break"></span> has some kind of<span class="break"></span> explosive in it?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-change">After changing color without coordinating</h3>
+	<p>In other words, if all Swatchlings present in the encounter aren't the same color once all ACTs have been executed. If all Swatchlings ARE the same color, <a href="#dialogue-coordinated">see the below subsection</a>.</p>
+	<h4>If the new color is red</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>I'm seeing<span class="break"></span> red.</d-text>
+	</d-box>
+	<h4>If the new color is orange</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>How about some<span class="break"></span> orange peel.</d-text>
+	</d-box>
+	<h4>If the new color is yellow</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>I'm a yellow<span class="break"></span> fellow.</d-text>
+	</d-box>
+	<h4>If the new color is green</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>A green lime<span class="break"></span> for your drink?</d-text>
+	</d-box>
+	<h4>If the new color is blue</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>I'm feeling<span class="break"></span> blue.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-coordinated">After coordinating colors</h3>
+	<p>In other words, if all Swatchlings present in the encounter are the same color once all ACTs have been executed.</p>
+	<p class="note">In the below dialogue, the speech bubbles appear for the Swatchlings in enemy slot 1, 2, and 3, respectively. If there is no enemy in that slot, or the enemy is not a Swatchling, the corresponding dialogue does not play.</p>
+	<div class="boxgroup">
+		<d-box theme="battletalk">
+			<d-speaker>Swatchling</d-speaker>
+			<d-text>We feel so<span class="break"></span> coordinated.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Swatchling</d-speaker>
+			<d-text>Thank you,<span class="break"></span> young masters.</d-text>
+		</d-box>
+		<d-box theme="battletalk">
+			<d-speaker>Swatchling</d-speaker>
+			<d-text>Thank you.</d-text>
+		</d-box>
+	</div>
+
+	<hr>
+
+	<h3 id="dialogue-solo">After being left alone</h3>
+	<p>When all other enemies in the encounter are spared or defeated, whether or not they were Swatchlings.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text>My outfit is coordinated now.<span class="break"></span> With myself.</d-text>
+	</d-box>
+	<p class="note">Swatchling becomes <span class="blue">Tired</span>.</p>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SWATCHLING - Happiest when their outfits are color-coordinated.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="warmify">
+	<h2>Warmify</h2>
+
+	<h3 id="warmify-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Redder<span class="break"></span> 2 stages</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="warmify-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Talked about the color of the summer sun shining on a beach ball.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Talked about the steam of a fresh hot chocolate.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Talked about the warmth of a loving embrace.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If Swatchling wasn't red to start with</h4>
+	<p class="note">Swatchling turns at most 2 stages redder from the color it started as. "<span class="white">&lt;hue&gt;</span>" in the below message is replaced by its new color ("<span class="white">red</span>", "<span class="white">orange</span>", or "<span class="white">yellow</span>").</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Swatchling's color got a lot warmer...! It's now &lt;hue&gt;!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>If Swatchling was already red to start with</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But Swatchling is already as warm as can be!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="warmify-dialogue">Dialogue</h3>
+	<h4>If Swatchling wasn't red to start with</h4>
+	<p class="note">Uses <a href="#dialogue-change">color change dialogue</a>, specifically the version applicable to its new color. If by the end of the party's turns, all Swatchlings are the same color, then Swatchling instead uses the <a href="#dialogue-coordinated">coordination dialogue</a>.</p>
+
+	<h4>If Swatchling was already red to start with</h4>
+	<p class="note">Uses <a href="#dialogue-neutral">neutral dialogue</a>.</p>
+</section>
+
+<section class="d-section" id="coldify">
+	<h2>Coldify</h2>
+
+	<h3 id="coldify-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Bluer<span class="break"></span> 2 stages</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="coldify-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Talked about the crunch of the last pickle in the refrigerator.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Talked about the chill of the wind on the ice skating pond.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Talked about the snow matted on your brother's nose.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If Swatchling wasn't blue to start with</h4>
+	<p class="note">Swatchling turns at most 2 stages bluer from the color it started as. "<span class="white">&lt;hue&gt;</span>" in the below message is replaced by its new color ("<span class="white">yellow</span>", "<span class="white">green</span>", or "<span class="white">blue</span>").</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Swatchling's color turned a lot colder...! It's now &lt;hue&gt;!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>If Swatchling was already blue to start with</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But Swatchling is already as cold as can be!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+
+	<hr>
+
+	<h3 id="coldify-dialogue">Dialogue</h3>
+	<h4>If Swatchling wasn't blue to start with</h4>
+	<p class="note">Uses <a href="#dialogue-change">color change dialogue</a>, specifically the version applicable to its new color. If by the end of the party's turns, all Swatchlings are the same color, then Swatchling instead uses the <a href="#dialogue-coordinated">coordination dialogue</a>.</p>
+
+	<h4>If Swatchling was already blue to start with</h4>
+	<p class="note">Uses <a href="#dialogue-neutral">neutral dialogue</a>.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action: Half-Warm</h2>
+
+	<h3 id="saction-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Redder<span class="break"></span> 1 stage</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie mentions explosions.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie mentions lava.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie mentions hot peppers.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If Swatchling wasn't red to start with</h4>
+	<p class="note">Swatchling turns 1 stage redder from the color it started as. "<span class="white">&lt;hue&gt;</span>" in the below message is replaced by its new color ("<span class="white">red</span>", "<span class="white">orange</span>", "<span class="white">yellow</span>", or "<span class="white">green</span>").</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Swatchling's color got a little bit warmer...! It's now &lt;hue&gt;!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>If Swatchling was already red to start with</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But nothing happened!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="saction-dialogue">Dialogue</h3>
+	<h4>If Swatchling wasn't red to start with</h4>
+	<p class="note">Uses <a href="#dialogue-change">color change dialogue</a>, specifically the version applicable to its new color. If by the end of the party's turns, all Swatchlings are the same color, then Swatchling instead uses the <a href="#dialogue-coordinated">coordination dialogue</a>.</p>
+
+	<h4>If Swatchling was already red to start with</h4>
+	<p class="note">Uses <a href="#dialogue-neutral">neutral dialogue</a>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action: Half-Cold</h2>
+
+	<h3 id="raction-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Bluer<span class="break"></span> 1 stage</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei mentions mint tea.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei mentions icy scarves.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei mentions ice cream.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If Swatchling wasn't blue to start with</h4>
+	<p class="note">Swatchling turns 1 stage bluer from the color it started as. "<span class="white">&lt;hue&gt;</span>" in the below message is replaced by its new color ("<span class="white">orange</span>", "<span class="white">yellow</span>", "<span class="white">green</span>", or "<span class="white">blue</span>").</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Swatchling's color turned a little bit colder...! It's now &lt;hue&gt;!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>If Swatchling was already blue to start with</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>But nothing happened!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="raction-dialogue">Dialogue</h3>
+	<h4>If Swatchling wasn't blue to start with</h4>
+	<p class="note">Uses <a href="#dialogue-change">color change dialogue</a>, specifically the version applicable to its new color. If by the end of the party's turns, all Swatchlings are the same color, then Swatchling instead uses the <a href="#dialogue-coordinated">coordination dialogue</a>.</p>
+
+	<h4>If Swatchling was already blue to start with</h4>
+	<p class="note">Uses <a href="#dialogue-neutral">neutral dialogue</a>.</p>
+</section>
