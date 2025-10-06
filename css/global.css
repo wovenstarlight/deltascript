@@ -891,9 +891,9 @@ d-box, d-choices {
 			flex-direction: column;
 			background-color: var(--white);
 			color: var(--black);
+			font-size: 1em;
 			font-family: var(--font-dotum);
 			body.dyslexic & { font-weight: bold }
-			font-size: 1em;
 
 			d-speaker {
 				--lightyellow: color-mix(in srgb, var(--orange), var(--black));
@@ -1666,8 +1666,7 @@ d-option-panel {
 .boxgroup {
 	display: flex;
 	flex-wrap: wrap;
-	& > :first-child { padding-inline-start: 0.5ch }
-	& > :first-child ~ d-box { margin-inline-start: 0 }
+	& > d-box { margin-inline-start: 0 !important }
 
 	&:has(
 		[theme^=battletalk] :is(
@@ -1678,9 +1677,14 @@ d-option-panel {
 	) {
 		margin-block-start: 0.75em;
 	}
+	
+	body:not(.compact) & {
+		margin-inline-start: 1em;
+	}
 
 	body.compact & {
-		gap: min(1em, 3vw);
+		margin-inline-start: min(1em, 3vw);
+		gap: 0 min(1em, 3vw);
 		&:has(> :nth-child(2))::before,
 		&:has(> :nth-child(3))::after {
 			content: "/";
