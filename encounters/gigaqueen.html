@@ -1,0 +1,602 @@
+---
+title: GIGA Queen encounter
+
+description: >
+  <p>Flavor text and dialogue for the battle against GIGA Queen.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_bqueen_intro_Step_0
+    chapters: [2]
+    note: start
+  -
+    name: gml_Object_obj_gigaqueen_enemy_Step_0
+    chapters: [2]
+    note: general flavor text/dialogue
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [2]
+    note: initial flavor text
+  -
+    name: gml_Object_o_boxing_controller_Step_0
+    chapters: [2]
+    note: round 2/3 and hint flavor text
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [2]
+    note: ACT names
+  -
+    name: gml_Object_o_boxing_controller_Draw_0
+    chapters: [2]
+    note: some ACT effects
+  -
+    name: gml_Object_obj_boxing_loss_controller_Draw_0
+    chapters: [2]
+    note: loss
+  -
+    name: gml_Object_o_boxingqueen_Step_0
+    chapters: [2]
+    note: end
+
+toc:
+  -
+    id: start
+    name: Start of fight
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: ft-round
+        name: At the start of each round
+        subheadings:
+          -
+            id: ft-round1
+            name: Round 1 (Initial encounter)
+          -
+            id: ft-round2
+            name: Round 2
+          -
+            id: ft-round3
+            name: Round 3
+      -
+        id: ft-neutral
+        name: Neutral
+      -
+        id: ft-tensionup
+        name: At 60% TP or higher, if you haven't used any ACTs
+      -
+        id: ft-lowhp
+        name: When the Thrash Machine is at 50 HP or lower
+      -
+        id: hint
+        name: Hints
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-turn
+        name: With specific turns
+      -
+        id: dialogue-dodge
+        name: If you haven't dodged so far
+      -
+        id: dialogue-error
+        name: Unused "looping error" dialogue
+      -
+        id: dialogue-final
+        name: Before final attack
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: firemode
+        name: FireMode
+      -
+        id: swordmode
+        name: SwordMode
+      -
+        id: lasermode
+        name: LaserMode
+      -
+        id: duckmode
+        name: DuckMode
+      -
+        id: turbododge
+        name: TurboDodge
+      -
+        id: selffix
+        name: SELF-FIX
+  -
+    id: loss
+    name: Losing the fight
+  -
+    id: end
+    name: End of fight
+---
+{% comment %} encounterno = 84 {% endcomment %}
+
+<section class="d-section" id="start">
+	<h2>Start of fight</h2>
+
+	<p class="note">The fully-formed Thrash Machine drops into a cityscape.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Queen</d-speaker>
+		<d-text asterisk>Finally... a worthy opponent...</d-text>
+	</d-box>
+
+	<p class="note">GIGA Queen drops down in front of the Thrash Machine, arms spread and beaming gleefully. <a href="#ft-round">The fight begins.</a></p>
+</section>
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="ft-round">At the start of each round</h3>
+	<p class="note">Each round is preceded by a neon-bordered sign reading "Round #", which is then replaced by spiky red text reading "FIGHT", both accompanied by voice lines saying the same.</p>
+
+	<h4 id="ft-round1">Round 1 (Initial encounter)</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>GIGA Queen blocks the way!</d-text>
+	</d-box>
+
+	<h4 id="ft-round2">Round 2</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>ROUND 2 begins.</d-text>
+		<d-text asterisk>Queen's attacks got tougher!</d-text>
+	</d-box>
+
+	<h4 id="ft-round3">Round 3</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>ROUND 3 begins.</d-text>
+		<d-text asterisk>Queen's attacks got extreme!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The cityscape roars past.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">During Rounds 1 and 2 only:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The night is young for fighting.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">During Round 3 only:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The battle is really heating up.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie mashes the controls trying to punch more.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei advises you to "dodge, then counter punch."</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">4.95% (5/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like gigantic batteries.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tensionup">At 60% TP or higher, if you haven't used any ACTs</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your machine is charged up for special moves!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">When the Thrash Machine is at 50 HP or lower</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your machine's inner lighting turns red.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="hint">Hints</h3>
+	<p>For when you haven't completed certain actions during the previous turn. Overrides all above flavor text. If you didn't do multiple things last turn (e.g. you didn't dodge OR punch), then the first hint in this subsection takes precedence (e.g. the dodging hint takes priority over the punching hint).</p>
+
+	<h4>Dodging</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Dodge Queen's attacks with [Left], [Right], and [Down]!)</d-text>
+	</d-box>
+
+	<h4>Punching</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Punch during Queen's turn with [CONFIRM] or [CANCEL] after she attacks!)</d-text>
+	</d-box>
+
+	<h4>Counter-punching</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Press [CONFIRM] or [CANCEL] to hit Queen after she attacks!)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-turn">With specific turns</h3>
+	<p>Turn numbers listed here are the earliest turns on which each set of lines appear. Dialogue may be skipped (turn 2) / delayed by a turn or more (turn 3 onwards) if overridden by <a href="#dialogue-dodge">special dialogue</a>.</p>
+	<h4 id="dialogue-turn1">Turn 1</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>The Time For<span class="break"></span> Words Is Over</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Now Is The<span class="break"></span> Time To Fight<span class="break"></span> (Only)</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn2">Turn 2</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Ha Ha Just Kidding<span class="break"></span> I Totally Will<span class="break"></span> Keep Monologuing<span class="break"></span> As I Kick At: Your<span class="break"></span> Face</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn3">Turn 3</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>The Time Has<span class="break"></span> Come For Noelle<span class="break"></span> To Realize Her<span class="break"></span> Own Strength</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Her Own Will<span class="break"></span> Her Own<span class="break"></span> Determination</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn4">Turn 4</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Focusing Into<span class="break"></span> Her Blade, She<span class="break"></span> Will Create A<span class="break"></span> Neo Dark Fountain</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Then Another,<span class="break"></span> Then Another</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn5">Turn 5</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Then, When The<span class="break"></span> Whole World Is<span class="break"></span> Covered In Darkness</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>She - And Everyone -<span class="break"></span> Can Live In Bliss,<span class="break"></span> Free Of Fear And<span class="break"></span> Suffering</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn6">Turn 6</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Kris, Susie,<span class="break"></span> Why Don't You<span class="break"></span> Help Me Too?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Create The World<span class="break"></span> Of Your Dreams<span class="break"></span> (Also My Dreams)</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn7">Turn 7</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Susie</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Bro Just Let Me<span class="break"></span> Karate Chop You<span class="break"></span> And You Can Have<span class="break"></span> As Many Skateboards<span class="break"></span> As You Want</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn8">Turn 8</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>And Kris, My<span class="break"></span> Dearest Trucie<span class="break"></span> You Can Have<span class="break"></span> As Many</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Okay I Don't<span class="break"></span> Remember What<span class="break"></span> You Liked</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn9">Turn 9</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Hey Was There<span class="break"></span> A Third<span class="break"></span> Guy?????????</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn10">Turn 10</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Join Me And<span class="break"></span> All Of You<span class="break"></span> Will Become<span class="break"></span> Super Strong<span class="break"></span> And Cool</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Meanwhile I Don't<span class="break"></span> Need To Improve<span class="break"></span> Because I'm Already<span class="break"></span> Perfect And Can<span class="break"></span> Shoot Lasers From<span class="break"></span> My Fancy Glass</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn11">Turn 11</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Okay I Believe<span class="break"></span> I've Made My Point<span class="break"></span> I'm Going To<span class="break"></span> Procedurally<span class="break"></span> Loop My Dialogue<span class="break"></span> Now</d-text>
+	</d-box>
+	<p class="note">As Queen says, from the next turn, she begins repeating her dialogue starting from <a href="#dialogue-turn1">the top</a>.</p>
+
+	<hr>
+
+	<h3 id="dialogue-dodge">If you haven't dodged so far</h3>
+	<p>Overrides the <a href="#dialogue-turn2">turn 2-specific dialogue</a>. Once you dodge, or after all dialogue in this section has played out, dialogue proceeds to the <a href="#dialogue-turn3">standard turn 3-specific dialogue</a>.</p>
+	<h4>Turn 2</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Oh No Did You<span class="break"></span> Forget How To<span class="break"></span> Control A Giant<span class="break"></span> Robot</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>There Are<span class="break"></span> Keyboard Controls<span class="break"></span> Inside</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Press [Left]<span class="break"></span> And [Right] To<span class="break"></span> Dodge [CONFIRM] And [CANCEL]<span class="break"></span> To Punch</d-text>
+	</d-box>
+
+	<h4>Turn 3 and 4</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>One More Time,<span class="break"></span> Press [Left] And<span class="break"></span> [Right] To Dodge</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>[CONFIRM] And [CANCEL] To<span class="break"></span> Punch</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-error">Unused "looping error" dialogue</h3>
+	<p>Seems to be continuing a scrapped conversation; whatever it links to has been deleted or overwritten. Possibly meant to follow the <a href="#dialogue-turn11">scripted turn 11 dialogue</a>?</p>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Now Is The<span class="break"></span> Time To<span class="break"></span> (LOOPING ERROR)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-final">Before final attack</h3>
+	<p>Triggers upon GIGA Queen reaching 27% HP or lower.</p>
+	<h4>First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Kris<span class="break"></span> Susie<span class="break"></span> Other Guy</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>You Have Truly<span class="break"></span> Proven Yourselves<span class="break"></span> To Be A Worthy<span class="break"></span> Opponent</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>You Have Earned The<span class="break"></span> Right To Remember What<span class="break"></span> Your Fighting Machine's<span class="break"></span> True Purpose Is</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>To Get Your Own<span class="break"></span> Ass Thrashed</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>By Me</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>With My Final Attack</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Ha Ha Bye</d-text>
+	</d-box>
+	<p class="note">GIGA Queen's full final attack plays out.</p>
+
+	<h4>Second time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>You Think You're<span class="break"></span> Finished?</d-text>
+	</d-box>
+	<p class="note">Only the giant baseball from the final attack is launched.</p>
+
+	<h4>Third time onwards</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>I Have More Extremely<span class="break"></span> Slow Moving Obviously<span class="break"></span> Punchable Giant Baseballs<span class="break"></span> Where That One Came From</d-text>
+	</d-box>
+	<p class="note">Only the giant baseball from the final attack is launched.</p>
+</section>
+
+<section class="d-section" id="firemode">
+	<h2>FireMode</h2>
+	<p>Available if the Thrash Machine was given the Flame Head in Chapter 1.</p>
+
+	<h3 id="firemode-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Power Attacks</d-text>
+		<d-text class="orange">50% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="firemode-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>FLAME MODE engaged!</d-text>
+		<d-text asterisk>A power-boosting aura fired up...!</d-text>
+	</d-box>
+	<p class="note">The Thrash Machine deals a hit to GIGA Queen. For the next turn, damage is increased by 30.</p>
+</section>
+
+<section class="d-section" id="swordmode">
+	<h2>SwordMode</h2>
+	<p>Available if the Thrash Machine was given the Sword Head in Chapter 1.</p>
+
+	<h3 id="swordmode-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Power up each hit</d-text>
+		<d-text class="orange">50% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="swordmode-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SWORD MODE engaged!</d-text>
+		<d-text asterisk>Damage grows until you miss!</d-text>
+	</d-box>
+	<p class="note">The Thrash Machine deals a hit to GIGA Queen. For the next turn, damage grows increasingly higher.</p>
+</section>
+
+<section class="d-section" id="lasermode">
+	<h2>LaserMode</h2>
+	<p>Available if the Thrash Machine was given the Laser Head in Chapter 1.</p>
+
+	<h3 id="lasermode-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Fast Attacks</d-text>
+		<d-text class="orange">50% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="lasermode-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>LASER MODE engaged!</d-text>
+		<d-text asterisk>A light-quick aura fired up...!</d-text>
+	</d-box>
+	<p class="note">The Thrash Machine deals a hit to GIGA Queen. For the next turn, the Thrash Machine moves faster and deals 10% more damage.</p>
+</section>
+
+<section class="d-section" id="duckmode">
+	<h2>DuckMode</h2>
+	<p>Available if the Thrash Machine was given the Duck Head in Chapter 1.</p>
+
+	<h3 id="duckmode-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Sucky Attacks</d-text>
+		<d-text class="orange">50% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="duckmode-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>DUCK MODE engaged!</d-text>
+		<d-text asterisk>A totally-sucking aura fired up...!</d-text>
+	</d-box>
+	<p class="note">The Thrash Machine deals a hit to GIGA Queen. For the next turn, damage is reduced by 30.</p>
+</section>
+
+<section class="d-section" id="turbododge">
+	<h2>TurboDodge</h2>
+
+	<h3 id="turbododge-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Better dodge</d-text>
+		<d-text class="orange">25% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="turbododge-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TURBODODGE engaged!</d-text>
+		<d-text asterisk>A dodge-enhancing aura fired up...!</d-text>
+	</d-box>
+	<p class="note">The Thrash Machine dodges faster and for longer.</p>
+</section>
+
+<section class="d-section" id="selffix">
+	<h2>SELF-FIX</h2>
+
+	<h3 id="selffix-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Heals 100HP</d-text>
+		<d-text class="orange">20% TP</d-text>
+	</d-box>
+	<p class="note">The TP cost listed above is the initial cost, and increases depending on the number of uses:</p>
+	<ul class="note">
+		<li><span class="orange">20% TP</span> for the first use</li>
+		<li><span class="orange">30% TP</span> for the second use</li>
+		<li><span class="orange">40% TP</span> for the third use</li>
+		<li><span class="orange">50% TP</span> for the fourth use onwards</li>
+	</ul>
+
+	<hr>
+
+	<h3 id="selffix-ft">Flavor text</h3>
+	<h4>First to third times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SELF-FIX engaged!</d-text>
+		<d-text asterisk>A healing aura fired up...!</d-text>
+		<d-text asterisk>(But, the TP cost increased!)</d-text>
+	</d-box>
+	<p class="note">The Thrash Machine is healed for 100 HP, and the TP cost for this spell increases by 10%.</p>
+
+	<h4>Fourth time onwards</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SELF-FIX engaged!</d-text>
+		<d-text asterisk>A healing aura fired up...!</d-text>
+	</d-box>
+	<p class="note">The Thrash Machine is healed for 100 HP.</p>
+</section>
+
+<section class="d-section" id="loss">
+	<h2>Losing the fight</h2>
+
+	<p class="note">The <a href="{% include wikilink page='Knock You Down !!' %}">battle music</a> halts. GIGA Queen repeatedly ducks at the center of the screen with a squeaking SFX, then laughs. Black slides in from both sides like closing doors, coming together with a thud. On the now-black screen, the image of the Thrash Machine sitting defeatedly on a bench appears, with text above reading "<span class="white fnt-condensed">Don't give up...!</span>". Options below read "FIGHT AGAIN" and "RETIRE", an arrow indicating the currently-selected option.</p>
+
+	<p class="note">Choosing "FIGHT AGAIN" results in the screen fading to white; as the battle music starts up again, the screen fades back in on the <a href="#ft-round1">start of the encounter</a>.</p>
+
+	<p class="note">Choosing "RETIRE" results in the screen fading to white, then fading back in on the party standing at the start of the walkway immediately before encountering Queen and Noelle.</p>
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of fight</h2>
+
+	<p class="note">When the Thrash Machine punches at the giant baseball, its fist lands with a squeak. The Machine shakes once, then twice, and the spinning baseball slows to a halt. Then it's launched back up, flying over the head of a shocked GIGA Queen, and as it falls towards her, she hoots in surprise and the screen fades to white.</p>
+
+	<p class="note">There's an explosion unseen. A rattling begins from malfunctioning machinery, revealed to be GIGA Queen's red-tinted form as the screen fades back into the encounter. She still has her hands on her cheeks, looking horrified.</p>
+	<d-box theme="fade">
+		<d-speaker>Queen</d-speaker>
+		<d-text asterisk effect="shake-slight">Battle Power... Dropping...</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Queen</d-speaker>
+		<d-text asterisk effect="shake-slight">Overheat... Activated</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Queen</d-speaker>
+		<d-text asterisk effect="shake-slight">Listen Well</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Queen</d-speaker>
+		<d-text asterisk effect="shake-slight">You May Have Defeated Me</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Queen</d-speaker>
+		<d-text asterisk effect="shake-slight">But I Still Possess One Thing</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Queen</d-speaker>
+		<d-text asterisk effect="shake-slight">You Three Will Never Have</d-text>
+	</d-box>
+
+	<p class="note">GIGA Queen's tremors, the rattling, the smoke, all comes to an abrupt halt. She jumps up, grinning viciously, one fist held out in front of her. As she speaks, puffs of smoke are emitted from behind her outstretched hand's glove hem.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Queen</d-speaker>
+		<d-text asterisk>Detachable Hands</d-text>
+	</d-box>
+
+	<p class="note">Her entire fist detaches from her arm and launches downwards at the Thrash Machine, the top half of which is blown clear off its legs and sent flying with the force of GIGA Queen's rocket-powered fist. The screen fades to white as <a href="{{ '/chapters/chapter2/finalshowdown#postfight' | relative_url }}">the encounter ends</a>.</p>
+</section>

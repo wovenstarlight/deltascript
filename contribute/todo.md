@@ -126,6 +126,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* `#weirdroute` - Weird route variant
 		* `/noellerescue` - Thinking of Susie rescuing Noelle
 		* `/confrontingqueen` - First battle with Queen feat. Berdly
+		* `/finalshowdown` - Battle against GIGA Queen, learning about the Roaring
+			* `#postfight`
 		* `/fountain` - Sealing the fountain
 		* `/fountainweird` - Sealing the fountain (Weird Route)
 		* `/shelter` - End of chapter scene with Susie confronting Snowy/MK
@@ -171,12 +173,12 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* Chapter 1
 		* gml_Object_obj_ralseienemy_Step_0 (Unused Ralsei tutorial) `/ralsei`
 		* gml_Object_obj_clubsenemy_old_Step_0 (old Clover fight) `/cloverunused`, crosslink `/clover`
-	* Chapter 2
-		* gml_Object_obj_gigaqueen_enemy_Step_0 `/gigaqueen`
+	* ~~Chapter 2~~ DONE
 	* Chapter 3
 		* gml_Object_obj_shutta_enemy_Step_0 `/shuttah`
 		* gml_Object_obj_tenna_board4_enemy_Step_0 `/tenna1` or `/tennadoom` (Bonus Round)
 		* gml_Object_obj_tenna_enemy_Step_0 `/tenna2` or `/tennafinal`
+	* ~~Chapter 4~~ DONE
 	* ~~Party dojo~~ DONE up to Chapter 4
 	* gml_Object_obj_multiboss_enemy1_Step_0/gml_Object_obj_multiboss_enemy2_Step_0/gml_Object_obj_multiboss_enemy3_Step_0 `/multiboss` &LeftArrow; no idea what these are. test enemies?
 	* gml_Object_obj_multiboss_controller_enemy1_Step_0/gml_Object_obj_multiboss_controller_enemy2_Step_0/gml_Object_obj_multiboss_controller_enemy3_Step_0 `/multibosscontroller` &LeftArrow; no idea what these are. test enemies?
