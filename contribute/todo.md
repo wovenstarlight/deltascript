@@ -140,6 +140,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* telling Tenna you're ready for round 2
 			* `#tvtime` - introduction to Island Board
 		* `/islandboard` - all during-gameplay dialogue
+			* `#shuttah-postfight` - after winning against shuttah
 		* `/afterround2` - getting dropped in the green room again
 			* `#tennagroup` - party talking to Tenna, Susie saying to explore
 			* `#tennakris` - Kris talking to Tenna
@@ -175,7 +176,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* gml_Object_obj_clubsenemy_old_Step_0 (old Clover fight) `/cloverunused`, crosslink `/clover`
 	* ~~Chapter 2~~ DONE
 	* Chapter 3
-		* gml_Object_obj_shutta_enemy_Step_0 `/shuttah`
 		* gml_Object_obj_tenna_board4_enemy_Step_0 `/tenna1` or `/tennadoom` (Bonus Round)
 		* gml_Object_obj_tenna_enemy_Step_0 `/tenna2` or `/tennafinal`
 	* ~~Chapter 4~~ DONE

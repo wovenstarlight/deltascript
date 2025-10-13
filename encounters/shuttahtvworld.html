@@ -1,0 +1,616 @@
+---
+title: Shuttah encounter - TV World, regular enemy
+
+description: >
+  <p>Flavor text and dialogue for regular battles against Shuttah in the larger TV World.</p>
+
+see_also:
+  -
+    url: /encounters/shuttahislandboard
+    name: Shuttah encounter - Island Board, miniboss
+
+sources:
+  -
+    name: gml_Object_obj_shutta_enemy_Step_0
+    chapters: [3]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [3]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [3]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_dbulletcontroller_Step_0
+    chapters: [3]
+    note: attack-specific dialogue
+  -
+    name: gml_Object_obj_shutta_photo_controller_Draw_77
+    chapters: [3]
+    note: photo ACTs - timing out
+  -
+    name: gml_Object_obj_shutta_photo_controller_Create_0
+    chapters: [3]
+    note: photo reactions
+  -
+    name: gml_Object_obj_shutta_photo_controller_Other_18
+    chapters: [3]
+    note: Shuttah photo Mercy/reaction
+  -
+    name: gml_Object_obj_shutta_photo_controller_Other_17
+    chapters: [3]
+    note: Lancer photo Mercy/reaction
+  -
+    name: gml_Object_obj_shutta_photo_controller_Other_19
+    chapters: [3]
+    note: Ralsei photo Mercy/reaction
+  -
+    name: gml_Object_obj_shutta_photo_controller_Other_11
+    chapters: [3]
+    note: unused group photo reaction
+  -
+    name: gml_Object_obj_shutta_photo_controller_Other_10
+    chapters: [3]
+    note: unused Susie photo reaction
+  -
+    name: gml_Object_obj_shutta_photo_controller_Collision_obj_shutta_photo_annoyingdog
+    chapters: [3]
+    note: scrapped Annoying Dog challenge
+  -
+    name: gml_Object_obj_shutta_photo_controller_Collision_obj_shutta_photo_nubert
+    chapters: [3]
+    note: scrapped Nubert challenge
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-shadowguy
+            name: With Shadowguy
+          -
+            id: encounter-zapper
+            name: With Zapper
+          -
+            id: encounter-shuttah
+            name: With another Shuttah
+      -
+        id: ft-neutral
+        name: Neutral
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-neutral
+        name: Neutral
+      -
+        id: dialogue-attack
+        name: During specific attacks
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: photo
+        custom_icon_positions: true
+        act_icon: [Ralsei, Susie]
+        name: "Photo ACTs: ACTICON EasyPhoto / ToughPhoto / ACTICON PowerPhoto"
+      -
+        name: Photo ACT challenges
+        subheadings:
+          -
+            id: photo-shuttah
+            name: Shuttah
+          -
+            id: photo-lancer
+            name: Lancer
+          -
+            id: photo-ralsei
+            name: Ralsei
+      -
+        id: photo-unused
+        name: Unused photo ACT flavor text
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+      -
+        id: raction-unused
+        name: Unused <span class="ralsei act">R-Action</span>
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(111|117|118|119|124|128)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+
+Unused encounters with blank text:
+	- 119 (Zapper, Shadowguy)
+	- 128 (Ribbick)
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4> <!-- 111 -->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shuttah struttah-ed into view!</d-text>
+	</d-box>
+
+	<h4 id="encounter-shadowguy">With Shadowguy</h4> <!-- 117-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shadowguy and Shuttah shimmy in!</d-text>
+	</d-box>
+
+	<h4 id="encounter-zapper">With Zapper</h4> <!-- 118 -->
+	<d-box theme="battlemenu">
+		<d-text asterisk>It's an infrared photo shoot.</d-text>
+	</d-box>
+
+	<h4 id="encounter-shuttah">With another Shuttah</h4> <!-- 124 -->
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shuttah struttah-ed into view!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shuttah struttahs.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shuttah sings in a gasping voice.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shuttah takes selfies from two angles at once.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shuttah considers the best lighting for its attack.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like a darkroom... ironically enough.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shuttah is so TIRED, it can't keep its shutters open.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shuttah's starting to look sepia.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shuttah preps for its RECRUITment portrait.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-neutral">Neutral</h3>
+	<p>Used before attacking in all cases, including after a <a href="#photo">photo ACT</a> is used (successfully or not).</p>
+	<d-box theme="battletalk">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text>How are we<span class="break"></span> LOOKING today?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text>POSE and... HOLD!<span class="break"></span> Can we get a little smolder?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text>The energy, baby,<span class="break"></span> EYE am LOVING it!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text>Work it baby,<span class="break"></span> WORK it!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text>How's my ATTACK ALBUM?<span class="break"></span> I'll let you in it too!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text>My memory is<span class="break"></span> photographic,<span class="break"></span> photo-TASTIC!<span class="break"></span> Wanna see?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-attack">During specific attacks</h3>
+	<p>Used only when Shuttah is the only remaining enemy in the encounter, i.e. when all other enemies have been defeated or spared.</p>
+
+	<p class="note">Shuttah speaks immediately before applying one of its filters to the bullet board, depending on the attack.</p>
+	<h4 id="dialogue-bigrotate">Big rotation</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text>Aaannd<span class="break"></span> TURN!</d-text>
+	</d-box>
+
+	<h4 id="dialogue-pause">Pause</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text>Hold it<span class="break"></span> a sec!</d-text>
+	</d-box>
+
+	<h4 id="dialogue-smallrotate">Small rotation</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text>A lil'<span class="break"></span> turn?</d-text>
+	</d-box>
+
+	<h4 id="dialogue-fallback">Unused fallback</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text>Let's get that other side!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-sharpshoot">After being hit by <a href="{{ '/encounters/shadowguy#sharpshoot' | relative_url }}">{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Sharpshoot</a></h3>
+	<d-box theme="battletalk">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text>My handlashes<span class="break"></span> are so curled!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SHUTTAH - When its eyes snap shut, memories are made in grey.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="photo">
+	<h2>
+		<span id="easyphoto">{% include acticon chara="Ralsei" -%} EasyPhoto</span>
+		/
+		<span id="toughphoto">ToughPhoto</span>
+		/
+		<span id="powerphoto">{% include acticon chara="Susie" -%} PowerPhoto</span>
+	</h2>
+
+	<h3 id="photo-description">Description</h3>
+	<h4 id="easyphoto-description">{% include acticon chara="Ralsei" -%} EasyPhoto</h4>
+	<d-box theme="battledesc">
+		<d-text>Timely photo</d-text>
+	</d-box>
+
+	<h4 id="toughphoto-description">ToughPhoto</h4>
+	<d-box theme="battledesc">
+		<d-text>Fast<span class="break"></span> photo</d-text>
+	</d-box>
+
+	<h4 id="powerphoto-description">{% include acticon chara="Susie" -%} PowerPhoto</h4>
+	<d-box theme="battledesc">
+		<d-text>Extra Mercy</d-text>
+		<d-text class="orange">25% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="photo-usage">Usage</h3>
+	<p class="note">The Photo ACTs randomly choose from a pool of photo challenges upon each use. See the <a href="{% include wikilink page='Shuttah#Strategy' %}">Deltarune Wiki</a> for specifics. The challenges have been given their own sections on this page for easier readability.</p>
+
+	<p class="note">Using a Photo ACT gives instructions regarding the desired photo; see the "<span class="white">Instructions</span>" heading in the challenge-specific sections below.</p>
+
+	<p class="note">After instructions are given, a Shuttah-themed camera frame appears in the center of the encounter and a timer counts down. This timer lasts 5 seconds for ToughPhoto, and 10 seconds for {% include acticon chara="Ralsei" -%} EasyPhoto / {% include acticon chara="Susie" -%} PowerPhoto; for the first use overall of a Photo ACT, however, the timer lasts 18 seconds regardless of which ACT was used.</p>
+
+	<p class="note">While the timer is counting down, the following explanation is given regarding the camera controls:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press directions to aim!</d-text>
+		<d-text asterisk>Press [CONFIRM] to take the photo!</d-text>
+	</d-box>
+
+	<h4>Taking a photo</h4>
+	<p class="note">Upon pressing [CONFIRM], the screen flashes white and the captured photo is briefly presented at the center of the screen. (If sufficiently centered on the target, small yellow text reading "<span class="yellow fnt-condensed">Great shot!</span>" will appear towards the bottom right.)</p>
+
+	<p class="note"><span class="yellow">Mercy</span> gained depends on whether the photo was successfully taken, and whether {% include acticon chara="Susie" -%} PowerPhoto has been used at least once in the encounter so far:</p>
+	<ul class="note">
+		<li>Successful photos: 80% <span class="yellow">Mercy</span> normally; 100% with {% include acticon chara="Susie" -%} PowerPhoto</li>
+		<li>Failed photos: 25% <span class="yellow">Mercy</span> normally; 50% with {% include acticon chara="Susie" -%} PowerPhoto</li>
+	</ul>
+
+	<p class="note">When a photo is taken, Shuttah reacts; see the "<span class="white">Reactions</span>" heading in the challenge-specific sections below.</p>
+
+	<h4>Running out of time</h4>
+	<p class="note">If no photo is taken within the time limit, no <span class="yellow">Mercy</span> is gained, and Shuttah reacts as follows. ("<span class="white">[Z]</span>" in the below message is typically replaced by its platform-specific "<span class="white">[CONFIRM]</span>" equivalent; the default PC value has been used here to preserve the in-game spacing.)</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>UUMM!! Maybe actually<span class="break"></span> press [CONFIRM] to take a photo next time?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="photo-shuttah">
+	<h2>Shuttah challenge</h2>
+
+	<h3 id="photo-shuttah-instructions">Instructions</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Take a photo of Shuttah's Smile!</d-text>
+	</d-box>
+	<p class="note">The party members and Shuttah disappear. 4 Shuttahs appear in a circle, only one of which has its real mouth. The circle rotates, and the individual Shuttahs flip around periodically. Only a photo taken of the real-mouthed Shuttah while it's facing forward counts as a success.</p>
+
+	<hr>
+
+	<h3 id="photo-shuttah-reactions">Reactions</h3>
+	<h4>Success</h4>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>Good, good, EYE approve!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>Confidence, baby, CONFIDENCE!</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<h4>Failure</h4>
+	<d-box theme="battlemenu">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>That's okay, baby! Give it another SSSHOT!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="photo-lancer">
+	<h2>Lancer challenge</h2>
+
+	<h3 id="photo-lancer-instructions">Instructions</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Take a photo of Lancer's tongue!</d-text>
+	</d-box>
+	<p class="note">The party members and Shuttah disappear. Lancer appears in the center of the encounter, waving and moving around. He occasionally jumps up and sticks his tongue out while midair.</p>
+
+	<hr>
+
+	<h3 id="photo-lancer-reactions">Reactions</h3>
+	<h4>Success</h4>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>Good, good, EYE approve!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>Confidence, baby, CONFIDENCE!</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<h4>Failure - Photographing Lancer without his tongue out</h4>
+	<d-box theme="battlemenu">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>Photo at the right moment for extra power!</d-text>
+	</d-box>
+
+	<h4>Failure - Nothing in frame</h4>
+	<d-box theme="battlemenu">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>You missed! Try to take a real photo next time!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="photo-ralsei">
+	<h2>Ralsei challenge</h2>
+
+	<h3 id="photo-ralsei-instructions">Instructions</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Take a photo of Ralsei!</d-text>
+	</d-box>
+	<p class="note">The party members and Shuttah disappear. Many "Ralseis" appear in the middle of the encounter, all but one having Pippins's face instead; they all walk around in various directions, hiding the real Ralsei in the crowd.</p>
+
+	<hr>
+
+	<h3 id="photo-ralsei-reactions">Reactions</h3>
+	<h4>Success</h4>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>Good, good, EYE approve!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>Confidence, baby, CONFIDENCE!</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<h4>Failure</h4>
+	<d-box theme="battlemenu">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>That's okay, baby! Give it another SSSHOT!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="photo-unused">
+	<h2>Unused photo ACT flavor text</h2>
+
+	<h3 id="photo-unused-instructions">Instructions</h3>
+	<p>For unused or unimplemented challenges.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Take a photo Shuttah!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Take a photo any character!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Photo as many bullets as you can!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="photo-unused-controls">Controls guide</h3>
+	<p>Would have replaced the instructions regarding the desired photo once the Shuttah-themed camera frame appeared.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Photo the most bullets!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="photo-unused-success">Successfully photographing <a href="{{ '/encounters/shuttahislandboard#photo-susie' }}">Susie exploding a toilet</a> / <a href="{{ '/encounters/shuttahislandboard#photo-heroes' }}">the group</a></h4>
+	<p>Unused since these specific challenges aren't included in the non-miniboss version of Shuttah's fights.</p>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>Photo-GENIC, it's in your GENETICS!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>Fabulous! Eye-hand it to you guys!</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="photo-unused-challenges">Reactions for scrapped challenges</h3>
+	<!-- These reactions are stored in a different format from the other challenges. Maybe they were intended as surprise popups during other challenges, where photographing them instead of the desired target would still gain you points. Who knows… -->
+	<h4 id="photo-unused-annoyingdog">Annoying Dog</h4>
+	<h5>Success</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Great dog picture!</d-text>
+		<d-text asterisk>Well centered!</d-text>
+	</d-box>
+
+	<h5>Failure</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Dog picture was not centered well!</d-text>
+	</d-box>
+
+	<h4 id="photo-unused-nubert">Nubert</h4>
+	<h5>Success</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Great shot of Nubert!</d-text>
+	</d-box>
+
+	<h5>Failure</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Nubert was underground in that shot...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<h4>First time when <span class="ralsei act">R-Action</span> is not used simultaneously</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie blinks during a photo!</d-text>
+	</d-box>
+
+	<h4>Subsequent times / When used alongside <span class="ralsei act">R-Action</span></h4>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie sneezes during a photo!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie blurs during a photo!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie blinks during a photo!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Shuttah gains 25% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei stared into the camera!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei has a perfect hair day!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei's photo got overexposed!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Shuttah gains 35% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction-unused">
+	<h2>Unused <span class="ralsei act">R-Action</span></h2>
+	<p>Appears to have been intended to make the <a href="#photo">Photo ACTs</a> easier to succeed on. This would only be usable once per battle; no flavor text is provided for subsequent usages.</p>
+
+	<h3 id="raction-unused-ft">Flavor text</h3>
+	<h4>First time when <span class="susie act">S-Action</span> is not used simultaneously</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei adds a filter to the photo! It's easier to center photos!!</d-text>
+	</d-box>
+
+	<h4>Subsequent times / When used alongside <span class="susie act">S-Action</span></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei adds a filter!</d-text>
+	</d-box>
+</section>
