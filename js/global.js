@@ -362,14 +362,12 @@ class FunnyText extends HTMLElement {
 
 			case "game":	// 4659
 				myText = "GAME";
-				mySound = "gunshot";
 				styles.width = "8ch";
 				isGif = true;
 				break;
 
 			case "game_over":	// 2914
 				myText = "GAME OVER!?";
-				mySound = "gunshot";
 				styles.width = "24ch";
 				isGif = true;
 				break;

@@ -1,0 +1,394 @@
+---
+title: Tenna encounter - Bonus Round
+
+description: >
+  <p>Flavor text and dialogue for battles against Tenna.</p>
+
+sources:
+  -
+    name: gml_Object_obj_tenna_board4_enemy_Step_0
+    chapters: [3]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [3]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [3]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/tennacoldplace
+    name: Tenna encounter - Cold Place
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-otherenemyname
+            name: With Other_enemy_name
+      -
+        id: ft-neutral
+        name: Neutral
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-neutral
+        name: Neutral
+      -
+        id: dialogue-specialcondition
+        name: Special_condition
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: ilovetv
+        act_icon: [Susie, Ralsei]
+        name: ILOVETV
+      -
+        id: resist
+        act_icon: [Susie, Ralsei]
+        name: Resist
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(133|134|135)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="start">
+	<h2>Start of first encounter</h2>
+
+	<p class="note">The encounter begins with the party on the left, as is typical, but they are encased in gacha capsules and all look serious. At the top of the screen is a counter starting at "<span class="red">00</span>", styled to resemble digital clock numbers. Tenna enters the encounter from the bottom of the screen, pointing upwards.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>We've got a very<span class="break"></span> special battle for you<span class="break"></span> today, folks!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Very SPECIAL indeed,<span class="break"></span> hahaha.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>All you have to<span class="break"></span> do to win.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Is say "I LOVE TV."</d-text>
+	</d-box>
+	<p class="note">As Tenna speaks, the counter at the top changes to read "<span class="red">01</span>" with a chime.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>And, hahaha, don't<span class="break"></span> think you'll be able<span class="break"></span> to try anything funny.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Because I've... got THIS.</d-text>
+	</d-box>
+	<p class="note">Tenna holds out a piece of paper, still wearing his fixed grin.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Ever read this<span class="break"></span> CONTRACT? Hmm,<span class="break"></span> says you guys<span class="break"></span> are my ACTORs...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>And that means...<span class="break"></span> You've gotta ACT!</d-text>
+	</d-box>
+	<p class="note">The paper flashes as all the buttons in Kris's battle menu change to ACT buttons. With a jump, Tenna takes his place on the right side of the encounter, once again pointing into the air.</p>
+</section>
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<p>First encounter is solo; subsequent encounters are with Shadowguy or, after Shadowguy is fired / from the fourth battle onwards (whichever comes first), Zapper.</p>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Wanna be an ACT-er...? Here's my CARD!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Now where the heck is my debit card?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>If you're gonna be so dramatic... then ACT!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>I Love TV. That's all you gotta say.</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>All you have to do is speak your mind!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Look me in the nose and SAY IT!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Sorry, what was that?! Couldn't hear you!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>Our contestants have been very naughty!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-neutral">Neutral</h3>
+	<p>Unlike other enemies, whose neutral dialogue is replaced by any ACT-specific dialogue, Tenna's neutral dialogue is also appended to his ACT-specific dialogue. Therefore, this line always plays no matter what before the enemies attack.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>IT'S!<span class="break"></span> TV!<span class="break"></span> TIME!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-partydown">If a party member is downed</h3>
+	<p class="note">Tenna looks ferocious.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>HEY! Fainting<span class="break"></span> isn't part of<span class="break"></span> the SCRIPT!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Eat some<span class="break"></span> TV Dinner and<span class="break"></span> GET UP!!!</d-text>
+	</d-box>
+	<p class="note">All party members are healed for 100 HP.</p>
+
+	<hr>
+
+	<h3 id="dialogue-sharpshoot">After being hit by <a href="{{ '/encounters/shadowguy#sharpshoot' | relative_url }}">{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Sharpshoot</a></h3>
+	<p class="note">Tenna hunches over, clutching his nose as if in pain; Shadowguy turns to look at him, smile faded.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>H-Hey!!!</d-text>
+	</d-box>
+	<p class="note">Tenna looks furious.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>How could you let<span class="break"></span> them use that act!?</d-text>
+	</d-box>
+	<p class="note">Tenna points upwards, lifting his mic to his mouth and grinning again.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>You're!!! Fired!!!</d-text>
+	</d-box>
+	<p class="note">Shadowguy looks downcast and leaves the encounter.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Alright, no more<span class="break"></span> of THAT guy!</d-text>
+	</d-box>
+	<p class="note">The screen cuts to black with a radial wipe as the encounter ends (<a href="{{ '/chapters/chapter3/bonusround#postfight2' | relative_url }}">battle #2</a>, <a href="{{ '/chapters/chapter3/bonusround#postfight3' | relative_url }}">battle #3</a>).</p>
+
+	<hr>
+
+	<h3 id="dialogue-offbutton">After using <a href="{{ '/encounters/zapper#offbutton' | relative_url }}">{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} OffButton</a></h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You hit the OFF button!</d-text>
+	</d-box>
+	<p class="note">The screen turns off, music stopping. After a pause, the screen fades back in to show the encounter, but with the Zapper gone and the party members missing from inside their gachapon capsules. After a pause, Tenna grins painfully wide.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>H-huh!?</d-text>
+	</d-box>
+	<p class="note">Clutching his head and twisting in distress, Tenna approaches the capsules.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Susie...?<span class="break"></span> Kris...?<span class="break"></span> Hey...?<span class="break"></span> HEY!!!</d-text>
+	</d-box>
+	<p class="note">Increasingly frantic, Tenna moves faster.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>DON'T TELL ME<span class="break"></span> YOU DIDN'T LIKE<span class="break"></span> YOUR CUSTOM MADE<span class="break"></span> TOY BALLS!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Hey, Mike?</d-text>
+	</d-box>
+	<p class="note">As Tenna addresses Mike, he slows down, then goes entirely still with his next line.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Could you, uh, cancel<span class="break"></span> my 4am shock therapy<span class="break"></span> session?</d-text>
+	</d-box>
+	<p class="note">He leans forward, whispering conspiratorially.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Cause it looks<span class="break"></span> like it's<span class="break"></span> happening right<span class="break"></span> now.</d-text>
+	</d-box>
+	<p class="note">As an alarm plays, red light flashing slowly from the top of the screen, Tenna clutches his head in a panic.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>ALL HANDS ON DECK!!!<span class="break"></span> EVERYONE FIND THE<span class="break"></span> LIGHTNERS!!!</d-text>
+	</d-box>
+	<p class="note">Tenna leaves offscreen to the right, and <a href="{{ '/chapters/chapter3/intotvworld' | relative_url }}">the encounter (and the Bonus Round as a whole) ends</a>.</p>
+</section>
+
+<section class="d-section" id="ilovetv">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} ILOVETV</h2>
+
+	<h3 id="ilovetv-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone said I Love TV to Tenna!</d-text>
+	</d-box>
+	<p class="note">The "I Love TV" counter goes up by 3.</p>
+
+	<hr>
+
+	<h3 id="ilovetv-dialogue">Dialogue</h3>
+	<p>The number of times listed here is tracked across all encounters in the Bonus Round.</p>
+
+	<p class="note">Using this ACT results in the ongoing battle ending immediately and returning you to the <a href="{{ '/chapters/chapter3/bonusround' | relative_url }}">Bonus Round's board</a>; the specific point in said board to which you are returned depends on which encounter this is numerically (<a href="{{ '/chapters/chapter3/bonusround#postfight1' | relative_url }}">battle #1</a>, <a href="{{ '/chapters/chapter3/bonusround#postfight2' | relative_url }}">battle #2</a>, <a href="{{ '/chapters/chapter3/bonusround#postfight3' | relative_url }}">battle #3</a>, <a href="{{ '/chapters/chapter3/bonusround#postfight4' | relative_url }}">battle #4</a>, and <a href="{{ '/chapters/chapter3/bonusround#postfight5' | relative_url }}">battle #5 onwards</a>).</p>
+
+	<h4>First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>That's right.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>You love TV...<span class="break"></span> don't you?</d-text>
+	</d-box>
+	<p class="note">The screen cuts to black with a radial wipe as the encounter ends.</p>
+
+	<h4>Second time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>That's CORRECT!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Sorry, just needed<span class="break"></span> to hear it again!<span class="break"></span> Haha!</d-text>
+	</d-box>
+	<p class="note">The screen cuts to black with a radial wipe as the encounter ends.</p>
+
+	<h4>Third time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Haha, that's right!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>... but did you<span class="break"></span> really mean it?</d-text>
+	</d-box>
+	<p class="note">The screen cuts to black with a radial wipe as the encounter ends.</p>
+
+	<h4>Fourth time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>No...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>It's NOT GOOD ENOUGH!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>This game's never<span class="break"></span> going to end<span class="break"></span> until you mean it!</d-text>
+	</d-box>
+	<p class="note">The screen cuts to black with a radial wipe as the encounter ends.</p>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Mike, get another<span class="break"></span> take ready.</d-text>
+	</d-box>
+	<p class="note">The screen cuts to black with a radial wipe as the encounter ends.</p>
+</section>
+
+<section class="d-section" id="resist">
+	<h2>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Resist</h2>
+
+	<h3 id="resist-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone resisted!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="resist-dialogue">Dialogue</h3>
+	<h4>First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Uh oh,<span class="break"></span> our contestants...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Seem to have<span class="break"></span> chosen the<span class="break"></span> WRONG ANSWER!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>You know what<span class="break"></span> THAT MEANS!</d-text>
+	</d-box>
+
+	<h4>Second and third times</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>WRONG ANSWER!</d-text>
+	</d-box>
+
+	<h4>Fourth time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>ENOUGH ALREADY!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Seems our contestants<span class="break"></span> aren't ready to<span class="break"></span> admit it yet.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Mike! Back<span class="break"></span> to the board!</d-text>
+	</d-box>
+	<p class="note">The screen cuts to black with a radial wipe as <a href="{{ '/chapters/chapter3/bonusround' | relative_url }}">the encounter ends</a>.</p>
+</section>

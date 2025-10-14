@@ -786,6 +786,8 @@ body {
 
 	a:not(.kris, .susie, .ralsei, .noelle, :hover, :focus) { color: inherit }
 }
+/* Forced line break */
+body:not(.compact) .break { display: block }
 /* #endregion */
 
 /* #region Game styles */
@@ -1014,6 +1016,21 @@ d-box, d-choices {
 		&[theme=eightbit], &[theme="8bit"] {
 			width: calc(var(--basewidth) - 4.39em);
 			font-family: var(--font-8bit);
+			
+			&.quiz {
+				background-color: #00a2e8;
+				border-image-slice: 12;
+				border-image-source: url("../assets/images/textbox/quiz.png");
+				body.dim & {
+					border-color: #1263bc;
+					border-image-source: url("../assets/images/textbox/quiz_dim.png")
+				}
+				&.doom {
+					background-color: #882222;
+					border-image-source: url("../assets/images/textbox/quiz_doom.png");
+					body.dim & { border-image-source: url("../assets/images/textbox/quiz_doom_dim.png") }
+				}
+			}
 		}
 
 		@media (max-width: 30rem) {
@@ -1028,9 +1045,6 @@ d-box, d-choices {
 			/* has top, center, AND bottom/default */
 			&:has(d-box[place~=top]):has(d-box[place~=center], d-box[place~=center-y]):has(d-box[place~=bottom], d-box:not([place~=top], [place~=center], [place~=bottom])) { padding-block-end: 5.5em }
 		}
-
-		/* Forced line break */
-		.break { display: block }
 
 		img {
 			&:is(.fullheight, .fullwidth) { display: block }
