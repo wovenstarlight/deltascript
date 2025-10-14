@@ -1,0 +1,798 @@
+---
+title: Tenna encounter - Cold Place
+
+description: >
+  <p>Flavor text and dialogue for the final showdown against Tenna in the Cold Place.</p>
+
+sources:
+  -
+    name: gml_Object_obj_tenna_enemy_Step_0
+    chapters: [3]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [3]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [3]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_tenna_zoom_Other_13
+    chapters: [3]
+    note: minigame instructions
+  -
+    name: gml_Object_obj_tenna_enemy_minigametext_Draw_0
+    chapters: [3]
+    note: minigame instruction off-by-one error
+	# line 40: instead of i going from =0 to < str.length, or from =1 to < str.length+1, it instead goes from =1 to < str.length
+  -
+    name: gml_Object_obj_actor_tenna_Draw_0
+    chapters: [3]
+    note: end
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/tennabonusround
+    name: Tenna encounter - Bonus Round
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-neutral
+        name: Neutral
+      -
+        id: ft-turn
+        name: With specific turns
+      -
+        id: ft-highscore
+        name: At a score of 1000 or higher
+      -
+        id: ft-lowhp
+        name: Low HP
+        subheadings:
+          -
+            id: ft-lowhp-50
+            name: 50% HP
+          -
+            id: ft-lowhp-25
+            name: 25% HP
+          -
+            id: ft-lowhp-16
+            name: 16% HP
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-attack
+        name: With specific attacks
+        subheadings:
+          -
+            id: dialogue-allstarcast
+            name: All-Star Cast
+          -
+            id: dialogue-smashcut
+            name: Smash Cut
+          -
+            id: dialogue-rimshot
+            name: Rimshot
+      -
+        id: dialogue-turn
+        name: With specific turns
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: minigame
+        name: Minigame (and variations)
+      -
+        id: ilovetv
+        name: ILoveTV
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: bet20
+        class: susie act
+        name: Bet20 / Bet30
+      -
+        id: saction-unused
+        name: Unused version of <span class="susie act">S-Action</span>
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+      -
+        id: popularboy
+        class: ralsei act
+        name: PopularBoy
+  -
+    id: end
+    name: End of fight
+---
+{% comment %} encounterno = 121 {% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>That's right folks! One last challenge! 1000 points or bust! Can you do it!?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>CLAP AND CHEER, SMILE AND SCREAM! ENTERTAINMENT ON YOUR SCREEN!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>COWABUNGA-DERO! THAT'S THE SMOOTH TASTE OF TV TIME!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>FRESH FROM THE JUICE! FRESH FROM THE JUICE!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>HEAR THAT WHINE!? THAT'S YOUR CRT ASKING FOR A WALK!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>DON'T TOUCH THAT DIAL! THINGS ARE HEATING UP!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">1% chance:</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>IS IT JUST ME, OR DOES IT SMELL LIKE AN ORCHARD IN HERE?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">1% chance:</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>IS IT JUST ME, OR DOES IT SMELL KINDA EARTHY AND SMOKEY IN HERE?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">1% chance:</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>IS IT JUST ME, OR DOES IT SMELL LIKE MARKETABLE PLUSH IN HERE?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-turn">With specific turns</h3>
+	<h4 id="ft-turn7">Turn 7</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>COME ON KIDS, THE AUDIENCE LOVES IT!! CAN'T YOU HEAR 'EM CHEERING!? LISTEN!!</d-text>
+	</d-box>
+	<h4 id="ft-turn8">Turn 8</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>... WHERE... WHERE'S THE AUDIENCE? WHERE'D THEY GO...? WHERE ARE THEY!?</d-text>
+	</d-box>
+	<h4 id="ft-turn9">Turn 9</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>THAT DAMN AUDIENCE! I GAVE THEM SO MANY POINTS TO BE HERE TODAY!</d-text>
+	</d-box>
+	<h4 id="ft-turn10">Turn 10</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>MIKE... MIKE, IF YOU'RE STILL HERE... BAN EVERYONE FROM THE GIFT SHOP!</d-text>
+	</d-box>
+	<h4 id="ft-turn11">Turn 11, if you defeated/spared Spamton NEO</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>I'M NOT LIKE HIM! I'M BETTER! I SWEAR I'M BETTER! MIKE, TELL 'EM!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-highscore">At a score of 1000 or higher</h3>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>ALRIGHT, YOU ASKED FOR IT! TIME FOR THE GRAND FINALE!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<p>The following lines play only once each, on the turn immediately after the listed threshold is met or passed.</p>
+
+	<h4 id="ft-lowhp-50">50% HP</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>OUCH! H-HEY! WATCH WHERE YOU, UH, SWING THOSE THINGS! HAHA!</d-text>
+	</d-box>
+
+	<h4 id="ft-lowhp-25">25% HP</h4>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>H-HEY, ANYONE NOTICED MY HP IS GOING DOWN!? ANYONE!?</d-text>
+	</d-box>
+
+	<h4 id="ft-lowhp-16">16% HP</h4>
+	<p>Unused, as the <a href="#end">fight-ending attack</a> is used on the same turn that Tenna drops to/below 20% HP. Since the battle ends as soon as Tenna would have reached 16% HP, there are no successive turns where this text could be used, making it unreachable.</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Tenna" emotion="0"></d-sprite>
+		<d-text asterisk>WHAT AN EVENT!! THE CONTESTANTS APPEAR TO BE KILLING ME!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-attack">With specific attacks</h3>
+	<p>See the <a href="{% include wikilink page='Tenna#Attacks_2' %}">Deltarune Wiki</a> for descriptions of each attack. "First time" dialogue for each attack takes precedence over <a href="#dialogue-turn">turn-specific dialogue</a>, but "Subsequent times" dialogue gets overridden by it.</p>
+
+	<h4 id="dialogue-allstarcast">All-Star Cast</h4>
+	<h5>First time</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>1000 POINTS,<span class="break"></span> JUST 1000 POINTS<span class="break"></span> AND I'LL GIVE IT UP!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>BUT DON'T THINK<span class="break"></span> IT'S GONNA<span class="break"></span> BE EASY!!<span class="break"></span> BECAUSE TODAY...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>WE'VE GOT AN<span class="break"></span> ALL-STAR CAST!</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>WE'VE GOT AN<span class="break"></span> ALL-STAR CAST!</d-text>
+	</d-box>
+
+	<h4 id="dialogue-smashcut">Smash Cut</h4>
+	<h5>First time</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Haha, no way<span class="break"></span> we can use that<span class="break"></span> take! CUT!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>CUT, I said!<span class="break"></span> CUT! ...<span class="break"></span> SMASH CUT!</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>HOW BOUT A<span class="break"></span> LITTLE SLICE<span class="break"></span> OF LIFE!?</d-text>
+	</d-box>
+
+	<h4 id="dialogue-rimshot">Rimshot</h4>
+	<h5>First time</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>You guys are<span class="break"></span> so good, it's<span class="break"></span> making me LAUGH!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>How about we play<span class="break"></span> you a RIMSHOT!?</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>How about we<span class="break"></span> play you a<span class="break"></span> RIMSHOT!?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-turn">With specific turns</h3>
+	<p>Turn numbers listed here are the earliest possible versions; the ordering may be delayed by a few turns due to special dialogue from <a href="#dialogue-attack">initial usages of attacks</a> or <a href="#minigame-dialogue">certain usages of the Minigame ACT</a> taking precedence.</p>
+
+	{%- comment %} Turn 1 normally All-Star Cast #1, Turn 2 normally Smash Cut #1, Turn 3 normally Rimshot #1 {% endcomment %}
+
+	<h4 id="dialogue-turn4">Turn 4</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Sick of the<span class="break"></span> CLASSICS!? We'll<span class="break"></span> make 'em NEO!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>NEO shows,<span class="break"></span> NEO programs,<span class="break"></span> just watch,<span class="break"></span> watch, WATCH!</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn5">Turn 5</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Who SAYS an<span class="break"></span> old CRT can't<span class="break"></span> learn new tricks!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>LOOK!! The 6PM show!?<span class="break"></span> I'll show it at 5!!</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn6">Turn 6</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Ratings!? HA!<span class="break"></span> I'll show you<span class="break"></span> CHARISMA!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>HD's nothing<span class="break"></span> when you got<span class="break"></span> NOSTALGIA!</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn7">Turn 7</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Susie, you<span class="break"></span> liked watching,<span class="break"></span> didn't you!?!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Come, on!<span class="break"></span> Tell 'em!<span class="break"></span> Tell 'em!</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn8">Turn 8</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Tell 'em,<span class="break"></span> Susie!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Say they don't<span class="break"></span> need to throw<span class="break"></span> me away!</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn9">Turn 9</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>I'm still<span class="break"></span> MARVELOUS! I'm<span class="break"></span> still MYSTERIOUS!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Toriel oughta<span class="break"></span> know she doesn't<span class="break"></span> NEED a new TV!!</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn10">Turn 10</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Kris!! I watched<span class="break"></span> you GROW UP!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Just admit you<span class="break"></span> NEED ME already!!</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn11">Turn 11</h4>
+	<h5 id="dialogue-turn11-standard">Standard</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Who do you think<span class="break"></span> taught you to<span class="break"></span> LAUGH and CRY!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>... What, you think<span class="break"></span> it's MY fault you<span class="break"></span> forgot HOW!?</d-text>
+	</d-box>
+
+	<h5 id="dialogue-turn11-swordroute">If the <a href="{{ '/chapters/chapter3/cityboardsword' | relative_url }}">Sword Route</a> was completed</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>You... you want<span class="break"></span> to have fun,<span class="break"></span> too, don't you!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Isn't that a<span class="break"></span> little bit why you...</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn12">Turn 12</h4>
+	<h5 id="dialogue-turn12-standard">Standard</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Well, the GOOD<span class="break"></span> OLD DAYS are HERE,<span class="break"></span> Kris! On VHS!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>And if you've<span class="break"></span> forgotten how<span class="break"></span> to smile...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>I'll MAKE<span class="break"></span> YOU remember.</d-text>
+	</d-box>
+
+	<h5 id="dialogue-turn12-swordroute">If the <a href="{{ '/chapters/chapter3/cityboardsword' | relative_url }}">Sword Route</a> was completed</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Woah, woah, woah!<span class="break"></span> Sorry, that was<span class="break"></span> out of line, folks!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Back to your<span class="break"></span> regularly scheduled<span class="break"></span> programming!</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn23">Turn 23</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>... what!? Are<span class="break"></span> you waiting for me...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>To... to...<span class="break"></span> say something!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>I have nothing<span class="break"></span> to say! Nothing!</d-text>
+	</d-box>
+
+	<h4 id="dialogue-turn24">Turn 24</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>... All right!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>All right, fine!<span class="break"></span> FINE, I ADMIT IT!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Maybe I AM a<span class="break"></span> little GLOOBY<span class="break"></span> sometimes!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>I AM!!!<span class="break"></span> I'm GLOOBY!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>WHAT'S wrong<span class="break"></span> with THAT, HUH!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>We're ALL a little<span class="break"></span> GLOOBY sometimes!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>YOU INCLUDED,<span class="break"></span> KRIS!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>So DON'T give<span class="break"></span> me that look!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>That "Oh, I've<span class="break"></span> never been<span class="break"></span> Glooby" look!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>YOU ARE!<span class="break"></span> YOU HAVE BEEN!<span class="break"></span> You HAVE TO be!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>It CAN'T<span class="break"></span> just be me!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Just ME...<span class="break"></span> alone.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Glooby...<span class="break"></span> against the<span class="break"></span> whole world...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>... it<span class="break"></span> can't be...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<h4>Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TENNA - Isn't it about time you&got a new TV?</d-text>
+	</d-box>
+
+	<h4>If <a href="{{ '/misc/armor#dealmaker' | relative_url }}">Dealmaker</a> is equipped to any party member</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TENNA - THE [Tragic businesmen] THAT [Died] AT THE [Now] OF THE [Story]</d-text>
+	</d-box>
+
+	<h4>If the <a href="{{ '/chapters/chapter3/cityboardsword' | relative_url }}">Sword Route</a> was completed</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TENNA - Despite his size, sadly, he's quite fragile.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="minigame">
+	<h2>Minigame (and variations)</h2>
+	<p>Appears four times, with all possible combinations of ACTors.</p>
+
+	<h3 id="minigame-description">Description</h3>
+	<h4>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Minigame</h4>
+	<d-box theme="battledesc">
+		<d-text>Play<span class="break"></span> game</d-text>
+		<d-text class="orange">8% TP</d-text>
+	</d-box>
+
+	<h4>{% include acticon chara="Susie" -%} Minigame / {% include acticon chara="Ralsei" -%} Minigame</h4>
+	<d-box theme="battledesc">
+		<d-text>Play<span class="break"></span> game</d-text>
+		<d-text class="orange">26% TP</d-text>
+	</d-box>
+
+	<h4>Minigame</h4>
+	<d-box theme="battledesc">
+		<d-text>Play<span class="break"></span> game</d-text>
+		<d-text class="orange">44% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="minigame-ft">Flavor text</h3>
+	<hr class="hr2">
+	<h4>{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Minigame</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone gets ready to play...!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>{% include acticon chara="Susie" -%} Minigame</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Susie get ready to play...!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>{% include acticon chara="Ralsei" -%} Minigame</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You and Ralsei get ready to play...!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Minigame</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You get ready to play...!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">During Tenna's turn, the screen at the back displays "<span class="fnt-8bit white">GAME TIME!</span>" instead of the current score, and his attack is replaced by a minigame sequence (or two minigames, from use 6 onwards). This involves Tenna jumping to the center of the encounter and pressing his hands to either side of his head as his screen turns to static. The camera zooms in on his screen, which transitions to a randomly chosen minigame. Instructions are displayed at the center of the screen depending on the game:</p>
+	<ul class="note">
+		<li><span class="white">DODGE FIRE</span> for the Cooking Show</li>
+		<li><span class="white">PERFORM</span> for Rock Video (with variations <span class="red">2x SPEED</span>, <span class="red">2.5x SPEED</span>, and <span class="red">3x SPEED</span>)</li>
+		<li><span class="white">PROTECT RALSEI</span> for a version of Monster Movie (available only if said game was played to completion at least once; the timer bar is replaced by a health bar labelled <span class="white fnt-8bit">ENEMY</span>)</li>
+		<li><span class="white">FIGHT...</span> for an alternate version of Monster Movie (also available only if said game was played to completion at least once)</li>
+		<li><span class="white">SHOOT THE TARGETS</span> for a version of Shadowguy's {% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Sharpshoot ACT</li>
+		<li><span class="white">SHOOT</span> for the cowboy game</li>
+		<li><span class="white">DODGE</span> for a reversed version of the cowboy game</li>
+		<li><span class="white">BOUNCE THE BALL</span> for Lanino and Elnina's ball-bouncing attack</li>
+	</ul>
+	<p class="note">(Almost all these instructions should end with an exclamation mark ("<span class="white">DODGE FIRE!</span>", "<span class="white">PERFORM!</span>" etc.) while "<span class="white">FIGHT...</span>" should end with a question mark i.e. "<span class="white">FIGHT...?</span>", but the special text object used for the instructions stops writing out the text one character early in an off-by-one error.)</p>
+	<p class="note">A bar on the bottom left acts as a timer, with a counter underneath starting at "<span class="white fnt-8bit">SCORE&nbsp;000</span>" and increasing with time passed/correct gameplay. On the bottom right are three checkboxes labelled "<span class="white fnt-8bit">MISS</span>", which are marked off as mistakes are made. At the end of the minigame(s), the POINTs earned are added to the score, and penalties are dealt in both POINTs and HP for any MISSes. If 3 mistakes are made, the minigame sequence ends early. See the <a href="{% include wikilink page='Tenna#Minigames' %}">Deltarune Wiki</a> for more detail on gameplay for each individual minigame.</p>
+	
+	<h4>Unused minigame instructions</h4>
+	<ul class="note">
+		<li>Susiezilla variants
+			<ul class="fnt-8bit">
+				<li><span class="white">BREAK THE STATUE</span></li>
+				<li><span class="white">DESTROY HOUSES</span></li>
+			</ul>
+		</li>
+		<li>Cooking Show variant: <span class="fnt-8bit white">DODGE AND SERVE</span></li>
+		<li>Possibly a version of Shuttah's Photo ACTs: <span class="fnt-8bit white">PHOTO 3 SMILES</span></li>
+	</ul>
+	<p class="note">(As with the canonically used instructions above, these should all end in exclamation marks.)</p>
+
+	<hr>
+
+	<h3 id="minigame-dialogue">Dialogue</h3>
+	<h4>First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>So our STAR<span class="break"></span> contestants have<span class="break"></span> contested our STARs!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>But can they<span class="break"></span> survive... Another<span class="break"></span> PHYSICAL CHALLENGE?!</d-text>
+	</d-box>
+
+	<h4>Sixth time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>All right! If one<span class="break"></span> PHYSICAL CHALLENGE<span class="break"></span> isn't enough...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>How about a<span class="break"></span> DOUBLE FEATURE!?</d-text>
+	</d-box>
+
+	<h4>Second to fifth times, and seventh time onwards</h4>
+	<p>Only used if there's no <a href="#dialogue-turn">turn-specific dialogue</a>.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>IT'S!<span class="break"></span> TV!<span class="break"></span> TIME!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="ilovetv">
+	<h2>ILoveTV</h2>
+
+	<h3 id="ilovetv-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Earn<span class="break"></span> score</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ilovetv-ft">Flavor text</h3>
+	<p class="note">(The following dialogue box also includes <a href="#saction" class="susie act">S-Action</a> and <a href="#raction" class="ralsei act">R-Action</a>'s "I Love TV" declarations, if said ACTs were used on this turn.)</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You said "I Love TV"!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>He couldn't help but give some SCORE!</d-text>
+	</d-box>
+	<p class="note">The score increases by 20 POINTs if either Susie or Ralsei is up / 40 POINTs if Susie and Ralsei are both down.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Earn<span class="break"></span> score</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p class="note">(The following dialogue box also includes <a href="#ilovetv">ILoveTV</a> and <a href="#raction" class="ralsei act">R-Action</a>'s "I Love TV" declarations, if said ACTs were used on this turn.)</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie said "I Love TV"!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>He couldn't help but give some SCORE!</d-text>
+	</d-box>
+	<p class="note">The score increases by 10 POINTs if Kris is up / 20 POINTs if Kris is down.</p>
+</section>
+
+<section class="d-section" id="bet20">
+	<h2 class="susie act">Bet20 / Bet30</h2>
+	<p>The normal version "<span class="susie act">Bet20</span>" is replaced by "<span class="susie act">Bet30</span>" if <a href="{{ '/misc/armor#jevilstail' | relative_url }}">Jevilstail</a> is equipped to any party member.</p>
+
+	<h3 id="bet20-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>No damage = points</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bet20-ft">Flavor text</h3>
+	<p class="note">Susie wears a gangster outfit and points a finger gun at Tenna.</p>
+	<hr class="hr2">
+	<h4 class="susie act">Bet20</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie bet 20 POINTs on no damage!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4 class="susie act">Bet30</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>JOKER's bet! 30 pts on NO DAMAGE!!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">The bet POINTs are removed from the score. If no damage is taken during the next turn, double the bet POINTs are added to the score.</p>
+</section>
+
+<section class="d-section" id="saction-unused">
+	<h2>Unused version of <span class="susie act">S-Action</span></h2>
+	<p class="note">Would have required Lancer's presence and presumably have prevented negative score changes, going by the flavor text. Only part of the flavor text is left in the files, so the exact animations and effects are unknown.</p>
+
+	<p class="note">Lancer drops down the screen while spinning and stops at a certain point, presumably clinging to the score displayed on the background screen. <!-- stool forme! --> The following text would have played the first time only:</p>
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>Ho ho ho! I may drop, but the points won't!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Lancer clung to the score like a koala! Points can't drop!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Earn<span class="break"></span> score</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p class="note">(The following dialogue box also includes <a href="#ilovetv">ILoveTV</a> and <a href="#saction" class="susie act">S-Action</a>'s "I Love TV" declarations, if said ACTs were used on this turn.)</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei said "I Love TV"!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>He couldn't help but give some SCORE!</d-text>
+	</d-box>
+	<p class="note">The score increases by 10 POINTs if Kris is up / 20 POINTs if Kris is down.</p>
+</section>
+
+<section class="d-section" id="popularboy">
+	<h2 class="ralsei act">PopularBoy</h2>
+
+	<h3 id="popularboy-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Ralsei HPChange =score</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="popularboy-ft">Flavor text</h3>
+	<h4>First time</h4>
+	<p class="note">Spotlights gather on Ralsei, and with a drumroll, he turns into a plush version of himself. The audience awws.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei became the center of attention!</d-text>
+	</d-box>
+
+	<p class="note">Plush-Ralsei jolts.</p>
+
+	<d-box theme="battlemenu">
+		<d-sprite speaker="Ralsei" emotion="U"></d-sprite>
+		<d-text asterisk>Wh... why me!?</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Any change to Ralsei's HP will give you points!</d-text>
+	</d-box>
+	<p class="note">At the end of Tenna's turn, POINTs equivalent to 17% (rounded) of the overall change in Ralsei's HP (whether positive or negative) are added to the score, and Ralsei turns back into his usual pixel self.</p>
+	
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei's HP linked to points!</d-text>
+	</d-box>
+	<p class="note">As above, POINTs are earned depending on whether Ralsei's HP changes by the next turn.</p>
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of fight</h2>
+	<p>Plays on the turn immediately after the score reaches 1000 or above, or Tenna's HP reaches 20% or below.</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>That's it!<span class="break"></span> It's time for<span class="break"></span> the FINAL EPISODE!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>What will happen<span class="break"></span> to our HEROES...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>When they REALIZE<span class="break"></span> this show is NEVER<span class="break"></span> gonna end!?</d-text>
+	</d-box>
+	<p class="note">Tenna triggers a minigame sequence that switches rapidly between all <a href="#minigame">minigames</a> used previously, cutting between them abruptly and not giving any instructions or breathing room. In the top right, a green counter starts at <span class="green">Ch00</span> and increases by 1 with each successive switch between games (even if the game has shown up before as a previous "channel"). The usual minigame UI is also absent, with no timer, score, or miss counter; instead, damage is dealt as soon as mistakes are made.</p>
+
+	<p class="note">After several minigames are played in quick succession, the screen returns to the original set and the instruction "<span class="white">DEFEAT TENNA</span>" appears. A bar on the bottom labelled "<span class="white fnt-8bit">ENEMY</span>" represents Tenna's "HP". Using the Sharpshoot mechanism, the party must destroy projectiles and shoot Tenna until his health bar is reduced to 0.</p>
+
+	<p class="note">Upon taking the final hit, Tenna reels in shock and the screen fades to white. After a moment, it fades back in to the stage, where Tenna now stands clutching his head, his screen black. With a brief burst of static both over the full game screen and Tenna's face, the "channel" changes (signified by the top right counter going up); the party and Tenna are now in the Cooking Show set, the party members dressed in their chef outfits. The channel changes again, and again, and again, going through the Rock Video set, the Monster Movie set, the cowboy game set, and finally returning to the TV Time set. This repeats over and over, faster and faster, until the channel counter reaches around <span class="green">Ch66</span> and the screen abruptly "turns off", <a href="{{ '/chapters/chapter3/finalshowdown#posttenna' | relative_url }}">ending the encounter</a>.</p>
+</section>

@@ -147,7 +147,9 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/intotvworld` - After escaping the Bonus Round via Zapper
 		* `/cityboard` - The unused version of Board 3
 		* `/tennaalone` - Final sequence post-Rouxls where Tenna is abandoned by the remaining Darkners and even Mike
-		* preknight tenna last words - funny-text[name=grand_prize] should have [offset-y=-0.15em]
+		* `/finalshowdown` - final showdown VS tenna and the knight in the cold place, pre-knight
+			* `#posttenna`
+			* preknight, funny-text[name=grand_prize] should have [offset-y=-0.15em]
 	* `/chapter4`
 		* `/noellevisit` - Noelle's house intro. Update this link on other pages if you end up splitting it further
 		* `/bathroomweird` - maybe merge with below for an `outroweird`
@@ -168,13 +170,12 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* OK SO. The rule I've settled on is that if dialogue has the fancy silver border then it doesn't count as part of the encounter, it's instead a pre-/post-fight cutscene which will get its own page under `/chapters`. So only include the dialogue that's actually using the encounter UI on these pages.
 		* Some of the chapter 1 pages don't follow this rule yet but that's going to be fixed don't worry
 	* Include disambiguation pages for the following. Maybe we give them more descriptive names…? Double-check the URLs before creating the disambigs
-		* `/tenna`: Bonus Round and final showdown
+		* Nothing right now!
 	* Chapter 1
 		* gml_Object_obj_ralseienemy_Step_0 (Unused Ralsei tutorial) `/ralsei`
 		* gml_Object_obj_clubsenemy_old_Step_0 (old Clover fight) `/cloverunused`, crosslink `/clover`
 	* ~~Chapter 2~~ DONE
-	* Chapter 3
-		* gml_Object_obj_tenna_enemy_Step_0 `/tenna2` or `/tennafinal`
+	* ~~Chapter 3~~ DONE
 	* ~~Chapter 4~~ DONE
 	* ~~Party dojo~~ DONE up to Chapter 4
 	* gml_Object_obj_multiboss_enemy1_Step_0/gml_Object_obj_multiboss_enemy2_Step_0/gml_Object_obj_multiboss_enemy3_Step_0 `/multiboss` &LeftArrow; no idea what these are. test enemies?
