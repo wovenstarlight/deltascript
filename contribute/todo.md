@@ -107,8 +107,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/cyberworld` - Chapter 2 dark world
 			* `/housepuzzles` - the section in the middle of the acid lake that has all the house bridge puzzles, the one werewire and swatchling, and the maus puzzle
 		* `/tvworld` - Chapter 3 dark world
-			* `/greenroom`
-				* `/trankroom` - T-Rank room
+			* ~~`/greenroom`~~ DONE
 		* `/darksanctuary` - Chapter 4 dark worlds. I think for this one we can include all three sanctuaries' subpages
 		* Ach how do we even subdivide these pages
 * Chapters `/chapters`
