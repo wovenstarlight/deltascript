@@ -147,9 +147,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/intotvworld` - After escaping the Bonus Round via Zapper
 		* `/cityboard` - The unused version of Board 3
 		* `/tennaalone` - Final sequence post-Rouxls where Tenna is abandoned by the remaining Darkners and even Mike
-		* `/finalshowdown` - final showdown VS tenna and the knight in the cold place, pre-knight
-			* `#posttenna`
-			* preknight, funny-text[name=grand_prize] should have [offset-y=-0.15em]
 	* `/chapter4`
 		* `/noellevisit` - Noelle's house intro. Update this link on other pages if you end up splitting it further
 		* `/bathroomweird` - maybe merge with below for an `outroweird`

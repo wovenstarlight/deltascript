@@ -1,0 +1,1619 @@
+---
+title: "Final act: Confronting Tenna and the Roaring Knight"
+
+description: >
+  <p>The party confronts Tenna and the looming threat beyond him.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_ch3_BTB04_Step_0
+    chapters: [3]
+    note: pre-Tenna part 1
+  -
+    name: gml_Object_obj_ch3_BTB05_Step_0
+    chapters: [3]
+    note: pre-Tenna part 2 - flashback
+  -
+    name: gml_Object_obj_ch3_BTB06_Step_0
+    chapters: [3]
+    note: pre-Tenna part 3
+  -
+    name: gml_Object_obj_ch3_PTB01_Step_0
+    chapters: [3]
+    note: post-Tenna
+  -
+    name: gml_Object_obj_ch3_PTB02_Step_0
+    chapters: [3]
+    note: pre-/post-Knight, leaving TV World
+  -
+    name: gml_Object_obj_DEVICE_FAILURE_Create_0
+    chapters: [3]
+    note: losing to Knight text conditions
+  -
+    name: gml_Object_obj_DEVICE_FAILURE_Step_0
+    chapters: [3]
+    note: losing to Knight text
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [3]
+    note: post-Knight Black Shard, Toriel interactions
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [3]
+    note: post-Knight Ralsei interactions
+  -
+    name: gml_Object_obj_ch3_PTB04_krisyard_Step_0
+    chapters: [3]
+    note: entering Light World
+  -
+    name: gml_Object_obj_ch3_PTB04_church_Step_0
+    chapters: [3]
+    note: running past church
+  -
+    name: gml_Object_obj_ch3_PTB04_shelter_Step_0
+    chapters: [3]
+    note: at shelter
+
+toc:
+  -
+    id: pretenna
+    name: Running into Tenna
+  -
+    id: posttenna
+    name: After beating Tenna
+  -
+    id: preknight
+    name: Obtaining the Grand Prize
+  -
+    id: loss
+    name: Losing to the Knight
+    subheadings:
+      -
+        id: loss-skip
+        name: If you don't have a Chapter 3 completion file
+      -
+        id: loss-retry
+        name: If you have a Chapter 3 completion file
+        subheadings:
+          -
+            id: loss-retry1
+            name: First time
+          -
+            id: loss-retry2
+            name: Second time
+            subheadings:
+              -
+                id: loss-retry2-nomantle
+                name: With the Shadow Mantle equipped
+              -
+                id: loss-retry2-mantle
+                name: Without the Shadow Mantle equipped
+          -
+            id: loss-retry3
+            name: Subsequent times
+            subheadings:
+              -
+                id: loss-retry3-lowhp
+                name: First time that the Knight was at 80% HP or below
+              -
+                id: loss-retry3-standard
+                name: Otherwise
+  -
+    id: win
+    name: '"Winning" against the Knight'
+  -
+    id: exit
+    name: Leaving the Dark World
+    subheadings:
+      -
+        id: exit-knight
+        name: The Knight departs
+      -
+        id: exit-toriel
+        name: Checking on Toriel
+      -
+        id: exit-ralsei
+        name: Checking on Ralsei
+      -
+        id: exit-blackshard
+        name: Interacting with the shard
+      -
+        id: exit-susie
+        name: Going after Susie
+  -
+    id: lightworld
+    name: Back in the Light World
+---
+<section class="d-section" id="pretenna">
+	<h2>Running into Tenna</h2>
+
+	<p class="note">The party enters the Cold Place, a silent area, passing a <a href="{{ '/misc/savepoints#coldplace-pretenna' | relative_url }}">SAVE point</a>:</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(The wind blows fiercely, as if it fears the night itself.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(The final act draws near.)</d-text>
+	</d-box>
+
+	<p class="note">Some distance past this SAVE point into the snow, the party stops, Susie and Ralsei's smiles fading.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>Look! There, I can see it...!</d-text>
+	</d-box>
+
+	<p class="note">They hurry forward through the snow and turn away from the player, looking into the distance; the camera pans to show the Dark Fountain standing tall beyond the hills of snow.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="E"></d-sprite>
+		<d-text asterisk>There's the Dark Fountain! If we can just...</d-text>
+	</d-box>
+
+	<p class="note">Tenna drops down to the right of the party, clutching his black-screened head and thrashing about in a panic. The party turns to him, Susie and Ralsei jumping in shock.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk effect="shake">No!! NO!! NO!!!!</d-text>
+	</d-box>
+
+	<p class="note">Susie and Ralsei calm down and watch Tenna unhappily as he points erratically from side to side.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk effect="shake">WHAT are you doing!? WHERE are you going!? Ahaha!!</d-text>
+	</d-box>
+
+	<p class="note">Dressed in his black and white suit and hat, Tenna dances with a cane.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk effect="shake">There are still GAMES to play!! SHOWS to watch!!</d-text>
+	</d-box>
+
+	<p class="note">Still dancing, he takes a step towards the party.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk effect="shake">Laughs and SCREAMS!! Smiles and TEARS!!</d-text>
+	</d-box>
+
+	<p class="note">He takes another step towards the party and begins dancing faster.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk effect="shake">Just wander back to your seats and we can...</d-text>
+	</d-box>
+
+	<p class="note">Susie strikes the ground with her axe, shocking both Ralsei and Tenna; Tenna lurches back a step, no longer dancing and back in his red and yellow suit.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>ENOUGH of your dumb games!!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei and Susie straighten back up; Susie still has her axe out, slung over her shoulder.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>Why the hell do you want us to play so bad anyway!?</d-text>
+	</d-box>
+
+	<p class="note">A pause. Tenna calms from his shock and lowers his head, hands behind his back and screen going black. Another pause. When Tenna speaks, his voice is pitched lower than usual.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Kris.</d-text>
+	</d-box>
+
+	<p class="note">The camera pans over to focus on Tenna.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Kris knows why.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Do you remember it, Kris?</d-text>
+	</d-box>
+
+	<p class="note">A pause. Tenna lifts his head, his screen now covered in static, the sound of which fades in slowly.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>When everyone came over for the holidays?</d-text>
+	</d-box>
+
+	<p class="note">The static from Tenna's face fills the whole screen, fading to white. Shortly after, the white fades to show the living room of the Dreemurr residence in sepia, silhouettes of the Dreemurr and Holiday families sitting in front of the TV, four adults on the couch and four children on the floor. The TV's screen glows white, and a Christmas tree stands where Chairiel resides in the present. The whole image has faded edges like an old memory, and the sound of static is replaced by <a href="{% include wikilink page='Flashback (Excerpt)' %}">slow, haunting music</a>.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Back when I was just a little old TV.</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Everyone used to gather around my glow to watch the specials,</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Smiling. Laughing. Eating butterscotch pie.</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Wasn't that just so much... fun?</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>To watch me.</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>I... was so happy.</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Then...</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>People stopped coming.</d-text>
+	</d-box>
+
+	<p class="note">As Tenna delivers his last line, people start fading one by one: Dess, Carol, Asgore, Noelle, Rudy. Once only Toriel and her children are left, Tenna speaks again:</p>
+
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Everyone disappeared... one by one...</d-text>
+	</d-box>
+
+	<p class="note">A pause. Then, in silence, Asriel disappears as well.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>No one wanted to watch TV anymore.</d-text>
+	</d-box>
+
+	<p class="note">Another silence as Kris disappears.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>No one wanted to play games anymore.</d-text>
+	</d-box>
+
+	<p class="note">Another pause as Toriel disappears. The music fades out and the room goes dark, with only the white glow of the TV still visible.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>I've been all alone...</d-text>
+	</d-box>
+
+	<p class="note">Finally, even the TV's glow fades out, leaving the room in absolute darkness.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Until now.</d-text>
+	</d-box>
+
+	<p class="note">Abruptly, the TV and the stand it rests on cut back into view as wind howls in the background. The TV and its stand are dimly lit, as if seen during nighttime, and the screen is filled with static and a toothy smile — Tenna's smile.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>When the KNIGHT appeared...</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>The ROARING KNIGHT.</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>And I was told that if I keep you three busy,</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>I can have ALL the people watch me that I want.</d-text>
+	</d-box>
+
+	<p class="note">The screen fades to black and the howling of the wind goes quiet as well. The scene then fades back in on the Cold Place, Tenna standing with his head bowed and screen dark in front of the serious-looking party; among them, Susie has put her axe away.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>And, I've been having SO much fun playing with you all,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>I... just don't want it to end!</d-text>
+	</d-box>
+
+	<p class="note">Tenna lifts his head, screen still dark.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>So... please... just say it with me.</d-text>
+	</d-box>
+
+	<p class="note">Susie and Ralsei look shocked as Tenna points at the viewer, face restored and grinning, his voice once again at its usual pitch.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text><funny-text name="its_tv_time" class="fullwidth fullheight center"></funny-text></d-text>
+	</d-box>
+
+	<p class="note">Susie rushes forward to stand in front of Tenna; Kris and Ralsei watch unhappily.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Enough already!!</d-text>
+	</d-box>
+
+	<p class="note">Susie swings her axe at Tenna, who throws himself to his hands and knees to dodge the strike. In the back, Ralsei looks shocked. He straightens up and watches when Tenna stands back up, adjusting his tie with a tight, aggrieved smile, trembling with frustration.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Wh-what are you doing!? I just had this suit DE-AXED!!!</d-text>
+	</d-box>
+
+	<p class="note">Hefting her axe up, Susie points threateningly at Tenna.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>We're done messing around.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="X"></d-sprite>
+		<d-text asterisk>Give back Toriel. Now.</d-text>
+	</d-box>
+
+	<p class="note">Tenna stills, putting his hands behind his back and lowering his head, his screen dark.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Alright. I get it.</d-text>
+	</d-box>
+
+	<p class="note">He lifts his head, face restored and grinning, and points upward as he begins rocking unsteadily from side to side.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>I. GET IT! I REALLY get it!!</d-text>
+	</d-box>
+
+	<p class="note">His screen goes dark as he clutches his head in a panic.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Talking!! I've been doing too much... TALKING!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>NO MORE questions!! What you need...</d-text>
+	</d-box>
+
+	<p class="note">He stands straight, screen still dark, and snaps his fingers. The scenery of the Cold Place splits in half and parts, revealing the TV Time set behind it, missing the curtains, lights, podiums, and audience. The screen at the back reads "<span class="white fnt-8bit">SCORE</span>", with a "<span class="white fnt-8bit">0</span>" underneath.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Is another <funny-text name="physical_challenge"></funny-text>!!</d-text>
+	</d-box>
+
+	<p class="note">The party members and Tenna take their places on stage as <a href="{{ '/encounters/tennacoldplace' | relative_url }}">the battle begins</a>.</p>
+</section>
+
+<section class="d-section" id="posttenna">
+	<h2>After beating Tenna</h2>
+
+	<p class="note">The screen remains dark from being turned off for several seconds.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>N... no...! No no...</d-text>
+	</d-box>
+
+	<p class="note">The screen brightens to show Tenna and the party in the Cold Place once more, Tenna looking distressed as he shrinks down and cries out slowly, jolting at intervals.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Noooooooo...</d-text>
+	</d-box>
+
+	<p class="note">Tenna, now smaller than even the party members, hangs his head with a darkened screen and his hands behind his back. A pause. Then a spotlight turns on over Tenna, casting the rest of the scene into shadow.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>I... I just wanted to be watched...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>I just wanted you to look at me...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>One last time..</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Since... since a little while ago...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>All that I've been broadcasting, is the same reruns, over and over...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>I... I don't have anything anyone wants to watch anymore...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>I'm irrelevant... I'm junk...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>I don't wanna be thrown away...</d-text>
+	</d-box>
+
+	<p class="note">Another spotlight turns on in front of the party, and Ralsei walks forward into the light, looking serious.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="8"></d-sprite>
+		<d-text asterisk>Mr. Tenna... I... understand how you feel.</d-text>
+	</d-box>
+
+	<p class="note">He turns to the side towards the viewer.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>To want to be... important. To be... useful.</d-text>
+	</d-box>
+
+	<p class="note">He faces Tenna again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="5"></d-sprite>
+		<d-text asterisk>Perhaps... you might not be watched much anymore...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>But... that doesn't make you a failure, Tenna!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>You've brought smiles, light into Lightner's lives...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>... to Kris's family and friends, for so long.</d-text>
+	</d-box>
+
+	<p class="note">He turns to the side towards the viewer.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>So, there's nothing to be ashamed of.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>If... that ever comes to an end.</d-text>
+	</d-box>
+
+	<p class="note">He faces Tenna again, head lowered and looking sad.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="e"></d-sprite>
+		<d-text asterisk>Darkners... all become obsolete eventually.</d-text>
+	</d-box>
+
+	<p class="note">He lifts his head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="a"></d-sprite>
+		<d-text asterisk>But we aren't "real", Tenna.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="e"></d-sprite>
+		<d-text asterisk>We shouldn't make Lightners worry about what happens to us.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="b"></d-sprite>
+		<d-text asterisk>It'd just... make them unhappy, wouldn't it?</d-text>
+	</d-box>
+
+	<p class="note">Tenna and his spotlight shrink down even smaller.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>... m... maybe... you're right...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>B... but... I...</d-text>
+	</d-box>
+
+	<p class="note">An unhappy-looking Susie charges forward into the spotlight, shoving Ralsei out of the way.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>Hey.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="W"></d-sprite>
+		<d-text asterisk>You wanna know what I think?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="8"></d-sprite>
+		<d-text asterisk>Susie?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>I think...</d-text>
+	</d-box>
+
+	<p class="note">Susie walks forward, approaching Tenna; Ralsei turns to watch them, still wearing a serious expression. Susie turns to the side away from the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>You don't have to take being thrown away.</d-text>
+	</d-box>
+
+	<p class="note">Everything outside of Susie and her spotlight — the Cold Place, the other party members, Tenna — all fades into darkness, leaving Susie standing alone in the light.</p>
+
+	<!-- all dialogue from here on uses portrait V but that gets hidden -->
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>Lemme tell you.</d-text>
+	</d-box>
+
+	<p class="note"><a href="{% include wikilink page='Lost Girl' %}">Gentle music</a> starts playing.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>I've never really been able to... make friends.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>I was always... the scary girl. The bad kid.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>The only times anyone ever got close to me,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>... were as a joke.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>And even if I did start to make a real friend...</d-text>
+	</d-box>
+
+	<p class="note">The spotlight fades; Susie stands completely alone in the darkness…</p>
+
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>... I'd always end up...</d-text>
+	</d-box>
+
+	<p class="note">…until she, too, fades away.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>Moving away.</d-text>
+	</d-box>
+
+	<p class="note">A long pause. The scene fades from black to Alphys's classroom, devoid of people and depicted in sepia tones.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>When I moved here, I thought it would be the same thing.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>I felt like you.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>I felt like a broken toy no one wanted.</d-text>
+	</d-box>
+
+	<p class="note">A pause. The classroom fades to black. Another pause.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">A pause. The scene fades from black to the graveyard, similarly devoid of people and depicted in sepia tones.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>Kris's mom saw me. Toriel.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>Saw me sitting on the bench in the graveyard, crying.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>She asked me what was wrong, and...</d-text>
+	</d-box>
+
+	<p class="note">The scene fades to black. A pause.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>Told me everything was going to be okay.</d-text>
+	</d-box>
+
+	<p class="note">A pause. The scene fades from black to QC's diner, yet again empty and in sepia tones.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>Took me to the diner. Bought me a hot chocolate.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>Talked to me. Told me I'd make friends.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>That... gave me hope. Even just a little.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">A pause. The scene fades to black, then fades back in on the Cold Place, showing Susie still looking into the distance, a tiny dispirited Tenna on the right, and Kris and Ralsei watching them from the left. The scene remains dim, with Susie alone lit properly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>And recently. That hope's been growing.</d-text>
+	</d-box>
+
+	<p class="note">The scene brightens to full color as Susie turns to Kris and Ralsei…</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Because... now I have friends.</d-text>
+	</d-box>
+
+	<p class="note">…and smiles, Ralsei smiling back at her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Real friends.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Friends I wanna keep.</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to the side towards the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Kris. Ralsei. Lancer... Toriel, too.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="R"></d-sprite>
+		<d-text asterisk>Even though I thought I was broken...</d-text>
+	</d-box>
+
+	<p class="note">She turns to Tenna.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="S"></d-sprite>
+		<d-text asterisk>I just needed to find the right people, y'know?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>So...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="S"></d-sprite>
+		<d-text asterisk>Don't worry, dude.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="T"></d-sprite>
+		<d-text asterisk>Someone out there wants you. Promise.</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Kris, you'll help me ask around town, right?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Someone's gotta want a TV.</d-text>
+	</d-box>
+
+	<p class="note">A pause. Susie turns back to Tenna as he lifts his head. The music fades out.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>You... you'll help me!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>SUSIE!!! You...</d-text>
+	</d-box>
+
+	<p class="note">Tenna grows back to his full size, hands pressed together by his face as a flower blooms from the tip of his nose and he wobbles gently. <a href="{% include wikilink page='And Now For Today’s Sponsors…!' %}">Cheery music</a> starts playing.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>You're INCREDIBLE! You're AMAZING!! No... you're MARVELOUS!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>I feel electric!! I feel like a million bucks!!</d-text>
+	</d-box>
+
+	<p class="note">A brilliantly-glowing meter appears from the left, labelled "HOPE", and promptly rises until it's full; the meter flashes various colors and shakes wildly.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>This... this must be what HOPE feels like!!</d-text>
+	</d-box>
+
+	<p class="note">Tenna points wildly in all directions as he speaks.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>We're inventing a <funny-text name="hall_of_fame"></funny-text> just for you!!!</d-text>
+	</d-box>
+
+	<p class="note">Susie steps forward and poses. A long pause. Then Susie looks up at Tenna with her hands on her hips and speaks. The music instantly stops, Tenna frozen as he points left.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>But... you gotta give back Toriel.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="T"></d-sprite>
+		<d-text asterisk>She's got people that need her, too.</d-text>
+	</d-box>
+
+	<p class="note">Tenna stands up straight, hands behind his back and darkened screen lowered.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>I...</d-text>
+	</d-box>
+
+	<p class="note">He raises his head, screen still dark.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>I understand!</d-text>
+	</d-box>
+
+	<p class="note">He bows his head again.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>I know it's not what the KNIGHT wants, but...</d-text>
+	</d-box>
+
+	<p class="note">The music resumes as Tenna begins pointing erratically again.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Kris!! Susie!! Good contestants deserve a good prize!!</d-text>
+	</d-box>
+
+	<p class="note">Tenna points sharply towards the party as Susie turns to face him properly.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>This way!!</d-text>
+	</d-box>
+
+	<p class="note">The HOPE meter slides offscreen as Tenna dances his way off to the right, taking the music with him. Once he's gone, Ralsei turns to the side facing the player; he's still smiling. Susie turns to him when he speaks.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="I"></d-sprite>
+		<d-text asterisk>Susie...</d-text>
+	</d-box>
+
+	<p class="note">A slight pause. Susie walks up to Ralsei and he turns to her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Hear that, Ralsei?</d-text>
+	</d-box>
+
+	<p class="note">Ralsei ducks his head and loses his smile, looking sad.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>No one's gonna get thrown away.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Not you. Not me. Not Kris.</d-text>
+	</d-box>
+
+	<p class="note">Susie's expression gentles as she puts a hand on Ralsei's shoulder.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Got it?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="I"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">Ralsei lifts his head, smiling again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>... got it, Susie.</d-text>
+	</d-box>
+
+	<p class="note">Susie regains her usual expression as she lowers her hand.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Well, let's go!!</d-text>
+	</d-box>
+
+	<p class="note">Susie and Ralsei line up behind Kris, and control is returned to the player. Before progressing onwards, they can optionally backtrack to the <a href="{{ '/misc/savepoints#coldplace-preknight' | relative_url }}">SAVE point</a> at the entrance to the Cold Place, whose narration has changed:</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(Your hand lingers in the bright light.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(The light, which only you can see...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(A strange calm washes over you.)</d-text>
+	</d-box>
+
+	<p class="note">The party can now progress onwards to meet Tenna and receive their prize.</p>
+</section>
+
+<section class="d-section" id="preknight">
+	<h2>Obtaining the Grand Prize</h2>
+
+	<p class="note">As the party approaches the Christmas tree, they fan out. Tenna is waiting by the tree where the snow starts to peter out, hands spread and looking pleased. The camera pans over to show everybody, and <a href="{% include wikilink page='Hall of Fame' %}">celebratory music</a> plays.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Audience, would you please stand up and clap for our winners!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>For outstanding kindness and bravery, the Lightners have won...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>THE <funny-text name="grand_prize" offset-y="-0.15em"></funny-text>!!!</d-text>
+	</d-box>
+
+	<p class="note">Cheering and applause sounds as the camera pans up to the top of the tree, where Toriel's capsule sits as the tree topper. The capsule floats up off the tree and descends to the ground, where the capsule comes apart and disappears alongside the tree. Toriel, still in her throne, lands gently on the ground.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Here you go!! She's all yours, folks!!</d-text>
+	</d-box>
+
+	<p class="note">Tenna presses his hands by his face and wobbles slightly as a flower blooms from the tip of his nose.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>How wonderful!! The family's all together again!!</d-text>
+	</d-box>
+
+	<p class="note">He throws his hands happily in the air.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Now you can all finally</d-text>
+	</d-box>
+
+	<p class="note">Mid-sentence, Tenna's words and the music are cut off as the screen turns black and an unseen entity attacks him, delivering twin slashes upon his silhouetted form. A moment's silence. Then the darkness cuts back to the Cold Place, where a horrified Susie and Ralsei and an impassive Kris watch as Tenna's arms are severed with the sound of shattering glass and fall away. Dealt several thousand points of damage, Tenna's screen is filled with static; after a moment, his screen displays color bars with a blaring whine as he falls out of sight.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="e"></d-sprite>
+		<d-text asterisk>T- TENNA!?</d-text>
+	</d-box>
+
+	<p class="note">The party members rush forward, no longer smiling. Susie points at someone offscreen to the right.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="d"></d-sprite>
+		<d-text asterisk>Who... WHO the hell are you!?</d-text>
+	</d-box>
+
+	<p class="note">The landscape dims around the characters as the camera pans to the right, revealing an all-black figure floating in midair near the base of the Dark Fountain, accompanied by <a href="{% include wikilink page='Breath' %}">eerie music</a>. Susie lowers her hand.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="b"></d-sprite>
+		<d-text asterisk>If... if you don't tell us who you are, then...</d-text>
+	</d-box>
+	
+	<p class="note">There's a glint where the figure's eye would be, before they turns around; their head and arms hang down, a liquid of some sort dripping from their face. The figure then lifts what appears to be a helmeted and antlered head, the visor looking ahead, and raises a hand with what seems like a hole in the palm. The hole widens and emits a purplish beam of light that locks onto Toriel in her throne, beginning to draw her towards the figure.</p>
+
+	<p class="note">Ralsei is shocked by this action; Susie is also wide-eyed, but only for a moment before she lunges forward and brings her axe down in the purple beam's path, stopping the figure. Ralsei calms as Susie speaks.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="d"></d-sprite>
+		<d-text asterisk>Like hell we're letting you take her...!</d-text>
+	</d-box>
+
+	<p class="note">The figure lowers its hand and turns into a spinning ball that darts away to the right.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="J"></d-sprite>
+		<d-text asterisk>Kris! Ralsei! C'mon!!</d-text>
+	</d-box>
+
+	<p class="note">Kris, Susie, and Ralsei run forward, stopping near the Dark Fountain as the ball reforms into the figure. It folds into the fetal position and clutches its head as power gathers around it, then throws its head back and roars with wide eyes and a gaping maw. The ribs of its chest open up to reveal what looks like an eye, and its hands are held clawed by its side. An intense red glare emits from the figure, distorting the shapes of the party members.</p>
+
+	<p class="note">The figure then straightens up, form returning to normal, and holds out a hand, from which emerges a sword. The figure grips the sword in its other hand and swings it into a battle-ready stance, <a href="{{ '/encounters/knight' | relative_url }}">drawing the party into an encounter and revealing itself to be the Roaring Knight</a>.</p>
+</section>
+
+<section class="d-section" id="loss">
+	<h2>Losing to the Knight</h2>
+
+	<h3 id="loss-skip">If you don't have a Chapter 3 completion file</h3>
+	<p>As in, if you haven't played Chapter 3 to completion yet.</p>
+
+	<p class="note">As soon as the last party member is DOWNed/SWOONed, the turn ends, the battle UI disappears, and the scene continues to the <a href="#exit">end of the fight</a>.</p>
+
+	<hr>
+
+	<h3 id="loss-retry">If you have a Chapter 3 completion file</h3>
+	<p>As in, if you've played Chapter 3 to completion at least once before.</p>
+
+	<p class="note">The screen cuts to black save for the SOUL. Rather than breaking apart as per the usual game over scene, the SOUL instead floats towards the top of the screen. A droning plays repeatedly as an unseen entity speaks, the dialogue dependent on how many times you've lost to the Knight.</p>
+
+	<h4 id="loss-retry1">First time</h4>
+
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="text-center-expand">VERY<span class="double break"></span> INTERESTING.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="text-center-expand">YOUR LOSS HERE<span class="double break"></span> IS ALL<span class="double break"></span> BUT GUARANTEED.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="text-center-expand">AND YET<span class="double break"></span> YOU PERSIST...</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">IF YOU ARE SO<span class="break"></span> DETERMINED<span class="break"></span> TO TRY ONCE MORE</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="text-center-expand">THEN<span class="double break"></span> SHALL WE HASTEN?</d-text>
+	</d-box>
+
+	<p class="note">A pause, before the SOUL fades and a choice menu appears.</p>
+
+	<d-choices theme="fade" offset="10%">
+		<d-option index="0" text="GO BACK#(FIGHT AGAIN)"></d-option>
+		<d-option index="1" text="GO FORWARD#(MOVE ON)"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The droning cuts off and the screen fades to white, then back in to the TV World's Dark Fountain with the Knight and battle-ready party. The Knight once again curls up, gathers power, and roars, then summons its sword and <a href="{{ '/encounters/knight' | relative_url }}">draws the party into an encounter</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">The screen fades to black, then back in on the encounter but with the battle UI gone. All party members are DOWNed or SWOONed while the Knight still floats to the right. <a href="#exit">The scene progresses to its end.</a></p>
+	</d-option-panel>
+
+	<h4 id="loss-retry2">Second time</h4>
+	<hr class="hr2">
+	<h5 id="loss-retry2-nomantle">With the <a href="{{ '/misc/armor#shadowmantle' | relative_url }}">Shadow Mantle</a> equipped</h5>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="text-center-expand">AND SO, YOU<span class="break"></span> MEET WITH THE<span class="break"></span> SAME FATE.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="text-center-expand">SHALL YOU TRY<span class="break"></span> ONCE MORE?</d-text>
+	</d-box>
+
+	<hr class="hr3">
+
+	<h5 id="loss-retry2-mantle">Without the <a href="{{ '/misc/armor#shadowmantle' | relative_url }}">Shadow Mantle</a> equipped</h5>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="text-center-expand">VERY<span class="double break"></span> INTERESTING.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="text-center-expand">YOU ARE MISSING<span class="break"></span> SOMETHING<span class="break"></span> IMPORTANT.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="text-center-expand">YOU WON'T WIN<span class="break"></span> LIKE THIS.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="text-center-expand">STILL...<span class="break"></span> WILL YOU<span class="break"></span> PERSIST?</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<d-choices theme="fade" offset="10%">
+		<d-option index="0" text="GO BACK#(FIGHT AGAIN)"></d-option>
+		<d-option index="1" text="GO FORWARD#(MOVE ON)"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The droning cuts off and the screen fades to white, then back in to the TV World's Dark Fountain with the Knight and battle-ready party. The Knight once again summons its sword and <a href="{{ '/encounters/knight' | relative_url }}">draws the party into an encounter</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">The screen fades to black, then back in on the encounter but with the battle UI gone. All party members are DOWNed or SWOONed while the Knight still floats to the right. <a href="#exit">The scene progresses to its end.</a></p>
+	</d-option-panel>
+
+	<h4 id="loss-retry3">Subsequent times</h4>
+	<hr class="hr2">
+	<h5 id="loss-retry3-lowhp">First time that the Knight was at 80% HP or below</h5>
+
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="text-center-expand">INCREDIBLE.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="text-center-expand">I FELT IT THERE<span class="double break"></span> SHINING.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="text-center-expand">YOUR POWER.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="text-center-expand">A LITTLE FURTHER.</d-text>
+	</d-box>
+
+	<hr class="hr3">
+
+	<h5 id="loss-retry3-standard">Otherwise</h5>
+	<p class="note">The choice is presented without any commentary.</p>
+
+	<hr class="hr2">
+
+	<d-choices theme="fade" offset="10%">
+		<d-option index="0" text="GO BACK#(FIGHT AGAIN)"></d-option>
+		<d-option index="1" text="GO FORWARD#(MOVE ON)"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The droning cuts off and the screen fades to white, then back in to the TV World's Dark Fountain with the Knight and battle-ready party. The Knight once again summons its sword and <a href="{{ '/encounters/knight' | relative_url }}">draws the party into an encounter</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">The screen fades to black, then back in on the encounter but with the battle UI gone. All party members are DOWNed or SWOONed while the Knight still floats to the right. <a href="#exit">The scene progresses to its end.</a></p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="win">
+	<h2>"Winning" against the Knight</h2>
+
+	<p class="note">Once the Knight lowers its guard, the first attack causes the battle UI to disappear as its form distorts wildly. The screen fades to white, then cuts back to the same scene with the Knight once again humanoid. The snow of the Cold Place fades back into view while the glow behind the Knight fade away and the Fountain returns to its dark shades. All the party members are up, watching the Knight with solemn faces. The wind howls in the back.</p>
+
+	<p class="note">The sound of the wind cuts off as the Knight's form begins distorting repeatedly, flickering in and out of its ball form and a badly-distorted humanoid form.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="e"></d-sprite>
+		<d-text asterisk>We... we actually beat it?</d-text>
+	</d-box>
+
+	<p class="note">Susie walks forward towards the Knight, eyes cast in shadow and smiling. The camera follows, focusing on the two of them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="W"></d-sprite>
+		<d-text asterisk>What, don't tell me you've had ENOUGH already?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+		<d-text asterisk>C'mon, we were just getting started!</d-text>
+	</d-box>
+
+	<p class="note">A pause. Susie leaps forward and attempts to strike the Knight with her axe — but the distortion stops just in time for them to catch her blade on their sword with a crash. They're locked in the position for a few moments, blasts of force rippling out from the point where their weapons connect.</p>
+
+	<p class="note">Finally, Susie and the Knight freeze as Susie's axe catches on the Knight's sword. They knock her back, but their blade is chipped, a gleaming shard flying off and falling to the ground in front of Susie, who lands on her feet with her axe at the ready. The Knight once again turns into their ball form.</p>
+
+	<p class="note">The camera pans back over to show the rest of the party as well, and the howling of the wind becomes audible once more. A long pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="X"></d-sprite>
+		<d-text asterisk>Heheh...</d-text>
+	</d-box>
+
+	<p class="note">Susie throws her head back and laughs.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+		<d-text asterisk>Not so tough NOW, are you!?</d-text>
+	</d-box>
+
+	<p class="note">She begins to laugh again — and is cut off as a massive, violent blow sweeps past her with an echoing crack, the screen turning black and only the white flash of the swinging blade visible. After a moment, the black cuts away to show Susie SWOONed and limp on the ground, sliding back with the force of the blow with a sound like shattering glass. Ralsei is frozen in horror looking at her. Kris is as impassive as ever, and the Knight is missing altogether. The wind, cut off by the attack, is once more heard.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Y"></d-sprite>
+		<d-text asterisk>S-Susie!!!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei hurries forward to look at her more closely. A pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Z"></d-sprite>
+		<d-text asterisk>H... how could you...</d-text>
+	</d-box>
+
+	<p class="note">Another massive blow tears through the scene, silencing and darkening all else. Shattering is heard as the scene cuts back to show Ralsei a mere pile of clothes on the ground, also SWOONED and knocked back from the force of the blow. The wind howls once more, but fades after a few moments.</p>
+
+	<p class="note">The screen cuts to black, silent. A long pause. The black cuts away and the wind howls as the humanoid Knight hovers in front of Kris, its sword resting on their shoulder. Kris slowly begins to kneel.</p>
+
+	<p class="note">Before they can finish the act, the scene cuts to silent black once more. A long pause. The scene cuts back; Kris is now sitting slumped over on the ground as though DOWNed, though no text announces this status as it did with Susie and Ralsei. The Knight floats to the right as they did during the preceding battle, and <a href="#exit">the scene progresses to its end</a>.</p>
+</section>
+
+<section class="d-section" id="exit">
+	<h2>Leaving the Dark World</h2>
+
+	<h3 id="exit-knight">The Knight departs</h3>
+
+	<p class="note">With Kris, Susie, and Ralsei all taken down, the <a href="{% include wikilink page='Breath' %}">eerie music</a> resumes and the Knight floats forward. Hovering above Susie, it extends a hand and attempts to seize Toriel again with its purple beam, but stops when Susie grabs its ankle with a shaking hand. The music halts as well.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>No... you... you can't...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>You can't... take her...</d-text>
+	</d-box>
+
+	<p class="note">A long pause. Then comes the sound of magic spawning from somewhere offscreen; immediately after, three blasts of three bright blue spears each fly at the Knight, who turns into a ball to dodge. Susie manages to get to her knees. The camera pans to follow the ball-shaped Knight as it darts towards the right and retakes its humanoid form when coming upon Undyne. She's wearing Dark World armor, has a spear hefted overhead, and is pointing angrily at the Knight. <a href="{% include wikilink page='The Chase' %}">Tense music</a> begins playing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Undyne" emotion="1"></d-sprite>
+		<d-text asterisk>Hey!! You!! Stop!! Police!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Undyne" emotion="4"></d-sprite>
+		<d-text asterisk>Wh... What the hell is going on here!!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Undyne" emotion="3"></d-sprite>
+		<d-text asterisk>You've got some explaining to do, punk!!</d-text>
+	</d-box>
+
+	<p class="note">The Knight twists briefly into a ball, then takes a birdlike form that flies forward and snatches up Undyne; her hat falls as she's carried away with a surprised face. The camera follows the bird-Knight and Undyne as they fly over a dark landscape littered with glowing spears.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Undyne" emotion="8"></d-sprite>
+		<d-text asterisk>Hey, what are you doing!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Undyne" emotion="9"></d-sprite>
+		<d-text asterisk>Put me... PUT ME DOWN!!!</d-text>
+	</d-box>
+
+	<p class="note">The Knight and Undyne fly offscreen. The camera pans back to the party, where Kris and Ralsei have also managed to sit up. Susie shifts.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>Hey...</d-text>
+	</d-box>
+
+	<p class="note">She lifts her head, no longer needing her axe for support, and shakily gets to her feet, taking off after the Knight.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="J"></d-sprite>
+		<d-text asterisk>Hey, where the hell are you going?!</d-text>
+	</d-box>
+
+	<p class="note">A pause. Kris slowly gets to their feet as well, and control is returned to the player. It is no longer possible to backtrack through the Cold Place. The player can check in on <a href="#exit-toriel">Toriel</a> and <a href="#exit-ralsei">Ralsei</a>, <a href="#exit-blackshard">pick up the shard of the Knight's sword (if present)</a>, or <a href="#exit-susie">follow after Susie to end the chapter</a>.</p>
+
+	<hr>
+
+	<h3 id="exit-toriel">Checking on Toriel</h3>
+	<h4>If you lost to the Knight</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(She's sleeping peacefully...)</d-text>
+	</d-box>
+
+	<h4>If you "won" against the Knight</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Her face contorted...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(It looks like she's having a nightmare.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="exit-ralsei">Checking on Ralsei</h3>
+	<h4>If you lost to the Knight</h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>K... Kris... I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>I'll be... fine.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>You do... whatever you need to.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<h4>If you "won" against the Knight</h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>Somehow, I thought we... had won... for a moment...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>That... we would be able to end the battle... here and now...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>... you...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>You were so brave... and yet...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>In the end... our struggle...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>It's only beginning, isn't it...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>... Isn't it, Kris...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>Kris, I... I'll be fine.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>But... if I'm hurt this badly, then Susie must be...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>Kris... you'll... make sure she's alright, won't you?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="exit-blackshard">Interacting with the shard</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(SHADOW CRYSTAL was added to your Key Items.)</d-text>
+	</d-box>
+	<p class="note">A <a href="{{ '/misc/darkitems#shadowcrystal' | relative_url }}">Shadow Crystal</a> is added to the inventory.</p>
+	<p class="note">The game then checks to see if the weapons inventory is full. If so, the game checks for the presence of one of the following weapons, and makes room by removing one instance of the first weapon from the list it finds:</p>
+	<ul class="note">
+		<li><a href="{{ '/misc/weapons#brokensword' | relative_url }}">Broken Sword</a></li>	<!-- 20	-->
+		<li><a href="{{ '/misc/weapons#spookysword' | relative_url }}">Spookysword</a></li>		<!-- 5	-->
+		<li><a href="{{ '/misc/weapons#braveax' | relative_url }}">Brave Ax</a></li>			<!-- 6	-->
+		<li><a href="{{ '/misc/weapons#daintyscarf' | relative_url }}">Dainty Scarf</a></li>	<!-- 10	-->
+		<li><a href="{{ '/misc/weapons#mechasaber' | relative_url }}">Mecha Saber</a></li>		<!-- 16	-->
+		<li><a href="{{ '/misc/weapons#autoaxe' | relative_url }}">Auto Axe</a></li>			<!-- 17	-->
+		<li><a href="{{ '/misc/weapons#fiberscarf' | relative_url }}">Fiber Scarf</a></li>		<!-- 18	-->
+		<li><a href="{{ '/misc/weapons#saber10' | relative_url }}">Saber 10</a></li>			<!-- 23	-->
+		<li><a href="{{ '/misc/weapons#toxicaxe' | relative_url }}">Toxic Axe</a></li>			<!-- 24	-->
+		<li><a href="{{ '/misc/weapons#flexscarf' | relative_url }}">Flex Scarf</a></li>		<!-- 25	-->
+	</ul>
+	<p class="note">If none of these weapons are found in the weapons inventory, nothing happens and the weapons inventory remains full.</p>
+	<hr class="hr2">
+	<h4>If the weapons inventory isn't full</h4>
+	<p>This also applies if one of the weapons listed above was found and consequently trashed to make room in the inventory.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(BLACK SHARD was added to your Weapons.)</d-text>
+	</d-box>
+	<p class="note">The <a href="{{ '/misc/weapons#blackshard' | relative_url }}">Black Shard</a> is added to the inventory.</p>
+	<hr class="hr3">
+	<h4>If the weapons inventory is full</h4>
+	<p class="note">The Black Shard is not added to the weapons inventory.</p>
+	<p class="note"><small>(Yes, that does mean that if you "win" against the Knight but have filled your weapons inventory with e.g. Bounce Blades, you don't get the Black Shard 😔)</small></p>
+	<!-- Full list of weapons that can bar you from getting the Black Shard:
+		1. Wood Blade
+		14. Bounce Blade
+		2. Mane Ax
+		7. Devilsknife
+		3. Red Scarf
+		9. Ragger
+		19. Ragger 2
+		21. Puppet Scarf
+		12. Snow Ring
+		13. Thorn Ring
+		22. Freeze Ring
+	-->
+	<hr class="hr2">
+	<p class="note">The sparkling shard disappears from the ground and can no longer be interacted with.</p>
+
+	<hr>
+
+	<h3 id="exit-susie">Going after Susie</h3>
+	<p class="note">As the player progresses towards the right past the stray spears, they walk deeper and deeper into a fog of darkness. Through the darkness, Susie becomes visible crouched on the ground and facing away from the player. Kris approaches her.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>Can't... see... anything...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>Kris... Kris!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>There's...</d-text>
+	</d-box>
+
+	<p class="note">Susie stands. In front of her, a golden Great Door becomes faintly visible; the doors are partially open, and pure white light can be seen beyond them.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>There's some kind of... door here...!</d-text>
+	</d-box>
+
+	<p class="note">Susie rushes through the door and vanishes into the light. Kris walks after her, pausing in front of the doors for a moment before passing through. The tense music fades to silence as they disappear into the light beyond. A moment later, blinding white light overtakes the screen, similar to when a Dark Fountain is sealed.</p>
+</section>
+
+<section class="d-section" id="lightworld">
+	<h2>Back in the Light World</h2>
+
+	<p class="note">The white screen fades to black. A pause. Kris and Susie fade into view, crouched down in the center of the darkness. Then their surroundings fade into view as well — they are in the Light World just outside the Dreemurr residence, its door wide open and darkness bubbling out. Kris and Susie's Dark World outfits fade into their Light World wear at the same time, and the deep thrum of darkness becomes audible. A pause.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>We...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="e"></d-sprite>
+		<d-text asterisk>We're in the Light World...?</d-text>
+	</d-box>
+
+	<p class="note">Susie jumps to her feet as she notices something, one fist raised. Kris gets to their feet a moment later.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="e"></d-sprite>
+		<d-text asterisk>W... wait!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="d"></d-sprite>
+		<d-text asterisk>Kris! I... I still see someone! They're down there!</d-text>
+	</d-box>
+
+	<p class="note">The <a href="{% include wikilink page='The Chase' %}">tense music</a> starts back up as Susie seizes Kris by the hand and sprints south, dragging them after her. The screen fades to black, then fades back in on Susie hauling Kris past the church, speaking as they run.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="J"></d-sprite>
+		<d-text asterisk>Down here, past the church!!</d-text>
+	</d-box>
+
+	<p class="note">The screen fades to black again as they run down the southern path, then fades in on them running through the trees. Bubbling black darkness heralds their approach to the shelter, whose doors are wide open and lead into absolute darkness. But just as Susie and Kris come around the side and near the doors, they slam shut. A wide-eyed Susie comes to a stop and recoils in shock, still holding Kris's hand.</p>
+
+	<p class="note">Susie lets go of Kris to rush up to the doors and slam her fists against them; she continues pounding a fist against the doors as she yells, while Kris comes to stand behind her and watches her.</p>
+
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>HEY! HEY OPEN UP!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>Undyne...! Officer Undyne, say something!!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>H-hey... hey, this is a joke, right!?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>You're about to come out of there, right!?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">Susie slows down in pounding the doors. One last slam of her fist knocks a panel on the right door loose; the panel falls to the ground, and Susie takes a few steps back in wide-eyed surprise. She then approaches the uncovered panel in the door, ducking her head slightly to examine it. In the background, crickets begin chirping over the low rush of the wind.</p>
+
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>What the... what the hell is this?</d-text>
+	</d-box>
+
+	<p class="note">Susie lifts her head.</p>
+
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>It's some sort of... electronic... lock?</d-text>
+	</d-box>
+
+	<p class="note">Susie lowers her head again, turning it slightly towards the left.</p>
+
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>Kris, what the hell is going on...!?</d-text>
+	</d-box>
+
+	<p class="note">She lifts her head.</p>
+
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>Why... why did they take Undyne in here?</d-text>
+	</d-box>
+
+	<p class="note">Susie bows her head.</p>
+
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>And... why were they trying to take... Toriel?</d-text>
+	</d-box>
+
+	<p class="note">She slams her fists against the door on either side of the panel.</p>
+
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker> <!-- intended sprite: c -->
+		<d-text asterisk>What the hell are they doing, Kris? Like, if the cops...</d-text>
+	</d-box>
+
+	<p class="note">She slams one fist against the door again.</p>
+
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>It's no good... the door, it's solid steel...</d-text>
+	</d-box>
+
+	<p class="note">A slight pause.</p>
+
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>This... weird panel. If we could just... get someone to tell us how it works...</d-text>
+	</d-box>
+
+	<p class="note">Susie slumps slightly against the door, her foot sliding back in the grass.</p>
+
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>But... we can't, right?</d-text>
+	</d-box>
+
+	<p class="note">A pause. Susie straightens up, fists dropping down by her sides.</p>
+
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>We can't tell anyone about this, right? Because...</d-text>
+	</d-box>
+
+	<p class="note">Her head hangs low.</p>
+
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>... Because you saw that smoke, right, Kris?</d-text>
+	</d-box>
+	<!-- Unseen, Susie looks slightly towards the right… -->
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>There's... gotta be a dark world in there.</d-text>
+	</d-box>
+	<!-- …before facing forward again. -->
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>... if anybody else went in there, they'd...</d-text>
+	</d-box>
+
+	<p class="note">Susie lifts her head in sudden realization. Frustrated, she pounds her fists against the door.</p>
+
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>Toriel...! She's still in the...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">After a slight pause, she bangs a fist against the door.</p>
+
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>Damn it. I... I hate to give up here, Kris, but...</d-text>
+	</d-box>
+
+	<p class="note">She slumps slightly before lowering her fists.</p>
+
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>I...</d-text>
+	</d-box>
+
+	<p class="note">Shoulders tight and head low enough that a shadow is cast over her eyes, Susie turns to the left and walks past Kris, stopping a few steps past the shelter doors. She pauses for several seconds, then walks further until she reaches the side of the mound the shelter doors are set into.</p>
+
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Susie</d-speaker>
+		<d-text asterisk>Let's... just go seal that fountain.</d-text>
+	</d-box>
+
+	<p class="note">Susie turns and begins walking back towards town, disappearing offscreen to the north. After a pause, Kris approaches the panel set into the shelter doors. The following narration plays slower than usual and soundlessly, leaving only the crickets still audible:</p>
+
+	<d-box theme="light">
+		<d-text asterisk>(On the shelter was a strange panel.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(It looked like a digital security lock...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(There were three entry fields, and three symbols besides them.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(One had a pine tree beside it.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(One had an officer's badge beside it.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(And one had the DELTA RUNE.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(...)</d-text>
+	</d-box>
+
+	<p class="note">The crickets and wind fade to silence as Kris takes a few steps back. A pause. With a low thunk, the left shelter door opens slightly.</p>
+
+	<p class="note">For several seconds, there is only the howling of wind.</p>
+
+	<p class="note">The screen cuts to black and the music stops dead. A pause. Then the credits play as Chapter 3 ends.</p>
+</section>
