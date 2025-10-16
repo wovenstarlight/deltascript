@@ -980,6 +980,18 @@ d-box, d-choices {
 			:is([theme=fade], [theme=prophecy], d-option-panel) + & { margin-block-start: calc((2 * var(--border-width)) + 0.2em) }
 			:is(h2, h3, h4, h5, h6, p, ul, ol) + & { margin-block-start: calc(var(--border-width) + 1rem) }
 			&:has(+ h2, + h3, + h4, + h5, + h6, + p, + ul, + ol) { margin-block-end: calc(var(--border-width) + 1rem) }
+			&:has(
+				d-option:nth-child(2):last-child,
+				d-option:nth-child(3):last-child,
+				d-option:nth-child(4):last-child
+			) + d-option-panel + d-option-panel:not([hidden]),
+			&:has(
+				d-option:nth-child(3):last-child,
+				d-option:nth-child(4):last-child
+			) + d-option-panel + d-option-panel + d-option-panel:not([hidden]),
+			&:has(d-option:nth-child(4):last-child) + d-option-panel + d-option-panel + d-option-panel + d-option-panel:not([hidden]) {
+				margin-block-start: 0;
+			}
 
 			box-shadow:
 				0 0
@@ -1023,7 +1035,7 @@ d-box, d-choices {
 		&[theme=eightbit], &[theme="8bit"] {
 			width: calc(var(--basewidth) - 4.39em);
 			font-family: var(--font-8bit);
-			
+
 			&.quiz {
 				background-color: #00a2e8;
 				border-image-slice: 12;
@@ -1680,6 +1692,8 @@ d-option-panel {
 		color: var(--gray);
 		font-style: italic;
 		font-family: var(--font-condensed);
+
+		.break { display: none }
 	}
 
 	/* First child will always be selection-label */
@@ -1701,7 +1715,7 @@ d-option-panel {
 	) {
 		margin-block-start: 0.75em;
 	}
-	
+
 	body:not(.compact) & {
 		margin-inline-start: 1em;
 	}
@@ -1804,18 +1818,18 @@ d-option-panel {
 				transform-origin: center left;
 			}
 		}
-		
+
 		.chapter {
 			grid-row: 1;
 			transform: scaleX(50%);
 		}
-		
+
 		.desc { max-width: calc(var(--basewidth) - 3.4em) }
 
 		dd { margin: 0 }
 	}
 	body:not(.compact).dim & { border-image-source: url("../assets/images/textbox/light_dim.png") }
-	
+
 	body.compact & {
 		dd { margin-inline-start: 3ch }
 	}
@@ -1884,7 +1898,7 @@ d-option-panel {
 	display: grid;
 	grid-template-columns: auto auto;
 	gap: 0 2ch;
-	
+
 	body:not(.compact) & {
 		font-size: 1.2em;
 		background-color: var(--black);
@@ -1975,7 +1989,7 @@ funny-text {
 		text-shadow: none;
 		user-select: none;
 	}
-	
+
 	body:not(.compact) & {
 		& > :is(button, figure) {
 			top: var(--offset-y, 0em);
@@ -1999,7 +2013,7 @@ funny-text {
 		/* Conspiratorial whispers: Two lines */
 		&:is([name=alligator], [name=city_feet], [name=gentle]) > :is(button, figure) { vertical-align: top }
 	}
-	
+
 	body.compact & {
 		--img-height: 2.5em;
 
