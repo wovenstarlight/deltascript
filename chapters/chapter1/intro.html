@@ -1,28 +1,38 @@
 ---
 title: Chapter 1 Intro
+
 description: >
   <p>The start of the game!</p>
+
 sources:
   -
     name: gml_Object_DEVICE_CONTACT_Step_0
     chapters: [1]
+    note: vessel creation
   -
     name: gml_Object_obj_krisroom_Create_0
     chapters: [1]
+    note: waking up, part 1
   -
     name: gml_Object_obj_krisroom_Step_0
     chapters: [1]
+    note: waking up, part 2
   -
     name: gml_Object_obj_carcutscene_Step_0
     chapters: [1]
+    note: leaving home
   -
     name: gml_Object_obj_carcutscene_Alarm_5
     chapters: [1]
+    note: in car
   -
     name: gml_Object_obj_schoollobbycutscene_Step_0
     chapters: [1]
+    note: at school animation
+
 credits: >
   <p>Compiled by wovenstarlight.</p>
+
 toc:
   -
     id: vesselcreation
@@ -39,75 +49,75 @@ toc:
 
 	<p class="note">The screen is black.</p>
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>ARE YOU THERE?</d-text>
+		<d-text class="block-center-expand">ARE YOU<span class="break"></span> THERE?</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>ARE WE CONNECTED?</d-text>
+		<d-text class="block-center-expand">&nbsp;ARE WE<span class="break"></span> CONNECTED?</d-text>
 	</d-box>
 	
 	<p class="note">A red SOUL appears at the center of the screen.</p>
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>EXCELLENT.</d-text>
+		<d-text class="block-center-expand">EXCELLENT.</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>TRULY EXCELLENT.</d-text>
+		<d-text class="text-center-expand">TRULY&nbsp;<span class="break"></span> EXCELLENT.</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>NOW.</d-text>
+		<d-text class="block-center-expand">NOW.</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>WE MAY BEGIN.</d-text>
+		<d-text class="block-center-expand">WE MAY<span class="break"></span> BEGIN.</d-text>
 	</d-box>
 
 	<p class="note">The SOUL disappears. A rippling purple background appears, similar to the Dark Fountains' texture.</p>
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>FIRST.</d-text>
+		<d-text class="block-center-expand">FIRST.</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>YOU MUST CREATE A VESSEL.</d-text>
+		<d-text class="block-center-expand">YOU MUST CREATE<span class="break"></span> A VESSEL.</d-text>
 	</d-box>
 
-	<d-box theme="fade" id="selection">
+	<d-box theme="fade" class="glow space" id="selection">
 		<d-speaker>Voice</d-speaker>
-		<d-text>SELECT THE HEAD THAT YOU PREFER.</d-text>
+		<d-text class="block-center-expand">SELECT THE HEAD<span class="break"></span> THAT YOU PREFER.</d-text>
 	</d-box>
 
 	<p class="note">A selection of heads appears, the SOUL hovering over the currently-selected one.</p>
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>SELECT THE TORSO THAT YOU PREFER.</d-text>
+		<d-text class="block-center-expand">SELECT THE TORSO<span class="break"></span> THAT YOU PREFER.</d-text>
 	</d-box>
 
 	<p class="note">A selection of torsos appears, all wearing striped clothing, with the SOUL and your chosen head hovering over the currently-selected one.</p>
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>SELECT THE LEGS THAT YOU PREFER.</d-text>
+		<d-text class="block-center-expand">SELECT THE LEGS<span class="break"></span> THAT YOU PREFER.</d-text>
 	</d-box>
 
 	<p class="note">A selection of legs appears, almost all identical, with the SOUL and your chosen head/torso hovering over the currently-selected pair.</p>
 	
 	<p class="note">Upon selection, the fully-assembled body appears under the dialogue.</p>
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>THIS IS YOUR BODY.</d-text>
+		<d-text class="block-center-expand">THIS IS YOUR BODY.</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>DO YOU ACCEPT IT?</d-text>
+		<d-text class="block-center-expand">DO YOU ACCEPT IT?</d-text>
 	</d-box>
 
 	<d-choices theme="fade">
@@ -122,128 +132,128 @@ toc:
 		<p class="note">The sequence repeats from <a href="#selection">body part selection</a> onwards.</p>
 	</d-option-panel>
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>EXCELLENT.</d-text>
+		<d-text class="block-center-expand">EXCELLENT.</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>YOU HAVE CREATED A WONDERFUL FORM.</d-text>
+		<d-text class="block-center-expand">YOU HAVE CREATED<span class="break"></span> A WONDERFUL FORM.</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>NOW.</d-text>
+		<d-text class="block-center-expand">NOW.</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>LET US SHAPE ITS MIND AS YOUR OWN.</d-text>
+		<d-text class="block-center-expand">LET US SHAPE ITS<span class="break"></span> MIND AS YOUR OWN.</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>WHAT IS ITS FAVORITE FOOD?</d-text>
+		<d-text class="block-center-expand">WHAT IS ITS<span class="break"></span> FAVORITE FOOD?</d-text>
 	</d-box>
 
 	<p class="note">The following options are presented:</p>
-	<ul class="note">
-		<li>SWEET</li>
-		<li>SOFT</li>
-		<li>SOUR</li>
-		<li>SALTY</li>
-		<li>PAIN</li>
-		<li>COLD</li>
+	<ul class="note fnt-condensed">
+		<li><span class="white">SWEET</span></li>
+		<li><span class="white">SOFT</span></li>
+		<li><span class="white">SOUR</span></li>
+		<li><span class="white">SALTY</span></li>
+		<li><span class="white">PAIN</span></li>
+		<li><span class="white">COLD</span></li>
 	</ul>
 	<!-- sets global.flag[903] -->
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>YOUR FAVORITE BLOOD TYPE?</d-text>
+		<d-text class="block-center-expand">YOUR FAVORITE<span class="break"></span> BLOOD TYPE?</d-text>
 	</d-box>
 
 	<p class="note">The following options are presented:</p>
-	<ul class="note">
-		<li>A</li>
-		<li>AB</li>
-		<li>B</li>
-		<li>C</li>
-		<li>D</li>
+	<ul class="note fnt-condensed">
+		<li><span class="white">A</span></li>
+		<li><span class="white">AB</span></li>
+		<li><span class="white">B</span></li>
+		<li><span class="white">C</span></li>
+		<li><span class="white">D</span></li>
 	</ul>
 	<!-- sets global.flag[904] -->
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>WHAT COLOR DOES IT LIKE MOST?</d-text>
+		<d-text class="block-center-expand">WHAT COLOR DOES<span class="break"></span> IT LIKE MOST?</d-text>
 	</d-box>
 
 	<p class="note">The following options are presented:</p>
-	<ul class="note">
-		<li>RED</li>
-		<li>BLUE</li>
-		<li>GREEN</li>
-		<li>CYAN</li>
+	<ul class="note fnt-condensed">
+		<li><span class="white">RED</span></li>
+		<li><span class="white">BLUE</span></li>
+		<li><span class="white">GREEN</span></li>
+		<li><span class="white">CYAN</span></li>
 	</ul>
 	<!-- sets global.flag[905] -->
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>PLEASE GIVE IT A GIFT.</d-text>
+		<d-text class="block-center-expand">PLEASE GIVE IT<span class="break"></span> A GIFT.</d-text>
 	</d-box>
 
 	<p class="note">The following options are presented:</p>
-	<ul class="note">
-		<li>KINDNESS</li>
-		<li>MIND</li>
-		<li>AMBITION</li>
-		<li>BRAVERY</li>
-		<li>VOICE</li>
+	<ul class="note fnt-condensed">
+		<li><span class="white">KINDNESS</span></li>
+		<li><span class="white">MIND</span></li>
+		<li><span class="white">AMBITION</span></li>
+		<li><span class="white">BRAVERY</span></li>
+		<li><span class="white">VOICE</span></li>
 	</ul>
 	<!-- sets global.flag[909] as 1 - choice_index -->
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>HOW DO YOU FEEL ABOUT YOUR CREATION? (IT WILL NOT HEAR.)</d-text>
+		<d-text class="block-center-expand">HOW DO YOU FEEL<span class="break"></span> ABOUT YOUR CREATION?<span class="break"></span> (IT WILL NOT HEAR.)</d-text>
 	</d-box>
 
 	<p class="note">The following options are presented:</p>
-	<ul class="note">
-		<li>LOVE</li>
-		<li>HOPE</li>
-		<li>DISGUST</li>
-		<li>FEAR</li>
+	<ul class="note fnt-condensed">
+		<li><span class="white">LOVE</span></li>
+		<li><span class="white">HOPE</span></li>
+		<li><span class="white">DISGUST</span></li>
+		<li><span class="white">FEAR</span></li>
 	</ul>
 	<!-- sets global.flag[906] -->
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>HAVE YOU ANSWERED HONESTLY?</d-text>
+		<d-text class="block-center-expand">HAVE YOU ANSWERED<span class="break"></span> HONESTLY?</d-text>
 	</d-box>
 
 	<p class="note">The following options are presented:</p>
-	<ul class="note">
-		<li>YES</li>
-		<li>NO</li>
+	<ul class="note fnt-condensed">
+		<li><span class="white">YES</span></li>
+		<li><span class="white">NO</span></li>
 	</ul>
 	<!-- sets global.flag[907] -->
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>YOU ACKNOWLEDGE THE POSSIBILITY OF PAIN AND SEIZURE.</d-text>
+		<d-text class="block-center-expand">YOU ACKNOWLEDGE<span class="break"></span> THE POSSIBILITY OF<span class="break"></span> PAIN AND SEIZURE.</d-text>
 	</d-box>
 
 	<p class="note">The following options are presented:</p>
-	<ul class="note">
-		<li>YES</li>
-		<li>NO</li>
+	<ul class="note fnt-condensed">
+		<li><span class="white">YES</span></li>
+		<li><span class="white">NO</span></li>
 	</ul>
 	<!-- sets global.flag[908] -->
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>UNDERSTOOD.</d-text>
+		<d-text class="block-center-expand">UNDERSTOOD.</d-text>
 	</d-box>
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>NAME YOUR VESSEL.</d-text>
+		<d-text class="block-center-expand">NAME YOUR VESSEL.</d-text>
 	</d-box>
 
 	<p class="note">A keyboard is presented.</p>
@@ -257,29 +267,56 @@ toc:
 
 	<!-- FOUND = 1 || 2 -->
 	<h3>If entering a special name</h3>
-	<p>Special names include "SUSIE", "NOELLE", "KRIS", "TORIEL", "ASRIEL", "ASGORE", "SANS", "PAPYRUS", "ALPHYS", "UNDYNE", "RUDY", "BERDLY", "CATTY", "CATTI", "BRATTY", "GERSON", "JOCKINGTON", and "QC".</p>
+	<details class="note">
+		<summary>List of special names</summary>
+		<ul class="note">
+			<li>SUSIE</li>
+			<li>NOELLE</li>
+			<li>KRIS</li>
+			<li>TORIEL</li>
+			<li>ASRIEL</li>
+			<li>ASGORE</li>
+			<li>SANS</li>
+			<li>PAPYRUS</li>
+			<li>ALPHYS</li>
+			<li>UNDYNE</li>
+			<li>RUDY</li>
+			<li>BERDLY</li>
+			<li>CATTY</li>
+			<li>CATTI</li>
+			<li>BRATTY</li>
+			<li>GERSON</li>
+			<li>JOCKINGTON</li>
+			<li>QC</li>
+		</ul>
+	</details>
 
-	<d-box theme="fade">
+
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>AN INTERESTING COINCIDENCE.</d-text>
+		<d-text class="block-center-expand">"&lt;NAME&gt;."</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">AN INTERESTING<span class="break"></span> COINCIDENCE.</d-text>
 	</d-box>
 
 	<h3>Otherwise</h3>
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>WE CALLED IT "&lt;NAME&gt;."</d-text>
+		<d-text class="block-center-expand">WE CALLED IT<span class="break"></span> "&lt;NAME&gt;."</d-text>
 	</d-box>
 
 	<hr>
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>AND WHAT ABOUT THE CREATOR?</d-text>
+		<d-text class="block-center-expand">AND WHAT ABOUT<span class="break"></span> THE CREATOR?</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>YOUR OWN NAME.</d-text>
+		<d-text class="block-center-expand">YOUR OWN NAME.</d-text>
 	</d-box>
 
 	<p class="note">A keyboard is presented.</p>
@@ -293,98 +330,117 @@ toc:
 	<!-- FOUND = 2 -->
 	<h3>If entering any of the names "SUSIE", "NOELLE", or "KRIS"</h3>
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>"&lt;TRUE NAME&gt;."</d-text>
+		<d-text class="block-center-expand">"&lt;TRUE NAME&gt;."</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>YOU ARE ABOUT TO MEET SOMEONE</d-text>
+		<d-text class="block-center-expand">YOU ARE ABOUT TO<span class="break"></span> MEET SOMEONE</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>VERY, VERY WONDERFUL.</d-text>
+		<d-text class="block-center-expand">VERY, VERY<span class="break"></span> WONDERFUL.</d-text>
 	</d-box>
 
 	<!-- FOUND = 1 -->
 	<h3>If entering another special name</h3>
-	<p>Remaining special names include "TORIEL", "ASRIEL", "ASGORE", "SANS", "PAPYRUS", "ALPHYS", "UNDYNE", "RUDY", "BERDLY", "CATTY", "CATTI", "BRATTY", "GERSON", "JOCKINGTON", and "QC".</p>
+	<details class="note">
+		<summary>List of other special names</summary>
+		<ul class="note">
+			<li>TORIEL</li>
+			<li>ASRIEL</li>
+			<li>ASGORE</li>
+			<li>SANS</li>
+			<li>PAPYRUS</li>
+			<li>ALPHYS</li>
+			<li>UNDYNE</li>
+			<li>RUDY</li>
+			<li>BERDLY</li>
+			<li>CATTY</li>
+			<li>CATTI</li>
+			<li>BRATTY</li>
+			<li>GERSON</li>
+			<li>JOCKINGTON</li>
+			<li>QC</li>
+		</ul>
+	</details>
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>"&lt;TRUE NAME&gt;."</d-text>
+		<d-text class="block-center-expand">"&lt;TRUE NAME&gt;."</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>HOW INTERESTING.</d-text>
+		<d-text class="block-center-expand">HOW INTERESTING.</d-text>
 	</d-box>
 
 	<h3>If entering the same name that you gave the Vessel</h3>
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>"&lt;TRUE NAME&gt;."</d-text>
+		<d-text class="block-center-expand">"&lt;TRUE NAME&gt;."</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>OF COURSE</d-text>
-		<d-text>OF COURSE.</d-text>
+		<d-text class="block-center-expand">OF COURSE</d-text>
+		<d-text class="block-center-expand">OF COURSE.</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>OF COURSE THEY ARE THE SAME.</d-text>
+		<d-text class="block-center-expand">OF COURSE THEY<span class="break"></span> ARE THE SAME.</d-text>
 	</d-box>
 
 	<h3>Otherwise</h3>
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>"&lt;TRUE NAME&gt;."</d-text>
+		<d-text class="block-center-expand">"&lt;TRUE NAME&gt;."</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>EXCELLENT.</d-text>
+		<d-text class="block-center-expand">EXCELLENT.</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>TRULY EXCELLENT.</d-text>
+		<d-text class="block-center-expand">TRULY<span class="break"></span> EXCELLENT.</d-text>
 	</d-box>
 
 	<hr>
 
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>"&lt;TRUE NAME&gt;."</d-text>
+		<d-text class="block-center-expand">"&lt;TRUE NAME&gt;."</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>THANK YOU FOR YOUR TIME.</d-text>
+		<d-text class="block-center-expand">THANK YOU<span class="break"></span> FOR YOUR TIME.</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>YOUR ANSWERS</d-text>
+		<d-text class="block-center-expand">YOUR ANSWERS</d-text>
 	</d-box>
-	<d-box theme="fade">
+	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
-		<d-text>YOUR WONDERFUL CREATION</d-text>
+		<d-text class="block-center-expand">YOUR WONDERFUL<span class="break"></span> CREATION</d-text>
 	</d-box>
 
 	<p class="note">The screen goes black. The music cuts out.</p>
 
 	<d-box theme="fade">
 		<d-speaker>Other voice</d-speaker>
-		<d-text>Will now be discarded.</d-text>
+		<d-text class="block-center-expand">Will now be<span class="break"></span> discarded.</d-text>
 	</d-box>
 	<d-box theme="fade">
 		<d-speaker>Other voice</d-speaker>
-		<d-text>No one can choose who they are in this world.</d-text>
+		<d-text class="block-center-expand">No one can choose<span class="break"></span> who they are<span class="break"></span> in this world.</d-text>
 	</d-box>
 
 	<p class="note">The screen begins to turn white.</p>
 
 	<d-box theme="fade">
 		<d-speaker>Other voice</d-speaker>
-		<d-text>Your name is</d-text>
+		<d-text class="text-center-expand">Your<span class="double break"></span> name<span class="double break"></span> is</d-text>
 	</d-box>
 </section>
 
