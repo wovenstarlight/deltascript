@@ -23,10 +23,10 @@ class DialogueBox extends HTMLElement {
 	}
 
 	connectedCallback() {
-		const styles = Object.fromEntries(Object.entries({
+		const styles = Object.entries({
 			offset_x: this.getAttribute("offset-x") ?? this.getAttribute("offset"),
 			offset_y: this.getAttribute("offset-y"),
-		}).filter(el => el[1]));
+		}).filter(el => el[1]);
 		if (styles.length)
 			this.setAttribute("style", styles.map(([key, val]) => `--${key.replaceAll("_", "-")}: ${val}`).join("; "));
 	}
@@ -707,10 +707,10 @@ class DialogueChoices extends HTMLElement {
 	connectedCallback() {
 		this.role = "tablist";
 		this.setAttribute("aria-label", "Choice menu");
-		const styles = Object.fromEntries(Object.entries({
+		const styles = Object.entries({
 			offset_x: this.getAttribute("offset-x") ?? this.getAttribute("offset"),
 			offset_y: this.getAttribute("offset-y"),
-		}).filter(el => el[1]));
+		}).filter(el => el[1]);
 		if (styles.length)
 			this.setAttribute("style", styles.map(([key, val]) => `--${key.replaceAll("_", "-")}: ${val}`).join("; "));
 		this.isInteractive = this.getAttribute("noninteractive") === null;
