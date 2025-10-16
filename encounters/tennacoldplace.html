@@ -24,7 +24,6 @@ sources:
     name: gml_Object_obj_tenna_enemy_minigametext_Draw_0
     chapters: [3]
     note: minigame instruction off-by-one error
-	# line 40: instead of i going from =0 to < str.length, or from =1 to < str.length+1, it instead goes from =1 to < str.length
   -
     name: gml_Object_obj_actor_tenna_Draw_0
     chapters: [3]
@@ -580,16 +579,16 @@ toc:
 	<p class="note">During Tenna's turn, the screen at the back displays "<span class="fnt-8bit white">GAME TIME!</span>" instead of the current score, and his attack is replaced by a minigame sequence (or two minigames, from use 6 onwards). This involves Tenna jumping to the center of the encounter and pressing his hands to either side of his head as his screen turns to static. The camera zooms in on his screen, which transitions to a randomly chosen minigame. Instructions are displayed at the center of the screen depending on the game:</p>
 	<ul class="note">
 		<li><span class="white">DODGE FIRE</span> for the Cooking Show</li>
-		<li><span class="white">PERFORM</span> for Rock Video (with variations <span class="red">2x SPEED</span>, <span class="red">2.5x SPEED</span>, and <span class="red">3x SPEED</span>)</li>
-		<li><span class="white">PROTECT RALSEI</span> for a version of Monster Movie (available only if said game was played to completion at least once; the timer bar is replaced by a health bar labelled <span class="white fnt-8bit">ENEMY</span>)</li>
-		<li><span class="white">FIGHT...</span> for an alternate version of Monster Movie (also available only if said game was played to completion at least once)</li>
+		<li><span class="white">PERFORM</span> for Rock Video (with variations <span class="red fnt-condensed">2x <small>SPEED</small></span>, <span class="red fnt-condensed">2.5x <small>SPEED</small></span>, and <span class="red fnt-condensed">3x <small>SPEED</small></span>)</li>
+		<li><span class="white">PROTECT RALSEI</span> for a version of Monster Movie based around defending Ralsei from hostile Tennas (available only if said game was played to completion at least once; the timer bar is replaced by a health bar labelled <span class="white fnt-8bit">ENEMY</span>)</li>
+		<li><span class="white">FIGHT...</span> for an alternate version of Monster Movie based around dodging and attacking a hostile Tenna (also available only if said game was played to completion at least once)</li>
 		<li><span class="white">SHOOT THE TARGETS</span> for a version of Shadowguy's {% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} Sharpshoot ACT</li>
 		<li><span class="white">SHOOT</span> for the cowboy game</li>
 		<li><span class="white">DODGE</span> for a reversed version of the cowboy game</li>
-		<li><span class="white">BOUNCE THE BALL</span> for Lanino and Elnina's ball-bouncing attack</li>
+		<li><span class="white">BOUNCE THE BALL</span> for a weather-themed ball-bouncing attack</li>
 	</ul>
-	<p class="note">(Almost all these instructions should end with an exclamation mark ("<span class="white">DODGE FIRE!</span>", "<span class="white">PERFORM!</span>" etc.) while "<span class="white">FIGHT...</span>" should end with a question mark i.e. "<span class="white">FIGHT...?</span>", but the special text object used for the instructions stops writing out the text one character early in an off-by-one error.)</p>
-	<p class="note">A bar on the bottom left acts as a timer, with a counter underneath starting at "<span class="white fnt-8bit">SCORE&nbsp;000</span>" and increasing with time passed/correct gameplay. On the bottom right are three checkboxes labelled "<span class="white fnt-8bit">MISS</span>", which are marked off as mistakes are made. At the end of the minigame(s), the POINTs earned are added to the score, and penalties are dealt in both POINTs and HP for any MISSes. If 3 mistakes are made, the minigame sequence ends early. See the <a href="{% include wikilink page='Tenna#Minigames' %}">Deltarune Wiki</a> for more detail on gameplay for each individual minigame.</p>
+	<p class="note">(Almost all these instructions should end with an exclamation mark ("<span class="white">DODGE FIRE!</span>", "<span class="white">PERFORM!</span>" etc.) while "<span class="white">FIGHT...</span>" should end with a question mark i.e. "<span class="white">FIGHT...?</span>", but the object in charge of the instructions stops writing out the text early in an off-by-one error.)</p> <!-- gml_Object_obj_tenna_enemy_minigametext_Draw_0#L40 - instead of i going from =0 to < str.length, or from =1 to < str.length+1, it instead goes from =1 to < str.length -->
+	<p class="note">For most minigames (unless specified otherwise above), a bar on the bottom left acts as a timer, with a counter underneath starting at "<span class="white fnt-8bit">SCORE&nbsp;000</span>" and increasing with time passed/correct gameplay (depending on the game). On the bottom right are three checkboxes labelled "<span class="white fnt-8bit">MISS</span>", which are marked off as mistakes are made. At the end of the minigame(s), the POINTs earned are added to the score, and penalties are dealt in both POINTs and HP for any MISSes. If 3 mistakes are made, the minigame sequence ends early. See the <a href="{% include wikilink page='Tenna#Minigames' %}">Deltarune Wiki</a> for more detail on gameplay for each individual minigame.</p>
 	
 	<h4>Unused minigame instructions</h4>
 	<ul class="note">
@@ -691,12 +690,12 @@ toc:
 	<h3 id="bet20-ft">Flavor text</h3>
 	<p class="note">Susie wears a gangster outfit and points a finger gun at Tenna.</p>
 	<hr class="hr2">
-	<h4 class="susie act">Bet20</h4>
+	<h4><span class="susie act">Bet20</span></h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Susie bet 20 POINTs on no damage!</d-text>
 	</d-box>
 	<hr class="hr3">
-	<h4 class="susie act">Bet30</h4>
+	<h4><span class="susie act">Bet30</span></h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>JOKER's bet! 30 pts on NO DAMAGE!!</d-text>
 	</d-box>
@@ -706,7 +705,7 @@ toc:
 
 <section class="d-section" id="saction-unused">
 	<h2>Unused version of <span class="susie act">S-Action</span></h2>
-	<p class="note">Would have required Lancer's presence and presumably have prevented negative score changes, going by the flavor text. Only part of the flavor text is left in the files, so the exact animations and effects are unknown.</p>
+	<p class="note">Would presumably have prevented negative score changes, going by the flavor text. Only part of the flavor text is left in the files, so the exact animations and effects are unknown.</p>
 
 	<p class="note">Lancer drops down the screen while spinning and stops at a certain point, presumably clinging to the score displayed on the background screen. <!-- stool forme! --> The following text would have played the first time only:</p>
 	<d-box theme="battlemenu">
@@ -794,5 +793,6 @@ toc:
 
 	<p class="note">After several minigames are played in quick succession, the screen returns to the original set and the instruction "<span class="white">DEFEAT TENNA</span>" appears. A bar on the bottom labelled "<span class="white fnt-8bit">ENEMY</span>" represents Tenna's "HP". Using the Sharpshoot mechanism, the party must destroy projectiles and shoot Tenna until his health bar is reduced to 0.</p>
 
-	<p class="note">Upon taking the final hit, Tenna reels in shock and the screen fades to white. After a moment, it fades back in to the stage, where Tenna now stands clutching his head, his screen black. With a brief burst of static both over the full game screen and Tenna's face, the "channel" changes (signified by the top right counter going up); the party and Tenna are now in the Cooking Show set, the party members dressed in their chef outfits. The channel changes again, and again, and again, going through the Rock Video set, the Monster Movie set, the cowboy game set, and finally returning to the TV Time set. This repeats over and over, faster and faster, until the channel counter reaches around <span class="green">Ch66</span> and the screen abruptly "turns off", <a href="{{ '/chapters/chapter3/finalshowdown#posttenna' | relative_url }}">ending the encounter</a>.</p>
+	<p class="note">Upon taking the final hit, Tenna reels in shock and the screen fades to white. After a moment, it fades back in to the stage, where Tenna now stands clutching his head, his screen black. With a brief burst of static both over the full game screen and Tenna's face, the "channel" changes (signified by the top right counter going up); the party and Tenna are now in the Cooking Show set, the party members dressed in their chef outfits. The channel changes again, and again, and again, going through the Rock Video set, the Monster Movie set, the cowboy game set, and finally returning to the TV Time set. This repeats over and over, faster and faster, until the channel counter reaches <span class="green">Ch66</span> and the screen abruptly "turns off", <a href="{{ '/chapters/chapter3/finalshowdown#posttenna' | relative_url }}">ending the encounter</a>.</p>
+	<!-- fairly sure it's actually timer-based but set to end by the time it reaches Ch66. which is a fun way of getting around not putting 66 in the actual code! -->
 </section>
