@@ -1168,7 +1168,8 @@ function setUp() {
 		d-text[asterisk="K_K" i], d-text[asterisk="KK" i],
 		svg.winglade,
 		[theme=prophecy],
-		funny-text:has(.shaking, .animswitch)
+		funny-text:has(.shaking, .animswitch),
+		.glow
 	`) !== null;
 	if (!globalAnims) {
 		(animToggle = document.querySelector("label[for='toggle-anim']")).title = "No animations on this page";

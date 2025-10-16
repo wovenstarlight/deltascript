@@ -1152,13 +1152,37 @@ d-box, d-choices {
 		}
 	}
 
-	&.glow :is(d-text, d-option) { text-shadow: 0 0 0.2em }
+	&.glow :is(d-text, d-option) {
+		text-shadow:
+			0 0.125ch rgb(from currentColor r g b / var(--intensity, 0.15)),
+			0.125ch 0 rgb(from currentColor r g b / var(--intensity, 0.15)),
+			0 -0.125ch rgb(from currentColor r g b / var(--intensity, 0.15)),
+			-0.125ch 0 rgb(from currentColor r g b / var(--intensity, 0.15)),
+			0.125ch 0.125ch rgb(from currentColor r g b / var(--intensity, 0.15)),
+			-0.125ch -0.125ch rgb(from currentColor r g b / var(--intensity, 0.15)),
+			-0.125ch 0.125ch rgb(from currentColor r g b / var(--intensity, 0.15)),
+			0.125ch -0.125ch rgb(from currentColor r g b / var(--intensity, 0.15));
+			body:not(.noanim) & { animation: glowpulse 1.5s ease infinite alternate-reverse }
+	}
 	&.space :is(d-text, d-option) { letter-spacing: 0.5ch }
 
 	&[theme=prophecy] {
 		text-align: center;
 		align-items: center;
 	}
+}
+@keyframes glowpulse {
+	0% { --intensity: 0.1 }
+	10% { --intensity: 0.11 }
+	20% { --intensity: 0.12 }
+	30% { --intensity: 0.13 }
+	40% { --intensity: 0.14 }
+	50% { --intensity: 0.15 }
+	60% { --intensity: 0.16 }
+	70% { --intensity: 0.17 }
+	80% { --intensity: 0.18 }
+	90% { --intensity: 0.19 }
+	100% { --intensity: 0.2 }
 }
 /* Dialogue boxes only */
 d-box {
