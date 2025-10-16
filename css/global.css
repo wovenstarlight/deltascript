@@ -386,8 +386,12 @@ hr {
 }
 d-box:not(:state(compact)) .text-center-expand,
 .text-center { text-align: center }
+d-box:not(:state(compact)) .block-center-expand,
+.block-center { justify-self: center }
 d-box:not(:state(compact)) .text-right-expand,
 .text-right { text-align: right }
+d-box:not(:state(compact)) .block-right-expand,
+.block-right { justify-self: right }
 img {
 	max-width: 100%;
 	&.box-width {
@@ -787,7 +791,10 @@ body {
 	a:not(.kris, .susie, .ralsei, .noelle, :hover, :focus) { color: inherit }
 }
 /* Forced line break */
-body:not(.compact) .break { display: block }
+body:not(.compact) .break {
+	display: block;
+	&.double { min-height: 1.292em }
+}
 /* #endregion */
 
 /* #region Game styles */
@@ -1132,6 +1139,9 @@ d-box, d-choices {
 			d-text ~ d-box { padding-inline-start: 3ch }
 		}
 	}
+
+	&.glow :is(d-text, d-option) { text-shadow: 0 0 0.2em }
+	&.space :is(d-text, d-option) { letter-spacing: 0.5ch }
 
 	&[theme=prophecy] {
 		text-align: center;
