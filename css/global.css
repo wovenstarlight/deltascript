@@ -466,6 +466,17 @@ d-text[effect*=shake][asterisk] {
 /* #endregion */
 /* Chromatic aberration (color bleed) effect */
 [effect~=bleed] { filter: url(#kill) }
+/* Code/variables formatting */
+code {
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+	border: thin solid rgb(from currentColor r g b / 0.3);
+	border-radius: 0.2em;
+	background-color: var(--black);
+	padding: 0.1em 0.2em;
+	margin-inline: 0.2em;
+	display: inline-block;
+}
 /* Shrink text on small screens */
 @media (max-width: 30rem) {
 	body { font-size: 0.875em }
