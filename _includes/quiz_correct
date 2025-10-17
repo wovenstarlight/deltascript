@@ -1,0 +1,1 @@
+<img src="{{ '/assets/images/story/quiz_correct.png' | relative_url }}" title="correct answer" class="quizcorrect">

@@ -282,7 +282,11 @@ d-box[theme=battlemenu],
 	font-family: var(--font-dotum);
 	body.dyslexic & { font-weight: bold }
 }
-.fnt-eightbit, .fnt-8bit { font-family: var(--font-8bit) }
+.fnt-eightbit, .fnt-8bit {
+	font-family: var(--font-8bit);
+	text-underline-offset: 0.25ch;
+	text-decoration-thickness: 0.1ch;
+}
 .fnt-tv {
 	color: var(--red);
 	font-family: var(--font-tv);
@@ -794,6 +798,13 @@ body {
 body:not(.compact) .break {
 	display: block;
 	&.double { min-height: 1.292em }
+}
+/* Quiz correct answer marker */
+.quizcorrect {
+	cursor: help;
+	width: 1.2ch;
+	vertical-align: -0.25ch;
+	margin-inline-start: -0.25ch;
 }
 /* #endregion */
 

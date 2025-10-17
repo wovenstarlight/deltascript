@@ -1,0 +1,1420 @@
+---
+title: TV Time quizzes
+
+description: >
+  <p>Questions, answers, and commentary for Tenna's quizzes during TV Time.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_quizsequence_Draw_0
+    chapters: [3]
+    note: standard quiz display
+  -
+    name: gml_Object_obj_quizsequence_Create_0
+    chapters: [3]
+    note: quiz result labels
+  -
+    name: gml_GlobalScript_scr_quiztext
+    chapters: [3]
+    note: quiz contents
+  -
+    name: gml_Object_obj_quizsequence_Other_10
+    chapters: [3]
+    note: Susie's dialogue when player chooses early
+  -
+    name: gml_Object_obj_quizsequence_Other_12
+    chapters: [3]
+    note: next question dialogue
+  -
+    name: gml_Object_obj_quizsequence_Step_0
+    chapters: [3]
+    note: responses to results
+---
+<section class="d-section" id="standard">
+	<h2>Standard features</h2>
+	<p>Shared across all quizzes.</p>
+
+	<h3 id="quizstart">Start of quiz</h3>
+	<p class="note">Whenever a quiz begins, the screen turns blue and displays "<span class="white fnt-8bit">QUIZ!</span>"; the screen then transitions to black and then the quiz set with two radial wipes in quick succession, where Tenna reads cue cards while Susie, Kris, and Ralsei stand at their podiums.</p>
+
+	<hr>
+
+	<h3 id="quizmid">During the quiz</h3>
+
+	<p class="note">The quiz question appears in a box at the top of the TV screen in the back, with options underneath and occasionally an accompanying graphic on the right. A bar at the bottom of the TV screen acts as a timer and starts out colored white, then turns yellow at the halfway point and red at the quarter point. The party members press unseen buttons on their podiums to go through the options, icons next to the answers showing their currently-selected answers: Susie and Ralsei are represented by their respective avatars while Kris is represented by the SOUL. Susie, Ralsei, and Tenna will occasionally give commentary.</p>
+
+	<p class="note">Susie and Ralsei will typically follow your lead and choose the same option as you. For non-Bonus Round quizzes, if you wait without picking an option, they'll each choose certain options after a set time, after which they cannot change their answers. Their behavior changes during Bonus Round quizzes, where Susie and Ralsei will follow your lead if you don't select an answer; if you do choose an option, Susie will select the same option as you, while Ralsei will select a random option.</p>
+
+	<p class="note">Once time is up or all participants have selected answers, the timer stops and answers are graded. Each participant who answered correctly has their icon covered by a green circle, while those who answered incorrectly get their icons marked with a red cross. All correct answers turn yellow and all the answers blink in and out of view. Tenna delivers some commentary on the player's chosen answer; unless specified otherwise under the "Results" heading, for non-Bonus Round quiz questions where the player didn't select an answer before time ran out, he instead delivers commentary on either Susie or Ralsei's chosen answer at random.</p>
+	
+	<p class="note">After Tenna's commentary is finished, the TV screen cuts to the next question if there is one, in which case Tenna says the following, holding out his cue cards with a grin as he speaks:</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Next question!</d-text>
+	</d-box>
+	<p class="note">He then resumes looking at his cue cards while the next question displays. Alternatively, if there is no next question, the TV screen cuts to the <a href="#quizend">results screen</a>, with Tenna invariably pointing at the viewer.</p>
+
+	<hr>
+
+	<h3 id="quizend">End of quiz</h3>
+	<p class="note">The TV screen cuts to show "<span class="white">Results</span>" presented across the top with a white bar underneath split into thirds by blue dots. In the bottom half of the TV screen are the party's avatars.</p>
+
+	<p class="note">The results of each quiz question appear along the white bar in Os and Xs using the party's colors. Once all results are displayed, the text "<u class="white fnt-8bit">BONUS</u>" appears under the white bar. Underneath that appears the party's results, depending on how many correct answers were given in total:</p>
+
+	<ul class="note">
+		<li>0 correct answers: the bonus is "<span class="white fnt-8bit">PAIN</span>". The text "<span class="white fnt-8bit">NOT ON MY CHANNEL!!!</span>" blinks underneath their avatars.</li>
+		<li>3 or fewer correct answers, if at least 1 party member got all questions wrong: the bonus is "<span class="white fnt-8bit">PAIN</span>". The text "<span class="white fnt-8bit">YOU DID BAD</span>" blinks underneath their avatars.</li>
+		<li>3 correct answers, 1 from each party member; or 4 correct answers: the bonus is "<span class="white fnt-8bit">+0</span>". The text "<span class="white fnt-8bit">BARELY FORGIVABLE</span>" blinks underneath the party's avatars.</li>
+		<li>5 correct answers: the bonus is "<span class="white fnt-8bit">+25</span>". The text "<span class="white fnt-8bit">NOT BAD!!!</span>" blinks underneath the party's avatars.</li>
+		<li>6 to 8 correct answers: the bonus is "<span class="white fnt-8bit">+&lt;#&gt;</span>", where &lt;#&gt; is 25 times the number of correct answers. The text "<span class="white fnt-8bit">DECENT!!!</span>" blinks underneath the party's avatars.</li>
+		<li>9 correct: the bonus is "<span class="white fnt-8bit">+300</span>". The text "<span class="white fnt-8bit">PERFECT!!!</span>" blinks underneath the party's avatars.</li>
+	</ul>
+
+	<p class="note">In all cases, any party members who got all questions wrong get their avatars struck by lightning, dealing damage.</p>
+	<p class="note">If the bonus is above 0, that many POINTs are added to the score and confetti is fired up from the bottom left and right of the stage.</p>
+
+	<hr>
+
+	<h3 id="fallback">Fallback values</h3>	<!-- id null | topic: DEFAULT-->
+	<p>Basic text for quizzes that aren't fully set up.</p>
+
+	<d-box theme="8bit" class="quiz">
+		<d-text>QUESTION?</d-text>
+	</d-box>
+
+	<p class="note">The available answers are as follows.</p>
+
+	<ol class="note fnt-8bit">
+		<li><span class="white">ANSWER1</span></li>
+		<li><span class="white">ANSWER2</span> {% include quiz_correct %}</li>
+		<li><span class="white">ANSWER3</span></li>
+		<li><span class="white">ANSWER4</span></li>
+	</ol>
+</section>
+
+<section class="d-section" id="whattime">	<!-- id 0 | topic: WHATTIME-->
+	<h2>Current time</h2>
+	<p>Question #1 in the Desert Board's eastern quiz.</p>
+
+	<h3 id="whattime-question">Question and answers</h3>
+	<d-box theme="8bit" class="quiz">
+		<d-text>WHAT TIME IS IT RIGHT NOW?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">TV-THIRTY!</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">TV TIME!!!</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">PAST MIDNIGHT</span> {% include quiz_correct %}</li>
+		<li>Depends on the current time:
+			<ul>
+				<li><span class="white fnt-8bit">WEDNESDAY</span> on Thursdays</li>
+				<li><span class="white fnt-8bit">TUESDAY</span> on Wednesdays from 23:59:40 onwards</li>
+				<li><span class="white fnt-8bit">THURSDAY</span> on all other days</li>
+			</ul>
+		</li>
+	</ol>
+
+	<p class="note">Susie chooses option #3 after 5 seconds. Ralsei chooses option #2 after 6 seconds.</p>
+
+	<hr>
+
+	<h3 id="whattime-commentary">Commentary</h3>
+	<p class="note">Immediately:</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Uhhh...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="whattime-results">Results</h3>
+	<h4>Option #1</h4>
+	<p class="note">Tenna keeps holding up his cue cards.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>TV-THIRTY! Uh, sure!<span class="break"></span> A bit off, but we'll<span class="break"></span> go with it.</d-text>
+	</d-box>
+
+	<h4>Option #2</h4>
+	<p class="note">Tenna keeps holding up his cue cards.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>THAT'S EXACTLY RIGHT<span class="break"></span> FOLKS!!! Way to start<span class="break"></span> this quiz with a BANG!</d-text>
+	</d-box>
+
+	<h4>Option #3</h4>
+	<p class="note">Tenna spreads his hands, laughing.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Uhh, I guess that's<span class="break"></span> technically right. Sure.</d-text>
+	</d-box>
+
+	<h4>Option #4</h4>
+	<p class="note">Tenna spreads his hands, laughing.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Aaaaand you got the only<span class="break"></span> wrong answer. Let's hear<span class="break"></span> some boo's, folks!</d-text>
+	</d-box>
+	<p class="note">The audience boos.</p>
+</section>
+
+<section class="d-section" id="ralseiplush">	<!-- id 1 | topic: RALSEIPLUSH-->
+	<h2>Price of Ralsei</h2>
+	<p>Question #2 in the Desert Board's eastern quiz.</p>
+
+	<h3 id="ralseiplush-question">Question and answers</h3>
+	<p class="note">A Ralsei plush with a price tag reading "$32" is displayed to the side.</p>
+	<d-box theme="8bit" class="quiz">
+		<d-text>BRAND A VALUES THIS RALSEI AT $8! WHAT'S THE TRUE VALUE!?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">HIGHER</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">LOWER</span></li>
+		<li><span class="white fnt-8bit">PRICELESS</span></li>
+		<li><span class="white fnt-8bit">$32.00 MSRP</span> {% include quiz_correct %}</li>
+	</ol>
+
+	<p class="note">Ralsei and Susie choose option #2 after 7 and 8 seconds respectively.</p>
+
+	<hr>
+
+	<h3 id="ralseiplush-commentary">Commentary</h3>
+	<p class="note">Immediately:</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Free if<span class="break"></span> you steal it.</d-text>
+	</d-box>
+
+	<p class="note">After 3 seconds: </p>
+	<d-box theme="battletalkround">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>My... value...?</d-text>
+	</d-box>
+
+	<p class="note">After 7 seconds (as Ralsei selects his answer):</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>This...?</d-text>
+	</d-box>
+
+	<p class="note">After 8.5 seconds (immediately after Susie selects her answer):</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Assuming you<span class="break"></span> steal it.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ralseiplush-results">Results</h3>
+	<h4>Options #1 and #4</h4>
+	<p class="note">Tenna spreads his hands, laughing.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>That's right! This<span class="break"></span> little guy costs $32!</d-text>
+	</d-box>
+
+	<h4>Option #2</h4>
+	<p class="note">Tenna keeps holding up his cue cards.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Sorry folks, but this<span class="break"></span> boy ain't cheap! Maybe wait<span class="break"></span> for that Steamed Sale!</d-text>
+	</d-box>
+
+	<h4>Option #3</h4>
+	<p class="note">Kris and Ralsei turn to face each other.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Aww, Kris! I...</d-text>
+	</d-box>
+	<p class="note">Tenna points at the party members, startling Ralsei.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Wrong! He costs $32!<span class="break"></span> Can't you see the PRICE TAG!?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="favfood">	<!-- id 2 | topic: FOOD-->
+	<h2>Kris's favorite food</h2>
+	<p>Question #3 in the Desert Board's eastern quiz.</p>
+
+	<h3 id="favfood-question">Question and answers</h3>
+	<d-box theme="8bit" class="quiz">
+		<d-text>WHAT'S KRIS'S FAVORITE FOOD?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">CHOCOLATE</span></li>
+		<li><span class="white fnt-8bit">PIE</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">SALSA</span></li>
+		<li><span class="white fnt-8bit">JAM</span></li>
+	</ol>
+
+	<p class="note">Susie and Ralsei choose option #1 after 7 and 8 seconds respectively.</p>
+
+	<hr>
+
+	<h3 id="favfood-commentary">Commentary</h3>
+	<p class="note">Immediately:</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Uh...</d-text>
+	</d-box>
+
+	<p class="note">After 7 seconds (as Susie selects her answer):</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Chocolate, duh.</d-text>
+	</d-box>
+
+	<p class="note">After 8 seconds (as Ralsei selects his answer):</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>... Chocolate, right?</d-text>
+	</d-box>
+
+	<h4>If the player selects an option before the others do</h4>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Uhh, well,#you'd know.</d-text>
+	</d-box>
+	<p class="note">Susie and Ralsei choose the same option as the player.</p>
+
+	<hr>
+
+	<h3 id="favfood-results">Results</h3>
+	<h4>Option #2</h4>
+	<p class="note">Tenna keeps holding up his cue cards.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>That's right, Kris!<span class="break"></span> Who can resist<span class="break"></span> your mother's homemade pie!</d-text>
+	</d-box>
+	<p class="note">Tenna spreads his hands, laughing.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Nothing better than<span class="break"></span> chowing down with<span class="break"></span> the family...</d-text>
+	</d-box>
+	<p class="note">Tenna presses his hands together by his face.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>In the warm, warm glow of your<span class="break"></span> favorite holiday specials!</d-text>
+	</d-box>
+	<p class="note">Tenna points upwards, grinning.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Right here on TV TIME!!!</d-text>
+	</d-box>
+	<p class="note">Tenna points at the viewer.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Now, let's see those RESULTS!</d-text>
+	</d-box>
+
+	<h4>Options #1, #3, and #4</h4>
+	<p class="note">Susie turns to Kris.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Heh, how'd you mess<span class="break"></span> THAT up?</d-text>
+	</d-box>
+	<p class="note">Susie faces forward again as Tenna adjusts his tie.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>... Kris? Haha... Kris,<span class="break"></span> you know that's not right!</d-text>
+	</d-box>
+	<p class="note">Tenna presses his hands together by his face.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Pie! You loved pie, didn't you?<span class="break"></span> With the family!</d-text>
+	</d-box>
+	<p class="note">Tenna spreads his hands, laughing.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>You and brother with<span class="break"></span> whipped cream beards...</d-text>
+	</d-box>
+	<p class="note">Tenna points upwards, grinning.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Right in front of the TV!!<span class="break"></span> Right in front of ME!</d-text>
+	</d-box>
+	<p class="note">Tenna points at the viewer.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Anyway, onto the results!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="tenna">	<!-- id 3 | topic: HOST-->
+	<h2>Tenna's name</h2>
+	<p>Question #1 in the Desert Board's southwestern quiz.</p>
+
+	<h3 id="tenna-question">Question and answers</h3>
+	<d-box theme="8bit" class="quiz">
+		<d-text>WHAT IS THE NAME OF THIS SHOW'S HOST?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">MR. TV GUY</span></li>
+		<li><span class="white fnt-8bit">MR. LIL' NOSE</span></li>
+		<li><span class="white fnt-8bit">MR. TENNA</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">MR. EMAIL</span></li>
+	</ol>
+
+	<p class="note">Susie chooses option #1 after 6 seconds. Ralsei chooses option #3 after 8 seconds.</p>
+
+	<hr>
+
+	<h3 id="tenna-commentary">Commentary</h3>
+	<p class="note">Immediately:</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>His LAST name?</d-text>
+	</d-box>
+
+	<p class="note">After 6 seconds (as Susie selects her answer):</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>His LAST name.</d-text>
+	</d-box>
+
+	<p class="note">After 8 seconds (as Ralsei selects his answer):</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Um...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tenna-results">Results</h3>
+	<h4>Option #1, or not answering</h4>
+	<p class="note">Tenna reels back, looking hurt.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Don't you know your own TV?!</d-text>
+	</d-box>
+
+	<h4>Options #2 and #4</h4>
+	<p class="note">Tenna adjusts his tie with a tight, aggrieved smile.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Haha! I, regret<span class="break"></span> including that answer.</d-text>
+	</d-box>
+
+	<h4>Option #3</h4>
+	<p class="note">Tenna throws his hands in the air.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Haha, that's me, FOLKS!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="tvtime">	<!-- id 4 | topic: TVTIME-->
+	<h2>TV Time heading</h2>
+	<p>Question #2 in the Desert Board's southwestern quiz.</p>
+
+	<h3 id="tvtime-question">Question and answers</h3>
+	<d-box theme="8bit" class="quiz">
+		<d-text>WHAT IS THE HIGHLY MEMORABLE HEADING OF "TV TIME?"</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">DON'T TOUCH THAT DIAL!</span></li>
+		<li><span class="white fnt-8bit">MARVELOUS MYSTERY BOARD</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">MAGICAL MYSTERY BOARD</span></li>
+		<li><span class="white fnt-8bit">DON'T LICK THE SCREEN!</span></li>
+	</ol>
+
+	<p class="note">Susie chooses option #4 after 7 seconds. Ralsei chooses option #3 after 9 seconds.</p>
+
+	<hr>
+
+	<h3 id="tvtime-commentary">Commentary</h3>
+	<p class="note">After 7 seconds (as Susie selects her answer):</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>This just makes sense.</d-text>
+	</d-box>
+
+	<p class="note">After 9 seconds (as Ralsei selects his answer):</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Everyone loves magic!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tvtime-results">Results</h3>
+	<h4>Option #2</h4>
+	<p class="note">Tenna presses his hands together by his face.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Kris!! Haha,<span class="break"></span> I knew you cared!!</d-text>
+	</d-box>
+
+	<h4>Options #1, #3, and #4</h4>
+	<p class="note">Tenna keeps holding up his cue cards.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Haha, wow! Haha...<span class="break"></span> uhh, wow!</d-text>
+	</d-box>
+	<p class="note">Tenna adjusts his tie with a tight, aggrieved smile.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>MIKE, uhh, can we cut<span class="break"></span> that one from air? MIKE?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="lancer">	<!-- id 5 | topic: KID-->
+	<h2>Lancer's name</h2>
+	<p>Question #3 in the Desert Board's southwestern quiz.</p>
+
+	<h3 id="lancer-question">Question and answers</h3>
+	<p class="note">Lancer is displayed to the side, standing idly.</p>
+	<d-box theme="8bit" class="quiz">
+		<d-text>WHAT'S THE NAME OF THIS KID? SERIOUSLY I DON'T REMEMBER.</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">LANCER</span></li>
+		<li><span class="white fnt-8bit">DANCER</span></li>
+		<li><span class="white fnt-8bit">PRANCER</span></li>
+		<li><span class="white fnt-8bit">MR. GENEROSITY</span></li>
+	</ol>
+
+	<p class="note">Susie chooses option #1 after 1 second, ignoring the player's choice. Ralsei chooses option #1 after 5 seconds.</p>
+
+	<hr>
+
+	<h3 id="lancer-commentary">Commentary</h3>
+	<p class="note">Immediately:</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Easy.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="lancer-results">Results</h3>
+	<p>Unlike other questions, Tenna's response to this question is based not on what the player chose, but on what the majority of party members chose. That means if you wait until Ralsei has chosen option #1 and then choose option #2, #3, or #4, Tenna will still use the "Option #1" response below.</p>
+
+	<h4>Option #1</h4>
+	<p class="note">Tenna keeps holding up his cue cards.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Interesting! His name<span class="break"></span> is Lancer.</d-text>
+	</d-box>
+
+	<h4>Options #2, #3, and #4</h4>
+	<p class="note">Unlike usual, the answers aren't graded immediately. Tenna keeps holding up his cue cards as he comments, depending on the chosen option:</p>
+	<hr class="hr2">
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Interesting! His name<span class="break"></span> is Dancer.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Interesting! His name<span class="break"></span> is Prancer.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Interesting! His name<span class="break"></span> is Mr. Generosity.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Susie turns to Tenna, no longer smiling.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>No it's not.</d-text>
+	</d-box>
+	<p class="note">Susie faces forward again, still unsmiling, as Tenna speaks.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Majority rules!<span class="break"></span> Sorry, Susie,<span class="break"></span> your answer is wrong!</d-text>
+	</d-box>
+	<p class="note">The answers are graded, with Susie getting marked as wrong.</p>
+</section>
+
+<section class="d-section" id="thrash">	<!-- id 6 | topic: AWFUL-->
+	<h2>Thrash Machine</h2>
+	<p>Question #1 in the Desert Board's northeastern quiz.</p>
+
+	<h3 id="thrash-question">Question and answers</h3>
+	<p class="note">The Thrash Machine displays to the right, with one part altered from what you chose. (If you started a save file from Chapter 3, the displayed machine is randomly generated.)</p>
+	<hr class="hr2">
+	<h4>If you didn't build the Thrash Machine as a duck and the altered Thrash Machine isn't a duck</h4>
+	<d-box theme="8bit" class="quiz">
+		<d-text>APPARENTLY YOU MADE THIS AWFUL THING. EXCEPT FOR... WHAT?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>If you built the Thrash Machine as a duck, or if the altered Thrash Machine is a duck</h4>
+	<d-box theme="8bit" class="quiz">
+		<d-text>THIS THING SEEMS TO SUCK ASS. WHAT'S WRONG WITH IT?</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">HEAD</span></li>
+		<li><span class="white fnt-8bit">BODY</span></li>
+		<li><span class="white fnt-8bit">LEGS</span></li>
+		<li>Depends on the build of the Thrash Machine:
+			<ul>
+				<li><span class="white fnt-8bit">IT'S ACCURATE</span> if you didn't build a duck and the altered Thrash Machine isn't a duck</li>
+				<li><span class="white fnt-8bit">SEEMS FINE</span> if you built a duck or the altered Thrash Machine is a duck</li>
+			</ul>
+		</li>
+	</ol>
+
+	<p class="note">The correct answer is randomly generated and depends on the part that was altered.</p>
+
+	<p class="note">Susie and Ralsei only choose options once the timer runs out. Susie chooses the option that the player was hovering on when time ran out. Ralsei's chosen option varies:</p>
+
+	<ul class="note">
+		<li>If you built a duck: Ralsei chooses the correct answer.</li>
+		<li>If the altered Thrash Machine is a duck: Ralsei chooses option #3, <span class="white fnt-8bit">SEEMS FINE</span>.</li>
+		<li>If you didn't build a duck and the altered Thrash Machine isn't a duck: Ralsei chooses the option that the player was hovering on when time ran out.</li>
+	</ul>
+
+	<hr>
+
+	<h3 id="thrash-commentary">Commentary</h3>
+	<h4>If you didn't build the Thrash Machine as a duck and the altered Thrash Machine isn't a duck</h4>
+	<p class="note">Immediately:</p>
+	<div class="boxgroup">
+		<d-box theme="battletalkround">
+			<d-speaker>Susie</d-speaker>
+			<d-text>I dunno. I didn't<span class="break"></span> make this.</d-text>
+		</d-box>
+		<d-box theme="battletalkround">
+			<d-speaker>Ralsei</d-speaker>
+			<d-text>Kris, help...</d-text>
+		</d-box>
+	</div>
+
+	<h4>If you built the Thrash Machine as a duck, or if the altered Thrash Machine is a duck</h4>
+	<p class="note">Immediately:</p>
+	<div class="boxgroup">
+		<d-box theme="battletalkround">
+			<d-speaker>Susie</d-speaker>
+			<d-text>Everything.</d-text>
+		</d-box>
+		<d-box theme="battletalkround">
+			<d-speaker>Ralsei</d-speaker>
+			<d-text>Um, I think it's cute!</d-text>
+		</d-box>
+	</div>
+
+	<hr>
+
+	<h3 id="thrash-results">Results</h3>
+	<p class="note">No commentary for this question.</p>
+</section>
+
+<section class="d-section" id="pippins">	<!-- id 7 | topic: DARKNERS-->
+	<h2>Pippins's name</h2>
+	<p>Question #2 in the Desert Board's northeastern quiz.</p>
+
+	<h3 id="pippins-question">Question and answers</h3>
+	<p class="note">Pippins is displayed to the side, standing idly.</p>
+	<d-box theme="8bit" class="quiz">
+		<d-text>WHAT'S THE NAME OF THIS AWFUL GUY?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">PIPPS</span></li>
+		<li><span class="white fnt-8bit">DICER</span></li>
+		<li><span class="white fnt-8bit">TOYLET</span></li>
+		<li><span class="white fnt-8bit">PIPPINS</span> {% include quiz_correct %}</li>
+	</ol>
+
+	<p class="note">Susie chooses option #3 after 7 seconds. Ralsei chooses option #1 after 9 seconds. Once everyone has answered, Pippins begins jumping up and down.</p>
+
+	<hr>
+
+	<h3 id="pippins-commentary">Commentary</h3>
+	<p class="note">After 6 seconds (before Susie selects her answer):</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Gotta go<span class="break"></span> with my gut.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="pippins-results">Results</h3>
+	<p class="note">No commentary for this question.</p>
+</section>
+
+<section class="d-section" id="smash">	<!-- id 8 | topic: GAMEING-->
+	<h2>Asriel's favorite character</h2>
+	<p>Question #3 in the Desert Board's northeastern quiz.</p>
+		
+	<h3 id="smash-question">Question and answers</h3>
+	<d-box theme="8bit" class="quiz">
+		<d-text>WHAT WAS ASRIEL'S FAVORITE CHARACTER IN SMASHING FIGHTERS?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">SWORD MAGICIAN</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">BIG PENGUIN</span></li>
+		<li><span class="white fnt-8bit">PURPLE DRAGON</span></li>
+		<li><span class="white fnt-8bit">GREEN LIZARD</span></li>
+	</ol>
+
+	<p class="note">Susie chooses option #3 after 9 seconds. Ralsei chooses option #4 after 9.5 seconds.</p>
+
+	<hr>
+
+	<h3 id="smash-commentary">Commentary</h3>
+	<p class="note">After 7.5 seconds (before Ralsei selects his answer):</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>U-umm...</d-text>
+	</d-box>
+
+	<p class="note">After 8 seconds (before Susie selects her answer):</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Here's hoping your<span class="break"></span> brother had taste.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="smash-results">Results</h3>
+	<hr class="hr2">
+	<h4>Option #1</h4>
+	<p class="note">Tenna keeps holding up his cue cards.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>That's right,<span class="break"></span> Kris!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Options #2, #3, and #4</h4>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>What the<span class="break"></span> hell, Kris?</d-text>
+	</d-box>
+	<p class="note">Tenna reels back, looking stunned.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Kris!? Don't<span class="break"></span> you remember!?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Tenna adjusts his tie.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>He got<span class="break"></span> embarrassed<span class="break"></span> about liking the<span class="break"></span> green dinosaur...</d-text>
+	</d-box>
+	<p class="note">Tenna throws his hands in the air.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>...and switched to<span class="break"></span> being a big fan of the<span class="break"></span> fiery magician girl!</d-text>
+	</d-box>
+	<p class="note">Tenna leans forward and whispers conspiratorially to the audience, blushing.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Which is, maybe<span class="break"></span> its own type of<span class="break"></span> embarrassing, but...</d-text>
+	</d-box>
+	<p class="note">Tenna points at the viewer.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>...Anyway, onto<span class="break"></span> the results!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="crt">	<!-- id 9 | topic: TV-->
+	<h2>Meaning of CRT</h2>
+	<p>Unused. Question #1 in the scrapped City Board's western quiz.</p>
+
+	<h3 id="crt-question">Question and answers</h3>
+	<d-box theme="8bit" class="quiz">
+		<d-text>WHAT DOES "CRT" STAND FOR, ANYWAY!?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">COOL RICH TENNA</span></li>
+		<li><span class="white fnt-8bit">CATHODE RAY TUBE</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">CLASSIC REAL TV</span></li>
+		<li><span class="white fnt-8bit">CARTOONS</span></li>
+	</ol>
+
+	<p class="note">Ralsei chooses option #1 after 6 seconds. Susie chooses option #2 after 7 seconds.</p>
+
+	<hr>
+
+	<h3 id="crt-commentary">Commentary</h3>
+	<p class="note">After 6 seconds (as Ralsei selects his answer):</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Let's try flattery?</d-text>
+	</d-box>
+
+	<p class="note">After 7 seconds (as Susie selects her answer):</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Seems the least stupid.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="crt-results">Results</h3>
+	<p>No commentary for this question.</p>
+</section>
+
+<section class="d-section" id="cable">	<!-- id 10 | topic: TV-->
+	<h2>Cable</h2>
+	<p>Unused. Question #2 in the scrapped City Board's western quiz.</p>
+
+	<h3 id="cable-question">Question and answers</h3>
+	<p class="note">Three cables are shown — red, white, and yellow — with arrows pointing from each of the first 3 options to its respective cable. The image is labelled "PLACE HOULDER" in handwriting along the top.</p>
+	<d-box theme="8bit" class="quiz">
+		<d-text>WHICH ONE OF THESE IS THE COMPOSITE VIDEO CABLE!?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">RED</span></li>
+		<li><span class="white fnt-8bit">WHITE</span></li>
+		<li><span class="white fnt-8bit">YELLOW</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">NONE</span></li>
+	</ol>
+
+	<p class="note">Ralsei chooses option #2 after 5 seconds. Susie chooses option #4 after 8 seconds respectivel.</p>
+
+	<hr>
+
+	<h3 id="cable-commentary">Commentary</h3>
+	<p class="note">After 4 seconds:</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Shouldn't there be a hudmy cable?</d-text>
+	</d-box>
+
+	<p class="note">After 5 seconds (as Ralsei selects his answer):</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Wh... white...?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="cable-results">Results</h3>
+	<p>No commentary for this question.</p>
+</section>
+
+<section class="d-section" id="channel">	<!-- id 11 | topic: TV-->
+	<h2>Most popular channel</h2>
+	<p>Unused. Question #3 in the scrapped City Board's western quiz.</p>
+
+	<h3 id="channel-question">Question and answers</h3>
+	<d-box theme="8bit" class="quiz">
+		<d-text>WHICH TV CHANNEL IS THE MOST POPULAR!?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">THE WEATHER</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">B&W GAME SHOWS</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">NOIR MOVIE CHANNEL</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">NONE OF THESE</span> {% include quiz_correct %}</li>
+	</ol>
+
+	<p class="note">Ralsei chooses option #1 after 7 seconds. Susie chooses option #2 after 8 seconds.</p>
+
+	<hr>
+
+	<h3 id="channel-commentary">Commentary</h3>
+	<p>No commentary for this question.</p>
+
+	<hr>
+
+	<h3 id="channel-results">Results</h3>
+	<h4>Options #1, #2, and #3</h4>
+	<p class="note">Tenna throws his hands in the air.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>That's right, Kris!<span class="break"></span> Smart kid!</d-text>
+	</d-box>
+	<p class="note">Tenna points at the viewer.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Now, let's see those RESULTS!</d-text>
+	</d-box>
+
+	<h4>Option #4</h4>
+	<p class="note">Tenna looks shocked.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>What the... OTHER!?</d-text>
+	</d-box>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I mean you can just stream whatever on a Smart TV.</d-text>
+	</d-box>
+	<p class="note">Tenna adjusts his tie with a tight, aggrieved smile.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Smart... WHAT?<span class="break"></span> Are you calling me STUPID!?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="lancer2">	<!-- id 12 | topic: KID-->
+	<h2>Lancer's name (again)</h2>
+	<p>Unused. Question #1 in the scrapped City Board's southwestern quiz.</p>
+
+	<h3 id="lancer2-question">Question and answers</h3>
+	<p class="note">Lancer is displayed to the side, standing idly.</p>
+	<d-box theme="8bit" class="quiz">
+		<d-text>SERIOUSLY, WHAT IS THIS GUY'S NAME!?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">LANCER</span></li>
+		<li><span class="white fnt-8bit">DANCER</span></li>
+		<li><span class="white fnt-8bit">PRANCER</span></li>
+		<li><span class="white fnt-8bit">MR. GENEROSITY</span></li>
+	</ol>
+
+	<p class="note">The correct answer is the one chosen by majority in the <a href="#lancer">previous question on Lancer's name</a>.</p>
+
+	<p class="note">Susie chooses option #1 after 1 second, ignoring the player's choice. Ralsei chooses the "correct" option from the previous question after 7 seconds.</p>
+
+	<hr>
+
+	<h3 id="lancer2-commentary">Commentary</h3>
+	<p class="note">Immediately:</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>It's Lancer.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="lancer2-results">Results</h3>
+	<p>No commentary for this question.</p>
+</section>
+
+<section class="d-section" id="asgorefave">	<!-- id 13 | topic: TV-->
+	<h2>Asgore's favorite channel</h2>
+	<p>Unused. Question #2 in the scrapped City Board's southwestern quiz.</p>
+
+	<h3 id="asgorefave-question">Question and answers</h3>
+	<d-box theme="8bit" class="quiz">
+		<d-text>KRIS, WHICH SHOW WAS ASGORE'S FAVORITE!?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">COOKING SHOW</span></li>
+		<li><span class="white fnt-8bit">NASTY MUSIC VIDEOS</span></li>
+		<li><span class="white fnt-8bit">MONSTER MOVIES</span></li>
+		<li><span class="white fnt-8bit">COWBOY SHOW</span> {% include quiz_correct %}</li>
+	</ol>
+
+	<p class="note">Susie chooses option #4 after 4 seconds. Ralsei chooses option #3 after 5 seconds.</p>
+
+	<hr>
+
+	<h3 id="asgorefave-commentary">Commentary</h3>
+	<p class="note">Immediately:</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Kris, uhh, you know, right?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="asgorefave-results">Results</h3>
+	<p>No commentary for this question.</p>
+</section>
+
+<section class="d-section" id="puppetshow">	<!-- id 14 | topic: TV-->
+	<h2>Cowboy show scheduling</h2>
+	<p>Unused. Question #3 in the scrapped City Board's southwestern quiz.</p>
+
+	<h3 id="puppetshow-question">Question and answers</h3>
+	<d-box theme="8bit" class="quiz">
+		<d-text>NOW WHEN DOES ASGORE'S FAVORITE COWBOY PUPPET SHOW AIR!?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">IT WAS CANCELLED</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">IT WAS CANCELLED</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">IT WAS CANCELLED</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">IT WAS CANCELLED</span> {% include quiz_correct %}</li>
+	</ol>
+
+	<!-- Susie: #4 after 4 seconds; Ralsei: option #3 after 5 seconds, but that's the same as prev question so I think it might just have gotten copied over. Not that it matters, since all the options are the same anyway -->
+	<p>The question ends before any party member can select an option.</p>
+
+	<hr>
+
+	<h3 id="puppetshow-commentary">Commentary</h3>
+	<p class="note">As soon as the question displays on screen, Tenna reels back, looking horrified.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Wh... WHAT!?</d-text>
+	</d-box>
+	<p class="note">With a chime, the music stops and the quiz screen dims. Tenna droops, distraught.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>It was CANCELLED!?<span class="break"></span> You gotta be kidding me!!</d-text>
+	</d-box>
+	<p class="note">Tenna clutches his head, screen going black.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>No!! You're joking!! I...<span class="break"></span> I invested everything in puppets!!<span class="break"></span> Everything I had!</d-text>
+	</d-box>
+	<p class="note">Tenna adjusts his tie, flustered.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>... Alright. Ahem. It's fine.<span class="break"></span> Let's just keep going.<span class="break"></span> We're, having so much fun!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="puppetshow-results">Results</h3>
+	<p>No commentary for this question.</p>
+</section>
+
+<section class="d-section" id="sofun">	<!-- id 15 | topic: WELL???-->
+	<h2>Having fun</h2>
+	<p>Quiz #1 during the Bonus Round.</p>
+
+	<h3 id="sofun-question">Question and answers</h3>
+	<d-box theme="8bit" class="doom quiz">
+		<d-text>AREN'T YOU HAVING SO MUCH FUN?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">OF COURSE!</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">OF COURSE!</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">OF COURSE!</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">OF COURSE!</span> {% include quiz_correct %}</li>
+	</ol>
+
+	<p class="note">If and only if the player selects any answer, Susie and Ralsei immediately select random answers.</p>
+
+	<p class="note">If the player doesn't select an answer at all, neither will Susie and Ralsei. Unlike quizzes in Rounds 1 and 2, this is not treated as selecting the answer they were hovering over when the timer ran out, but rather as an incorrect answer.</p>
+
+	<hr>
+
+	<h3 id="sofun-commentary">Commentary</h3>
+	<p>No commentary for this question.</p>
+
+	<hr>
+
+	<h3 id="sofun-results">Results</h3>
+	<h4>Choosing any option</h4>
+	<p class="note">Tenna spreads his hands, grin verging on a grimace.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>THAT'S WHAT I THOUGHT!</d-text>
+	</d-box>
+
+	<h4>Not choosing an option</h4>
+	<p class="note">Tenna adjusts his tie with a tight, aggrieved smile.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>OUT OF TIME!!! WRONG!!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="anotherword">	<!-- id 16 | topic: WELL???-->
+	<h2>Another word for TV</h2>
+	<p>Quiz #2 during the Bonus Round.</p>
+
+	<h3 id="anotherword-question">Question and answers</h3>
+	<d-box theme="8bit" class="doom quiz">
+		<d-text>WHAT'S ANOTHER WORD FOR, "TELEVISION?"</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">MAN'S BEST FRIEND</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">"THE GOOD STUFF"</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">BETTER THAN EMAIL</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">NEVER THROWN AWAY</span> {% include quiz_correct %}</li>
+	</ol>
+
+	<p class="note">If and only if the player selects any answer, Susie and Ralsei immediately select random answers.</p>
+
+	<p class="note">If the player doesn't select an answer at all, neither will Susie and Ralsei. Unlike quizzes in Rounds 1 and 2, this is not treated as selecting the answer they were hovering over when the timer ran out, but rather as an incorrect answer.</p>
+
+	<hr>
+
+	<h3 id="anotherword-commentary">Commentary</h3>
+	<p>No commentary for this question.</p>
+
+	<hr>
+
+	<h3 id="anotherword-results">Results</h3>
+	<h4>Choosing any option</h4>
+	<p class="note">Tenna keeps holding up his cue cards.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>All great answers!</d-text>
+	</d-box>
+
+	<h4>Not choosing an option</h4>
+	<p class="note">Tenna snarls ferociously.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>WRONG! WRONG! WRONG!!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="button">	<!-- id 17 | topic: NORNAL-->
+	<h2>Power button</h2>
+	<p>Quiz #3 during the Bonus Round.</p>
+
+	<h3 id="button-question">Question and answers</h3>
+	<p class="note">The corner of a TV is displayed to the side, with an arrow pointing to the power button labelling it "<span class="fnt-8bit" style="color: #FFE42C">OFF</span>".</p>
+	<d-box theme="8bit" class="doom quiz">
+		<d-text>WHAT'S THIS BUTTON ON THE TELEVISION DO?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">NEVER PRESS IT</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">I DON'T KNOW</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">UNUSED</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">I'M SORRY. I'M SORRY</span> {% include quiz_correct %}</li>
+	</ol>
+
+	<p class="note">If and only if the player selects any answer, Susie and Ralsei immediately select random answers.</p>
+
+	<p class="note">If the player doesn't select an answer at all, neither will Susie and Ralsei. Unlike quizzes in Rounds 1 and 2, this is not treated as selecting the answer they were hovering over when the timer ran out, but rather as an incorrect answer.</p>
+
+	<hr>
+
+	<h3 id="button-commentary">Commentary</h3>
+	<p>No commentary for this question.</p>
+
+	<hr>
+
+	<h3 id="button-results">Results</h3>
+	<h4>Choosing any option</h4>
+	<p class="note">Tenna keeps holding up his cue cards.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>That's right. That's<span class="break"></span> right, isn't it.</d-text>
+	</d-box>
+
+	<h4>Not choosing an option</h4>
+	<p class="note">Tenna snarls ferociously.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>I KNOW WHAT YOU'RE THINKING!!!<span class="break"></span> YOU'RE WRONG!!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="watchtv">	<!-- id 18 | topic: WELL???-->
+	<h2>TV watching time</h2>
+	<p>Quiz #4 during the Bonus Round; appears only if you <a href="{{ '/locations/tvworld/greenroom/arcade#monstermoviedoor' | relative_url }}">played Monster Movie to completion at least once in the arcade</a>.</p>
+
+	<h3 id="watchtv-question">Question and answers</h3>
+	<d-box theme="8bit" class="doom quiz">
+		<d-text>WHAT TIME ARE YOU GONNA WATCH TV TOMORROW?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">MORNING TIL NIGHT</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">DUSK TIL DAWN</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">BREAKFAST TO DINNER</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">I WON'T EVEN GO TO CHURCH. I'LL<span class="break"></span> WATCH IT FOREVER. IT'S ALL I HAVE.<span class="break"></span> IT'S EVERYTHING TO ME.</span> {% include quiz_correct %}</li>
+	</ol>
+
+	<p class="note">If and only if the player selects any answer, Susie and Ralsei immediately select random answers.</p>
+
+	<p class="note">If the player doesn't select an answer at all, neither will Susie and Ralsei. Unlike quizzes in Rounds 1 and 2, this is not treated as selecting the answer they were hovering over when the timer ran out, but rather as an incorrect answer.</p>
+
+	<hr>
+
+	<h3 id="watchtv-commentary">Commentary</h3>
+	<p>No commentary for this question.</p>
+
+	<hr>
+
+	<h3 id="watchtv-results">Results</h3>
+	<h4>Choosing any option</h4>
+	<p class="note">Tenna keeps holding up his cue cards.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>Whaddya know! RIGHT ANSWERS!!!</d-text>
+	</d-box>
+
+	<h4>Not choosing an option</h4>
+	<p class="note">Tenna snarls ferociously.</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Tenna</d-speaker>
+		<d-text>ANSWER, DARN YOU!!! ANSWER!!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="ax">	<!-- id 27 | topic: ADVENTURE-->
+	<h2>Weakest axe</h2>
+	<p>Unused.</p>
+
+	<h3 id="ax-question">Question and answers</h3>
+	<d-box theme="8bit" class="quiz">
+		<d-text>WHICH IS THE WEAKEST AXE EQUIPPABLE BY FAR?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">BRAVE AX</span></li>
+		<li><span class="white fnt-8bit">WOODEN AX</span></li>
+		<li><span class="white fnt-8bit">MANE AX</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">BROKEN AX</span></li>
+	</ol>
+
+	<p class="note">Susie chooses option #3 after 2 seconds, ignoring the player's choice. Ralsei chooses option #4 after 6 seconds.</p>
+
+	<hr>
+
+	<h3 id="ax-commentary">Commentary</h3>
+	<p class="note">Immediately:</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>We freaking got this!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ax-results">Results</h3>
+	<h4>If anyone answered incorrectly</h4>
+	<d-box theme="battletalkround">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Oops.</d-text>
+	</d-box>
+	<p class="note">Susie looks exasperated.</p>
+	<hr class="hr2">
+	<h4>If either you or Ralsei chose option #3</h4>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Why the hell didn't you trust me!?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>If neither you nor Ralsei chose option #3</h4>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Why the hell didn't you guys trust me!?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Ralsei is startled by Susie's cry, and Kris turns to face Susie as well.</p>
+</section>
+
+<section class="d-section" id="forest">	<!-- id 28 | topic: FORESTS-->
+	<h2>Card Castle forest</h2>
+	<p>Unused.</p>
+
+	<h3 id="forest-question">Question and answers</h3>
+	<d-box theme="8bit" class="quiz">
+		<d-text>WHAT FOREST SURROUNDS CARD CASTLE?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">SCARLET FOREST</span></li>
+		<li><span class="white fnt-8bit">BLOCK FOREST</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">RED FOREST</span></li>
+		<li><span class="white fnt-8bit">DUST BUNNY FOREST</span></li>
+	</ol>
+
+	<p class="note">Ralsei chooses option #1 after 8 seconds. Susie chooses option #3 after 9 seconds.</p>
+
+	<hr>
+
+	<h3 id="forest-commentary">Commentary</h3>
+	<p class="note">Immediately:</p>
+	<div class="boxgroup">
+		<d-box theme="battletalkround">
+			<d-speaker>Susie</d-speaker>
+			<d-text>Uh, it WAS red?</d-text>
+		</d-box>
+		<d-box theme="battletalkround">
+			<d-speaker>Ralsei</d-speaker>
+			<d-text>I think it's...<span class="break"></span> Then wait, what's Scarlet Forest again...?</d-text>
+		</d-box>
+	</div>
+
+	<h4>If the player selects option #1 or #2 before Susie has selected an option</h4>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Yeah, that one.</d-text>
+	</d-box>
+	<p class="note">Susie chooses the same option as the player.</p>
+
+	<h4>If the player selects option #4 before Susie has selected an option</h4>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Kris, are you stupid? Haha.</d-text>
+	</d-box>
+	<p class="note">Susie chooses option #3.</p>
+
+	<hr>
+
+	<h3 id="forest-results">Results</h3>
+	<p>No commentary for this question.</p>
+</section>
+
+<section class="d-section" id="cantbuy">	<!-- id 29 | topic: SPEND-->
+	<h2>Unpurchaseable item</h2>
+	<p>Unused.</p>
+
+	<h3 id="cantbuy-question">Question and answers</h3>
+	<d-box theme="8bit" class="quiz">
+		<d-text>WHICH ITEM CAN NOT BE BOUGHT?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">SPAGHETTICODE</span></li>
+		<li><span class="white fnt-8bit">DICEBRACE</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">ROYALPIN</span></li>
+		<li><span class="white fnt-8bit">DAINTYSCARF</span></li>
+	</ol>
+
+	<p class="note">Susie and Ralsei choose option #2 after 5 and 8 seconds respectively.</p>
+
+	<hr>
+
+	<h3 id="cantbuy-commentary">Commentary</h3>
+	<p class="note">Immediately:</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hell if I remember.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="cantbuy-results">Results</h3>
+	<p>No commentary for this question.</p>
+</section>
+
+<section class="d-section" id="horse">	<!-- id 35 | topic: HORSES-->
+	<h2>Horse piece</h2>
+	<p>Unused.</p>
+
+	<h3 id="horse-question">Question and answers</h3>
+	<d-box theme="8bit" class="quiz">
+		<d-text>WHO IS THE HORSE-LOOKING GUY IN THE GREAT BOARD?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">MR. GENEROSITY</span></li>
+		<li><span class="white fnt-8bit">MR. ELEGANCE</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">MR. TRANSQUILITY</span></li>
+		<li><span class="white fnt-8bit">MR. SOCIETY</span></li>
+	</ol>
+
+	<p class="note">Ralsei and Susie choose option #2 after 7 and 8 seconds respectively.</p>
+
+	<hr>
+
+	<h3 id="horse-commentary">Commentary</h3>
+	<p class="note">Immediately:</p>
+	<div class="boxgroup">
+		<d-box theme="battletalkround">
+			<d-speaker>Susie</d-speaker>
+			<d-text>It was... Mr. Something.</d-text>
+		</d-box>
+		<d-box theme="battletalkround">
+			<d-speaker>Ralsei</d-speaker>
+			<d-text>They're all Mr. Something.</d-text>
+		</d-box>
+	</div>
+
+	<hr>
+
+	<h3 id="horse-results">Results</h3>
+	<p>No commentary for this question.</p>
+</section>
+
+<section class="d-section" id="hathy">	<!-- id 36 | topic: DARKNERS-->
+	<h2>Hathy's ACT</h2>
+	<p>Unused.</p>
+
+	<h3 id="hathy-question">Question and answers</h3>
+	<d-box theme="8bit" class="quiz">
+		<d-text>WHAT ACTION IS EFFECTIVE ON HATHY?</d-text>
+	</d-box>
+
+	<p class="note">Available options:</p>
+
+	<ol class="note">
+		<li><span class="white fnt-8bit">KISS</span></li>
+		<li><span class="white fnt-8bit">FLIRT</span> {% include quiz_correct %}</li>
+		<li><span class="white fnt-8bit">FLATTER</span></li>
+		<li><span class="white fnt-8bit">COMPLIMENT</span></li>
+	</ol>
+
+	<p class="note">Susie chooses option #4 after 6 seconds. Ralsei chooses option #3 after 9 seconds.</p>
+
+	<hr>
+
+	<h3 id="hathy-commentary">Commentary</h3>
+	<p class="note">Immediately:</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>ALL OF THESE ARE THE SAME!!!</d-text>
+	</d-box>
+
+	<p class="note">After 1.5 seconds:</p>
+	<d-box theme="battletalkround">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Umm, I didn't kiss anyone...</d-text>
+	</d-box>
+
+	<h4>If the player selects option #1 before the others select any option</h4>
+	<d-box theme="battletalkround">
+		<d-speaker>Susie</d-speaker>
+		<d-text>You wish, dumbass. Haha.</d-text>
+	</d-box>
+	<p class="note">Susie ignores the player's choice, while Ralsei chooses option #3.</p>
+
+	<hr>
+
+	<h3 id="hathy-results">Results</h3>
+	<p>No commentary for this question.</p>
+</section>
