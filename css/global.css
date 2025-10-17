@@ -1874,7 +1874,7 @@ d-option-panel {
 	.statlabel {
 		grid-column: 2;
 
-		&.blank { opacity: 0.25 } /* specifically, it uses c_dkgray which is #404040; we're matching that relatively so as not to have to introduce a new color */
+		&.blank { color: hsl(from var(--white) h s calc(l / 4)) } /* specifically, it uses c_dkgray which is #404040; we're matching that relatively so as not to have to introduce a new color */
 
 		&.shrink80 {
 			transform-origin: top left;
