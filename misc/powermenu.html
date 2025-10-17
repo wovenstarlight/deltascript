@@ -1,9 +1,9 @@
 ---
-title: POWER menu <span class="yellow">(DRAFT)</span>
+title: POWER menu
 
 description: >
   <p>Character titles and personalized stats.</p>
-  <p>Titles later in the list override any earlier ones. If the conditions for multiple titles are met, the one that comes last in this page's list will be used.</p>
+  <p>Titles and stat variants later in the list override any earlier ones. If the conditions for multiple titles or multiple stat variants are met, the one that comes last in this page's list will be used.</p>
 
 credits: >
   <p>Compiled by wovenstarlight.</p>
@@ -20,151 +20,197 @@ see_also:
 
 toc:
   -
+    id: display
+    name: Display
+    subheadings:
+      -
+        id: display-char
+        name: CHAR
+      -
+        id: display-stats
+        name: STATS
+      -
+        id: display-spells
+        name: SPELLS
+  -
     id: kris
     name: Kris
     subheadings:
       -
-        id: kristitle
+        id: kristitles
         name: Titles
         subheadings:
           -
-            id: kristitle1
+            id: kristitles1
             name: Chapter 1
           -
-            id: kristitle2
+            id: kristitles2
             name: Chapter 2
           -
-            id: kristitle3
+            id: kristitles3
             name: Chapter 3
           -
-            id: kristitle4
+            id: kristitles4
             name: Chapter 4
       -
-        id: krisstat
+        id: krisstats
         name: Stats
         subheadings:
           -
-            id: krisstat1
+            id: krisstats1
             name: Chapter 1
           -
-            id: krisstat2
+            id: krisstats2
             name: Chapter 2
           -
-            id: krisstat3
+            id: krisstats3
             name: Chapter 3
           -
-            id: krisstat4
+            id: krisstats4
             name: Chapter 4
   -
     id: susie
     name: Susie
     subheadings:
       -
-        id: susietitle
+        id: susietitles
         name: Titles
         subheadings:
           -
-            id: susietitle1
+            id: susietitles1
             name: Chapter 1
           -
-            id: susietitle2
+            id: susietitles2
             name: Chapter 2
           -
-            id: susietitle3
+            id: susietitles3
             name: Chapter 3
           -
-            id: susietitle4
+            id: susietitles4
             name: Chapter 4
       -
-        id: susiestat
+        id: susiestats
         name: Stats
         subheadings:
           -
-            id: susiestat1
+            id: susiestats1
             name: Chapter 1
           -
-            id: susiestat2
+            id: susiestats2
             name: Chapter 2
           -
-            id: susiestat3
+            id: susiestats3
             name: Chapter 3
           -
-            id: susiestat4
+            id: susiestats4
             name: Chapter 4
   -
     id: ralsei
     name: Ralsei
     subheadings:
       -
-        id: ralseititle
+        id: ralseititles
         name: Titles
         subheadings:
           -
-            id: ralseititle1
+            id: ralseititles1
             name: Chapter 1
           -
-            id: ralseititle2
+            id: ralseititles2
             name: Chapter 2
           -
-            id: ralseititle3
+            id: ralseititles3
             name: Chapter 3
           -
-            id: ralseititle4
+            id: ralseititles4
             name: Chapter 4
       -
-        id: ralseistat
+        id: ralseistats
         name: Stats
         subheadings:
           -
-            id: ralseistat1
+            id: ralseistats1
             name: Chapter 1
           -
-            id: ralseistat2
+            id: ralseistats2
             name: Chapter 2
           -
-            id: ralseistat3
+            id: ralseistats3
             name: Chapter 3
           -
-            id: ralseistat4
+            id: ralseistats4
             name: Chapter 4
   -
     id: noelle
     name: Noelle
     subheadings:
       -
-        id: noelletitle
+        id: noelletitles
         name: Titles
         subheadings:
           -
-            id: noelletitle2
+            id: noelletitles2
             name: Chapter 2
       -
-        id: noellestat
+        id: noellestats
         name: Stats
         subheadings:
           -
-            id: noellestat2
+            id: noellestats2
             name: Chapter 2
 ---
-{% comment %}
-GATHERED THE DATA!! just gotta figure out how to format this as an HTML page
+<section class="d-section" id="layout">
+	<h2>Layout</h2>
 
-All chars get Attack, Defense, Magic, Custom stat 1, Custom stat 2, Guts. Any custom stat slot not being used displays as ???
-sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
-{% endcomment %}
+	<p>The POWER menu has 3 sections, each with labels across the top.</p>
+
+	<h3 id="display-char">CHAR</h3>
+	<p>The top section, stretching across the upper third of the menu.</p>
+	
+	<p>The left side of this section shows icons for each party member. The currently-selected party member has the SOUL over their icon, bracketed by red arrows, and their name is displayed above all the party member icons.</p>
+
+	<p>The right side of this section shows the currently-selected party member's title, which varies depending on the chapter and plot progression.</p>
+
+	<hr>
+
+	<h3 id="display-stats">STATS</h3>
+	<p>The bottom left section.</p>
+
+	<p>Displays 6 stat fields, in a format similar to the one below. Attack, Defense, Magic, and Guts are stats possessed by all characters; the first three's values vary depending on the weapon and armor equipped to each party member, while Guts depends on the character and chapter. The remaining two fields are purely cosmetic and vary depending on the character, chapter, and plot progression; see each character's section below for their respective values.</p>
+	
+	<dl class="powerstats">
+		<dt>{% include staticon name="attack" -%} <span class="statlabel">Attack</span></dt>
+		<dd>&lt;#&gt;</dd>
+		<dt>{% include staticon name="defense" -%} <span class="statlabel">Defense</span></dt>
+		<dd>&lt;#&gt;</dd>
+		<dt>{% include staticon name="magic" -%} <span class="statlabel">Magic</span></dt>
+		<dd>&lt;#&gt;</dd>
+		<dt><span class="statlabel blank">???</span></dt>
+		<dt><span class="statlabel blank">???</span></dt>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd>{% include staticon name="guts" alt="1" %}</dd>
+	</dl>
+
+	<hr>
+
+	<h3 id="display-spells">SPELLS</h3>
+	<p>The bottom right section.</p>
+
+	<p>Displays spells belonging to the currently-selected party member, along with their TP costs. Pressing [CONFIRM] on the party member you're hovering over allows you to go through the spell list and view a description for each spell.</p>
+</section>
 
 <section class="d-section" id="kris">
 	<h2>Kris</h2>
 
-	<h3 id="kristitle">Titles</h3>
-	<h4 id="kristitle1">Chapter 1</h4>
+	<h3 id="kristitles">Titles</h3>
+	<h4 id="kristitles1">Chapter 1</h4>
 	<h5 id="lv1human">Initial</h5>
 	<d-box theme="powertitle">
 		<d-text>LV1 Human</d-text>
 		<d-text>Body contains a<span class="break"></span> human SOUL.</d-text>
 	</d-box>
 
-	<h5 id="lv1leader">After Ralsei joins the party</h5>
+	<h5 id="lv1leader">After <a href="{{ '/chapters/chapter1/castletown#postbattle' | relative_url }}">Ralsei joins the party</a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV1 Leader</d-text>
 		<d-text>Commands the party<span class="break"></span> with various ACTs.</d-text>
@@ -178,7 +224,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 
 	<hr class="hrhalf">
 
-	<h4 id="kristitle2">Chapter 2</h4>
+	<h4 id="kristitles2">Chapter 2</h4>
 	<p>The LV value is 2 at the start of the chapter and changes to 3 after the Cyber World's Dark Fountain is sealed. It is represented by a "#" in this section.</p>
 
 	<h5 id="lv2leader">Initial</h5>
@@ -187,7 +233,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 		<d-text>Commands the party<span class="break"></span> with various ACTs.</d-text>
 	</d-box>
 
-	<h5 id="lv2tactician">After Susie and Ralsei learn S-Action/R-Action</h5>
+	<h5 id="lv2tactician">After <a href="{{ '/encounters/sweetcapncakes#ft-actlearn' | relative_url }}">Susie and Ralsei learn <span class="susie act">S-Action</span>/<span class="ralsei act">R-Action</span></a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV# Tactician</d-text>
 		<d-text>Commands the party<span class="break"></span> by ACTs. Sometimes.</d-text>
@@ -214,7 +260,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 
 	<hr class="hrhalf">
 
-	<h4 id="kristitle3">Chapter 3</h4>
+	<h4 id="kristitles3">Chapter 3</h4>
 
 	<h5 id="lv3tactician">Initial</h5>
 	<d-box theme="powertitle">
@@ -222,44 +268,44 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 		<d-text>Commands the party<span class="break"></span> by ACTs.</d-text>
 	</d-box>
 
-	<h5 id="lv3director">After escaping Tenna</h5>
+	<h5 id="lv3director">After <a href="{{ '/chapters/chapter3/bonusround#end' | relative_url }}">escaping Tenna</a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV3 Director</d-text>
 		<d-text>Moves the actors<span class="break"></span> around.</d-text>
 	</d-box>
 
-	<h5 id="lv3mossmystery">After finding the moss on Board 2</h5>
+	<h5 id="lv3mossmystery">After <a href="{{ '/chapters/chapter3/islandboard#moss' | relative_url }}">finding the moss on Board 2</a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV3 Moss Mystery</d-text>
 		<d-text>Intermediate moss<span class="break"></span> skills.</d-text>
 	</d-box>
 
-	<h5 id="lv3blazer">After finishing Sword Route's Board 1</h5>
+	<h5 id="lv3blazer">After finishing <a href="{{ '/chapters/chapter3/desertboardsword' | relative_url }}">Sword Route's Board 1</a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV3 Blazer</d-text>
 		<d-text>Specializes in<span class="break"></span> sword attacks.</d-text>
 	</d-box>
 
-	<h5 id="lv3iceblazer">After finishing Sword Route's Board 2</h5>
+	<h5 id="lv3iceblazer">After finishing <a href="{{ '/chapters/chapter3/islandboardsword' | relative_url }}">Sword Route's Board 2</a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV3 Ice Blazer</d-text>
 		<d-text>Specializes in<span class="break"></span> sword attacks.</d-text>
 	</d-box>
 
-	<h5 id="lv3sheath">After beating the Shadow Mantle Holder</h5>
+	<h5 id="lv3sheath">After <a href="{{ '/chapters/chapter3/cityboardsword#mantleget' | relative_url }}">beating the Shadow Mantle Holder</a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV3 Sheath</d-text>
 		<d-text>Breath quickens<span class="break"></span> around swords.</d-text>
 	</d-box>
 
-	<h5 id="lv3egg">After finding the Egg</h5>
+	<h5 id="lv3egg">After <a href="{{ '/chapters/chapter3/egg#man' }}"></a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV3 Enjoying<span class="break"></span> the youthful<span class="break"></span> days.</d-text>
 	</d-box>
 
 	<hr class="hrhalf">
 
-	<h4 id="kristitle4">Chapter 4</h4>
+	<h4 id="kristitles4">Chapter 4</h4>
 
 	<h5 id="lv4darkhero">Initial</h5>
 	<d-box theme="powertitle">
@@ -273,7 +319,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 		<d-text>Munched the most<span class="break"></span> moist mosses.</d-text>
 	</d-box>
 
-	<h5 id="lv4darkbead">If on the Weird Route</h5>
+	<h5 id="lv4darkbead">If <a href="{{ '/chapters/chapter4/noelleroomweird' | relative_url }}">on the Weird Route</a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV4 Dark Bead</d-text>
 		<d-text>Broken off,<span class="break"></span> but still locked.</d-text>
@@ -281,47 +327,142 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 
 	<hr>
 
-	<h3 id="krisstat">Stats</h3>
-	<h4 id="krisstat1">Chapter 1</h4>
-	<p>2% chance of "Dog: [spr_dog_sleep]"; 98% chance of ???</p>
-	<p>???</p>
-	<p>Guts: 1</p>
+	<h3 id="krisstats">Stats</h3>
+	<h4 id="krisstats1">Chapter 1</h4>
+	<h5>Standard</h5>
+	<dl class="powerstats">
+		<dt><span class="statlabel blank">???</span></dt>
+		<dt><span class="statlabel blank">???</span></dt>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd>{% include staticon name="guts" alt="1" %}</dd>
+	</dl>
+
+	<h5>2% chance with another character in the party</h5>
+	<p>Appears only after switching to another party member's profile, then switching back to Kris's.</p>
+	<dl class="powerstats">
+		<dt><span class="statlabel">Dog</span></dt>
+		<dd><img src="{{ '/assets/images/ui/statmenu/dog_sleep.gif' | relative_url }}" alt="Annoying Dog sleeping"></dd>
+		<dt><span class="statlabel blank">???</span></dt>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd>{% include staticon name="guts" alt="1" %}</dd>
+	</dl>
 
 	<hr class="hrhalf">
 
-	<h4 id="krisstat2">Chapter 2</h4>
-	<p>96% chance of ???; 4% chance of "Dog: [spr_dog_sleep]"</p>
-	<p>???</p>
-	<p>Guts: 2</p>
+	<h4 id="krisstats2">Chapter 2</h4>
+	<h5>Standard</h5>
+	<dl class="powerstats">
+		<dt><span class="statlabel blank">???</span></dt>
+		<dt><span class="statlabel blank">???</span></dt>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd>{% include staticon name="guts" alt="1" %}</dd>
+	</dl>
+
+	<h5>4% chance with another character in the party</h5>
+	<p>Appears only after switching to another party member's profile, then switching back to Kris's.</p>
+	<dl class="powerstats">
+		<dt><span class="statlabel">Dog</span></dt>
+		<dd><img src="{{ '/assets/images/ui/statmenu/dog_sleep.gif' | relative_url }}" alt="Annoying Dog sleeping"></dd>
+		<dt><span class="statlabel blank">???</span></dt>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd>{% include staticon name="guts" alt="1" %}</dd>
+	</dl>
 
 	<hr class="hrhalf">
 
-	<h4 id="krisstat3">Chapter 3</h4>
-	<p>96% chance of ???; 4% chance of "Dog: [spr_dog_sleep]"</p>
-	<p>If made any kills on sword route, *: Sword route kill count, clamped to 0 and 9999; otherwise ???</p>
-	<p>Guts: 2</p>
+	<h4 id="krisstats3">Chapter 3</h4>
+	<h5>Stat 1</h5>
+	<h6>Standard</h6>
+	<dl class="powerstats">
+		<dt><span class="statlabel blank">???</span></dt>
+	</dl>
+
+	<h6>4% chance with another character in the party</h6>
+	<p>Appears only after switching to another party member's profile, then switching back to Kris's.</p>
+	<dl class="powerstats">
+		<dt><span class="statlabel">Dog</span></dt>
+		<dd><img src="{{ '/assets/images/ui/statmenu/dog_sleep.gif' | relative_url }}" alt="Annoying Dog sleeping"></dd>
+	</dl>
+
+	<hr class="hr2">
+
+	<h5>Stat 2</h5>
+	<h6>If no kills have been made on the Sword Route</h6>
+	<dl class="powerstats">
+		<dt><span class="statlabel blank">???</span></dt>
+	</dl>
+
+	<h6>If at least one kill has been made on the Sword Route</h6>
+	<p class="note">"&lt;#&gt;" is the number of kills made, from 1 up to a maximum of 9999. (Though there aren't that many enemies in the Sword Route levels, so it stops much earlier.)</p>
+	<dl class="powerstats">
+		<dt><span class="staticon noicon" aria-hidden="true">*</span></dt>
+		<dd>&lt;#&gt;</dd>
+	</dl>
+
+	<hr class="hr2">
+
+	<h5>Stat 3</h5>
+	<dl class="powerstats">
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd>{% include staticon name="guts" alt="2" %}{% include staticon name="guts" %}</dd>
+	</dl>
 
 	<hr class="hrhalf">
 
-	<h4 id="krisstat4">Chapter 4</h4>
-	<p>???</p>
-	<p>4% chance of "Dog: [spr_dog_sleeping]"; otherwise, Slain: # or Purify: # if you've encountered the titan spawn; otherwise ???</p>
-	<p>Guts: 3</p>
+	<h4 id="krisstats4">Chapter 4</h4>
+	<h5>Stat 1</h5>
+	<dl class="powerstats">
+		<dt><span class="statlabel blank">???</span></dt>
+	</dl>
+
+	<hr class="hr2">
+
+	<h5>Stat 2</h5>
+	<h6>Standard</h6>
+	<dl class="powerstats">
+		<dt><span class="statlabel blank">???</span></dt>
+	</dl>
+	<h6>If any <a href="{{ '/encounters/titanspawn' | relative_url }}">Titan Spawn</a> have been defeated violently</h6>
+	<p class="note">"&lt;#&gt;" is the number of Spawn killed, from 1 up to a maximum of 9999.</p>
+	<dl class="powerstats">
+		<dt><span class="staticon noicon" aria-hidden="true">*</span> <span class="statlabel">Slain</span></dt>
+		<dd>&lt;#&gt;</dd>
+	</dl>
+	<h6>If any Titan Spawn have been purified</h6>
+	<p class="note">"&lt;#&gt;" is the number of Spawn purified, from 1 up to a maximum of 9999.</p>
+	<dl class="powerstats">
+		<dt><span class="staticon noicon" aria-hidden="true">*</span> <span class="statlabel">Purify</span></dt>
+		<dd>&lt;#&gt;</dd>
+	</dl>
+	<h6>4% chance with another character in the party</h6>
+	<p>Appears only after switching to another party member's profile, then switching back to Kris's.</p>
+	<dl class="powerstats">
+		<dt><span class="statlabel">Dog</span></dt>
+		<dd><img src="{{ '/assets/images/ui/statmenu/dog_sleep.gif' | relative_url }}" alt="Annoying Dog sleeping"></dd>
+	</dl>
+
+	<hr class="hr2">
+
+	<h5>Stat 3</h5>
+	<dl class="powerstats">
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd>{% include staticon name="guts" alt="3" %}{% include staticon name="guts" %}{% include staticon name="guts" %}</dd>
+	</dl>
 </section>
 
 
 <section class="d-section" id="susie">
 	<h2>Susie</h2>
 
-	<h3 id="susietitle">Titles</h3>
-	<h4 id="susietitle1">Chapter 1</h4>
+	<h3 id="susietitles">Titles</h3>
+	<h4 id="susietitles1">Chapter 1</h4>
 	<h5 id="lv1meangirl">Initial</h5>
 	<d-box theme="powertitle">
 		<d-text>LV1 Mean Girl</d-text>
 		<d-text>Won't do anything<span class="break"></span> but fight.</d-text>
 	</d-box>
 
-	<h5 id="lv1darkknight">After sparing Lancer</h5>
+	<h5 id="lv1darkknight">After <a href="{{ '/chapters/chapter1/prisonbreak#postfight' | relative_url }}">sparing Lancer in Card Castle</a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV1 Dark Knight</d-text>
 		<d-text>Does damage using<span class="break"></span> dark energy.</d-text>
@@ -329,7 +470,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 
 	<hr class="hrhalf">
 
-	<h4 id="susietitle2">Chapter 2</h4>
+	<h4 id="susietitles2">Chapter 2</h4>
 	<p>The LV value is 2 at the start of the chapter and changes to 3 after the Cyber World's Dark Fountain is sealed. It is represented by a "#" in this section.</p>
 
 	<h5 id="lv2darkknight">Initial</h5>
@@ -338,7 +479,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 		<d-text>Does damage using<span class="break"></span> dark energy.</d-text>
 	</d-box>
 
-	<h5 id="lv2healingmaster">After Ralsei teaches Susie healing</h5>
+	<h5 id="lv2healingmaster">After <a href="{{ '/chapters/chapter2/reunion#healingmaster' | relative_url }}">Ralsei teaches Susie healing</a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV# Healing Master</d-text>
 		<d-text>Can use ultimate<span class="break"></span> healing. (Losers!)</d-text>
@@ -352,7 +493,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 
 	<hr class="hrhalf">
 
-	<h4 id="susietitle3">Chapter 3</h4>
+	<h4 id="susietitles3">Chapter 3</h4>
 
 	<h5 id="lv3darkknight">Initial</h5>
 	<d-box theme="powertitle">
@@ -360,7 +501,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 		<d-text>Does damage using<span class="break"></span> dark energy.</d-text>
 	</d-box>
 
-	<h5 id="lv3darkactorsus">After escaping Tenna</h5>
+	<h5 id="lv3darkactorsus">After <a href="{{ '/chapters/chapter3/bonusround#end' | relative_url }}">escaping Tenna</a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV3 Dark Actor</d-text>
 		<d-text>Participates in<span class="break"></span> occult ACTs.</d-text>
@@ -368,7 +509,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 
 	<hr class="hrhalf">
 
-	<h4 id="susietitle4">Chapter 4</h4>
+	<h4 id="susietitles4">Chapter 4</h4>
 
 	<h5 id="lv4darkherosus">Initial</h5>
 	<d-box theme="powertitle">
@@ -376,7 +517,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 		<d-text>Carries out fate<span class="break"></span> with the blade.</d-text>
 	</d-box>
 
-	<h5 id="lv4axeofjustice">After obtaining the Justice Axe</h5>
+	<h5 id="lv4axeofjustice">After defeating the <a href="{{ '/encounters/hammerofjustice' | relative_url }}">Hammer of Justice</a> and obtaining the <a href="{{ '/misc/weapons#justiceaxe' | relative_url }}">Justice Axe</a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV4 Axe of Justice</d-text>
 		<d-text>Faces fate<span class="break"></span> with the blade.</d-text>
@@ -384,53 +525,116 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 
 	<hr>
 
-	<h3 id="susiestat">Stats</h3>
-	<h4 id="susiestat1">Chapter 1</h4>
-	<p>Rudeness: 100 before sparing Lancer; 99 after sparing Lancer</p>
-	<p>Crudeness: 100 if not picked $!$? Squad as team name; 101 if you did</p>
-	<p>Guts: 2</p>
+	<h3 id="susiestats">Stats</h3>
+	<h4 id="susiestats1">Chapter 1</h4>
+	<h5>Stat 1</h5>
+	<h6>Initial</h6>
+	<dl class="powerstats">
+		<dt>{% include staticon name="devil" -%} <span class="statlabel">Rudeness</span></dt>
+		<dd>100</dd>
+	</dl>
+
+	<h6>After <a href="{{ '/chapters/chapter1/prisonbreak#postfight' | relative_url }}">sparing Lancer in Card Castle</a></h6>
+	<dl class="powerstats">
+		<dt>{% include staticon name="devil" -%} <span class="statlabel">Rudeness</span></dt>
+		<dd>99</dd>
+	</dl>
+
+	<hr class="hr2">
+
+	<h5>Stat 2</h5>
+	<h6>If you picked "$!$? Squad" as the party name</h6>
+	<dl class="powerstats">
+		<dt>{% include staticon name="devil" -%} <span class="statlabel shrink80">Crudeness</span></dt>
+		<dd>101</dd>
+	</dl>
+
+	<h6>If you didn't pick "$!$? Squad" as the party name</h6>
+	<dl class="powerstats">
+		<dt>{% include staticon name="devil" -%} <span class="statlabel shrink80">Crudeness</span></dt>
+		<dd>100</dd>
+	</dl>
+
+	<hr class="hr2">
+
+	<h5>Stat 3</h5>
+	<dl class="powerstats">
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd>{% include staticon name="guts" alt="2" %}{% include staticon name="guts" %}</dd>
+	</dl>
 
 	<hr class="hrhalf">
 
-	<h4 id="susiestat2">Chapter 2</h4>
-	<p>Rudeness: 89</p>
-	<p>Purple: Yes</p>
-	<p>Guts: 2</p>
+	<h4 id="susiestats2">Chapter 2</h4>
+	<dl class="powerstats">
+		<dt>{% include staticon name="devil" -%} <span class="statlabel">Rudeness</span></dt>
+		<dd>89</dd>
+		<dt>{% include staticon name="devil" -%} <span class="statlabel shrink80">Purple</span></dt>
+		<dd>Yes</dd>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd>{% include staticon name="guts" alt="2" %}{% include staticon name="guts" %}</dd>
+	</dl>
 
 	<hr class="hrhalf">
 
-	<h4 id="susiestat3">Chapter 3</h4>
-	<p>Rudeness: 100</p>
-	<p>Plucked: # of times grass plucked, clamped to 0 and 99; if 0, instead shows ???</p>
-	<p>Guts: 3</p>
+	<h4 id="susiestats3">Chapter 3</h4>
+	<h5>Standard</h5>
+	<dl class="powerstats">
+		<dt>{% include staticon name="devil" -%} <span class="statlabel">Rudeness</span></dt>
+		<dd>100</dd>
+		<dt><span class="statlabel blank">???</span></dt>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd>{% include staticon name="guts" alt="3" %}{% include staticon name="guts" %}{% include staticon name="guts" %}</dd>
+	</dl>
+
+	<h5>If Susie has plucked any grass on the TV Time boards</h5>
+	<p class="note">"&lt;#&gt;" is the number of times Susie plucked grass, from 1 up to a maximum of 99.</p>
+	<dl class="powerstats">
+		<dt>{% include staticon name="devil" -%} <span class="statlabel">Rudeness</span></dt>
+		<dd>100</dd>
+		<dt>{% include staticon name="grass" -%} <span class="statlabel">Plucked</span></dt>
+		<dd>&lt;#&gt;</dd>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd>{% include staticon name="guts" alt="3" %}{% include staticon name="guts" %}{% include staticon name="guts" %}</dd>
+	</dl>
 
 	<hr class="hrhalf">
 
-	<h4 id="susiestat4">Chapter 4</h4>
-	<p>Rudeness: 100</p>
-	<p>Healcount calculated by formula (5 times Susie.Magic) + 15 + (2 times (ultrahealuses capped at 15)), or if won against Gerson then (10 times Susie.Magic) + (2 times (ultrahealuses capped at 15)); this stat displays as ??? if healcount is 0, otherwise Healing: healcount</p>
-	<p>Guts: 4</p>
+	<h4 id="susiestats4">Chapter 4</h4>
+	<p class="note">"&lt;#&gt;" is a value representing Susie's healing ability, determined by the formulas below. The value <code>heal_use</code> referenced in each formula is the number of times Susie has used her healing, capped at a maximum of 15.</p>
+	<ul class="note">
+		<li>Before defeating the <a href="{{ '/encounters/hammerofjustice' | relative_url }}">Hammer of Justice</a> and the <a href="{{ '/encounters/soundofjustice' | relative_url }}">Sound of Justice</a>: 15 + 5× Susie's Magic stat + 2× <code>heal_use</code></li>
+		<li>After defeating the Hammer of Justice or the Sound of Justice: 10× Susie's Magic stat + 2× <code>heal_use</code></li>
+	</ul>
+	<dl class="powerstats">
+		<dt>{% include staticon name="devil" -%} <span class="statlabel">Rudeness</span></dt>
+		<dd>100</dd>
+		<dt><span class="staticon noicon" aria-hidden="true">*</span> <span class="statlabel">Healing</span></dt>
+		<dd>&lt;#&gt;</dd>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd>{% include staticon name="guts" alt="4" %}{% include staticon name="guts" %}{% include staticon name="guts" %}{% include staticon name="guts" %}</dd>
+	</dl>
 </section>
 
 
 <section class="d-section" id="ralsei">
 	<h2>Ralsei</h2>
 
-	<h3 id="ralseititle">Titles</h3>
-	<h4 id="ralseititle1">Chapter 1</h4>
+	<h3 id="ralseititles">Titles</h3>
+	<h4 id="ralseititles1">Chapter 1</h4>
 	<h5 id="lv1lonelyprince">Initial</h5>
 	<d-box theme="powertitle">
 		<d-text>LV1 Lonely Prince</d-text>
 		<d-text>Dark-World being.<span class="break"></span> Has no subjects.</d-text>
 	</d-box>
 
-	<h5 id="lv1pricklyprince">While Ragger is equipped</h5>
+	<h5 id="lv1pricklyprince">While <a href="{{ '/misc/weapons#ragger' | relative_url }}">Ragger</a> is equipped</h5>
 	<d-box theme="powertitle">
 		<d-text>LV1 Prickly Prince</d-text>
 		<d-text>Deals damage with<span class="break"></span> his rugged scarf.</d-text>
 	</d-box>
 
-	<h5 id="lv1fluffyprince">While Dainty Scarf is equipped</h5>
+	<h5 id="lv1fluffyprince">While <a href="{{ '/misc/weapons#daintyscarf' | relative_url }}">Dainty Scarf</a> is equipped</h5>
 	<d-box theme="powertitle">
 		<d-text>LV1 Fluffy Prince</d-text>
 		<d-text>Weak, but has nice<span class="break"></span> healing powers.</d-text>
@@ -438,7 +642,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 
 	<hr class="hrhalf">
 
-	<h4 id="ralseititle2">Chapter 2</h4>
+	<h4 id="ralseititles2">Chapter 2</h4>
 	<p>The LV value is 2 at the start of the chapter and changes to 3 after the Cyber World's Dark Fountain is sealed. It is represented by a "#" in this section.</p>
 
 	<h5 id="lv2darkprince">Initial</h5>
@@ -447,7 +651,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 		<d-text>Dark-World being.<span class="break"></span> Has friends now.</d-text>
 	</d-box>
 
-	<h5 id="lv2hugprince">If Kris hugged Ralsei during the photo</h5>
+	<h5 id="lv2hugprince">If Kris hugged Ralsei during <a href="{{ '/chapters/chapter2/acidtunnel#photograph' | relative_url }}">the photo</a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV# Hug Prince</d-text>
 		<d-text>Receives and<span class="break"></span> gives many hugs.</d-text>
@@ -473,7 +677,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 
 	<hr class="hrhalf">
 
-	<h4 id="ralseititle3">Chapter 3</h4>
+	<h4 id="ralseititles3">Chapter 3</h4>
 
 	<h5 id="lv3darkprince1">Initial</h5>
 	<d-box theme="powertitle">
@@ -481,7 +685,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 		<d-text>Dark-World being.<span class="break"></span> Has friends, but...</d-text>
 	</d-box>
 
-	<h5 id="lv3darkactorral">After escaping Tenna</h5>
+	<h5 id="lv3darkactorral">After <a href="{{ '/chapters/chapter3/bonusround#end' | relative_url }}">escaping Tenna</a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV3 Dark Actor</d-text>
 		<d-text>Has issues with<span class="break"></span> method acting.</d-text>
@@ -499,7 +703,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 		<d-text>Was a horse at<span class="break"></span> some point.</d-text>
 	</d-box>
 
-	<h5 id="lv3darkprince2">After fighting Tenna</h5>
+	<h5 id="lv3darkprince2">After <a href="{{ '/chapters/chapter3/finalact#posttenna' | relative_url }}">fighting Tenna</a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV3 Dark Prince</d-text>
 		<d-text>Dark-World being.<span class="break"></span> Has friends.</d-text>
@@ -507,7 +711,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 
 	<hr class="hrhalf">
 
-	<h4 id="ralseititle4">Chapter 4</h4>
+	<h4 id="ralseititles4">Chapter 4</h4>
 
 	<h5 id="lv4darkheroral">Initial</h5>
 	<d-box theme="powertitle">
@@ -515,7 +719,7 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 		<d-text>Records and faces<span class="break"></span> the fate.</d-text>
 	</d-box>
 
-	<h5 id="lv4stoolboy">While in the bookshelf room outside the old man's study, after Ralsei executes Magical Stool Forme R</h5>
+	<h5 id="lv4stoolboy">While in the bookshelf room outside the Old Man's study, after <a href="{{ '/chapters/chapter4/escortmission#stoolforme' | relative_url }}">Ralsei executes Magical Stool Forme R</a></h5>
 	<d-box theme="powertitle">
 		<d-text>LV4 Stool Boy</d-text>
 		<d-text>Boy with stool<span class="break"></span> like abilities.</d-text>
@@ -523,40 +727,97 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 
 	<hr>
 
-	<h3 id="ralseistat">Stats</h3>
-	<h4 id="ralseistat1">Chapter 1</h4>
-	<p>98% chance of Kindness: 100; 2% chance of Dogness: 1</p>
-	<p>Fluffiness: 1 (2 if equipped Dainty Scarf)</p>
-	<p>Guts: 0</p>
+	<h3 id="ralseistats">Stats</h3>
+	<h4 id="ralseistats1">Chapter 1</h4>
+	<h5>Stat 1</h5>
+	<h6>Standard</h6>
+	<dl class="powerstats">
+		<dt>{% include staticon name="cheer" -%} <span class="statlabel">Kindness</span></dt>
+		<dd>100</dd>
+	</dl>
+
+	<h6>2% chance</h6>
+	<dl class="powerstats">
+		<dt>{% include staticon name="cheerdog" -%} <span class="statlabel">Dogness</span></dt>
+		<dd>1</dd>
+	</dl>
+
+	<hr class="hr2">
+
+	<h5>Stat 2</h5>
+	<h6>Standard</h6>
+	<dl class="powerstats">
+		<dt>{% include staticon name="fluff" -%} <span class="statlabel shrink80">Fluffiness</span></dt>
+		<dd>{% include staticon name="fluff" alt="1" %}</dd>
+	</dl>
+
+	<h6>While <a href="{{ '/misc/weapons#daintyscarf' | relative_url }}">Dainty Scarf</a> is equipped</h6>
+	<dl class="powerstats">
+		<dt>{% include staticon name="fluff" -%} <span class="statlabel shrink80">Fluffiness</span></dt>
+		<dd>{% include staticon name="fluff" alt="2" %}{% include staticon name="fluff" %}</dd>
+	</dl>
+
+	<hr class="hr2">
+
+	<h5>Stat 3</h5>
+	<dl class="powerstats">
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd aria-label="0"></dd>
+	</dl>
 
 	<hr class="hrhalf">
 
-	<h4 id="ralseistat2">Chapter 2</h4>
-	<p>Sweetness: 97</p>
-	<p>Fluffiness: 2</p>
-	<p>Guts: 0</p>
+	<h4 id="ralseistats2">Chapter 2</h4>
+	<dl class="powerstats">
+		<dt>{% include staticon name="sweet" -%} <span class="statlabel">Sweetness</span></dt>
+		<dd>97</dd>
+		<dt>{% include staticon name="fluff" -%} <span class="statlabel shrink80">Fluffiness</span></dt>
+		<dd>{% include staticon name="fluff" alt="2" %}{% include staticon name="fluff" %}</dd>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd aria-label="0"></dd>
+	</dl>
 
 	<hr class="hrhalf">
 
-	<h4 id="ralseistat3">Chapter 3</h4>
-	<p>Carried: # of times Ralsei got picked up, clamped to 0 and 99; if 0, instead shows ???</p>
-	<p>Fluffiness: 1</p>
-	<p>Guts: 1</p>
+	<h4 id="ralseistats3">Chapter 3</h4>
+	<h5>Standard</h5>
+	<dl class="powerstats">
+		<dt><span class="statlabel blank">???</span></dt>
+		<dt>{% include staticon name="fluff" -%} <span class="statlabel shrink80">Fluffiness</span></dt>
+		<dd>{% include staticon name="fluff" alt="1" %}</dd>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd>{% include staticon name="guts" alt="1" %}</dd>
+	</dl>
+
+	<h5>If Susie has picked up Ralsei at least once during TV Time</h5>
+	<p class="note">"&lt;#&gt;" is the number of times Ralsei has been carried, from 1 up to a maximum of 99.</p>
+	<dl class="powerstats">
+		<dt>{% include staticon name="up" -%} <span class="statlabel">Carried</span></dt>
+		<dd>&lt;#&gt;</dd>
+		<dt>{% include staticon name="fluff" -%} <span class="statlabel shrink80">Fluffiness</span></dt>
+		<dd>{% include staticon name="fluff" alt="1" %}</dd>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd>{% include staticon name="guts" alt="1" %}</dd>
+	</dl>
 
 	<hr class="hrhalf">
 
-	<h4 id="ralseistat4">Chapter 4</h4>
-	<p>???</p>
-	<p>Fluffiness: 1</p>
-	<p>Guts: 0</p>
+	<h4 id="ralseistats4">Chapter 4</h4>
+	<dl class="powerstats">
+		<dt><span class="statlabel blank">???</span></dt>
+		<dt>{% include staticon name="fluff" -%} <span class="statlabel shrink80">Fluffiness</span></dt>
+		<dd>{% include staticon name="fluff" alt="1" %}</dd>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd aria-label="0"></dd>
+	</dl>
 </section>
 
 
 <section class="d-section" id="noelle">
 	<h2>Noelle</h2>
 
-	<h3 id="noelletitle">Titles</h3>
-	<h4 id="noelletitle2">Chapter 2</h4>
+	<h3 id="noelletitles">Titles</h3>
+	<h4 id="noelletitles2">Chapter 2</h4>
 
 	<h5 id="lv1snowcaster">Initial</h5>
 	<d-box theme="powertitle">
@@ -570,13 +831,13 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 		<d-text>Freezes the enemy.</d-text>
 	</d-box>
 
-	<h5 id="lv2icetrancer">While ThornRing is equipped</h5>
+	<h5 id="lv2icetrancer">While the <a href="{{ '/misc/weapons#thornring' | relative_url }}">Thorn Ring</a> is equipped</h5>
 	<d-box theme="powertitle">
 		<d-text>LV2 Ice Trancer</d-text>
 		<d-text>Receives pain to<span class="break"></span> become stronger.</d-text>
 	</d-box>
 
-	<h5 id="lv2mossneutral">If you find the moss while Noelle is in the party, and you aren't on the Weird Route</h5>
+	<h5 id="lv2mossneutral">If you find the moss while Noelle is in the party (normal route only)</h5>
 	<d-box theme="powertitle">
 		<d-text>LV2 Moss Neutral</d-text>
 		<d-text>Neither chaotic nor<span class="break"></span> lawful to moss.</d-text>
@@ -584,23 +845,34 @@ sources: gml_Object_obj_darkcontroller_Draw_0 for each chapter
 
 	<hr>
 
-	<h3 id="noellestat">Stats</h3>
-	<h4 id="noellestat2">Chapter 2</h4>
-	<p>Coldness: minimum 47, increases by 7 for each use of IceShock up to a maximum of 100</p>
-	<p>Boldness: formula is <code>-12 + ((global.plot - 70) * 3) => (global.plot * 3) - 222</code>, clamped at 100 but it never gets that high</p>
-	<ul>
-		<li>starts at -12</li>
-		<li>-6 after first mouse puzzle</li>
-		<li>3 after berdly statue first seen</li>
-		<li>9 after second mouse puzzle</li>
-		<li>12 after third mouse puzzle</li>
-		<li>15 after fighting berdly with noelle</li>
-		<li>18 after "car game"(?)</li>
-		<li>33 after beating spamton</li>
-		<li>48 after leaving car</li>
-		<li>60 after DECEMBER</li>
-		<li>63 after full party together</li>
-		<li>75 after captured by queen</li>
+	<h3 id="noellestats">Stats</h3>
+	<h4 id="noellestats2">Chapter 2</h4>
+	<p class="note">Coldness and Boldness are both variable values.</p>
+	<ul class="note">
+		<li>Coldness: 47 initially. Increases by 7 for each use of <a href="{{ '/misc/spells#iceshock' | relative_url }}">Ice Shock</a>. Maxes out at 100.</li>
+		<li>Boldness: Equivalent to 3× <code>plot</code> - 222, where <code>plot</code> tracks the progression of the plot. The calculated Boldness values are as follows:
+			<ul>
+				<li>-12 initially</li>
+				<li>-6 after the <a href="{{ '/chapters/chapter2/mouseroom1' | relative_url }}">first mouse puzzle</a></li>
+				<li>3 after the <a href="{{ '/chapters/chapter2/evilvillains' | relative_url }}">gold Berdly statue</a> appears</li>
+				<li>9 after the <a href="{{ '/chapters/chapter2/mouseroom2' | relative_url }}">second mouse puzzle</a></li>
+				<li>12 after the <a href="{{ '/chapters/chapter2/mouseroom3' | relative_url }}">third mouse puzzle</a></li>
+				<li>15 after the <a href="{{ '/chapters/chapter2/secondalleyway' | relative_url }}">second Berdly fight</a></li>
+				<li>18 after the <a href="{{ '/chapters/chapter2/drive1' | relative_url }}">first half of the car ride with Queen</a></li>
+				<li>33 after the <a href="{{ '/chapters/chapter2/spamton' | relative_url }}">Spamton fight</a></li>
+				<li>48 after the <a href="{{ '/chapters/chapter2/drive2' | relative_url }}">second half of the car ride with Queen</a></li>
+				<li>60 after the <a href="{{ '/chapters/chapter2/december' | relative_url }}">puzzle spelling out "DECEMBER"</a></li>
+				<li>63 after <a href="{{ '/chapters/chapter2/reunion' | relative_url }}">the party reunites</a></li>
+				<li>75 after <a href="{{ '/chapters/chapter2/mansionexterior' | relative_url }}">the party is captured by Queen</a></li>
+			</ul>
+		</li>
 	</ul>
-	<p>Guts: 0</p>
+	<dl class="powerstats">
+		<dt>{% include staticon name="snow" -%} <span class="statlabel">Coldness</span></dt>
+		<dd>&lt;#&gt;</dd>
+		<dt>{% include staticon name="exclamation" -%} <span class="statlabel shrink80">Boldness</span></dt>
+		<dd>&lt;#&gt;</dd>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
+		<dd aria-label="0"></dd>
+	</dl>
 </section>

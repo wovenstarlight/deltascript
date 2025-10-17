@@ -1,0 +1,16 @@
+{% if include.name == "grass" -%}
+	{% assign ext = ".gif" -%}
+{% else -%}
+	{% assign ext = ".png" -%}
+{% endif -%}
+
+<img
+	class="staticon"
+	src="{{ include.name | prepend: '/assets/images/ui/statmenu/' | append: ext | relative_url }}"
+	{%- if include.alt %}
+	alt="{{ include.alt }}"
+	{%- else %}
+	alt=""
+	aria-hidden="true"
+	{%- endif %}
+>

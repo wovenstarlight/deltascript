@@ -119,8 +119,18 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/prisonbreak` - The prison scene with Susie breaking out, encountering Lancer, and freeing Kris/Ralsei
 	* `/chapter2`
 		* `/field2` - Cyber Field story parts after SCC up to rollercoasters; subdivide as necessary
+		<!-- trucies - triple trucies smh -->
+		* `/mouseroom1` - take a guess
+		* `/evilvillains` - smartboy theme park...............
+		* `/mouseroom2` - take a guess x2
+		<!-- cheesed to meet you. pick a url for this -->
+		* `/mouseroom3` - BERDLY SHUT UPPPPPP LITERALLY SHUT UPPPPPPPPPPPPP
+		<!-- berdly fight in second alleyway: DONE -->
 		* `/drive1` - First part of the Kris/Queen/Noelle drive, pre-Spamton
 		* `/drive2` - Second part of the Kris/Queen/Noelle drive, post-Spamton
+		* `/december` - DECEMBER puzzle, Noelle reminiscing
+		* `/reunion` - meeting back up with the party up to going to queen's mansion. maybe combine this and next page?
+			* `#healingmaster` - Susie and Ralsei show back up
 		* `/mansionexterior` - Outside Queen's mansion
 			* `#weirdroute` - Weird route variant
 		* `/noellerescue` - Thinking of Susie rescuing Noelle
@@ -152,7 +162,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/bathroomweird` - maybe merge with below for an `outroweird`
 		* `/holidayoutro` - leaving the Holidays' house. May need a `weird` variant
 		* `/darkworldintro` - sanctuary entrance, running into ralsei, learning about prophecies
-		<!-- meeting gerson, getting to the study? -->
+		* `/escortmission` - meeting gerson, getting to the study
+			* `/stoolforme` - stool forme scene
 		* `/grandpiano` - quest for the sheet music and playing not so good on big piano
 		<!-- leaving the first sanctuary? -->
 		* `/soundofjustice` - SoJ fight (continuing into Ralsei scene)

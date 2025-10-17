@@ -904,7 +904,20 @@ d-box, d-choices {
 			d-text { margin-inline-start: 1ch }
 		}
 
-		&[theme=powertitle] { width: calc(var(--basewidth) - 11.4em) }
+		&[theme=powertitle] {
+			width: calc(var(--basewidth) - 11.4em);
+			position: relative;
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: calc(-1 * var(--border-width));
+				left: 0;
+				width: 100%;
+				height: 0.75em;
+				background: url("../assets/images/ui/statmenu/char.png") center / contain no-repeat;
+			}
+		}
 
 		&[theme=battlemenu] > d-text { max-width: calc(var(--basewidth) - 2.4em) }
 		&[theme=battlemenu] > d-sprite:not([speaker=Tenna]) + d-text { max-width: calc(var(--basewidth) - 6.4em - 1ch) }
@@ -1799,6 +1812,92 @@ d-option-panel {
 	font-family: var(--font-dotum);
 	body.dyslexic & { font-weight: bold }
 	body:not(.noanim) & { animation: rotate 15s linear infinite }
+}
+/* Party members' stat menus */
+.powerstats {
+	font-family: var(--font-condensed);
+	line-height: 1.2;
+	width: fit-content;
+	padding: 0.1em 0.2em;
+	display: grid;
+	align-items: center;
+	grid-template-columns: 11.5ch 3ch;
+
+	body:not(.compact) & {
+		font-size: 1.2em;
+		border: var(--border-width) solid transparent;
+		border-image: url("../assets/images/ui/textbox/dark.gif") 16 / var(--border-width);
+		background-color: var(--black);
+		background-clip: padding-box;
+
+		position: relative;
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: calc(-1 * var(--border-width));
+			left: 0;
+			width: 100%;
+			height: 0.75em;
+			background: url("../assets/images/ui/statmenu/stats.png") center / contain no-repeat;
+		}
+
+		dt:has(
+			img[src*=guts], /* Guts */
+			+ dd > img[src*=dog_sleep] /* Dog */
+		) .statlabel::after { content: ":" }
+	}
+	body:not(.compact).dim & { border-image-source: url("../assets/images/ui/textbox/dark_dim.gif") }
+	
+	body.compact & {
+		gap: 0 1ch;
+		.statlabel:not(.blank)::after { content: ":" }
+	}
+
+	dt {
+		grid-column: 1;
+		display: grid;
+		grid-template-columns: 1.75ch auto;
+		gap: 0.5ch;
+		align-items: center;
+	}
+	.statlabel {
+		grid-column: 2;
+
+		&.blank { opacity: 0.25 } /* specifically, it uses c_dkgray which is #404040; we're matching that relatively so as not to have to introduce a new color */
+
+		&.shrink80 {
+			transform-origin: top left;
+			transform: scaleX(80%);
+		}
+	}
+
+	dd {
+		grid-column: 2;
+		margin: 0;
+		&:has(.staticon) {
+			display: flex;
+			align-items: center;
+		}
+		&:has(.staticon[src*=guts]) { margin-inline-start: -3ch }
+	}
+
+	dt .staticon, img[src*=dog_sleep] { width: 100% }
+	dt .staticon[src*=grass] { width: 80% }
+	img[src*=dog_sleep] {
+		transform-origin: center right;
+		transform: scale(140%);
+	}
+	.staticon {
+		&.noicon {
+			grid-column: 1;
+			text-align: center;
+		}
+		dd & {
+			width: 1.65ch;
+			height: auto;
+		}
+	}
 }
 /* Character icons for ACTs */
 .acticon {
