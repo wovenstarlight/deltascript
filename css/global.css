@@ -917,6 +917,7 @@ d-box, d-choices {
 				height: 0.75em;
 				background: url("../assets/images/ui/statmenu/char.png") center / contain no-repeat;
 			}
+			body.dim &::before { background-image: url("../assets/images/ui/statmenu/char_dim.png") }
 		}
 
 		&[theme=battlemenu] > d-text { max-width: calc(var(--basewidth) - 2.4em) }
@@ -1855,6 +1856,7 @@ d-option-panel {
 			+ dd > img[src*=dog_sleep] /* Dog */
 		) .statlabel::after { content: ":" }
 	}
+	body:not(.compact).dim &::before { background-image: url("../assets/images/ui/statmenu/stats_dim.png") }
 	
 	body.compact & {
 		gap: 0 1ch;
@@ -1925,8 +1927,10 @@ d-option-panel {
 		background: url("../assets/images/ui/statmenu/tp.png") top left / contain no-repeat;
 	}
 	body.compact &::after { left: 2ch }
+	body.dim &::after { background-image: url("../assets/images/ui/statmenu/tp_dim.png") }
 
 	body:not(.compact) &::before { background: url("../assets/images/ui/statmenu/spells.png") center / contain no-repeat }
+	body:not(.compact).dim &::before { background-image: url("../assets/images/ui/statmenu/spells_dim.png") }
 
 	tr {
 		display: grid;
