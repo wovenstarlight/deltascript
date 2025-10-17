@@ -379,6 +379,12 @@ hr {
 		}
 	}
 
+	&.hrhalf {
+		color: var(--gray);
+		margin-inline-start: 0;
+		margin-block: 1em;
+	}
+
 	&.hr2, &.hr3 {
 		color: var(--gray);
 		width: calc(var(--basewidth) + 11em);
