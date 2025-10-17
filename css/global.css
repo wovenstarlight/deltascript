@@ -518,6 +518,7 @@ header.d-section:has(h1.visually-hidden:only-child) {
 	margin: 0 !important;
 	padding: 0 !important;
 	white-space: pre; /* Prevent text wrapping into visibility */
+	clip-path: xywh(0 0 0 0);
 }
 /* "Go back" link on 404 pages */
 #back404 {
