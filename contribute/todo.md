@@ -10,7 +10,6 @@ Nothing right now!
 	* Progress updates (what's finished/new arrivals, what's currently being focused on)
 	* Priority list (what will be worked on after the current tasks are complete, what needs attention, what's been requested…)
 * ch3 0.0.094/ch4 0.0.094 has typo fixes:
-	* Shuttah(?)'s "you have seen naught" dialogue in `obj_npc_room`
 	* `obj_dw_church_waterfallroom` "if only you had something **to** help you climb"
 * ch4 0.0.098:
 	* `gml_Object_obj_dw_church_darkmaze_Step_2` If Guei's OldMan is used on the same turn as both Gueis are spared, then Gerson's cane falls out of the encounter and slides over into his study, and interacting with it fast enough gets you a `Thar she blows` line
