@@ -911,7 +911,7 @@ d-box, d-choices {
 				content: "";
 				display: block;
 				position: absolute;
-				top: calc(-1 * var(--border-width));
+				top: calc(-0.975 * var(--border-width));
 				left: 0;
 				width: 100%;
 				height: 0.75em;
@@ -1813,18 +1813,16 @@ d-option-panel {
 	body.dyslexic & { font-weight: bold }
 	body:not(.noanim) & { animation: rotate 15s linear infinite }
 }
-/* Party members' stat menus */
-.powerstats {
+/* #region POWER menu */
+.powerstats, .powerspells {
 	font-family: var(--font-condensed);
 	line-height: 1.2;
-	width: fit-content;
-	padding: 0.1em 0.2em;
 	display: grid;
 	align-items: center;
-	grid-template-columns: 11.5ch 3ch;
 
 	body:not(.compact) & {
 		font-size: 1.2em;
+		padding: 0.1em 0.2em;
 		border: var(--border-width) solid transparent;
 		border-image: url("../assets/images/ui/textbox/dark.gif") 16 / var(--border-width);
 		background-color: var(--black);
@@ -1835,19 +1833,28 @@ d-option-panel {
 			content: "";
 			display: block;
 			position: absolute;
-			top: calc(-1 * var(--border-width));
+			top: calc(-0.975 * var(--border-width));
 			left: 0;
 			width: 100%;
 			height: 0.75em;
-			background: url("../assets/images/ui/statmenu/stats.png") center / contain no-repeat;
 		}
+	}
+	body:not(.compact).dim & { border-image-source: url("../assets/images/ui/textbox/dark_dim.gif") }
+	
+	body.compact & { margin: 0 0 0 min(1em, 3vw) }
+}
+/* Party members' stat menus */
+.powerstats {
+	width: fit-content;
+	grid-template-columns: 11.5ch 3ch;
 
+	body:not(.compact) & {
+		&::before { background: url("../assets/images/ui/statmenu/stats.png") center / contain no-repeat }
 		dt:has(
 			img[src*=guts], /* Guts */
 			+ dd > img[src*=dog_sleep] /* Dog */
 		) .statlabel::after { content: ":" }
 	}
-	body:not(.compact).dim & { border-image-source: url("../assets/images/ui/textbox/dark_dim.gif") }
 	
 	body.compact & {
 		gap: 0 1ch;
@@ -1897,8 +1904,59 @@ d-option-panel {
 			width: 1.65ch;
 			height: auto;
 		}
+		body.dim & { filter: brightness(73%) }
 	}
 }
+/* Party members' spell menus */
+.powerspells {
+	width: calc(var(--basewidth) - 11.4em);
+	max-width: calc(100% - var(--border-width));
+	color: hsl(from var(--white) h s calc(l / 2));
+
+	position: relative;
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: -0.5ch;
+		left: 2.25ch;
+		width: 2ch;
+		height: 1ch;
+		background: url("../assets/images/ui/statmenu/tp.png") top left / contain no-repeat;
+	}
+	body.compact &::after { left: 2ch }
+
+	body:not(.compact) &::before { background: url("../assets/images/ui/statmenu/spells.png") center / contain no-repeat }
+
+	tr {
+		display: grid;
+		padding-inline-start: 2ch;
+		grid-template-columns: 4ch 1fr;
+		gap: 0 1ch;
+	}
+	.spellcost {
+		grid-column: 1;
+		grid-row: 1;
+		position: relative;
+
+		.variable {
+			position: absolute;
+			top: 0;
+			right: 4.75ch;
+			cursor: help;
+			color: var(--gray);
+		}
+	}
+	.spellname {
+		grid-column: 2;
+		grid-row: 1;
+		a:not(:hover, :focus) {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+}
+/* #endregion */
 /* Character icons for ACTs */
 .acticon {
 	height: 0.75em;

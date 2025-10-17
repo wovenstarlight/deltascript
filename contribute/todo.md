@@ -200,6 +200,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* Maybe something for general menu text…?
 	* `/generic` - Generic text for stuff like shops ("buy it for $### ?" and "sell it for $### ?") and opening chests and all that. May overlap with above point in some cases.
 		* DONE up to Chapter 4: item/equipment/money get, treasure chests, warp doors, vending machines
-	* AH… TITLES… the whole, Level 1 Dark Knight stuff. In progress at `/powermenu`
+	* ~~`/powermenu` - Titles, stats, spells~~ DONE up to Chapter 4
 	* ~~`/spells` - Spells listed in the POWER menu with overworld/battle descriptions and usage text~~ DONE up to Chapter 4
 	* Oh also. Death messages. Hello again ch3 Voice

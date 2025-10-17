@@ -2,7 +2,7 @@
 title: POWER menu
 
 description: >
-  <p>Character titles and personalized stats.</p>
+  <p>Character titles, personalized stats, and spell lists.</p>
   <p>Titles and stat variants later in the list override any earlier ones. If the conditions for multiple titles or multiple stat variants are met, the one that comes last in this page's list will be used.</p>
 
 credits: >
@@ -12,6 +12,15 @@ sources:
   -
     name: gml_Object_obj_darkcontroller_Draw_0
     chapters: [1, 2, 3, 4]
+    note: layout, titles, stats
+  -
+    name: gml_GlobalScript_scr_gamestart
+    chapters: [1, 2, 3, 4]
+    note: spell assignments
+  -
+    name: gml_GlobalScript_scr_spellinfo
+    chapters: [1, 2, 3, 4]
+    note: spell TP costs
 
 see_also:
   -
@@ -68,6 +77,13 @@ toc:
           -
             id: krisstats4
             name: Chapter 4
+      -
+        id: krisspells
+        name: Spells
+        subheadings:
+          -
+            id: krisspells1
+            name: Chapters 1 to 4
   -
     id: susie
     name: Susie
@@ -103,6 +119,22 @@ toc:
             name: Chapter 3
           -
             id: susiestats4
+            name: Chapter 4
+      -
+        id: susiespells
+        name: Spells
+        subheadings:
+          -
+            id: susiespells1
+            name: Chapter 1
+          -
+            id: susiespells2
+            name: Chapter 2
+          -
+            id: susiespells3
+            name: Chapter 3
+          -
+            id: susiespells4
             name: Chapter 4
   -
     id: ralsei
@@ -140,6 +172,13 @@ toc:
           -
             id: ralseistats4
             name: Chapter 4
+      -
+        id: ralseispells
+        name: Spells
+        subheadings:
+          -
+            id: ralseispells1
+            name: Chapters 1 to 4
   -
     id: noelle
     name: Noelle
@@ -157,6 +196,13 @@ toc:
         subheadings:
           -
             id: noellestats2
+            name: Chapter 2
+      -
+        id: noellespells
+        name: Spells
+        subheadings:
+          -
+            id: noellespells2
             name: Chapter 2
 ---
 <section class="d-section" id="layout">
@@ -196,7 +242,9 @@ toc:
 	<h3 id="display-spells">SPELLS</h3>
 	<p>The bottom right section.</p>
 
-	<p>Displays spells belonging to the currently-selected party member, along with their TP costs. Pressing [CONFIRM] on the party member you're hovering over allows you to go through the spell list and view a description for each spell.</p>
+	<p>Displays spells belonging to the currently-selected party member, along with their TP costs. Pressing [CONFIRM] on the party member you're hovering over allows you to go through the spell list and view a description for each spell. This page lists only spell names and costs; you can click on a spell's name to see its description(s) and more information about it on the <a href="{{ '/misc/spells' | relative_url }}">full Spells page</a>.</p>
+
+	<p>An asterisk (*) to the left of a spell means that spell's TP cost changes over the course of the game and the listed value is the starting cost. You can check the spell's section on the Spells page for details on the changing cost.</p>
 </section>
 
 <section class="d-section" id="kris">
@@ -448,6 +496,24 @@ toc:
 		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
 		<dd>{% include staticon name="guts" alt="3" %}{% include staticon name="guts" %}{% include staticon name="guts" %}</dd>
 	</dl>
+
+	<hr>
+
+	<h3 id="krisspells">Spells</h3>
+	<h4 id="krisspells1">
+		<a id="krisspells2"></a><a id="krisspells3"></a><a id="krisspells4"></a>
+		Chapters 1 to 4
+	</h4>
+	<table class="powerspells">
+		<tr class="visually-hidden">
+			<th>Name</th>
+			<th>TP cost</th>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#act' | relative_url }}">ACT</a></td>
+			<td class="spellcost">0%</td>
+		</tr>
+	</table>
 </section>
 
 
@@ -614,6 +680,121 @@ toc:
 		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
 		<dd>{% include staticon name="guts" alt="4" %}{% include staticon name="guts" %}{% include staticon name="guts" %}{% include staticon name="guts" %}</dd>
 	</dl>
+
+	<hr>
+
+	<h3 id="susiespells">Spells</h3>
+	<h4 id="susiespells1">Chapter 1</h4>
+	<table class="powerspells">
+		<tr class="visually-hidden">
+			<th>Name</th>
+			<th>TP cost</th>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#rudebuster' | relative_url }}">Rude Buster</a></td>
+			<td class="spellcost">50% {% include spell_variable_cost %}</td>
+		</tr>
+	</table>
+
+	<hr class="hrhalf">
+
+	<h4 id="susiespells2">Chapter 2</h4>
+	<h5>Initial</h5>
+	<table class="powerspells">
+		<tr class="visually-hidden">
+			<th>Name</th>
+			<th>TP cost</th>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#rudebuster' | relative_url }}">Rude Buster</a></td>
+			<td class="spellcost">50% {% include spell_variable_cost %}</td>
+		</tr>
+	</table>
+
+	<h5>After <a href="{{ '/chapters/chapter2/reunion#healingmaster' | relative_url }}">Ralsei teaches Susie healing</a></h5>
+	<table class="powerspells">
+		<tr class="visually-hidden">
+			<th>Name</th>
+			<th>TP cost</th>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#rudebuster' | relative_url }}">Rude Buster</a></td>
+			<td class="spellcost">50% {% include spell_variable_cost %}</td>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#ultimateheal' | relative_url }}">UltimatHeal</a></td>
+			<td class="spellcost">100%</td>
+		</tr>
+	</table>
+
+	<hr class="hrhalf">
+
+	<h4 id="susiespells3">Chapter 3</h4>
+	<table class="powerspells">
+		<tr class="visually-hidden">
+			<th>Name</th>
+			<th>TP cost</th>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#rudebuster' | relative_url }}">Rude Buster</a></td>
+			<td class="spellcost">50% {% include spell_variable_cost %}</td>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#ultraheal' | relative_url }}">UltraHeal</a></td>
+			<td class="spellcost">90% {% include spell_variable_cost %}</td>
+		</tr>
+	</table>
+
+	<hr class="hrhalf">
+
+	<h4 id="susiespells4">Chapter 4</h4>
+	<h5>Initial / After <a href="{{ '/chapters/chapter4/darkzone#postfight-susie' | relative_url }}">healing Jackenstein</a></h5>
+	<table class="powerspells">
+		<tr class="visually-hidden">
+			<th>Name</th>
+			<th>TP cost</th>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#rudebuster' | relative_url }}">Rude Buster</a></td>
+			<td class="spellcost">50% {% include spell_variable_cost %}</td>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#okheal' | relative_url }}">OKHeal</a></td>
+			<td class="spellcost">85% {% include spell_variable_cost %}</td>
+		</tr>
+	</table>
+
+	<h5>After meeting Ralsei in the Dark Sanctuary and before <a href="{{ '/chapters/chapter4/darkzone#postfight-susie' }}">healing Jackenstein</a> </h5>
+	<table class="powerspells">
+		<tr class="visually-hidden">
+			<th>Name</th>
+			<th>TP cost</th>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#rudebuster' | relative_url }}">Rude Buster</a></td>
+			<td class="spellcost">50% {% include spell_variable_cost %}</td>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#heal' | relative_url }}">Heal</a></td>
+			<td class="spellcost">??%</td>
+		</tr>
+	</table>
+
+	<h5>After defeating the  <a href="{{ '/encounters/hammerofjustice' | relative_url }}">Hammer of Justice</a> or the <a href="{{ '/encounters/soundofjustice' | relative_url }}">Sound of Justice</a></h5>
+	<table class="powerspells">
+		<tr class="visually-hidden">
+			<th>Name</th>
+			<th>TP cost</th>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#rudebuster' | relative_url }}">Rude Buster</a></td>
+			<td class="spellcost">50% {% include spell_variable_cost %}</td>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#betterheal' | relative_url }}">BetterHeal</a></td>
+			<td class="spellcost">80% {% include spell_variable_cost %}</td>
+		</tr>
+	</table>
 </section>
 
 
@@ -810,6 +991,28 @@ toc:
 		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
 		<dd aria-label="0"></dd>
 	</dl>
+
+	<hr>
+
+	<h3 id="ralseispells">Spells</h3>
+	<h4 id="ralseispells1">
+		<a id="ralseispells2"></a><a id="ralseispells3"></a><a id="ralseispells4"></a>
+		Chapters 1 to 4
+	</h4>
+	<table class="powerspells">
+		<tr class="visually-hidden">
+			<th>Name</th>
+			<th>TP cost</th>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#pacify' | relative_url }}">Pacify</a></td>
+			<td class="spellcost">16%</td>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#healprayer' | relative_url }}">Heal Prayer</a></td>
+			<td class="spellcost">32%</td>
+		</tr>
+	</table>
 </section>
 
 
@@ -875,4 +1078,27 @@ toc:
 		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts</span></dt>
 		<dd aria-label="0"></dd>
 	</dl>
+
+	<hr>
+
+	<h3 id="noellespells">Spells</h3>
+	<h3 id="noellespells2">Chapter 2</h3>
+	<table class="powerspells">
+		<tr class="visually-hidden">
+			<th>Name</th>
+			<th>TP cost</th>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#healprayer' | relative_url }}">Heal Prayer</a></td>
+			<td class="spellcost">32%</td>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#sleepmist' | relative_url }}">SleepMist</a></td>
+			<td class="spellcost">32%</td>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#iceshock' | relative_url }}">IceShock</a></td>
+			<td class="spellcost">16% {% include spell_variable_cost %}</td>
+		</tr>
+	</table>
 </section>
