@@ -483,8 +483,8 @@ d-text[effect*=shake][asterisk] {
 	transform: translate(-50%);
 	/* Display */
 	border: var(--border-width) solid transparent;
-	border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width);
-	body.dim & { border-image-source: url("../assets/images/textbox/light_dim.png") }
+	border-image: url("../assets/images/ui/textbox/light.png") 16 / var(--border-width);
+	body.dim & { border-image-source: url("../assets/images/ui/textbox/light_dim.png") }
 	background-clip: padding-box;
 	background-color: var(--black);
 	line-height: 1;
@@ -512,8 +512,8 @@ header.d-section:has(h1.visually-hidden:only-child) {
 #back404 {
 	width: calc(100% - (2 * var(--border-width)));
 	margin: var(--border-width);
-	border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width) / var(--border-width);
-	body.dim & { border-image-source: url("../assets/images/textbox/light_dim.png") }
+	border-image: url("../assets/images/ui/textbox/light.png") 16 / var(--border-width) / var(--border-width);
+	body.dim & { border-image-source: url("../assets/images/ui/textbox/light_dim.png") }
 	background-color: var(--black);
 	color: var(--white);
 	font: inherit;
@@ -555,8 +555,8 @@ header.d-section:has(h1.visually-hidden:only-child) {
 	max-width: 17em;
 	margin: var(--border-width) calc(var(--border-width) - 0.25em);
 	background-color: var(--black);
-	border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width) / var(--border-width);
-	body.dim & { border-image-source: url("../assets/images/textbox/light_dim.png") }
+	border-image: url("../assets/images/ui/textbox/light.png") 16 / var(--border-width) / var(--border-width);
+	body.dim & { border-image-source: url("../assets/images/ui/textbox/light_dim.png") }
 
 	a { text-decoration: none }
 	button {
@@ -724,8 +724,8 @@ body {
 }
 #pagesrc, #pagetoc, #pageseealso {
 	border: calc(var(--border-width) * 0.5) solid transparent;
-	border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width) / calc(0.25 * var(--border-width));
-	body.dim & { border-image-source: url("../assets/images/textbox/light_transparent_dim.png") }
+	border-image: url("../assets/images/ui/textbox/light_transparent.png") 16 / var(--border-width) / calc(0.25 * var(--border-width));
+	body.dim & { border-image-source: url("../assets/images/ui/textbox/light_transparent_dim.png") }
 
 	summary {
 		cursor: pointer;
@@ -838,19 +838,19 @@ d-box, d-choices {
 		background-color: var(--black);
 		background-clip: padding-box;
 		border: var(--border-width) solid transparent;
-		border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width);
-		body.dim &:not([theme]), body.dim &[theme=light] { border-image-source: url("../assets/images/textbox/light_dim.png") }
+		border-image: url("../assets/images/ui/textbox/light.png") 16 / var(--border-width);
+		body.dim &:not([theme]), body.dim &[theme=light] { border-image-source: url("../assets/images/ui/textbox/light_dim.png") }
 
 		&[theme=dark], &[theme^=power], &[theme^=shop] {
-			border-image-source: url("../assets/images/textbox/dark.gif");
-			body.dim & { border-image-source: url("../assets/images/textbox/dark_dim.gif") }
+			border-image-source: url("../assets/images/ui/textbox/dark.gif");
+			body.dim & { border-image-source: url("../assets/images/ui/textbox/dark_dim.gif") }
 		}
 
 		&[theme=plain],
 		&[theme^=obj],
 		&[theme=battlemenu], &[theme=battledesc],
 		&[theme=eightbit], &[theme="8bit"] {
-			border-image-source: url("../assets/images/textbox/plain.png");
+			border-image-source: url("../assets/images/ui/textbox/plain.png");
 			&:has(.hideoverflow, d-box) { clip-path: xywh(0.25em 0.25em calc(100% - 0.5em) calc(100% - 0.5em)) }
 		}
 
@@ -956,14 +956,14 @@ d-box, d-choices {
 			}
 		}
 		&[theme=battletalk] {
-			border-image-source: url("../assets/images/textbox/bubble.png");
-			body.dim & { border-image-source: url("../assets/images/textbox/bubble_dim.png") }
+			border-image-source: url("../assets/images/ui/textbox/bubble.png");
+			body.dim & { border-image-source: url("../assets/images/ui/textbox/bubble_dim.png") }
 			border-image-slice: 6;
 			--border-width: 0.375em;
 		}
 		&[theme=battletalkround] {
-			border-image-source: url("../assets/images/textbox/roundbubble.png");
-			body.dim & { border-image-source: url("../assets/images/textbox/roundbubble_dim.png") }
+			border-image-source: url("../assets/images/ui/textbox/roundbubble.png");
+			body.dim & { border-image-source: url("../assets/images/ui/textbox/roundbubble_dim.png") }
 			border-image-slice: 10;
 			border-width: calc(var(--border-width) - 0.6em);
 			text-align: center;
@@ -1035,7 +1035,7 @@ d-box, d-choices {
 
 		&[theme=caller] {
 			--border-width: 1rem;
-			border-image-source: url("../assets/images/textbox/spikebubble.png");
+			border-image-source: url("../assets/images/ui/textbox/spikebubble.png");
 			border-image-repeat: stretch round;
 			border-image-slice: 12 8;
 			min-height: calc(var(--baseheight) + 1em);
@@ -1056,15 +1056,15 @@ d-box, d-choices {
 			&.quiz {
 				background-color: #00a2e8;
 				border-image-slice: 12;
-				border-image-source: url("../assets/images/textbox/quiz.png");
+				border-image-source: url("../assets/images/ui/textbox/quiz.png");
 				body.dim & {
 					border-color: #1263bc;
-					border-image-source: url("../assets/images/textbox/quiz_dim.png")
+					border-image-source: url("../assets/images/ui/textbox/quiz_dim.png")
 				}
 				&.doom {
 					background-color: #882222;
-					border-image-source: url("../assets/images/textbox/quiz_doom.png");
-					body.dim & { border-image-source: url("../assets/images/textbox/quiz_doom_dim.png") }
+					border-image-source: url("../assets/images/ui/textbox/quiz_doom.png");
+					body.dim & { border-image-source: url("../assets/images/ui/textbox/quiz_doom_dim.png") }
 				}
 			}
 		}
@@ -1671,8 +1671,8 @@ d-option {
 		position: relative;
 		border: var(--border-width) solid transparent;
 		border-block-width: calc(var(--border-width) * 0.5);
-		border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width) / calc(0.25 * var(--border-width));
-		body.dim & { border-image-source: url("../assets/images/textbox/light_transparent_dim.png") }
+		border-image: url("../assets/images/ui/textbox/light_transparent.png") 16 / var(--border-width) / calc(0.25 * var(--border-width));
+		body.dim & { border-image-source: url("../assets/images/ui/textbox/light_transparent_dim.png") }
 		/* Spacing */
 		margin: 0.3em;
 		d-option-panel:state(collapsed) + & { margin-block-start: 0 }	/* Let the previous option handle spacing between options */
@@ -1709,10 +1709,10 @@ d-option-panel {
 
 	&:not([hidden]) {
 		border: var(--border-width) solid transparent;
-		border-image: url("../assets/images/textbox/light_transparent.png") 16 / var(--border-width);
-		body.dim &:not([theme]), body.dim &[theme=light] { border-image-source: url("../assets/images/textbox/light_transparent_dim.png") }
-		&[theme=dark] { border-image-source: url("../assets/images/textbox/dark_transparent.gif") }
-		body.dim &[theme=dark] { border-image-source: url("../assets/images/textbox/dark_transparent_dim.gif") }
+		border-image: url("../assets/images/ui/textbox/light_transparent.png") 16 / var(--border-width);
+		body.dim &:not([theme]), body.dim &[theme=light] { border-image-source: url("../assets/images/ui/textbox/light_transparent_dim.png") }
+		&[theme=dark] { border-image-source: url("../assets/images/ui/textbox/dark_transparent.gif") }
+		body.dim &[theme=dark] { border-image-source: url("../assets/images/ui/textbox/dark_transparent_dim.gif") }
 
 		/* Spacing */
 		padding: 0.1em;
@@ -1804,7 +1804,7 @@ d-option-panel {
 		align-items: center;
 		background-color: var(--black);
 		border: var(--border-width) solid transparent;
-		border-image: url("../assets/images/textbox/light.png") 16 / var(--border-width);
+		border-image: url("../assets/images/ui/textbox/light.png") 16 / var(--border-width);
 		font-size: 1.2em;
 		max-width: 35em;
 		margin-inline: auto;
@@ -1869,7 +1869,7 @@ d-option-panel {
 
 		dd { margin: 0 }
 	}
-	body:not(.compact).dim & { border-image-source: url("../assets/images/textbox/light_dim.png") }
+	body:not(.compact).dim & { border-image-source: url("../assets/images/ui/textbox/light_dim.png") }
 
 	body.compact & {
 		dd { margin-inline-start: 3ch }
@@ -1900,8 +1900,8 @@ d-option-panel {
 	display: block;
 	background-color: var(--black);
 	border: var(--border-width) solid transparent;
-	border-image: url("/deltascript/assets/images/textbox/light.png") 16 / var(--border-width);
-	body.dim & { border-image-source: url("/deltascript/assets/images/textbox/light_dim.png") }
+	border-image: url("/deltascript/assets/images/ui/textbox/light.png") 16 / var(--border-width);
+	body.dim & { border-image-source: url("/deltascript/assets/images/ui/textbox/light_dim.png") }
 	font-size: 1.2em;
 	font-family: var(--font-condensed);
 	width: 100%;
@@ -1945,9 +1945,9 @@ d-option-panel {
 		background-color: var(--black);
 		background-clip: padding-box;
 		border: solid transparent var(--border-width);
-		border-image: url("../assets/images/textbox/dark.gif") 16 / var(--border-width)
+		border-image: url("../assets/images/ui/textbox/dark.gif") 16 / var(--border-width)
 	}
-	body:not(.compact).dim & { border-image-source: url("../assets/images/textbox/dark_dim.gif") }
+	body:not(.compact).dim & { border-image-source: url("../assets/images/ui/textbox/dark_dim.gif") }
 
 	tbody, tr { display: contents }
 
