@@ -804,7 +804,15 @@ class DialogueChoicesOption extends HTMLElement {
 		}
 		// Replace the <s with &lt;s
 		this.innerHTML = ltIndices.reverse().reduce((str, index) => str.slice(0, index) + "&lt;" + str.slice(index + 1), label);
-		
+
+		// Add offsets where necessary
+		const styles = Object.entries({
+			offset_x: this.getAttribute("offset-x") ?? this.getAttribute("offset"),
+			offset_y: this.getAttribute("offset-y"),
+		}).filter(el => el[1]);
+		if (styles.length)
+			this.setAttribute("style", styles.map(([key, val]) => `--option-${key.replaceAll("_", "-")}: ${val}`).join("; "));
+
 		// Add conditional marker where necessary
 		if (this.getAttribute("conditional") !== null) {
 			const asterisk = document.createElement("span");

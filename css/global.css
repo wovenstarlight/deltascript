@@ -1601,19 +1601,20 @@ d-choices {
 
 		/* Left/right */
 		&[index="0"], &[index="1"] {
-			top: 50%;
+			top: calc(50% + var(--option-offset-y, 0em));
 			transform: translateY(-50%);
 		}
 		/* Up/down */
 		&[index="2"], &[index="3"] {
-			left: 50%;
+			left: calc(50% + var(--option-offset-x, 0em));
 			transform: translateX(-50%);
+			z-index: 1;
 		}
 
-		&[index="0"] { left: 1.24em }
-		&[index="1"] { right: 0.15em }
-		&[index="2"] { top: -0.1em }
-		&[index="3"] { bottom: -0.2em }
+		&[index="0"] { left: calc(1.24em + var(--option-offset-x, 0em)); z-index: 0 }
+		&[index="1"] { right: calc(0.15em - var(--option-offset-x, 0em)); z-index: 2 }
+		&[index="2"] { top: calc(-0.1em + var(--option-offset-y, 0em)) }
+		&[index="3"] { bottom: calc(-0.2em - var(--option-offset-y, 0em)) }
 	}
 
 	/* For 8-bit choice menus with at most 2 children, scrunch the kids together */
