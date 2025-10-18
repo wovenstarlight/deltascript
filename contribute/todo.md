@@ -152,7 +152,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/afterround2` - getting dropped in the green room again
 			* `#tennagroup` - party talking to Tenna, Susie saying to explore
 			* `#tennakris` - Kris talking to Tenna
-		* `/intothecold` - first entry to the right side up to getting caught by Tenna
 		* `/intotvworld` - After escaping the Bonus Round via Zapper
 		* `/cityboard` - The unused version of Board 3
 		* `/tennaalone` - Final sequence post-Rouxls where Tenna is abandoned by the remaining Darkners and even Mike
