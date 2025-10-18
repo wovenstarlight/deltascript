@@ -299,8 +299,9 @@ h1, h2, h3, h4, h5, h6 {
 h2, h3, h4, h5, h6 {
 	margin-block: 0.7rem;
 	&:first-child { margin-block-start: 0 }
+}
+h3, h4, h5, h6 {
 	--adjacent-spacing: 0.3rem;
-
 	body:not(.compact) :is(d-box, d-choices) + & { margin-block-start: var(--adjacent-spacing) }
 	body:not(.compact) &:has(+ d-box, + d-choices) { margin-block-end: var(--adjacent-spacing) }
 }
