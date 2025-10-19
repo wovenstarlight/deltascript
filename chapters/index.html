@@ -67,8 +67,8 @@ items:
         name: Beginning
         sublist:
           -
-            url: intro
-            name: Morning at school
+            url: backtoschool
+            name: Back to school
           -
             url: castletown
             name: Return to Castle Town
@@ -79,8 +79,8 @@ items:
         name: Cyber World
         sublist:
           -
-            url: darkworldintro
-            name: Entering the Dark World
+            url: intocyberworld
+            name: Entering Cyber World
           -
             url: arcadegame
             name: Playing arcade games with Queen
@@ -100,10 +100,12 @@ items:
           # TODO: Remaining Dark World scenes
           -
             url: spamtonneo
-            name: Confronting Spamton NEO{END_LINK} (optional sidequest)
-          -
-            url: trashzonepostspamton
-            name: Trash Zone after Spamton NEO's defeat
+            name: Confronting Spamton NEO{END_LINK} (optional sidequest, normal route)
+            sublist:
+              -
+                url: chapters/chapter2/trashzonepostspamton
+                name: Trash Zone after Spamton NEO's defeat
+                override_base_url: true
       # -
       #   name: 'TO DO: Return to the Light World'
   -
