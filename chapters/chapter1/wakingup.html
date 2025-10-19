@@ -1,10 +1,15 @@
 ---
-title: Chapter 1 Intro
+title: Creating a vessel / Waking up
 
 description: >
   <p>The start of the game!</p>
+  <p>The player creates a vessel. Kris wakes up and heads to school with their mother.</p>
 
 sources:
+  -
+    name: gml_Object_DEVICE_CONTACT_Create_0
+    chapters: [1]
+    note: initial window title
   -
     name: gml_Object_DEVICE_CONTACT_Step_0
     chapters: [1]
@@ -40,6 +45,10 @@ toc:
   -
     id: wakeup
     name: Waking up
+    subheadings:
+      -
+        id: skip
+        name: Skipping ahead
   -
     id: leavehouse
     name: Leaving the house
@@ -47,7 +56,7 @@ toc:
 <section class="d-section" id="vesselcreation">
 	<h2>Vessel creation</h2>
 
-	<p class="note">The screen is black.</p>
+	<p class="note">The screen is black. (If no Chapter 1 completion file exists, the window title reads "CONTACT".)</p>
 
 	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
@@ -162,7 +171,6 @@ toc:
 		<li><span class="white">PAIN</span></li>
 		<li><span class="white">COLD</span></li>
 	</ul>
-	<!-- sets global.flag[903] -->
 
 	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
@@ -177,7 +185,6 @@ toc:
 		<li><span class="white">C</span></li>
 		<li><span class="white">D</span></li>
 	</ul>
-	<!-- sets global.flag[904] -->
 
 	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
@@ -191,7 +198,6 @@ toc:
 		<li><span class="white">GREEN</span></li>
 		<li><span class="white">CYAN</span></li>
 	</ul>
-	<!-- sets global.flag[905] -->
 
 	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
@@ -206,7 +212,6 @@ toc:
 		<li><span class="white">BRAVERY</span></li>
 		<li><span class="white">VOICE</span></li>
 	</ul>
-	<!-- sets global.flag[909] as 1 - choice_index -->
 
 	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
@@ -220,7 +225,6 @@ toc:
 		<li><span class="white">DISGUST</span></li>
 		<li><span class="white">FEAR</span></li>
 	</ul>
-	<!-- sets global.flag[906] -->
 
 	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
@@ -232,7 +236,6 @@ toc:
 		<li><span class="white">YES</span></li>
 		<li><span class="white">NO</span></li>
 	</ul>
-	<!-- sets global.flag[907] -->
 
 	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
@@ -244,20 +247,18 @@ toc:
 		<li><span class="white">YES</span></li>
 		<li><span class="white">NO</span></li>
 	</ul>
-	<!-- sets global.flag[908] -->
 
 	<d-box theme="fade" class="glow space">
 		<d-speaker>Voice</d-speaker>
 		<d-text class="block-center-expand">UNDERSTOOD.</d-text>
 	</d-box>
 
-	<d-box theme="fade" class="glow space">
+	<d-box theme="fade" class="glow space" id="vesselname">
 		<d-speaker>Voice</d-speaker>
 		<d-text class="block-center-expand">NAME YOUR VESSEL.</d-text>
 	</d-box>
 
 	<p class="note">A keyboard is presented.</p>
-	<!-- sets global.name -->
 
 	<hr>
 
@@ -314,13 +315,12 @@ toc:
 		<d-speaker>Voice</d-speaker>
 		<d-text class="block-center-expand">AND WHAT ABOUT<span class="break"></span> THE CREATOR?</d-text>
 	</d-box>
-	<d-box theme="fade" class="glow space">
+	<d-box theme="fade" class="glow space" id="truename">
 		<d-speaker>Voice</d-speaker>
 		<d-text class="block-center-expand">YOUR OWN NAME.</d-text>
 	</d-box>
 
 	<p class="note">A keyboard is presented.</p>
-	<!-- sets global.truename -->
 
 	<hr>
 
@@ -425,7 +425,7 @@ toc:
 		<d-text class="block-center-expand">YOUR WONDERFUL<span class="break"></span> CREATION</d-text>
 	</d-box>
 
-	<p class="note">The screen goes black. The music cuts out.</p>
+	<p class="note">The screen goes black. The music cuts out. (If no Chapter 1 completion file exists, the window title goes blank.)</p>
 
 	<d-box theme="fade">
 		<d-speaker>Other voice</d-speaker>
@@ -447,7 +447,7 @@ toc:
 <section class="d-section" id="wakeup">
 	<h2>Waking up</h2>
 	
-	<p class="note">Kris's room displays, with Kris in bed and Toriel standing at the center.</p>
+	<p class="note">Kris's room displays, with Kris in bed and Toriel standing at the center. (If no Chapter 1 completion file exists, the window title reads "The Beginning".)</p>
 
 	<d-box theme="light">
 		<d-sprite speaker="Toriel" emotion="1"></d-sprite>
@@ -466,6 +466,41 @@ toc:
 	</d-box>
 
 	<p class="note">Toriel leaves the room. After a moment, Kris gets out of bed.</p>
+
+	<hr>
+
+	<h3 id="skip">Skipping ahead</h3>
+	<p>Available only if a Chapter 1 completion file exists, i.e. if you've played Chapter 1 to completion and viewed the credits previously.</p>
+
+	<p class="note">Interacting with the bed gives the following dialogue:</p>
+	<d-box theme="light">
+		<d-text asterisk>(It's your bed.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(If you go back to sleep, <span class="yellow">you may miss a lot of important things</span>.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Will you go to bed?)</d-text>
+	</d-box>
+	<d-choices theme="light">
+		<d-option index="0" text="Sleep"></d-option>
+		<d-option index="1" text="Do not"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<d-box theme="light">
+			<d-text asterisk>(For some reason, you decided to go back to sleep...)</d-text>
+		</d-box>
+		<p class="note">The screen fades to black.</p>
+		<d-box theme="light">
+			<d-text asterisk>(But, when you opened your eyes...)</d-text>
+		</d-box>
+		<p class="note">It cuts to Kris <a href="{{ '/chapters/chapter1/darkworldintro' | relative_url }}">waking up in the Dark World</a>. (If no Chapter 1 completion file exists, the window title reads "THE DARK".)</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<d-box theme="light">
+			<d-text asterisk>(You can sleep in class.)</d-text>
+		</d-box>
+	</d-option-panel>
 </section>
 
 <section class="d-section" id="leavehouse">
