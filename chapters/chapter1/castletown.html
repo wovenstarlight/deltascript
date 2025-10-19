@@ -1,8 +1,8 @@
 ---
-title: Chapter 1 - Castle Town
+title: Entering Castle Town
 
 description: >
-  <p>Kris and Susie's first visit to Castle Town and their meeting with Ralsei and Lancer.</p>
+  <p>Kris and Susie discover Castle Town and meet Ralsei and Lancer.</p>
 
 credits: >
   <p>Compiled by wovenstarlight.</p>
@@ -16,6 +16,10 @@ sources:
     name: gml_Object_obj_readable_room1_Other_10
     chapters: [1]
     note: town square interactions
+  -
+    name: gml_Object_obj_savepoint_Other_10
+    chapters: [1]
+    note: SAVE point narration
   -
     name: gml_Object_obj_darkcastle_event_Step_0
     chapters: [1]
@@ -48,6 +52,9 @@ toc:
       -
         id: buildings
         name: Interacting with buildings
+      -
+        id: savepoint
+        name: SAVE point
   -
     id: castle
     name: Entering the castle
@@ -60,6 +67,13 @@ toc:
   -
     id: postbattle
     name: After fighting Lancer
+    subheadings:
+      -
+        id: ralseijoins
+        name: Ralsei joins the party
+      -
+        id: savepoint2
+        name: SAVE point
   -
     id: tutorial
     name: Tutorial
@@ -70,7 +84,7 @@ toc:
 <section class="d-section" id="discovery">
 	<h2>Initial discovery</h2>
 
-	<p class="note">Kris sits among rocks at the bottom of a slide. They can make their way to the right and find Susie standing outside a town, where they are free to move around.</p>
+	<p class="note">Kris sits among rocks at the bottom of a slide. They stand up after a moment and control is returned to the player, who can lead them to the right and find Susie standing outside a town. The player can <a href="#susie">talk to Susie</a>, <a href="#buildings">examine the town's buildings</a>, <a href="#savepoint">SAVE in the town square</a>, or <a href="#castle">head north to the castle</a>.</p>
 
 	<hr>
 
@@ -124,7 +138,16 @@ toc:
 
 	<hr>
 
-	<p>Heading up towards the castle and fountain progresses the scene.</p>
+	<h3 id="savepoint">SAVE point</h3>
+	<d-box theme="dark">
+		<d-text asterisk>In front of you, a castle looms beneath the empty town.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>A black geyser emerges from it, piercing endlessly into the sky.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The power of this place shines within you.</d-text>
+	</d-box>
 </section>
 
 <section class="d-section" id="castle">
@@ -728,6 +751,7 @@ toc:
 <section class="d-section" id="postbattle">
 	<h2>After fighting Lancer</h2>
 
+	<h3 id="ralseijoins">Ralsei joins the party</h3>
 	<p class="note">Ralsei reenters the courtyard.</p>
 
 	<d-box theme="dark">
@@ -845,7 +869,17 @@ toc:
 		<d-text asterisk>You can lead the way, Kris!</d-text>
 	</d-box>
 
-	<p class="note">Kris is free to move.</p>
+	<p class="note">Control is returned to the player. You can <a href="#savepoint2">revisit the Castle Town SAVE point</a>, or <a href="#tutorial">head east</a> right away.</p>
+
+	<hr>
+
+	<h3 id="savepoint2">SAVE point</h3>
+	<d-box theme="dark">
+		<d-text asterisk>Ralsei, the lonely prince, is now your ally.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The power of fluffy boys shines within you.</d-text>
+	</d-box>
 </section>
 
 <section class="d-section" id="tutorial">

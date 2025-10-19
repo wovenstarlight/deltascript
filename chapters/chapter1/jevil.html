@@ -49,6 +49,9 @@ toc:
       -
         id: defeat-pacify
         name: If you defeated Jevil by pacifying
+      -
+        id: rewards
+        name: Obtaining your rewards
 ---
 <section class="d-section" id="firstmeeting">
 	<h2>First meeting</h2>
@@ -309,6 +312,9 @@ toc:
 		<d-speaker>Jevil</d-speaker>
 		<d-text asterisk>TAKE ME AND DO YOUR STRONGEST---!</d-text>
 	</d-box>
+	<p class="note">Proceeds to the <a href="#rewards">rewards for winning</a>.</p>
+
+	<hr>
 
 	<h3 id="defeat-pacify">If you defeated Jevil by pacifying</h3>
 	<d-box theme="dark">
@@ -355,31 +361,39 @@ toc:
 		<d-text asterisk>TAKE THIS AND DO YOUR STRONGEST---!</d-text>
 	</d-box>
 
-	<hr class="hr2">
+	<hr>
 
+	<h3 id="rewards">Obtaining your rewards</h3>
 	<p class="note">Jevil transforms into the Devilsknife, accompanied by the voice line "METAMORPHOSIS!", and disappears. The following line is accompanied by Jevil's laughter.</p>
 
 	<d-box theme="dark">
 		<d-text asterisk>(You got ShadowCrystal.)</d-text>
 	</d-box>
+	<p class="note">A <a href="{{ '/misc/darkitems#shadowcrystal' | relative_url }}">Shadow Crystal</a> is added to the inventory.</p>
 
 	<hr class="hr2">
 
-	<h3>If defeated through fighting</h3>
+	<h4>If defeated through fighting</h4>
 	<d-box theme="dark">
 		<d-text asterisk>(DEVILSKNIFE was added to your WEAPONs.)</d-text>
 	</d-box>
-	<p class="note">Devilsknife is added to the inventory.</p>
-	<h3>If defeated through pacifying</h3>
+	<p class="note">The <a href="{{ '/misc/weapons#devilsknife' | relative_url}}">Devilsknife</a> is added to the weapons inventory.</p>
+
+	<hr class="hr3">
+
+	<h4>If defeated through pacifying</h4>
 	<d-box theme="dark">
 		<d-text asterisk>(JEVILSTAIL was added to your ARMORs.)</d-text>
 	</d-box>
-	<p class="note">Jevilstail is added to the inventory.</p>
-	<h3>In both cases, if you have no room in your weapon/armor inventory respectively</h3>
+	<p class="note">The <a href="{{ '/misc/weapons#jevilstail' | relative_url}}">Jevilstail</a> is added to the armor inventory.</p>
+
+	<hr class="hr3">
+
+	<h4>In both cases, if you have no room in your weapon/armor inventory respectively</h4>
 	<d-box theme="dark">
 		<d-text asterisk>(A strange chest appeared outside the room...)</d-text>
 	</d-box>
-	<p class="note">This chest will contain the Devilsknife/Jevilstail.</p>
+	<p class="note">As stated, a treasure chest appears outside the room containing the Devilsknife/Jevilstail. It uses the <a href="{{ '/misc/generic#treasurechest' | relative_url }}">generic text for treasure chests</a> containing <a href="{{ '/misc/generic#weaponget' | relative_url }}">weapons</a>/<a href="{{ '/misc/generic#armorget' | relative_url }}">armor</a> respectively.</p>
 
 	<hr class="hr2">
 

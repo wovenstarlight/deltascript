@@ -1,0 +1,369 @@
+---
+title: Kris and Susie enter ??????
+
+description: >
+  <p>Kris and Susie make their initial foray into the Dark World.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_DEVICE_MENU_Step_0
+    chapters: [1]
+    note: window title post-SAVE load
+  -
+    name: gml_Object_DEVICE_FAILURE_Step_0
+    chapters: [1]
+    note: window title post-death
+  -
+    name: gml_Object_obj_dustpile_susie_Step_0
+    chapters: [1]
+    note: finding Susie
+  -
+    name: gml_Object_obj_savepoint_Other_10
+    chapters: [1]
+    note: SAVE point narration
+  -
+    name: gml_Object_obj_savemenu_Create_0
+    chapters: [1]
+    note: SAVE menu default values
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [1]
+    note: cliff holes, eye puzzle sign
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [1]
+    note: Glowshard hole
+  -
+    name: gml_Object_obj_lancerchaseevent_Step_0
+    chapters: [1]
+    note: initial attack
+  -
+    name: gml_Object_obj_lancerslideevent_Step_0
+    chapters: [1]
+    note: pre-slide dialogue
+
+toc:
+  -
+    id: entry
+    name: Entering the dark
+    subheadings:
+      -
+        id: fall
+        name: Falling
+      -
+        id: wristprotector
+        name: Obtaining the Wrist Protector
+      -
+        id: savepoint1
+        name: SAVE point
+      -
+        id: cliffs
+        name: Heading through the cliffs
+        subheadings:
+          -
+            id: glowshard
+            name: Glowshard
+          -
+            id: savepoint2
+            name: SAVE point
+          -
+            id: eyepuzzle
+            name: Eye puzzle
+      -
+        id: susie
+        name: Finding Susie
+  -
+    id: attack
+    name: A stranger attacks
+---
+<section class="d-section" id="entry">
+	<h2>Entering the dark</h2>
+
+	<h3 id="fall">Falling</h3>
+	<p class="note">Kris and Susie fall into the darkness, disappearing into the distance. After a moment, they hit the ground, unseen but heard. There is silence for a moment before the rushing of wind becomes audible for several seconds.</p>
+
+	<p class="note">The wind abruptly goes silent as the darkness cuts to show Kris is sprawled on the ground in a dark, rocky area; Kris's color palette is altered and they're wearing different clothing. After a moment, they sit up, then struggle to their feet. Control is returned to the player. The area remains silent, Kris's echoing footsteps the only thing to be heard.</p>
+
+	<p class="note">(If no Chapter 1 completion file exists, loading a SAVE file created in this area — the Dark World — or choosing to continue after dying will change the window title to read "THE DARK".)</p>
+
+	<hr>
+
+	<h3 id="wristprotector">Obtaining the Wrist Protector</h3>
+	<p>Available only in the Chapter 1 Demo, if reaching the Dark World within 8 minutes, most easily accomplished by <a href="{{ '/chapters/chapter1/wakingup#skip' | relative_url }}">skipping the initial Light World scenes</a>. Removed completely from the Chapter 1&2 Demo onwards.</p>
+
+	<p class="note">Something glimmers in the darkness to the north of the platform where Kris wakes up; it can be interacted with.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(You found something shining in the dark.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>("Even in a rush, you need to take care of yourself.")</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You got the Wrist Protector.)</d-text>
+		<d-text asterisk>(Hold [MENU] to skip text.)</d-text>
+	</d-box>
+	<p class="note">The ability to skip dialogue using [MENU] is enabled. The glimmer disappears, though the spot can still be interacted with.</p>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Nothing.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="savepoint1">SAVE point</h3>
+	<d-box theme="dark">
+		<d-text asterisk>At times, you see it flickering.</d-text>
+		<d-text asterisk>The light only you can see.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>By second nature, you reach out, and...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If you've never made a SAVE in this slot before</h4>
+	<p class="note">The <a href="{{ '/misc/savepoints#savemenu' }}">SAVE menu</a> appears, displaying the name "<span class="white fnt-condensed">Kris</span>" at "<span class="white fnt-condensed">LV 1</span>", with the location as "<span class="white fnt-condensed">---</span>".</p>
+	<hr class="hr3">
+	<h4>If you've erased the SAVE in this slot before</h4>
+	<p class="note">The <a href="{{ '/misc/savepoints#savemenu' }}">SAVE menu</a> appears, displaying the name "<span class="white fnt-condensed">[EMPTY]</span>" at "<span class="white fnt-condensed">LV 0</span>", with the location as "<span class="white fnt-condensed">---</span>".</p>
+	<hr class="hr2">
+	<p class="note">Choosing to SAVE overwrites this with your true name (chosen during the <a href="{{ '/chapters/chapter1/wakingup#truename' | relative_url }}">vessel creation sequence</a>) at "<span class="yellow fnt-condensed">LV 1</span>", with the location as "<span class="yellow fnt-condensed">??????</span>".</p>
+
+	<hr>
+
+	<h3 id="cliffs">Heading through the cliffs</h3>
+	<p class="note">Past the SAVE point, <a href="{% include wikilink page='Cliffs' %}">eerie music</a> begins playing. The player can lead Kris through a rocky area filled with wobbly creatures and piles of dust. The sides of the cliffs bordering the path occasionally have holes leaking a dark fluid; interacting with these gives the following:</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's too dark to see anything.)</d-text>
+	</d-box>
+
+	<p class="note">A shadowy figure can occasionally be spotted on the tops of these bordering cliffs, though they move offscreen every time Kris gets near.</p>
+
+	<h4 id="glowshard">Glowshard</h4>
+	<p class="note">Some distance along, there's a split in the path that leads to a side area with another one of the leaking holes in a cliff. This one, however, has something gleaming inside. Interacting with it gives the following:</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(There's something glowing inside.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Take it?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(You got the Glowshard.)</d-text>
+		</d-box>
+		<p class="note">The <a href="{{ '/misc/darkitems#glowshard' | relative_url }}">Glowshard</a> is added to the inventory.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(It stayed.)</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<p class="note">Interacting with this leaking hole after taking the Glowshard gives the following:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's dark inside.)</d-text>
+	</d-box>
+
+	<h4 id="savepoint2">SAVE point</h4>
+	<p class="note">The player can continue on, passing more wobbly creatures that shoot bullets at Kris. There's another SAVE point in the room past this:</p>
+
+	<h5>If Kris's HP is at max</h5>
+	<d-box theme="dark">
+		<d-text asterisk>You bathed your body in the light.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>A power shines within you, breaking through the darkness.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>Any pain you may have had melted away...</d-text>
+		<d-text asterisk>(HP fully restored.)</d-text>
+	</d-box>
+
+	<h5>If Kris's HP is below max</h5>
+	<d-box theme="dark">
+		<d-text asterisk>You bathed your body in the light.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>A power shines within you, breaking through the darkness.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The pain you had melted away...</d-text>
+		<d-text asterisk>(HP fully restored.)</d-text>
+	</d-box>
+
+	<h5>If Kris's HP is below 30</h5>
+	<p>The "spores" don't do enough damage to lower Kris's HP this much unless you reenter the room and get hit multiple times.</p>
+	<d-box theme="dark">
+		<d-text asterisk>For some reason, you punished yourself with the spores.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The light relieves you...</d-text>
+		<d-text asterisk>(HP fully restored.)</d-text>
+	</d-box>
+
+	<h4 id="eyepuzzle">Eye puzzle</h4>
+	<p class="note">Next to the SAVE point is a sign:</p>
+	<d-box theme="dark">
+		<d-text asterisk>In this land^1, only eyes blinded by darkness can see the way...</d-text>
+	</d-box>
+
+	<p class="note">The cliff beside the one holding the sign has a series of holes with something gleaming inside; each hole is labelled with a trio of dots, signalling which of the eye markings above it controls. The player must make all three eyes go dark, which creates a bridge leading onward with a thud.</p>
+
+	<hr>
+
+	<h3 id="susie">Finding Susie</h3>
+	Eventually, Kris comes upon a series of dust piles that scatter as they're checked. A shadow darts from one to the next as Kris checks each one. The furthest one to the right scatters to reveal an agitated Susie.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="7"></d-sprite>
+		<d-text asterisk>H-hey! B... back off!</d-text>
+		<d-text asterisk>Come any closer and I'll...!!</d-text>
+	</d-box>
+
+	<p class="note">Susie straightens up as she looks at Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="6"></d-sprite>
+		<d-text asterisk>... K...</d-text>
+		<d-text asterisk>Kris!?</d-text>
+		<d-text asterisk>Phew...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="7"></d-sprite>
+		<d-text asterisk>... Hey, don't scare me like that, dumbass!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="2"></d-sprite>
+		<d-text asterisk>Unless you WANT to get clocked in the face, heh.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>... anyway, enough screwing around.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>We gotta find a way outta here.</d-text>
+	</d-box>
+
+	<p class="note">Susie looks around.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="6"></d-sprite>
+		<d-text asterisk>Ummm...</d-text>
+		<d-text asterisk>Where is "here," anyway...?</d-text>
+	</d-box>
+
+	<p class="note">Susie looks at Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="7"></d-sprite>
+		<d-text asterisk>It doesn't matter!</d-text>
+		<d-text asterisk>YOU got us into this mess, YOU get us out!</d-text>
+	</d-box>
+
+	<p class="note">Susie gets behind Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="1"></d-sprite>
+		<d-text asterisk>Lead the way, Kris!</d-text>
+	</d-box>
+
+	<p class="note">Susie is now in the party and follows Kris as they walk.</p>
+
+	<hr class="hr2">
+
+	<h4>Going left</h4>
+	<p>So, back the way you came.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Oh my god. Nevermind.</d-text>
+		<d-text asterisk>You have NO idea where you're going.</d-text>
+	</d-box>
+
+	<hr class="hr3">
+
+	<h4>Going right</h4>
+	<h5>If you walked</h5>
+	<p>Or ran less than a certain amount; you know the drill.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Oh my god. Nevermind.</d-text>
+		<d-text asterisk>You walk WAY too slow.</d-text>
+	</d-box>
+	<h5>If you ran</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Huff... puff...</d-text>
+		<d-  -
+    id: entry
+    name: Entering the dark
+    subheadings:
+      -
+        id: fall
+        name: Falling
+      -
+        id: wristprotector
+        name: Obtaining the Wrist Protector
+      -
+        id: savepoint1
+        name: SAVE point
+      -
+        id: cliffs
+        name: Heading through the cliffs
+        subheadings:
+          -
+            id: glowshard
+            name: Glowshard
+          -
+            id: savepoint2
+            name: SAVE point
+          -
+            id: eyepuzzle
+            name: Eye puzzle
+      -
+        id: susie
+        name: Finding Susie
+  -
+    id: attack
+    name: A stranger attacks
+
+<section class="d-section" id="attack">
+	<h2>A stranger attacks</h2>
+
+	<p class="note">In the next room, Susie stands at the base of a cliff. She turns to Kris as they join her.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Hey, Kris.</d-text>
+		<d-text asterisk>There's someone up there waving at us.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="0"></d-sprite>
+		<d-text asterisk>Any idea what they want...?</d-text>
+	</d-box>
+
+	<p class="note">Kris and Susie look up. The shadow up on the cliff raises a hand; spade-shaped bullets form and fly down towards Susie as the shadow brings its hand down. Susie dodges, panicked.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="9"></d-sprite>
+		<d-text asterisk>R-run, Kris!</d-text>
+	</d-box>
+
+	<p class="note">Susie dashes off to the right; Kris follows, dodging spade-shaped bullets along the way. Susie waits for them at the top of a slide.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" variant="noeyes" emotion="9"></d-sprite>
+		<d-text asterisk>Kris, down here!</d-text>
+	</d-box>
+
+	<p class="note">They both slide down, Susie outpacing Kris, and eventually hit <a href="{{ '/chapters/chapter1/castletown' | relative_url }}">the bottom</a>.</p>
+</section>
