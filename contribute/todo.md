@@ -198,7 +198,11 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* ~~`/armor` - Defense equipment.~~ DONE up to Chapter 4
 	* ~~`/recruits` - Profiles for recruited enemies~~ DONE up to Chapter 4
 	* ~~`/savepoints` - Youuuu guessed it. Save point text. The power of X fills you and all that.~~ DONE up to Chapter 4
-	* Maybe something for general menu text…?
+	* Maybe something for general menu text…? the ui?
+		* ~~save point menu~~ DONE at `/savepoints#savemenu`
+		* lightworld/darkworld UIs: `/itemmenu`
+			* `#storage`
+		* recruits: add to `/recruits#recruitmenu`
 	* `/generic` - Generic text for stuff like shops ("buy it for $### ?" and "sell it for $### ?") and opening chests and all that. May overlap with above point in some cases.
 		* DONE up to Chapter 4: item/equipment/money get, treasure chests, warp doors, vending machines
 	* ~~`/powermenu` - Titles, stats, spells~~ DONE up to Chapter 4

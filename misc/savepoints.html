@@ -1,9 +1,23 @@
 ---
 title: SAVE points
+
 description: >
-  <p>Narration that accompanies SAVE points.</p>
-  <p>SAVE points not listed here have no additional text accompanying the SAVE menu.</p>
+  <p>The SAVE point menu and the narration accompanying certain points.</p>
+  <p>SAVE points not listed here have no accompanying narration.</p>
+
 sources:
+  -
+    name: gml_Object_obj_savemenu_Draw_0
+    chapters: [1, 2, 3, 4]
+    note: menu layout
+  -
+    name: gml_Object_obj_savemenu_Create_0
+    chapters: [1, 2, 3, 4]
+    note: some menu strings
+  -
+    name: gml_Object_obj_DEVICE_MENU_Step_0
+    chapters: [1, 2, 3, 4]
+    note: name for erased files
   -
     name: gml_GlobalScript_scr_roomname
     chapters: [1, 2, 3, 4]
@@ -12,9 +26,38 @@ sources:
     name: gml_Object_obj_savepoint_Other_10
     chapters: [1, 2, 3, 4]
     note: actual narration
+
 credits: >
   <p>Compiled by wovenstarlight.</p>
+
 toc:
+  -
+    id: savemenu
+    name: SAVE menu layout
+    subheadings:
+      -
+        id: savemenu1
+        name: Chapter 1
+        subheadings:
+          -
+            id: savemenu1-initial
+            name: Initial
+          -
+            id: savemenu1-save
+            name: Upon selecting "Save"
+      -
+        id: savemenu2
+        name: Chapter 2 onwards
+        subheadings:
+          -
+            id: savemenu2-initial
+            name: Initial
+          -
+            id: savemenu2-slots
+            name: Upon selecting "Save"
+          -
+            id: savemenu2-save
+            name: Upon choosing a slot to SAVE in
   -
     id: chapter1
     name: Chapter 1
@@ -157,7 +200,141 @@ Room IDs are based on their index in the game files; helper function getRoom() i
 Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs gathered above
 {% endcomment -%}
 
+<section class="d-section" id="savemenu">
+	<h2>SAVE menu layout</h2>
+	<p class="note">Upon interacting with a SAVE point, preceding narration (if any) plays; see the below sections for this.</p>
 
+	<p class="note">After any narration has played, the initial SAVE menu opens, from which you can choose to SAVE, view additional menus (Chapter 2 onwards only), or close the menu. This initial menu lists the following:</p>
+
+	<ul class="note">
+		<li>Name: The owner of the existing SAVE file in the current slot (if any), represented in all examples below as "<span class="white fnt-condensed">&lt;NAME&gt;</span>".</li>
+		<li>The current LV, represented below as "<span class="white fnt-condensed">&lt;LV #&gt;</span>" where # is typically the current Chapter number (with an exception in <a href="#savemenu1-initial">Chapter 1</a>).</li>
+		<li>Time: the duration for which you've been playing on the <em>current file</em>, with the seconds updating in real time. (It is <em>not</em> the time at which the last SAVE in the current slot was made!)  Typically displayed in hours, minutes, and seconds, starting at "<span class="white fnt-condensed">0:00:00</span>", and represented below as "<span class="white fnt-condensed">H:MM:SS</span>".
+			<ul>
+				<li>Prior to Chapter 1&2 Demo v1.16, in Chapters 1 & 2, the timer displayed only minutes and seconds, starting at "<span class="white fnt-condensed">00:00</span>", with minutes capable of going into 3+ digits.</li>
+			</ul>
+		</li>
+		<!-- Ok so looking at some older playthroughs i'm certain that the timer did NOT always behave as a live clock, and at some point did in fact only show the static time at which you last saved, but idk at what version that changed -->
+		<li>Location: represented below as "<span class="white fnt-condensed">&lt;Location&gt;</span>".</li>
+	</ul>
+
+	<hr>
+
+	<h3 id="savemenu1">Chapter 1</h3>
+	<h4 id="savemenu1-initial">Initial</h4>
+	<d-box theme="save" class="savev1">
+		<d-text class="name">&lt;NAME&gt;</d-text>
+		<d-text class="level">LV #</d-text>
+		<d-text class="time">H:MM:SS</d-text>
+		<d-text class="location">&lt;Location&gt;</d-text>
+		<d-text class="option">Save</d-text>
+		<d-text class="option">Return</d-text>
+	</d-box>
+	<p class="note">In the above menu:</p>
+	<ul class="note">
+		<li>"<span class="white fnt-condensed">&lt;NAME&gt;</span>" depends on the last existing SAVE file in the current slot:
+			<ul>
+				<li>"<span class="white fnt-condensed">Kris</span>" if no SAVE has been created/erased in this slot before</li>
+				<li>"<span class="white fnt-condensed">[EMPTY]</span>" if a SAVE has been erased in this slot before</li>
+				<li>the player's true name (chosen during the <a href="{{ '/chapters/chapter1/wakingup#truename' | relative_url }}">vessel creation sequence</a>) if a SAVE file currently exists in this slot i.e. if you've SAVEd at least once</li>
+			</ul>
+		</li>
+		<li>LV depends on the last existing SAVE file in the current slot:
+			<ul>
+				<li>"<span class="white fnt-condensed">LV 1</span>" on a SAVE belonging to Kris or the player</li>
+				<li>"<span class="white fnt-condensed">LV 0</span>" if a SAVE has been erased in this slot before</li>
+			</ul>
+		</li>
+		<li>"<span class="white fnt-condensed">&lt;Location&gt;</span>" is the location where the last existing SAVE file in the current slot was created. If no SAVE file exists for this slot yet, this instead displays as "<span class="white fnt-condensed">---</span>".</li>
+	</ul>
+
+	<h4 id="savemenu1-save">Upon selecting "Save"</h4>
+	<p class="note">The SAVE chime plays.</p>
+	<d-box theme="save" class="savev1 saved">
+		<d-text class="name">&lt;NAME&gt;</d-text>
+		<d-text class="level">LV 1</d-text>
+		<d-text class="time">H:MM:SS</d-text>
+		<d-text class="location">&lt;Location&gt;</d-text>
+		<d-text class="option">File saved.</d-text>
+	</d-box>
+	<p class="note">The name, level, and location are all updated; the player's true name and the current SAVE point's location are used. The timer continues ticking. Pressing [CANCEL] at this point closes the menu, returning you to the overworld.</p>
+
+	<hr>
+
+	<h3 id="savemenu2">Chapter 2 onwards</h3>
+	<h4 id="savemenu2-initial">Initial</h4>
+	<d-box theme="save" class="savev2">
+		<d-text class="name">&lt;NAME&gt;</d-text>
+		<d-text class="level">LV #</d-text>
+		<d-text class="time">H:MM:SS</d-text>
+		<d-text class="location">&lt;Location&gt;</d-text>
+		<d-text class="option">Save</d-text>
+		<d-text class="option">Return</d-text>
+		<d-text class="option">Storage</d-text>
+		<d-text class="option">Recruits</d-text>
+	</d-box>
+	<p class="note">In the above menu:</p>
+	<ul class="note">
+		<li>"<span class="white fnt-condensed">&lt;NAME&gt;</span>" is the player's true name, either chosen during Chapter 1's vessel creation sequence (if a SAVE has been continued from Chapter 1) or chosen immediately before gameplay begins (if starting a fresh playthrough from a subsequent chapter).</li>
+		<li>LV is the current Chapter's number.</li>
+		<li>"<span class="white fnt-condensed">&lt;Location&gt;</span>" is the current SAVE point's location.</li>
+		<li>Selecting "<span class="white fnt-condensed">Storage</span>" opens the <a href="{{ '/misc/itemmenu#storage' | relative_url }}">storage menu</a>.</li>
+		<li>Selecting "<span class="white fnt-condensed">Recruits</span>" opens the <a href="{{ '/misc/recruits#recruitmenu' | relative_url }}">recruit menu</a>.</li>
+	</ul>
+
+	<h4 id="savemenu2-slots">Upon selecting "Save"</h4>
+	<p class="note">A menu opens, showing live data for the current playthrough at the top, below which is data for the three SAVE slots which can be navigated through. By default, the cursor starts on the SAVE slot currently being played in.</p>
+	<p class="note">Below is a sample menu showing one existing SAVE file and two empty SAVE slots, where the player is playing in SAVE slot 2:</p>
+
+	<div class="savefull wrapper">
+		<d-box theme="save" class="savefull top">
+			<d-text class="level">LV #</d-text>
+			<d-text class="name">&lt;NAME&gt;</d-text>
+			<d-text class="time">H:MM:SS</d-text>
+			<d-text class="location">&lt;Location&gt;</d-text>
+		</d-box>
+
+		<d-box theme="save" class="savefull bottom">
+			<d-text class="level">LV #</d-text>
+			<d-text class="name">&lt;OTHER NAME&gt;</d-text>
+			<d-text class="time">H:MM:SS</d-text>
+			<d-text class="location">&lt;Other Location&gt;</d-text>
+			<hr>
+			<d-text class="blank">New File</d-text>
+			<hr>
+			<d-text class="blank">New File</d-text>
+			<hr>
+			<d-text class="option">Return</d-text>
+		</d-box>
+	</div>
+
+	<p class="note">Choosing "<span class="white fnt-condensed">Return</span>" at this point returns you to the <a href="#savemenu2-initial">initial menu</a>.</p>
+
+	<h4 id="savemenu2-save">Upon choosing a slot to SAVE in</h4>
+	<p class="note">The SAVE chime plays. The top section turns yellow and its timer freezes at the moment [CONFIRM] was pressed, so that the top section shows precisely the values saved to file. The chosen slot has all text replaced by a label reading "<span class="yellow fnt-condensed">File Saved</span>". The "<span class="white fnt-condensed">Return</span>" option at the bottom disappears.</p>
+	<p class="note">Below is the sample menu, now with the player having chosen to SAVE in slot 2:</p>
+	<div class="savefull wrapper">
+		<d-box theme="save" class="savefull saved top">
+			<d-text class="level">LV #</d-text>
+			<d-text class="name">&lt;NAME&gt;</d-text>
+			<d-text class="time">H:MM:SS</d-text>
+			<d-text class="location">&lt;Location&gt;</d-text>
+		</d-box>
+
+		<d-box theme="save" class="savefull bottom">
+			<d-text class="level">LV #</d-text>
+			<d-text class="name">&lt;OTHER NAME&gt;</d-text>
+			<d-text class="time">H:MM:SS</d-text>
+			<d-text class="location">&lt;Other Location&gt;</d-text>
+			<hr>
+			<d-text class="saved">File Saved</d-text>
+			<hr>
+			<d-text class="blank">New File</d-text>
+		</d-box>
+	</div>
+
+	<p class="note">Pressing [CANCEL] at this point closes the whole menu, returning you to the overworld.</p>
+</section>
 
 <section class="d-section" id="chapter1">
 	<h2>Chapter 1</h2>

@@ -854,7 +854,7 @@ d-box, d-choices {
 		border-image: url("../assets/images/ui/textbox/light.png") 16 / var(--border-width);
 		body.dim &:not([theme]), body.dim &[theme=light] { border-image-source: url("../assets/images/ui/textbox/light_dim.png") }
 
-		&[theme=dark], &[theme^=power], &[theme^=shop] {
+		&[theme=dark], &[theme^=power], &[theme^=shop], &[theme=save] {
 			border-image-source: url("../assets/images/ui/textbox/dark.gif");
 			body.dim & { border-image-source: url("../assets/images/ui/textbox/dark_dim.gif") }
 		}
@@ -1096,6 +1096,77 @@ d-box, d-choices {
 			}
 		}
 
+		&[theme=save] {
+			margin-inline: auto;
+			padding-block: 0;
+			display: grid;
+			grid-template-columns: 1fr auto auto;
+			gap: 0.25em 1.5ch;
+			--mywidth: calc(var(--basewidth) - 7em);
+
+			&.savev1 {
+				width: var(--mywidth);
+
+				&.saved .option { grid-column: 1 / span 3 }
+
+				.location { margin-block-end: 0.75em }
+				.option:nth-child(odd) { margin-inline-start: 2ch }
+			}
+			&.savev2 {
+				width: calc(var(--mywidth) + 3ch);
+				.location {
+					text-align: center;
+					margin-block: 0.75em;
+				}
+				.option:nth-child(odd) { margin-inline-start: 3.5ch }
+			}
+			&.savev1, &.savev2 {
+				.name, .level, .time { margin-block-start: -0.2em }
+				.option:nth-child(even) { grid-column: 2 / span 2 }
+				.option:nth-last-child(2) { margin-block-end: -0.2em }
+			}
+
+			&.savefull {
+				width: calc(var(--mywidth) + 6ch);
+				grid-template-columns: 7ch 1fr 7ch;
+
+				hr { max-width: unset }
+
+				d-text:first-child, d-text:nth-child(2), d-text:nth-child(3) { margin-block-start: -0.3em }
+				.time { justify-self: end }
+				.name, .location, .saved, .blank, .option { justify-self: center }
+				.location, .saved, .blank, .option { grid-column: 1 / span 3 }
+				.saved, .blank {
+					min-height: 3em;
+					display: flex;
+					align-items: center;
+				}
+			}
+			&.top {
+				min-height: unset;
+				margin-block-end: 0.5em;
+
+				d-text:last-child { margin-block-end: -0.5em }
+			}
+			&.bottom {
+				.level { margin-inline-start: 2ch }
+				.blank::before { top: 1.05em }
+			}
+
+			d-text {
+				grid-column: unset;
+				grid-row: unset;
+				&:last-child { margin-block-end: -0.3em }
+			}
+			.location { grid-column: 1 / span 3 }
+
+			hr {
+				--margin: 0.77em;
+				margin: 0 calc(-1 * var(--margin));
+				width: calc((2 * var(--margin)) + 100%);
+			}
+		}
+
 		@media (max-width: 30rem) {
 			font-size: 1em;
 			body.dyslexic &[theme] { font-size: 0.9em }
@@ -1194,6 +1265,13 @@ d-box, d-choices {
 
 			d-text ~ d-box { padding-inline-start: 3ch }
 		}
+
+		&[theme=save] {
+			width: fit-content;
+
+			hr { margin-block: 0.5em }
+			.option:nth-child(5), &.bottom { margin-block-start: 1em }
+		}
 	}
 
 	&.glow :is(d-text, d-option) {
@@ -1213,6 +1291,69 @@ d-box, d-choices {
 	&[theme=prophecy] {
 		text-align: center;
 		align-items: center;
+	}
+
+	&[theme=save] {
+		font-family: var(--font-condensed);
+
+		.option, &.bottom d-text { margin-inline-start: 2ch }
+
+		&:where(.savev1, .savev2):not(.saved) .option:where(
+			:nth-child(5):not(:has(~ .option:hover)), /* first option in the menu, by default */
+			:hover /* subsequent options, if hovered */
+		),
+		&.bottom:not(:has(.saved)) :where(
+			.level:hover,
+			.level:has(+ .name:hover, + .name + .time:hover, + .name + .time + .location:hover),
+			.blank:hover,
+			.blank:nth-child(6):not(:has(~ :hover)),
+			.option:hover
+		) {
+			position: relative;
+			&::before {
+				content: "";
+				background: url("../assets/images/heart16.png") center / contain no-repeat;
+				width: var(--size);
+				height: var(--size);
+				position: absolute;
+				top: 0.25em;
+				right: 100%;
+				margin-inline-end: 0.5ch;
+				--size: 0.7em;
+			}
+		}
+
+		&.bottom:not(:has(.saved)) :where(
+			.level:hover,
+			.level:has(+ .name:hover, + .name + .time:hover, + .name + .time + .location:hover),
+			.blank:hover,
+			.blank:nth-child(6):not(:has(~ :hover)),
+			.option:hover
+		),
+		&.bottom:not(:has(.saved)) :where(
+			.level:hover + .name,
+			.level:hover + .name + .time,
+			.level:hover + .name + .time + .location,
+			.name:hover, .time:hover, .location:hover,
+			.name:hover + .time,
+			.name:hover + .time + .location,
+			.time:hover + .location,
+			.name:has(+ .time:hover, + .time + .location:hover),
+			.time:has(+ .location:hover)
+		),
+		&.saved, .saved { color: var(--yellow) }
+
+		&.bottom:not(:has(.saved)) d-text:hover ~ .blank{
+			color: inherit;
+			&::before { content: unset }
+		}
+
+		hr {
+			grid-column: 1 / span 3;
+			border: none;
+			background: url("../assets/images/ui/textbox/dark_top.png") center / contain repeat;
+			&::before { content: unset }
+		}
 	}
 }
 @keyframes glowpulse {
