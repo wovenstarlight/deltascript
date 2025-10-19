@@ -114,8 +114,12 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* `/chapter1`
 		* Vessel creation up to all Castle Town scenes DONE
 		* `/field` (placeholder URL, update when created) - Field scenes… Ok IDK how to do this part honestly
+		* migrate prefight dialogue from `/encounters/clover`
 		* `/thrashing` Susie & Lancer joint fight's pre-/post-encounter dialogue
+		* migrate prefight dialogue from `/encounters/kroundgreatboard`
 		* `/prisonbreak` - The prison scene with Susie breaking out, encountering Lancer, and freeing Kris/Ralsei
+			* `#postfight` for after Lancer
+		* migrate prefight dialogue from `/encounters/kroundcardcastle`
 	* `/chapter2`
 		* `/field2` - Cyber Field story parts after SCC up to rollercoasters; subdivide as necessary
 		<!-- trucies - triple trucies smh -->
@@ -126,6 +130,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/mouseroom3` - BERDLY SHUT UPPPPPP LITERALLY SHUT UPPPPPPPPPPPPP
 		<!-- berdly fight in second alleyway: DONE -->
 		* `/drive1` - First part of the Kris/Queen/Noelle drive, pre-Spamton
+		<!-- spamton: DONE -->
+		* [the unused gml_Object_obj_ch2_city04_Step_0 scene](https://youtu.be/cxiEOeztndw?t=1661)
 		* `/drive2` - Second part of the Kris/Queen/Noelle drive, post-Spamton
 		* `/december` - DECEMBER puzzle, Noelle reminiscing
 		* `/reunion` - meeting back up with the party up to going to queen's mansion. maybe combine this and next page?
@@ -172,7 +178,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 * `/encounters` - Check descriptions, ACT descriptions, etc. This is probably gonna have a ton of subpages, I'd guess one for every potential enemy. At the very least, the big story-critical encounters (e.g. all boss fights) would need their own subpages which the `/chapters` pages could then link to.
 	* OK SO. The rule I've settled on is that if dialogue has the fancy silver border then it doesn't count as part of the encounter, it's instead a pre-/post-fight cutscene which will get its own page under `/chapters`. So only include the dialogue that's actually using the encounter UI on these pages.
 		* Some of the chapter 1 pages don't follow this rule yet but that's going to be fixed don't worry
-	* Include disambiguation pages for the following. Maybe we give them more descriptive names…? Double-check the URLs before creating the disambigs
+	* Disambiguation pages (uses the special "disambig" layout; see `/berdly` for an example)
 		* Nothing right now!
 	* Chapter 1
 		* gml_Object_obj_ralseienemy_Step_0 (Unused Ralsei tutorial) `/ralsei`
