@@ -61,20 +61,6 @@ toc:
         id: pointsget
         name: POINTs
   -
-    id: warpdoor
-    name: Warp doors
-    subheadings:
-      -
-        id: warpdoor-inactive
-        name: Inactive
-      -
-        id: warpdoor-active
-        name: Active
-        subheadings:
-          -
-            id: warpdoor-fallback
-            name: Unused fallback
-  -
     id: treasurechest
     name: Treasure chests
     subheadings:
@@ -90,10 +76,47 @@ toc:
             name: Contains nothing
       -
         id: treasurechest-open
-        name: Open chest
+        name: When open
       -
         id: treasurechest-fallback
         name: Unused fallback
+  -
+    id: warpdoor
+    name: Warp doors
+    subheadings:
+      -
+        id: warpdoor-inactive
+        name: Inactive
+      -
+        id: warpdoor-active
+        name: Active
+        subheadings:
+          -
+            id: warpdoor-fallback
+            name: Unused fallback
+  -
+    id: vendingmachine
+    name: Vending machines
+    subheadings:
+      -
+        id: vendingmachine-initial
+        name: Initial menu
+      -
+        id: vendingmachine-buy
+        name: Buy
+        subheadings:
+          -
+            id: vendingmachine-initialbuy
+            name: Initial buying
+          -
+            id: vendingmachine-confirmbuy
+            name: Making a purchase
+          -
+            id: vendingmachine-storagefull
+            name: Inventory/storage full
+      -
+        id: vendingmachine-exit
+        name: Exit
 ---
 <section class="d-section" id="objectget">
 	<h2>Obtaining an item/equipment/money</h2>
@@ -204,7 +227,7 @@ toc:
 
 	<hr>
 
-	<h3 id="treasurechest-open">Open chest</h3>
+	<h3 id="treasurechest-open">When open</h3>
 	<d-box theme="dark">
 		<d-text asterisk>(The chest is empty.)</d-text>
 	</d-box>
