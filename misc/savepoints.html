@@ -3,7 +3,6 @@ title: SAVE points
 
 description: >
   <p>The SAVE point menu and the narration accompanying certain points.</p>
-  <p>SAVE points not listed here have no accompanying narration.</p>
 
 sources:
   -
@@ -75,17 +74,47 @@ toc:
         id: greatdoor
         name: Field - Great Door
       -
+        id: mazeofdeath
+        name: Field - Maze of Death
+      -
         id: seamsshop
         name: Field - Seam's Shop
       -
         id: greatboard
         name: Field - Great Board
       -
+        id: greatboard2
+        name: Field - Great Board 2
+      -
         id: forest
         name: Forest - Entrance
       -
         id: bakesale
         name: Forest - Bake Sale
+      -
+        id: beforemaze
+        name: Forest - Before Maze
+      -
+        id: aftermaze
+        name: Forest - After Maze
+      -
+        id: thrashingroom
+        name: Forest - Thrashing Room
+      -
+        id: cardprison
+        name: Card Castle - Prison
+      -
+        id: cardcastle1f
+        name: Card Castle - 1F
+      -
+        id: cardcastle5f
+        name: Card Castle - 5F
+      -
+        id: cardthrone
+        name: Card Castle - Throne
+      -
+        id: cardbasement
+        name: Card Castle - ???
   -
     id: chapter2
     name: Chapter 2
@@ -112,11 +141,17 @@ toc:
         id: firstalleyway
         name: Cyber City - First Alleyway
       -
+        id: cybermouse
+        name: Cyber City - Mouse Alley
+      -
         id: citymusicshop
         name: Cyber City - Music Shop
       -
         id: secondalleyway
         name: Cyber City - Second Alleyway
+      -
+        id: cyberheights
+        name: Cyber City - Heights
       -
         id: guesthall
         name: Queen's Mansion - Guest Hall
@@ -129,6 +164,15 @@ toc:
       -
         id: acidtunnel
         name: Queen's Mansion - Acid Tunnel
+      -
+        id: queenbasement
+        name: Queen's Mansion - Basement
+      -
+        id: queenmansion4f
+        name: Queen's Mansion - 4F
+      -
+        id: queenrooftop
+        name: Queen's Mansion - Rooftop
       -
         id: ch2weirdroute
         name: Weird Route differences
@@ -149,6 +193,9 @@ toc:
         id: coldplace
         name: Cold Place
       -
+        id: tventrance
+        name: TV World - Entrance
+      -
         id: gouldensam
         name: TV World - Goulden Sam
       -
@@ -163,7 +210,7 @@ toc:
     subheadings:
       -
         id: ch4lightworld
-        name: First interaction with a Light World save point
+        name: Kris's Room / Hometown / Noelle's House
       -
         id: ch4castletown
         name: My Castle Town
@@ -197,6 +244,18 @@ toc:
       -
         id: sanctuary3
         name: 3rd Sanctuary
+      -
+        id: sanctuary3stairs
+        name: 3rd Sanctuary - Stairs
+      -
+        id: sanctuary3last
+        name: 3rd Sanctuary - Last Chamber
+      -
+        id: mikezone
+        name: MIKE ZONE
+      -
+        id: tvbuilding
+        name: Castle Town - TV Building
 ---
 {% comment %}
 Room IDs are based on their index in the game files; helper function getRoom() is available in the head.html include if you'd like to check other room IDs for yourself
@@ -440,6 +499,11 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
+	<h3 id="mazeofdeath">Field - Maze of Death</h3> <!-- 56/room_field_maze -->
+	<p>No narration.</p>
+
+	<hr>
+
 	<h3 id="seamsshop">Field - Seam's Shop</h3> <!-- 59/room_field_shop1 -->
 
 	<h4>If Susie is in the party</h4>
@@ -485,6 +549,11 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
+	<h3 id="greatboard2">Field - Great Board 2</h3> <!-- 71/room_field_checkers7 -->
+	<p>No narration.</p>
+
+	<hr>
+
 	<h3 id="forest">Forest - Entrance</h3> <!-- 73/room_forest_savepoint1 -->
 
 	<d-box theme="dark">
@@ -504,6 +573,46 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 	<d-box theme="dark">
 		<d-text asterisk>The power of reoccurring bake sales shines within you.</d-text>
 	</d-box>
+
+	<hr>
+
+	<h3 id="beforemaze">Forest - Before Maze</h3> <!-- 90/room_forest_savepoint_relax -->
+	<p>No narration.</p>
+
+	<hr>
+
+	<h3 id="aftermaze">Forest - After Maze</h3> <!-- 96/room_forest_savepoint3 -->
+	<p>No narration.</p>
+
+	<hr>
+
+	<h3 id="thrashingroom">Forest - Thrashing Room</h3> <!-- 97/room_forest_fightsusie -->
+	<p>No narration.</p>
+
+	<hr>
+
+	<h3 id="cardprison">Card Castle - Prison</h3> <!-- 107/room_cc_prison_to_elevator -->
+	<p>No narration.</p>
+
+	<hr>
+
+	<h3 id="cardcastle1f">Card Castle - 1F</h3> <!-- 114/room_cc_1f -->
+	<p>No narration.</p>
+
+	<hr>
+
+	<h3 id="cardcastle5f">Card Castle - 5F</h3> <!-- 123/room_cc_5f -->
+	<p>No narration.</p>
+
+	<hr>
+
+	<h3 id="cardthrone">Card Castle - Throne</h3> <!-- 126/room_cc_throneroom -->
+	<p>No narration.</p>
+
+	<hr>
+
+	<h3 id="cardbasement">Card Castle - ???</h3> <!-- 111/room_cc_prison_prejoker -->
+	<p>No narration.</p>
 </section>
 
 <section class="d-section" id="chapter2">
@@ -644,6 +753,11 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
+	<h3 id="cybermouse">Cyber City - Mouse Alley</h3> <!-- 126/room_dw_city_mice3 -->
+	<p>No narration.</p>
+
+	<hr>
+
 	<h3 id="citymusicshop">Cyber City - Music Shop</h3> <!-- 121/room_dw_city_savepoint -->
 
 	<h4>If you haven't entered Queen's Mansion yet</h4>
@@ -668,6 +782,11 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 	<d-box theme="dark">
 		<d-text asterisk>You are filled with the power of chicken nuggets.</d-text>
 	</d-box>
+
+	<hr>
+
+	<h3 id="cyberheights">Cyber City - Heights</h3> <!-- 133/room_dw_city_postbaseball_1 -->
+	<p>No narration.</p>
 
 	<hr>
 
@@ -705,6 +824,21 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 	<d-box theme="dark">
 		<d-text asterisk>You are filled with a certain power.</d-text>
 	</d-box>
+
+	<hr>
+
+	<h3 id="queenbasement">Queen's Mansion - Basement</h3> <!-- 171/room_dw_mansion_b_central -->
+	<p>No narration.</p>
+
+	<hr>
+
+	<h3 id="queenmansion4f">Queen's Mansion - 4F</h3> <!-- 196/room_dw_mansion_east_4f_d -->
+	<p>No narration.</p>
+
+	<hr>
+
+	<h3 id="queenrooftop">Queen's Mansion - Rooftop</h3> <!-- 199/room_dw_mansion_prefountain || 200/room_dw_mansion_fountain -->
+	<p>No narration.</p>
 
 	<hr>
 
@@ -818,6 +952,11 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 
 	<hr>
 
+	<h3 id="tventrance">TV World - Entrance</h3> <!-- 195/room_dw_teevie_intro -->
+	<p>No narration.</p>
+
+	<hr>
+
 	<h3 id="gouldensam">TV World - Goulden Sam</h3> <!-- 177/room_dw_b3bs_jail1 -->
 	<d-box theme="dark">
 		<d-text asterisk>(You are greeted by yet another prisonlike location.)</d-text>
@@ -905,8 +1044,14 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 <section class="d-section" id="chapter4">
 	<h2>Chapter 4</h2>
 
-	<h3 id="ch4lightworld">First interaction with a Light World save point</h3> <!-- 15/room_krisroom, 24/room_town_mid, 49/room_lw_noellehouse_kitchen -->
-	<p>There are three save points in the Light World - one in Kris's room, one near QC's Diner, and one in Noelle's kitchen. This only plays the first time you interact with one of them.</p>
+	<h3 id="ch4lightworld">
+		<span id="krisroom">Kris's Room</span> <!-- 15/room_krisroom -->
+		/
+		<span id="hometown">Hometown</span> <!-- 24/room_town_mid -->
+		/
+		<span id="noellehouse">Noelle's House</span> <!-- 49/room_lw_noellehouse_kitchen -->
+	</h3> <!-- 15/room_krisroom, 24/room_town_mid, 49/room_lw_noellehouse_kitchen -->
+	<p>This narration plays only the first time you interact with any one of the three Light World SAVE points. Subsequent interactions with the same SAVE point, or with another of the Light World SAVE points, have no narration.</p>
 
 	<d-box theme="light">
 		<d-text asterisk>(You could barely see it. A patch of sunlight that shouldn't be there.)</d-text>
@@ -1039,6 +1184,7 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 	<hr>
 
 	<h3 id="sanctuary2study">2nd Sanctuary - Study</h3> <!-- 257/room_dw_churchb_gersonstudy -->
+	<p>This narration only accompanies the SAVE point in the actual study. The SAVE point preceding the climbing sequence immediately before the study shares this location name, but not the narration.</p> <!-- 304/room_dw_churchb_darkclimb -->
 	<d-box theme="dark">
 		<d-text asterisk>(The fire has run empty. In its place...)</d-text>
 	</d-box>
@@ -1060,4 +1206,24 @@ Room names retrieved from gml_GlobalScript_scr_roomname.gml and mapped from IDs 
 	<d-box theme="dark">
 		<d-text asterisk>(... creating a prism only you can see.)</d-text>
 	</d-box>
+
+	<hr>
+
+	<h3 id="sanctuary3stairs">3rd Sanctuary - Stairs</h3> <!-- 277/room_dw_churchc_savepoint -->
+	<p>No narration.</p>
+
+	<hr>
+
+	<h3 id="sanctuary3last">3rd Sanctuary - Last Chamber</h3> <!-- 280/room_dw_churchc_prepretitan -->
+	<p>No narration.</p>
+
+	<hr>
+
+	<h3 id="mikezone">MIKE ZONE</h3> <!-- 322/room_dw_castle_tv_zone_2 -->
+	<p>No narration.</p>
+
+	<hr>
+
+	<h3 id="tvbuilding">Castle Town - TV Building</h3> <!-- 298/room_dw_castle_tv -->
+	<p>No narration.</p>
 </section>
