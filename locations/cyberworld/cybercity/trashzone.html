@@ -1,0 +1,302 @@
+---
+title: Trash Zone
+
+description: >
+  <p>Narration and dialogue for the Trash Zone just outside Cyber City.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_cybercity_trashcan_Other_10
+    chapters: [2]
+    note: trash can
+  -
+    name: gml_Object_obj_city_trashbag_Other_10
+    chapters: [2]
+    note: trash bags/eggplant
+  -
+    name: gml_Object_obj_shortcut_door_Other_10
+    chapters: [2]
+    note: warp doors (inactive)
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: warp doors (location options)
+  -
+    name: gml_Object_obj_shortcut_door_Step_0
+    chapters: [2]
+    note: warp doors (selecting a location)
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2]
+    note: Nubert
+  -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [2]
+    note: Trashy
+
+toc:
+  -
+    id: trashcan
+    name: Trash can
+  -
+    id: trashbag
+    name: Trash bags
+  -
+    id: eggplant
+    name: Eggplant
+  -
+    id: warpdoor
+    name: Warp door
+  -
+    id: trashy
+    name: Trashy
+    subheadings:
+      -
+        id: trashy-premansion
+        name: Before reaching Queen's mansion, when Susie & Ralsei are in the party
+      -
+        id: trashy-postmansion
+        name: Otherwise
+  -
+    id: nubert
+    name: Nubert
+    subheadings:
+      -
+        id: nubert-susral
+        name: With Susie and Ralsei in the party
+      -
+        id: nubert-alone
+        name: With no one else in the party
+      -
+        id: nubert-noelle
+        name: With Noelle in the party
+---
+<section class="d-section" id="trashcan">
+	<h2>Trash can</h2>
+
+	<p class="note">Uses <a href="{{ '/misc/generic#trashcan-closed' | relative_url }}">generic text</a>; contains a <a href="{{ '/misc/darkitems#darkcandy' | relative_url }}">Dark Candy</a>.</p>
+</section>
+
+
+<section class="d-section" id="trashbag">
+	<h2>Trash bags</h2>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's a trashbag that looks like an eggplant.)</d-text>
+	</d-box>
+</section>
+
+
+<section class="d-section" id="eggplant">
+	<h2>Eggplant</h2>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's an eggplant that looks like a trashbag.)</d-text>
+	</d-box>
+</section>
+
+
+<section class="d-section" id="warpdoor">
+	<h2>Warp door</h2>
+	<p>Uses <a href="{{ '/misc/generic#warpdoor' | relative_url }}">generic text</a>.</p>
+
+	<h3>Before entering Queen's mansion (Inactive)</h3>
+	<p class="note">The doorframe is empty and dark.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a lone doorframe.)</d-text>
+		<d-text asterisk>(But for some reason, you can't see through it...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>After entering Queen's mansion (Active)</h3>
+	<p class="note">The doorframe contains a red door, with multicolored light wisping out from the edges.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a door.)</d-text>
+		<d-text asterisk>(Where will you go?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Mansion"></d-option>
+		<d-option index="1" text="Cyber Field"></d-option>
+		<d-option index="2" text="Trash Zone"></d-option>
+		<d-option index="3" text="Cancel"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(The door opened...)</d-text>
+		</d-box>
+		<p class="note">The screen cuts to black with the sound of a door opening. After a moment, the scene fades in to the entrance hall of Queen's mansion, with the party standing outside the warp door present there.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(The door opened...)</d-text>
+		</d-box>
+		<p class="note">The screen cuts to black with the sound of a door opening. After a moment, the scene fades in to the Cyber Field crossroads, with the party standing outside the warp door present there.</p>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(Amazingly, you are already there.)</d-text>
+		</d-box>
+		<p class="note">Nothing happens.</p>
+	</d-option-panel>
+	<d-option-panel index="3" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(You doorn't.)</d-text>
+		</d-box>
+		<p class="note">Nothing happens.</p>
+	</d-option-panel>
+
+	<h4>Unused fallback</h4>
+	<p>For choosing an option that's not accounted for by the code.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(But nothing happened.)</d-text>
+	</d-box>
+</section>
+
+
+<section class="d-section" id="trashy">
+	<h2>Trashy</h2>
+	<p>Present at all times on the normal route.</p>
+
+	<h3 id="trashy-premansion">Before reaching Queen's mansion, when Susie & Ralsei are in the party</h3>
+	<h4>First time</h4>
+	<p>That is, immediately after <a href="{{ '/chapters/chapter2/intothecity#falling' | relative_url}}">Ralsei heals Susie and promises to teach her healing</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>Oh boy, oh boy! I'm <span class="blue">Trashy</span>!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>Did you know about adjusting your INVENTORY?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>Trashcans like me can HOLD all sorts of things.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>Just like your STORAGE, if you get more than 12 ITEMs!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="4"></d-sprite>
+		<d-text asterisk>Uh... yeah, not now dude.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>It was sort of an emotional moment...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>Oh... Oh, that's okay...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If you got <a href="{{ '/misc/weapons#fiberscarf' | relative_url }}">Fiber Scarf</a></h5>
+	<p>(Since it's Nubert's treasure, that means you probably met him.)</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Oh hell, is that Nubert over there!?</d-text>
+		<d-box>
+			<d-sprite speaker="Ralsei" emotion="19"></d-sprite>
+			<d-text>Really, where!?</d-text>
+		</d-box>
+	</d-box>
+	<hr class="hr2">
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>No time for this guy.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="trashy-postmansion">Otherwise</h3>
+	<p>When Susie and Ralsei aren't in the party, or after reaching Queen's mansion.</p>
+	<h4>First time</h4>
+	<h5>Standard</h5>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>You can hold a lot more in your STORAGE, you know.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>But, you won't be able to use it during BATTLE.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>Check it and make sure you have what you need!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>... is what I wanted to say, but it already got said.</d-text>
+	</d-box>
+
+	<h5>If you spared <a href="{{ '/encounters/spamton' | relative_url }}">Spamton</a></h5>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>A funny little guy was looking for you to the WEST.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>He was muttering something about deals...</d-text>
+	</d-box>
+
+	<h5>If you defeated <a href="{{ '/encounters/spamtonneo' | relative_url }}">Spamton NEO</a></h5>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>Some funny-looking guys have gathered to the WEST.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>They were muttering something about muttering something about deals...</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>I'm Trashy...</d-text>
+	</d-box>
+</section>
+
+
+<section class="d-section" id="nubert">
+	<h2>Nubert</h2>
+	<p>Present on the normal route before reaching Queen's mansion.</p>
+
+	<h3 id="nubert-susral">With Susie and Ralsei in the party</h3>
+	<d-box theme="dark">
+		<d-speaker>Nubert</d-speaker>
+		<d-text asterisk>I'm Nubert. Everybody loves me.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Nubert</d-speaker>
+		<d-text asterisk>That's why I live in the trash.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="nubert-alone">With no one else in the party</h3>
+	<d-box theme="dark">
+		<d-speaker>Nubert</d-speaker>
+		<d-text asterisk>Don't look sad. You're never alone.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Nubert</d-speaker>
+		<d-text asterisk>You got Nubert.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="nubert-noelle">With Noelle in the party</h3>
+	<d-box theme="dark">
+		<d-speaker>Nubert</d-speaker>
+		<d-text asterisk>Nuelle, eh? Not a bad name, says Nubert.</d-text>
+	</d-box>
+</section>
