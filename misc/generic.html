@@ -25,6 +25,10 @@ sources:
     chapters: [1, 2, 3, 4]
     note: warp doors (selecting a location)
   -
+    name: gml_Object_obj_cybercity_trashcan_Other_10
+    chapters: [2]
+    note: trash cans
+  -
     name: gml_Object_obj_shop_vending_Create_0
     chapters: [3]
     note: vending machines
@@ -94,6 +98,16 @@ toc:
           -
             id: warpdoor-fallback
             name: Unused fallback
+  -
+    id: trashcan
+    name: Trash cans
+    subheadings:
+      -
+        id: trashcan-closed
+        name: When closed
+      -
+        id: trashcan-open
+        name: When open
   -
     id: vendingmachine
     name: Vending machines
@@ -297,6 +311,40 @@ toc:
 	<p>For choosing an option that's not accounted for by the code.</p>
 	<d-box theme="dark">
 		<d-text asterisk>(But nothing happened.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="trashcan">
+	<h2>Trash cans</h2>
+	<p>Present in Chapter 2, in Cyber City.</p>
+
+	<h3 id="trashcan-closed">When closed</h3>
+	<p class="note">The trash can opens up.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(You dug through the trash...)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4 id="trashcan-object">Contains an item</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(And found a &lt;Item&gt;!)</d-text>
+	</d-box>
+	<p class="note">Proceeds to the generic message for obtaining an <a href="#itemget">item</a>. If either the inventory or storage is not full, the item is obtained and the trash can remains <a href="#trashcan-open">open</a>. Otherwise, if the inventory and storage are both full, the trash can closes back up; subsequent interactions will repeat this narration until space is made in the inventory/storage.</p>
+	<hr class="hr3">
+	<h4 id="trashcan-money">Contains money</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(And found $&lt;#&gt;!)</d-text>
+	</d-box>
+	<p class="note">Proceeds to the generic message for obtaining <a href="#moneyget">money</a>.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="trashcan-open">When open</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(You dug through the trash...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(And found trash!)</d-text>
 	</d-box>
 </section>
 
