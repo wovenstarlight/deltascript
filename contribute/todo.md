@@ -123,14 +123,17 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* `/chapter2`
 		* `/field2` - Cyber Field story parts after SCC up to rollercoasters; subdivide as necessary
 		* Rollercoasters fight up to triple trucies DONE
-		* `/mouseroom1`/`city1` - annoying mouse room, virovirokun introductory fight, festival discussion, spotting susral eating cotton candy, divorce shoes addison, the puzzle with the switches. …maybe subdivide this page, that's kind of a lot.
-		* `/evilvillains` - smartboy theme park...............
-		* `/mouseroom2` - take a guess x2
-		<!-- cheesed to meet you. pick a url for this -->
-		* `/mouseroom3` - BERDLY SHUT UPPPPPP LITERALLY SHUT UPPPPPPPPPPPPP
-		<!-- berdly fight in second alleyway: DONE -->
+		* `/city1` - annoying mouse room, virovirokun introductory fight
+			* `#annoyingmouseroom`
+		* `/city2` - festival discussion, divorce shoes addison, spotting susral eating cotton candy, the puzzle with the switches
+		* `/evilvillain` - smartboy theme park…………… encountering the berdly statue
+		* `/city3` - scc encounter with noelle, addisons (mannequin and character tea), annoying mouse room 2
+			* `#annoyingmouseroom2`
+		* `/city4` - the cheese maze, annoying mouse room 3 (where berdly won't shut up)
+			* `#annoyingmouseroom3`
+		* Berdly fight 2 DONE
 		* `/drive1` - First part of the Kris/Queen/Noelle drive, pre-Spamton
-		<!-- spamton: DONE -->
+		* Spamton encounter DONE
 		* [the unused gml_Object_obj_ch2_city04_Step_0 scene](https://youtu.be/cxiEOeztndw?t=1661)
 		* `/drive2` - Second part of the Kris/Queen/Noelle drive, post-Spamton
 		* `/december` - DECEMBER puzzle, Noelle reminiscing
