@@ -122,8 +122,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* migrate prefight dialogue from `/encounters/kroundcardcastle`
 	* `/chapter2`
 		* `/field2` - Cyber Field story parts after SCC up to rollercoasters; subdivide as necessary
-		<!-- trucies - triple trucies smh -->
-		* `/mouseroom1` - take a guess
+		* Rollercoasters fight up to triple trucies DONE
+		* `/mouseroom1`/`city1` - annoying mouse room, virovirokun introductory fight, festival discussion, spotting susral eating cotton candy, divorce shoes addison, the puzzle with the switches. …maybe subdivide this page, that's kind of a lot.
 		* `/evilvillains` - smartboy theme park...............
 		* `/mouseroom2` - take a guess x2
 		<!-- cheesed to meet you. pick a url for this -->
