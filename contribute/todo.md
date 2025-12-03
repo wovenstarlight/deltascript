@@ -122,9 +122,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* migrate prefight dialogue from `/encounters/kroundcardcastle`
 	* `/chapter2`
 		* `/field2` - Cyber Field story parts after SCC up to rollercoasters; subdivide as necessary
-		* Rollercoasters fight up to triple trucies DONE
-		* `/city1` - annoying mouse room, virovirokun introductory fight
-			* `#annoyingmouseroom`
+		* Rollercoasters fight up to tutorial viro fight DONE
 		* `/city2` - festival discussion, divorce shoes addison, spotting susral eating cotton candy, the puzzle with the switches
 		* `/evilvillain` - smartboy theme park…………… encountering the berdly statue
 		* `/city3` - scc encounter with noelle, addisons (mannequin and character tea), annoying mouse room 2
