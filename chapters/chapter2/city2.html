@@ -1,0 +1,933 @@
+---
+title: Festival dates and forcefield puzzle
+
+description: >
+  <p>Kris and Noelle continue through Cyber City, discussing partners for the upcoming festival and solving a forcefield puzzle.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2]
+    note: orange/blue Addisons, Plugboy
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [2]
+    note: spotting Susie/Ralsei, Queen poster, ferris wheel poster, forcefield - Noelle (WR)
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [2]
+    note: Werewire
+  -
+    name: gml_Object_obj_controller_dw_city_big_2_Step_0
+    chapters: [2]
+    note: ferris wheel poster dialogue (WR), forcefield puzzle
+  -
+    name: gml_Object_obj_weirdEvent_addison_city_big_2_Step_0
+    chapters: [2]
+    note: pink Addison
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: choices
+
+toc:
+  -
+    id: roundabout
+    name: Roundabout area
+    subheadings:
+      -
+        id: addison
+        name: Talking to the orange/blue Addisons
+      -
+        id: susral
+        name: Spotting Susie and Ralsei
+      -
+        id: poster
+        name: Queen poster
+      -
+        id: treasurechest
+        name: Treasure chest
+  -
+    id: traffic
+    name: Crossing traffic
+    subheadings:
+      -
+        id: werewire
+        name: Talking to Werewire
+      -
+        id: plugboy
+        name: Talking to Plugboy
+  -
+    id: ferriswheel
+    name: Ferris wheel poster
+  -
+    id: adshoes
+    name: Talking to the pink Addison selling shoes
+    subheadings:
+      -
+        id: freezering
+        name: Buying the Freeze Ring
+  -
+    id: forcefield
+    name: Forcefield puzzle
+    subheadings:
+      -
+        id: forcefield-normal
+        name: Normal route
+        subheadings:
+          -
+            id: forcefield-normal-intro
+            name: Introduction
+          -
+            id: forcefield-normal-left
+            name: Stepping off the switch when Noelle is on the left side of the forcefield
+          -
+            id: forcefield-normal-right
+            name: Stepping off the switch when Noelle is on the right side of the forcefield
+          -
+            id: forcefield-normal-leave
+            name: Attempting to leave
+          -
+            id: forcefield-normal-solve
+            name: Finishing the puzzle
+      -
+        id: forcefield-weird
+        name: Weird Route
+        subheadings:
+          -
+            id: forcefield-weird-intro
+            name: Introduction
+          -
+            id: forcefield-weird-noelle
+            name: Interacting with Noelle
+          -
+            id: forcefield-weird-leave
+            name: Attempting to leave
+          -
+            id: forcefield-weird-solve
+            name: Finishing the puzzle
+---
+<section class="d-section" id="roundabout">
+	<h2>Roundabout area</h2>
+	<p>With the two Ambyu-Lances circling the center. Addison interactions and spotting Susie/Ralsei are exclusive to the normal route and to the early Weird Route, as all NPCs disappear once the player proceeds far enough on the Weird Route.</p>
+
+	<h3 id="addison">Talking to the orange/blue Addisons</h3>
+	<p>These two Addisons share a talk counter (if you talk to one and then the other, the second Addison uses the "subsequent times" dialogue).</p>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>We are Addisons! All we do is advertise!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>This is an advertisement too!</d-text>
+		<d-box>
+			<d-speaker>Addison</d-speaker>
+			<d-text>Advertisements now only $9.99!</d-text>
+		</d-box>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Don't like advertisements? Block ads for only $9.99!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Change your mind? Bring them back for only $9.99!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="susral">Spotting Susie and Ralsei</h3>
+	<p>Via the northeast path. Dialogue plays upon interacting with the traffic cone barrier.</p>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="L"></d-sprite>
+		<d-text asterisk>(S... Susie...!! She's right there...!!)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+		<d-text asterisk>(But I... I can't get the courage to say anything...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>(...?)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>(Who's that person she's with, anyway...?)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>(It looks kind of like...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>(Ahhh, they're looking over here! Let's go!!)</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>(Let's get out of here!)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="queenposter">Queen poster</h3>
+	<p>Via the southwest path, next to a <a href="#treasurechest">treasure chest</a>.</p>
+	<h4>Normal route</h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="5"></d-sprite>
+		<d-text asterisk>(Queen... She says she wants me to be happy, but...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>(Why would I want to eat a casserole made of wires?)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="A"></d-sprite>
+		<d-text asterisk>(And why can't I... Just... Refuse?)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>(Sometimes I feel like...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>(Kris and Dad are the only ones I can say no to...)</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a poster for Queen Clean brand cleaning agent.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>("I Don't Know What This Does")</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Weird Route</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="e"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="treasurechest">Treasure chest</h3>
+	<p>Via the southwest path, next to the <a href="#queenposter">Queen poster</a>.</p>
+	<p class="note">Uses <a href="{{ '/misc/generic#treasurechest-closed' | relative_url }}">generic text</a>; contains a <a href="{{ '/misc/armor#pinkribbon' | relative_url }}">Pink Ribbon</a>.</p>
+</section>
+
+<section class="d-section" id="traffic">
+	<h2>Crossing traffic</h2>
+	<p>Pair of traffic-filled roads. Exclusive to the normal route and early Weird Route, as all NPCs disappear once the player proceeds far enough on the Weird Route.</p>
+
+	<h3 id="werewire">Talking to Werewire</h3>
+	<d-box theme="dark">
+		<d-speaker>Werewire</d-speaker>
+		<d-text asterisk>Can't even cross the street without getting my ass kicked.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Werewire</d-speaker>
+		<d-text asterisk>I love the city.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="plugboy">Talking to Plugboy</h3>
+	<d-box theme="dark">
+		<d-speaker>Plugboy</d-speaker>
+		<d-text asterisk>Since everyone else got plugged they're a lot more agreeable.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Plugboy</d-speaker>
+		<d-text asterisk>It's nice.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="ferriswheel">
+	<h2>Ferris wheel poster</h2>
+	<p>Present at the center of the second roundabout area.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's an advertisement for a giant ferris wheel.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="0"></d-sprite>
+		<d-text asterisk>Gosh, that's amazing!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Makes the one at the festival look like a toy, haha!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+		<d-text asterisk>I... I wonder if Susie would want to...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>... Gosh, who am I kidding?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="I will ride#with you"></d-option>
+		<d-option index="1" text="Susie wouldn't"></d-option>
+		<d-option index="2" text="Susie would"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>Oh, so you can shake it when we reach the top?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+			<d-text asterisk>Just like at the festival when we were kids?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>I KNOW there's a catch with you, Kris! NO thanks!</d-text>
+		</d-box>
+
+		<hr class="hr2">
+		<h4>If <a href="{{ '/misc/spells#iceshock' | relative_url }}">Ice Shock</a> was used to freeze the <a href="{{ '/chapters/chapter2/city1#tutorial' | relative_url }}">tutorial Virovirokun</a></h4>
+		<d-choices theme="dark">
+			<d-option index="0" text="Noelle will#ride with me"></d-option>
+			<d-option index="1" text="Sorry"></d-option>
+		</d-choices>
+		<d-option-panel index="0" theme="dark">
+			<d-box theme="dark">
+				<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+				<d-text asterisk>... h... huh?</d-text>
+			</d-box>
+			<d-box theme="dark">
+				<d-sprite speaker="Noelle" emotion="D"></d-sprite>
+				<d-text asterisk>I mean... S-sure, if you, um... really want to!</d-text>
+			</d-box>
+			<d-box theme="dark">
+				<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+				<d-text asterisk>You can, um, make up for when we were kids!</d-text>
+			</d-box>
+			<d-box theme="dark">
+				<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+				<d-text asterisk>(... Since when did Kris get so...)</d-text>
+			</d-box>
+			<d-box theme="dark">
+				<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+				<d-text asterisk>(N... no way, it's gotta be some kind of prank!)</d-text>
+			</d-box>
+		</d-option-panel>
+		<d-option-panel index="1" theme="dark">
+			<d-box theme="dark">
+				<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+				<d-text asterisk>Um, it's ok, I know you can't help being a goof.</d-text>
+			</d-box>
+			<d-box theme="dark">
+				<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+				<d-text asterisk>We ALL know you can't help it! Fahaha!!</d-text>
+			</d-box>
+		</d-option-panel>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="7"></d-sprite>
+			<d-text asterisk>Y-you're right! Even if I asked her, she'd...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="A"></d-sprite>
+			<d-text asterisk>Probably just laugh at me.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+			<d-text asterisk>And, gosh, push me to the ground, and...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+			<d-text asterisk>L-laugh at me some more, and then...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="M"></d-sprite>
+			<d-text asterisk>(... What were we talking about again?)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+			<d-text asterisk>R-really? Y-you really think so?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text asterisk>Faha, and coming from Susie Expert Kris! Thanks!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="5"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+			<d-text asterisk>(Hey, Kris, how'd YOU become the Susie Expert!?)</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's an advertisement for a giant ferris wheel.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="adshoes">
+	<h2>Talking to the pink Addison selling shoes</h2>
+	<p>Present to the east of the second roundabout area.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Ohhon!! Two young beings together on a school night...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Could I interest you in some brand new Dating Shoes...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>H-huh...? No, no, you've got it totally wrong!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Kris and I are just... umm... fr... friends?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="5"></d-sprite>
+		<d-text asterisk>(Kris's been my neighbor forever...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="1"></d-sprite>
+		<d-text asterisk>(We've been through so much, sometimes it feels like...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="0"></d-sprite>
+		<d-text asterisk>(We know each other better than anyone.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>(... yet, somehow, it's hard to say we're exactly friends...?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="We're friends"></d-option>
+		<d-option index="1" text="We're#something#else"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text asterisk>Yep! That's right! We're friends!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+			<d-text asterisk>(It's... surprisingly nice just hearing Kris say that...)</d-text>
+		</d-box>
+		<p class="note">If progress was made on the Weird Route, the Weird Route is aborted at this point, accompanied by the corresponding SFX.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>(Wh-what does that mean???)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>(There's no good interpretation, that's for sure!)</d-text>
+		</d-box>
+
+		<p class="note">The <a href="#freezering">Freeze Ring dialogue</a> is now available, once all Weird Route requirements are met. (If the player does not return for the Freeze Ring and proceeds to the forcefield puzzle, the <a href="#forcefield-normal">normal route's version of the scene</a> plays, and the Weird Route is aborted.)</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<p>All subsequent interactions in the normal route, and on the Weird Route if spoken to again before triggering the <a href="#freezering">Freeze Ring dialogue</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Ah, you two don't look together!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Can I interest you in some brand new Divorcing Shoes...?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="freezering">Buying the <a href="{{ '/misc/weapons#freezering' | relative_url}}">Freeze Ring</a></h3>
+	<p>Plays only if the player chose "We're something else", once all Weird Route requirements are met (using Ice Shock to freeze all prior enemy encounters). If the requirements were already met when first speaking to the Addison, this plays after walking a short distance away. If you first spoke to the Addison before meeting the requirements, froze the last required encounters, and then returned, the Addison will speak as soon as you come near.</p>
+	<p></p>
+	<p class="note">A short distance away from the Addison, Kris and Noelle stop when the Addison speaks up again, the music fading as they speak:</p>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>If you're something else, maybe a Dating Shoes isn't right...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Maybe I could interest you in a FreezeRing?</d-text>
+	</d-box>
+	<p class="note">Kris and Noelle turn and walk back to the Addison.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Huh...? A ring...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Faha, sorry, I don't think WE need something like that!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>C'mon, angel! You can't get stronger without good equipment!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="1"></d-sprite>
+		<d-text asterisk>Stronger...? R-right, I guess that's how it works here...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>(Faha, Kris buying ME a ring...? Yeah, right!)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Get it"></d-option>
+		<d-option index="1" text="We're fine"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>Y-yeah, we don't need anything like that.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="Q"></d-sprite>
+			<d-text asterisk>(Though, if Susie bought me a ring...)</d-text>
+		</d-box>
+		<p class="note">The Weird Route is aborted with a chime. The standard city music fades back in, and dialogue ends here.</p>
+	</d-option-panel>
+	<p class="note">The player's current money total is displayed above the dialogue box.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="F"></d-sprite>
+		<d-text asterisk>H... huh? Kris, you'd... buy it for me...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+		<d-text asterisk>Sure, I guess... we could ask about it.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="0"></d-sprite>
+		<d-text asterisk>How much does it cost?</d-text>
+	</d-box>
+	<p class="note">In the below dialogue, &lt;#&gt; represents the player's total money plus 1. (E.g. if the player has $999, the Addison will quote a price of $1000.)</p>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Just a small fee of $&lt;#&gt;!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Huh? S-sorry, we don't have that much money!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+		<d-text asterisk>(Still, it was nice of Kris to offer...)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Get it"></d-option>
+		<d-option index="1" text="We're fine"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>Y-yeah, we don't need anything like that.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="Q"></d-sprite>
+			<d-text asterisk>(Though, if Susie bought me a ring...)</d-text>
+		</d-box>
+		<p class="note">The Weird Route is aborted with a chime. The standard city music fades back in, and dialogue ends here.</p>
+	</d-option-panel>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="F"></d-sprite>
+		<d-text asterisk>Huh? Me...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>You... were asking ME to get it?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+		<d-text asterisk>Kris, c'mon, you know we can't afford that...</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Get it"></d-option>
+		<d-option index="1" text="We're fine"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>Y-yeah, we don't need anything like that.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="Q"></d-sprite>
+			<d-text asterisk>(Though, if Susie bought me a ring...)</d-text>
+		</d-box>
+		<p class="note">The Weird Route is aborted with a chime. The standard city music fades back in, and dialogue ends here.</p>
+	</d-option-panel>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Wh... what?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Kris, I just told you, we... we don't have the money.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>What... what are you asking me to do...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+		<d-text asterisk>You... you aren't asking me to just...?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Get it"></d-option>
+		<d-option index="1" text="We're fine"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>Y-yeah, we don't need anything like that.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="Q"></d-sprite>
+			<d-text asterisk>(Though, if Susie bought me a ring...)</d-text>
+		</d-box>
+		<p class="note">The Weird Route is aborted with a chime. The standard city music fades back in, and dialogue ends here.</p>
+	</d-option-panel>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="D"></d-sprite>
+		<d-text asterisk>K-Kris, no, I... not me, I could never...</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Get it"></d-option>
+		<d-option index="1" text="We're fine"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>Y-yeah, we don't need anything like that.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="Q"></d-sprite>
+			<d-text asterisk>(Though, if Susie bought me a ring...)</d-text>
+		</d-box>
+		<p class="note">The Weird Route is aborted with a chime. The standard city music fades back in, and dialogue ends here.</p>
+	</d-option-panel>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="C"></d-sprite>
+		<d-text asterisk>I...</d-text>
+	</d-box>
+	<p class="note">The screen fades to black. A pause. Then the chime of Ice Shock sounds. Another pause.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(You got the FreezeRing.)</d-text>
+	</d-box>
+	<p class="note">The screen fades to show Cyber City again; the Addison is now gone.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+		<d-text asterisk>(What... what just happened?)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+		<d-text asterisk>(Did I actually just...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>(No, they... they must have given it to us. The ring.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="e"></d-sprite>
+		<d-text asterisk>(...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="d"></d-sprite>
+		<d-text asterisk>(Besides... it's good to get stronger, isn't it?)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Th... thanks, Kris!</d-text>
+	</d-box>
+	<p class="note">The Freeze Ring is added to the inventory. Music no longer plays in Cyber City, leaving the player in silence as control is returned to them. The player can proceed on the Weird Route by continuing to the <a href="#forcefield-weird">forcefield puzzle</a>.</p>
+</section>
+
+<section class="d-section" id="forcefield">
+	<h2>Forcefield puzzle</h2>
+	<p>Present to the south of the second roundabout area.</p>
+
+	<h3 id="forcefield-normal">Normal route</h3>
+	<h4 id="forcefield-normal-intro">Introduction</h4>
+	<p class="note">After stepping on and off the switch twice:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="1"></d-sprite>
+		<d-text asterisk>Hmm, looks like you need to hold it down.</d-text>
+	</d-box>
+
+	<p class="note">After the above dialogue, when Kris steps on the switch, Noelle stops them:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="0"></d-sprite>
+		<d-text asterisk>Kris, you keep standing on this one!</d-text>
+	</d-box>
+	<p class="note">Noelle then begins walking towards the second switch.</p>
+
+	<hr class="hrhalf">
+
+	<h4 id="forcefield-normal-left">Stepping off the switch when Noelle is on the left side of the forcefield</h4>
+	<p class="note">Noelle turns and hurries back over to the first switch.</p>
+	<hr class="hr2">
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Kris!! Stay on the switch! Stay! Stay!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>... gosh, do you need a dog treat or something?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="Nooooo"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>(... why did they sound so genuine?)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+			<d-text asterisk>Gosh, stop howling, I get it!</d-text>
+		</d-box>
+	</d-option-panel>
+	<hr class="hr3">
+	<h5>Second time</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>(This is reminding me of our group projects...)</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>Third time onwards</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Noelle waits until Kris stands on the left switch, then tries again to go to the right switch.</p>
+
+	<hr class="hrhalf">
+
+	<h4 id="forcefield-normal-right">Stepping off the switch when Noelle is on the right side of the forcefield</h4>
+	<p class="note">Noelle flinches and darts forward and away from the forcefield, arms up and shielding her head.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>A--aahhh!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>K... Kris! C'mon, you... you know that isn't very nice!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>(I was almost roast deer for a second there...)</d-text>
+	</d-box>
+	<p class="note">Noelle moves to stand on the right switch.</p>
+
+	<hr class="hrhalf">
+
+	<h4 id="forcefield-normal-leave">Attempting to leave</h4>
+	<p>Trying to return to the roundabout area through the northwest path, at any point after Noelle instructs Kris to stay on the left switch and before the duo has passed the puzzle.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Kris! Get back here!!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="forcefield-normal-solve">Finishing the puzzle</h4>
+	<p class="note">Once Noelle has made her way to the right switch, she turns to face Kris.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="0"></d-sprite>
+		<d-text asterisk>OK, now you come over here!</d-text>
+	</d-box>
+
+	<p class="note">The player may now guide Kris over to the right.</p>
+
+	<hr class="hr2">
+	<h5>Standard</h5>
+	<p class="note">Noelle speaks when Kris makes their way over to her:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Nice teamwork!</d-text>
+	</d-box>
+
+	<hr class="hr3">
+
+	<h5>Noelle's revenge</h5>
+	<p>Plays if the player <a href="#forcefield-normal-left">stepped off the left switch three or more times</a>, or <a href="#forcefield-normal-right">nearly zapped Noelle with the forcefield</a>.</p>
+	<p class="note">When Kris is a short distance to the left of the forcefield, Noelle will step off the switch to activate the forcefield and giggle for a moment before stepping on the switch again.</p>
+	<p class="note">Noelle speaks when Kris makes their way over to her:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Fahahaha! How'd you like that!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>You should have seen the look on your face!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>(Hey, why do they look so hurt...? Gosh...)</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<p class="note">The party can now proceed ahead to the next area, where they <a href="{{ '/chapters/chapter2/evilvillain' | relative_url }}">find Queen</a>.</p>
+
+	<hr>
+
+	<h3 id="forcefield-weird">Weird Route</h3>
+	<p>Available if you obtained the <a href="#freezering">Freeze Ring</a>.</p>
+
+	<h4 id="forcefield-weird-intro">Introduction</h4>
+	<p class="note">After stepping on and off the switch twice:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="1"></d-sprite>
+		<d-text asterisk>When you step off the switch, the lightning comes back...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="5"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>How about... I hold it down, and you go across?</d-text>
+	</d-box>
+	<p class="note">Noelle moves to stand on the left switch.</p>
+
+	<hr class="hrhalf">
+
+	<h4 id="forcefield-weird-noelle">Interacting with Noelle</h4>
+	<p>While she's standing on the left switch.</p>
+	<h5>First to fourth times</h5>
+	<h6>When in front of Noelle</h6>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="c"></d-sprite>
+		<d-text asterisk>(Why are they... staring into my eyes like that?)</d-text>
+	</d-box>
+	<h6>When on Noelle's left or right</h6>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="c"></d-sprite>
+		<d-text asterisk>(What are they looking at?)</d-text>
+	</d-box>
+	<h6>When behind Noelle</h6>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="c"></d-sprite>
+		<d-text asterisk>(I... I can't see what they're doing, but...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="c"></d-sprite>
+		<d-text asterisk>(Aren't they staring at me...?)</d-text>
+	</d-box>
+
+	<h5>Fifth time onwards</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="c"></d-sprite>
+		<d-text asterisk>(Why don't they step on the switch...?)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="forcefield-weird-leave">Attempting to leave</h4>
+	<p>Trying to return to the roundabout area through the northwest path, after Noelle is standing on the left switch.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Shouldn't leave now.)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="forcefield-weird-solve">Finishing the puzzle</h4>
+	<p class="note">The player can take Kris across to the right switch. Just as they step into the area where the forcefield was, however, Noelle shifts briefly on the left switch as though about to step off. In the end, she does not move, and Kris can safely move past to step on the right switch.</p>
+
+	<p class="note">Once they're holding down the right switch, Kris turns around as Noelle hurries up in front of them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>N... Nice teamwork!</d-text>
+	</d-box>
+
+	<p class="note">Control is returned to the player, who can lead the party away from the puzzle. A short distance away, they stop as Noelle begins thinking to herself:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>(... See, Noelle? Nothing bad is going to happen.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="d"></d-sprite>
+		<d-text asterisk>(Getting that ring... was good, wasn't it?)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="e"></d-sprite>
+		<d-text asterisk>(So... stop thinking about it.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="W"></d-sprite>
+		<d-text asterisk>(Stop thinking about stepping off the switch... and...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="Z"></d-sprite>
+		<d-text asterisk>(Letting Kris get...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="W"></d-sprite>
+		<d-text asterisk>(Noelle, no, don't think that! It's horrible...)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="It's horrible"></d-option>
+		<d-option index="1" text="It's natural"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+		<d-text asterisk>K-Kris...? What are you talking about!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+		<d-text asterisk>(I... I must have said that out loud...?)</d-text>
+	</d-box>
+	<p class="note">An ominous chime plays, signalling the continuation of the Weird Route. An <a href="{% include wikilink page='Hidden Music Tracks#cybercity_alt' %}">alternate, more somber version of the Cyber City theme</a> begins playing, and control is returned to the player, who can lead the party onwards through an increasingly desolate city to the <a href="{{ '/chapters/chapter2/city3#annoyingmouseroom2-weird' | relative_url }}">second Annoying Mouse Room</a>.</p>
+</section>
