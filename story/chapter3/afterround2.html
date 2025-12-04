@@ -1,0 +1,1087 @@
+---
+title: After Round 2
+
+description: >
+  <p>The party tries to talk to Tenna about ending the show.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_room_green_room_Step_0
+    chapters: [3]
+    note: Green Room
+  -
+    name: gml_Object_obj_npc_ramb_Step_0
+    chapters: [3]
+    note: Ramb Z-Rank prize dialogue
+  -
+    name: gml_Object_obj_npc_ramb_Other_10
+    chapters: [3]
+    note: other Ramb dialogue
+  -
+    name: gml_Object_obj_dw_ch3_lancer_spin_Step_0
+    chapters: [3]
+    note: Lancer - "pick up" dialogue
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [3]
+    note: all other Green Room interactions, red carpet hall - Pippins, S-Rank room - corkboard, curtain, GAME doors
+  -
+    name: gml_Object_obj_room_changing_room_Step_0
+    chapters: [3]
+    note: S-Rank room - Pippins
+  -
+    name: gml_Object_obj_shop_vending_changing_Other_12
+    chapters: [3]
+    note: vending machine Check text
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [3]
+    note: red carpet hall - Zapper and Shuttah, all other S-Rank room interactions
+  -
+    name: gml_Object_obj_room_interstitial_Step_0
+    chapters: [3]
+    note: interstitial hall left exit
+  -
+    name: gml_Object_obj_room_stage_Step_0
+    chapters: [3]
+    note: talking to Tenna
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [3]
+    note: choices
+---
+<section class="d-section" id="greenroom">
+	<h2>Back in the Green Room</h2>
+
+	<p class="note">The party finds themselves once more in the Green Room, Susie and Ralsei shocked by the transition. They calm after a moment, but Susie isn't smiling. Ralsei also stops smiling after a brief moment, bowing his head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="d"></d-sprite>
+		<d-text asterisk>I suppose... we should get ready for the next round.</d-text>
+	</d-box>
+
+	<p class="note">A pause. Ralsei lifts his head, smiling again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>... I'm fine as long as you want to keep playing, Susie!</d-text>
+	</d-box>
+
+	<p class="note">Susie lowers her head. A slight pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">Susie lifts her head, still unhappy. A slight pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>I mean, the last game was wicked fun, but...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>Get the feeling this'll keep going, until it gets old.</d-text>
+	</d-box>
+
+	<p class="note">She lowers her head again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="R"></d-sprite>
+		<d-text asterisk>... feels bad, but...</d-text>
+	</d-box>
+
+	<p class="note">She lifts her head to look at Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>Let's go tell him this time's gonna be the last, okay, Kris?</d-text>
+	</d-box>
+
+	<p class="note">The camera pans to focus on Kris. As Susie regains her smile, control is returned to the player. You can explore for a while; notable interactions are listed below:</p>
+	<ul class="note">
+		<li><a href="#greenroom">Green Room</a>
+			<ul>
+				<li><a href="#greenroom-ramb">talking to Ramb</a></li>
+				<li><a href="#greenroom-throuple">talking to Rouxls and the weather duo</a></li>
+				<li><a href="#greenroom-lancer">talking to Lancer</a></li>
+				<li>(see the <a href="{{ '/locations/tvworld/greenroom/' | relative_url }}">Green Room</a> page for other interactions)</li>
+			</ul>
+		</li>
+		<li><a href="#redcarpethall">Red carpet hall</a> to the south
+			<ul>
+				<li><a href="#redcarpethall-zapper">talking to Zapper</a></li>
+				<li><a href="#redcarpethall-pippins">talking to Pippins</a></li>
+				<li><a href="#redcarpethall-shuttah">talking to Shuttah</a></li>
+				<li>(see the <a href="{{ '/locations/tvworld/greenroom/redcarpethall' | relative_url }}">red carpet hall</a> page for other interactions)</li>
+			</ul>
+		</li>
+		<li><a href="#starchangingroom">S-Rank changing room</a>
+			<ul>
+				<li><a href="{{ '/story/chapter3/islandboardsword' | relative_url }}">playing the original Island Board backstage</a></li>
+				<li>talking to Ramb <a href="#starchangingroom-ramb-pre">before</a> and <a href="#starchangingroom-ramb-post">after</a> completing the original Island Board</li>
+				<li><a href="#starchangingroom-vendingmachine">checking the vending machine</a></li>
+				<li><a href="#starchangingroom-pippins">talking to Pippins</a></li>
+				<li><a href="#starchangingroom-corkboard">checking the right corkboard</a></li>
+				<li><a href="#starchangingroom-rabbick">talking to Rabbick</a></li>
+				<li><a href="#starchangingroom-curtain">talking to someone behind the curtain</a></li>
+			</ul>
+		</li>
+	</ul>
+
+	<p class="note">At any point, you can move on to the left, where you'll find the <a href="#left">interstitial hall and Legend of Tenna set</a>.</p>
+</section>
+
+<section class="d-section" id="greenroom">
+	<h2>Exploring the Green Room</h2>
+
+	<h3 id="greenroom-ramb">Talking to Ramb</h3>
+	<h4 id="greenroom-ramb-initial">Initial</h4>
+	<h5>If you got C-Rank or higher</h5>
+	<p class="note">Ramb looks up from the glass he's polishing, smiling. A blue gift box sits next to him.</p>
+
+	<p class="note">In the following message, "X" is replaced by the rank you received on the last board (T/S/A/B/C).</p>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Kris! Bang-up job getting X-rank, luv! For that, a little prize...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h6>If you have room in your inventory and/or storage, as applicable</h6>
+	<p class="note">The <a href="{{ '/misc/generic#objectget' | relative_url }}">generic text</a> plays as the prize is added to your inventory:</p>
+	<ul class="note">
+		<li><a href="{{ '/misc/generic#armorget' | relative_url }}">armor variant</a> for T-Rank/S-Rank's <a href="{{ '/misc/armor#whiteribbon' | relative_url }}">White Ribbon</a> and C-Rank's <a href="{{ '/misc/armor#lodestone' | relative_url }}">Lode Stone</a> in Round 2</li>
+		<li><a href="{{ '/misc/generic#itemget' | relative_url }}">item variant</a> for A-Rank/B-Rank's <a href="{{ '/misc/darkitems#tensiongem' | relative_url }}">Tension Gem</a> in Round 2</li>
+	</ul>
+	<hr class="hr3">
+	<h6>If you got S-Rank or higher / C-Rank and the armor inventory is full</h6>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Ah, you're holding too many ARMORs, luv. Get rid of something?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h6>If you got A-Rank / B-Rank and the inventory and storage are full</h6>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Ah, you're holding too many ITEMs, luv. Get rid of something?</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<p class="note">Ramb turns back to his glass.</p>
+
+	<h5>If you got Z-Rank</h5>
+	<p class="note">Ramb looks up from the glass he's polishing, smiling. A blue gift box sits next to him.</p>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Kris! Your rank... Z-Rank. Well, I suppose you gave it a good try!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Here, the gift...</d-text>
+	</d-box>
+	<p class="note">The item get beeping SFX plays as the gift box disappears.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(The giftbox was empty.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>That's right, Kris. Tenna's not too keen on that behavior...</d-text>
+	</d-box>
+	<p class="note">Ramb raises an eyebrow.</p>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Reminds him of a certain... y'know.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>... that's why HIS game's a bit of a bust, y'see?</d-text>
+	</d-box>
+	<p class="note">Ramb lowers his head.</p>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>(Just wait... I'll show you something electrifying, I will...)</d-text>
+	</d-box>
+
+	<p class="note">Ramb turns back to his glass.</p>
+
+	<hr class="hrhalf">
+
+	<h4 id="greenroom-ramb-round2">After getting your prize</h4>
+	<h5>First time</h5>
+	<p class="note">Ramb looks up from the glass he's polishing with a smile.</p>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Oi, Kris! How were the games, luv?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Super fun"></d-option>
+		<d-option index="1" text="Eh"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Ramb raises an eyebrow.</p>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>I see, I see... It's all well and good if you feel that way.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>Ol' man Tenna's got to have SOMEONE appreciate him, I suppose...</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>See, I KNEW you wouldn't like it. Something's missing, right?</d-text>
+		</d-box>
+		<p class="note">Ramb raises an eyebrow.</p>
+		<hr class="hr2">
+		<h6>If the <a href="{{ '/story/chapter3/islandboardsword' | relative_url }}">Sword Route's second stage</a> hasn't been successfully completed</h6>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>Some action... Some mystery... Maybe some more... freedom?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>(Just between you and me, if you can get in the S-Ranker's room...)</d-text>
+		</d-box>
+		<hr class="hr3">
+		<h6>Otherwise</h6>
+		<d-box theme="dark">
+			<d-speaker>Ramb</d-speaker>
+			<d-text asterisk>(Good thing we've got the REAL game, eh, luv?)</d-text>
+		</d-box>
+		<hr class="hr2">
+		<p class="note">A mysterious jingle plays.</p>
+	</d-option-panel>
+	<p class="note">Ramb turns back to his glass.</p>
+
+	<h5>Subsequent times</h5>
+	<p class="note">Ramb looks up from the glass he's polishing with a smile.</p>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Kris, games are supposed to be fun. Don't let it feel like a job, alright?</d-text>
+	</d-box>
+	<p class="note">Ramb turns back to his glass.</p>
+
+
+	<hr>
+
+
+	<h3 id="greenroom-throuple">Talking to Rouxls and the weather duo</h3>
+	<p class="note">Rouxls sits between Elnina and Lanino, sharing a gaming controller with each of them; they are looking at him with wide eyes.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>Haha... You three STILL aren't readyeth for the Chef Game?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="X"></d-sprite>
+		<d-text asterisk>Um... we already did that.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="1"></d-sprite>
+		<d-text asterisk>What.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Yeah. Like, on the first board. Where were you?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>Doing... my Freakinge... MAKE-UP?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="4"></d-sprite>
+		<d-text asterisk>I mean... haha. I kneweth that. ACTUALLYE.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="3"></d-sprite>
+		<d-text asterisk>Perhaps, I just Liketh wearing clothing... On Purpose?</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="6"></d-sprite>
+		<d-text asterisk>Tell them, my Loverse. Tell them of my Glorie.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Lanino</d-speaker>
+		<d-text asterisk>Uh... Elnina... really sees a lot in him, so...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Elnina</d-speaker>
+		<d-text asterisk>And, um... Lanino sees a lot in him, so...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="3"></d-sprite>
+		<d-text asterisk>They're sayingeth, I'm Hotte.</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="greenroom-lancer">Talking to Lancer</h3>
+	<p class="note">In the bottom right of the room, between the rightmost TV and cactus, Lancer is on his back on the ground, spinning in place.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>Susie! Blue Kris! I'm doing my Hurricane Attack. Want to help!?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Help or#Don't Help"></d-option>
+		<d-option index="1" text="Pick#him up"></d-option>
+		<d-option index="2" text="No response"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">If Kris wasn't spinning, they begin spinning, and won't stop until choosing this dialogue option again or leaving the Green Room's main area. Otherwise, if Kris was spinning, they stop.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="2"></d-sprite>
+			<d-text asterisk>Obviously.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+			<d-text asterisk>Oooh, carry me! Carry me!</d-text>
+		</d-box>
+		<p class="note">With the item get beeping SFX, Lancer disappears.</p>
+		<d-box theme="dark">
+			<d-text asterisk>(You picked up LANCER into your LANCERs.)</d-text>
+		</d-box>
+		<p class="note">A long pause.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+			<d-text asterisk>Now, put me down! Put me down!</d-text>
+		</d-box>
+		<p class="note">With the item get beeping SFX, Lancer reappears, still spinning.</p>
+		<d-box theme="dark">
+			<d-text asterisk>(You dropped LANCER from your LANCERs.)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+			<d-text asterisk>Spin, spin, spin, spin, spin, spin, spin, spin...</d-text>
+		</d-box>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="redcarpethall">
+	<h2>Red carpet hall</h2>
+
+	<h3 id="redcarpethall-zapper">Talking to Zapper</h3>
+	<h4>Standard</h4>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Y'know, I'm a bit worried... ain't Pippinses originally from Card Castle?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>If dis guy turned ta stone, I ain't sure what I'd do...</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>After buying the <a href="{{ '/locations/tvworld/greenroom/redcarpethall#pippinscounterfeit' | relative_url }}">counterfeit S</a></h4>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>I saw you buy it. Only a fool would be tricked by a counterfeit like that.</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="redcarpethall-pippins">Talking to Pippins</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>What happens, happens... I think I fit in just fine, don't I?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Kris, tell this bozo he's got nothin' to worry about!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>By the way, seen a ticket anywhere? Nothing... just a hunch.</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="redcarpethall-shuttah">Talking to Shuttah</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>In the once upon a time, there was a land like purple cliffs.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>A frozen waste, watery basin, a metal desert.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>But, this theater was built upon that... and, it grew.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>Not everyone liked the change. Some people left.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>Of course, that was in the days of the black-and-white.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="starchangingroom">
+	<h2>S-Rank changing room</h2>
+
+	<h3 id="starchangingroom-ramb-pre">Talking to Ramb before completing the <a href="{{ '/story/chapter3/islandboardsword' | relative_url }}">original Island Board</a></h3>
+	<h4>If you didn't speak to Ramb backstage after Round 1</h4>
+	<p>That is, if you didn't get into the Star Changing Room in Round 1, or if you did but then didn't talk to Ramb backstage at all.</p>
+
+	<h5>First time</h5>
+	<p class="note">Ramb stands in front of the backstage doors.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Ah, Kris. Look at you, a dressing room big shot! Cheers, cheers.</d-text>
+	</d-box>
+
+	<p class="note">Ramb shifts to the side, looking conspiratorial.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>So how do you fancy the game, then? Right-o. It ain't much, innit, luv.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Now, I KNEW you wouldn't like it, I KNEW. So listen up...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Y'see, that game you been playin'? It's not, EXACTLY, the original.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Ol' Tenna's done a little somethin' here, a little somethin' there...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>And made the whole adventure some big ol' blasted line from A to B.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Primo. Boring. Stuff.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>But if I know Kris, and boy do I know Kris... that's not what YOU want, innit?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Freedom. That's what YOU want, chum, freedom!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Well, if I can go hush-hush for a minute here...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Kris, luv. THAT'S what we got backstage.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>The ORIGINAL game. Where YOU decide what to do.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>All right, enough explaining, more gaming!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>I'll keep an eye out for Tenna, you go have some REAL fun, alright, luv?</d-text>
+	</d-box>
+
+	<p class="note">Ramb moves out of the way of the doors.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>There you go! And, I'm sure you know, but... secret to Tenna, right, luv?</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Ah, Kris. Stick around here long enough, and you'll learn...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Freedom's just a thing for big shots.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>If you spoke to Ramb backstage after Round 1</h4>
+	<h5>First time</h5>
+	<p class="note">Ramb once again stands in front of the doors leading backstage.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>I'm glad you're having REAL fun, Kris. It's the least I could do.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Not often a Dark World pops up in your own house, you know?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>... though, it could. If you ever wanted it to.</d-text>
+	</d-box>
+
+	<p class="note">Ramb moves out of the way of the doors.</p>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Sorry, Kris. Don't know what I was saying there.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Just go and enjoy the games, eh? Cheers.</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="starchangingroom-ramb-post">Talking to Ramb after completing the original Island Board</h3>
+	<h4 id="hasshelter">If you obtained the Shelter Key</h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Kris! How were the games? Just to your liking?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>... What? ... someone backstage with you?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>No, Kris. I was back here on security the whole time.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Tenna's really starting to stick that nose of his around, though.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Sorry, but I think we're gonna have to make the next one the last one.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Kris, you sure you're feeling... normal?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>... Well, you are talking to a power strip. So maybe not. Haha!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="noshelter">If you weren't able to obtain the Shelter Key</h4>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>How was the game, luv...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>... what? You couldn't finish it?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>Blast it. Maybe you missed something from the first stage...?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If you didn't get S-rank or higher in Round 1</h4>
+	<d-box theme="dark">
+		<d-speaker>Ramb</d-speaker>
+		<d-text asterisk>If only you'd gotten S-Rank earlier...</d-text>
+	</d-box>
+	<hr class="hr2">
+
+
+	<hr>
+
+
+	<h3 id="starchangingroom-vendingmachine">Checking the vending machine</h3>
+	<p>That is, selecting "Check" on the vending machine menu.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(There's graffiti here...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(The TV Dinners are great and healthy!)</d-text>
+		<d-text asterisk>(The white nose ice cream cones are made from Tenna's OWN noses!)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(They certainly aren't recycled from...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Seems the message cuts off...)</d-text>
+		<d-text asterisk>(Maybe they'll finish it later.)</d-text>
+	</d-box><p class="note">You are returned to the <a href="{{ '/locations/tvworld/greenroom/starchangingroom#vendingmachine-initial' | relative_url }}">initial menu</a>.</p>
+
+
+	<hr>
+
+
+	<h3 id="starchangingroom-pippins">Talking to Pippins</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Hey, want a hint about RUDE BUSTER? It's only 1 POINT...</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Pay"></d-option>
+		<d-option index="1" text="Don't"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">This dialogue plays only if you have 1 or more POINTs. If you have no POINTs, the game plays the dialogue for choosing "Don't".</p>
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Thanks, don't mind if I do...</d-text>
+		</d-box>
+		<p class="note">Your current score is displayed, and 1 POINT is deducted from it.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Pippins</d-speaker>
+			<d-text asterisk>Fine, I'll tell you anyway.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Right before Susie's RUDE BUSTER hits the enemy...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Press [CONFIRM] to deal extra damage!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>You'll know you did it right, 'cause the sound will change a little bit.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Pretty nifty, huh? Use it if you ever have to fight...!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Right before Susie's RUDE BUSTER hits the enemy...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Press [CONFIRM] to deal extra damage!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>You'll know you did it right, 'cause the sound will change a little bit.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>Pretty nifty, huh? Use it if you ever have to fight...!</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="starchangingroom-corkboard">Checking the right corkboard</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a corkboard. ... ouch!)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Cactus needles are stuck into it.)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="starchangingroom-rabbick">Talking to Rabbick</h3>
+	<d-box theme="dark">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text asterisk>(Dustin' makes me feel good...)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="starchangingroom-curtain">Talking to someone behind the curtain</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Someone behind the curtain is talking...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Someone</d-speaker>
+		<d-text asterisk>(... can I... look like this... can I... dream like this...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... when you moved to listen, suddenly they stopped.)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="left">
+	<h2>Interstitial hall and Legend of Tenna set</h2>
+
+	<h3 id="left-doors-pre">Interacting with the GAME doors</h3>
+	<p class="note">The doors leading to the next board are shut, the "GAME" sign over them dark.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="d"></d-sprite>
+		<d-text asterisk>(Seems like the next board isn't ready yet...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>(Maybe we should go talk to Tenna?)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="left-pretalk-group">Heading left in the interstitial hall</h3>
+	<p class="note">The party stops a few steps away from the left end of the hall.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>... we gotta tell Tenna this is the last game.</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Let's go"></d-option>
+		<d-option index="1" text="Wait"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="D"></d-sprite>
+			<d-text asterisk>Yeah...</d-text>
+		</d-box>
+		<p class="note">The screen goes dark as the party <a href="#tenna-group">walks to the left</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="D"></d-sprite>
+			<d-text asterisk>Uh, okay.</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="tenna-group">Talking to Tenna as a group</h3>
+	<p class="note">The dark screen fades to show the Legend of Tenna set, with Tenna standing to the left, one hand pressed to the side of his head as though on call.</p>
+	<p class="note">The party enters from the right, led by Susie.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>Hey, Tenna...</d-text>
+	</d-box>
+	<p class="note">Waves periodically radiate off Tenna's antennae.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>What do you MEAN!? Then MAKE. The AIRHOLES. BIGGER!</d-text>
+	</d-box>
+	<p class="note">Tenna leans forward, gesturing in annoyance with his free hand.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>What do you think I'M PAYING your ELECTRICITY BILL FOR!?</d-text>
+	</d-box>
+	<p class="note">Tenna leans back and throws his hands in the air, frustrated.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>And HOW are they not HERE YET!? The LIGHTNERS are gonna get BORED!</d-text>
+	</d-box>
+	<p class="note">Susie's eyes widen in surprise and she stops smiling as Tenna continues speaking:</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>If that purple girl finds out about this, it's ALL OVER!</d-text>
+	</d-box>
+
+	<p class="note">A pause. Susie speaks, and Tenna's antennae stop radiating waves as his call ends.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>... what are you talking about?</d-text>
+	</d-box>
+
+	<p class="note">Tenna jumps in shock, whirling around. He raises his hands, flustered.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>S-Susie!? Kris!? Uh, Susie, I...</d-text>
+	</d-box>
+
+	<p class="note">He hurries towards the party, pressing his hands together by his face and leaning forward, trembling violently.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Susie, sweetHEART! Hey, what's the trouble?</d-text>
+	</d-box>
+
+	<p class="note">A pause. Susie looks down, smile still absent. Another pause. When she speaks, Tenna freezes.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>... what was with that phone call?</d-text>
+	</d-box>
+
+	<p class="note">Tenna stands straight, adjusting his tie with a flustered smile.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Oh, THAT! Oh, NO I can't believe you, uh, HEARD!</d-text>
+	</d-box>
+
+	<p class="note">Tenna dramatically throws his hands in the air, bouncing slightly on his feet.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>We were, uh, just planning a SPECIAL SURPRISE GAME for you...</d-text>
+	</d-box>
+
+	<p class="note">He straightens up and presses his hands together in front of himself.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>You, uh, didn't hear what it WAS, did you?</d-text>
+	</d-box>
+
+	<p class="note">Susie raises her head, smiling again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>... nah. Uh...</d-text>
+	</d-box>
+
+	<p class="note">Susie turns around and takes a step away; Tenna looks agitated.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="R"></d-sprite>
+		<d-text asterisk>... I gotta, go, actually.</d-text>
+	</d-box>
+
+	<p class="note">Tenna's head hangs as Susie walks away, her gaze lowered and her smile gone; Kris and Ralsei back out of her way as she passes, then follow her out. The screen fades to black, then to the interstitial hall as the party walks through; Ralsei is no longer smiling. Susie leads the others to stop in front of the doors. A pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>... man.</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to the side away from the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="4"></d-sprite>
+		<d-text asterisk>There's nothing that pisses me off more...</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to the left, gaze still lowered. As she speaks, Ralsei ducks his head into his scarf.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>... than people who don't tell you the whole deal.</d-text>
+	</d-box>
+
+	<p class="note">Ralsei lifts his head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>... You mean, Tenna...?</d-text>
+	</d-box>
+
+	<p class="note">Susie lifts her head as well, looking serious.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="4"></d-sprite>
+		<d-text asterisk>Yeah. I dunno what, but... he's hiding something.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>... Let's go take a look around, Kris.</d-text>
+	</d-box>
+
+	<p class="note">Susie and Ralsei regain their smiles, and control is returned to the player, who can explore the Green Room some more, <a href="#interstitial-leftexit-kris">head back towards the left to talk to Tenna again</a>, or <a href="{{ '/story/chapter3/intothecold' | relative_url }}">go looking for what Tenna's hiding behind the Green Room's eastern doors</a>.</p>
+
+	<hr>
+
+	<h3 id="left-doors-post">Interacting with the GAME doors again</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="4"></d-sprite>
+		<d-text asterisk>(... No next Board until we figure out what's going on.)</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>(Stop scratching at the door like a dog, you idiot.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+		<d-text asterisk>(Aww, Kris wants walkies...?)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="left-pretalk-kris">Heading left in the interstitial hall after the party speaks to Tenna</h3>
+	<p class="note">The party stops a few steps away from the left end of the hall.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>... huh? Kris, you really want to talk to Tenna?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Let me talk"></d-option>
+		<d-option index="1" text="Nah"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="D"></d-sprite>
+			<d-text asterisk>Whatever you wanna do, I guess...</d-text>
+		</d-box>
+		<p class="note">Kris alone enters the Legend of Tenna set to <a href="#tenna-kris">talk to Tenna</a>, while the other two stay behind.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="D"></d-sprite>
+			<d-text asterisk>... yeah.</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="tenna-group">Talking to Tenna as a group</h3>
+	<p class="note">The dark screen fades to show the Legend of Tenna set, with Tenna standing at the center absolutely still, facing the side away from the player, head hanging low and hands limp at his sides.</p>
+	<p class="note">Kris enters from the right, but Tenna doesn't notice.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Keep it TOGETHER, Tenna! They... they're STILL loving it! They have to be!</d-text>
+	</d-box>
+
+	<p class="note">Still turned away, Tenna flaps his hands exaggeratedly, throwing them in the air in dramatic upset.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>CLASSIC TV NEVER GETS OLD!!! And Susie! Susie, she was so excited...</d-text>
+	</d-box>
+
+	<p class="note">Tenna turns to the left, head and antennae still hanging low. He lets out a deep sigh. Then he turns to the right and is startled to see Kris, flailing and spinning for a moment before standing up straight and adjusting his tie with a wobbly smile. A silent pause.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>K... Kris! Hey, Kris! Kris ol' buddy, ol' pal! How's it going!</d-text>
+	</d-box>
+
+	<p class="note">Tenna presses his hands together in front of himself, trembling faintly.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>It's uh, it's uh, it's goin' great, isn't it!? Everything's, just hunky doody!</d-text>
+	</d-box>
+
+	<p class="note">Tenna takes a step back and shades the top of his face with one hand as his antennae stand up perfectly straight. </p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Haha... Uh, heheh... Where are your, uh, buddies? Your pals?</d-text>
+	</d-box>
+
+	<p class="note">He takes another step back and lowers the hand to rest on his tie, other hand behind his back.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>By yourself, huh? Don't you wanna, y'know, heheh, keep 'em company? Heheh...</d-text>
+	</d-box>
+
+	<p class="note">He edges another step or two back, still trembling. Then he turns around sharply. The trembling stops as he presses a finger to the side of his head, holding up his other hand as well.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Oh, uh, hey, would you look at that! My, uh, my beeper's going!</d-text>
+	</d-box>
+
+	<p class="note">Tenna spreads his hands with a wide grin.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>You know, my silent beeper! Haha, it's a new one! I... I gotta be goin' now!</d-text>
+	</d-box>
+
+	<p class="note">He turns to Kris and bows twice, then turns and starts heading to the left. A few steps away from the edge of the screen, he stops. A pause. Tenna lowers his head. A slight pause.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>By the way... Seen your father recently? Your brother?</d-text>
+	</d-box>
+
+	<p class="note">He lifts his head, mouth absent.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>You know, we still got that cowboy program... The one your dad likes...</d-text>
+	</d-box>
+
+	<p class="note">Tenna pirouettes back to center stage before pressing his hands together fondly by his face and leaning towards Kris.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>He was, heh, bouncin' you on your knee as you watched it together...</d-text>
+	</d-box>
+
+	<p class="note">Tenna freezes and looks alarmed for a moment. He turns away, putting his hands over his face.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Sorry, Kris! Sorry! I gotta...</d-text>
+	</d-box>
+
+	<p class="note">Tenna turns to Kris while adjusting his tie, flustered.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>I have to go!</d-text>
+	</d-box>
+
+	<p class="note">Putting his hands over his face again, he rushes offscreen to the left. Control is returned to the player, who can explore the Green Room some more or <a href="{{ '/story/chapter3/intothecold' | relative_url }}">go looking for what Tenna's hiding behind the Green Room's eastern doors</a>.</p>
+
+	<hr>
+
+	<h3 id="left-post">Heading left in the interstitial hall after Kris speaks to Tenna</h3>
+	<p class="note">The Legend of Tenna set can be entered by the whole party without commentary, though there's nothing to interact with.</p>
+</section>

@@ -1,0 +1,1163 @@
+---
+title: Waking up in TV World
+
+description: >
+  <p>Kris and Susie wake to find themselves in a Dark World.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_ch3_PGS01A_Step_0
+    chapters: [3]
+    note: waking up
+  -
+    name: gml_Object_obj_ch3_PGS01B_Step_0
+    chapters: [3]
+    note: meeting up with Ralsei
+  -
+    name: gml_GlobalScript_scr_parallel_convo
+    chapters: [3]
+    note: Susie/Ralsei's conversation
+  -
+    name: gml_Object_obj_ch3_couch_overworld_controller_Step_0
+    chapters: [3]
+    note: POINTs chest
+  -
+    name: gml_Object_obj_ch3_PGS01C_Step_0
+    chapters: [3]
+    note: Ralsei's refusal
+  -
+    name: gml_Object_obj_ch3_PGS01D_Step_0
+    chapters: [3]
+    note: nature of Darkners, initial
+  -
+    name: gml_Object_obj_ch3_PGS01E_field_Step_0
+    chapters: [3]
+    note: nature of Darkners, Card Kingdom field scene
+  -
+    name: gml_Object_obj_ch3_PGS01E_classroom_Step_0
+    chapters: [3]
+    note: nature of Darkners, classroom scene
+  -
+    name: gml_Object_obj_ch3_PGS01E_hallway_Create_0
+    chapters: [3]
+    note: nature of Darkners, hallway scene (text)
+  -
+    name: gml_Object_obj_ch3_PGS01E_hallway_Step_0
+    chapters: [3]
+    note: nature of Darkners, hallway scene (animations)
+  -
+    name: gml_Object_obj_ch3_PGS01F_Step_0
+    chapters: [3]
+    note: disagreement
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [3]
+    note: couch skip, Susie/Ralsei eye puzzle, POINTs chest
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [3]
+    note: couch skip, VHS choices
+
+toc:
+  -
+    id: wakeup
+    name: Waking up
+    subheadings:
+      -
+        id: intro
+        name: Intro
+      -
+        id: couch
+        name: Couch
+        subheadings:
+          -
+            id: couch-sleep
+            name: Initial
+            subheadings:
+              -
+                id: couch-sleep-first
+                name: If no Chapter 3 completion file exists
+              -
+                id: couch-sleep-skip
+                name: If a Chapter 3 completion file exists
+          -
+            id: couch-walk
+            name: After walking far enough to the right, then backtracking
+      -
+        id: savepoint
+        name: SAVE point
+      -
+        id: run-susie
+        name: Reminder to run
+  -
+    id: reunion
+    name: Meeting up with Ralsei
+  -
+    id: susraltalk1
+    name: Susie and Ralsei's conversation
+  -
+    id: dustpile
+    name: Dust pile area
+  -
+    id: eyepuzzle
+    name: Eye puzzle
+    subheadings:
+      -
+        id: eyepuzzle-susie
+        name: Talking to Susie
+      -
+        id: eyepuzzle-ralsei
+        name: Talking to Ralsei
+  -
+    id: susraltalk2
+    name: Susie and Ralsei's conversation, continued
+  -
+    id: explanation
+    name: Ralsei's explanation
+  -
+    id: argument
+    name: Susie's disagreement
+---
+<section class="d-section" id="wakeup">
+	<h2>Waking up</h2>
+
+	<h3 id="intro">Intro</h3>
+	<p class="note">The screen is dark. Someone is snoring. A circle of light fades in to reveal that the culprit is a snoozing Susie in her Dark World outfit. After a few moments, the snot bubble over her nose pops. A pause. She opens her eyes and blinks rapidly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="G"></d-sprite>
+		<d-text asterisk>H... huh!?</d-text>
+	</d-box>
+
+	<p class="note">The circle of light expands to show Susie lying on a large couch in a new Dark World. Kris is sitting slouched on the couch at her feet. Susie looks "down" at them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="F"></d-sprite>
+		<d-text asterisk>Kris...</d-text>
+	</d-box>
+
+	<p class="note">She sticks a leg out and prods their head with her foot. A pause. She prods them again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Kris... Kris... Hey, wake up!!</d-text>
+	</d-box>
+
+	<p class="note">She kicks them in the head again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="P"></d-sprite>
+		<d-text asterisk>We're... in the Dark World!!</d-text>
+	</d-box>
+
+	<p class="note">Kris falls over on the couch; they and Susie roll off it, dropping to a crouch on the boardwalk, then get to their feet. After a pause, they turn to each other, silent for a moment.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="F"></d-sprite>
+		<d-text asterisk>The hell did this happen...?</d-text>
+	</d-box>
+
+	<p class="note">Susie faces forward again. After a moment, she poses with a fist up, grinning.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>... well, who cares! This means another adventure, right?</d-text>
+	</d-box>
+
+	<p class="note">Susie gets in line behind Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Let's see what else is around.</d-text>
+	</d-box>
+
+	<p class="note">Control is returned to the player, who can head ahead to <a href="#reunion">meet up with Ralsei</a>.</p>
+
+	<hr>
+
+	<h3 id="couch">Couch</h3>
+	<h4 id="couch-sleep">Initial</h4>
+	<h5 id="couch-sleep-first">If no Chapter 3 completion file exists</h5>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a couch, for sleeping.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(The couch is asleep, too.)</d-text>
+	</d-box>
+
+	<h5 id="couch-sleep-skip">If a Chapter 3 completion file exists</h5>
+	<p class="note">There is a sparkle between the stationary couch's cushions.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a couch, for sleeping.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(If you go back to sleep, you may miss a lot of important things.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Will you go to sleep?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Sleep"></d-option>
+		<d-option index="1" text="Do not"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(For some reason, you decided to go back to sleep...)</d-text>
+		</d-box>
+		<p class="note">Susie walks up beside Kris.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="K"></d-sprite>
+			<d-text asterisk>Dude, you're gonna sleep through THE DARK WORLD?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="1"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="0"></d-sprite>
+			<d-text asterisk>Alright, well, I'm out.</d-text>
+		</d-box>
+		<p class="note">Susie heads off down the path, walking offscreen to the right. The screen fades to black and the music fades out. A long pause.</p>
+		<d-box theme="dark">
+			<d-speaker>Tenna</d-speaker>
+			<d-text asterisk>Hey, Kris! What'd you do, ride the couch all the way here!?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Tenna</d-speaker>
+			<d-text asterisk>Great timing! The game's about to start!</d-text>
+		</d-box>
+		<p class="note">A pause. <a href="{{ '/story/chapter3/desertboard' | relative_url }}">Tenna's game begins</a>. Kris's name is set to "<span class="white">KRS</span>" for future TV Time rounds.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+
+	<h4 id="couch-walk">After walking far enough to the right, then backtracking</h4>
+	<p class="note">The couch is now walking away towards the left.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's a couch, for walking.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(The couch is walking, too.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="couchcliffs-savepoint">SAVE point</h3>
+	<p class="note">See the <a href="{{ '/misc/savepoints#tvworld' | relative_url }}">SAVE points page</a>.</p>
+
+	<hr>
+
+	<h3 id="run-susie">Reminder to run</h3>
+	<p>Plays if you don't run more than a certain amount before leaving this first area.</p>
+	<p class="note">Susie stops you after a few seconds.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Dude, you know we can RUN, right?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>The hell are you still walking everywhere for?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="reunion">
+	<h2>Meeting up with Ralsei</h2>
+
+	<p class="note">Some distance into the next room, Kris and Susie stop when Ralsei calls out from offscreen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="P"></d-sprite>
+		<d-text asterisk>W-wait for me!</d-text>
+	</d-box>
+
+	<p class="note">Kris and Susie turn around, Susie alerted. The camera pans over to reveal Ralsei walking up from behind them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Ralsei!</d-text>
+	</d-box>
+
+	<p class="note">Susie walks up to Ralsei. He turns to the side facing the player, adjusting his glasses.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>I felt a dark presence and hurried here...</d-text>
+	</d-box>
+
+	<p class="note">He lowers his hand and turns back to Susie.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>If we keep going, the Dark Fountain should be...</d-text>
+	</d-box>
+
+	<p class="note">Susie steps closer to Ralsei.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Hey, Ralsei!</d-text>
+	</d-box>
+
+	<p class="note">Susie poses, grinning.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>You're not gonna BELIEVE what I did after our adventure yesterday!</d-text>
+	</d-box>
+
+	<p class="note">She turns back to Ralsei.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>After we saved the WORLD, I went over Kris's...</d-text>
+	</d-box>
+
+	<p class="note">She turns to Kris…</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Almost baked an ENTIRE pie...</d-text>
+	</d-box>
+
+	<p class="note">…then to the side, posing again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>And then marathoned movies ALL NIGHT!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei laughs.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+		<d-text asterisk>Aww, Susie! It sounds like you had a wonderful time!</d-text>
+	</d-box>
+
+	<p class="note">Susie turns away from Ralsei and puts her hands behind her head casually, grinning.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>Yeah, it wasn't AWFUL, I guess...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>I want to hear all about it...</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns briefly to the side.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Um, let's just get going, first!</d-text>
+	</d-box>
+
+	<p class="note">As he turns back to Susie, she faces him as well, dropping her arms.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Oh, uh, yeah!</d-text>
+	</d-box>
+
+	<p class="note">Susie and Ralsei line up behind Kris, the camera panning over to focus on them. All three spin and strike poses. Control is returned to the player, who can head into the next area.</p>
+</section>
+
+<section class="d-section" id="susraltalk1">
+	<h2>Susie and Ralsei's conversation</h2>
+	<p class="note">As the party progresses through the next area, Susie and Ralsei chat as they reach various parts of the room, pausing between exchanges.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Anyway, so I've been thinking...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>About some of those movies last night.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Think YOU could survive BLOOD CRUSHERS 2, Ralsei?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Haha, umm, I don't know, I've never seen a movie...!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Heh, really?</d-text>
+	</d-box>
+
+	<hr>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Would you want to?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>H... huh?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Y'know. Come watch next time. Movies.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Oh...! That would... be nice, wouldn't it?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dustpile">
+	<h2>Dust pile area</h2>
+	<p>Upon following the southern path immediately before the eye puzzle, with or without Susie and Ralsei, you enter a room containing several dust piles. Though most scatter without narration upon being interacted with, the bottom right one scatters to reveal a treasure chest, which can then itself be interacted with:</p>
+
+	<h3>First time</h3>
+	<p class="note">The chest opens with a thud.</p>
+	<d-box theme="dark">
+		<d-text asterisk>You opened the chest.</d-text>
+	</d-box>
+
+	<p class="note">A counter appears at the center of the screen, showing a score of "<span class="white">0 POINTs</span>".</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>Inside was 10 POINTs!</d-text>
+	</d-box>
+
+	<p class="note">The displayed score increases to "<span class="white">10 POINTs</span>".</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>10 POINTs was added to your SCORE.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(An empty treasure chest.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... It's pointless.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="eyepuzzle">
+	<h2>Eye puzzle</h2>
+	<p class="note">An eye puzzle similar to the ones before Castle Town is present along the path. Upon approaching it, Susie and Ralsei step forward to flip two out of the three switches, and can be spoken to before Kris completes the puzzle.</p>
+
+	<h3 id="eyepuzzle-susie">Talking to Susie</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Dude, Kris... if Ralsei hung out with us...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>He could do puzzles like this for us all the time.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Y'know. If we ever found one in the Light World.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Hey, does Ralsei even know math...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>... guess he could do our book reports...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="eyepuzzle-ralsei">Talking to Ralsei</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="5"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>... um, sorry, Kris! You don't need a hint, do you?</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>Kris, um... I think you just need to press that switch.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="susraltalk2">
+	<h2>Susie and Ralsei's conversation, continued</h2>
+	<p class="note">As before, Susie and Ralsei chat as the party progresses through the Dark World, pausing between exchanges.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>... and then, like...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>It doesn't have to just be movies, y'know?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>You could even... like, go to school with us.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Then we could get him to do our homework, right, Kris?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="I"></d-sprite>
+		<d-text asterisk>I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>I'd... love to do your homework, Susie...</d-text>
+	</d-box>
+
+	<hr>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>And then, like.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Best idea for last.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>So there's this... Festival in a few days, right?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>And, heh, maybe it's stupid, but...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="T"></d-sprite>
+		<d-text asterisk>Wouldn't it be kinda... fun? If we all went?</d-text>
+	</d-box>
+
+	<hr>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Um, by all, I mean Ralsei too, obviously?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Susie, I... Um, I'd...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>I'd like nothing more!</d-text>
+	</d-box>
+
+	<hr>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="5"></d-sprite>
+		<d-text asterisk>I'd like nothing more than to go, Susie...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+		<d-text asterisk>But... I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>But you... what?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="explanation">
+	<h2>Ralsei's explanation</h2>
+
+	<p class="note">As the party continues down the boardwalk, Kris and Susie slow to a halt as Ralsei walks past them.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="6"></d-sprite>
+		<d-text asterisk>I...</d-text>
+	</d-box>
+
+	<p class="note">He turns to the side, smile gone. A long pause. Then he turns to Susie and Kris, head bowed, as Susie's eyes widen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="8"></d-sprite>
+		<d-text asterisk>I... don't think I could.</d-text>
+	</d-box>
+
+	<p class="note">A long pause. Susie turns to the side facing away from the player, scratching her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>Heh, yeah, I mean, it was...</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to Ralsei and puts her hands behind her head casually, grinning.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="S"></d-sprite>
+		<d-text asterisk>The Festival's kinda stupid, y'know? I mean, Obviously.</d-text>
+	</d-box>
+
+	<p class="note">She takes a few steps forward…</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>Just... uh...</d-text>
+	</d-box>
+
+	<p class="note">…and then another few.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>I mean, we don't even have to play any games.</d-text>
+	</d-box>
+
+	<p class="note">Susie takes another step forward.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>We could... just make a mess. Cause some trouble.</d-text>
+	</d-box>
+
+	<p class="note">A long pause. She drops her arms and advances a step towards Ralsei.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>Just...</d-text>
+	</d-box>
+
+	<p class="note">Another step forward.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>I dunno, could be... fun if you...</d-text>
+	</d-box>
+
+	<p class="note">Susie's gaze drops.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="T"></d-sprite>
+		<d-text asterisk>... just went, you know?</d-text>
+	</d-box>
+
+	<p class="note">A pause. Ralsei turns away, head raised but still unsmiling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>No, Susie... I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="7"></d-sprite>
+		<d-text asterisk>I... want to, I just...</d-text>
+	</d-box>
+
+	<p class="note">He turns to the side facing the player and the howling of the wind fades to silence. As he bows his head, looking upset, Susie's smile disappears.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="8"></d-sprite>
+		<d-text asterisk>I can't go.</d-text>
+	</d-box>
+
+	<p class="note">A long pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="R"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="S"></d-sprite>
+		<d-text asterisk>... um, did I say something weird?</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns to Susie, tipping his head up and smiling at her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>No! No, not at all, Susie!</d-text>
+	</d-box>
+
+	<p class="note">He stops smiling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="e"></d-sprite>
+		<d-text asterisk>I'm happy to be invited by you, Susie, I am...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="b"></d-sprite>
+		<d-text asterisk>It's just...</d-text>
+	</d-box>
+
+	<p class="note">A pause. Ralsei's head dips, as Susie watches him unhappily.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="c"></d-sprite>
+		<d-text asterisk>I'm a Darkner.</d-text>
+	</d-box>
+
+	<p class="note">A pause. Ralsei briefly lifts his head, looking serious.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="b"></d-sprite>
+		<d-text asterisk>I can't go to the Light World.</d-text>
+	</d-box>
+
+	<p class="note">He bows his head again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="8"></d-sprite>
+		<d-text asterisk>Even if I... wanted to.</d-text>
+	</d-box>
+
+	<p class="note">When Susie speaks, Ralsei lifts his head to look at her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="R"></d-sprite>
+		<d-text asterisk>Uhh... why?</d-text>
+	</d-box>
+
+	<p class="note">Ralsei bows his head sadly again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="e"></d-sprite>
+		<d-text asterisk>Because I... Because we...</d-text>
+	</d-box>
+
+	<p class="note">A long pause. Ralsei turns to the side facing the player, looking unhappy.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="8"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">As Ralsei speaks, Susie's gaze drops.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="a"></d-sprite>
+		<d-text asterisk>Susie, it's... hard for me to explain this, but...</d-text>
+	</d-box>
+
+	<p class="note">The screen fades slowly to black, then fades back in on a nondescript room, sparsely furnished with only a bed and a chair, and a window on the wall bracketed by a poster on one side and a shelf on the other. <a href="{% include wikilink page='Flashback (Excerpt)' %}">Slow, haunting music</a> plays.</p>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>You see, Susie. You and Kris<span class="break"></span> live in the "Light World."</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>A place where everything is as you see.</d-text>
+	</d-box>
+
+	<p class="note">With the sound of distorted laughter, the light in the room fades.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>That is... as long as there's light.</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>You see, when it gets dark...</d-text>
+	</d-box>
+
+	<p class="note">The room grows darker still, and the poster and chair begin to distort, shapes seeming to bubble.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Things become more indistinct.</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>A chair can look like a monster.</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>A poster can look like it's moving.</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Your eyes can't see the truth anymore.</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>And when the light runs out...</d-text>
+	</d-box>
+
+	<p class="note">Distorted laughter is heard again, and the room fades to complete black.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>You see nothing.</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Of course, your mind can't make anything of nothing.</d-text>
+	</d-box>
+
+	<p class="note">A long pause.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>But what if?</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>What if it became even darker?</d-text>
+	</d-box>
+
+	<p class="note">A glowing Dark Fountain appears through the blackness, pulsing through various colors.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Darker than dark.</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>What if we could take away<span class="break"></span> the light that wasn't there</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Until we reached another side?</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>If that were to happen...</d-text>
+	</d-box>
+
+	<p class="note">The Fountain fades out of sight. Then the outline of a many-legged creature with pointed ears appears through the dark, where the chair in the room once was. As Ralsei speaks, accompanied by distorted laughter, the creature is joined by more visible things: the outline of the room behind itself; eyes with green sclera and black irises on the wall where the window was; an odd blinking slit where the shelf was; and a shifting amalgam of many hands where the poster was.</p>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>You could start to see things again.</d-text>
+	</d-box>
+
+	<p class="note">Below the blinking slit, where the bed formerly stood, an opening in the wall appears with a river flowing audibly through it.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>And hear them.</d-text>
+	</d-box>
+
+	<p class="note">A face appears on the many-legged creature, made up of yellow and pink eyes and an unnervingly wide grin.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>And feel them.</d-text>
+	</d-box>
+
+	<p class="note">The creature laughs and rapidly zooms towards the viewer, until the screen fades into the black of its body. Its laughter pitches lower and quieter, fading out. The screen then fades in on a section of the field in Card Kingdom, where two Rudinns are visible.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>That is the Dark World, Susie.</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>An alternate view of reality through the lens of shadow.</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>In other words...</d-text>
+	</d-box>
+
+	<p class="note">From the center of the screen, a column of light blooms outwards until the entire screen is white, the same visual effect as when the SOUL seals a Dark Fountain. And sure enough, the white light fades to reveal the unused classroom in Hometown's school, with all the Light World equivalents of the Card Kingdom Darkners still scattered about.</p>
+
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>... an illusion.</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>The Dark Fountains change everything into a fantasy.</d-text>
+	</d-box>
+
+	<p class="note">Briefly fading to white, the scene transitions to the upstairs hallway of the Dreemurr residence. Lancer, Queen, Rudinn, and Hathy stand in it.</p>
+
+	{% comment %} charline is changed from 33 to 26 for this; basewidth is about +4ch normally {% endcomment %}
+	<d-box theme="fade" style="--basewidth: 30ch;">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>In the Light World, in reality...</d-text>
+	</d-box>
+
+	<p class="note">Lancer spins, then turns into the Ace of Spades card; the card falls to the hallway carpet.</p>
+
+	<d-box theme="fade" style="--basewidth: 30ch;">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Lancer is just an average playing card.</d-text>
+	</d-box>
+
+	<p class="note">Queen laughs, unheard; she too transforms into an open laptop and falls to the ground.</p>
+
+	<d-box theme="fade" style="--basewidth: 30ch;">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Queen... is just a laptop.</d-text>
+	</d-box>
+
+	<p class="note">Rudinn and Hathy fade, leaving behind a diamonds and hearts card respectively.</p>
+
+	<d-box theme="fade" style="--basewidth: 30ch;">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>In other words... when the lights come back on...</d-text>
+	</d-box>
+	<d-box theme="fade" style="--basewidth: 30ch;">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>This world is no longer "real".</d-text>
+	</d-box>
+	<d-box theme="fade" style="--basewidth: 30ch;">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>The places you go, the people you meet... none of them are.</d-text>
+	</d-box>
+
+	<p class="note">The following line plays soundlessly.</p>
+
+	<d-box theme="fade" style="--basewidth: 30ch;">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Even I, the one telling you this... I too, am...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="argument">
+	<h2>Susie's disagreement</h2>
+
+	<p class="note">The scene abruptly cuts back to the party standing in the newest Dark World. Susie has grabbed Ralsei's shoulder and is looking at him with concern, while Ralsei is wide-eyed and startled.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="U"></d-sprite>
+		<d-text asterisk>But Ralsei, how can you say you're not real!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>I can see you... I can feel you... I can hear you...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="U"></d-sprite>
+		<d-text asterisk>"Normal objects" don't have... feelings and stuff!</d-text>
+	</d-box>
+
+	<p class="note">A long pause. Then Ralsei bows his head, wearing a sad smile.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="8"></d-sprite>
+		<d-text asterisk>That's right, Susie.</d-text>
+	</d-box>
+
+	<p class="note">Ralsei pulls Susie's hand off his shoulder, then takes several steps back. Susie's gaze turns away, though she's still facing Ralsei.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="a"></d-sprite>
+		<d-text asterisk>They... shouldn't.</d-text>
+	</d-box>
+
+	<p class="note">A pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="c"></d-sprite>
+		<d-text asterisk>That's why... I don't want you and Kris...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="e"></d-sprite>
+		<d-text asterisk>... to worry too much about us, OK?</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns away from the others.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="a"></d-sprite>
+		<d-text asterisk>It's funny, I was... overjoyed to make friends.</d-text>
+	</d-box>
+
+	<p class="note">He bows his head, looking downcast.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="e"></d-sprite>
+		<d-text asterisk>Then, selfishly, I... started feeling sad, too.</d-text>
+	</d-box>
+
+	<p class="note">A sad smile appears on his face. Susie looks at him again, eyes slightly wide.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="B"></d-sprite>
+		<d-text asterisk>Sad I couldn't be your friend in real life, Susie.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="B"></d-sprite>
+		<d-text asterisk>That I CAN'T do your homework. That I can't go with you.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="e"></d-sprite>
+		<d-text asterisk>That I... can't be there to help you when you really need me.</d-text>
+	</d-box>
+
+	<p class="note">Susie's gaze lowers, though she has a slight smile.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="R"></d-sprite>
+		<d-text asterisk>Ralsei...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="8"></d-sprite>
+		<d-text asterisk>I'm sorry. That's why I... If, you know, me, Lancer...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="c"></d-sprite>
+		<d-text asterisk>We can't do it all. So... if you ever feel like we're not enough...</d-text>
+	</d-box>
+
+	<p class="note">A pause. Susie looks up with wide eyes again, no longer smiling, when Ralsei turns slowly to face her, his head ducked and smile gone. Achingly slow, he lifts his head and puts on a smile.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="e"></d-sprite>
+		<d-text asterisk>Just forget about us and make some real friends, okay?</d-text>
+	</d-box>
+
+	<p class="note">Susie ducks her head, eyes cast in shadow. Her teeth are bared in a grimace and her hand, clenched in a fist at her side, trembles.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>... Ralsei... you...</d-text>
+	</d-box>
+
+	<p class="note">Susie charges forward and grabs Ralsei by the front of his scarf, hauling him up on his toes as she snarls in his face. Her hands are still shaking.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="J"></d-sprite>
+		<d-text asterisk>You idiot! How can you SAY that?!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="b"></d-sprite>
+		<d-text asterisk>You think I could just FORGET you!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="I"></d-sprite>
+		<d-text asterisk>Forget Lancer!? Forget everyone!?</d-text>
+	</d-box>
+
+	<p class="note">She gives Ralsei a shake.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="c"></d-sprite>
+		<d-text asterisk>I don't care what you say you are...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="d"></d-sprite>
+		<d-text asterisk>You're real to me, OK!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="b"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">Ralsei looks away unhappily, not meeting her eyes. Her snarl softens.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="8"></d-sprite>
+		<d-text asterisk>Susie, I...</d-text>
+	</d-box>
+
+	<p class="note">He smiles, faintly visible over his scarf. Susie also looks away, no longer snarling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="a"></d-sprite>
+		<d-text asterisk>I'm happy to hear that, but...</d-text>
+	</d-box>
+
+	<p class="note">Susie shakes Ralsei again, yelling in his face. Ralsei looks startled.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="b"></d-sprite>
+		<d-text asterisk>SHUT UP and listen to me!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei looks unhappy again, not meeting Susie's eyes as she bares her teeth.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="I"></d-sprite>
+		<d-text asterisk>No matter what you say...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="b"></d-sprite>
+		<d-text asterisk>No matter what you are...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="c"></d-sprite>
+		<d-text asterisk>Me... you... Kris... We're a TEAM, alright?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="d"></d-sprite>
+		<d-text asterisk>None of us are gonna forget each other!</d-text>
+	</d-box>
+
+	<p class="note">Susie's hand, still fisted in Ralsei's scarf, goes still.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="b"></d-sprite>
+		<d-text asterisk>So please...</d-text>
+	</d-box>
+
+	<p class="note">Her snarl fades into a serious expression.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="c"></d-sprite>
+		<d-text asterisk>Just...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="d"></d-sprite>
+		<d-text asterisk>... just...</d-text>
+	</d-box>
+
+	<p class="note">A long pause. Suddenly, a spotlight comes on focused on Susie and Ralsei, with the rest of the area cast into darkness. Susie and Ralsei are wide-eyed with surprise. Confetti blasts out from either side of the screen as a mechanical voice talks:</p>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Wow, what an <span class="break"></span><funny-text name="amazing_01"></funny-text><br class="hide"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;performance!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>The audience has been brought to <funny-text name="tears"></funny-text>, folks!</d-text>
+	</d-box>
+
+	<p class="note">A pause. Then Susie and Ralsei yell, looking furious.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-sprite speaker="Ralsei" emotion="W"></d-sprite>
+		<d-text asterisk>Who the HECK<span class="break"></span> are you!?</d-text>
+	</d-box>
+
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Haha, I was hoping you'd ask!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>MIKE, PLAY THE VHS!!!</d-text>
+	</d-box>
+
+	<p class="note">The camera pans up, past the source of the spotlight and into darkness.</p>
+
+	<hr class="hr2">
+
+	<h3>Standard</h3>
+	<p class="note"><a href="{{ '/story/chapter3/meetingtenna#vhs' | relative_url }}">The VHS plays.</a></p>
+
+	<hr class="hr3">
+
+	<h3>If the VHS has previously failed to play</h3>
+	<p>(The game would have crashed, and you would have to restart it.)</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>W-Wait! The VHS isn't working!</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Skip the#video"></d-option>
+		<d-option index="1" text="Try and#watch anyway"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The VHS is skipped and the scene proceeds directly to <a href="{{ '/story/chapter3/meetingtenna#tvtime' | relative_url }}">Tenna's introduction</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note"><a href="{{ '/story/chapter3/meetingtenna#vhs' | relative_url }}">The VHS plays.</a></p>
+	</d-option-panel>
+</section>

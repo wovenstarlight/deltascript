@@ -1,0 +1,810 @@
+---
+title: Kris and Noelle's conversation
+
+description: >
+  <p>The Weird Route cutscene where Kris and Noelle talk in her room.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_ch4_PDC14A_noelle_Step_0
+    chapters: [4]
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [4]
+    note: choices
+
+toc:
+  -
+    id: mainscene
+    name: Main cutscene
+  -
+    name: Aborting the Weird Route
+    subheadings:
+      -
+        id: abort1
+        name: Letting Kris escape with Noelle
+      -
+        id: abort2
+        name: Backing down after revealing your presence
+---
+{% capture abort_scene -%}
+<p class="note">The screen fades back in as Kris hurries into the closet with the SOUL in hand, puts the hanging vent cover back over the vent, and hurls the SOUL into its box. They stop in the doorway and turn to stare at the SOUL for a moment, then finally leave.</p>
+<p class="note">At this point, the Weird Route is aborted. Normal route interactions are restored.</p>
+{%- endcapture -%}
+
+
+
+<section class="d-section" id="mainscene">
+	<h2>Main cutscene</h2>
+
+	<p class="note">Noelle sits on the right side of the sofa, while Kris sits on the left. The SOUL watches through the vent.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="c"></d-sprite>
+		<d-text asterisk>To be honest, I've kind of been waiting for...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="b"></d-sprite>
+		<d-text asterisk>A chance for us to be alone all day.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="c"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="e"></d-sprite>
+		<d-text asterisk>There's... something I want to talk to you about, Kris.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="e"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="e"></d-sprite>
+		<d-text asterisk>I want to talk to you about...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="W"></d-sprite>
+		<d-text asterisk>... last night.</d-text>
+	</d-box>
+
+	<p class="note">The screen fades to black. Noelle continues speaking.</p>
+
+	<d-box theme="light">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>Last night, I... I couldn't sleep.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>Every time I closed my eyes...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>All I could see<span class="break"></span> was snow.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>I was terrified, Kris.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>Terrified it was all real.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>I went out on the porch to breathe, and...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>If Noelle didn't have the <a href="{{ '/misc/armor#silverwatch' | relative_url }}">Silver Watch</a> equipped when she left your party in Chapter 2</h3>
+	<p>As in, you unequipped the Silver Watch and didn't equip it to her again before the Berdly fight.</p>
+
+	<d-box theme="light">
+		<!-- intended sprite: a -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>That's when I felt it.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: c -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>A hand on my wrist.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: Z -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>I froze.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: Z -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>And then I heard your voice.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: Z -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>Kris's voice.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: c -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>You said, sorry for taking your watch, Noelle.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: a -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>You said, it was all a stupid prank.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: b -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>You said, Berdly is going to get better.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: Z -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>And you put the watch back on my wrist.</d-text>
+	</d-box>
+
+	<h3>If Noelle left with the Silver Watch equipped</h3>
+	<d-box theme="light">
+		<!-- intended sprite: a -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>That's when I felt it.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: Z -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>A hand on my shoulder.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: Z -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>I froze.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: a -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>And then I heard your voice.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: c -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>Kris's voice.</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<h4>If you scared Noelle at the hospital in Chapter 2</h4>
+	<p>By stepping towards her (moving right) thrice while she's lost in thought outside Rudy's room.</p>
+
+	<d-box theme="light">
+		<!-- intended sprite: c -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>You said, sorry for being weird at the hospital, Noelle.</d-text>
+	</d-box>
+
+	<hr class="hr3">
+
+	<h4>If you didn't scare Noelle</h4>
+
+	<d-box theme="light">
+		<!-- intended sprite: c -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>You said, sorry for being weird yesterday, Noelle.</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<d-box theme="light">
+		<!-- intended sprite: b -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>You said, it was all a stupid prank.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: c -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>You said, Berdly was going to get better.</d-text>
+	</d-box>
+
+	<hr>
+
+	<d-box theme="light">
+		<!-- intended sprite: b -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>... Kris, your voice, your deadpan, mumbly voice...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: c -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>Even if you sounded kind of weak and shaky...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: a -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>I don't know why, but it felt so long since I heard it.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: 4 -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>I even started sniffling! Haha!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<!-- intended sprite: 8 -->
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>Kris, Kris, you're back...!</d-text>
+	</d-box>
+
+	<p class="note">The screen fades in again, showing Noelle's room as before.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Kris, thank you... well, NO thanks for pranking me, but...</d-text>
+	</d-box>
+
+	<p class="note">A pause.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>... Kris, can I... say something else?</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="Proceed"></d-option>
+		<d-option index="1" text="Please don't"></d-option>
+	</d-choices>
+
+	<d-option-panel index="0" theme="light">
+		<p class="note">The placement of the SOUL when selecting this option leaves it inside Noelle's room after you press [CONFIRM].</p>
+
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">The placement of the SOUL when selecting this option leaves it in the vent to the right side of the room after you press [CONFIRM].</p>
+
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="e"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="c"></d-sprite>
+			<d-text asterisk>(... I guess... I guess I shouldn't.)</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="W"></d-sprite>
+			<d-text asterisk>(I mean, I know you didn't say anything, but...)</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="e"></d-sprite>
+			<d-text asterisk>(I guess let's just leave it at...)</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="a"></d-sprite>
+			<d-text asterisk>(I'm glad you're back.)</d-text>
+		</d-box>
+
+		<p class="note">The screen fades to black. The Weird Route abort SFX plays. The screen fades back in to show Noelle's room empty. Dialogue ends here, and the Weird Route is aborted.</p>
+	</d-option-panel>
+
+	<p class="note">With the SOUL free to move, it can approach Kris. Getting close enough causes the SOUL to reenter Kris's body.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="e"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<p class="note">Noelle begins shifting towards Kris, moving closer with every line spoken.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Kris...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Kris, there... there was something else you did.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+		<d-text asterisk>Something else... I have to ask you about.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="1"></d-sprite>
+		<d-text asterisk>After you said all of that... you...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Took my hand... and...</d-text>
+	</d-box>
+
+	<p class="note">Noelle starts getting close enough that Kris shifts back a little.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Pulled... a thorn out of my finger.</d-text>
+	</d-box>
+
+	<p class="note">Kris's arm begins shaking.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Then you said...</d-text>
+	</d-box>
+
+	<p class="note">Noelle shifts closer and Kris shifts back.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>You said... you said that when I saw you again...</d-text>
+	</d-box>
+
+	<p class="note">If, by this point, the SOUL has not reentered Kris's body, <a href="#abort1">Kris cuts off Noelle and escapes</a>. Otherwise, dialogue continues.</p>
+	
+	<p class="note">Noelle shifts closer still and Kris shifts away. They lift their shaking arm slightly.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>You said... not to mention you did any of this... or...</d-text>
+	</d-box>
+
+	<p class="note">Kris shoves their hand over Noelle's mouth, startling her. The music cuts off.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="G"></d-sprite>
+		<d-text asterisk>?</d-text>
+	</d-box>
+
+	<p class="note">After a pause, Noelle takes Kris by the wrist and pulls their hand off her mouth.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Kris, it's okay! It's just us!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>You just said not to mention any of that...</d-text>
+	</d-box>
+
+	<p class="note">Kris's hand starts to shake again.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Because it'd get... heard.</d-text>
+	</d-box>
+
+	<p class="note">Kris covers Noelle's mouth again, and again she pushes their hand down, faster this time.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>... Kris... Kris, it's okay, it's just us.</d-text>
+	</d-box>
+
+	<p class="note">A pause.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+		<d-text asterisk>Who...? Who's going to hear?</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="..."></d-option>
+		<d-option index="1" text="Me"></d-option>
+	</d-choices>
+
+	<d-option-panel index="0" theme="light">
+		<p class="note">Kris lowers their hand.</p>
+
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="G"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+
+		<p class="note">Noelle starts laughing.</p>
+
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+			<d-text asterisk>Fahaha!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text asterisk>Kris, you can't fool me!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+			<d-text asterisk>Ugh, this had to be your worst prank ever!</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>Never do something like that again, okay?</d-text>
+		</d-box>
+
+		<p class="note">The screen fades to black. The Weird Route abort SFX plays.</p>
+
+		{{ abort_scene }}
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">The room is tinted an unnatural blue-green. A brief, powerful gust of wind sends Kris's hair flying as Noelle's expression turned horrified. Darkness starts to close in on the edges of the screen, obscuring part of the room.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="k"></d-sprite>
+		<d-text asterisk effect="shake">Kris...?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="k"></d-sprite>
+		<d-text asterisk effect="shake">K... Kris, your voice... it...</d-text>
+	</d-box>
+
+	<p class="note">A pause.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="j"></d-sprite>
+		<d-text asterisk effect="shake">Ha... ha... Kris, that's... another joke, right...?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="k"></d-sprite>
+		<d-text asterisk effect="shake">(That voice... how... the voice from my dream...)</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="It was\sa joke"></d-option>
+		<d-option index="1" text="Because it\swasn't\sa dream"></d-option>
+	</d-choices>
+
+	<d-option-panel index="0" theme="light">
+		<p class="note">Dialogue skips to <a href="#abort2">the second abort scene</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">Noelle pulls back, arm up over her mouth. After a moment, she lowers her arm slightly, gaze falling.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="l"></d-sprite>
+		<d-text asterisk>S... Sorry, Kris... What did you say? I must have misheard you.</d-text>
+	</d-box>
+
+	<p class="note">Noelle twitches slightly.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="k"></d-sprite>
+		<d-text asterisk effect="shake">(No... there's no way they... they heard...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="k"></d-sprite>
+		<d-text asterisk effect="shake">(There's no way they heard... my thoughts.)</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="Sorry,\sjust a prank"></d-option>
+		<d-option index="1" text="I heard"></d-option>
+	</d-choices>
+
+	<d-option-panel index="0" theme="light">
+		<p class="note">Dialogue skips to <a href="#abort2">the second abort scene</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">Noelle jolts and shifts further back on the sofa, eyes on Kris, arm jerking up over her mouth again.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="h"></d-sprite>
+		<d-text asterisk>W... What are you talking about, Kris?</d-text>
+	</d-box>
+
+	<p class="note">She draws back a little further.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="i"></d-sprite>
+		<d-text asterisk>I... I didn't say anything!</d-text>
+	</d-box>
+
+	<p class="note">Noelle starts trembling.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="k"></d-sprite>
+		<d-text asterisk effect="shake">(It's impossible. That's impossible.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="k"></d-sprite>
+		<d-text asterisk effect="shake">(It's just a coincidence.)</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="Sorry,\sjust a prank"></d-option>
+		<d-option index="1" text="It's not a\scoincidence"></d-option>
+	</d-choices>
+
+	<d-option-panel index="0" theme="light">
+		<p class="note">Dialogue skips to <a href="#abort2">the second abort scene</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Dialogue continues. From here on, the Chapter 4 Weird Route can no longer be aborted.</p>
+	</d-option-panel>
+
+	<p class="note">After a moment, Noelle stops shaking. She lowers her arm, gaze dropping, then lifting to Kris again.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="Z"></d-sprite>
+		<d-text asterisk>(If you can...  hear me...)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="Z"></d-sprite>
+		<d-text asterisk>(Say "red" or "blue".)</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="Red"></d-option>
+		<d-option index="1" text="Blue"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="Z"></d-sprite>
+		<d-text asterisk>(Say... "green" or "black".)</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="Green"></d-option>
+		<d-option index="1" text="Black"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">Noelle closes her eyes, arm lifting over her mouth, and starts trembling.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="e"></d-sprite>
+		<d-text asterisk>(Say... say... "it didn't happen." Say "it didn't snow.")</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="It\ssnowed"></d-option>
+		<d-option index="1" text="It\shappened"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="W"></d-sprite>
+		<d-text asterisk>(You're... lying. You're lying.)</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="Noelle\swill get\sstronger"></d-option>
+		<d-option index="1" text="Noelle\sbecomes\sstronger"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">Noelle goes still. The Weird Route SFX plays. She opens her frightened eyes, arm lowering slightly.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="k"></d-sprite>
+		<d-text asterisk>K... Kris? Kris, what did you say?</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="Equip"></d-option>
+		<d-option index="1" text="Equip"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">The Weird Route SFX plays. Kris lifts their left hand, previously hidden behind them; they are holding something small and dark. Noelle looks down at said hand.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="k"></d-sprite>
+		<d-text asterisk>K... Kris? Kris, what is that?</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="Proceed"></d-option>
+		<d-option index="1" text="Proceed"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">Kris shifts closer to Noelle, who shifts back, looking at them and smiling nervously.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="j"></d-sprite>
+		<d-text asterisk>Kris... that's... not the thorn, is it?</d-text>
+	</d-box>
+
+	<p class="note">Noelle shifts further back, trembling.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="i"></d-sprite>
+		<d-text asterisk effect="shake">That's not... the... ThornRing, is it...?</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="Proceed"></d-option>
+		<d-option index="1" text="Proceed"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">Kris shifts forward. Noelle shifts back, and then again with every line spoken until she's backed up against the armrest.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="l"></d-sprite>
+		<d-text asterisk effect="shake-veryslight">K... Kris... c'mon... you... you still...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="D"></d-sprite>
+		<d-text asterisk effect="shake-slight">What about... what about last night? What about...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="D"></d-sprite>
+		<d-text asterisk effect="shake">Didn't you... want to... protect me...?</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="Proceed"></d-option>
+		<d-option index="1" text="Proceed"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">Kris shifts further forward towards Noelle with every line spoken. At the same time, the darkness bordering the scene closes in further.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="k"></d-sprite>
+		<d-text asterisk effect="shake-veryslight">(Why... can't... I... move?)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="k"></d-sprite>
+		<d-text asterisk effect="shake-slight">(Why... can't I... look... away?)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="k"></d-sprite>
+		<d-text asterisk effect="shake">(NOELLE, DO SOMETHING!!!)</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="Equip"></d-option>
+		<d-option index="1" text="Equip"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">Noelle holds out her flat hand to Kris as if to stop them and speaks frantically, eyes darting between Kris and what they're holding.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="i"></d-sprite>
+		<d-text asterisk effect="shake">Kris, I really think I</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="l"></d-sprite>
+		<d-text asterisk effect="shake">I mean I just</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="j"></d-sprite>
+		<d-text asterisk effect="shake">I think I need to</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="i"></d-sprite>
+		<d-text asterisk effect="shake">G-gosh, I think I have to</d-text>
+	</d-box>
+
+	<p class="note">Kris closes the distance and seizes Noelle's outstretched arm by the wrist, holding her hand in front of themself.</p>
+
+	<d-choices theme="light">
+		<d-option index="0" text="Equip"></d-option>
+		<d-option index="1" text="Equip"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">Kris brings what they're holding to Noelle's hand.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="h"></d-sprite>
+		<d-text asterisk>... K... Kris?</d-text>
+	</d-box>
+
+	<p class="note">The screen cuts to black. A visual effect plays out, centered over the spot where Noelle's hand was:</p>
+	<ul class="note">
+		<li><span class="white">Prior to v1.01A:</span> A red rose blooms; its petals then wilt, falling away.</li>
+		<li><span class="white">v1.01A onwards:</span> A single red pixel appears.</li>
+		<li><span class="white">v1.01C onwards:</span> Jagged red cracks splinter outwards.</li>
+	</ul>
+
+	<p class="note">An extended version of the Weird Route SFX plays. After a long moment of silence, the screen fades back in to show <a href="{{ '/story/chapter4/bathroomweird' | relative_url }}">Kris in the Holiday residence's 2F bathroom</a>.</p>
+</section>
+
+<section class="d-section" id="abort1">
+	<h2>Letting Kris escape with Noelle</h2>
+	<p>Achieved by not having the SOUL enter Kris's body after selecting "Proceed", and before Noelle brings up how Kris swore her to silence.</p>
+
+	<p></p>
+
+	<p class="note">Kris grabs Noelle's arm.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+		<d-text asterisk>K... Kris!? Kris, what are you...</d-text>
+	</d-box>
+
+	<p class="note">Kris runs out of the room, pulling Noelle along and slamming the door behind themself. If the SOUL is in their way as they leave, they knock it aside, leaving it lying on the floor. After a moment, Kris reenters the room. The screen cuts to black as the snatching SFX plays, followed by the Weird Route abort SFX.</p>
+
+	{{ abort_scene }}
+</section>
+
+<section class="d-section" id="abort2">
+	<h2>Backing down after revealing your presence</h2>
+
+	<p class="note">The screen cuts to black. The cracking sound of a slap.</p>
+
+	<d-box theme="light">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk effect="shake-hard">THEN DON'T SCARE ME LIKE THAT ANYMORE!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk effect="shake-hard">...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>S-sorry, Kris...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>Let's... let's get back to doing our projects, okay?</d-text>
+	</d-box>
+
+	<p class="note">The Weird Route abort SFX plays.</p>
+
+	{{ abort_scene }}
+</section>

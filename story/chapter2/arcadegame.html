@@ -1,0 +1,701 @@
+---
+title: Playing arcade games with Queen
+
+description: >
+  <p>Queen tries to convince the Lightners to become her peons.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_ch2_scene10_Step_0
+    chapters: [2]
+    note: meeting Noelle/Queen
+  -
+    name: gml_Object_obj_npc_facing_Other_10
+    chapters: [2]
+    note: preparation dialogue
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [2]
+    note: arcade machine flavor text
+  -
+    name: gml_Object_obj_forcefield_Other_10
+    chapters: [2]
+    note: forcefield flavor text
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: choices
+  -
+    name: gml_Object_o_boxing_wireframe_Draw_0
+    chapters: [2]
+    note: attack hint and Susie's RETIRE response
+  -
+    name: gml_Object_o_boxingqueen_Step_0
+    chapters: [2]
+    note: dodge and duck hints
+  -
+    name: gml_Object_o_boxing_wireframe_Step_0
+    chapters: [2]
+    note: Susie's responses to Queen
+
+toc:
+  -
+    id: meeting
+    name: Meeting Noelle and Queen again
+  -
+    id: pregame
+    name: Before the game
+    subheadings:
+      -
+        id: ralsei
+        name: Talking to Ralsei
+      -
+        id: susie
+        name: Talking to Susie
+      -
+        id: queen
+        name: Talking to Queen
+      -
+        id: forcefields
+        name: Interacting with the forcefields
+      -
+        id: machine
+        name: Interacting with the machine from the wrong direction
+  -
+    id: preparing
+    name: Preparing to play
+  -
+    id: gameplay
+    name: Playing the game
+    subheadings:
+      -
+        id: instructions
+        name: Instructions
+      -
+        id: losing
+        name: Losing the game
+      -
+        id: draw
+        name: Reaching a draw
+      -
+        id: winning
+        name: Winning the game
+---
+<section class="d-section" id="meeting">
+	<h2>Meeting Noelle and Queen again</h2>
+
+	<p class="note">Queen's <a href="{% include wikilink page='Queen (Soundtrack)' %}">theme</a> plays as she stands on a platform next to a caged and frightened Noelle.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>Noelle Honey Become My Willing Peon And I Will Free You</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>All You Have To Do Is Hit Yes On The Peon Release Form</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="C"></d-sprite>
+		<d-text asterisk>I... I'm scared...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Oh Have You Never Signed A Form Before</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>No!! It's everything else that's scary!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Please Abort Your Sadness Protocol</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>I Told You Being A Peon Will Be Cool</d-text>
+	</d-box>
+
+	<p class="note">Kris, Susie, and Ralsei rush in from the left.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="J"></d-sprite>
+		<d-text asterisk>Noelle!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+		<d-text asterisk>S... Susie!? Kris...!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Don't worry, we won't let your face get roboticized!</d-text>
+	</d-box>
+
+	<p class="note">Noelle shudders.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>THAT'S... SOMETHING THEY'RE GOING TO DO!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="P"></d-sprite>
+		<d-text asterisk>Whoops, thought, uh, you knew that.</d-text>
+	</d-box>
+
+	<p class="note">Queen turns aside.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="F"></d-sprite>
+		<d-text asterisk>Oh Dear That Was Supposed To Be A Surprise</d-text>
+	</d-box>
+
+	<p class="note">She turns back to the others.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>Oh Well</d-text>
+	</d-box>
+
+	<p class="note">With a wide sweep of her arm and a frightened shriek from Noelle, Noelle's cage flies out of sight. The party all turns to look as it goes, with Susie rushing to the edge of the platform after it.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="g"></d-sprite> <!-- updated index, originally R -->
+		<d-text asterisk>W-wait--!!</d-text>
+	</d-box>
+
+	<p class="note">Queen turns away from the party, who all turn to face her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="3"></d-sprite>
+		<d-text asterisk>It Is Quite Troubling</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="F"></d-sprite>
+		<d-text asterisk>A Peon Must Be "Willing" To Assist Me In World Domination</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="5"></d-sprite>
+		<d-text asterisk>If Only She Had Fellow Peons To Encourage Her</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>... So?</d-text>
+	</d-box>
+
+	<p class="note">Queen turns to the party and comes a few quick steps closer.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>So Like</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="9"></d-sprite>
+		<d-text asterisk>You "Guys"</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Hey</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Are You Like</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Doing Anything Right Now</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="W"></d-sprite>
+		<d-text asterisk>We aren't going to help you!!</d-text>
+	</d-box>
+
+	<p class="note">Queen takes a few steps back.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="6"></d-sprite>
+		<d-text asterisk>Understood. Mind-Changing Protocol Necessitated</d-text>
+	</d-box>
+
+	<p class="note">A red <a href="{{ '/encounters/swatchling' | relative_url }}">Swatchling</a> jumps down from somewhere above, startling Susie and Ralsei and making all the party members back up. It lifts its arms and a covered silver dish falls into its hands, startling the party into backing up further. Taking a step forward (in response to which Kris backs away to give it space), the Swatchling drops the dish onto the ground and throws off the cover to reveal an arcade machine. With a bow, the Swatchling jumps away.</p>
+
+	<p class="note">The arcade machine turns on, displaying Queen's face. The party approaches to get a better look, then turns to Queen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>A giant arcade game!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>I Shall Humiliate You At: A Simple Children's Diversion</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="C"></d-sprite>
+		<d-text asterisk>With Your Self-Esteem Eradicated</d-text>
+	</d-box>
+
+	<p class="note">Queen laughs, and her face on the arcade machine follows suit.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="7"></d-sprite>
+		<d-text asterisk>There Will Be No Choice But To Serve Me</d-text>
+	</d-box>
+
+	<p class="note">Susie looks at the machine.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>The hell!? I've never played this one before...!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>But Kris is quite good at games, aren't they?</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to Ralsei and Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Oh yeah. Kris, forgot you were a nerd. Show her!!</d-text>
+	</d-box>
+
+	<p class="note">Susie and Ralsei back away, giving Kris some space.</p>
+</section>
+
+<section class="d-section" id="pregame">
+	<h2>Before the game</h2>
+
+	<h3 id="ralsei">Talking to Ralsei</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Kris, I bet you're very good at games, aren't you?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Gaming is#my life"></d-option>
+		<d-option index="1" text="Gaming is#not my life"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+			<d-text asterisk>W-wow, Kris! Your passion is amazing!!</d-text>
+			<d-box>
+				<d-sprite speaker="Susie" emotion="0"></d-sprite>
+				<d-text>(... That was the most monotone<span class="break"></span> response I've heard in my life?)</d-text>
+			</d-box>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Queen" emotion="0"></d-sprite>
+			<d-text asterisk>If You Aren't Enthusiastic I Won't Want To Enslave You</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="X"></d-sprite>
+			<d-text asterisk>We don't want that...</d-text>
+			<d-box>
+				<d-sprite speaker="Queen" emotion="1"></d-sprite>
+				<d-text>Think Ahead You Will After I Enslave You</d-text>
+			</d-box>
+		</d-box>
+	</d-option-panel>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+		<d-text asterisk>Do your best, Kris! I'll be cheering you with magic pom-poms!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="susie">Talking to Susie</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>We got this, Kris. We're the good guys, right?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>All we have to do is figure out some way to cheat...</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>... Got it! While she's distracted,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>I'll reach in the bottom and try to steal a free cola!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Cola Machine Not Equals Arcade Game</d-text>
+		<d-box>
+			<d-sprite speaker="Susie" emotion="H"></d-sprite>
+			<d-text>THEN WHY DOES IT TAKE QUARTERS!?</d-text>
+		</d-box>
+	</d-box>
+
+	<hr>
+
+	<h3 id="queen">Talking to Queen</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Oh Kris Congratulations On: Losing Horribly</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>I Advanced My Internal Clock To When I've Already Won</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-box place="top left">
+			<d-sprite speaker="Queen" emotion="C"></d-sprite>
+			<d-text>Also, Happy Birthday Susie</d-text>
+		</d-box>
+		<d-box place="center">
+			<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+			<d-text>Happy Birthday!</d-text>
+		</d-box>
+		<d-box>
+			<d-sprite speaker="Susie" emotion="H"></d-sprite>
+			<d-text>IT'S NOT MY BIRTHDAY!!!</d-text>
+		</d-box>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Did You Notice You Have Been Served</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Your Giant Arcade Machine Is Going To Get Cold</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="forcefields">Interacting with the forcefields</h3>
+	<p>Two forcefields block the paths leading out of the area.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It appears to be some kind of forcefield.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="machine">Interacting with the machine from the wrong direction</h3>
+	<p class="note">If you try to interact with the left, back, or right sides of the arcade machine.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(You can't pro game while facing this direction.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="preparing">
+	<h2>Preparing to play</h2>
+
+	<p class="note">Kris approaches the controls on the left side of the machine.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>You tried to use the arcade machine.</d-text>
+	</d-box>
+
+	<p class="note">Kris falls to the ground, defeated.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(You weren't tall or strong enough to use the controls...)</d-text>
+	</d-box>
+
+	<p class="note">A pause. Queen speaks, drawing Susie and Ralsei's attention.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="C"></d-sprite>
+		<d-text asterisk>Self-Esteem Eradication Complete</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="C"></d-sprite>
+		<d-text asterisk>Running Laughing Protocol</d-text>
+	</d-box>
+	<p class="note">Queen laughs.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="P"></d-sprite>
+		<d-text asterisk>Ha Ha Ha Ha Ha Ha Ha Ha Ha Ha</d-text>
+	</d-box>
+
+	<p class="note">Susie and Ralsei turn back to Kris while Queen keeps laughing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Uh... ummm... it's ok, Kris... err... I'm short, too...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>K... Kris...!! Wait, I have an idea!!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei approaches Kris, who stands and backs out of the way so he can get in front of the controls.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Kris, if we can combine our powers, then...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+		<d-text asterisk>Look!! I'll show you what I've been practicing!!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei glows white, and the screen also slowly flashes white. When the light fades, Ralsei is kneeling on his hands and knees in front of the machine.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+		<d-text asterisk><span class="yellow">Magical Stool Forme R</span>!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Now we're talking!! Arright Kris, leave it to me!!</d-text>
+	</d-box>
+
+	<p class="note">Susie approaches Kris, and they look at her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Put your arms out!!</d-text>
+	</d-box>
+
+	<p class="note">Kris puts their arms out, T-posing at the center of a dynamic background. Susie comes up behind them, trailing afterimages of herself and with her arms similarly outstretched. She grabs their hands and they pose, one hand up and the other down.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk><span class="yellow">Power Beast Forme S</span>!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Move your arms and I'll move 'em with ya!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Let's go!!</d-text>
+	</d-box>
+
+	<p class="note">The dynamic background fades out to reveal the arcade machine, with Queen now standing in front of the rightmost controls. Susie and Kris jump onto the still-kneeling Ralsei's back, squishing him flat so he's sprawled facedown on the ground. But they can now reach the controls!</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>Incredible</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Your Transformation Is Combining All Your Weak Points</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Self-Esteem Crushing Efficiency 300% And Rising</d-text>
+	</d-box>
+
+	<p class="note">Queen turns to the arcade machine.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="7"></d-sprite>
+		<d-text asterisk>Commence Virtual Combat</d-text>
+	</d-box>
+
+	<p class="note">As commanded, the game begins.</p>
+</section>
+
+<section class="d-section" id="gameplay">
+	<h2>Playing the game</h2>
+
+	<p class="note">The screen of the arcade machine expands to fill the player's screen, with the party and Queen still visible at the bottom, and the low-poly game begins, with a voiceover accompanying the text "ROUND 1" followed by "BEGIN". The fight UI appears, with a countdown at the center labelled "TIMER". Blue and green bars on the left and right are labelled "HERO HP" and "QUEEN HP" respectively.</p>
+
+	<h3 id="instructions">Instructions</h3>
+
+	<p class="note">As soon as the fight UI appears, Queen gives attacking instructions:</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Press [CONFIRM]<span class="break"></span> Or [CANCEL] If<span class="break"></span> You Dare</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Shut up!!</d-text>
+	</d-box>
+
+	<p class="note">Once Queen starts kicking, she gives dodging instructions:</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>DODGE with [Left]<span class="break"></span> or [Right]!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I said shut up!!</d-text>
+	</d-box>
+
+	<p class="note">Once the wheel attacks begin, she gives ducking instructions:</p>
+
+	<d-box theme="battletalk">
+		<d-speaker>Queen</d-speaker>
+		<d-text>Press [Down]<span class="break"></span> to Duck!</d-text>
+	</d-box>
+
+	<p class="note">Finally, a wheel falls from the sky, with an arrow indicating to "HIT IT". No subsequent instructions are given until the game ends.</p>
+
+	<hr>
+
+	<h3 id="losing">Losing the game</h3>
+	<p class="note">If HERO HP depletes to 0, the party's avatar disappears in an explosion as the fight UI disappears. Queen's avatar's appears and grows to a large size, laughing and jittering, after which the text "YOU LOSE!" appears. Then a menu appears reading "GIVE UP?" with the options "FIGHT AGAIN" and "RETIRE" underneath, an arrow indicating the currently-selected option.</p>
+
+	<p class="note">Choosing "FIGHT AGAIN" instantly restarts the game. Choosing "RETIRE" causes Susie to force the selection cursor over to "FIGHT AGAIN", with the following dialogue:</p>
+	<hr class="hr2">
+	<h4>First loss</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Shut up! That was<span class="break"></span> just practice!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent losses</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Shut up, that was<span class="break"></span> just a warm up!</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="draw">Reaching a draw</h3>
+	<p class="note">If the timer runs out, the text "DRAW" blinks on the screen, and Queen's avatar no longer attacks. Attacking with [CONFIRM] or [CANCEL] causes the game to restart.</p>
+
+	<hr>
+
+	<h3 id="winning">Winning the game</h3>
+
+	<p class="note">With the last hit from the party's avatar, the fight UI disappears and the avatars are frozen for a moment. The music cuts out as Queen's avatar's head explodes. The explosion then overtakes the whole screen, which fades back to the Cyber Field platform. The party and Queen hurriedly back away as the entire arcade machine explodes to pieces with the same low-resoluton VFX.</p>
+
+	<p class="note">The party turns to Queen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>Heh, thought you could beat US!?</d-text>
+	</d-box>
+
+	<p class="note">Queen begins laughing as her theme resumes.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="C"></d-sprite>
+		<d-text asterisk>[Regal Laughter]</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="P"></d-sprite>
+		<d-text asterisk>Oh My That Was Actually Quite... Amusing</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="Q"></d-sprite>
+		<d-text asterisk>You Lifeform(s) Have Exceeded My Expectations</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>I Will Offer You A New, Exceedingly Benevolent Compromise</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="6"></d-sprite>
+		<d-text asterisk>Assimilate Into My Cyber-Army</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="7"></d-sprite>
+		<d-text asterisk>And There Is Only A Fifty Percent Chance I Will Reprogram Your Face</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Please Select Your Choice</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="7"></d-sprite>
+		<d-text asterisk>Perish In The Chill Of Absolute Destruction</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Or</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="C"></d-sprite>
+		<d-text asterisk>Flourish Under The Warm Bosom Of My Hellish Reign</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Bosom"></d-option>
+		<d-option index="1" text="Perish"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="D"></d-sprite>
+			<d-text asterisk>B... Bosom...?</d-text>
+		</d-box>
+		<p class="note">Queen stops laughing and turns to face Ralsei.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Queen" emotion="1"></d-sprite>
+			<d-text asterisk>It Means Tity</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="H"></d-sprite>
+			<d-text asterisk>WE KNOW WHAT IT MEANS!!!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="5"></d-sprite>
+			<d-text asterisk>We aren't helping you!!!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Queen" emotion="C"></d-sprite>
+			<d-text asterisk>Understood, Preference Settings Set To Perish</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="H"></d-sprite>
+			<d-text asterisk>(... the hell did you say that so enthusiastically!?)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>Err, Queen... aren't there any other options?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Queen" emotion="9"></d-sprite>
+			<d-text asterisk>Yes... You Can Also: Mega-Perish</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="4"></d-sprite>
+			<d-text asterisk>Yeah, uh, no. Perishing... bites.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Queen" emotion="Q"></d-sprite>
+			<d-text asterisk>You Could Say It: Mega-Bytes</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="H"></d-sprite>
+			<d-text asterisk>Would you get out of here already!?!?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Queen" emotion="C"></d-sprite>
+			<d-text asterisk>Understood. Preference Settings Set To "Perish"</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<p class="note">Queen leaves, her theme fading along with her presence.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>C'mon, let's go after her!</d-text>
+	</d-box>
+
+	<p class="note">Control is returned to the player. <a href="{% include wikilink page='A CYBER\'S WORLD?' %}">Cyber Field's theme</a> resumes as a <a href="{{ '/misc/savepoints#arcademachine' | relative_url }}">SAVE point</a> appears to the right of the wrecked machine.</p>
+
+	<p class="note">Interacting with the wrecked machine itself gives the following:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Looks like this Gamer's Paradise has become a Gamer's Hell.)</d-text>
+	</d-box>
+
+	<p class="note">The party is free to continue on through Cyber Field, where they eventually have to solve <a href="{{ '/story/chapter2/agree2all' | relative_url }}">a spelling puzzle</a> to continue.</p>
+</section>

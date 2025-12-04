@@ -109,8 +109,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* ~~`/greenroom`~~ DONE
 		* `/darksanctuary` - Chapter 4 dark worlds. I think for this one we can include all three sanctuaries' subpages
 		* Ach how do we even subdivide these pages
-* Chapters `/chapters`
-	* Ok for this one there's enough Stuff that i'm just listing like. Pages that have been linked to from elsewhere. So you can update the URLs as/when necessary. Pages not mentioned here, just create as you like and make sure you add them to the [index](../chapters/index.html). If you're not sure whether a page already exists, search for one of its dialogue lines and see if any pages come up
+* Story events `/story`
+	* Ok for this one there's enough Stuff that i'm just listing like. Pages that have been linked to from elsewhere. So you can update the URLs as/when necessary. Pages not mentioned here, just create as you like and make sure you add them to the [index](../story/index.html). If you're not sure whether a page already exists, search for one of its dialogue lines and see if any pages come up
 	* `/chapter1`
 		* Vessel creation up to all Castle Town scenes DONE
 		* `/field` (placeholder URL, update when created) - Field scenes… Ok IDK how to do this part honestly
@@ -175,8 +175,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* `/chapter5`
 	* `/chapter6`
 	* `/chapter7`
-* `/encounters` - Check descriptions, ACT descriptions, etc. This is probably gonna have a ton of subpages, I'd guess one for every potential enemy. At the very least, the big story-critical encounters (e.g. all boss fights) would need their own subpages which the `/chapters` pages could then link to.
-	* OK SO. The rule I've settled on is that if dialogue has the fancy silver border then it doesn't count as part of the encounter, it's instead a pre-/post-fight cutscene which will get its own page under `/chapters`. So only include the dialogue that's actually using the encounter UI on these pages.
+* `/encounters` - Check descriptions, ACT descriptions, etc. This is probably gonna have a ton of subpages, I'd guess one for every potential enemy. At the very least, the big story-critical encounters (e.g. all boss fights) would need their own subpages which the `/story` pages could then link to.
+	* OK SO. The rule I've settled on is that if dialogue has the fancy silver border then it doesn't count as part of the encounter, it's instead a pre-/post-fight cutscene which will get its own page under `/story`. So only include the dialogue that's actually using the encounter UI on these pages.
 		* Some of the chapter 1 pages don't follow this rule yet but that's going to be fixed don't worry
 	* Disambiguation pages (uses the special "disambig" layout; see `/berdly` for an example)
 		* Nothing right now!

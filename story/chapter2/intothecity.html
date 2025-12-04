@@ -1,0 +1,423 @@
+---
+title: Into Cyber City
+
+description: >
+  <p>The party falls into the Trash Zone. As they approach Cyber City, Susie splits off with Ralsei, while Kris spots a familiar face.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_ch2_scene11b_Step_0
+    chapters: [2]
+    note: falling
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: choices
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2]
+    note: Nubert, Werewire
+  -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [2]
+    note: Trashy
+  -
+    name: gml_Object_obj_ch2_scene12_Step_0
+    chapters: [2]
+    note: splitting up
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [2]
+    note: INFO sign
+  -
+    name: gml_RoomCC_room_dw_city_roadblock_3_PreCreate
+    chapters: [2]
+    note: trashcan 1 contents
+  -
+    name: gml_RoomCC_room_dw_city_roadblock_2_PreCreate
+    chapters: [2]
+    note: trashcan 2 contents
+
+toc:
+  -
+    id: falling
+    name: Falling into the Trash Zone
+  -
+    id: trashzone
+    name: Exploring the Trash Zone
+    subheadings:
+      -
+        id: nubert
+        name: Talking to Nubert
+      -
+        id: trashy
+        name: Talking to Trashy
+  -
+    id: leaving
+    name: Leaving the Trash Zone
+  -
+    id: split
+    name: Splitting up
+  -
+    id: intocity
+    name: Entering Cyber City
+    subheadings:
+      -
+        id: citysign
+        name: Reading the INFO sign
+      -
+        id: werewire
+        name: Talking to Werewire
+---
+<section class="d-section" id="falling">
+	<h2>Falling into the Trash Zone</h2>
+
+	<p class="note">As the screen fades to black, a loud thud is heard as the party land after their fall. The quiet sounds of the Trash Zone fade in, and shortly after, the screen lightens to show the party members buried head-first in a pile of trash.</p>
+
+	<p class="note">Susie's feet lower out of sight, and a moment later, her head pops up over the pile of trash, unsmiling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>L... Looks like this trash saved us.</d-text>
+	</d-box>
+
+	<p class="note">She turns to the others; Kris and then Ralsei similarly right themselves.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>C'mon...</d-text>
+	</d-box>
+
+	<p class="note">Kris jumps down to the street, followed by Ralsei. Susie also jumps, but rather than going down to the street, she lands on a large red prohibition sign perched near the top of the pile. She poses, grinning, as the others turn to face her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Haha, who's king of the trash pile now!?</d-text>
+	</d-box>
+
+	<p class="note">Susie laughs, but under her feet, the prohibition sign shifts and slides out from under her. Susie falls down to the street, landing in a kneel. An alarmed Ralsei and Kris have turned to watch, and once she lands, they dart towards her. A pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Z"></d-sprite>
+		<d-text asterisk>O... Ow...!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="C"></d-sprite>
+		<d-text asterisk>Susie, are you alright?</d-text>
+	</d-box>
+
+	<p class="note">Susie stands up a little slower than normal, smiling, but her eyes are shadowed. A pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>... Heh, it's nothing.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>I just...</d-text>
+	</d-box>
+
+	<p class="note">Susie drops back into a kneel.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>O... ow.</d-text>
+	</d-box>
+
+	<p class="note">Ralsei walks up right beside her. A slight pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="B"></d-sprite>
+		<d-text asterisk>... sure you don't want me to look?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>L-look at what? I'm fine!</d-text>
+	</d-box>
+
+	<p class="note">A pause. Then, slowly, Ralsei shifts even closer and puts his arms around her. A pause. Susie bolts to her feet, looking stunned.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>WOAH HEY WHAT THE HECK ARE YOU--</d-text>
+	</d-box>
+
+	<p class="note">She then flashes green, surrounded by sparkles, as Ralsei heals her. After a pause, he quickly pulls back, smiling at her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Feel better?</d-text>
+	</d-box>
+
+	<p class="note">Susie looks extremely agitated.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>FEEL BETTER!? AFTER YOU JUST CAME UP AND--</d-text>
+	</d-box>
+
+	<p class="note">She turns around. A long pause. Then she turns to the side away from the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="M"></d-sprite>
+		<d-text asterisk>Umm... doesn't feel WORSE, I guess.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="V"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">A slight pause. Susie begins scratching her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>How do you do that, anyway?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>That... healing... thingy.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Oh, healing magic? It's simple, Susie. Anyone can do it.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="G"></d-sprite>
+		<d-text asterisk>... I could even teach you, if you're interested.</d-text>
+	</d-box>
+
+	<p class="note">Still turned away, Susie lowers her hand.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Heh, ask me again when it's, like, blood explosion magic.</d-text>
+	</d-box>
+
+	<p class="note">She turns her head slightly towards Ralsei, though her face still can't be seen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">She turns away and scratches her head again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>But, um, if you WANTED, I guess I could learn it.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Then you wouldn't, y'know, have to annoy me with it anymore.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="G"></d-sprite>
+		<d-text asterisk>Sure, Susie. Next time we have a break!</d-text>
+	</d-box>
+
+	<p class="note">Susie turns, unsmiling, and hurries towards Kris, Ralsei backing out of her way.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>(Let's just go already, Kris...)</d-text>
+	</d-box>
+
+	<p class="note">Ralsei retakes his place in line, and control is returned to the player, who can proceed through the Trash Zone.</p>
+</section>
+
+<section class="d-section" id="trashzone">
+	<h2>Exploring the Trash Zone</h2>
+	<p>(See the full <a href="{{ '/locations/cyberworld/cybercity/trashzone' | relative_url }}">Trash Zone page</a> for other object interactions.)</p>
+
+	<h3 id="nubert">Talking to Nubert</h3>
+	<d-box theme="dark">
+		<d-speaker>Nubert</d-speaker>
+		<d-text asterisk>I'm Nubert. Everybody loves me.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Nubert</d-speaker>
+		<d-text asterisk>That's why I live in the trash.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="trashy">Talking to Trashy</h3>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>Oh boy, oh boy! I'm <span class="blue">Trashy</span>!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>Did you know about adjusting your INVENTORY?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>Trashcans like me can HOLD all sorts of things.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>Just like your STORAGE, if you get more than 12 ITEMs!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="4"></d-sprite>
+		<d-text asterisk>Uh... yeah, not now dude.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>It was sort of an emotional moment...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>Oh... Oh, that's okay...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If you got <a href="{{ '/misc/weapons#fiberscarf' | relative_url }}">Fiber Scarf</a></h5>
+	<p>(Since it's Nubert's treasure, that means you probably met him.)</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Oh hell, is that Nubert over there!?</d-text>
+		<d-box>
+			<d-sprite speaker="Ralsei" emotion="19"></d-sprite>
+			<d-text>Really, where!?</d-text>
+		</d-box>
+	</d-box>
+	<hr class="hr2">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>No time for this guy.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="leaving">
+	<h2>Leaving the Trash Zone</h2>
+	<p>Plays after walking past Trashy and Nubert, near the right edge of the room.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>By the way Kris, I just remembered!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>Although you can only carry 12 ITEMs around...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>Your STORAGE will hold any extra items you pick up.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="G"></d-sprite>
+		<d-text asterisk>You can access it where you check Recruits!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>(Enemies you SPARE get RECRUITed to our town, remember?)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Woah, that seems like pretty useful information.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="split">
+	<h2>Splitting up</h2>
+
+	<p class="note">After exiting the Trash Zone, the party enters the start of an alleyway branching into two paths. Kris stops near the end of the path they came down, while Susie and Ralsei move to stand in front of the eastern and northern paths respectively. The party members all turn away from the player to look along the path Ralsei stands in front of for a long moment. Then Ralsei turns around to face Kris and Susie.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="A"></d-sprite>
+		<d-text asterisk>There's a fork in the path... Kris, it seems like...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="I"></d-sprite>
+		<d-text asterisk>It might be advantageous if we split up.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Who do you want to go with?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Go with#Ralsei"></d-option>
+		<d-option index="1" text="Go with#Susie"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">Susie charges forward to stand in front of Ralsei, making him take a step back.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Hey, why does Kris get to choose all the time!?</d-text>
+	</d-box>
+
+	<p class="note">Susie grabs a startled Ralsei's hand and turns to face down the northern path, grinning widely.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Ralsei, you're going with me!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="U"></d-sprite>
+		<d-text asterisk>H-huh!? K-Kris, I...!!</d-text>
+	</d-box>
+
+	<p class="note">Susie drags Ralsei away down the northern alleyway. As they exit offscreen, traffic cones with dog-like faces appear to block the northern path. Interacting with these cones results in a high-pitched bark, but no other reaction.</p>
+</section>
+
+<section class="d-section" id="intocity">
+	<h2>Entering Cyber City</h2>
+
+	<p class="note">Kris must proceed down the eastern path alone, entering Cyber City proper. They walk past a sign reading "WELCOME TO CYBER CITY"; visible behind the sign is another path on which Susie and Ralsei can be seen walking.</p>
+
+	<p class="note">Just past the welcome sign is a <a href="{{ '/misc/savepoints#cybercity' | relative_url }}">SAVE point</a>:</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>You have neither fluffy boys nor mean girls with you now.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>Reluctantly, you are filled with the power from the cat sign.</d-text>
+	</d-box>
+
+	<p class="note">Kris can walk further into Cyber City, coming upon roads filled with cars.</p>
+
+	<hr>
+
+	<h3 id="citysign">Reading the INFO sign</h3>
+
+	<d-box theme="dark">
+		<d-text asterisk>Welcome to Cyber City! Pedestrians need to press the switch to cross traffic!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="werewire">Talking to Werewire</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Werewire</d-speaker>
+		<d-text asterisk>I heard the rollercoasters are undergoing maintenance.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Werewire</d-speaker>
+		<d-text asterisk>That's a pain because it's our only form of public transit.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Werewire</d-speaker>
+		<d-text asterisk>Yes. The teacup ride is privately owned.</d-text>
+	</d-box>
+
+	<hr>
+
+	<p class="note">Towards the end of this room, Noelle is briefly visible walking through the eastern path. In the next area (another road being swept by a pair of Swatchlings), she is again visible walking through the far exit past two trash cans (containing $20 and a <a href="{{ '/misc/darkitems#cdbagel' | relative_url }}">CD Bagel</a>) and an <a href="{{ '/encounters/poppup' | relative_url }}">encounter with 2 Poppups</a>. Kris can follow and <a href="{{ '/story/chapter2/trucies' | relative_url}}">catch up with her</a>.</p>
+</section>

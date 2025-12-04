@@ -1,0 +1,416 @@
+---
+title: Diner hangout
+
+description: >
+  <p>Kris and Susie spend time together at the diner after church.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /locations/lightworld/diner
+    name: Other interactions
+
+toc:
+  -
+    id: talkqc
+    name: Talking to QC
+  -
+    id: cutscene
+    name: The hangout
+
+sources:
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [4]
+    note: talking to QC
+  -
+    name: gml_Object_obj_ch4_PDC05A_Step_0
+    chapters: [4]
+    name: hangout
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [4]
+    note: choices
+---
+<section class="d-section" id="talkqc">
+	<h2>Talking to QC</h2>
+
+	<d-box theme="light">
+		<d-speaker>QC</d-speaker>
+		<d-text asterisk>Here after church, hon? That's nostalgic...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>QC</d-speaker>
+		<d-text asterisk>Let me guess, the usual special? It'll be five dollars.</d-text>
+	</d-box>
+	<d-choices theme="light">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<h3>If you have enough money</h3>
+		<p class="note">$5 is deducted from your total money.</p>
+		<d-box theme="light">
+			<d-speaker>QC</d-speaker>
+			<d-text asterisk>All right then, hon. You two sit wherever you like.</d-text>
+		</d-box>
+		<p class="note"><a href="#cutscene">The hangout begins.</a></p>
+
+		<hr>
+
+		<h3>If you don't have enough money</h3>
+		<d-box theme="light">
+			<d-speaker>QC</d-speaker>
+			<d-text asterisk>Hm, looks like you don't have enough.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-speaker>QC</d-speaker>
+			<d-text asterisk>I'm sure you have some money at home...</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<d-box theme="light">
+			<d-speaker>QC</d-speaker>
+			<d-text asterisk>Then come back when you feel like it, hon.</d-text>
+		</d-box>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="cutscene">
+	<h2>The hangout</h2>
+
+	<p class="note">While QC goes through the door behind the counter, presumably leading to the kitchen, Kris and Susie sit down in the corner booth. Susie yawns and folds her arms on the table, resting her head on them.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>The diner, huh...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>Haven't eaten here since... Your mom took me.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="S"></d-sprite>
+		<d-text asterisk>I remember plowing into my food with a runny nose.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>I probably became every janitor's enemy after that.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>... But... it's funny.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Even though I was only making a mess...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="S"></d-sprite>
+		<d-text asterisk>Her face looked so... Happy.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>Just sitting there... smiling, watching me.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="T"></d-sprite>
+		<d-text asterisk>Kind of like you're doing now.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="N"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>Jeez.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Kris, anyone tell you your family is goddamn weird?</d-text>
+	</d-box>
+
+	<p class="note">QC comes out carrying a tray. As she approaches their table, Susie sits up to make space, and QC puts down Kris's hot chocolate.</p>
+
+	<d-box theme="light">
+		<d-speaker>QC</d-speaker>
+		<d-text asterisk>Here you go.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>QC</d-speaker>
+		<d-text asterisk>And here's a little something extra for your friend.</d-text>
+	</d-box>
+
+	<p class="note">She sets a sundae in front of a surprised Susie.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Huh!?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-speaker>QC</d-speaker>
+		<d-text asterisk>If you need anything else, just holler.</d-text>
+	</d-box>
+
+	<p class="note">QC returns to her spot behind the counter.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>Alright, Kris.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="X"></d-sprite>
+		<d-text asterisk>Don't hold anything back.</d-text>
+	</d-box>
+
+	<p class="note">The screen fades to black. The weapon-drawing SFX is followed by an explosion.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>... phew.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Want the last bite of my sundae?</d-text>
+	</d-box>
+	<hr>
+	<p class="note">The following options are presented for 1 second.</p>
+	<d-choices theme="light">
+		<d-option index="0" text="Yes please"></d-option>
+		<d-option index="1" text="No,\syou have it"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="K"></d-sprite>
+			<d-text asterisk>Jeez, if you're that energetic.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="H"></d-sprite>
+			<d-text asterisk>The hell do you want me to have it so bad!?</d-text>
+		</d-box>
+	</d-option-panel>
+	<hr class="hr2">
+	<h3>If you didn't make a choice in time</h3>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+		<d-text asterisk>Too slow! Hahaha!</d-text>
+	</d-box>
+	<hr>
+
+	<p class="note">Someone swallows. A pause.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>So, guess we should get going, huh...?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>...?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="D"></d-sprite>
+		<d-text asterisk>What are you doing? Breathing on the window...?</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="Draw\ssomething"></d-option>
+		<d-option index="1" text="Do\snothing"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<p class="note">Kris draws on the window with a squeak.</p>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="K"></d-sprite>
+			<d-text asterisk>... Is that me?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+			<d-text asterisk>Heh. Not bad, y'know.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="0"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<p class="note">A pause.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Here, lemme draw something.</d-text>
+	</d-box>
+
+	<p class="note">Susie draws on the window with a squeak.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>It's you.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Whaddya think?</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="Accurate"></d-option>
+		<d-option index="1" text="Looks bad\schief"></d-option>
+	</d-choices>
+
+	<d-option-panel index="0" theme="light">
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+			<d-text asterisk>Heh, what can I say. I'm an artist.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="L"></d-sprite>
+			<d-text asterisk>Even got your ear in there.</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="K"></d-sprite>
+			<d-text asterisk>One of them. Whatever.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="5"></d-sprite>
+			<d-text asterisk>That's because I'm drawing from life, dumbass!</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<p class="note">Susie draws on the window with a squeak.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Look, I made you talk.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>"Susie rulez"!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>If you selected "Draw something" earlier</h3>
+	<d-choices theme="light">
+		<d-option index="0" text="Make Susie\sdrawing talk"></d-option>
+		<d-option index="1" text="Do\snothing"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="light">
+		<p class="note">Kris draws on the window with a squeak.</p>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="E"></d-sprite>
+			<d-text asterisk>What are you--</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="H"></d-sprite>
+			<d-text asterisk>I WOULDN'T SAY THAT!!!</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="A"></d-sprite>
+			<d-text asterisk>Here, I'll help.</d-text>
+		</d-box>
+		<p class="note">Susie draws on the window with a squeak.</p>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="7"></d-sprite>
+			<d-text asterisk>Now I'm saying "Shut up".</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<p class="note">A pause.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>And then the rain fell down and...</d-text>
+	</d-box>
+
+	<p class="note">Susie wipes away their drawings with a drawn-out squeak.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+		<d-text asterisk>Washed everything away.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Heh.</d-text>
+	</d-box>
+
+	<d-choices theme="light">
+		<d-option index="0" text="Write\ssomething\sin the corner"></d-option>
+		<d-option index="1" text="Do\snothing"></d-option>
+	</d-choices>
+
+	<d-option-panel index="0" theme="light">
+		<p class="note">Kris writes something on the window with a squeak.</p>
+
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="6"></d-sprite>
+			<d-text asterisk>... huh?</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="0"></d-sprite>
+			<d-text asterisk>... are you writing something?</d-text>
+		</d-box>
+
+		<p class="note">Kris writes something on the window with a squeak.</p>
+
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+			<d-text asterisk>Heh, Kris...</d-text>
+		</d-box>
+		<d-box theme="light">
+			<d-sprite speaker="Susie" emotion="2"></d-sprite>
+			<d-text asterisk>I can never tell when you're messing around.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="light">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">The screen fades back in to reveal Kris and Susie's table ravaged. Susie yawns.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Well, let's get out of here.</d-text>
+	</d-box>
+
+	<p class="note">Kris gets up, but before Susie can follow, QC looks over at them.</p>
+
+	<d-box theme="light">
+		<d-speaker>QC</d-speaker>
+		<d-text asterisk>You mind cleaning your place up a bit first, hon?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="G"></d-sprite>
+		<d-text asterisk>Huh? Ohh, uhhh, yeah, sure... heheh.</d-text>
+	</d-box>
+
+	<p class="note">The screen briefly fades to black; they set their table to rights, and the screen fades back in to show Kris standing by the table while Susie is still seated. She gets up and joins them.</p>
+
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Alright, let's go.</d-text>
+	</d-box>
+
+	<p class="note"><a href="{% include wikilink page='Another day in hometown' %}">Another day in hometown</a> resumes playing. Kris and Susie are free to continue exploring Hometown, where they can <a href="{{ '/story/chapter4/teaparty' | relative_url }}">spend time with Ralsei</a> or <a href="{{ '/story/chapter4/noellevisit' | relative_url }}">go to Noelle's house for their "study session"</a>.</p>
+</section>
