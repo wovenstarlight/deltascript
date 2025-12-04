@@ -479,15 +479,17 @@ credits: >
 <style>
 figure.highlight { margin: calc(var(--border-width) + 1em) 0 }
 :is(h2, h3, h4, p) + figure.highlight { margin-block-start: 0 }
-:not(pre) > code, pre {
+code {
+	padding: 0.5em 1em;
+	overflow-x: scroll;
+	max-width: 100%;
+}
+:not(pre) > code {
 	border: thin solid rgb(from var(--gray) r g b / 0.5);
 	border-radius: 0.25em;
 	background-color: var(--black);
-}
-:not(pre) > code { padding: 0 0.2em }
-pre {
-	padding: 0.5em 1em;
-	overflow-x: scroll;
+	padding: 0 0.2em;
+	font-weight: normal;
 }
 .nt { color: #6eadff }
 .na { color: #7be7eb }
