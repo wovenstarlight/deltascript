@@ -589,7 +589,7 @@ header.d-section:has(h1.visually-hidden:only-child) {
 			cursor: pointer;
 		}
 
-		&::before {
+		&:not([disabled])::before {
 			content: "";
 			--size: 0.75em;
 			width: var(--size);
@@ -614,6 +614,11 @@ header.d-section:has(h1.visually-hidden:only-child) {
 		&:has(input:checked)::after { content: "ON" }
 
 		&.gray { cursor: help }
+	}
+
+	button[disabled] {
+		color: var(--gray);
+		cursor: help;
 	}
 }
 /* #endregion */

@@ -992,10 +992,20 @@ function setUp() {
 	}
 	// #endregion Dyslexic-friendly font
 
-	// Force-view all choices
-	document.getElementById("open-choices").addEventListener("click", () => {
-		document.querySelectorAll("d-choices").forEach(menu => menu.openAll());
-	});
+	// Force-view all choices (if choices are present)
+	const choiceToggle = document.getElementById("open-choices");
+	if (document.querySelector("d-choices") !== null) {
+		choiceToggle.addEventListener("click", () => {
+			document.querySelectorAll("d-choices").forEach(menu => menu.openAll());
+		});
+	}
+	// Deactivate choice toggle if no choices present
+	else {
+		choiceToggle.title = "No choices on this page";
+		choiceToggle.classList.add("gray");
+		choiceToggle.setAttribute("disabled", "disabled");
+		choiceToggle.append("*");
+	}
 	// #endregion Accessibility features
 
 	// #region Visual display

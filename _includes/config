@@ -27,6 +27,8 @@
 			Dyslexia-friendly font
 		</label>
 
-		<button id="open-choices">Show all choices</button>
+		<button id="open-choices">
+			Show all choices
+		</button>
 	</section>
 </aside>
