@@ -5,19 +5,54 @@ hide_title: true
 <section class="d-section" id="intro">
 	<p>A project aimed at creating a complete script of <a href="https://deltarune.com">Deltarune</a> by Toby Fox.</p>
 
-	<p>Inspired by the <a href="https://felicitations.neocities.org/">ISAT Script Project</a>.</p>
+	<p>Inspired by the <a href="https://isat-script-project.neocities.org/">ISAT Script Project</a>.</p>
 </section>
 
 <section class="d-section" id="index">
 	<h2>Index</h2>
-	<p>The script has been organized by story events and locations. <span class="orange">(ISAT Script Project has it like that, story (subdivided by locations) and locations (subdivided by story). Unless there's some more logical way of doing it...)</span></p>
-	<p class="orange">(TODO: Include a full index of some sort? e.g. if we're doing Story as a division then /chapter1, /chapter2, etc)</p>
-
+	<p>The script has been divided into several categories, each linked in the header:</p>
 	<ul>
 		<li>
-			<a href="{{ '/story/' | relative_url }}">Story events</a>
+			<a href="{{ '/story/' | relative_url }}">Story events</a>: Cutscenes, dialogue, and flavor text available only during specific parts of the storyline
 			<ul>
-				<li><a href="{{ '/story#chapter1' | relative_url }}">Chapter 1</a></li>
+				<li><a href="{{ '/story/#chapter1' | relative_url }}">Chapter 1</a></li>
+				<li><a href="{{ '/story/#chapter2' | relative_url }}">Chapter 2</a></li>
+				<li><a href="{{ '/story/#chapter3' | relative_url }}">Chapter 3</a></li>
+				<li><a href="{{ '/story/#chapter4' | relative_url }}">Chapter 4</a></li>
+				<li class="gray">More to be added!</li>
+			</ul>
+		</li>
+		<li>
+			<a href="{{ '/locations/' | relative_url }}">Locations</a>: Flavor text and dialogue organized by areas and rooms
+			<ul>
+				<li><a href="{{ '/locations/lightworld' | relative_url }}">Light World</a></li>
+				<li><a href="{{ '/locations/closetworld' | relative_url }}">Closet Dark World</a></li>
+				<li><a href="{{ '/locations/cardkingdom' | relative_url }}">Card Kingdom</a></li>
+				<li><a href="{{ '/locations/cyberworld' | relative_url }}">Cyber World</a></li>
+				<li><a href="{{ '/locations/tvworld' | relative_url }}">TV World</a></li>
+				<li><a href="{{ '/locations/darksanctuary' | relative_url }}">Dark Sanctuaries</a></li>
+				<li class="gray">More to be added!</li>
+			</ul>
+		</li>
+		<li>
+			<a href="{{ '/encounters/' | relative_url }}">Encounters</a>: Flavor text and dialogue from battles with enemies
+			<ul>
+				<li><a href="{{ '/encounters/#chapter1' }}">Chapter 1</a></li>
+				<li><a href="{{ '/encounters/#chapter2' }}">Chapter 2</a></li>
+				<li><a href="{{ '/encounters/#chapter3' }}">Chapter 3</a></li>
+				<li><a href="{{ '/encounters/#chapter4' }}">Chapter 4</a></li>
+				<li class="gray">More to be added!</li>
+			</ul>
+		</li>
+		<li>
+			<a href="{{ '/misc/' | relative_url }}">Miscellaneous</a>: Flavor text and dialogue that isn't story- or location-specific
+			<ul>
+				<li><a href="{{ '/misc/armor' | relative_url }}">Armor</a> and <a href="{{ '/misc/weapons' | relative_url }}">weapon</a> descriptions</li>
+				<li><a href="{{ '/misc/darkitems' | relative_url }}">Dark World</a> and <a href="{{ '/misc/lightitems' | relative_url }}">Light World</a> item descriptions and usage text</li>
+				<li><a href="{{ '/misc/powermenu' | relative_url }}">Character titles, stats,</a> and <a href="{{ '/misc/spells' | relative_url }}">spells</a></li>
+				<li><a href="{{ '/misc/recruits' | relative_url }}">Recruit profiles</a></li>
+				<li><a href="{{ '/misc/UNUSED' | relative_url }}">UNUSED text</a></li>
+				<li class="gray">…and more!</li>
 			</ul>
 		</li>
 	</ul>
