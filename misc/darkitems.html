@@ -9,6 +9,10 @@ description: >
 
 sources:
   -
+    name: gml_Object_obj_darkcontroller_Step_0
+    chapters: [1]
+    note: standard text, Manual toss text
+  -
     name: gml_GlobalScript_scr_itemnamelist
     chapters: [1, 2, 3, 4]
   -
@@ -42,10 +46,6 @@ sources:
     name: gml_GlobalScript_scr_teaamount
     chapters: [1, 2, 3, 4]
     note: Tea healing amounts
-  -
-    name: gml_Object_obj_darkcontroller_Step_0
-    chapters: [1]
-    note: Manual toss text
   -
     name: gml_Object_obj_darkphone_event_Step_0
     chapters: [1, 2, 3, 4]
@@ -304,6 +304,40 @@ toc:
             id: lifedew
             name: Life Dew
 ---
+<section class="d-section" id="standard">
+	<h2>Standard text</h2>
+	<p>Text that's identical for all items, unless specified otherwise in their sections.</p>
+
+	<h3 id="layout">Overworld menu layout</h3>
+	<p class="note">Opening the Dark World item menu displays the following:</p>
+	<ul class="note">
+		<li>A menu in the center. At the top of this menu are the submenu options <span class="white fnt-condensed">USE</span>, <span class="white fnt-condensed">TOSS</span>, and <span class="white fnt-condensed">KEY</span> in white. Below these submenu labels are the contents of the corresponding inventory — the standard item inventory for <span class="white fnt-condensed">USE</span>/<span class="white fnt-condensed">TOSS</span>, and the key item inventory for <span class="white fnt-condensed">KEY</span>.
+			<ul>
+				<li>A maximum of 12 items is displayed at any given time, equal to the standard/key item inventory capacity, with blank spaces if the relevant inventory is not full.</li>
+				<li>Submenu labels initially appear in white and can be cycled through; the corresponding inventory shows below the currently-hovered submenu label with item names in a dull gray.</li>
+				<li>Selecting a submenu makes the chosen submenu's label turn orange, while the other submenu labels turn gray, and all listed items turn white. The currently-hovered item's overworld description is displayed along the top of the screen.</li>
+			</ul>
+		</li>
+		<li>Names and HP bars for the current party members are displayed along the bottom.</li>
+	</ul>
+
+	<hr>
+
+	<h3 id="use">Use</h3>
+	<p class="note">Using a consumable item generally doesn't immediately give a text response; the player is prompted to choose a party member to use the consumable on. Party members may react to the usage of an item on themself or, rarely, on another party member; see the "Usage (overworld)" sections for each item below for these reactions.</p>
+	<p class="note">If an item adds to a party member's HP, a small "<span class="green fnt-condensed">+&lt;#&gt;</span>" message appears over their HP bar signifying the HP gained with a healing chime; the HP bar is raised by the corresponding amount, capped at maximum HP.</p>
+	<p class="note">If an item reduces HP (such as the <a href="#spoison">S.POISON</a>), the damage SFX will play as the HP bar goes down accordingly, but no HP change message appears.</p>
+
+	<hr>
+
+	<h3 id="toss">Toss</h3>
+	<p class="note">Upon choosing an item, the following message replaces the chosen item's overworld description:</p>
+	<d-box theme="objmenu">
+		<d-text>Really throw away the<span class="break"></span> &lt;Item&gt;?</d-text>
+	</d-box>
+	<p class="note"><span class="white">[CONFIRM]</span> can be used to toss the item; the item is silently removed from the inventory without further commentary, and the player returns to the TOSS submenu, now hovering over the next item in the list (or, if the tossed item was the last in the list, the second-to-last item). Alternatively, <span class="white">[CANCEL]</span> can be used to return to the TOSS submenu without throwing away the chosen item.</p>
+</section>
+
 <section class="d-section" id="darkcandy"> <!-- id 1 -->
 	<h2>Dark Candy</h2>
 	<p>Turns into <a href="#darkercandy">Darker Candy</a> from Chapter 4 onwards.</p>
