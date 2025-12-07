@@ -123,9 +123,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* `/chapter2`
 		* `/field2` - Cyber Field story parts after SCC up to rollercoasters; subdivide as necessary
 		* Rollercoasters fight up to drunk queen encounter DONE
-		* SCC save point up to Berdly fight 2 DONE
-		* `/drive1` - First part of the Kris/Queen/Noelle drive, pre-Spamton
-		* Spamton encounter DONE
+		* SCC save point up to Spamton encounter DONE
 		* [the unused gml_Object_obj_ch2_city04_Step_0 scene](https://youtu.be/cxiEOeztndw?t=1661)
 		* `/drive2` - Second part of the Kris/Queen/Noelle drive, post-Spamton
 		* `/december` - DECEMBER puzzle, Noelle reminiscing
