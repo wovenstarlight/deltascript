@@ -9,17 +9,9 @@ credits: >
 
 sources:
   -
-    name: gml_Object_obj_npc_room_Other_10
-    chapters: [2]
-    note: orange/blue Addisons, Plugboy
-  -
     name: gml_Object_obj_readable_room1_Other_10
     chapters: [2]
-    note: spotting Susie/Ralsei, Queen poster, ferris wheel poster, forcefield - Noelle (WR)
-  -
-    name: gml_Object_obj_npc_sign_Other_10
-    chapters: [2]
-    note: Werewire
+    note: roundabout area interactions, ferris wheel poster, forcefield - Noelle (WR)
   -
     name: gml_Object_obj_controller_dw_city_big_2_Step_0
     chapters: [2]
@@ -39,9 +31,6 @@ toc:
     name: Roundabout area
     subheadings:
       -
-        id: addison
-        name: Talking to the orange/blue Addisons
-      -
         id: susral
         name: Spotting Susie and Ralsei
       -
@@ -50,16 +39,6 @@ toc:
       -
         id: treasurechest
         name: Treasure chest
-  -
-    id: traffic
-    name: Crossing traffic
-    subheadings:
-      -
-        id: werewire
-        name: Talking to Werewire
-      -
-        id: plugboy
-        name: Talking to Plugboy
   -
     id: ferriswheel
     name: Ferris wheel poster
@@ -112,38 +91,10 @@ toc:
 ---
 <section class="d-section" id="roundabout">
 	<h2>Roundabout area</h2>
-	<p>With the two Ambyu-Lances circling the center. Addison interactions and spotting Susie/Ralsei are exclusive to the normal route and to the early Weird Route, as all NPCs disappear once the player proceeds far enough on the Weird Route.</p>
-
-	<h3 id="addison">Talking to the orange/blue Addisons</h3>
-	<p>These two Addisons share a talk counter (if you talk to one and then the other, the second Addison uses the "subsequent times" dialogue).</p>
-	<h4>First time</h4>
-	<d-box theme="dark">
-		<d-speaker>Addison</d-speaker>
-		<d-text asterisk>We are Addisons! All we do is advertise!!</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Addison</d-speaker>
-		<d-text asterisk>This is an advertisement too!</d-text>
-		<d-box>
-			<d-speaker>Addison</d-speaker>
-			<d-text>Advertisements now only $9.99!</d-text>
-		</d-box>
-	</d-box>
-
-	<h4>Subsequent times</h4>
-	<d-box theme="dark">
-		<d-speaker>Addison</d-speaker>
-		<d-text asterisk>Don't like advertisements? Block ads for only $9.99!</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Addison</d-speaker>
-		<d-text asterisk>Change your mind? Bring them back for only $9.99!</d-text>
-	</d-box>
-
-	<hr>
+	<p>With the two Ambyu-Lances circling the center.</p>
 
 	<h3 id="susral">Spotting Susie and Ralsei</h3>
-	<p>Via the northeast path. Dialogue plays upon interacting with the traffic cone barrier.</p>
+	<p>Via the northeast path. Exclusive to the normal route and to the early Weird Route, as all NPCs disappear once the player proceeds far enough on the Weird Route. Dialogue plays upon interacting with the traffic cone barrier.</p>
 	<h4>First time</h4>
 	<d-box theme="dark">
 		<d-sprite speaker="Noelle" emotion="L"></d-sprite>
@@ -224,33 +175,6 @@ toc:
 	<h3 id="treasurechest">Treasure chest</h3>
 	<p>Via the southwest path, next to the <a href="#queenposter">Queen poster</a>.</p>
 	<p class="note">Uses <a href="{{ '/misc/generic#treasurechest-closed' | relative_url }}">generic text</a>; contains a <a href="{{ '/misc/armor#pinkribbon' | relative_url }}">Pink Ribbon</a>.</p>
-</section>
-
-<section class="d-section" id="traffic">
-	<h2>Crossing traffic</h2>
-	<p>Pair of traffic-filled roads. Exclusive to the normal route and early Weird Route, as all NPCs disappear once the player proceeds far enough on the Weird Route.</p>
-
-	<h3 id="werewire">Talking to Werewire</h3>
-	<d-box theme="dark">
-		<d-speaker>Werewire</d-speaker>
-		<d-text asterisk>Can't even cross the street without getting my ass kicked.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Werewire</d-speaker>
-		<d-text asterisk>I love the city.</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="plugboy">Talking to Plugboy</h3>
-	<d-box theme="dark">
-		<d-speaker>Plugboy</d-speaker>
-		<d-text asterisk>Since everyone else got plugged they're a lot more agreeable.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-speaker>Plugboy</d-speaker>
-		<d-text asterisk>It's nice.</d-text>
-	</d-box>
 </section>
 
 <section class="d-section" id="ferriswheel">
@@ -434,7 +358,7 @@ toc:
 			<d-sprite speaker="Noelle" emotion="6"></d-sprite>
 			<d-text asterisk>(It's... surprisingly nice just hearing Kris say that...)</d-text>
 		</d-box>
-		<p class="note">If progress was made on the Weird Route, the Weird Route is aborted at this point, accompanied by the corresponding SFX.</p>
+		<p class="note">If any progress was made on the Weird Route, the Weird Route is aborted at this point, accompanied by the corresponding SFX.</p>
 	</d-option-panel>
 	<d-option-panel index="1" theme="dark">
 		<d-box theme="dark">
