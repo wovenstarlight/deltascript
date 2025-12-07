@@ -157,12 +157,13 @@ class DialogueSprite extends HTMLElement {
 
 	#getImageTag(speaker) {
 		const variant = this.getAttribute("variant") ??	// Use provided variant, or default to...
-			( speaker === "Susie" ? "eyes"		// ...eyes-exposed for Susie
-			: speaker === "Ralsei" ? "nohat"	// ...hatless for Ralsei
-			: speaker === "Berdly" ? "light"	// ...Light World for Berdly
-			: speaker === "Toriel" ? "home"		// ...home clothes for Toriel
-			: speaker === "Rouxls" ? "nohat"	// ...hatless for Rouxls
-			: "" )								// ...no variants for all others
+			( speaker === "Susie" ? "eyes"			// ...eyes-exposed for Susie
+			: speaker === "Ralsei" ? "nohat"		// ...hatless for Ralsei
+			: speaker === "Noelle" ? "uncropped"	// ...uncropped for Noelle
+			: speaker === "Berdly" ? "light"		// ...Light World for Berdly
+			: speaker === "Toriel" ? "home"			// ...home clothes for Toriel
+			: speaker === "Rouxls" ? "nohat"		// ...hatless for Rouxls
+			: "" )									// ...no variants for all others
 		const emotion = this.getAttribute("emotion");
 		const emotionIndex = emotionToIndex(emotion);
 		const src = (
