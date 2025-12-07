@@ -1188,7 +1188,8 @@ function setUp() {
 		svg.winglade,
 		[theme=prophecy],
 		funny-text:has(.shaking, .animswitch),
-		.glow
+		.glow,
+		hr:not([class])
 	`) !== null;
 	if (!globalAnims) {
 		(animToggle = document.querySelector("label[for='toggle-anim']")).title = "No animations on this page";

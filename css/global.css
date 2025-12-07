@@ -378,6 +378,8 @@ hr {
 			top: 50%;
 			transform: translate(-50%, -50%);
 		}
+
+		body:not(.noanim) &::before { background-image: url("/deltascript/assets/images/savepoint.gif") }
 	}
 
 	&.hrhalf {
