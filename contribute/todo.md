@@ -123,12 +123,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* `/chapter2`
 		* `/field2` - Cyber Field story parts after SCC up to rollercoasters; subdivide as necessary
 		* Rollercoasters fight up to drunk queen encounter DONE
-		* `/city3` - scc encounter with noelle, addisons (mannequin and character tea), annoying mouse room 2
-			* `#annoyingmouseroom2`
-			* `#annoyingmouseroom2-weird`
-		* `/city4` - the cheese maze, annoying mouse room 3 (where berdly won't shut up)
-			* `#annoyingmouseroom3`
-		* Berdly fight 2 DONE
+		* SCC save point up to Berdly fight 2 DONE
 		* `/drive1` - First part of the Kris/Queen/Noelle drive, pre-Spamton
 		* Spamton encounter DONE
 		* [the unused gml_Object_obj_ch2_city04_Step_0 scene](https://youtu.be/cxiEOeztndw?t=1661)

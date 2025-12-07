@@ -1,0 +1,787 @@
+---
+title: Annoying Mouse Room 2
+
+description: >
+  <p>Kris and Noelle continue through Cyber City, running into Sweet Cap'n Cakes and another mouse puzzle.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [2]
+    note: Sweet Cap'n Cakes
+  -
+    name: gml_GlobalScript_scr_roomname
+    chapters: [2]
+    note: SAVE point location name
+  -
+    name: gml_Object_obj_savepoint_Other_10
+    chapters: [2]
+    note: SAVE point narration
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2]
+    note: Noelle after "solving" mouse puzzle
+  -
+    name: gml_Object_obj_controller_city_mice2_Step_0
+    chapters: [2]
+    note: mouse puzzle
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: choices
+
+toc:
+  -
+    id: sweetcapncakes
+    name: Talking to Sweet Cap'n Cakes
+    subheadings:
+      -
+        id: sweet
+        name: Sweet
+      -
+        id: capn
+        name: Cap'n
+      -
+        id: kk
+        name: K_K
+  -
+    id: savepoint
+    name: SAVE point
+    subheadings:
+      -
+        id: savepoint-normal
+        name: Normal route
+      -
+        id: savepoint-weird
+        name: Weird Route
+  -
+    id: dumpster
+    name: Dumpster
+    subheadings:
+      -
+        id: dumpster-normal
+        name: Normal route
+      -
+        id: dumpster-weird
+        name: Weird Route
+  -
+    id: annoyingmouseroom2
+    name: Annoying Mouse Room 2
+    subheadings:
+      -
+        id: annoyingmouseroom2-normal
+        name: Normal route
+        subheadings:
+          -
+            id: mouse-intro
+            name: Puzzle introduction
+          -
+            id: mouse-scare
+            name: Scaring Noelle with the mice
+          -
+            id: mouse-leave
+            name: Leaving to the west without Noelle
+          -
+            id: mouse-solve
+            name: '"Solving" the puzzle'
+          -
+            id: mouse-noelle
+            name: Talking to Noelle after "solving" the puzzle
+          -
+            id: mouse-forcefield
+            name: Taking down the forcefield
+      -
+        id: annoyingmouseroom2-weird
+        name: Weird Route
+---
+<section class="d-section" id="sweetcapncakes">
+	<h2>Talking to Sweet Cap'n Cakes</h2>
+	<p>Exclusive to the normal route. Present in the room immediately after <a href="{{ '/story/chapter2/evilvillain' | relative_url }}">Queen and Berdly are encountered</a>. Accompanied by a <a href="#savepoint">SAVE point</a>.</p>
+
+	<h3 id="sweet">Sweet</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Sweet</d-speaker>
+		<d-text asterisk="Sweet">Yo! How's it hangin'?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Sweet</d-speaker>
+		<d-text asterisk="Sweet">We're making some extra<span class="break"></span> money by selling in the city!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Cap'n</d-speaker>
+		<d-text asterisk="Cap'n">We gotta make those<span class="break"></span> bucks somehow!! Heheh!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Sweet Cap'n Cakes</d-speaker>
+		<d-text asterisk="Sweet">Gotta buy new gear!!</d-text>
+		<d-text asterisk="Cap'n">Gotta get new kicks!!</d-text>
+		<d-text asterisk="K_K">I wanna be a car.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Sweet Cap'n Cakes</d-speaker>
+		<d-text asterisk="Sweet">Good thinkin', K_K! Gotta<span class="break"></span> have a way to get around!</d-text>
+		<d-text asterisk="K_K">Honk! Honk!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Sweet Cap'n Cakes</d-speaker>
+		<d-text asterisk="Sweet">K_K's always got it right!</d-text>
+		<d-text asterisk="Cap'n">That's why he's second-in-command!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Sweet Cap'n Cakes</d-speaker>
+		<d-text asterisk="Sweet">... who's first?</d-text>
+		<d-text asterisk="Cap'n">Huh? I'm not the leader?</d-text>
+		<d-text asterisk="K_K">Can I be third?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="capn">Cap'n</h3>
+	<d-box theme="dark">
+		<d-speaker>Cap'n</d-speaker>
+		<d-text asterisk="Cap'n">What'll it be, chief?<span class="break"></span> I got CD Bagels, $80 a pop!</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Buy"></d-option>
+		<d-option index="1" text="Talk"></d-option>
+		<d-option index="2" text="Leave"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<h4>If you have $80 or more, and either the inventory or storage is not full</h4>
+		<d-box theme="dark">
+			<d-speaker>Cap'n</d-speaker>
+			<d-text asterisk="Cap'n">Good eye for music!</d-text>
+		</d-box>
+		<p class="note">A <a href="{{ '/misc/darkitems#cdbagel' | relative_url }}">CD Bagel</a> is added to the inventory or storage, as applicable.</p>
+
+		<hr class="hrhalf">
+
+		<h4>If you have $80 or more, but the inventory and storage are full</h4>
+		<d-box theme="dark">
+			<d-speaker>Sweet Cap'n Cakes</d-speaker>
+			<d-text asterisk="Cap'n">Too much stuff, chief!<span class="break"></span> It won't fit!</d-text>
+			<d-text asterisk="K_K">I can't fit either.</d-text>
+		</d-box>
+		<p class="note">Nothing happens.</p>
+
+		<hr class="hrhalf">
+
+		<h4>If you have less than $80</h4>
+		<d-box theme="dark">
+			<d-speaker>Sweet Cap'n Cakes</d-speaker>
+			<d-text asterisk="Cap'n">Hey, you can't<span class="break"></span> shortchange me!</d-text>
+			<d-text asterisk="K_K">Only me.</d-text>
+		</d-box>
+		<p class="note">Nothing happens.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<h4>First time</h4>
+		<hr class="hr2">
+		<h5>If Noelle is in the party</h5>
+		<d-box theme="dark">
+			<d-speaker>Sweet Cap'n Cakes</d-speaker>
+			<d-text asterisk="Cap'n">And who is that, ahem, madimoyzel?</d-text>
+			<d-text asterisk="Sweet">Leave her alone, Cap!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Sweet Cap'n Cakes</d-speaker>
+			<d-text asterisk="Cap'n">Nice radio antenna you<span class="break"></span> got there...</d-text>
+			<d-text asterisk="Sweet">Those are antlers, Cap!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Cap'n</d-speaker>
+			<d-text asterisk="Cap'n">H-huh!? I, uhh... hmm.</d-text>
+			<d-text asterisk="Cap'n">...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>K_K</d-speaker>
+			<d-text asterisk="K_K">Let's play her a song!</d-text>
+		</d-box>
+
+		<hr class="hr3">
+
+		<h5>If Noelle isn't in the party</h5>
+		<d-box theme="dark">
+			<d-speaker>Sweet Cap'n Cakes</d-speaker>
+			<d-text asterisk="Cap'n">... so where's the moyzel?</d-text>
+			<d-text asterisk="Sweet">Huh!? She's kidnapped!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Sweet Cap'n Cakes</d-speaker>
+			<d-text asterisk="Sweet">That's awful...</d-text>
+			<d-text asterisk="Cap'n">That sucks...</d-text>
+			<d-text asterisk="K_K">...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>K_K</d-speaker>
+			<d-text asterisk="K_K">Let's cheer up!</d-text>
+		</d-box>
+
+		<hr class="hr2">
+
+		<p class="note">K_K begins playing a <a href="{% include wikilink page='Holiday Studio' %}">chiptune version of Jingle Bells</a>.</p>
+
+		<hr class="hrhalf">
+
+		<h4>Subsequent times</h4>
+		<d-box theme="dark">
+			<d-speaker>Sweet Cap'n Cakes</d-speaker>
+			<d-text asterisk="Cap'n">This music, it's nice music.</d-text>
+			<d-text asterisk="K_K">That's my favorite genre.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="kk">K_K</h3>
+	<d-box theme="dark">
+		<d-speaker>Sweet Cap'n Cakes</d-speaker>
+		<d-text asterisk="K_K">Did you like the big statue?</d-text>
+		<d-text asterisk="Cap'n">Building it sucked!</d-text>
+		<d-text asterisk="Sweet">Took a lot of scrap.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Sweet Cap'n Cakes</d-speaker>
+		<d-text asterisk="Sweet">The other job we did was<span class="break"></span> way better!</d-text>
+		<d-text asterisk="K_K">It was big.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Sweet Cap'n Cakes</d-speaker>
+		<d-text asterisk="Cap'n">It's gonna blow your mind!</d-text>
+		<d-text asterisk="K_K">It was big.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="savepoint">
+	<h2>SAVE point</h2>
+	<p>Location is "<span class="white fnt-condensed">Cyber City - Music Shop</span>". Present in the same room as Sweet Cap'n Cakes, to the immediate south.</p>
+
+	<h3 id="savepoint-normal">Normal route</h3>
+	<d-box theme="dark">
+		<d-text asterisk>Energetic music wafts from the boxes.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of musical bagels.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="savepoint-weird">Weird Route</h3>
+	<p>This same narration is used for all SAVE points on the Weird Route after the <a href="{{ '/story/chapter2/city2#forcefield' | relative_url }}">forcefield puzzle</a>, as long as Noelle is in the party. This SAVE point is likely where the player will first see this text.</p>
+	<d-box theme="dark">
+		<d-text asterisk>You and Noelle were filled with power.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dumpster">
+	<h2>Dumpster</h2>
+	<p>Located past the SAVE point room and shopping area, in an alley off the traffic-filled streets.</p>
+
+	<h3 id="dumpster-normal">Normal route</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a dumpster... seems like there's a pillow inside.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dumpster-weird">Weird Route</h3>
+	<h4>Before freezing all encounters</h4>
+	<p class="note">In the below dialogue, &lt;#&gt; represents the number of encounters left. (That's the number of overworld encounters, not individual enemies in all encounters.)</p>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>LOOKING FOR [Irresistable Deals] THAT WILL [Blow Your Mind!?]</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WELL [Shut Your Mouth] BECAUSE YOU ARE [A Weakling!]</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>TRY A LITTLE [Friday Night Work Out]...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>THEN I'LL SHOW YOU MY</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>THEN I'LL SHOW YOU MY</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>&lt;#&gt; LEFT.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>GET STRONGER!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>THEN I'LL SHOW YOU MY</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>THEN I'LL SHOW YOU MY</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>&lt;#&gt; LEFT.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>After freezing all encounters</h4>
+	<h5>Initial</h5>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[Angel], [Angel]</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>ARE YOU LOOKING FOR THE [Ring] of [Thorns]?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Spamton</d-speaker>
+			<d-text asterisk>THat'll be 1997 KROMER.</d-text>
+		</d-box>
+		<d-choices theme="dark">
+			<d-option index="0" text="Yes"></d-option>
+			<d-option index="1" text="No"></d-option>
+		</d-choices>
+		<d-option-panel index="0" theme="dark">
+			<h6>If you have $1997, and the weapon inventory is not full</h6>
+			<p class="note">$1997 is deducted from your total money. Spamton laughs.</p>
+			<d-box theme="dark">
+				<d-speaker>Spamton</d-speaker>
+				<d-text asterisk>HERE'S YOUR [Ring]! CAREFUL, IT MIGHT [Sting]</d-text>
+				<d-text asterisk>EAHEAHEAH</d-text>
+			</d-box>
+			<d-box theme="dark">
+				<d-text asterisk>(You got the ThornRing.)</d-text>
+			</d-box>
+			<p class="note">The <a href="{{ '/misc/weapons#thornring' | relative_url }}">Thorn Ring</a> is added to the inventory.</p>
+
+			<hr class="hr2">
+
+			<h6>If you have $1997, but the weapon inventory is full</h6>
+			<d-box theme="dark">
+				<d-speaker>Spamton</d-speaker>
+				<d-text asterisk>LET ME CHECK YOUR [Pockets]</d-text>
+			</d-box>
+			<d-box theme="dark">
+				<d-speaker>Spamton</d-speaker>
+				<d-text asterisk>WOW, NICE AND SPACIOUS!!</d-text>
+			</d-box>
+			<d-box theme="dark">
+				<d-speaker>Spamton</d-speaker>
+				<d-text asterisk>PERFECT FOR [City Livin']</d-text>
+			</d-box>
+			<d-box theme="dark">
+				<d-speaker>Spamton</d-speaker>
+				<d-text asterisk>HOW CAN YOU [Afford] THIS!?!?!</d-text>
+			</d-box>
+			<d-box theme="dark">
+				<d-speaker>Spamton</d-speaker>
+				<d-text asterisk>... YET THERE'S NO ROOM FOR A [Ring]</d-text>
+			</d-box>
+			<d-box theme="dark">
+				<d-speaker>Spamton</d-speaker>
+				<d-text asterisk>THERE'S A [Boy], BUT THERE'S NO ROOM FOR A [Ring]</d-text>
+			</d-box>
+
+			<hr class="hr2">
+
+			<h6>If you don't have $1997</h6>
+			<d-box theme="dark">
+				<d-speaker>Spamton</d-speaker>
+				<d-text asterisk>[Money] NO</d-text>
+			</d-box>
+		</d-option-panel>
+		<d-option-panel index="1" theme="dark">
+			<d-box theme="dark">
+				<d-speaker>Spamton</d-speaker>
+				<d-text asterisk>BUT IT WAS SUCH A GOOD YEAR.</d-text>
+			</d-box>
+			<p class="note">Dialogue ends here.</p>
+		</d-option-panel>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Spamton</d-speaker>
+			<d-text asterisk>THEN [[Why]] GO TO A DUMPSTER!!!</d-text>
+		</d-box>
+		<p class="note">Dialogue ends here.</p>
+	</d-option-panel>
+
+	<hr class="hrhalf">
+
+	<h4>After purchasing the <a href="{{ '/misc/weapons#thornring' | relative_url }}">Thorn Ring</a></h4>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>DON'T WORRY! FOR OUR [No Money Back Guaranttee]</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>THIS IS [One Purchase] YOU WILL [Regret] FOR THE REST OF YOUR LIFE!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="annoyingmouseroom2">
+	<h2>Annoying Mouse Room 2</h2>
+	<p class="note">Past the SAVE point room, a shopping area, and some traffic-filled streets, Kris and Noelle come upon another mouse puzzle.</p>
+
+	<h3 id="annoyingmouseroom2-normal">Normal route</h3>
+	<h4 id="mouse-intro">Puzzle introduction</h4>
+	<p class="note">Upon coming close to the puzzle, the party walks forward, Noelle stopping a few steps in front of Kris.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="1"></d-sprite>
+		<d-text asterisk>Looks like another electric wall.</d-text>
+	</d-box>
+
+	<p class="note">She walks over to the "in" hole.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="5"></d-sprite>
+		<d-text asterisk>Huh? This hole has a switch inside of it...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Maybe we could try to put something inside...?</d-text>
+	</d-box>
+
+	<p class="note">She walks back over to Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="0"></d-sprite>
+		<d-text asterisk>What do you think, Kris?</d-text>
+	</d-box>
+
+	<p class="note">Control is returned to the player, who can work on solving the puzzle.</p>
+
+	<hr class="hrhalf">
+
+	<h4 id="mouse-scare">Scaring Noelle with the mice</h4>
+	<p>By releasing mice when she's in the way.</p>
+	<h5>First time</h5>
+	<p class="note">Noelle shrieks and jumps to the left side of the puzzle.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>I... I wish they wouldn't jump out at me like that!</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<p class="note">Noelle shrieks and jumps to the left side of the puzzle.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>(How many more times am I gonna get hit by mice...?)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="mouse-leave">Leaving to the west without Noelle</h4>
+	<p>If Noelle has been scared out of the way while working on the puzzle, or after "solving" the puzzle while Noelle is still looking into the "in" hole.</p>
+	<p class="note">Kris stops when Noelle speaks:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Kris, wait a second!</d-text>
+	</d-box>
+	<p class="note">Kris turns back towards Noelle.</p>
+
+	<hr class="hrhalf">
+
+	<h4 id="mouse-solve">"Solving" the puzzle</h4>
+	<p>By getting the mice to go into the "in" hole.</p>
+	<p class="note">Noelle walks to a point a few steps away from the "out" hole, then stops and turns to the side towards Kris and the mouse hole.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="0"></d-sprite>
+		<d-text asterisk>Kris! You did it! We should be able to...</d-text>
+	</d-box>
+
+	<p class="note">She turns towards the puzzle, looking shocked.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>... huh?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="1"></d-sprite>
+		<d-text asterisk>The forcefield's still up.</d-text>
+	</d-box>
+
+	<p class="note">Noelle walks over to the "in" hole, looking inside.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>D-did we miss something? H-hello?</d-text>
+	</d-box>
+
+	<p class="note">She tilts her head slightly, and control is returned to the player.</p>
+
+	<hr class="hrhalf">
+
+	<h4 id="mouse-noelle">Talking to Noelle after "solving" the puzzle</h4>
+	<p>While she's looking into the mouse hole.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="5"></d-sprite>
+		<d-text asterisk>I wonder what we did wrong... The forcefield is still up.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="mouse-forcefield">Taking down the forcefield</h4>
+	<p class="note">Upon releasing mice into the hole again, Noelle shrieks and jumps out of the way, vaulting clear over the forcefield and landing on the switch on the other side. The forcefield goes down. After a brief pause, a visibly mad Noelle storms past the mouse hole wall until she can see Kris:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Kris, I can't believe you made those mice--</d-text>
+	</d-box>
+
+	<p class="note">A slight pause. Noelle turns back to where the forcefield once was.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Huh?</d-text>
+	</d-box>
+
+	<p class="note">Noelle turns back to Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>I... I guess landing on the switch turned off the forcefield...</d-text>
+	</d-box>
+
+	<p class="note">A very slight pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Let's go, Kris.</d-text>
+	</d-box>
+
+	<p class="note">The camera refocuses on Kris as control is returned to the player, who can proceed onwards into the <a href="{{ '/story/chapter2/city4' | relative_url}}">next part of Cyber City</a>.</p>
+
+	<hr>
+
+	<h3 id="annoyingmouseroom2-weird">Weird Route</h3>
+	<p class="note">Upon coming close to the puzzle, the party walks forward, Noelle stopping several steps in front of Kris. After a pause, she turns to Kris.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>L... Look, Kris! Another puzzle!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>H... How should we solve it this time?</d-text>
+	</d-box>
+
+	<d-choices theme="dark">
+		<d-option index="0" text="Let's solve#it together!"></d-option>
+		<d-option index="1" text="Proceed"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text asterisk>Y... Yeah, you're right, Kris!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+			<d-text asterisk>(I thought Kris was acting strange, but...)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>(I guess it was just another mean joke...?)</d-text>
+		</d-box>
+		<p class="note">The Weird Route is aborted with a chime. Dialogue ends here, and <a href="#mouse-solve">the puzzle can be solved as on the normal route</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">Kris walks several steps forward, and Noelle backs away as the music fades to silence.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>H... how?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>There's nowhere to go.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Kris, there's... the path is blocked, isn't it?</d-text>
+	</d-box>
+
+	<d-choices theme="dark">
+		<d-option index="0" text="Sorry, I'll#do the puzzle"></d-option>
+		<d-option index="1" text="Proceed"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text asterisk>Y... Yeah, you're right, Kris!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+			<d-text asterisk>(I thought Kris was acting strange, but...)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>(I guess it was just another mean joke...?)</d-text>
+		</d-box>
+		<p class="note">The Weird Route is aborted with a chime. Dialogue ends here, and <a href="#mouse-solve">the puzzle can be solved as on the normal route</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">Kris walks forward and Noelle backs up further.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="C"></d-sprite>
+		<d-text asterisk>Kris... what are you doing?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="D"></d-sprite>
+		<d-text asterisk>Kris, is... is everything okay?</d-text>
+	</d-box>
+
+	<d-choices theme="dark">
+		<d-option index="0" text="Sorry, I'll#do the puzzle"></d-option>
+		<d-option index="1" text="Proceed"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text asterisk>Y... Yeah, you're right, Kris!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+			<d-text asterisk>(I thought Kris was acting strange, but...)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>(I guess it was just another mean joke...?)</d-text>
+		</d-box>
+		<p class="note">The Weird Route is aborted with a chime. Dialogue ends here, and <a href="#mouse-solve">the puzzle can be solved as on the normal route</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">Kris walks forward and Noelle backs up further.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="C"></d-sprite>
+		<d-text asterisk>Kris, there's lightning in the way...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="C"></d-sprite>
+		<d-text asterisk>If... if we move any further... I'll be... I'll be...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="D"></d-sprite>
+		<d-text asterisk>K... Kris, you didn't really hear what I said earlier, did you?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="D"></d-sprite>
+		<d-text asterisk>You... you wouldn't... let me...</d-text>
+	</d-box>
+
+	<d-choices theme="dark">
+		<d-option index="0" text="Sorry, I'll#do the puzzle"></d-option>
+		<d-option index="1" text="Proceed"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text asterisk>Y... Yeah, you're right, Kris!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+			<d-text asterisk>(I thought Kris was acting strange, but...)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>(I guess it was just another mean joke...?)</d-text>
+		</d-box>
+		<p class="note">The Weird Route is aborted with a chime. Dialogue ends here, and <a href="#mouse-solve">the puzzle can be solved as on the normal route</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">Kris walks forward, backing Noelle up against the forcefield.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="C"></d-sprite>
+		<d-text asterisk>K...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="D"></d-sprite>
+		<d-text asterisk>Kris...?</d-text>
+	</d-box>
+
+	<d-choices theme="dark">
+		<d-option index="0" text="Sorry, I'll#do the puzzle"></d-option>
+		<d-option index="1" text="Proceed"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text asterisk>Y... Yeah, you're right, Kris!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+			<d-text asterisk>(I thought Kris was acting strange, but...)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>(I guess it was just another mean joke...?)</d-text>
+		</d-box>
+		<p class="note">The Weird Route is aborted with a chime. Dialogue ends here, and <a href="#mouse-solve">the puzzle can be solved as on the normal route</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">The screen fades to black. After a moment, the chiming of <a href="{{ '/misc/spells#iceshock' | relative_url }}">Ice Shock</a> sounds. The screen fades back to the puzzle, where the block rotators and switch are now frozen, and the forcefield is absent. A pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Th... there, looks like I... I did it?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="e"></d-sprite>
+		<d-text asterisk>(I just... listened to Kris's command.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="W"></d-sprite>
+		<d-text asterisk>(And somehow, before I knew it...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="Z"></d-sprite>
+		<d-text asterisk>(The puzzle was finished.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="e"></d-sprite>
+		<d-text asterisk>(What was I thinking? Kris wasn't trying to hurt me...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="d"></d-sprite>
+		<d-text asterisk>(They were just making me stronger.)</d-text>
+	</d-box>
+
+	<p class="note">The Weird Route is continued with an ominous tune. The silence persists until the party proceeds to <a href="{{ '/story/chapter2/city4' | relative_url }}">the next part of the city</a>, where the cheese maze would normally be.</p>
+</section>
