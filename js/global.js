@@ -101,6 +101,10 @@ class DialogueSpeaker extends HTMLElement {
 				this.classList.add("kk");
 				break;
 
+			case "sweet cap'n cakes":
+				this.classList.add("scc");
+				break;
+
 			case "spamton neo":
 				this.classList.add("spamton");
 				break;

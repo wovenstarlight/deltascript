@@ -238,6 +238,18 @@ d-box[theme=battlemenu],
 .sweet { color: var(--sweet) }
 .capn { color: var(--capn) } 
 .kk { color: var(--kk) }
+.scc {
+	color: transparent;
+	background-image: linear-gradient(
+		to right,
+		var(--sweet) var(--border1),
+		var(--capn) var(--border1) var(--border2),
+		var(--kk) var(--border2)
+	);
+	background-clip: text;
+	--border1: 32%;
+	--border2: 64%;
+}
 .spamton {
 	color: transparent;
 	background-image: linear-gradient(to right, var(--friend-pink), var(--friend-yellow));
