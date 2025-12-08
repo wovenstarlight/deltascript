@@ -124,8 +124,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/field2` - Cyber Field story parts after SCC up to rollercoasters; subdivide as necessary
 		* Rollercoasters fight up to DECEMBER flashback DONE
 		* [the unused gml_Object_obj_ch2_city04_Step_0 scene](https://youtu.be/cxiEOeztndw?t=1661)
-		* `/mansionexterior` - Outside Queen's mansion
-			* `#weirdroute` - Weird route variant
 		* `/noellerescue` - Thinking of Susie rescuing Noelle
 		* `/confrontingqueen` - First battle with Queen feat. Berdly
 		* `/finalshowdown` - Battle against GIGA Queen, learning about the Roaring
