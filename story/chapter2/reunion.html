@@ -1,0 +1,1262 @@
+---
+title: Reuniting with Susie and Ralsei
+
+description: >
+  <p>Kris and Noelle finally meet back up with the rest of the party and head towards Queen's mansion.</p>
+  <p>Exclusive to the normal route.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_ch2_city07_Step_0
+    chapters: [2]
+    note: ball game
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: choices
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [2]
+    note: carnival stalls, teacup ride
+  -
+    name: gml_Object_obj_room_dw_city_postbaseball_Step_0
+    chapters: [2]
+    note: Heights dialogue
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [2]
+    note: treasure of air sign
+  -
+    name: gml_Object_obj_mazecheese_Other_10
+    chapters: [2]
+    note: cheese narration
+  -
+    name: gml_Object_obj_mouseballoon_pillar_Other_10
+    chapters: [2]
+    note: input mousehole pillar narration
+  -
+    name: gml_Object_obj_mouseballoon_pillar_release_Other_10
+    chapters: [2]
+    note: output mousehole pillar narration
+  -
+    name: gml_Object_obj_mouseballoon_pillar_bucket_Other_10
+    chapters: [2]
+    note: basket-hole pillar narration
+
+toc:
+  -
+    id: ballgame
+    name: Playing the ball-tossing game
+  -
+    id: healingmaster
+    name: Meeting back up with Susie and Ralsei
+  -
+    id: gift
+    name: Gift-giving
+  -
+    id: noellejoin
+    name: Noelle joins the party
+    subheadings:
+      -
+        id: stall
+        name: Checking the empty carnival stall
+      -
+        id: leaveleft
+        name: Attempting to leave to the west
+  -
+    id: heightsintro
+    name: Entering the Heights
+    subheadings:
+      -
+        id: teacup-pre
+        name: Passing the teacup ride
+      -
+        id: switch
+        name: Pressing switches
+      -
+        id: treasureofair
+        name: Treasure of air
+        subheadings:
+          -
+            id: treasureofair-sign
+            name: Reading the sign
+          -
+            id: treasureofair-teacups
+            name: Riding the teacups
+          -
+            id: treasureofair-chest
+            name: Opening the treasure chest
+      -
+        id: noellerejoin
+        name: Noelle rejoins the party
+  -
+    id: heightspuzzles
+    name: Going deeper into the Heights
+    subheadings:
+      -
+        id: fireworks
+        name: Fireworks
+      -
+        id: mouseballoons
+        name: Mouse balloon puzzles
+      -
+        id: basketdeposit
+        name: Depositing the basket
+      -
+        id: backtrack
+        name: Attempting to backtrack
+---
+<section class="d-section" id="ballgame">
+	<h2>Playing the ball-tossing game</h2>
+
+	<p class="note">Kris and Noelle enter an area lined with carnival-style stalls. Interacting with the stalls gives the following:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a ball throwing game. Prizes are seated under the counter.)</d-text>
+	</d-box>
+
+	<p class="note">While walking through the carnival stalls, the music fades to silence as Queen's laugh rings out. Kris stops, looking to the east, and Noelle looks panicked.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>O-oh no, she's coming back this way!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>I'll hide in that stall!</d-text>
+	</d-box>
+
+	<p class="note">Noelle hurries over to a nearby carnival stall where bottles are stacked up high enough to hide her. Getting behind the counter, she puts on her box disguise.</p>
+
+	<p class="note"><a href="{% include wikilink page='Queen (Soundtrack)' %}">Queen's theme</a> begins playing as she enters from the east, Kris walking to meet her. The camera pans to focus on the two of them, Noelle's stall centered near the top of the screen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="9"></d-sprite>
+		<d-text asterisk>Hey Check This Out</d-text>
+	</d-box>
+
+	<p class="note">Queen takes a few steps away from Kris and the stall, then winds back and pitches a baseball at the stacked bottles in the stall. They go flying in a cartoonish explosion, revealing the disguised Noelle jolting behind them. Queen walks back over to Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="Q"></d-sprite>
+		<d-text asterisk>Sweet Right</d-text>
+	</d-box>
+
+	<p class="note">Queen walks over to the stall.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="9"></d-sprite>
+		<d-text asterisk>Where's My Prize</d-text>
+	</d-box>
+
+	<p class="note">Noelle turns to Queen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>Oh! Um...</d-text>
+	</d-box>
+
+	<p class="note">Noelle produces a gift box, presumably from inside the stall.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>H-here!</d-text>
+	</d-box>
+
+	<p class="note">She passes the box to Queen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="Q"></d-sprite>
+		<d-text asterisk>Ha Ha Nice</d-text>
+	</d-box>
+
+	<p class="note">Queen begins to walk away with the gift box, but stops near the right edge of the screen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Wait I Actually Don't Want This</d-text>
+	</d-box>
+
+	<p class="note">She turns around; Noelle watches as Queen walks over to Kris and sets the box on their head, then walks off again, her theme fading as she leaves.</p>
+</section>
+
+<section class="d-section" id="healingmaster">
+	<h2>Meeting back up with Susie and Ralsei</h2>
+	<p class="note">The camera then pans over to the left; Susie and Ralsei walk in and stop some distance away from Kris. Susie is grinning with her hands behind her head, while Ralsei is looking towards her, laughing and holding a stick of cotton candy. Kris turns towards them upon hearing them speak:</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Hahaha, how was THAT!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Haha, Susie! You're not supposed to ATTACK people with it!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Oh yeah!? Watch me!!!</d-text>
+	</d-box>
+
+	<p class="note">Susie and Ralsei look towards the right, spotting Kris. Ralsei hurries over to them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="P"></d-sprite>
+		<d-text asterisk>Kris!!!!! There you are!!!</d-text>
+	</d-box>
+
+	<p class="note">Susie hurries over as well; the camera pans to focus on the three of them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Kris!! Check out my new attack!!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns to watch them both as Susie charges up a small green ball of magic and looses it upon Kris. The ball flies slowly towards them; upon making contact, they are healed for 2 HP. Susie straightens up.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(You felt slightly healed.)</d-text>
+	</d-box>
+
+	<p class="note">Susie puts her hands behind her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Heh, how's that!? Meet the new healing master, Kris!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei puts a hand over his mouth, amused.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="G"></d-sprite>
+		<d-text asterisk>Oh. Yes. She is a real... "master" at it, Kris.</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to the side facing the player, away from Ralsei.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>God, teaching you sarcasm was a mistake.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+		<d-text asterisk>Hahahahaha!</d-text>
+	</d-box>
+
+	<p class="note">Susie and Ralsei face Kris again.</p>
+</section>
+
+<section class="d-section" id="gift">
+	<h2>Gift-giving</h2>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>... Oh, Kris...? What's that you have there?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>Is that a... gift for someone?</d-text>
+	</d-box>
+
+	<d-choices theme="dark">
+		<d-option index="0" text="Give to#Ralsei"></d-option>
+		<d-option index="1" text="Give to#Susie"></d-option>
+		<d-option index="2" text="Give to Noelle"></d-option>
+		<d-option index="3" text="Give to Berdly"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The gift passes to sit atop Ralsei's head, and he blushes, turning to the side facing the player.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="D"></d-sprite>
+			<d-text asterisk>H... huh!? You're giving it to... me...?</d-text>
+		</d-box>
+
+		<p class="note">He turns to Kris, still blushing.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+			<d-text asterisk>Kris...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+			<d-text asterisk>I... I've never gotten a gift like this before.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+			<d-text asterisk>U... ummm... I'm sorry, I...</d-text>
+		</d-box>
+
+		<p class="note">He turns to the side away from the player.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>(I'm so happy, I don't really know what to say...)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+
+		<p class="note">Ralsei puts the gift box away. He turns to face the others, blush gone.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>I... I'll win something for you too, okay!?</d-text>
+		</d-box>
+
+		<p class="note">Ralsei walks over to Noelle's stall; Kris turns to watch.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+			<d-text asterisk>One baseball, please!!!</d-text>
+		</d-box>
+
+		<p class="note">Ball in hand, Ralsei backs up and prepares to throw.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+			<d-text asterisk>W-wait a second!!</d-text>
+		</d-box>
+
+		<p class="note">Ralsei hurls the ball, blowing the box disguise off Noelle's head and leaving her stunned. Ralsei and Susie both look shocked.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="6"></d-sprite>
+			<d-text asterisk>N... Noelle!?</d-text>
+		</d-box>
+
+		<p class="note">Ralsei walks over to stand beside Kris, while Susie steps forward to stand across from them. Noelle comes out from behind the stall and stands at the center, blushing as she watches Susie with a hand over her mouth.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">The gift passes to sit atop Susie's head, and she twists in confusion.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="6"></d-sprite>
+			<d-text asterisk>... huh? What...?</d-text>
+		</d-box>
+
+		<p class="note">Susie squints at Kris, her smile strained.</p> <!-- spr_susier_dark_eyes instead of spr_susie_walk_right_dw. she's got darker eyebags and her eyebrows are scrunched… suz it's okay… friends can do nice things for you… -->
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="K"></d-sprite>
+			<d-text asterisk>Alright. Where'd the hell'd you get this?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>Perhaps they won it at that orb-tossing game.</d-text>
+		</d-box>
+
+		<p class="note">Susie throws her head back and laughs, fangs unusually prominent.</p> <!-- spr_susier_dark_laugh instead of spr_susie_laugh_dw. more teeth gnashing than open laughter -->
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="2"></d-sprite>
+			<d-text asterisk>Yeah, like Kris could ever win that!! Hahaha!!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="A"></d-sprite>
+			<d-text asterisk>They musta stole it or something!! Haha!!</d-text>
+		</d-box>
+
+		<p class="note">Ralsei's eyes widen and his smile drops.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+			<d-text asterisk>S... Stole it...?</d-text>
+		</d-box>
+
+		<p class="note">Ralsei smiles again.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>Wow, they must have really wanted to give it to you!</d-text>
+		</d-box>
+
+		<p class="note">Susie freezes mid-laugh. A pause.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="6"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+
+		<p class="note">A pause. Susie turns away from Kris and Ralsei, expression still strained.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="K"></d-sprite>
+			<d-text asterisk>Well, takes guts to do something stupid like that.</d-text>
+		</d-box>
+
+		<p class="note">She turns to the side away from the player and puts the gift box away, then turns to Kris and points a challenging finger at them.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="2"></d-sprite>
+			<d-text asterisk>... Don't think I'm gonna let you out-do me!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="Q"></d-sprite>
+			<d-text asterisk>If you're gonna pull some stupid stunt like that...</d-text>
+		</d-box>
+
+		<p class="note">Susie hurries over to stand in front of the stall, pointing an unsteady finger at the disguised Noelle. Kris and Ralsei turn to watch.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="5"></d-sprite>
+			<d-text asterisk>Then I'll steal you something too!!</d-text>
+		</d-box>
+
+		<p class="note">She darts up to the stall and nabs the box right off Noelle's head, leaving her shocked while Susie contemplates the box.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="7"></d-sprite>
+			<d-text asterisk>Cool box...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="F"></d-sprite>
+			<d-text asterisk>A...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+			<d-text asterisk>AHHHH!!!</d-text>
+		</d-box>
+
+		<p class="note">Susie looks stunned, the box flying out of her hands and out of sight.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="6"></d-sprite>
+			<d-text asterisk>N... Noelle!?</d-text>
+		</d-box>
+
+		<p class="note">A pause. Ralsei walks up beside Kris while Susie backs away from the stall, standing across from the other two. Noelle comes out from behind the stall and stands at the center, blushing as she watches Susie with a hand over her mouth.</p>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<p class="note">The camera pans as Kris walks over to the stall.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>K... Kris...? Y... You have something for me...?</d-text>
+		</d-box>
+
+		<p class="note">The gift passes to sit atop Noelle's antlers.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text asterisk>(Kris hasn't given me a gift like this...)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+			<d-text asterisk>(Since we were little kids.)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+			<d-text asterisk>(Are they saying they want things to go back to...)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+			<d-text asterisk>W-wait, isn't that the plush I just gave Queen!?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+			<d-text asterisk>What!? You want a refund!? So you can...!?</d-text>
+		</d-box>
+
+		<p class="note">Noelle flings both gift box and disguise box off her head, looking mad.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+			<d-text asterisk>Come on, say that to my face!! Gosh!!</d-text>
+		</d-box>
+
+		<p class="note">As she calms, Susie and Ralsei reel in shock.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="6"></d-sprite>
+			<d-text asterisk>N... Noelle!?</d-text>
+		</d-box>
+
+		<p class="note">Kris and Ralsei move to stand together towards the left side, while Susie steps forward to stand across from them. Noelle comes out from behind the stall and stands at the center, blushing as she watches Susie with a hand over her mouth.</p>
+	</d-option-panel>
+	<d-option-panel index="3" theme="dark">
+		<p class="note">The camera pans slightly towards the east, where Berdly enters from, stopping some distance from Kris.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Berdly" variant="dark" emotion="0"></d-sprite>
+			<d-text asterisk>Kris, have you seen...</d-text>
+		</d-box>
+
+		<p class="note">Kris turns around, and Berdly looks shocked.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Berdly" variant="dark" emotion="3"></d-sprite>
+			<d-text asterisk>Kris!? We took a break from trucing for ONE second...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Berdly" variant="dark" emotion="B"></d-sprite>
+			<d-text asterisk>And you're ALREADY back with Susie?!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="K"></d-sprite>
+			<d-text asterisk>???????</d-text>
+		</d-box>
+
+		<p class="note">Berdly turns away from Kris.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Berdly" variant="dark" emotion="H"></d-sprite>
+			<d-text asterisk>Should have expected this... hmph...</d-text>
+		</d-box>
+
+		<p class="note">He turns back to Kris.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Berdly" variant="dark" emotion="2"></d-sprite>
+			<d-text asterisk>You couldn't keep up with my puzzle-solving skills!</d-text>
+		</d-box>
+
+		<p class="note">Kris walks up to him, and the gift passes to sit atop Berdly's head.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Berdly" variant="dark" emotion="3"></d-sprite>
+			<d-text asterisk>H... huh...?</d-text>
+		</d-box>
+
+		<p class="note">The gift box flashes and disappears, leaving behind the Berdly plush within. A pause.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Berdly" variant="dark" emotion="5"></d-sprite>
+			<d-text asterisk>A plush...? Of ... me?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Berdly" variant="dark" emotion="4"></d-sprite>
+			<d-text asterisk>With... nipples?</d-text>
+		</d-box>
+
+		<p class="note">Berdly turns away from Kris.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Berdly" variant="dark" emotion="E"></d-sprite>
+			<d-text asterisk>... Hmph. Guess I'll forgive you for now.</d-text>
+		</d-box>
+
+		<p class="note">Berdly turns to Kris.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Berdly" variant="dark" emotion="1"></d-sprite>
+			<d-text asterisk>See you, Kris.</d-text>
+		</d-box>
+
+		<p class="note">Berdly walks away to the east. A pause. Then Kris turns back to the others as Susie looks exasperated.</p>
+
+		<d-box theme="dark">
+			<d-box place="top left" offset-x="7%">
+				<d-sprite speaker="Susie" emotion="17"></d-sprite>
+				<d-text>Why the hell'd you give it to Berdly!?</d-text>
+			</d-box>
+			<d-box place="center">
+				<d-sprite speaker="Noelle" emotion="20"></d-sprite>
+				<d-text>Why did you give it to Berdly!?</d-text>
+			</d-box>
+			<d-box>
+				<d-sprite speaker="Ralsei" emotion="30"></d-sprite>
+				<d-text>Um, what... unexpected kindness, Kris!</d-text>
+			</d-box>
+		</d-box>
+
+		<p class="note">Susie looks calmer.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="C"></d-sprite>
+			<d-text asterisk>... Let's just get the hell out of here.</d-text>
+		</d-box>
+
+		<p class="note">Susie begins walking over to Kris, but stops and jolts in shock alongside Ralsei when Noelle flings her box disguise off her head, looking agitated.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+			<d-text asterisk>W... wait!!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="6"></d-sprite>
+			<d-text asterisk>N... Noelle!?</d-text>
+		</d-box>
+
+		<p class="note">Kris and Ralsei move to stand together towards the left side, while Susie steps forward to stand across from them. Noelle comes out from behind the stall and stands at the center, blushing as she watches Susie with a hand over her mouth.</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="noellejoin">
+	<h2>Noelle joins the party</h2>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>... the hell were you doing in there? That's cheating.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>I... I... um... I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>... hm. Glad you're okay though.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Since that stupid Queen took you, I was kinda worried...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="L"></d-sprite>
+		<d-text asterisk>(Thump, thump...)</d-text>
+	</d-box>
+
+	<p class="note">Susie twists in shock.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="F"></d-sprite>
+		<d-text asterisk>Wait.</d-text>
+	</d-box>
+
+	<p class="note">She rushes forward and points at a shocked Noelle.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Aren't you on their side!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+		<d-text asterisk>H-huh!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="D"></d-sprite>
+		<d-text asterisk>W-wait, wait, wait, wait, wait!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Umm, I... I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="I"></d-sprite>
+		<d-text asterisk>(Kris, help me...)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="We have#a truce"></d-option>
+		<d-option index="1" text="She is#our enemy"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Noelle looks calmer.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+			<d-text asterisk>Th... that's right! We have a truce!!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>Kris said I could... I could be on your team!</d-text>
+		</d-box>
+
+		<p class="note">Susie falters, head turning towards Kris.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="6"></d-sprite>
+			<d-text asterisk>Oh, really?</d-text>
+		</d-box>
+
+		<p class="note">She scratches her head.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="0"></d-sprite>
+			<d-text asterisk>... well, if Kris said so, I guess.</d-text>
+		</d-box>
+
+		<p class="note">She stops scratching her head and flips her hand dismissively.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="2"></d-sprite>
+			<d-text asterisk>Didn't really wanna kill you anyway.</d-text>
+			<d-box offset-x="-5%" offset-y="-15%">
+				<d-sprite speaker="Noelle" emotion="22"></d-sprite>
+				<d-text>Thump, thump...</d-text>
+			</d-box>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+			<d-text asterisk>So? Get in line already.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="M"></d-sprite>
+			<d-text asterisk>O... okay!!</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Susie pulls back and draws her axe at the same time as Kris draws their sword. Noelle jolts.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+			<d-text asterisk>Kris!!! What the heck are you saying!!!</d-text>
+		</d-box>
+
+		<p class="note">Noelle jolts again from the force of her speech:</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+			<d-text asterisk>We have a truce!! A truce!!!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="6"></d-sprite>
+			<d-text asterisk>Huh?</d-text>
+		</d-box>
+
+		<p class="note">Noelle looks calmer as Susie and Kris put away their weapons. Then Noelle blushes again, looking towards Susie.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="7"></d-sprite>
+			<d-text asterisk>I... I'm afraid Queen is going to find me... I...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+			<d-text asterisk>I thought you guys... might be able to... protect me...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="6"></d-sprite>
+			<d-text asterisk>Protect... you?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="A"></d-sprite>
+			<d-text asterisk>S... sorry... I... if I'm getting in the way, I can...</d-text>
+		</d-box>
+
+		<p class="note">Susie scratches her head.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="D"></d-sprite>
+			<d-text asterisk>Hey, look.</d-text>
+		</d-box>
+
+		<p class="note">Susie stops scratching her head and flips her hand dismissively.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="C"></d-sprite>
+			<d-text asterisk>You can... tag along in back or something.</d-text>
+		</d-box>
+
+		<p class="note">She lowers her hand and turns her head away.</p>
+
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="A"></d-sprite>
+			<d-text asterisk>Just... don't get in our way or anything, okay?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="M"></d-sprite>
+			<d-text asterisk>Of... of course!!</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<p class="note">The party lines up, Noelle standing at the end behind Ralsei. A pause. Then Noelle puts a hand over her mouth and blushes.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="M"></d-sprite>
+		<d-text asterisk>Kris... also s-said I should be... behind... Susie.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Uhh... well, if Kris said so?</d-text>
+	</d-box>
+
+	<p class="note">Noelle and Ralsei switch positions; Noelle has her gaze lowered and is still blushing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Let's go already.</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<h3>If you gave the gift to Berdly</h3>
+	<p class="note">Berdly reenters the room from the east and stops in front of the party.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="7"></d-sprite>
+		<d-text asterisk>Hmph. Guess I'll join too. ... but only for this room!</d-text>
+	</d-box>
+	<p class="note">Berdly "joins" the party at the end of the line (and will disappear upon leaving this room).</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>(NO ONE WAS ASKING!)</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<p class="note">The camera pans to the left, focusing on the party.</p>
+
+	<hr class="hr2">
+
+	<h3>If you talked to Starwalker in Chapter 1</h3>
+	<p class="note">Starwalker appears on the left of the screen.</p>
+	<d-box theme="dark">
+		<d-speaker>Starwalker</d-speaker>
+		<d-text asterisk>I will also &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;join</d-text>
+	</d-box>
+	<p class="note">Starwalker "joins" the party at the end of the line (and will disappear upon leaving this room).</p>
+
+	<hr class="hr2">
+
+	<p class="note">Control is returned to the player. Susie now has <a href="{{ '/misc/spells#ultimateheal' | relative_url }}">Ultimate Heal</a> in her spells list in the <a href="{{ '/misc/powermenu' | relative_url }}">POWER menu</a>.</p>
+
+	<hr>
+
+	<h3 id="stall">Checking the empty carnival stall</h3>
+	<p>That is, the stall which Noelle was hiding behind.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>... Hey, Noelle. One thing we gotta get straight.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="L"></d-sprite>
+		<d-text asterisk>Y-y-y-yes?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+		<d-text asterisk>Where the hell'd you put that cool box?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="O"></d-sprite>
+		<d-text asterisk>Umm, I... I just sort of... I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Whatever. Just make us another one.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="M"></d-sprite>
+		<d-text asterisk>... um... o-okay, sure!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a ball throwing game.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="leaveleft">Attempting to leave to the west</h3>
+	<p class="note">The party stops as the other party members speak up.</p>
+
+	<hr class="hr2">
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Isn't that where we came from?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Yeah, there isn't any cotton candy left so...</d-text>
+	</d-box>
+
+	<hr class="hr3">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>(How did Kris end up being the leader...?)</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<p class="note">Kris turns towards the east.</p>
+
+	<hr>
+
+	<p class="note">The player must leave from the eastern path and proceed towards the Heights.</p>
+</section>
+
+<section class="d-section" id="heightsintro">
+	<h2>Entering the Heights</h2>
+
+	<h3 id="teacup-pre">Passing the teacup ride</h3>
+	<p class="note">A <a href="{{ '/misc/savepoints#cyberheights' | relative_url }}">SAVE point</a> declares the next area to be Cyber City's Heights. A teacup ride appears immediately after the SAVE point and can be interacted with:</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Look Kris! Another teacup ride!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="D"></d-sprite>
+		<d-text asterisk>But there's only 3 seats...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="R"></d-sprite>
+		<d-text asterisk>(M-maybe two of us could... sh-share one?)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Damn, guess we gotta take the stairs.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Deer and teacups... a dangerous combination.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="switch">Pressing switches</h3>
+
+	<p class="note">The party can proceed up several flights of stairs beside the teacup ride. At the top of the stairs are narrow branching paths, most of which are blocked by forcefields. The unblocked path contains a switch at the end, and Noelle stops in recognition upon approaching it, her blush fading in her distraction.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Wait, I know! Umm, to turn off that force field...</d-text>
+	</d-box>
+
+	<p class="note">Noelle walks past Susie and Kris to stand on the switch, turning to face the others. The forcefield on the northern path, visible at the top right of the screen, disappears.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>You just stay standing on this switch!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Huh.</d-text>
+	</d-box>
+
+	<p class="note">A pause. Kris and Susie turn away, while Ralsei walks forward to join them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Well, see ya later.</d-text>
+		<d-box place="center" offset-y="1.5em">
+			<d-sprite speaker="Noelle" emotion="15"></d-sprite>
+			<d-text>(W-wait, what did I volunteer for?)</d-text>
+		</d-box>
+	</d-box>
+
+	<p class="note">Control is returned to the player, who can lead the party towards the unblocked northern path.</p>
+
+	<p class="note">To the northeast, past an <a href="{{ '/encounters/ambyulance' | relative_url }}">Ambyu-Lance encounter</a>, is another switch which takes down the southeastern forcefield. Once this switch is pressed, walking past the branch where Noelle is standing causes her to <a href="#noellerejoin">rejoin the party</a>.</p>
+
+	<p class="note">To the northwest lies the <a href="#treasureofair">treasure of air</a>, an optional treasure that can be unlocked before or after pressing the northeastern switch. (The order alters the dialogue when <a href="#noellerejoin">Noelle rejoins the party</a>.)</p>
+
+	<hr>
+
+	<h3 id="treasureofair">Treasure of air</h3>
+
+	<h4 id="treasureofair-sign">Reading the sign</h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-text asterisk>(The treasure of air. Where three are one, place one to three.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Perhaps it means we all have to enter one teacup?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>... well, I don't like doing it but it works.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-text asterisk>(The treasure of air. Where three are one, place one to three.)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="treasureofair-teacups">Riding the teacups</h4>
+	<h5>First time</h5>
+	<p class="note">The screen fades to black, and the party can be heard jumping.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(You all jumped into one teacup.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You heard a clicking sound.)</d-text>
+	</d-box>
+	<p class="note">There is indeed a click audible, and the screen fades back in to show the party standing in front of the teacup ride as before. On the paths above, the northwest forcefield just past the sign has disappeared.</p>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Hell no, like we're doing that again.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="treasureofair-chest">Opening the treasure chest</h4>
+	<p class="note">The treasure chest has no flavor text; instead, when it opens, a variety of colored balloons fly out from inside. No item is obtained.</p>
+
+	<hr>
+
+	<h3 id="noellerejoin">Noelle rejoins the party</h3>
+	<p class="note">After pressing the northeastern switch and walking past the branch where Noelle is waiting, Noelle darts forward and stands in Kris's way.</p>
+
+	<hr class="hr2">
+
+	<h4>Standard</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>(W... wait for me!)</d-text>
+	</d-box>
+
+	<hr class="hr3">
+
+	<h4>If you opened the "treasure of air" treasure chest</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="H"></d-sprite>
+		<d-text asterisk>So, umm... why were you all... riding a teacup together?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Ugh. Balloons.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Balloons?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Trust me... you dodged a bullet.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Umm... okay!</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<p class="note">Noelle walks past the others to stand behind Susie, Ralsei backing up to make room for her. The party may proceed down the southeastern path.</p>
+</section>
+
+<section class="d-section" id="heightspuzzles">
+	<h2>Going deeper into the Heights</h2>
+
+	<h3 id="fireworks">Fireworks</h3>
+	<p class="note">Further down the path, the party sees fireworks go off in the sky beyond. These explode into bullets that Kris must dodge. Past the fireworks, Noelle has disappeared; the party of three continues on unawares, passing some buttons that zap forcefields into existence between nearby pillars and destroy the balloons floating there. The third such switch destroys a balloon that was holding up a slice of cheese, which when walked into triggers a <a href="{{ '/encounters/maus' | relative_url}}">Maus encounter</a>.</p>
+
+	<p class="note">Immediately after the encounter ends, Susie speaks:</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Wait a sec... Where's Noelle?</d-text>
+	</d-box>
+
+	<p class="note">The party members turn to face back the way they came; Noelle walks up to them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>S-sorry, I... I'd just never seen fireworks up close before...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+		<d-text asterisk>Those bullets? What, you scared?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Uh... umm... I guess so...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>(Maybe that's... why I couldn't stop watching...?)</d-text>
+	</d-box>
+
+	<p class="note">Noelle joins the party line behind Susie again. The destroyed cheese remains in the path, and can be interacted with:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(The cheese was destroyed in the heat of battle.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Feels like you lost sight of what was important.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="mouseballoons">Mouse balloon puzzles</h3>
+	<p class="note">The next area contains a broken pathway, which can be passed through by solving puzzles involving mice tied to balloons. Kris can pop the balloons using forcefield switches, dropping the mice into a basket they find along the way and carry on their head. The gathered mice can then be deposited at mouseholes along the way, which require a certain number of mice to open up the path leading forward.</p>
+
+	<hr class="hrhalf">
+
+	<h4>Interacting with an input mousehole without sufficient mice</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(You don't have enough mice to fill up the hole.)</d-text>
+	</d-box>
+
+	<h5>Unused variant</h5>
+	<p>For checking a mousehole when not carrying the basket. Impossible to get, since the basket blocks the way to all mouseholes.</p>
+	<d-box theme="dark">
+		<d-text asterisk>Looks like a hole to put mice in, but you don't have any mice.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Depositing enough mice into an input mousehole</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(You put the mice in the hole.)</d-text>
+	</d-box>
+	<p class="note">Mice move from the basket to the mousehole one by one, each accompanied by a squeak, with the counters on both basket and pillar counting down correspondingly. Once enough mice enter the hole, the pillar counter turns to a yellow 0 and the path ahead appears.</p>
+
+	<hr class="hrhalf">
+
+	<h4>Interacting with an input mousehole after depositing enough mice</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(It's full of mice.)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Interacting with the output mousehole</h4>
+	<p>From which balloon-bound mice emerge.</p>
+	<h5>If you need more mice</h5>
+	<p class="note">A Maus tied to a balloon floats out and stops between the nearby pillars.</p>
+
+	<h6>Unused narration - First time</h6>
+	<p>For when no mice have been caught in Kris's basket before. Impossible to get, as one such Maus must be caught to open the path in front of the output mousehole.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Suddenly a maus came out of the hole!)</d-text>
+	</d-box>
+
+	<h5>If you don't need more mice</h5>
+	<d-box theme="dark">
+		<d-text asterisk>(The hole is silent.)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>After solving the first two mousehole puzzles</h4>
+	<p>By inserting a single Maus into the first two input mouseholes.</p>
+
+	<p class="note">Immediately after the second mousehole's path appears, the music fades and the camera pans over to the right. The party members crowd forward (Noelle no longer blushing and looking down) and spot yet another input mousehole up ahead, this one requiring 20 mice.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>20 more!? Damn, we're gonna be here forever!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>M... maybe if we... um, split up the work?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Huh?</d-text>
+	</d-box>
+
+	<p class="note">The screen fades to black, then fades back in to show the party members standing ready to gather mice. Noelle stands in front of the output mousehole to release mice, Susie and Ralsei stand next to the forcefield switch to turn it on when needed, and Kris waits under the forcefield pillars ready to catch the mice as they fall.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="0"></d-sprite>
+		<d-text asterisk>I'll release the mice...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Susie will break the balloons when they reach the top...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>And Kris, you catch them! Umm, if that's ok.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="0"></d-sprite>
+		<d-text asterisk>Ready...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Go!</d-text>
+	</d-box>
+
+	<p class="note"><a href="{% include wikilink page='A Simple Diversion' %}">Fast-paced music</a> begins playing, commencing the minigame. Noelle releases mice and Susie and Ralsei alternate jumping on the switch to zap them out of the air. If Kris fails to catch a Maus, Noelle looks shocked as they fall briefly to the ground, losing all mice gathered so far.</p>
+
+	<p class="note">Once Kris catches 20 mice, Noelle smiles anxiously towards them. The screen fades to black and the music fades out as well. The screen then fades back in on the party standing between the forcefield pillars; Noelle is blushing with a lowered gaze again. Susie poses, grinning.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>Hell yeah! Take that, you stupid mice!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns to the side facing the player and puts a hand over his mouth, smiling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>It's nice seeing you enjoy a puzzle, Susie.</d-text>
+	</d-box>
+
+	<p class="note">He lowers his hand as Susie turns away, scratching her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Well. Maybe they aren't awful if you do 'em like that.</d-text>
+	</d-box>
+
+	<p class="note">Susie stops scratching her head and turns to Noelle.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>... not bad, Noelle. That was kinda smart.</d-text>
+	</d-box>
+
+	<p class="note">Noelle turns to the side facing the player, blushing and putting a hand over her mouth.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="M"></d-sprite>
+		<d-text asterisk>H-Huh? Th... thanks...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+		<d-text asterisk>Heh, maybe next time I'll let you do my homework.</d-text>
+	</d-box>
+
+	<p class="note">Susie throws her head back and laughs for a moment.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+		<d-text asterisk>(Can I?)</d-text>
+	</d-box>
+
+	<p class="note">The <a href="{% include wikilink page='Welcome To The City' %}">city music</a> restarts, and control is returned to the player, who can go ahead to deposit the 20 mice and open up the path ahead.</p>
+
+	<hr>
+
+	<h3 id="basketdeposit">Depositing the basket</h3>
+	<p class="note">After the 20 mice are deposited into their mousehole, another input "mousehole" appears up ahead with a counter of 1, the hole itself suspiciously basket-shaped. Sure enough, when interacted with:</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(You put the bucket in the hole.)</d-text>
+	</d-box>
+
+	<p class="note">The basket enters the hole with a much lower squeak, and stairs appear to complete the path leading forward.</p>
+
+	<p class="note">The basket-hole can still be interacted with:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's full of bucket.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="backtrack">Attempting to backtrack</h3>
+	<h4>Before depositing the 20 mice</h4>
+	<p class="note">Susie stops Kris a few steps away from the output mousehole:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Hey, the hell are you doing with our mice?!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>We worked on getting those together!</d-text>
+	</d-box>
+
+	<h4>After depositing the 20 mice</h4>
+	<p class="note">Noelle stops Kris a few steps away from the output mousehole:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>I think we're done with the mice for now, Kris.</d-text>
+	</d-box>
+
+	<h4>After depositing the basket</h4>
+
+	<p class="note">Susie stops Kris a few steps away from the basket-hole:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>What are you doing? The path is open!</d-text>
+	</d-box>
+
+	<hr>
+
+	<p class="note">With the path fully opened, the player must lead the party onwards to the <a href="{{ '/story/chapter2/mansionexterior' | relative_url }}">outside of Queen's mansion</a>, where the Dark Fountain lies in wait.</p>
+</section>
