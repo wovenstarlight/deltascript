@@ -122,10 +122,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* migrate prefight dialogue from `/encounters/kroundcardcastle`
 	* `/chapter2`
 		* `/field2` - Cyber Field story parts after SCC up to rollercoasters; subdivide as necessary
-		* Rollercoasters fight up to drunk queen encounter DONE
-		* SCC save point up to drive with queen DONE
+		* Rollercoasters fight up to DECEMBER flashback DONE
 		* [the unused gml_Object_obj_ch2_city04_Step_0 scene](https://youtu.be/cxiEOeztndw?t=1661)
-		* `/december` - DECEMBER puzzle, Noelle reminiscing
 		* `/reunion` - meeting back up with the party up to going to queen's mansion. maybe combine this and next page?
 			* `#healingmaster` - Susie and Ralsei show back up
 		* `/mansionexterior` - Outside Queen's mansion
