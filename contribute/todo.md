@@ -124,14 +124,60 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/field2` - Cyber Field story parts after SCC up to rollercoasters; subdivide as necessary
 		* Rollercoasters fight up to DECEMBER flashback DONE
 		* [the unused gml_Object_obj_ch2_city04_Step_0 scene](https://youtu.be/cxiEOeztndw?t=1661)
-		* `/noellerescue` - Thinking of Susie rescuing Noelle
-		* `/confrontingqueen` - First battle with Queen feat. Berdly
-		* `/finalshowdown` - Battle against GIGA Queen, learning about the Roaring
-			* `#postfight`
+		* through the mansion, normal route
+			* `/roomescape` - Breaking out of personalized rooms, light puzzles, meeting up with Ralsei
+			* *foyer - no story-specific interactions, just say party goes past foyer and enters 1F*
+			* `/mansion1F` - queen going #mypictures, respect the pottery, pottery maze, TM encounter at end
+			* NEOquest (optional, starts towards the end of 1F) - hacker, kris telling the others to stay behind, susral glasses thing when coming back outside. combine existing `/spamtonneo` page into this! like with jevilquest `/story/chapter1/jevil`
+			* `/mansion2F` - dinner party, kitchen infestation / mauswheel, east dining room (platter key hunt)
+			* 3F
+				* `/mansion3F` - fountain video on left, berdly and susie splitting off (save point)
+				* Acid tunnel DONE (on 3F, but long enough that it deserves its own page)
+				* `/noellerescue` - Thinking of Susie rescuing Noelle (approaching 4F)
+			* 4f (roof)
+				* `/confrontingqueen` - First battle with Queen feat. Berdly
+				* `/finalshowdown` - Battle against GIGA Queen, learning about the Roaring
+					* `#postfight`
+		* `/mansionweird` - through the mansion, weird route version. A lot shorter than the normal route mansion page, since you only really have to describe the scenery changes for a lot of it - I think you could combine basically this whole thing into one page…
+			* mansion foyer
+				* cutscene - rouxls
+				* NPC "oh no the butlers"
+				* B1F door - go play minecrap
+				* stairs are blocked by forcefields, 2f shortcut open
+			* 2f
+				* kitchen door - closed narration
+				* mauswheel outside
+				* pipis maze
+				* hostile tasque manager
+				* no tea in teacup ride
+			* 3f
+				* shortcuts to foyer and roof automatically open
+				* werewerewire to left, no narration
+				* acid river to east, no boat/narration
+			* 4f (roof)
+				* forcefield blocking left path
+				* heading right triggers noelle room cutscene
+				* proceed eastwards to find queen waiting on roof, false giga fight cutscene
+				* head east for susie to reassure queen and head off
+				* queen/ralsei intxn
+				* pre fountain refreshments and save point
 		* `/fountain` - Sealing the fountain
-		* `/fountainweird` - Sealing the fountain (Weird Route)
-		* `/shelter` - End of chapter scene with Susie confronting Snowy/MK
-		* `/handwashing` - Kris runs the tap.
+			* `#normalroute`
+			* `#weirdroute`
+				* `#weirdroute-postfight`
+		* Hometown scenes...?
+			* `/shelter` - End of chapter scene with Susie confronting Snowy/MK
+			* `/handwashing` - Kris runs the tap.
+		* actually… consider `/weirdroute` - a compilation page for all major route interactions
+			* yeah it's probably easier just to link to the `#weirdroute` sections on some pages, but it's also nice to have one page that collects all the relevant info at once, so copy in the full sections
+			* want to include:
+				* noelle questioning the backtracking (post-trucies & trash dump `gml_Object_obj_weirdroute_manipulator_Step_0`)
+				* freeze ring addison, switch puzzle
+				* AMR2, AMR3
+				* buying thorn ring from spamton
+				* berdly encounter
+				* mansion reunion
+				* /mansionweird - only notable ones! rouxls cutscene, butler NPC, B1F minecrap; then skip direct to 4F noelle cutscene, queen scene, and finally fountain scene
 	* `/chapter3`
 		* `/desertboard` - all during-gameplay dialogue
 			* `#weatherpostfight`
