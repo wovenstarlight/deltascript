@@ -12,17 +12,21 @@ sources:
     name: gml_Object_obj_ch2_city_berdly_Step_0
     chapters: [2]
   -
-    name: gml_GlobalScript_scr_text
+    name: gml_Object_obj_savepoint_Other_10
     chapters: [2]
-    note: Weird Route choice menu
+    note: SAVE point narration
   -
     name: gml_Object_obj_npc_sign_Other_10
     chapters: [2]
     note: post-SnowGrave ice block interaction
   -
-    name: gml_Object_obj_savepoint_Other_10
+    name: gml_Object_obj_weirdroute_sewerEntrance_Step_0
     chapters: [2]
-    note: SAVE point narration
+    note: manhole interaction
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: choices
 
 toc:
   -
@@ -540,5 +544,26 @@ toc:
 		<d-text asterisk>(It's hard to see into the ice.)</d-text>
 	</d-box>
 
-	<p class="note">Kris can only enter the newly-opened northern alley, a long path which leads to an open manhole. After going through the manhole, they emerge on the other side <a href="{{ '/story/chapter2/mansionexterior#weirdroute' | relative_url }}">immediately outside Queen's mansion</a>.</p>
+	<p class="note">Kris can only enter the newly-opened northern alley, a long, winding path. At the end of the path lies an open manhole which can be interacted with:</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's a manhole. There's a ladder leading inside.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Enter it?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(You climbed into the manhole...)</d-text>
+		</d-box>
+
+		<p class="note">The screen fades to black and the escaping SFX plays as Kris presumably heads down into the sewers. After several seconds, they emerge on the other side <a href="{{ '/story/chapter2/mansionexterior#weirdroute' | relative_url }}">immediately outside Queen's mansion</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Nothing happens; dialogue ends.</p>
+	</d-option-panel>
 </section>
