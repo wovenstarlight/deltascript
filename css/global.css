@@ -1043,6 +1043,7 @@ d-box, d-choices {
 			:is([theme=fade], [theme=prophecy], d-option-panel) + & { margin-block-start: calc((2 * var(--border-width)) + 0.2em) }
 			:is(h2, h3, h4, h5, h6, p, ul, ol) + & { margin-block-start: calc(var(--border-width) + 1rem) }
 			&:has(+ h2, + h3, + h4, + h5, + h6, + p, + ul, + ol) { margin-block-end: calc(var(--border-width) + 1rem) }
+			&:has(+ hr) { margin-block-end: calc(var(--border-width) + 2rem) }
 			&:has(
 				d-option:nth-child(2):last-child,
 				d-option:nth-child(3):last-child,
