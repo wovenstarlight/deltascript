@@ -104,11 +104,12 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 				* `/greatdoor` - to the far east
 		* `/cardkingdom` - Chapter 1 dark world
 		* `/cyberworld` - Chapter 2 dark world
-			* `/housepuzzles` - the section in the middle of the acid lake that has all the house bridge puzzles, the one werewire and swatchling, and the maus puzzle
+			* `/queenmansion`
+				* `/3F`
+					* `/housepuzzles` (or `#housepuzzles`? see if there's enough 3F stuff to break down into subpages, ig) - the section in the middle of the acid lake that has all the house bridge puzzles, the one werewire and swatchling, and the maus puzzle
 		* `/tvworld` - Chapter 3 dark world
-			* ~~`/greenroom`~~ DONE
+			* ~~`/greenroom`~~ DONE, including main area, all X-Rank rooms, backstage, hub, interstitial (west), and red carpet hall (south)
 		* `/darksanctuary` - Chapter 4 dark worlds. I think for this one we can include all three sanctuaries' subpages
-		* Ach how do we even subdivide these pages
 * Story events `/story`
 	* Ok for this one there's enough Stuff that i'm just listing like. Pages that have been linked to from elsewhere. So you can update the URLs as/when necessary. Pages not mentioned here, just create as you like and make sure you add them to the [index](../story/index.html). If you're not sure whether a page already exists, search for one of its dialogue lines and see if any pages come up
 	* `/chapter1`

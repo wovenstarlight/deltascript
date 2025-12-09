@@ -1,0 +1,998 @@
+---
+title: Driving with Queen, meeting Spamton, and Noelle reminiscing
+
+description: >
+  <p>Queen takes Kris and Noelle on a drive in her car. Along the way, Kris runs into Spamton. After the drive ends, Kris and Noelle solve a forcefield puzzle and Noelle thinks back on their childhood.</p>
+  <p>Exclusive to the normal route.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_ch2_city_car_a_Step_0
+    chapters: [2]
+    note: pre-/post-drive part 1
+  -
+    name: gml_Object_obj_caradventure_car_Step_0
+    chapters: [2]
+    note: driving minigame
+  -
+    name: gml_Object_obj_caradventure_object_Collision_obj_caradventure_car
+    chapters: [2]
+    note: getting banana
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [2]
+    note: post-drive part 1 car interaction
+  -
+    name: gml_Object_obj_ch2_city05_Step_0
+    chapters: [2]
+    note: Spamton pre-/post-fight
+  -
+    name: gml_Object_obj_ch2_city_car_b_Step_0
+    chapters: [2]
+    note: drive part 2
+  -
+    name: gml_Object_obj_ch2_city_noelle_monologue_Step_0
+    chapters: [2]
+    note: DECEMBER puzzle
+
+toc:
+  -
+    id: meetup
+    name: Running into Queen
+  -
+    id: drive
+    name: Driving the car
+  -
+    id: trafficjam
+    name: Traffic jam
+  -
+    id: spamton
+    name: Encountering Spamton
+    subheadings:
+      -
+        id: prefight
+        name: Before the fight
+      -
+        id: postfight
+        name: After the fight
+        subheadings:
+          -
+            id: postfight-nonviolent
+            name: If you spared Spamton
+          -
+            id: postfight-violent
+            name: If you defeated Spamton by FIGHTing
+  -
+    id: drive2
+    name: Continuing the drive
+  -
+    id: DECEMBER
+    name: Noelle reminisces
+---
+<section class="d-section" id="meetup">
+	<h2>Running into Queen</h2>
+
+	<p class="note">After crossing a traffic-filled street, Kris and Noelle slow to a stop on a stretch of pavement as the music fades out. Queen speaks from somewhere offscreen:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="9"></d-sprite>
+		<d-text asterisk>Noeeeeelle Honey Where Are You</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>(Oh no, here she comes...)</d-text>
+	</d-box>
+
+	<p class="note">Noelle puts on her box disguise as <a href="{% include wikilink page='Queen (Soundtrack)' %}">Queen's theme</a> begins playing. Queen herself enters from the eastern street and stops in front of Kris, holding up a green pie.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Noelle Come Home I Made You A Battery Acid Pie</d-text>
+	</d-box>
+
+	<p class="note">Queen notices Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Oh, Kris Perfect Timing</d-text>
+	</d-box>
+
+	<p class="note">Queen turns around and flings the pie to the ground, where it shatters with an explosive boom; she turns back to Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Have You Seen --</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="2"></d-sprite>
+		<d-text asterisk>Oh my Luxurious Quuuueeeeeenn!!</d-text>
+	</d-box>
+
+	<p class="note">Queen clutches her head, gasping in horror.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="8"></d-sprite>
+		<d-text asterisk>Oh My Circuits Kris Get In The Car</d-text>
+	</d-box>
+
+	<p class="note">A car pulls up alongside the stretch of pavement everyone is standing on; Queen, Kris, and Noelle all get into the car. A moment later, Berdly walks in from the eastern road and stops on the same stretch of pavement, holding up a green pie. He turns around a few times, presumably looking for Queen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="7"></d-sprite>
+		<d-text asterisk>My Queen!! Where are you!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="6"></d-sprite>
+		<d-text asterisk>I've baked you a Gamer's Delight!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="0"></d-sprite>
+		<d-text asterisk>Hmm... she's not here...</d-text>
+	</d-box>
+
+	<p class="note">Berdly speeds off towards the west, on the path Kris and Noelle came from. The others exit the car, standing on the pavement again; Queen faces the other two, who are turned to the side facing the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="F"></d-sprite>
+		<d-text asterisk>That Was Close</d-text>
+	</d-box>
+
+	<p class="note">A pause. When Queen speaks again, Kris and Noelle turn to her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Kris</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="B"></d-sprite>
+		<d-text asterisk>Who Is Your Friend</d-text>
+	</d-box>
+
+	<p class="note">Queen steps forward, but Kris takes a step back towards Noelle, blocking Queen's path to her. A pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="9"></d-sprite>
+		<d-text asterisk>My Face Recognition Software Does Not Compute Them</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="A"></d-sprite>
+		<d-text asterisk>.... And Yet</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="5"></d-sprite>
+		<d-text asterisk>Something About Them Seems</d-text>
+	</d-box>
+
+	<p class="note">A pause. When Queen speaks again, Noelle turns to the side facing the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Cool</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Robotic Even</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="G"></d-sprite>
+		<d-text asterisk>(...)</d-text>
+	</d-box>
+
+	<p class="note">Queen turns to her car. Meanwhile, Noelle collapses to the ground in apparent relief.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Kris We Must Drive To Find Noelle</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="C"></d-sprite>
+		<d-text asterisk>Everyone Get In The Car</d-text>
+	</d-box>
+
+	<p class="note">The trio gets back in the car, which begins driving; Queen's theme is replaced by <a href="{% include wikilink page='Cool Mixtape' %}">her mixtape</a>.</p>
+</section>
+
+<section class="d-section" id="drive">
+	<h2>Driving the car</h2>
+
+	<p class="note">As soon as the car passes the crosswalk, Queen gives instructions on how to drive:</p>
+
+	<hr class="hr2">
+	<h3>On PC and PlayStation consoles</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>Kris Press Directions To Steer</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h3>On non-PlayStation consoles</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>Kris Press Directional Buttons To Steer</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<p class="note">As cars start appearing:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="E"></d-sprite>
+		<d-text asterisk>Kris Don't Hit The Cars!</d-text>
+	</d-box>
+
+	<hr class="hr2">
+	<h3>If a car is hit</h3>
+	<p class="note">The struck car flies offscreen with a yelp.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Haha Okay Actually Hit All The Cars</d-text>
+	</d-box>
+	<p class="note">(After 4 cars are hit, newly-spawned cars begin fleeing from the player's car.)</p>
+	<hr class="hr2">
+
+	<p class="note">After several seconds:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>So Much Traffic Isn't It Wonderful</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Lightners Love Traffic They Look It Up All The Time</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="B"></d-sprite>
+		<d-text asterisk>Poor Noelle She Would Love Hitting All These Cars</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Umm, actually, I... she, um, might not, um...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="H"></d-sprite>
+		<d-text asterisk>Stop Everything</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>Kris Get The Banana</d-text>
+	</d-box>
+
+	<p class="note">As Queen speaks, a rotating banana appears in the middle of the street.</p>
+
+	<hr class="hr2">
+	<h3>If you get the banana</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Potassium</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h3>If you don't get the banana</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="F"></d-sprite>
+		<d-text asterisk>Kris You Are Going To Get Sick</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Here Comes A Crossing Get Ready To Stop</d-text>
+	</d-box>
+
+	<p class="note">The car comes upon a crosswalk and stops immediately after it.</p>
+</section>
+
+<section class="d-section" id="trafficjam">
+	<h2>Traffic jam</h2>
+
+	<p class="note">With the car stopped safely beside a road packed with cars, the music fades to silence as Queen speaks:</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="8"></d-sprite>
+		<d-text asterisk>Oh My Circuits It's A Traffic Jam</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="F"></d-sprite>
+		<d-text asterisk>A Dog Must Have Wandered In The Road Again</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Kris Be A Dear And Go Press The Walk Button</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="9"></d-sprite>
+		<d-text asterisk>It's Just Over On The Other Side Of The Road</d-text>
+	</d-box>
+
+	<p class="note">The camera pans to show a full 10 lanes of cars filling the road bumper-to-bumper, with the eastern road also filled with traffic. On the other side, there is indeed a traffic light post. The camera then pans back to the car.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Umm... I'll go, too...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="6"></d-sprite>
+		<d-text asterisk>No</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="6"></d-sprite>
+		<d-text asterisk>You Must Stay</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Until You Hear All Of My Mixtape</d-text>
+	</d-box>
+
+	<p class="note">Queen's mixtape fades back in.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>O-okay...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>(Kris... hurry up, please...)</d-text>
+	</d-box>
+
+	<p class="note">Kris gets out of the driver's seat. Traffic pulls up to fill the road they came from, and control is returned to the player.</p>
+
+	<hr>
+
+	<h3>Checking the car</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Next Up Is My CD Of Vintage Hard Disk Noises</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>(Kris, please hurry...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<p class="note">Kris may proceed into the alley that will take them across the road.</p>
+</section>
+
+<section class="d-section" id="spamton">
+	<h2>Encountering Spamton</h2>
+
+	<h3 id="prefight">Before the fight</h3>
+	<p class="note">In the alleyway, as Kris approaches a dumpster, its lid abruptly flies open and they stop walking. Spamton emerges from the piles of trash and a <a href="{% include wikilink page='HEY EVERY !' %}">jittery jingle</a> begins playing.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>HEY&nbsp; &nbsp; &nbsp; EVERY &nbsp; &nbsp; !! IT'S ME!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>EV3RY&nbsp; BUDDY&nbsp; 'S FAVORITE [[Number 1 Rated Salesman1997]]</d-text>
+	</d-box>
+	<p class="note">Spamton's next line cuts off and restarts on its own.</p>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>SPAMT</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>SPAMTON G. SPAMTON!!</d-text>
+	</d-box>
+
+	<p class="note">Spamton laughs, then turns to look at Kris and is surprised. The music cuts out.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WOAH!! IF IT ISN"T A...</d-text>
+	</d-box>
+
+	<p class="note">Spamton jumps out of the dumpster and onto the ground in front of Kris, startling them backwards. He laughs, swaying back and forth as <a href="{% include wikilink page='Spamton (Soundtrack)' %}">his theme</a> begins playing.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>LIGHT nER! HEY-HE Y HEY!!!</d-text>
+	</d-box>
+
+	<p class="note">Spamton goes still.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>LOOKS LIKE YOU'RE [[All Alone On A Late Night?]]</d-text>
+	</d-box>
+
+	<p class="note">Spamton sways back and forth again, hands clasped.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>ALL YOUR FRIENDS, [[Abandoned you for the slime]] YOU ARE?</d-text>
+	</d-box>
+
+	<p class="note">He looks down and speeds up.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>SALES, GONE DOWN THE [[Drain]] [[Drain]]??</d-text>
+	</d-box>
+
+	<p class="note">His glasses go dark and he speeds up further, shaking more than swaying.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>LIVING IN A GODDAMN GARBAGE CAN???</d-text>
+	</d-box>
+
+	<p class="note">Spamton stills and laughs, then abruptly turns around and punches the dumpster, startling Kris into taking another step backwards. After a pause, he turns back around, swaying as usual.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WELL HAVE I GOT A [[Specil Deal]] FOR LONELY [[Hearts]] LIKE YOU!!</d-text>
+	</d-box>
+
+	<p class="note">He steps into the center of the alley, face downcast and hands clasped again.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>IF YOU'VE [[Lost Control Of Your Life]]</d-text>
+	</d-box>
+
+	<p class="note">He turns to Kris, hands spread out.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>THEN YOU JUST GOTTA GRAB IT BY THE [[Silly Strings]]</d-text>
+	</d-box>
+
+	<p class="note">He steps forward with the next two lines.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WHY BE THE [[Little Sponge]] WHO HATES ITS [[$4.99]] LIFE</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WHEN YOU CAN BE A</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[[BIG SHOT!!!]]</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[[BIG SHOT!!!!]]</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[[BIG SHOT!!!!!]]</d-text>
+	</d-box>
+
+	<p class="note">Spamton's head grows bigger with each repetition of "BIG SHOT". His head returns to normal size and he throws his arms up in the air.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>THAT'S RIGHT!! NOW'S YOUR CHANCE TO BE A [[BIG SHOT]]!!</d-text>
+	</d-box>
+
+	<p class="note">He takes a step towards Kris with each of the following lines.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>AND I HAVE JUST.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>THE THING.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>YOU NEED.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>THAT'S</d-text>
+	</d-box>
+
+	<p class="note">He takes a final, small step, head down and glasses dark.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[[Hyperlink Blocked]].</d-text>
+	</d-box>
+
+	<p class="note">Spamton backs up and laughs, glitching slightly.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>YOU WANT IT.</d-text>
+		<d-text asterisk>YOU WANT [[Hyperlink Blocked]], DON'T YOU.</d-text>
+	</d-box>
+
+	<p class="note">He starts swaying again, glitches ceasing.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WELL HAVE I GOT A DEAL FOR YOU!!</d-text>
+	</d-box>
+	<p class="note">He stops laughing and goes still.</p>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>ALL YOU HAVE TO DO IS SHOW ME.</d-text>
+	</d-box>
+	<p class="note">He looks down, hands clasped.</p>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>YOUR [[HeartShapedObject]].</d-text>
+	</d-box>
+
+	<p class="note">Kris takes a step back as Spamton steps forward towards them.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>YOU'RE&nbsp; LIGHT neR< AREN'T YOU?</d-text>
+	</d-box>
+
+	<p class="note">Spamton looks down, glasses dark.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>YOU'VE GOT THE [[LIGHT.]]</d-text>
+		<d-text asterisk>WHY DON'T YOU</d-text>
+		<d-text asterisk>[[Show it off?]]</d-text>
+	</d-box>
+
+	<p class="note">He laughs, glitching, and <a href="{{ '/encounters/spamton' | relative_url }}">draws Kris into an encounter</a>.</p>
+
+	<hr>
+
+	<h3 id="postfight">After the fight</h3>
+
+	<h4 id="postfight-nonviolent">If you spared Spamton</h4>
+	<p class="note">Spamton sways back and forth.</p>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>NOW ON TO THE NEXT STEP...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>I'LL BE WAITING AT MY [[Home-made Storefront Site]]</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>IN THE [[Trash Area Closed For Repairs.]]</d-text>
+	</d-box>
+	<p class="note">He goes still and lowers his head, glasses dark.</p>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>COME... ALONE.</d-text>
+	</d-box>
+	<p class="note">He lifts his head and resumes swaying.</p>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>AND DON'T... FORGET!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>TO [[Like and Subscribe]] FOR MORE [[Hyperlink Blocked.]]</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>HAEAHAEAHAEAHAEAH!!</d-text>
+	</d-box>
+	<p class="note">As he laughs, glitching, he exits the alleyway towards screen right. Kris is free to move again, and can exit the alley to <a href="#drive2">reunite with Queen and Noelle</a>.</p>
+
+	<p class="note">Back in the Trash Zone, <a href="{{ '/locations/cyberworld/cybercity/spamtonshop' | relative_url }}">Spamton's shop</a> is now accessible.</p>
+
+	<hr class="hrhalf">
+
+	<h4 id="postfight-violent">If you defeated Spamton by FIGHTing</h4>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>HEY!!! DIDN'T YOU EVER HEAR THE PHRASE,</d-text>
+		<d-text asterisk>[Make Money, Not War]!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>HOW'S AN INNOCENT [Guy] LIKE ME SUPPOSED TO [Rip People Off]</d-text>
+	</d-box>
+
+	<p class="note">Spamton laughs and sways faster and more erratically with every additional line.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WHEN KIDS LIKE YOU ARE [Beating People Up],</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[Spitting] IN THEIR EYES, THROWING SAND IN THEIR [Face],</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[Stomping] ON THEIR TOES, YANKING THEIR [Noses]</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>AND NOT EVEN GIVING THEM A SINGLE CENT FOR IT!?</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<h5>If you have the <a href="{{ '/misc/weapons#thornring' | relative_url }}">Thorn Ring</a> in your inventory</h5>
+	<p>(Does not apply if the Thorn Ring is currently equipped by Noelle, due to the non-exhaustive method of checking for it. It must be unequipped in the weapon inventory.)</p>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>IT DOESN'T MEAN YOU CAN BEAT ME UP,</d-text>
+	</d-box>
+
+	<p class="note">Spamton goes still and spreads his hands.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>JUST BECAUSE YOU BOUGHT MY [Commemorative Ring]!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>AT LEAST BUY [2]!</d-text>
+	</d-box>
+
+	<hr class="hr3">
+
+	<h5>If you didn't buy the Thorn Ring</h5>
+	<p>(Or if you bought it and it's currently equipped by Noelle.)</p>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>YOU SHOULD HAVE DONE ALL THAT EARLIER!</d-text>
+	</d-box>
+
+	<p class="note">Spamton goes still and spreads his hands.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>AND BEEN THE FIRST TO OWN MY [Commemorative Ring]</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<p class="note">Spamton clasps his hands.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>TOO BAD! SEE YOU KID!</d-text>
+	</d-box>
+
+	<p class="note">He exits the alleyway towards screen right. Kris is free to move again, and can exit the alley to <a href="#drive2">reunite with Queen and Noelle</a>.</p>
+
+	<p class="note">Back in the Trash Zone, <a href="{{ '/locations/cyberworld/cybercity/spamtonshop' | relative_url }}">Spamton's shop</a> is now accessible.</p>
+</section>
+
+<section class="d-section" id="drive2">
+	<h2>Continuing the drive</h2>
+
+	<p class="note">Once Kris emerges from the other side of the alley and presses the walk button, the traffic immediately clears out of the way, leaving the streets empty. Queen's mixtape fades to silence; a moment later, her car pulls up in front of Kris with a screech.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Get In</d-text>
+	</d-box>
+
+	<p class="note">Kris gets into the driver's seat and the car sets off again down the road on the right, revealed to be a bridge overlooking the cityscape.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Kris We Have To Drive To Find Noelle</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="6"></d-sprite>
+		<d-text asterisk>Turn On The High Beams</d-text>
+	</d-box>
+
+	<p class="note">With a beep, a spotlight on the top of the car turns on, shining a beam into the sky with shadows shaped like Queen's face.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="9"></d-sprite>
+		<d-text asterisk>When She Sees The Queen Signal She Will Come Running</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>W... Why do you... need to find Noelle so badly?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="2"></d-sprite>
+		<d-text asterisk>What Are You Saying This City Is Dangerous</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="B"></d-sprite>
+		<d-text asterisk>Imagine Poor Noelle Clipping Into A Wall Somewhere</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Wasting Away From Potassium Deficiency</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Y... you're actually worried about her?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>I Would Be If I Wasn't Going To Find Her</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>B... but why her?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Wait, let me guess... is it because...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+		<d-text asterisk>She's weak enough to make into your peon?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Haha No</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="A"></d-sprite>
+		<d-text asterisk>Just The Opposite</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="B"></d-sprite>
+		<d-text asterisk>It's Because She's Strong</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+		<d-text asterisk>H... huh? What do you--</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="2"></d-sprite>
+		<d-text asterisk>Kris Stop The Car</d-text>
+	</d-box>
+
+	<p class="note">The car stops and everyone gets out, walking ahead and turning to face it.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="C"></d-sprite>
+		<d-text asterisk>What's... wrong with it?</d-text>
+	</d-box>
+
+	<p class="note">A cartoonish explosion consumes the car, with Noelle and Kris jerking back. They turn to Queen, who turns to the side facing the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="B"></d-sprite>
+		<d-text asterisk>Phew</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="9"></d-sprite>
+		<d-text asterisk>I Was Just Concerned Because It Hadn't Exploded Yet</d-text>
+	</d-box>
+
+	<p class="note">Queen turns to Kris and Noelle.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="A"></d-sprite>
+		<d-text asterisk>Looks Like We'll Have To Split Up On Foot</d-text>
+	</d-box>
+
+	<p class="note">Queen turns to the side away from the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="5"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">She turns to Kris and Noelle again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="9"></d-sprite>
+		<d-text asterisk>Kris If You See Noelle</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="A"></d-sprite>
+		<d-text asterisk>Tell Her My Knowledge Of Her Preferences Is Absolute</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>And If She Needs Proof</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Use This</d-text>
+	</d-box>
+
+	<p class="note">Queen steps forward, coming right up in front of Kris.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(Queen's Mixtape was thrown into your KEY ITEMS.)</d-text>
+	</d-box>
+
+	<p class="note">(Unseen, <a href="{{ '/misc/darkitems#lancer' | relative_url }}">Lancer</a> swallows the mixtape.) Queen walks off to the right, speaking as she goes:</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Toodles</d-text>
+	</d-box>
+
+	<p class="note">The camera pans to focus on Kris and Noelle as they walk to the end of the bridge and past a crosswalk into a narrower alley. Kris turns to Noelle as she takes off her box disguise and faces them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="I"></d-sprite>
+		<d-text asterisk>Ph... phew...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Somehow, I feel like... we're almost out of here.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Let's go, Kris!</d-text>
+	</d-box>
+
+	<p class="note">Traffic fills up the bridge, blocking the way back, and control is returned to the player, who can lead the party onwards to another forcefield puzzle.</p>
+</section>
+
+<section class="d-section" id="DECEMBER">
+	<h2>Noelle reminisces</h2>
+
+	<p class="note">Entering the next area, Kris and Noelle come upon a pair of narrow paths, dotted with small forcefields and switches. Some of the switches have letters on them, the first visible one bearing a letter D. On the wall beside the switch is a panel displaying a question mark with a small speaker underneath.</p>
+
+	<p class="note">The party stops at the point where the second path begins.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Gosh, that was close, wasn't it, Kris...?</d-text>
+	</d-box>
+
+	<p class="note">Noelle walks in front of Kris, stopping under the question mark-displaying panel and turning to Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="1"></d-sprite>
+		<d-text asterisk>This... Strange world... this big city...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+		<d-text asterisk>It's so wild... It kind of makes my head spin.</d-text>
+	</d-box>
+
+	<p class="note">Noelle turns to look at the panel on the wall, tilting her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+		<d-text asterisk>...?</d-text>
+	</d-box>
+
+	<p class="note">A pause. Noelle stops tilting her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Looks like another puzzle...</d-text>
+	</d-box>
+
+	<p class="note">Noelle turns around, looking at the second path.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+		<d-text asterisk>Maybe if I go... down... here?</d-text>
+	</d-box>
+
+	<p class="note">Noelle backs up slightly, then jumps over the traffic cones separating the two paths; Kris turns to watch her. She proceeds down the path to step on the D switch and looks over to Kris's side of the path. Sure enough, the panel on the wall changes to read "<span class="yellow">D</span>" (voiced aloud from the speaker), and the forcefield in Kris's way fades out of sight.</p>
+
+	<p class="note">Control is returned to the player, who may guide Kris over to the blank switch on their side, removing the forcefield in Noelle's way. This pattern repeats through the rest of the room, with Kris using blank switches to take down forcefields in Noelle's way, while Noelle does the same for them with lettered switches.</p>
+
+	<p class="note">Noelle presses a switch reading "<span class="yellow">E</span>". As she and Kris walk forward, they pass behind a building in the foreground; their silhouettes can be seen "through" the building, in their associated yellow and blue respectively. Stopping at the next forcefield in her way, Noelle speaks to Kris while waiting for them to clear her way:</p>
+
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>...when I said this city makes my head spin...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>I didn't mean in a bad way... you know?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>I always wanted to go someplace new, you know?</d-text>
+	</d-box>
+
+	<p class="note">Noelle presses a switch reading "<span class="yellow">C</span>".</p>
+
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>... And Dess... always told me she'd take me.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>Somewhere like this.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>Somewhere with shining lights.</d-text>
+	</d-box>
+
+	<p class="note">Noelle presses a switch reading "<span class="yellow">E</span>".</p>
+
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>... don't you miss exploring, Kris?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>Back when the four of us were kids?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>Gosh, remember that night we explored the forest behind the graveyard?</d-text>
+	</d-box>
+
+	<p class="note">Noelle presses a switch reading "<span class="yellow">M</span>".</p>
+
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>Ha, I know we never found anything interesting back there...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>I mostly remember... Crying because I was scared.</d-text>
+	</d-box>
+
+	<p class="note">Noelle presses a switch reading "<span class="yellow">B</span>". When she passes behind the next foreground building, her silhouette is that of a small, much younger Noelle, her hair up in pigtails instead of loose down her back.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>But for some reason I feel... nostalgic thinking about it.</d-text>
+	</d-box>
+
+	<p class="note">The duo pass behind another foreground building; Noelle's silhouette is back to her normal teenage form.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>Dess wiping away my tears with Azzy's jacket...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>With warm sleeves that smelled like cinnamon.</d-text>
+	</d-box>
+
+	<p class="note">Noelle presses a switch reading "<span class="yellow">E</span>".</p>
+
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>I guess I didn't mind being scared if it meant...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker>
+		<d-text asterisk>Someone would comfort me.</d-text>
+	</d-box>
+
+	<p class="note">Noelle presses a switch reading "<span class="yellow">R</span>" (and finishes spelling the full message, "<span class="yellow fnt-condensed">DECEMBER</span>"). Kris turns to her as she jumps over the traffic cones and walks over to them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+		<d-text asterisk>(Sigh...)</d-text>
+	</d-box>
+
+	<p class="note">She turns away from Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>(Kris is the only one who knows how weird I am.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>(It's not fair, y'know!?)</d-text>
+	</d-box>
+
+	<p class="note">She turns back to Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>(Everyone knows how weird YOU are. Fahahaha.)</d-text>
+	</d-box>
+
+	<p class="note">Control is returned to the player, who can lead the party of two onwards to a <a href="{{ '/story/chapter2/reunion' | relative_url }}">carnival area</a>.</p>
+</section>
