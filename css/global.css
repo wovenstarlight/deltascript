@@ -1027,7 +1027,7 @@ d-box, d-choices {
 			d-speaker.lancer ~ d-text { --mycolor: #5585bd }
 		}
 
-		&[theme=shopleft] { width: calc(var(--basewidth) - 7.2em) }
+		&[theme=shopleft] { width: calc(var(--basewidth) - 10ch) }
 
 		&[theme=shopright], &[theme=shopdesc] { width: calc(var(--basewidth) - 14.2em) }
 
@@ -1559,7 +1559,7 @@ d-sprite {
 			max-height: 8em;
 		}
 
-		&:has(+ d-box[theme=shopleft]) img { max-width: calc(var(--basewidth) - 7.2em) }
+		&:has(+ d-box[theme=shopleft]) img { max-width: calc(var(--basewidth) - 10ch) }
 		&:has(+ d-box[theme=shopright]) img { max-width: calc(var(--basewidth) - 14.2em) }
 
 		body.compact & { display: none }
