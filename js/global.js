@@ -194,6 +194,7 @@ class DialogueSprite extends HTMLElement {
 			|| (speaker === "Seam" && emotionIndex !== 1)
 			|| (speaker === "Rouxls" && variant === "shop")
 			|| (speaker === "Spamton" && emotionIndex !== 0)
+			|| (speaker === "Swatch" && emotionIndex === 0)
 			|| (speaker === "Tenna"/* && emotionIndex === 0 */)
 		);
 		if (isGif) globalAnims = true;
