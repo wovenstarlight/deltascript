@@ -105,6 +105,9 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/cardkingdom` - Chapter 1 dark world
 		* `/cyberworld` - Chapter 2 dark world
 			* `/queenmansion`
+				* `/guesthall#krisroom` - may or may not need to sort under 1F
+				* `/colorcafe`
+				* `/entrancehall#warpdoor`
 				* `/3F`
 					* `/housepuzzles` (or `#housepuzzles`? see if there's enough 3F stuff to break down into subpages, ig) - the section in the middle of the acid lake that has all the house bridge puzzles, the one werewire and swatchling, and the maus puzzle
 		* `/tvworld` - Chapter 3 dark world
@@ -126,8 +129,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* Rollercoasters fight up to DECEMBER flashback DONE
 		* [the unused gml_Object_obj_ch2_city04_Step_0 scene](https://youtu.be/cxiEOeztndw?t=1661)
 		* through the mansion, normal route
-			* `/roomescape` - Breaking out of personalized rooms, light puzzles, meeting up with Ralsei
-			* *foyer - no story-specific interactions, just say party goes past foyer and enters 1F*
 			* `/mansion1F` - queen going #mypictures, respect the pottery, pottery maze, TM encounter at end
 			* NEOquest (optional, starts towards the end of 1F) - hacker, kris telling the others to stay behind, susral glasses thing when coming back outside. combine existing `/spamtonneo` page into this! like with jevilquest `/story/chapter1/jevil`
 			* `/mansion2F` - dinner party, kitchen infestation / mauswheel, east dining room (platter key hunt)

@@ -1,0 +1,1816 @@
+---
+title: Escaping the personalized rooms
+
+description: >
+  <p>Kris and Susie break out of their rooms in Queen's mansion, accompanied by Lancer and Berdly, and eventually catch up with Ralsei.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_ch2_scene17b_Step_0
+    chapters: [2]
+    note: room escape intro
+  -
+    name: gml_GlobalScript_scr_keyiteminfo
+    chapters: [2]
+    note: Lancer inventory description
+  -
+    name: gml_GlobalScript_scr_itemuse
+    chapters: [2]
+    note: Lancer usage
+  -
+    name: gml_Object_obj_ch2_scene17b_lancer_type_Draw_0
+    chapters: [2]
+    note: computer error message
+  -
+    name: gml_Object_obj_ch2_scene18_Step_0
+    chapters: [2]
+    note: guest hall
+  -
+    name: gml_Object_obj_savepoint_Other_10
+    chapters: [2]
+    note: SAVE point narration
+  -
+    name: gml_Object_obj_ch2_scene19a_Step_0
+    chapters: [2]
+    note: darkbulb room 1
+  -
+    name: gml_Object_obj_ch2_scene19b_Step_0
+    chapters: [2]
+    note: darkbulb room 2
+  -
+    name: gml_Object_obj_ch2_scene19c_Step_0
+    chapters: [2]
+    note: darkbulb room 3
+  -
+    name: gml_Object_obj_spotlightlaser_controller_Draw_0
+    chapters: [2]
+    note: darkbulb instructions
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [2]
+    note: darkbulb signs
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [2]
+    note: darkbulb rooms Berdly/Susie
+  -
+    name: gml_Object_obj_ch2_scene19c_spelling_bee_Create_0
+    chapters: [2]
+    note: spelling bee words
+  -
+    name: gml_Object_obj_ch2_scene19c_spelling_bee_Draw_0
+    chapters: [2]
+    note: spelling bee IQ text
+  -
+    name: gml_Object_obj_ch2_scene20_Step_0
+    chapters: [2]
+    note: finding Ralsei
+
+toc:
+  -
+    id: jailbreak
+    name: Breaking out
+    subheadings:
+      -
+        id: trapped
+        name: Finding yourself trapped
+      -
+        id: waiting
+        name: Doing nothing
+      -
+        id: pockets
+        name: Checking Kris's pockets
+  -
+    id: guesthall
+    name: In the guest hall
+  -
+    id: darkbulb1
+    name: First darkbulb puzzle
+    subheadings:
+      -
+        id: darkbulb1-entry
+        name: Entering the room
+      -
+        id: darkbulb1-berdly
+        name: Talking to Berdly
+      -
+        id: darkbulb1-susie
+        name: Talking to Susie and Lancer
+      -
+        id: darkbulb1-sign
+        name: Reading the sign
+      -
+        id: darkbulb1-instructions
+        name: Instructions
+      -
+        id: darkbulb1-solve
+        name: Solving the puzzle
+  -
+    id: darkbulb2
+    name: Second darkbulb puzzle
+    subheadings:
+      -
+        id: darkbulb2-entry
+        name: Entering the room
+      -
+        id: darkbulb2-sign
+        name: Reading the sign
+      -
+        id: darkbulb2-susie
+        name: Talking to Susie and Lancer
+      -
+        id: darkbulb2-berdly
+        name: Talking to Berdly
+      -
+        id: darkbulb2-solve
+        name: Solving the puzzle
+  -
+    id: darkbulb3
+    name: Third darkbulb puzzle
+    subheadings:
+      -
+        id: darkbulb3-entry
+        name: Entering the room
+      -
+        id: darkbulb3-sign
+        name: Reading the sign
+      -
+        id: darkbulb3-susie
+        name: Talking to Susie and Lancer
+      -
+        id: darkbulb3-berdly
+        name: Talking to Berdly
+      -
+        id: darkbulb3-solve
+        name: Solving the puzzle
+  -
+    id: ralsei
+    name: Finding Ralsei
+---
+<section class="d-section" id="jailbreak">
+	<h2>Breaking out</h2>
+
+	<h3 id="trapped">Finding yourself trapped</h3>
+	<p class="note">The screen fades from black to a room in Queen's mansion, with a large screen and keyboard taking up the top wall and various objects scattered around the remaining walls. At the center of the room stands Kris in their cage.</p>
+
+	<p class="note">After a moment, the monitor turns on and shows Queen grinning with spread hands against a background of blue skies and grassy hills.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>How Do You Like Your New Room Units</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>As You Can See They Are Perfectly Suited To Your Interests</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>(Which I Gleaned From Your Internet Search Results)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="C"></d-sprite>
+		<d-text asterisk>I Estimate You Will Have No Desire To Leave</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Please Tantilize Yourself With Your Surroundings</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="7"></d-sprite>
+		<d-text asterisk>And Wait Patiently While I Dominate The World</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="C"></d-sprite>
+		<d-text asterisk>Toodles</d-text>
+	</d-box>
+
+	<p class="note">The monitor turns off. A long pause. Kris turns to the right when a voice comes out of the odd tube on that side:</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="P"></d-sprite>
+		<d-text asterisk>K... Kris!? Hey!! Can you hear me!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Looks like there's some way to communicate between rooms.</d-text>
+	</d-box>
+
+	<p class="note">The monitor turns on, showing Queen again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Convenient Isn't It I Really Thought Of Everything</d-text>
+	</d-box>
+
+	<p class="note">The monitor turns off.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Shut up!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Anyway, let's think of some way to get out of here!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Ralsei, you got any bright ideas...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>Hey... where the hell's Ralsei!?</d-text>
+	</d-box>
+
+	<p class="note">Susie is startled when a high-pitched wail sounds from outside. Kris turns back to the tube when Susie speaks.</p>
+	<!-- kris is supposed to turn to the door when ralsei yells but they immediately get reset to face right after that. so ig the most effect it would have is making it look like they twitch…? -->
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>Damn, that soft-yet-tender screaming -</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Kris, that's gotta be him!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="f"></d-sprite>
+		<d-text asterisk>Quick, we gotta think of some way to get out!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Anything you smuggled in that might help us!?</d-text>
+	</d-box>
+
+	<p class="note">Control is returned to the player. Unfortunately, with Kris in the cage, there's not much to do.</p>
+
+	<hr>
+
+	<h3 id="waiting">Doing nothing</h3>
+	<p class="note">After 10 seconds, Lancer's voice is briefly heard.</p>
+
+	<p class="note">5 seconds later, Susie speaks:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Hey, Kris... do you hear something...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Sounds like it's coming from your... pocket?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Your phone going off or something?</d-text>
+	</d-box>
+
+	<p class="note">For the next several seconds, Lancer's voice can be heard at brief intervals. Eventually, Susie speaks again:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Hey, Kris... uh...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>Does your phone usually, uh... yell...?</d-text>
+	</d-box>
+
+	<p class="note">Lancer continues speaking at brief intervals. Eventually, Susie speaks again:</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>Hey, Kris, pick up your damn phone.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Isn't it with your KEYs or whatever?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="pockets">Checking Kris's pockets</h3>
+	<p class="note">As Susie hints, the only recourse is to check Kris's pockets, where Lancer awaits attention in the key item inventory:</p>
+
+	<d-box theme="objmenu">
+		<d-text>Hoho! It's me, Lancer! Release me and<span class="break"></span> I will release you!</d-text>
+	</d-box>
+
+	<p class="note">Selecting Lancer causes the key item menu to close as Kris to take out the Jack of Spades card. With a mysterious noise, the card spins down to the ground outside the cage, where it turns into Lancer, also spinning, until he comes to a stop facing Kris. <a href="{% include wikilink page='Lancer (Soundtrack)' %}">His theme</a> begins playing as he speaks:</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Missed me???</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Because I missed you!! Ha ha ha!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Lancer!? That you!? I thought you ditched us!</d-text>
+	</d-box>
+	<p class="note">Lancer turns away from Kris.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>No!! I love ditches but I would never ditch you!!</d-text>
+	</d-box>
+	<p class="note">He faces Kris once more.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="8"></d-sprite>
+		<d-text asterisk>I was simply relaxing in Kris's spacious Pants Hole.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Uhh, "pocket."</d-text>
+	</d-box>
+
+	<p class="note">Lancer moves towards the left side of the room, turning to face both Kris and the tube through which Susie is speaking.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Yes!! And I saw it all!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Pants. Lint. Various Items.</d-text>
+	</d-box>
+
+	<p class="note">He turns to the side facing the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>A wild Mom put you in some Shock Cages.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Hahah, yeah. We're trapped, so, uh...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Hey, wait didja see us on the roller coaster!?</d-text>
+	</d-box>
+
+	<p class="note">Lancer takes a small jump closer to Kris's cage.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Yes!!! It was amazing!! My first coaster ride!!!</d-text>
+	</d-box>
+
+	<p class="note">Lancer begins spinning around rapidly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>Ha ha!! I love getting nauseous with friends!!</d-text>
+	</d-box>
+
+	<p class="note">Lancer and Susie laugh together, and as they go quiet, Lancer stops, facing the door. He then turns back to Kris and Susie's talking tube when Susie speaks.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Hey you should probably, uh, free us.</d-text>
+	</d-box>
+
+	<p class="note">Lancer turns to the side facing the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Oh right!! Yes!!</d-text>
+	</d-box>
+
+	<p class="note">He turns back to Kris and Susie's talking tube.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>You can always rely on a friendly Me...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>To make you free!!!</d-text>
+	</d-box>
+
+	<p class="note">Kris turns to watch Lancer as he goes up to the large monitor at the top of the room. It turns on, displaying a blue screen and blinking cursor. A pause. Lancer turns to Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>Haha!! I have no idea how to use this!!</d-text>
+	</d-box>
+
+	<p class="note">Lancer jumps onto the keyboard, bracing himself on his hands and feet as he studies the screen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>"Request... new item for room"?? That sounds good.</d-text>
+	</d-box>
+
+	<p class="note">Lancer begins crawling across the board to type several letters on the screen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="0"></d-sprite>
+		<d-text asterisk>Item request: Shovel.</d-text>
+	</d-box>
+
+	<p class="note">Lancer types a bit more.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Quantity: Let's say... 999.</d-text>
+	</d-box>
+
+	<p class="note">Lancer jumps off the keyboard to the ground as the monitor begins flashing red, flashing the message "<span class="white fnt-condensed">QUANTITY OVERLOAD</span>". The electric cage around Kris splits apart and breaks away; Kris and Lancer both turn around once the cage is gone.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Hoho!! It worked!!</d-text>
+	</d-box>
+
+	<p class="note">Lancer comes to stand in front of Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Let's go, blue person whose name I know!</d-text>
+	</d-box>
+
+	<p class="note">Spinning, he leaves the room; his theme fades along with his departure. Control is returned to the player, who can <a href="{{ '/locations/cyberworld/queenmansion/guesthall#krisroom' | relative_url }}">explore Kris's room</a> (the last opportunity to do so) before following Lancer outside.</p>
+</section>
+
+<section class="d-section" id="guesthall">
+	<h2>In the guest hall</h2>
+
+	<p class="note">The screen fades to black as Kris exits their room, then fades in on the hall outside, where Lancer has found Susie also freed from her room. Kris walks into the hall and turns to face the other two. <a href="{% include wikilink page='Elegant Entrance' %}">Harpsichord music</a> begins playing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Kris, hey!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Man... Lancer...! You're the best, dude!!</d-text>
+	</d-box>
+
+	<p class="note">Susie and Lancer jump and high-five each other. Then Susie turns to look further down the hall.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>C'mon, Noelle and Ralsei are waiting!!</d-text>
+	</d-box>
+
+	<p class="note">Susie takes several quick steps forward.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>Yes...! Let's put the pedal on the medal!!</d-text>
+	</d-box>
+
+	<p class="note">Lancer loses his smile and shakes slightly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="C"></d-sprite>
+		<d-text asterisk>Cough... cough*</d-text>
+	</d-box>
+
+	<p class="note">Lancer's colors begin to fade, pulsing weakly. When he fails to move after a moment, Susie turns around.</p> <!-- seems like they wanted to make susie stop smiling too, but they ordered the commands wrong? -->
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Hey, Lancer, you ok, dude?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>I... I'm fine! Just... very...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="7"></d-sprite>
+		<d-text asterisk>Cold...</d-text>
+	</d-box>
+
+	<p class="note">Lancer falls to his back, shocking Susie.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Z"></d-sprite>
+		<d-text asterisk>H... hey, what the hell!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="B"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Z"></d-sprite>
+		<d-text asterisk>Hey, are you OK, dude...? Here, lemme heal you...!</d-text>
+	</d-box>
+
+	<p class="note">Susie straightens up, smile gone, and shoots a healing blast at Lancer. Once it hits, she hurries over to him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="7"></d-sprite>
+		<d-text asterisk>... th-thanks, Susie... but...</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to the side facing the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>D... darn, it's not strong enough, huh...</d-text>
+	</d-box>
+
+	<p class="note">She turns to Kris and Lancer.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="f"></d-sprite>
+		<d-text asterisk>Quick, Kris, let's find Ralsei! Maybe he can heal him!</d-text>
+	</d-box>
+
+	<p class="note">Carrying Lancer on her back, Susie leads Kris further down the hall. They stop a short distance down and turn around, however, when the door beside Susie's opens and a serious-looking Berdly comes out.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="3"></d-sprite>
+		<d-text asterisk>Wait!!! WAIT!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="5"></d-sprite>
+		<d-text asterisk>Y-you two aren't going to leave without ME, are you!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Uhhh... yeah we are.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="3"></d-sprite>
+		<d-text asterisk>But Noelle - my damsel in distress - she must be...</d-text>
+	</d-box>
+
+	<p class="note">Berdly droops, looking upset.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="H"></d-sprite>
+		<d-text asterisk>... in distress! And if I cannot help her, then...!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Okay FINE you can come if you shut up.</d-text>
+	</d-box>
+
+	<p class="note">Susie and Lancer hurry off, Berdly following; control is returned to the player. They can check <a href="{{ '/locations/cyberworld/queenmansion/guesthall' | relative_url }}">the various rooms of the guest hall</a> and stop by the SAVE point to the left:</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>You have escaped from your second personalized room of the day.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of vacation homes.</d-text>
+	</d-box>
+
+	<p class="note">Eventually, the player must follow Susie and Berdly to the east.</p>
+</section>
+
+<section class="d-section" id="darkbulb1">
+	<h2>First darkbulb puzzle</h2>
+
+	<h3 id="darkbulb1-entry">Entering the room</h3>
+	<p class="note">Kris and Susie (still carrying Lancer, but smiling again) hurry into the center of the next room. They stop in front of an outline on the floor, filled partially by what appear to be colored and specially-shaped spotlights. Susie turns to face the north wall, upon which are control panels for each spotlight and a sign to explain them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Looks like a puzzle.</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>... think, uh, YOU can do it, Kris?</d-text>
+	</d-box>
+
+	<p class="note">Berdly follows them into the room, stopping on Kris's other side.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="J"></d-sprite>
+		<d-text asterisk>Calm your skinless, boneless, thighs everyone.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="7"></d-sprite>
+		<d-text asterisk>I'LL think of a solution!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>(Kris, just ignore him.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>I'll just be over here where I can't hear you.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="I"></d-sprite>
+		<d-text asterisk>And I'll be here, away from your IQ-debuffing aura!</d-text>
+	</d-box>
+
+	<p class="note">Berdly and Susie walk away to stand in front of the left and right paths respectively, keeping Kris from leaving the room.</p>
+
+	<hr>
+
+	<h3 id="darkbulb1-berdly">Talking to Berdly</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="1"></d-sprite>
+		<d-text asterisk>Ah, Kris. Still stumped by this simple - ah - diversion?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="6"></d-sprite>
+		<d-text asterisk>Well, put your neurons back in the crayon box, Kris.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="E"></d-sprite>
+		<d-text asterisk>I can already feel the solution welling up in my brain cavity.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="2"></d-sprite>
+		<d-text asterisk>"Eureka!"</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="7"></d-sprite>
+		<d-text asterisk>Is what I will say. Now go.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="5"></d-sprite>
+		<d-text asterisk>Ah, Kris. Don't distract me while I'm deep in thought.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="1"></d-sprite>
+		<d-text asterisk>If only I could Alt+Tab away from you in real life...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="darkbulb1-susie">Talking to Susie and Lancer</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="0"></d-sprite>
+		<d-text asterisk>If only Lesser Dad was here to help!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>He's a regular Puzzle Pagliacci!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Uh, you mean like, a genius?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="6"></d-sprite>
+		<d-text asterisk>No, he's more like a sad clown.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Hurry up, Kris. I don't wanna look at Berdly.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="darkbulb1-sign">Reading the sign</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(These Darkbulbs will cast a bright shadow on the ground.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Fill in the space with dark to unlock the way.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="darkbulb1-instructions">Instructions</h3>
+	<p class="note">Upon interacting with the bulb-controlling joysticks on the far wall (in this as well as the other darkbulb rooms), controls are presented along the bottom of the screen.</p>
+
+	<p class="note">On the left: (On consoles, <span class="white">[Arrows]</span> is represented by graphics for each of the four directional buttons.)</p>
+	<d-box theme="fade">
+		<d-text>[Arrows]</d-text>
+		<d-text>Move</d-text>
+	</d-box>
+
+	<p class="note">On the right:</p>
+	<d-box theme="fade">
+		<d-text class="text-right-expand">[CONFIRM] Rotate</d-text>
+		<d-text class="text-right-expand">[CANCEL] Quit</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="darkbulb1-solve">Solving the puzzle</h3>
+	<p class="note">The joysticks recede into the wall and the panels close over them, becoming noninteractive, as the darkbulbs all turn the same color. Berdly is stunned.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Yeah!! We got it!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="3"></d-sprite>
+		<d-text asterisk>Wh... What!? Hey, wait a second --</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="B"></d-sprite>
+		<d-text asterisk>How'd you... How'd you solve it without me!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Hahaha!! Kris figured it out before you!! Jealous?</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns to the side away from the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="C"></d-sprite>
+		<d-text asterisk>Well I...</d-text>
+	</d-box>
+
+	<p class="note">He turns around, grinning smugly with his arms folded.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="7"></d-sprite>
+		<d-text asterisk>I knew the answer, I just wanted to see Kris try, first!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="6"></d-sprite>
+		<d-text asterisk>It's called SUSPENSE, Susan!! DRAMATIC, suspense!!</d-text>
+	</d-box>
+
+	<p class="note">Arms still folded, Berdly's eyes dart to the side anxiously as Susie takes a step towards him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Then YOU do the next one.</d-text>
+	</d-box>
+
+	<p class="note">Berdly lowers his arms and walks past her into the next room as he responds:</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="7"></d-sprite>
+		<d-text asterisk>Fine! WATCH me!!</d-text>
+	</d-box>
+
+	<p class="note">Once he's gone:</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>(Also my name's not Susan?)</d-text>
+	</d-box>
+
+	<p class="note">Susie turns around and walks into the next room as well. Control is returned to the player, who can follow.</p>
+</section>
+
+<section class="d-section" id="darkbulb2">
+	<h2>Second darkbulb puzzle</h2>
+
+	<h3 id="darkbulb2-entry">Entering the room</h3>
+	<p class="note">A short distance into the next room, Kris stops. Susie (still carrying Lancer) and Berdly stand at the center of the room, looking at the outline of another darkbulb puzzle waiting on the floor.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="7"></d-sprite>
+		<d-text asterisk>Ha. Child's play. Couldn't you give me a harder one?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="1"></d-sprite>
+		<d-text asterisk>For example, if anyone had a 4x4 Puzzle Cube...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="B"></d-sprite>
+		<d-text asterisk>Just tell us the solution.</d-text>
+	</d-box>
+
+	<p class="note">Berdly crosses his arms smugly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="J"></d-sprite>
+		<d-text asterisk>Well, hahah - ah, you see -</d-text>
+	</d-box>
+
+	<p class="note">His eyes turn anxiously to the side again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="0"></d-sprite>
+		<d-text asterisk><!-- this box deliberately left blank --></d-text>
+	</d-box>
+
+	<p class="note">He looks confident again…</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="1"></d-sprite>
+		<d-text asterisk>First, you</d-text>
+	</d-box>
+
+	<p class="note">…and then anxious…</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="0"></d-sprite>
+		<d-text asterisk><!-- this box deliberately left blank --></d-text>
+	</d-box>
+
+	<p class="note">…and then confident again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="D"></d-sprite>
+		<d-text asterisk>You align the shadows... with the lines on the floor.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Alright. What do we move first.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="D"></d-sprite>
+		<d-text asterisk>Um...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Kris, just do the puzzle.</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns to her, fists up and furious.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="C"></d-sprite>
+		<d-text asterisk>J...Just give me a moment!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="B"></d-sprite>
+		<d-text asterisk>It's not like Kris could even solve it anyway!!</d-text>
+	</d-box>
+
+	<p class="note">Susie and Berdly walk away to stand in front of the left and right paths respectively, keeping Kris from leaving the room.</p>
+
+	<hr>
+
+	<h3 id="darkbulb2-sign">Reading the sign</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(This puzzle is for staff only! Guests, please head back to your rooms.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="darkbulb2-susie">Talking to Susie and Lancer</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>What a bird-brain, right, Lancer?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Hoho! Yeah! All of his body parts are bird ones!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Lancer, tell Kris our sick scheme.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="0"></d-sprite>
+		<d-text asterisk>So... when we make track jackets...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>I'm making his a different color! Hoho! (cough)</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Alright, we had our laughs. Hurry up, Kris.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Lancer's getting... weak.</d-text>
+		<d-box place="center-x" offset-x="5%">
+			<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+			<d-text>I'm as brittle as a biscuit!</d-text>
+		</d-box>
+	</d-box>
+
+	<hr>
+
+	<h3 id="darkbulb2-berdly">Talking to Berdly</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="B"></d-sprite>
+		<d-text asterisk>Kris, leave the controls alone!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="9"></d-sprite>
+		<d-text asterisk>If you get sweat on the controls, it's,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="C"></d-sprite>
+		<d-text asterisk>It's going to eat up my inputs!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="B"></d-sprite>
+		<d-text asterisk>So just, let me solve this!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="darkbulb2-solve">Solving the puzzle</h3>
+	<p class="note">The joysticks recede into the wall and the panels close over them, becoming noninteractive, as the darkbulbs all turn the same color. Berdly is stunned.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Whoops, looks like Kris got it again!</d-text>
+	</d-box>
+
+	<p class="note">Berdly looks shocked.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="3"></d-sprite>
+		<d-text asterisk>H-huh!? W... wait!! Wait just a second!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="B"></d-sprite>
+		<d-text asterisk>You can't have --</d-text>
+	</d-box>
+
+	<p class="note">He looks furious.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="B"></d-sprite>
+		<d-text asterisk>You just got lucky! It's just trial and error!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="D"></d-sprite>
+		<d-text asterisk>The brute force method! Ha! A caveman could do it!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="2"></d-sprite>
+		<d-text asterisk>Except cavemen died OUT, because they're STUPID!</d-text>
+	</d-box>
+
+	<p class="note">He turns to the right, smiling again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="C"></d-sprite>
+		<d-text asterisk>I'M solving the next one, so --</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="B"></d-sprite>
+		<d-text asterisk>Just STAY HERE until I'm done!!</d-text>
+	</d-box>
+
+	<p class="note">He walks off into the next room.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Yeah, like we're gonna wait that long.</d-text>
+	</d-box>
+
+	<p class="note">Susie follows after him immediately. Control is returned to the player, who can follow.</p>
+</section>
+
+<section class="d-section" id="darkbulb3">
+	<h2>Third darkbulb puzzle</h2>
+
+	<h3 id="darkbulb3-entry">Entering the room</h3>
+	<p class="note">Berdly is standing in front of the darkbulb puzzle in the next room; Kris and Susie (with Lancer) enter the room and walk up to him. Berdly looks shocked, then turns fully to face them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="B"></d-sprite>
+		<d-text asterisk>What are you two doing here!? This one's MINE!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="7"></d-sprite>
+		<d-text asterisk>It'll be over in a second, so why don't you just,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="6"></d-sprite>
+		<d-text asterisk>Relax in your mind palace,</d-text>
+	</d-box>
+
+	<p class="note">Berdly lifts a smug finger.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="2"></d-sprite>
+		<d-text asterisk>Which PROBABLY doesn't even have anything in it!</d-text>
+	</d-box>
+
+	<p class="note">He turns to the side away from the player, perhaps looking at the shapes of the darkbulbs as displayed on the far wall.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="B"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="C"></d-sprite>
+		<d-text asterisk>I just need to figure out... why...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="C"></d-sprite>
+		<d-text asterisk>The shapes don't go together...</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to the puzzle for a moment, then turns to Berdly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Oh. Hey.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>You just gotta fill the whole square thing, right?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>What if you just... piled them all in the corners.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Like digging a really wide hole.</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns to them, shocked.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="3"></d-sprite>
+		<d-text asterisk>Wh... what!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Kris, wanna try?</d-text>
+	</d-box>
+
+	<p class="note">Berdly and Susie walk away to stand in front of the left and right paths respectively, keeping Kris from leaving the room.</p>
+
+	<hr>
+
+	<h3 id="darkbulb3-sign">Reading the sign</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Staff! If you're stuck, please don't call for help.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(No one can hear you. Not in this beloved death trap of a mansion...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="darkbulb3-susie">Talking to Susie and Lancer</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>C'mon, Kris! Just cover up the whole square thing!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="D"></d-sprite>
+		<d-text asterisk>QUIET!! No HINTS!! This is BIRD to HUMAN!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="C"></d-sprite>
+		<d-text asterisk>That means NO SUSIES, AND NO --</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="N"></d-sprite>
+		<d-text asterisk>Uhh, who is that guy?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>I'm Lancer! Pull my tongue and I'll say several phrases!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Such as "ow," "ouch," "aaaah,"</d-text>
+		<d-box place="center-x">
+			<d-sprite speaker="Berdly" variant="dark" emotion="10"></d-sprite>
+			<d-text>I DON'T NEED TO KNOW THAT!</d-text>
+		</d-box>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Hurry up. Lancer's getting pale.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="4"></d-sprite>
+		<d-text asterisk>(cough) But I like pails!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="darkbulb3-berdly">Talking to Berdly</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="5"></d-sprite>
+		<d-text asterisk>K-Kris... you...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="5"></d-sprite>
+		<d-text asterisk>Kris, YOU know how skilled I am at puzzles, right!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="D"></d-sprite>
+		<d-text asterisk>Tell her!! TELL HER about the puzzle I solved!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="7"></d-sprite>
+		<d-text asterisk>Th-then... we can... how about we...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="D"></d-sprite>
+		<d-text asterisk>Have her go in the other room, and, solve it, together?</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="D"></d-sprite>
+		<d-text asterisk>Fine! G... Go ahead and listen to SUSIE, Kris!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="7"></d-sprite>
+		<d-text asterisk>SUSIE! Are you hearing that?! Y-you...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="D"></d-sprite>
+		<d-text asterisk>You'll be a laughingstock, do you realize that, Kris!?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="darkbulb3-solve">Solving the puzzle</h3>
+	<p class="note">The joysticks recede into the wall and the panels close over them, becoming noninteractive, as the darkbulbs all turn the same color. Berdly is stunned, then walks forward to the center of the room, growing angry.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="3"></d-sprite>
+		<d-text asterisk>S-SUSIE's idea worked!? There's... there's no way!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="B"></d-sprite>
+		<d-text asterisk>It's a computer bug!! It's a glitch!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="D"></d-sprite>
+		<d-text asterisk>You're cheating!! J... just like when you w-wavedash!</d-text>
+	</d-box>
+
+	<p class="note">Susie strides up to him and laughs in his face, shocking Berdly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>HAHAHA!! How's it taste, idiot!?</d-text>
+	</d-box>
+
+	<p class="note">She takes another step closer, still laughing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+		<d-text asterisk>Man, I'm gonna relish this FOREVER!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>All those times you acted so high and mighty...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+		<d-text asterisk>Well, guess what? You're not!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Face it! You're just as big a dumbass as the rest of us!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+		<d-text asterisk>Hahahaha!!</d-text>
+	</d-box>
+
+	<p class="note">She stops laughing. A long pause. The music fades to silence as Berdly turns to the side, facing away from the player. A brief moment later, he turns fully away from Susie and takes a slow step away, no longer smiling.</p>
+
+	<p class="note">After a long pause, he slumps, looking miserable.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="9"></d-sprite>
+		<d-text asterisk>... fine.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="G"></d-sprite>
+		<d-text asterisk>I admit it.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="H"></d-sprite>
+		<d-text asterisk>I.... I'm not that smart.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="9"></d-sprite>
+		<d-text asterisk>I never was.</d-text>
+	</d-box>
+
+	<p class="note">He whirls around and glares furiously at Susie.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="B"></d-sprite>
+		<d-text asterisk>THERE, are you happy!?</d-text>
+	</d-box>
+
+	<p class="note">He slumps dispiritedly again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="9"></d-sprite>
+		<d-text asterisk>I... I... I just...</d-text>
+	</d-box>
+
+	<p class="note">The screen fades to black as a <a href="{% include wikilink page='Bluebird of Misfortune' %}">slow, high-pitched rendition of Berdly's theme</a> begins playing. The blue silhouette of a younger Berdly appears where his older self was standing, then moves to the center of the screen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="8"></d-sprite>
+		<d-text asterisk>I used to be a forgettable little bluebird.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="H"></d-sprite>
+		<d-text asterisk>No one even remembered my name.</d-text>
+	</d-box>
+
+	<p class="note">Berdly's silhouette moves to share the screen with the yellow-orange silhouette of a younger Noelle. Words begin appearing at the top of the screen — <span class="white fnt-condensed">SMART</span>, <span class="white fnt-condensed">INTELLIGENT</span>, <span class="white fnt-condensed">CLEVER</span>, <span class="white fnt-condensed">GENIUS</span>, <span class="white fnt-condensed">PRODIGY</span>, <span class="white fnt-condensed">QUICK</span> (randomly ordered) — and letters appear over the children's heads as they spell each word correctly, Noelle noticeably faster than Berdly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="8"></d-sprite>
+		<d-text asterisk>Then... one day, came the spelling bee Noelle and I studied for.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="8"></d-sprite>
+		<d-text asterisk>When it came down to the two of us...</d-text>
+	</d-box>
+
+	<p class="note">One last word is displayed: <span class="white fnt-condensed">DECEMBER</span>. But while Berdly slowly spells it out, Noelle is silent.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="9"></d-sprite>
+		<d-text asterisk>She got nervous and couldn't speak.</d-text>
+	</d-box>
+
+	<p class="note">Noelle falls to her knees, and her silhouette fades away as Berdly speaks.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="0"></d-sprite>
+		<d-text asterisk>She lost.</d-text>
+	</d-box>
+
+	<p class="note">Berdly's silhouette moves to the center of the screen, and a crown falls to sit atop his head. A crowd appears below, cheering for him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="4"></d-sprite>
+		<d-text asterisk>And I won.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="7"></d-sprite>
+		<d-text asterisk>That was when I tasted it.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="7"></d-sprite>
+		<d-text asterisk>The praise. The glory! The... SUPERIORITY!!</d-text>
+	</d-box>
+
+	<p class="note">The word "<span class="white fnt-condensed">IQ</span>" begins floating over Berdly's head, leaving a ghostly trail behind itself. The words from earlier — <span class="fnt-condensed" style="color: #32CEFF">SMART</span>, <span class="fnt-condensed" style="color: #32CEFF">INTELLIGENT</span>, and the rest — also begin appearing around Berdly, as though spoken by unseen others.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="6"></d-sprite>
+		<d-text asterisk>The addictive POWER of being... SMART!!</d-text>
+	</d-box>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="I"></d-sprite>
+		<d-text asterisk>Since then, year after year, I've been number 1 in the class.</d-text>
+	</d-box>
+
+	<p class="note">Noelle's silhouette reappears to the left side, but much dimmer than before.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="8"></d-sprite>
+		<d-text asterisk>... but it's only because Noelle helps me study.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="H"></d-sprite>
+		<d-text asterisk>She's... the real smart kid.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="9"></d-sprite>
+		<d-text asterisk>But everyone's expectations for ME are so high now..</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="8"></d-sprite>
+		<d-text asterisk>What am I going to do once I go somewhere without her...?</d-text>
+	</d-box>
+
+	<p class="note">Everything around Berdly fades: first Noelle, then the IQ label over his head, the audience, the crown, and finally the praise floating around him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="A"></d-sprite>
+		<d-text asterisk>That's... why I wanted to make a new world. For us.</d-text>
+	</d-box>
+
+	<p class="note">Everything reappears — the crown, the praise, the audience — but Berdly has shifted to the side, and Noelle now stands beside him. (Though without a crown of her own.)</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="6"></d-sprite>
+		<d-text asterisk>A world where we'll ALWAYS be number 1 and number 2!!!</d-text>
+	</d-box>
+
+	<p class="note">The flashback and music fade away. The black screen fades back in on the darkbulb room, with Berdly still looking downcast.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="8"></d-sprite>
+		<d-text asterisk>But... I was so wrapped up in that, I got tricked by Queen.</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns away from Susie.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="H"></d-sprite>
+		<d-text asterisk>And now... Noelle is going to suffer because of it.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="H"></d-sprite>
+		<d-text asterisk>Maybe I did just like being superior.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="H"></d-sprite>
+		<d-text asterisk>Maybe I am... just... an idiot.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Don't cry, chicken-nugget-man.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>All of us are idiots, too.</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns to Susie and Lancer, jolting in shock.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="3"></d-sprite>
+		<d-text asterisk>Huh...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>... I mean, like, I dunno about everyone else, but...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Whether you're the smart kid or not.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="4"></d-sprite>
+		<d-text asterisk>We couldn't care less.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Screw up as much as you want, honestly.</d-text>
+	</d-box>
+
+	<p class="note">After the slightest of pauses, Susie speaks—</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>It's not like our opinion of you can get much wo-</d-text>
+	</d-box>
+
+	<p class="note">—but is interrupted by Berdly without user input, as he takes a step towards her, smiling once more:</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="4"></d-sprite>
+		<d-text asterisk>Susie!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="I"></d-sprite>
+		<d-text asterisk>Susie... you... you'd... accept me...? Even if I'm... dumb?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Uh... y... yeah?</d-text>
+	</d-box>
+
+	<p class="note">She turns to the side away from the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>It's like when your sister gets cursed in Dragon Blazers 2.</d-text>
+	</d-box>
+
+	<p class="note">She faces Berdly again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Even if her stats suck, she's still your party member.</d-text>
+	</d-box>
+
+	<p class="note">A pause. Berdly takes a step back. A slight pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="5"></d-sprite>
+		<d-text asterisk>S... Susie!? A REAL Dragon Blazers 2 reference...?</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns to the side facing the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="5"></d-sprite>
+		<d-text asterisk>... Susie...</d-text>
+	</d-box>
+
+	<p class="note">He turns to Susie again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="I"></d-sprite>
+		<d-text asterisk>You're not only kind, but a true gamer as well.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="M"></d-sprite>
+		<d-text asterisk>Perhaps I... underestimated you.</d-text>
+		<d-box place="center-x">
+			<d-sprite speaker="Susie" emotion="17"></d-sprite>
+			<d-text asterisk>DON'T SAY THAT NOW!!!</d-text>
+		</d-box>
+	</d-box>
+
+	<p class="note">Berdly turns around and walks a few steps away.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="6"></d-sprite>
+		<d-text asterisk>But worry not!! I have decided!!!</d-text>
+	</d-box>
+
+	<p class="note">He turns to the side facing the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="7"></d-sprite>
+		<d-text asterisk>I will turn over a new leaf from now on...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="6"></d-sprite>
+		<d-text asterisk>And FIGHT! For the side...</d-text>
+	</d-box>
+
+	<p class="note">He raises a finger, laughing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="2"></d-sprite>
+		<d-text asterisk>OF IGNORANCE!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>WE'RE NOT TELLING YOU TO BE STUPID!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Just, sometimes it's OK to make mistakes!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="L"></d-sprite>
+		<d-text asterisk>Hahaha - and make mistakes, I will!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="6"></d-sprite>
+		<d-text asterisk>Onward!!</d-text>
+	</d-box>
+
+	<p class="note">As Berdly speaks his last sentence, he walks off to the next room. Once he's gone, Susie turns to the side facing the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Ugh, why couldn't Ralsei be here to teach the moral lesson!?</d-text>
+	</d-box>
+
+	<p class="note">She follows after Berdly. The harpsichord music resumes and control is returned to the player, who can follow after her.</p>
+</section>
+
+<section class="d-section" id="ralsei">
+	<h2>Finding Ralsei</h2>
+
+	<p class="note">The next room turns out to be a dining area, with Swatchlings standing between the tables. Past the tables waits Susie, still carrying a wan but smiling Lancer. As Kris catches up to her, Susie startles when a wail comes from somewhere offscreen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Th... that screaming... Ralsei...!?</d-text>
+	</d-box>
+
+	<p class="note">She and Kris rush forward to find Ralsei dressed like a butler and standing in front of several coordinated Swatchlings.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>U-umm, you don't have to scream...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>... Just because you like my outfit!</d-text>
+	</d-box>
+
+	<p class="note">The Swatchlings all throw their hands in the air and tip their heads back to scream in delight — the same scream as was heard previously. They turn around and walk away; Ralsei similarly turns and begins walking towards the dining area, but stops almost immediately upon spotting Susie and Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+		<d-text asterisk>O-oh!! Kris, Susie!! Umm, how may I serve you...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>The hell are you doing!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Umm, Queen didn't have a room for me, so... err...</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns to the side facing the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>She made me into one of her butlers, instead...</d-text>
+	</d-box>
+
+	<p class="note">Susie rushes up in front of Ralsei and holds Lancer out to him. His smile disappears as he turns to them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Z"></d-sprite>
+		<d-text asterisk>Whatever!! Ralsei! Can you heal Lancer!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="C"></d-sprite>
+		<d-text asterisk>O-oh!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="A"></d-sprite>
+		<d-text asterisk>Haha... it's... cold...</d-text>
+	</d-box>
+
+	<p class="note">Ralsei steps closer. A long pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+		<d-text asterisk>... Susie...</d-text>
+	</d-box>
+
+	<p class="note">He turns to the side away from the player…</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="6"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">…then looks at Susie and Lancer again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="8"></d-sprite>
+		<d-text asterisk>I'm afraid... This is something I can't heal.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Z"></d-sprite>
+		<d-text asterisk>Wh-what?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+		<d-text asterisk>Lancer is...</d-text>
+	</d-box>
+
+	<p class="note">A stunned Susie and a serious Ralsei back up as Lancer drops to the ground and turns to stone. Susie straightens up and grabs the petrified Lancer, shaking him back and forth with an agitated expression.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Z"></d-sprite>
+		<d-text asterisk>Lancer!? Lancer, hey...!!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns away from Susie and Lancer.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+		<d-text asterisk>You see, each Dark Fountain creates a different "world."</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+		<d-text asterisk>A "world" whose Darkners reflect the will of its fountain.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+		<d-text asterisk>But, though those Darkners can exist in their own worlds...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+		<d-text asterisk>They might not "belong" if they go to another one.</d-text>
+	</d-box>
+
+	<p class="note">No longer shaking Lancer but still holding on to him, Susie's gaze lowers.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>... so can we help him!?</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns to face her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="A"></d-sprite>
+		<d-text asterisk>Yes. There is a way.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="A"></d-sprite>
+		<d-text asterisk>Castle Town's Grand Fountain is made of pure darkness.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="B"></d-sprite>
+		<d-text asterisk>As long as it stays flowing, any Darkner can live there.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>So... if we bring Lancer back to school, he'll be OK again.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>... So we just need to get out of here, huh?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Right.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>... alright.</d-text>
+	</d-box>
+
+	<p class="note">Susie lifts her head and smiles at Lancer.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Lancer, we'll be back for you, buddy...</d-text>
+	</d-box>
+
+	<p class="note">A pause. Berdly's voice comes from somewhere offscreen to the left; Susie and Ralsei are alerted, the former letting go of Lancer and turning around with a serious expression.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Berdly</d-speaker> <!-- emotion I -->
+		<d-text asterisk>Your friend... If we defeat Queen, we can save him?</d-text>
+	</d-box>
+
+	<p class="note">The camera pans slightly to the left to show a serious-looking Berdly walking up to the party, Kris turning to face him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Uh, yeah.</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns to the side facing the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="0"></d-sprite>
+		<d-text asterisk>With me out of the way, Queen...</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns to the left and slumps, upset.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="G"></d-sprite>
+		<d-text asterisk>... is going to force Noelle to do her bidding.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="9"></d-sprite>
+		<d-text asterisk>And if Noelle doesn't want to...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="8"></d-sprite>
+		<d-text asterisk>... She might make her face into a robot one.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns and walks up to Susie; Kris turns to keep watching.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="8"></d-sprite>
+		<d-text asterisk>Susie...</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to the side facing the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="9"></d-sprite>
+		<d-text asterisk>Could you... assist me in saving Noelle?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>... huh...? M-me?</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns away from Susie and slumps dejectedly; she turns to face him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="9"></d-sprite>
+		<d-text asterisk>I... just can't do it by myself.</d-text>
+	</d-box>
+
+	<p class="note">He raises a finger, laughing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="I"></d-sprite>
+		<d-text asterisk>But if you can help me... I have a plan.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>A plan?</d-text>
+	</d-box>
+
+	<p class="note">Berdly lowers his hand and turns to the side facing the player, smiling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="0"></d-sprite>
+		<d-text asterisk>I remember from Queen's tour of this place...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="0"></d-sprite>
+		<d-text asterisk>There's a secret shortcut on the third floor.</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns to Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="1"></d-sprite>
+		<d-text asterisk>While Kris is distracting Queen,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="0"></d-sprite>
+		<d-text asterisk>Susie will take the shortcut to reach Noelle,</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns to the side facing the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="0"></d-sprite>
+		<d-text asterisk>And transfer her to me on the roof.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="1"></d-sprite>
+		<d-text asterisk>From there, I'll bring her to a safe hiding spot...</d-text>
+	</d-box>
+
+	<p class="note">Berdly raises a finger, laughing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="I"></d-sprite>
+		<d-text asterisk>And together, we can all defeat Queen!</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to the side away from the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">She turns to Berdly, who faces her as well.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Alright, sure. We'll give it a shot.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="6"></d-sprite>
+		<d-text asterisk>Haha! Most excellent!! Then...</d-text>
+	</d-box>
+
+	<p class="note">Berdly walks towards the right, everyone turning to watch. He stops near the edge of the screen and, after a slight pause, turns to look at them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="7"></d-sprite>
+		<d-text asterisk>See you on the roof, fellow agent!</d-text>
+	</d-box>
+
+	<p class="note">Berdly heads offscreen. The camera pans to focus on Kris as Susie and Ralsei turn to face them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Alright, let's go!</d-text>
+	</d-box>
+
+	<p class="note">Susie and Ralsei line up behind Kris. A pause. Then Susie turns to look at Ralsei.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>... would you take that off already!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>S-sorry!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei switches from the butler suit to his usual outfit, and the party members spin before striking poses. Control is returned to the player, who can lead the party (Susie and Ralsei smiling once more) into the mansion's entrance hall. There, they can stop by the <a href="{{ '/locations/cyberworld/queenmansion/colorcafe' | relative_url }}">Color Cafe</a> and visit previous sections of Cyber World through the <a href="{{ '/locations/cyberworld/queenmansion/entrancehall#warpdoor' | relative_url }}">warp door</a>.</p>
+
+	<p class="note">GIGA Queen's legs are partially visible in the entrance hall. In front of the robot floats a SAVE point:</p>
+	<d-box theme="dark">
+		<d-text asterisk>Looking at these legs fills you with a certain power.</d-text>
+	</d-box>
+
+	<p class="note">The player can lead the party up the northeast stairs to enter the <a href="{{ '/story/chapter2/mansion1F' | relative_url }}">east wing on 1F</a>.</p> <!-- they're all called mansion_east; i guess the guest hall is the entire west wing? -->
+</section>
