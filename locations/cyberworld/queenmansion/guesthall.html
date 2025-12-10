@@ -1,0 +1,675 @@
+---
+title: Queen's mansion - Guest Hall
+
+description: >
+  <p>Text and narration for the guest area in the west wing of Queen's mansion.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [2]
+    note: Kris door/talk tube, Hacker
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2]
+    note: Kris computers/bath bombs, Susie talk tube/egg, Swatchlings, Lancer
+  -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [2]
+    note: other Kris/Susie objects
+  -
+    name: gml_GlobalScript_scr_roomname
+    chapters: [2]
+    note: SAVE point location name
+  -
+    name: gml_Object_obj_savepoint_Other_10
+    chapters: [2]
+    note: SAVE point narration
+  -
+    name: gml_Object_obj_mansion_shovelpile_Other_10
+    chapters: [2]
+    note: Kris door
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [2]
+    note: darkbulb signs
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: choices
+
+toc:
+  -
+    id: krisroom
+    name: Kris's room
+    subheadings:
+      -
+        id: kriscomputer
+        name: Computer
+      -
+        id: kristalktube
+        name: Talking tube
+      -
+        id: bathbombs
+        name: Bath bombs
+      -
+        id: jelloknife
+        name: Knives stuck in jello
+      -
+        id: book
+        name: Jongler's Book
+      -
+        id: calendar
+        name: Calendar
+      -
+        id: tutoriel
+        name: Tutoriel
+      -
+        id: casette
+        name: Casette
+  -
+    id: susieroom
+    name: Susie's room
+    subheadings:
+      -
+        id: susiecomputer
+        name: Computer
+      -
+        id: susietalktube
+        name: Talking tube
+      -
+        id: egg
+        name: Egg
+      -
+        id: skateboard
+        name: Skateboard game
+      -
+        id: skateboardglitch
+        name: Glitched skateboard game
+      -
+        id: hologram
+        name: Hologram
+      -
+        id: bookvacuum
+        name: Book vacuum
+  -
+    id: hallway
+    name: Hallway
+    subheadings:
+      -
+        id: savepoint
+        name: SAVE point
+      -
+        id: krisdoor
+        name: Kris's door
+      -
+        id: berdlydoor
+        name: Berdly's door
+      -
+        id: cattydoor
+        name: Catty's door
+      -
+        id: hallwayswatchling1
+        name: Orange Swatchling
+      -
+        id: jockingtondoor
+        name: Jockington's door
+      -
+        id: hallwayswatchling2
+        name: Yellow Swatchling
+      -
+        id: asrieldoor
+        name: Asriel's door
+  -
+    id: darkbulb
+    name: Darkbulb puzzle rooms
+    subheadings:
+      -
+        id: darkbulb1
+        name: Room 1 sign
+      -
+        id: darkbulb2
+        name: Room 2 sign
+      -
+        id: darkbulb3
+        name: Room 3 sign
+      -
+        id: darkbulbmerged
+        name: Merged room sign
+      -
+        id: hacker
+        name: Hacker
+  -
+    id: dining
+    name: Dining area
+    subheadings:
+      -
+        id: diningswatchling1
+        name: Red Swatchling
+      -
+        id: diningswatchling2
+        name: Yellow Swatchling
+      -
+        id: lancer
+        name: Lancer
+---
+<section class="d-section" id="krisroom">
+	<h2>Kris's room</h2>
+	<p>(See also the <a href="{{ '/story/chapter2/roomescape' | relative_url }}">initial escape from Kris's room</a>.)</p>
+
+	<h3 id="kriscomputer">Computer</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It seems to have been overloaded by shovel requests.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(This is known as a Dozens and Dozens of Shovels attack.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="kristalktube">Talking tube</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Use the communication device?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(You put your whole head inside and honked.)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="H"></d-sprite>
+			<d-text asterisk>Kris!? The hell are you doing!?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="7"></d-sprite>
+			<d-text asterisk>Huh? Trying to fit your head inside? Yeah, me t-</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="H"></d-sprite>
+			<d-text asterisk>HEY!! WE DON'T HAVE TIME FOR THIS!!</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(You considered dropping bath bombs inside, but there's no time.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bathbombs">Bath bombs</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's dozens and dozens of bath bombs.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(From search query: diy bath bomb)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="jelloknife">Knives stuck in jello</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a jelly in the shape of various knives.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(From search query: sharpest kitchen knife jello)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="book">Jongler's Book</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's Jongler's Book on Jongleing And Other Tricks)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(From search query: how to use magic)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="calendar">Calendar</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a calendar with college vacation circled.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(From search query: summer vacation college when.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tutoriel">Tutoriel</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's two pixellized Toriels playing the piano.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(From search query: video game piano tutoriel)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="casette">Casette</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a VHS explaining how to install video game piano.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(From search query: video game piano tutorial)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="susieroom">
+	<h2>Susie's room</h2>
+
+	<h3 id="susiecomputer">Computer</h3>
+	<h4>When Susie isn't in the party</h4>
+	<p>(That is, if exploring Susie's room before reuniting with Ralsei.)</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Susie's computer.)</d-text>
+		<d-text asterisk>(Doesn't seem compatible with the skateboard game.)</d-text>
+	</d-box>
+
+	<h4>When Susie is in the party</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Look, I know what you're thinking.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>And NO, the skateboard game doesn't work on this.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="susietalktube">Talking tube</h3>
+	<h4>When Susie isn't in the party</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Susie's talk tube thing. Looks a bit bigger for her larger head.)</d-text>
+	</d-box>
+
+	<h4>When Susie is in the party</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Hey Kris, if you blasted flames down this horn thing...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="8"></d-sprite>
+		<d-text asterisk>You think it would torch the other side?</d-text>
+		<d-box place="center-x">
+			<d-sprite speaker="Ralsei" emotion="30"></d-sprite>
+			<d-text>(Why are you using that face now?)</d-text>
+		</d-box>
+	</d-box>
+	<!-- if ralsei isn't in the party this dialogue won't play, but like… ralsei's never not in the party when susie is -->
+
+	<hr>
+
+	<h3 id="egg">Egg</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a painted egg... It's warm.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(From search query: can harboil eggs hatch)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="skateboard">Skateboard game</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a copy of an online skateboarding game.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(From search query: cool skatebord game online)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="skateboardglitch">Glitched skateboard game</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a skateboarding game but the AI is cheating. It's impossible to win.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(From search query: cool skateboard game online CHEAT)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="hologram">Hologram</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Seems to be a somewhat glitched out hologram.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(From search query: FJFIrejirioEUEUROEI4378789)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bookvacuum">Book vacuum</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a vacuum-powered book.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(From search query: LOSERS!!!! THIS LIBRARBY SUCKS!!!!)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="hallway">
+	<h2>Hallway</h2>
+
+	<h3 id="savepoint">SAVE point</h3>
+	<p>Lists the location as "<span class="white fnt-condensed">Queen's Mansion - Guest Hall</span>".</p>
+	<d-box theme="dark">
+		<d-text asterisk>You have escaped from your second personalized room of the day.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of vacation homes.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="krisdoor">Kris's door</h3>
+	<h4>First time</h4>
+	<p class="note">The door thuds open, revealing countless shovels pouring out.</p>
+
+	<h4>Second time</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Seems like the room is overflowing with shovels.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(And, you don't have anything to dig through them with...)</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(There's no way to dig out of this mess.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="berdlydoor">Berdly's door</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(The nameplate reads BURGHLEY I MEAN BERDLY. Peek inside?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(... What you saw surprised you. &nbsp;... sort of.)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(You respected the Gamer's Code. No screen peeking.)</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+	
+	<h3 id="cattydoor">Catty's door</h3>
+	<p>Available only before Ralsei rejoins the party; gets blocked by a <a href="#hallwayswatchling1">Swatchling</a> after that.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(The nameplate reads CATTY'S ROOM. Peek inside?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(It's wallpapered with the pink cat ad from the city. It's animated, too.)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(You can smell the glittery cat food from here anyway.)</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="hallwayswatchling1">Orange Swatchling</h3>
+	<p>Stands outside Catty's door after Ralsei rejoins the party.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Did you enjoy your room?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>There was a mint under your electric cage...</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Don't make a mistake, this is not a hotel.</d-text>
+	</d-box>
+
+	<hr>
+	
+	<h3 id="jockingtondoor">Jockington's door</h3>
+	<p>Available only before Ralsei rejoins the party; gets blocked by a <a href="#hallwayswatchling2">Swatchling</a> after that.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(The nameplate reads JOCKINGTON'S ROOM. Peek inside?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(... it's beautiful.)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(You feel like Noelle would enjoy this more.)</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="hallwayswatchling2">Yellow Swatchling</h3>
+	<p>Stands outside Jockington's door after Ralsei rejoins the party.</p>
+
+	<h4>Standard</h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>This mansion used to be a luxurious home for upper class citizens.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Your room? It belonged to a prestigious big shot...</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Sadly, his name has been erased from the records...</d-text>
+	</d-box>
+
+	<h4>After defeating <a href="{{ '/story/chapter2/spamtonneo' | relative_url }}">Spamton NEO</a></h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Spamton? This used to be his room...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Though it's not like he used it, after a while.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Eventually, he just spent all his time in the basement... praying.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>When things went downhill, he became obsessed with that artifact.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Maybe he thought it would give him another big break?</d-text>
+	</d-box>
+
+	<hr>
+	
+	<h3 id="asrieldoor">Asriel's door</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(The nameplate reads ASRIEL'S ROOM. Peek inside?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<h4>When Susie isn't in the party</h4>
+		<d-box theme="dark">
+			<d-text asterisk>(You opened the door with your eyes closed. You saw nothing.)</d-text>
+		</d-box>
+
+		<hr class="hrhalf">
+
+		<h4>When Susie is in the party</h4>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="9"></d-sprite>
+			<d-text asterisk>HAHAHA!! Kris, who's room is THIS!?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="6"></d-sprite>
+			<d-text asterisk>... huh? Your brother?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+			<d-text asterisk>HAHAHA!!! Man, you better hope I never meet him...!</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(You have the feeling you wouldn't learn anything.)</d-text>
+		</d-box>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="darkbulb">
+	<h2>Darkbulb puzzle rooms</h2>
+
+	<h3 id="darkbulb1">Room 1 sign</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(These Darkbulbs will cast a bright shadow on the ground.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Fill in the space with dark to unlock the way.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="darkbulb2">Room 2 sign</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(This puzzle is for staff only! Guests, please head back to your rooms.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="darkbulb3">Room 3 sign</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Staff! If you're stuck, please don't call for help.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(No one can hear you. Not in this beloved death trap of a mansion...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="darkbulbmerged">Merged room sign</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(The other 2 puzzle rooms have been removed unceremoniously by a giant hand.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(We ask our guests for their understanding and kinda hope they weren't in there.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="hacker">Hacker</h3>
+	<p>Appears in room 1 when entering it the second time onwards, and the merged room.</p>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>This puzzle... I think I got it on the download...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>I just need to datamine the answers from the console...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>The answer's in the code...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(All he's managed to do is get a child's toy to play a beep version of nursery rhyme music)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dining">
+	<h2>Dining area</h2>
+
+	<h3 id="diningswatchling1">Red Swatchling</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>This downstairs table will be for our special guests.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>There's a dinner party on the 2nd floor for everyone else.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Combined, we have enough seats for everyone in the world.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="diningswatchling2">Yellow Swatchling</h3>
+	<h4>When Ralsei isn't in the party</h4>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Everything here is tailored for you... right?</d-text>
+	</d-box>
+
+	<h4>When Ralsei is in the party</h4>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Ralsei, good luck.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Although you only joined us for minutes, we'll miss you.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="lancer">Lancer</h3>
+	<p class="note">Once Lancer is fully petrified, interacting with him pushes him a short distance. Pushing him enough times towards the left will cause him to slide up to the edge of the nearest table, at which point a plate falls from somewhere above, spaghetti following it shortly after. Lastly, a bib falls around Lancer's neck. After this, Lancer can be interacted with to get the following:</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(He seems to be well-taken care of.)</d-text>
+	</d-box>
+</section>
