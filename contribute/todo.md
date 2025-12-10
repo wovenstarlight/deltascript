@@ -106,7 +106,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/cyberworld` - Chapter 2 dark world
 			* `/queenmansion`
 				* 1F: ~~`/guesthall`, `/colorcafe`~~ DONE
-					* `/entrancehall#warpdoor`
+					* `/entrance#warpdoor`
 				* `/3F`
 					* `/housepuzzles` (or `#housepuzzles`? see if there's enough 3F stuff to break down into subpages, ig) - the section in the middle of the acid lake that has all the house bridge puzzles, the one werewire and swatchling, and the maus puzzle
 		* `/tvworld` - Chapter 3 dark world
