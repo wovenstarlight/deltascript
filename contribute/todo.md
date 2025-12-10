@@ -238,6 +238,31 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* `#storage`
 		* recruits: add to `/recruits#recruitmenu`
 	* `/generic` - Generic text for stuff like shops ("buy it for $### ?" and "sell it for $### ?") and opening chests and all that. May overlap with above point in some cases.
+		* general shop options and messages. notable variables:
+			* `menu`
+				1. Buy
+				11. Sell Items
+				12. Sell Weapons
+				13. Sell Armor
+				14. Sell Pocket Items
+			* `sidemessage`
+				* Buy
+					0. Initial buying
+					1. Making a purchase, item placed in inventory
+					2. Backing out of a purchase
+					3. Not enough D$
+					4. Storage full
+					5. Making a purchase, item placed in storage
+				* Sell
+					0. Initial selling
+					1. Selling the last of items/armor/weapons
+					2. Selling with empty inventory
+			* `sidemessage2`
+				0. Initial selling (items/weapons/armor)
+				1. Making a sale
+				2. Backing out of a sale
+				3. Trying to sell unsellable item
+				4. Trying to sell nothing #mynothing (Empty slot)
 		* DONE up to Chapter 4: item/equipment/money get, treasure chests, warp doors, vending machines
 	* ~~`/powermenu` - Titles, stats, spells~~ DONE up to Chapter 4
 	* ~~`/spells` - Spells listed in the POWER menu with overworld/battle descriptions and usage text~~ DONE up to Chapter 4
