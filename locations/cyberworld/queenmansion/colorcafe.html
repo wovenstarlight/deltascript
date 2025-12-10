@@ -1,0 +1,565 @@
+---
+title: Color Cafe
+
+description: >
+  <p>Text and dialogue from the butler cafe run by Swatch in Queen's mansion.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+# see_also:
+# TODO: is this the URL we want for the generic shop text
+#   -
+#     name: Generic shop text
+#     url: /misc/generic/shop
+#     for: responses to specific actions not specified on this page
+
+sources:
+  -
+    name: gml_Object_obj_shop_ch2_swatch_Draw_0
+    chapters: [2]
+  -
+    name: gml_Object_obj_shop_ch2_swatch_Create_0
+    chapters: [2]
+    note: buyable items
+  -
+    name: gml_GlobalScript_scr_shopmenu
+    chapters: [2]
+    note: sale exceptions
+
+toc:
+  -
+    id: mainscreen
+    name: Main screen
+    subheadings:
+      -
+        id: initial
+        name: Initial entrance
+      -
+        id: postexit
+        name: After exiting a menu
+  -
+    id: buy
+    name: Buy
+    subheadings:
+      -
+        id: itemlist
+        name: Items for sale
+      -
+        id: initialbuy
+        name: Initial buying
+      -
+        id: confirmbuy
+        name: Making a purchase
+      -
+        id: cancelbuy
+        name: Backing out of a purchase
+      -
+        id: nomoney
+        name: Not enough D$
+      -
+        id: storagefull
+        name: Storage full
+  -
+    id: sell
+    name: Sell
+    subheadings:
+      -
+        id: sellitem
+        name: Initial item sale screen
+      -
+        id: sellweapon
+        name: Initial weapon sale screen
+      -
+        id: sellarmor
+        name: Initial armor sale screen
+      -
+        id: sellempty
+        name: Selling with empty inventory
+      -
+        id: confirmsale
+        name: Making a sale
+      -
+        id: sellall
+        name: Selling the last of your items/armor/weapons
+      -
+        id: cancelsale
+        name: Backing out of a sale
+      -
+        id: sellspecial
+        name: Trying to sell special items
+      -
+        id: sellfail
+        name: Empty slot
+  -
+    id: talk
+    name: Talk
+    subheadings:
+      -
+        id: aboutyourself
+        name: About yourself
+      -
+        id: missionstatement
+        name: Mission Statement
+      -
+        id: rouxlskaard
+        name: Rouxls Kaard
+      -
+        id: outfit
+        name: Outfit
+      -
+        id: basement
+        name: Basement
+      -
+        id: basementrobot
+        name: Basement Robot
+  -
+    id: exit
+    name: Exit
+---
+<section class="d-section" id="mainscreen">
+	<h2>Main screen</h2>
+
+	<h3 id="initial">Initial entrance</h3>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopleft">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Welcome to Color Cafe.</d-text>
+		<d-text asterisk>Let us warm your day.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="postexit">After exiting a menu</h3>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopleft">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Don't be blue.</d-text>
+		<d-text asterisk>We're here for you.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="buy">
+	<h2>Buy</h2>
+
+	<h3 id="itemlist">Items for sale</h3>
+	<h4><a href="{{ '/misc/darkitems#butlerjuice' | relative_url }}">ButJuice</a></h4>
+	<d-box theme="shopdesc">
+		<d-text>ITEM</d-text>
+		<d-text>Short for ButlerJuice</d-text>
+		<d-text>+100HP</d-text>
+	</d-box>
+	<h4><a href="{{ '/misc/darkitems#spaghetticode' | relative_url }}">SpagettiCode</a></h4>
+	<d-box theme="shopdesc">
+		<d-text>ITEM</d-text>
+		<d-text>Spaghetti woven by <span style="white-space: pre">master coders</span></d-text>
+		<d-text>Party +30HP</d-text>
+	</d-box>
+	<h4><a href="{{ '/misc/armor#bshotbowtie' | relative_url }}">B.ShotBowtie</a></h4>
+	<d-box theme="shopdesc">
+		<d-text>ARMOR</d-text>
+		<d-text>A handsome bowtie.</d-text>
+	</d-box>
+	<h4><a href="{{ '/misc/armor#royalpin' | relative_url }}">RoyalPin</a></h4>
+	<d-box theme="shopdesc">
+		<d-text>ARMOR</d-text>
+		<d-text>Luxurious brooch.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="initialbuy">Initial buying</h3>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text>Our menu<span class="break"></span> is specially prepared.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="confirmbuy">Making a purchase</h3>
+	<h4>If item goes to inventory</h4>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text>Queen thanks you for your patronage.</d-text>
+	</d-box>
+	<h4>If item goes to storage</h4>
+	<p class="note">("it'll" overflows the textbox as in the game.)</p>
+	<d-sprite speaker="Swatch" emotion="2" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text><span style="white-space: pre;">Thanks, it'll</span> <span class="break"></span> be in your STORAGE.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="cancelbuy">Backing out of a purchase</h3>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text>Take your time.</d-text>
+		<d-text>We'll be waiting.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="nomoney">Not enough D$</h3>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text>You can't afford it. ... maybe next time?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="storagefull">Storage full</h3>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text>Seems your bags are full. Shall we assist?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="sell">
+	<h2>Sell</h2>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text>Queen... Makes us buy trash for her.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellitem">Initial item sale screen</h3>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text>An ITEM<span class="break"></span> to delight our Queen?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellweapon">Initial weapon sale screen</h3>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text>A WEAPON<span class="break"></span> to protect our Queen?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellarmor">Initial armor sale screen</h3>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text>ARMOR<span class="break"></span> to adorn our Queen?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellempty">Selling with empty inventory</h3>
+	<p>Choosing "Sell Items/Pocket Items" when you have no items, or "Sell Weapons/Armor" when you have no unequipped weapons/armor.</p>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text>It seems<span class="break"></span> you don't have anything.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="confirmsale">Making a sale</h3>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text>I'm sure she's going to enjoy this.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellall">Selling the last of your items/armor/weapons</h3>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text>That's all.</d-text>
+		<d-text>Need any help with your bags?</d-text>
+	</d-box>
+	<p class="note">You are returned to the initial Sell screen.</p>
+
+	<hr>
+
+	<h3 id="cancelsale">Backing out of a sale</h3>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text>Changed your mind? We'll<span class="break"></span> wait.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellspecial">Trying to sell special items</h3>
+	<p>Special items include:</p>
+	<ul>
+		<li><a href="{{ '/misc/darkitems#manual' | relative_url }}">The Manual</a></li>
+		<li><a href="{{ '/misc/armor#jevilstail' | relative_url }}">Jevilstail</a> & <a href="{{ '/misc/weapons#devilsknife' | relative_url }}">Devilsknife</a></li>
+		<li><a href="{{ '/misc/armor#dealmaker' | relative_url }}">Dealmaker</a> & <a href="{{ '/misc/weapons#puppetscarf' | relative_url }}">Puppet Scarf</a></li>
+		<li><a href="{{ '/misc/weapons#thornring' | relative_url }}">Thorn Ring</a></li>
+	</ul>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text>There are some things we cannot buy.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellfail">Empty slot</h3>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text>Black is<span class="break"></span> the color of<span class="break"></span> sorrow.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="talk">
+	<h2>Talk</h2>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>Swatch</d-speaker>
+		<d-text>Chatting would be our pleasure.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="aboutyourself">About yourself</h3>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Ah, forgive me for not introducing myself sooner, young masters.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>I am Swatch, Our Lady Grace's head butler.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>When we are not attending to her needs, I and the Queen's other staff,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Use this room as our humble yet colorful gift-shop-slash-cafe.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Please, shop to your heart's content. We are eager to serve your any wish.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="missionstatement">Mission Statement</h3>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Does a woman of Our Lady Grace's caliber not deserve -</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>A coven of powerful men and women to dote upon her every movement?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>To have rap anthems written to her kindness --</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Which are then bitcrushed beyond recognition to make them more 'computer'?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>To have melons, smashed, with karate chops, repeatedly, for no apparent reason?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>To have barrels, thrown, from the rafters --</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>And make us smash them all with karate chops before the timer runs out?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>But the barrels, are full of melons, and we have to smash those too?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Yes. The answer is... yes.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="rouxlskaard">Rouxls Kaard</h3>
+	<h4>Before crossing the <a href="{{ '/story/chapter2/acidtunnel' | relative_url }}">acid tunnel</a></h4>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Rouxls? I am afraid I am not familiar with a guest of that moniker...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Ah, wait. Are you perchance referring to that unbearable -</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Err, UNIQUE Man who barged in here and demanded to be made "Butler Supremeth?"</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>I am afraid that person... is now banned from this establishment.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>And may have suffered injuries as a result of his, err... rather swift ejection.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Please do not mention him again.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>We are still cleaning up the worms he left on the floor.</d-text>
+	</d-box>
+
+	<h4>After crossing the acid tunnel</h4>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Oh, you defeated that simpleton? Wonderful, wonderful.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>After he stole our flower display for one of his "boo-kettes,"</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Tasque Manager told me she saw him in the hallway,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Where, opening with "Ah, thou muste be 50`% Likelye to be Queene",</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>He thrust the vase upon her, and asked to be her "minion for life."</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>... he was promptly electrocuted to the ground.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Well. Enough of the unpleasantries. Would you like a toasted marshmallow?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="outfit">Outfit</h3>
+	<p>Available before entering the mansion basement. Gets replaced by <a href="#basement">Basement</a>.</p>
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Ah, my outfit. Yes, the monochrome look is quite suitable, isn't it?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Black suit, colored glasses. Many people have failed to imitate this look.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Some even going so far as to attempt to impersonate me...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>In order to get the... Oh, nevermind. Macaron?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 class="yellow" id="basement">Basement</h3>
+	<p>Available afer entering the basement and before defeating Spamton NEO. Replaces <a href="#outfit">Outfit</a> and gets replaced by <a href="#basementrobot">Basement Robot</a>.</p>
+
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>What? Basement? There's no basement here.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>You need to relax. Have a drink, and talk softly...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>You're bothering the other customers.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 class="yellow" id="basementrobot">Basement Robot</h3>
+	<p>Available after defeating Spamton NEO. Replaces <a href="#basement">Basement</a>.</p>
+
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>... So that's what happened.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>That robot was the embodiment of a Lightner's dream.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>A dream I helped create... once.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Splashing color from the motion of their hand.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>The Lightner filled it with their own hope, giving it an incredible power.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>... but, in the end, nothing ever came of it.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>And it was left in the basement with the rest of the corrupted data.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>... But that crooked salesman! Somehow, he learned about the robot,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>And thought he could use its power to fulfill his own twisted dreams.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>What a pity. To think he was once a valued customer...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="exit">
+	<h2>Exit</h2>
+
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Please come again.</d-text>
+		<d-text asterisk>We'll be waiting for you<span class="break"></span> with rose-tinted glasses...</d-text>
+	</d-box>
+</section>
