@@ -1,0 +1,376 @@
+---
+title: SHOP_NAME
+
+description: >
+  <p>Text and dialogue from SHOP_DESCRIPTION</p>
+
+credits: >
+  <p>Compiled by your_name_here.</p>
+
+see_also:
+# TODO: is this the URL we want for the generic shop text
+#   -
+#     name: Generic shop text
+#     url: /misc/generic/shop
+#     for: responses to specific actions not specified on this page
+  -
+    url: /locations/
+    name: Location from which shop is accessed
+
+sources:
+  -
+    name: gml_Object_obj_SHOPOBJECT_Draw_0
+    chapters: []
+  -
+    name: gml_Object_obj_SHOPOBJECT_Create_0
+    chapters: []
+    note: buyable items
+  -
+    name: gml_GlobalScript_scr_shopmenu
+    chapters: []
+    note: sale exceptions
+
+toc:
+  -
+    id: mainscreen
+    name: Main screen
+    subheadings:
+      -
+        id: initial
+        name: Initial entrance
+      -
+        id: postexit
+        name: After exiting a menu
+  -
+    id: buy
+    name: Buy
+    subheadings:
+      -
+        id: itemlist
+        name: Items for sale
+      -
+        id: initialbuy
+        name: Initial buying
+      -
+        id: considerbuy
+        name: Considering a purchase
+      -
+        id: confirmbuy
+        name: Making a purchase
+      -
+        id: cancelbuy
+        name: Backing out of a purchase
+      -
+        id: nomoney
+        name: Not enough D$
+      -
+        id: storagefull
+        name: Storage full
+  -
+    id: sell
+    name: Sell
+    subheadings:
+      -
+        id: sellitem
+        name: Initial item sale screen
+      -
+        id: sellweapon
+        name: Initial weapon sale screen
+      -
+        id: sellarmor
+        name: Initial armor sale screen
+      -
+        id: sellempty
+        name: Selling with empty inventory
+      -
+        id: confirmsale
+        name: Making a sale
+      -
+        id: sellall
+        name: Selling the last of your items/armor/weapons
+      -
+        id: cancelsale
+        name: Backing out of a sale
+      -
+        id: sellspecial
+        name: Trying to sell special items
+      -
+        id: sellfail
+        name: Empty slot
+  -
+    id: talk
+    name: Talk
+    subheadings:
+      -
+        id: 
+        name: 
+  -
+    id: exit
+    name: Exit
+---
+<section class="d-section" id="mainscreen">
+	<h2>Main screen</h2>
+
+	<h3 id="initial">Initial entrance</h3>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopleft">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text asterisk></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="postexit">After exiting a menu</h3>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopleft">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text asterisk></d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="buy">
+	<h2>Buy</h2>
+
+	<h3 id="itemlist">Items for sale</h3>
+	<h4><a href="{{ '/misc/darkitems#' | relative_url }}">ITEMNAME</a></h4>
+	<d-box theme="shopdesc">
+		<d-text>ITEM</d-text>
+		<d-text></d-text>
+	</d-box>
+	<h4><a href="{{ '/misc/armor#' | relative_url }}">ITEMNAME</a></h4>
+	<d-box theme="shopdesc">
+		<d-text>ARMOR</d-text>
+		<d-text></d-text>
+	</d-box>
+	<h4><a href="{{ '/misc/weapons#' | relative_url }}">ITEMNAME</a></h4>
+	<d-box theme="shopdesc">
+		<d-text>WEAPON</d-text>
+		<d-text></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="initialbuy">Initial buying</h3>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="considerbuy">Considering a purchase</h3>
+	<d-box theme="shopright">
+		<d-text></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="confirmbuy">Making a purchase</h3>
+	<h4>If item goes to inventory</h4>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+
+	<h4>If item goes to storage</h4>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="cancelbuy">Backing out of a purchase</h3>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="nomoney">Not enough D$</h3>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="storagefull">Storage full</h3>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="sell">
+	<h2>Sell</h2>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellitem">Initial item sale screen</h3>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellweapon">Initial weapon sale screen</h3>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellarmor">Initial armor sale screen</h3>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellempty">Selling with empty inventory</h3>
+	<p>Choosing "Sell Items/Pocket Items" when you have no items, or "Sell Weapons/Armor" when you have no unequipped weapons/armor.</p>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="confirmsale">Making a sale</h3>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellall">Selling the last of your items/armor/weapons</h3>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+	<p class="note">You are returned to the initial Sell screen.</p>
+
+	<hr>
+
+	<h3 id="cancelsale">Backing out of a sale</h3>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellspecial">Trying to sell special items</h3>
+	<p>Special items include:</p>
+	<ul>
+		<li><a href="{{ '/misc/darkitems#manual' | relative_url }}">The Manual</a> (unavailable by this point)</li>
+		<li>Secret boss rewards
+			<ul>
+				<li><a href="{{ '/misc/armor#jevilstail' | relative_url }}">Jevilstail</a>/<a href="{{ '/misc/weapons#devilsknife' | relative_url }}">Devilsknife</a></li>
+				<li><a href="{{ '/misc/armor#dealmaker' | relative_url }}">Dealmaker</a>/<a href="{{ '/misc/weapons#puppetscarf' | relative_url }}">Puppet Scarf</a></li>
+				<li><a href="{{ '/misc/armor#shadowmantle' | relative_url }}">Shadow Mantle</a></li>
+				<li><a href="{{ '/misc/weapons#justiceaxe' | relative_url }}">Justice Axe</a></li>
+			</ul>
+		</li>
+		<li><a href="{{ '/misc/weapons#thornring' | relative_url }}">Thorn Ring</a> and <a href="{{ '/misc/weapons#twistedsword' | relative_url }}">Twisted Sword</a></li>
+		<li><a href="{{ '/misc/armor#blueribbon' | relative_url }}">Blue Ribbon</a></li>
+	</ul>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sellfail">Empty slot</h3>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="talk">
+	<h2>Talk</h2>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="shopright">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id=""></h3>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text asterisk></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id=""></h3>
+	<p>Available before CONDITION. Gets replaced by <a href="#"></a>.</p>
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text asterisk></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 class="yellow" id=""></h3>
+	<p>Available afer CONDITION and before CONDITION. Replaces <a href="#"></a> and gets replaced by <a href="#"></a>.</p>
+
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text asterisk></d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 class="yellow" id=""></h3>
+	<p>Available after CONDITION. Replaces <a href="#"></a>.</p>
+
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text asterisk></d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="exit">
+	<h2>Exit</h2>
+
+	<d-sprite speaker="SHOPKEEPER" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>SHOPKEEPER</d-speaker>
+		<d-text asterisk></d-text>
+	</d-box>
+</section>
