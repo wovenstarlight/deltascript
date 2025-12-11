@@ -1,6 +1,6 @@
 ---
 title: Confronting Spamton NEO
-# hm. Neoquest?
+# Neoquest!
 
 description: >
   <p>Kris helps Spamton get to the machine in Queen's basement, and they both face the consequences.</p>
@@ -8,15 +8,51 @@ description: >
 credits: >
   <p>Compiled by wovenstarlight.</p>
 
+see_also:
+  -
+    url: /locations/cyberworld/cybercity/spamtonshop
+    name: Spamton's shop
+  -
+    url: /locations/cyberworld/queenmansion/basement
+    name: Queen's mansion - Basement
+
 sources:
   -
-    name: gml_GlobalScript_scr_text
+    name: gml_Object_obj_shop_ch2_spamton_Draw_0
     chapters: [2]
-    note: machine interaction, pre-disk load
+    note: Spamton shop dialogue
+  -
+    name: gml_Object_obj_ch2_room_spamton_shop_exterior_Step_0
+    chapters: [2]
+    note: first leaving shop
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2]
+    note: Addisons, guest hall Swatchling, Plugboy
+  -
+    name: gml_Object_obj_ch2_room_mansion_east_1f_e_Create_0
+    chapters: [2]
+    note: Hacker appearance conditions
   -
     name: gml_Object_obj_readable_room1_Other_10
     chapters: [2]
-    note: machine interaction, post-disk load
+    note: Hacker, switch, power source, machine, Light World computer
+  -
+    name: gml_Object_obj_ch2_sceneex1_Step_0
+    chapters: [2]
+    note: first entering/leaving basement
+  -
+    name: gml_Object_obj_forcefield_Other_10
+    chapters: [2]
+    note: forcefield
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: choices
+  -
+    name: gml_Object_obj_shop_ch2_swatch_Draw_0
+    chapters: [2]
+    note: Color Cafe dialogue
   -
     name: gml_Object_obj_ch2_sceneex2_Step_0
     chapters: [2]
@@ -28,9 +64,78 @@ sources:
   -
     name: gml_Object_obj_ch2_sceneex3_Step_0
     chapters: [2]
-    note: discussion while leaving
+    note: leaving post-fight
+  -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [2]
+    note: Trashy, Virovirokun
+  -
+    name: gml_Object_obj_ch2_room_city_spamton_house_Create_0
+    chapters: [2]
+    note: Trash Zone Addison colors
 
 toc:
+  -
+    id: deal
+    name: Making a deal with Spamton
+    subheadings:
+      -
+        id: preshop
+        name: Going to Spamton's shop for the first time
+      -
+        id: dealmaking
+        name: Making the deal and purchasing the KEYGEN
+      -
+        id: postshop
+        name: Leaving the shop for the first time, with Susie and Ralsei in the party
+  -
+    id: addisonspre
+    name: Asking the Addisons about Spamton
+  -
+    id: basemententry
+    name: Getting into the basement
+    subheadings:
+      -
+        id: hacker
+        name: Talking to the Hacker
+      -
+        id: switch
+        name: Tripping the hidden switch
+      -
+        id: secretroom
+        name: Entering the secret room
+      -
+        id: firstentry
+        name: Entering the basement for the first time
+  -
+    id: emptydisk
+    name: Retrieving the Empty Disk
+    subheadings:
+      -
+        id: forcefield
+        name: Forcefield
+      -
+        id: powersource
+        name: Power source
+      -
+        id: diskget
+        name: Checking the machine
+        subheadings:
+          -
+            id: diskget-initial
+            name: Initial
+          -
+            id: diskget-post
+            name: After obtaining the Empty Disk
+  -
+    id: basementleave
+    name: Leaving the basement for the first time
+  -
+    id: swatchbasement
+    name: Asking Swatch about the basement
+  -
+    id: diskload
+    name: Giving Spamton the Empty Disk
   -
     id: machine
     name: Inserting the Loaded Disk
@@ -43,10 +148,613 @@ toc:
   -
     id: leaving
     name: On the way out
+  -
+    id: swatchrobot
+    name: Asking Swatch about the robot
+  -
+    id: spamtonroom
+    name: Asking the Swatchling about Spamton's room
+  -
+    id: trashzone
+    name: The Addisons reminisce
+    subheadings:
+      -
+        id: plugboy
+        name: Talking to Plugboy
+      -
+        id: virovirokun
+        name: Talking to Virovirokun
+      -
+        id: trashy
+        name: Talking to Trashy
+      -
+        id: addisonspost
+        name: Talking to the Addisons
+  -
+    id: computerlab
+    name: Checking the computer in the library
 ---
+<section class="d-section" id="deal">
+	<h2>Making a deal with Spamton</h2>
+
+	<h3 id="preshop">Going to Spamton's shop for the first time</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(The door is unlocked.)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Go Inside"></d-option>
+		<d-option index="1" text="Don't#go in"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<h4>Standard, with Susie and Ralsei in the party</h4>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="6"></d-sprite>
+			<d-text asterisk>What? You wanna go in by yourself...?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="0"></d-sprite>
+			<d-text asterisk>... whatever. Do what you want.</d-text>
+		</d-box>
+		<p class="note">The music fades out and Kris enters the shop.</p>
+
+		<hr class="hrhalf">
+
+		<h4>Unused variant, with Noelle in the party</h4>
+		<p>Impossible to get since after defeating Spamton, the first time the player can backtrack to the Trash Zone is after reaching Queen's mansion, by which point Noelle has left the party.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+			<d-text asterisk>Huh? You want to go in alone...?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+			<d-text asterisk>... okay, I'll... I'll just wait here...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+			<d-text asterisk>Just, um.... it's... cr-creepy out here, so...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="D"></d-sprite>
+			<d-text asterisk>N-no, you can take your time! It's okay...</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends here.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="dealmaking">Making the deal and purchasing the KEYGEN</h3>
+	<p class="note">While purchasing the key item <a href="{{ '/misc/darkitems#keygen' | relative_url }}">KEYGEN</a>, Kris may choose to talk to Spamton about "<span class="white fnt-condensed">OUR DEAL</span>".</p>
+
+	<h4>First time</h4>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>KRIS!!! YOU [Little Sponge]! I KNEW YOU'D COME HERE [[On A Saturday Night]]!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>AFTER ALL, YOU WANNA BE A [Big Shot]! EAHAHAHAHAA!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>BUT HOW? HOW CAN YOU BE?</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>LISTEN. IN THE [Deep Abyss] OF QUEEN'S [Mansion]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[[A Great Deal]] IS WAITING For [[A LimiTed Time Only!]]</d-text>
+		<d-text asterisk>A HEAVEN-PIERCING [[Workout-Ready Body]]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="4" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[[Designed BY The Classics You've Come To Expect! (C)1997]]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>KRIS THAT [Little Nipper] IS OUR [One-way Ticket] TO MAKE YOU [Big]. MAKE ME [Big].</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>BEFORE YOU KNOW IT WE WILL BE TAKING [ A Ride around Town on Our Specil Cungadero]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>VACATIONING IN [Burning acid] WHILE YOU SOAK IN THE [Hyperlink Blocked].</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>BUT KRIS DON'T [Breathe] YET!! THE WAY IS LOCKED BY [High Quality Encryption]!!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="1" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>YOU WILL NEVER GET INSIDE.</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="5" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WAIT KRIS LOOK!! HEAR THOSE [Balloons]??? YOU ARE [1000th Customer]!!.</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>AS A [Commemorative Ring] I WILL LET YOU BUY [KeyGen] FROM ME AT [The Low Low Price Of]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="4" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WHAT DO YOU THINK!?!? IT'S SUCH A STEAL, I'M [$!X$]ING MYSELF!!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="5" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>TAKE THIS DEAL AND YOU WILL [[Die]]!!</d-text>
+		<d-text asterisk>IT'S THAT GOOD!!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[BUY] THE KEYGEN FROM ME, UNLOCK THE BASEMENT, AND GET THAT EmptyDisk!!!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times before buying the KeyGen</h4>
+	<d-sprite speaker="Spamton" emotion="2" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>KRIS!! BUY [KeyGen] FROM ME AND GO TO QUEEN'S MANSION'S [Luxurious Basement Apartment]!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="7" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WHAT!? GO MYSELF!? KRIS!!!!! NO!!!!!</d-text>
+		<d-text asterisk>THE MEN INSIDE WOULD</d-text>
+		<d-text asterisk>THE MEN INSIDE WOULD</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times after buying the KeyGen</h4>
+	<p class="note">The track <a href="{% include wikilink page='KEYGEN' %}">KEYGEN</a> plays.</p>
+	<d-sprite speaker="Spamton" emotion="9" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>KEYGEN</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="postshop">Leaving the shop for the first time, when Susie and Ralsei are in the party</h3>
+	<p class="note">Kris stops just outside the door to the shop.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>... what kinda creepy stuff were you buying anyway?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Nah... like I even wanna know. Yikes.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="G"></d-sprite>
+		<d-text asterisk>She said she hoped if it was candy, you'd share with her...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>SHUT UP!!!</d-text>
+		<d-box offset-x="-10%">
+			<d-sprite speaker="Susie" emotion="7"></d-sprite>
+			<d-text>Kris?</d-text>
+		</d-box>
+	</d-box>
+</section>
+
+<section class="d-section" id="addisonspre">
+	<h2>Asking the Addisons about Spamton</h2>
+	<p>While heading through the city to and from Spamton's shop, the player may also stop to speak to the Addisons throughout the city about him. (Well, some of them, at least. The pink Addisons still make their usual sales pitches.)</p>
+
+	<hr>
+
+	<h3 id="addisonspre1">Orange Addison, roundabout area</h3>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Spamton? ... Haven't heard that name in a long time.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="addisonspre2">Blue Addison, roundabout area</h3>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Spamton? ... We don't talk about that around here.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="addisonspre3">Blue Addison, shopping center</h3>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Spamton? ... No idea who you're talking about.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="addisonspre4">Orange Addison, shopping center</h3>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Spamton? ... We don't talk about that around here.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="basemententry">
+	<h2>Getting into the basement</h2>
+	<p class="note">On the first floor of the mansion, to the right of the door leading up to 2F, is a traffic puzzle. Past this puzzle is what appears to be a storage room of sorts, containing many Queen statues (posed like the Thinker), tables and chairs, blocky vases, stray teacups, and more.</p>
+
+	<hr>
+
+	<h3 id="hacker">Talking to the Hacker</h3>
+	<p>Present only if all three blue checkmarks were collected in Cyber Field.</p>
+
+	<h4 id="hackerpre">Before tripping the hidden switch</h4>
+	<p class="note">The Hacker is walking back and forth through the room. While walking past one vase, his head briefly turns from a regular cursor to an pointing hand, as if about to click on something interactive.</p>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>I'm the hacker. I got the feeling there's a secret backdoor in this room... but...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>Where could it be...? Hmmmmmmmmm....</d-text>
+	</d-box>
+
+	<h4 id="hackerpost">After tripping the hidden switch</h4>
+	<p class="note">The Hacker stands towards the far right of the room.</p>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>I'm retiring from hacking the main frame.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>I decided to use my powers for the good of society.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>I'm going to reverse engineer the code to Super SMashing Fighters.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>So I can put my favorite cartoon characters into the game.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>Hacking is hard work. Whoof. I need to drink a jpeg of water.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(He's using the app that lets you drink water from your phone.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="switch">Tripping the hidden switch</h3>
+	<p>The location of which is indicated by the Hacker.</p>
+	<p class="note">A thud sounds as something opens up.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(A secret switch...!)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You heard something opening.)</d-text>
+	</d-box>
+	<p class="note">Walking left reveals a path leading to a secret area.</p>
+
+	<hr>
+
+	<h3 id="secretroom">Entering the secret room</h3>
+	<p class="note">The hidden room is largely empty. Towards the left is a switch that opens a shortcut back to the mansion's entrance hall (successive interactions make a beeping noise at increasingly higher pitches). Towards the right, the room narrows and is blocked by a shimmering holographic forcefield that can be interacted with.</p>
+
+	<h4>Before purchasing the KEYGEN</h4>
+	<d-box theme="dark">
+		<d-text asterisk>It has a lock that seems impossible to open.</d-text>
+	</d-box>
+
+	<h4>After purchasing the KEYGEN</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Kris used the KEYGEN.)</d-text>
+	</d-box>
+	<p class="note">The KEYGEN is removed from the inventory, and the forcefield disappears with a mysterious jingle. The party can now walk into the second half of this room, where a door to B1F awaits.</p>
+
+	<hr>
+
+	<h3 id="firstentry">Entering the basement for the first time</h3>
+	<p class="note">Upon trying to enter the door to the basement, Kris stops and turns around, Susie and Ralsei coming up to them on either side.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="5"></d-sprite>
+		<d-text asterisk>Kris...? You want us to stay here...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Sure, whatever.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Me n' Ralsei'll have fun without you.</d-text>
+	</d-box>
+
+	<p class="note">After a slight pause, Kris turns around and enters the basement.</p>
+</section>
+
+<section class="d-section" id="emptydisk">
+	<h2>Retrieving the Empty Disk</h2>
+	<p class="note">Once in the basement, Kris can proceed to clear their way and track down the machine Spamton is after.</p>
+
+	<h3 id="forcefield">Forcefield</h3>
+	<p>Blocks the eastern path.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It appears to be some kind of forcefield.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="powersource">Power source</h3>
+	<p>Present in the lower section of the western area.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Sounds like a forcefield powering down.)</d-text>
+	</d-box>
+	<p class="note">Unseen, the forcefield to the east disappears.</p>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Nothing happened.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="diskget">Checking the machine</h3>
+	<p class="note">With the forcefield out of the way, Kris can proceed to the far northeastern area, which contains several empty alcoves followed by one alcove at the far end that is occupied by a machine hanging from old vines. This machine can be interacted with to acquire the Empty Disk:</p>
+
+	<h4 id="diskget-initial">Initial</h4>
+	<p class="note">Something shines in the machine's chest.</p>
+	<d-box theme="dark">
+		<d-text asterisk>There's something shining inside the old machine... take it?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(The EmptyDisk was added to your KEY ITEMS.)</d-text>
+		</d-box>
+		<p class="note">The <a href="{{ '/misc/darkitems#emptydisk' | relative_url }}">Empty Disk</a> is added to the inventory, and the light in the machine's chest disappears permanently.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Nothing happens.</p>
+	</d-option-panel>
+
+	<hr class="hrhalf">
+
+	<h4 id="diskget-post">After obtaining the Empty Disk</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<p class="note">Kris can now head back to Spamton's shop to give him the Empty Disk, as requested.</p>
+</section>
+
+<section class="d-section" id="basementleave">
+	<h2>Leaving the basement for the first time</h2>
+
+	<p class="note">When Kris exits the basement, Susie and Ralsei are standing in the narrow part of the room where the lock once was. Susie is wearing Ralsei's glasses and acting goofy, while Ralsei has a hand over his eyes and is waving blindly towards Susie. Upon getting close, Kris will walk up to them and listen to their conversation:</p>
+
+	<d-box theme="dark">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text asterisk>C'mon, Susie!! Give me my glasses back!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="j"></d-sprite> <!-- updated index, originally a -->
+		<d-text asterisk>Oooh, look at me, I'm a big dweeb that loves homework!!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei stops waving at Susie and straightens up, lowering the hand over his face. Susie freezes, staring at him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="S"></d-sprite>
+		<d-text asterisk>C... C'mon...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="j"></d-sprite> <!-- updated index, originally a -->
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Fine, take them back!!</d-text>
+	</d-box>
+
+	<p class="note">Susie gives Ralsei his glasses back.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="P"></d-sprite>
+		<d-text asterisk>Thank you!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns around, seeing Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>Oh, Kris! Everything OK?</d-text>
+	</d-box>
+
+	<p class="note">A long pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Whatever, let's go.</d-text>
+	</d-box>
+
+	<p class="note">Susie steps forward to stand between Ralsei and Kris, and control is returned to the player.</p>
+</section>
+
+<section class="d-section" id="swatchbasement">
+	<h2>Asking Swatch about the basement</h2>
+
+	<p class="note">After entering the basement for the first time, Swatch's Talk menu in the <a href="{{ '/locations/cyberworld/queenmansion/colorcafe' | relative_url }}">Color Cafe</a> is updated to include the topic "<span class="yellow fnt-condensed">Basement</span>".</p>
+
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>What? Basement? There's no basement here.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>You need to relax. Have a drink, and talk softly...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>You're bothering the other customers.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="diskload">
+	<h2>Giving Spamton the Empty Disk</h2>
+
+	<p class="note">Back at Spamton's shop, "<span class="white fnt-condensed">OUR DEAL</span>" has been replaced by the topic "<span class="yellow fnt-condensed">GIVE DISK</span>".</p>
+
+	<d-sprite speaker="Spamton" emotion="4" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>KRIS!!! YOU DID IT!! YOU [[Funky]] LITTLE [[Worm]]! YOU BROUGHT ME THE DISK!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="5" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>HOCHI MAMA!!!! I CAN FEEL THAT [Smooth Taste] ALREADY!!</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="7" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>... NOW KRIS. DON'T BE GREEDY. HAND OVER. THE DISK.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>THEN WE WILL TRANSFER.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>MY [[Hyperlink Blocked]].</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>THEN. KRIS. AFTER. THIS IS VERY, VERY IMPORTANT.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>GO BACK. AND PUT. THE DISK. BACK. WHERE YOU GOT IT.</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="3" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>DO THAT...</d-text>
+		<d-text asterisk>AND YOU HAVE MY [Specil Guaranttee] I WILL [[Pass My Savings Onto You!]]</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="4" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>EVERY [Big], EVERY [Shot], EVERY [Hyperlink Blocked], ALL YOURS, KRIS.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>SO WHAT DO YOU SAY? BIG SHOT...</d-text>
+	</d-box>
+	<d-sprite speaker="Spamton" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>[[Warning! If you consent to the terms and agreements,]]</d-text>
+		<d-text asterisk>[[OUR STORE is PERMANENTLY Closing Down!!]]</d-text>
+	</d-box>
+	<d-choices theme="dark" class="spam special">
+		<d-option index="0" text="TRANSFER"></d-option>
+		<d-option index="1" text="DO NOT" offset-y="2.5em"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-sprite speaker="Spamton" emotion="3" format="shop"></d-sprite>
+		<d-box theme="dark">
+			<d-speaker>Spamton</d-speaker>
+			<d-text asterisk>FINALLY!!! I KNEW YOU WOULD [[Request Accepted]]</d-text>
+		</d-box>
+		<d-sprite speaker="Spamton" emotion="5" format="shop"></d-sprite>
+		<d-box theme="dark">
+			<d-speaker>Spamton</d-speaker>
+			<d-text asterisk>KRIS!!! HERE I GO!!! BEGIN THE [[Transfer]]</d-text>
+		</d-box>
+		<p class="note">The music cuts out. The shop and Spamton are slowly replaced by an empty, grayscale version of the shop. The shop theme starts playing again, but greatly slowed down. No options are left in the menu; pressing [CONFIRM] results in leaving the shop.</p>
+		<p class="note">In the inventory, the Empty Disk is replaced by the <a href="{{ '/misc/darkitems#loadeddisk' | relative_url }}">Loaded Disk</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-sprite speaker="Spamton" emotion="7" format="shop"></d-sprite>
+		<d-box theme="dark">
+			<d-speaker>Spamton</d-speaker>
+			<d-text asterisk>TURNING DOWN A BELOVED [[Stranger]]... THAT'S NOT VERY [[Big Shot]] OF YOU, KRIS.</d-text>
+		</d-box>
+	</d-option-panel>
+</section>
+<style>	/* For the TRANSFER/DO NOT menu */
+.spam.special {
+	&::after { --size: 0.9rem !important }
+	--offset-x: -5.9em;
+	--offset-y: 1.15em;
+
+	d-option{
+		&::before {
+			--size: 0.9rem !important;
+			left: -1.25rem !important;
+		}
+		&[index="0"] {
+			font-size: 4em;
+			--option-offset-x: -1rem;
+			span {
+				display: block;
+				transform: scaleX(60%);
+				transform-origin: top left;
+			}
+
+			&::before { top: 0.75em !important }
+		}
+
+		&[index="1"] {
+			font-size: 0.5em;
+			&::before { top: -0.2em !important }
+		}
+	}
+}
+</style>
+
 <section class="d-section" id="machine">
-	<h2>Inserting the <a href="{{ '/misc/darkitems#loadeddisk' | relative_url }}">Loaded Disk</a></h2>
-	<p class="note">After <a href="{{ '/locations/cyberworld/cybercity/spamtonshop#ourdeal' | relative_url }}">hearing out Spamton's request</a>, <a href="{{ '/locations/cyberworld/queenmansion/basement#machine' | relative_url }}">retrieving the Empty Disk from the machine in Queen's basement</a>, and <a href="{{ '/locations/cyberworld/cybercity/spamtonshop#givedisk' | relative_url }}">bringing it to Spamton so he can load himself into it</a>, Kris finally returns to the machine with the Loaded Disk in hand.</p>
+	<h2>Inserting the Loaded Disk</h2>
+	<p class="note">With the Loaded Disk in hand, Kris can finally return to the machine with the Loaded Disk in hand.</p>
 
 	<d-box theme="dark">
 		<d-text asterisk>(There's a slot for a disk here.)</d-text>
@@ -103,7 +811,7 @@ toc:
 <section class="d-section" id="prefight">
 	<h2>Before the fight</h2>
 
-	<p class="note">As Kris walks out of the long room with rollercoaster tracks, a shadowed figure hanging from green wires abruptly drops down in their way, throwing them back and leaving them kneeling. The shadow's head jerks unnaturally a few times, and the screen fades to black.</p>
+	<p class="note">As Kris walks out of the long room with rollercoaster tracks, a shadowed figure hanging from green wires abruptly drops down in their way, knocking them back and leaving them kneeling. The shadow's head jerks unnaturally a few times, and the screen fades to black.</p>
 
 	<p class="note">Eyes flash in the dark, pink and yellow.</p>
 
@@ -112,7 +820,7 @@ toc:
 		<d-text asterisk>HOLY [[Cungadero]] DO I FEEL GOOD ...</d-text>
 	</d-box>
 
-	<p class="note">The screen brightens to reveal Spamton NEO. <a href="{% include wikilink page='Deal Gone Wrong' %}">Deal Gone Wrong</a> plays as Spamton NEO's head jerks here and there, limbs swinging.</p>
+	<p class="note">The screen brightens to reveal Spamton NEO. <a href="{% include wikilink page='Deal Gone Wrong' %}">A slower, deeper, and far more ominous version of Spamton's theme</a> plays as Spamton NEO's head jerks here and there, limbs swinging.</p>
 
 	<d-box theme="dark">
 		<d-speaker>Spamton NEO</d-speaker>
@@ -315,13 +1023,13 @@ toc:
 		<d-text asterisk>IT'S TIME TO MAKE A VERY [Specil] DEAL...</d-text>
 	</d-box>
 
-	<p class="note">Spamton NEO laughs. Kris stands and Susie and Ralsei recover from their shock, all three <a href="{{ '/encounters/spamtonneo' | relative_url }}">preparing for battle</a>.</p>
+	<p class="note">Spamton NEO laughs. Kris stands and Susie and Ralsei recover from their shock, all three preparing for <a href="{{ '/encounters/spamtonneo' | relative_url }}">battle</a>.</p>
 </section>
 
 <section class="d-section" id="postfight">
 	<h2>After the fight</h2>
 
-	<p class="note">The basement fades back in to show Spamton's original form hanging from the ceiling, tangled up in vines. The party members stand in front of him while <a href="{% include wikilink page='Dialtone' %}">Dialtone</a> plays.</p>
+	<p class="note">The basement fades back in to show Spamton's original form hanging from the ceiling, tangled up in vines. The party members stand in front of him while <a href="{% include wikilink page='Dialtone' %}">the slow music from Spamton's shop</a> plays.</p>
 
 	<d-box theme="dark">
 		<d-speaker>Spamton</d-speaker>
@@ -408,14 +1116,12 @@ toc:
 	<p class="note">With a slide whistle SFX, the spark of light flies offscreen to the right. A chest appears outside the room containing the obtained equipment.</p>
 
 	<hr class="hr2">
-
-	<p class="note">Back in Cyber City, the Addisons leave their posts to gather at the <a href="{{ '/story/chapter2/trashzonepostspamton' | relative_url }}">Trash Zone</a>.</p>
 </section>
 
 <section class="d-section" id="leaving">
 	<h2>On the way out</h2>
 
-	<p class="note">While in the corridor leading back to the basement entrance, Susie stops, turning aside and looking unhappy. Kris and Ralsei keep walking for a moment, then stop and turn around to face her one after another.</p>
+	<p class="note">While in the corridor leading back to the basement entrance, Susie slows down, her smile fading. As Kris and Ralsei keep moving, she stops entirely, turning to the side facing the player. Kris and Ralsei keep walking for a moment, then stop and turn around to face her one after another.</p>
 
 	<d-box theme="dark">
 		<d-sprite speaker="Susie" emotion="0"></d-sprite>
@@ -437,7 +1143,7 @@ toc:
 		<d-text asterisk>That was god damn weird.</d-text>
 	</d-box>
 
-	<p class="note">She turns aside again.</p>
+	<p class="note">She turns to the side facing the player again.</p>
 
 	<d-box theme="dark">
 		<d-sprite speaker="Susie" emotion="0"></d-sprite>
@@ -470,7 +1176,7 @@ toc:
 		<d-text asterisk>He turned into our ally, so let's just accept it.</d-text>
 	</d-box>
 
-	<p class="note">Susie walks over to Kris, Ralsei backing out of her way.</p>
+	<p class="note">Susie turns sharply and walks over to Kris, Ralsei backing out of her way.</p>
 
 	<d-box theme="dark">
 		<d-sprite speaker="Susie" emotion="0"></d-sprite>
@@ -580,7 +1286,7 @@ toc:
 			<d-sprite speaker="Susie" emotion="L"></d-sprite>
 			<d-text asterisk>(... Heh, that got Kris smiling. Let's go.)</d-text>
 		</d-box>
-		<p class="note">Ralsei gets back in line behind Susie, and control is returned to the player.</p>
+		<p class="note">Ralsei gets back in line behind Susie, and control is returned to the player, who can lead the party out of the basement.</p>
 	</d-option-panel>
 	<d-option-panel index="1" theme="dark">
 		<p class="note">Kris turns aside, facing away from the player. Ralsei walks over to their other side.</p>
@@ -692,10 +1398,367 @@ toc:
 			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
 			<d-text asterisk>... I think everything will be OK, Kris.</d-text>
 		</d-box>
-		<p class="note">Ralsei gets back in line behind Kris, and the two leave the basement together. Control is returned to the player.</p>
+		<p class="note">Ralsei gets back in line behind Kris, and the two leave the basement together. Outside, control is returned to the player.</p>
 		<hr class="hr3">
 		<h3>Otherwise</h3>
-		<p class="note">Ralsei gets back in line behind Susie, and control is returned to the player.</p>
+		<p class="note">Ralsei gets back in line behind Susie, and control is returned to the player, who can lead the party out of the basement.</p>
 		<hr class="hr2">
 	</d-option-panel>
+</section>
+
+<section class="d-section" id="swatchrobot">
+	<h2>Asking Swatch about the robot</h2>
+
+	<p class="note">After defeating Spamton NEO, Swatch's Talk menu in the Color Cafe is updated to include the topic "<span class="yellow fnt-condensed">Basement Robot</span>".</p>
+
+	<d-sprite speaker="Swatch" emotion="0" format="shop"></d-sprite>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>... So that's what happened.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>That robot was the embodiment of a Lightner's dream.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>A dream I helped create... once.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>Splashing color from the motion of their hand.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>The Lightner filled it with their own hope, giving it an incredible power.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>... but, in the end, nothing ever came of it.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>And it was left in the basement with the rest of the corrupted data.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>... But that crooked salesman! Somehow, he learned about the robot,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>And thought he could use its power to fulfill his own twisted dreams.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatch</d-speaker>
+		<d-text asterisk>What a pity. To think he was once a valued customer...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="spamtonroom">
+	<h2>Asking the Swatchling about Spamton's room</h2>
+
+	<p class="note">In the guest hall to the west, the Swatchling standing outside Jockington's room had mentioned that one room formerly belonged to a "prestigious big shot", and can be spoken to for more details.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Spamton? This used to be his room...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Though it's not like he used it, after a while.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Eventually, he just spent all his time in the basement... praying.</d-text>
+	</d-box>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>When things went downhill, he became obsessed with that artifact.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Maybe he thought it would give him another big break?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="trashzone">
+	<h2>The Addisons reminisce</h2>
+	<p class="note">Back in Cyber City, all the Addisons have left their posts, as is noted by several NPCs around the city.</p>
+
+	<hr>
+
+	<h3 id="plugboy">Talking to Plugboy</h3>
+	<p>Located in the roundabout area immediately after Annoying Mouse Room 1, taking the place of an orange Addison.</p>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Plugboy</d-speaker>
+		<d-text asterisk>I wanted to buy something...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Plugboy</d-speaker>
+		<d-text asterisk>But I think all of the shopkeepers went to the trash dump...</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Plugboy</d-speaker>
+		<d-text asterisk>That's a shame... I wanted to get ripped off.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="virovirokun">Talking to Virovirokun</h3>
+	<p>Located in the shopping area, taking the place of a blue Addison selling shoe samples.</p>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text asterisk>All the shopkeepers went to the trash dump.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text asterisk>So I thought I might steal something, but these items are pretty bad...</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text asterisk>Feels like I'll get ripped off even if I don't pay...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="trashy">Talking to Trashy</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>Some funny-looking guys have gathered to the WEST.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>They were muttering something about muttering something about deals...</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>I'm Trashy...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="addisonspost">Talking to the Addisons</h3>
+	<p class="note">The Addisons are all gathered in the left side of the Trash Zone, outside the path leading to his former shop. All the Addisons are facing the wall, and don't turn around when spoken to.</p>
+
+	<h4 id="addisonspost1">Yellow Addison (rightmost)</h4>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>He was... Like the rest of us.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Just... a little unlucky.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>For some reason, his products never seemed to hit...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>... and the Lightners never even looked his way.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>... Poor guy.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="addisonspost2">Blue Addison (second from right)</h4>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Night after night, when we all went to the same cyber grill,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>He'd shoot his mouth about making it big someday.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>"You just watch!"</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>"Someday,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>I'm gonna be a big shot!"</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="addisonspost3">Orange Addison (third from right)</h4>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>He started to get a little desperate.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>I heard he started looking for any way to become more popular.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Somehow, he made the right phone call, and found someone.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Or, was he... found BY someone?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>They must have been helping him, because suddenly,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>He was on the phone all the time...</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="addisonspost4">Pink Addison (third from left)</h4>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Suddenly, he got really good at his job.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>The clicks started piling up...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>What? What did he do?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Why did HE deserve this?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>We were all so jealous of him,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>We stopped going out with him.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>I mean, wasn't he a big shot?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>He didn't need us anymore, did he...?</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="addisonspost5">Yellow Addison (second from left)</h4>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Even so, he only got more and more successful.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>He moved into a luxurious room in the Queen's mansion...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>He started bragging about big TV deals, big cars, big commercials...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>But then things started to crack.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>It seems like whatever was helping him...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Disappeared.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>His sales dropped to zero...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>And everything came crashing down.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="addisonspost6">Blue Addison (leftmost)</h4>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>The day he was to be evicted from the Queen's mansion,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>I went to his room to check on him...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>But he wasn't there.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>There was only a phone hanging off the handle.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>He must've left in the middle of a conversation,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>Because I could still hear someone on the other end...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>But when I put the receiver to my ear...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Addison</d-speaker>
+		<d-text asterisk>There was nothing but garbage noise.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="computerlab">
+	<h2>Checking the computer in the library</h2>
+
+	<p class="note">After Kris seals the Dark Fountain and returns to the Light World, they can check the computer towards the bottom right corner of the computer lab. It normally reads as follows:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a computer.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Someone tried to check their email, but the Internet is down.)</d-text>
+	</d-box>
+
+	<p class="note">With Spamton NEO defeated, however, the computer instead has the following description:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a computer.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(... It's nothing but a blue screen. Looks like it crashed.)</d-text>
+	</d-box>
 </section>
