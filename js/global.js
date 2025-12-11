@@ -71,6 +71,9 @@ class DialogueSpeaker extends HTMLElement {
 			case "queen":
 			case "sweet":
 			case "spamton":
+			case "addison":
+			case "swatch":
+			case "swatchling":
 			// Chapter 3
 			case "tenna":
 			case "lanino":

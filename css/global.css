@@ -74,8 +74,16 @@
 	--sweet: #e9c040;
 	--capn: #4092cc;
 	--kk: #5bc762;
-	--friend-pink: #ffaec9;
-	--friend-yellow: #fff200;
+	--addison-orange: #ffc90e;
+	--addison-blue: #81c9f9;
+	--addison-pink: #ffaec9;
+	--addison-yellow: #fff200;
+	--swatch: #fe758a;
+	--swatchling-red: #ed1c24;
+	--swatchling-orange: #dd7001;
+	--swatchling-yellow: #fff000;
+	--swatchling-green: #15bc2e;
+	--swatchling-blue: #5f80ff; /* lightened for readability from #1c48f5 */
 	/* Chapter 3 */
 	--tenna: #da1f52;
 	--lanino: #fcce6c;
@@ -121,6 +129,16 @@ body.dim {
 	--jevil: #6d6dc0;
 	--jigsawjoe: #0096d7;
 	--sweet: #bb941a; /* CUSTOM-PICKED, NOT FROM SPRITE */
+	--addison-orange: #c39800; /* CUSTOM-PICKED, NOT FROM SPRITE */
+	--addison-blue: #5ea0cc; /* CUSTOM-PICKED, NOT FROM SPRITE */
+	--addison-pink: #d07c98; /* CUSTOM-PICKED, NOT FROM SPRITE */
+	--addison-yellow: #ada400; /* CUSTOM-PICKED, NOT FROM SPRITE */
+	--swatch: #b6608a;
+	--swatchling-red: #9A2151;
+	--swatchling-orange: #9C4F01;
+	--swatchling-yellow: #BC9F07; /* CUSTOM-PICKED, NOT FROM SPRITE */
+	--swatchling-green: #1C8920;
+	--swatchling-blue: #4067ff; /* CUSTOM-PICKED, NOT FROM SPRITE */
 	--lanino: #b89d64; /* CUSTOM-PICKED, NOT FROM SPRITE */
 	--elnina: #7497ca; /* CUSTOM-PICKED, NOT FROM SPRITE */
 }
@@ -252,8 +270,22 @@ d-box[theme=battlemenu],
 }
 .spamton {
 	color: transparent;
-	background-image: linear-gradient(to right, var(--friend-pink), var(--friend-yellow));
+	background-image: linear-gradient(to right, var(--addison-pink), var(--addison-yellow));
 	background-clip: text;
+}
+.addison {
+	&.o { color: var(--addison-orange) }
+	&.b { color: var(--addison-blue) }
+	&.p { color: var(--addison-pink) }
+	&.y { color: var(--addison-yellow) }
+}
+.swatch { color: var(--swatch) }
+.swatchling {
+	&.r { color: var(--swatchling-red) }
+	&.o { color: var(--swatchling-orange) }
+	&.y { color: var(--swatchling-yellow) }
+	&.g { color: var(--swatchling-green) }
+	&.b { color: var(--swatchling-blue) }
 }
 /* Chapter 3 */
 .tenna { color: var(--tenna) }
@@ -985,8 +1017,8 @@ d-box, d-choices {
 				--sweet: #b69325; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readability from #e9c040 */
 				--capn: #615eb9; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readability from #6c6ab3 */
 				--kk: #3e7d4a;
-				--friend-pink: #a24b68; /* darkened for readability from #ffaec9 */
-				--friend-yellow: #9f9600; /* darkened for readability from #fff200 */
+				--addison-pink: #a24b68; /* darkened for readability from #ffaec9 */
+				--addison-yellow: #9f9600; /* darkened for readability from #fff200 */
 				--lanino: #b45c1c; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readability from #fcce6c */
 				--elnina: #2f66b7; /* darkened for readability from #9bc3fe */
 				--gerson: #3d7a06; /* darkened for readability from #65aa26 */
