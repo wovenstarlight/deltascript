@@ -1,0 +1,915 @@
+---
+title: Exploring Queen's mansion
+
+description: >
+  <p>Having broken out of their rooms, the party travels up through Queen's mansion.</p>
+  <p>Exclusive to the normal route.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /story/chapter2/mansionweird
+    name: Exploring Queen's mansion - Weird Route
+
+sources:
+  -
+    name: gml_Object_obj_controller_dw_mansion_fire_paintings_Step_0
+    chapters: [2]
+    note: paintings
+  -
+    name: gml_Object_obj_controller_dw_mansion_single_pot_Step_0
+    chapters: [2]
+    note: pottery intro
+  -
+    name: gml_Object_obj_controller_dw_mansion_potBalance_Step_0
+    chapters: [2]
+    note: pot balancing challenge
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2]
+    note: Swatchlings
+  -
+    name: gml_Object_obj_tasquepainting_Other_10
+    chapters: [2]
+    note: Tasque paintings
+  -
+    name: gml_Object_obj_npc_tasquemanager_Other_10
+    chapters: [2]
+    note: Tasque Manager
+  -
+    name: gml_Object_obj_tasque_manager_enemy_Step_0
+    chapters: [2]
+    note: Tasque Manager initial <span class="yellow">Mercy</span>
+  -
+    name: gml_Object_obj_ch2_room_mansion_east_1f_e_Create_0
+    chapters: [2]
+    note: Hacker appearance conditions
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [2]
+    note: Hacker, switch, dining hall doors
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [2]
+    note: 2F door, 3F bookcases
+  -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [2]
+    note: kitchen Swatchlings
+  -
+    name: gml_Object_obj_ch2_room_mansion_kitchen_Create_0
+    chapters: [2]
+    note: kitchen Swatchling colors
+  -
+    name: gml_Object_obj_controller_dining3_Step_0
+    chapters: [2]
+    note: dining hall scene
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: choices, dining hall dog scene
+  -
+    name: gml_Object_obj_controller_dininghall_Step_0
+    chapters: [2]
+    note: dining hall post-dog
+  -
+    name: gml_Object_obj_savepoint_Other_10
+    chapters: [2]
+    note: SAVE point
+
+toc:
+  -
+    name: Exploring 1F
+    subheadings:
+      -
+        id: paintings
+        name: Discovering the paintings
+      -
+        id: pottery
+        name: Respecting the pottery
+      -
+        id: potbalance
+        name: Balancing pottery
+        subheadings:
+          -
+            id: swatchling
+            name: Talking to the Swatchlings
+          -
+            id: finishline
+            name: Making it to the finish line
+      -
+        id: tasques
+        name: Meeting Tasque Manager
+        subheadings:
+          -
+            id: tasque1
+            name: Examining painting 1
+          -
+            id: tasque2
+            name: Examining painting 2
+          -
+            id: tasque3
+            name: Examining painting 3
+          -
+            id: tasque4
+            name: Examining painting 4
+          -
+            id: tasquemanager
+            name: Talking to Tasque Manager
+          -
+            id: postfight
+            name: After fighting Tasque Manager
+      -
+        id: end
+        name: End of 1F
+        subheadings:
+          -
+            id: hacker
+            name: Talking to the Hacker
+          -
+            id: switch
+            name: Tripping the hidden switch
+  -
+    name: Exploring 2F
+    subheadings:
+      -
+        id: kitchen
+        name: Clearing vermin
+        subheadings:
+          -
+            id: kitchenpre
+            name: Entering the kitchen
+          -
+            id: mauswheel
+            name: After defeating Mauswheel
+      -
+        id: dininghall
+        name: Through the dining hall
+        subheadings:
+          -
+            id: dininghall-door
+            name: Checking the doors
+          -
+            id: dininghall-reset
+            name: Checking 3 platters
+          -
+            id: dininghall-dog
+            name: Finding the hidden creature
+  -
+    id: floor3
+    name: Splitting up on 3F
+---
+<section class="d-section" id="paintings">
+	<h2>Discovering the paintings</h2>
+
+	<p class="note">The first corridor the party enters has a knock-off Mona Lisa painting on the wall, using Queen's face and making the OK hand gesture. Past it is a wide monitor; as the player leads the party past it, they stop in front of the monitor as it turns on, showing Queen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>I See You Have: Escaped From Your Room Units</d-text>
+	</d-box>
+
+	<p class="note">Kris turns to the monitor as Susie and Ralsei crowd behind them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="C"></d-sprite>
+		<d-text asterisk>Who Can Blame You For Wanting To See My Glorious Mansion</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>You Won't Want To Take Your Eyes Off This Beautiful Art</d-text>
+	</d-box>
+
+	<p class="note">Susie points aggressively at Queen on the monitor.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>We're not here to look at your stupid pictures!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Oh It Was Not A Recommendation</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="N"></d-sprite>
+		<d-text asterisk>I Was Just Warning You LMAO</d-text>
+	</d-box>
+
+	<p class="note">The monitor turns off, and the entire segment of wall it's on spins around to reveal three more portraits of Queen. From this point onwards, the portraits begin spitting fire at regular intervals.</p>
+</section>
+
+<section class="d-section" id="pottery">
+	<h2>Respecting the pottery</h2>
+
+	<p class="note">In the next room is a single Queen-themed pot, with a monitor on the wall behind it. A short distance into the room, the party stops as the monitor turns on to show Queen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>Now I Know You Are All Loving My Mansion</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>But We Have A Few Rules Around Here You Have To Follow</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>One Wipe Your Shoes</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>Two Have Fun</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>Three Respect The Pottery</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>Four Have Fun</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>Five List Entry Duplication Error</d-text>
+	</d-box>
+
+	<p class="note">The monitor turns off. Control is returned to the player, who can lead the party members onward while giving the pot a wide berth. Alternatively, walking into the pottery causes it to break. The monitor begins flashing the text "<span class="red fnt-condensed">POTTERY NOT RESPECTED</span>", and two hostile red Swatchlings bearing brooms enter from either side of the room, hurrying towards the party to draw them into an <a href="{{ '/encounters/swatchling' | relative_url }}">encounter</a>.</p>
+</section>
+
+<section class="d-section" id="potbalance">
+	<h2>Balancing pottery</h2>
+
+	<p class="note">The next room has more pots that must be avoided for fear of angering the Swatchlings present in the room. Partway through the room is a starting line; walking up to this line causes a pot to fall onto Kris's head. Walking left or right causes the pot to tip to one side. The pot must be kept balanced until the finish line further in the room, or it will fall off and break, again angering the Swatchlings in the room (and leaving the challenge area empty after the resulting encounter ends).</p>
+
+	<hr>
+
+	<h3 id="swatchling">Talking to the Swatchlings</h3>
+	<h4>First seven times</h4>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Please do not race the pottery.</d-text>
+	</d-box>
+
+	<h4>Eighth time onwards</h4>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Yes, we see you. You are the master of balance.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="finishline">Making it to the finish line</h3>
+	<p class="note">A victory jingle plays and the Swatchlings begin clapping. Susie and Ralsei walk in front of Kris and turn to face them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Heh, not bad, Kris!</d-text>
+	</d-box>
+
+	<p class="note">She punches Kris playfully on the shoulder. Unfortunately, this makes the pot on their head wobble and fall to the ground, angering all nearby Swatchlings. Susie and Ralsei look alarmed for a moment. Then Susie speeds off down the path ahead. Kris and Ralsei are free to move a second later and can follow after her, or risk an encounter with the Swatchlings who begin chasing after them with brooms.</p>
+</section>
+
+<section class="d-section" id="tasques">
+	<h2>Meeting Tasque Manager</h2>
+
+	<p class="note">The next room has four painting frames arranged in the cardinal directions, each of which contains a Tasque and is labelled with a number (counted clockwise).</p>
+
+	<hr>
+
+	<h3 id="tasque1">Examining painting 1</h3>
+	<p>To the top.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(The painting is labelled "Task".)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tasque2">Examining painting 2</h3>
+	<p>To the right.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(The painting is labelled "Timberly".)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tasque3">Examining painting 3</h3>
+	<p>To the bottom.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(The painting is labelled "Tasq".)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tasque4">Examining painting 4</h3>
+	<p>To the left.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(The painting is labelled "Tasc".)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tasquemanager">Talking to Tasque Manager</h3>
+	<p class="note">Tasque Manager blocks the path leading out of the room to the right.</p>
+	<d-box theme="dark">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text asterisk>Just in time for your appointment.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text asterisk>Would you assist in organizing these paintings?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>How disobedient.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Someone ought to whip you into shape!</d-text>
+		</d-box>
+		<p class="note">The Tasques jump out of the paintings, and Tasque Manager draws the party into an encounter against <a href="{{ '/encounters/tasquemanager' | relative_url }}">herself</a> and two <a href="{{ '/encounters/tasque' | relative_url }}">Tasques</a>. Dialogue ends here.</p>
+	</d-option-panel>
+
+	<d-box theme="dark">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text asterisk>How refined.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text asterisk>Then, the first question.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text asterisk>Which painting's name is first alphabetically?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Left"></d-option>
+		<d-option index="1" text="Right"></d-option>
+		<d-option index="2" text="Top"></d-option>
+		<d-option index="3" text="Bottom"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Incorrect. It seems your organization is lacking.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Someone ought to whip you into shape!</d-text>
+		</d-box>
+		<p class="note">The Tasques jump out of the paintings, and Tasque Manager draws the party into an encounter against <a href="{{ '/encounters/tasquemanager' | relative_url }}">herself</a> and two <a href="{{ '/encounters/tasque' | relative_url }}">Tasques</a>. Dialogue ends here.</p>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Incorrect. It seems your organization is lacking.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Someone ought to whip you into shape!</d-text>
+		</d-box>
+		<p class="note">The Tasques jump out of the paintings, and Tasque Manager draws the party into an encounter against <a href="{{ '/encounters/tasquemanager' | relative_url }}">herself</a> and two <a href="{{ '/encounters/tasque' | relative_url }}">Tasques</a>. Dialogue ends here.</p>
+	</d-option-panel>
+	<d-option-panel index="3" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Incorrect. It seems your organization is lacking.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Someone ought to whip you into shape!</d-text>
+		</d-box>
+		<p class="note">The Tasques jump out of the paintings, and Tasque Manager draws the party into an encounter against <a href="{{ '/encounters/tasquemanager' | relative_url }}">herself</a> and two <a href="{{ '/encounters/tasque' | relative_url }}">Tasques</a>. Dialogue ends here.</p>
+	</d-option-panel>
+
+	<d-box theme="dark">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text asterisk>How refined.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text asterisk>Then, the next question.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text asterisk>Which painting's name is third alphabetically?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Left"></d-option>
+		<d-option index="1" text="Right"></d-option>
+		<d-option index="2" text="Top"></d-option>
+		<d-option index="3" text="Bottom"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Incorrect. It seems your organization is lacking.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Someone ought to whip you into shape!</d-text>
+		</d-box>
+		<p class="note">The Tasques jump out of the paintings, and Tasque Manager draws the party into an encounter against <a href="{{ '/encounters/tasquemanager' | relative_url }}">herself</a> and two <a href="{{ '/encounters/tasque' | relative_url }}">Tasques</a>. Dialogue ends here.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Incorrect. It seems your organization is lacking.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Someone ought to whip you into shape!</d-text>
+		</d-box>
+		<p class="note">The Tasques jump out of the paintings, and Tasque Manager draws the party into an encounter against <a href="{{ '/encounters/tasquemanager' | relative_url }}">herself</a> and two <a href="{{ '/encounters/tasque' | relative_url }}">Tasques</a>. Dialogue ends here.</p>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Incorrect. It seems your organization is lacking.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Someone ought to whip you into shape!</d-text>
+		</d-box>
+		<p class="note">The Tasques jump out of the paintings, and Tasque Manager draws the party into an encounter against <a href="{{ '/encounters/tasquemanager' | relative_url }}">herself</a> and two <a href="{{ '/encounters/tasque' | relative_url }}">Tasques</a>. Dialogue ends here.</p>
+	</d-option-panel>
+	<d-option-panel index="3" theme="dark">
+		<p class="note">Dialogue continues.</p>
+	</d-option-panel>
+
+	<d-box theme="dark">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text asterisk>How refined.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text asterisk>Then, the next question.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Tasque Manager</d-speaker>
+		<d-text asterisk>Which painting is fourth?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Left"></d-option>
+		<d-option index="1" text="Right"></d-option>
+		<d-option index="2" text="Top"></d-option>
+		<d-option index="3" text="Bottom"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>That's correct!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>I'm so happy I could whip something!</d-text>
+		</d-box>
+		<p class="note">The Tasques jump out of the paintings, and Tasque Manager draws the party into an encounter against <a href="{{ '/encounters/tasquemanager' | relative_url }}">herself</a> and two <a href="{{ '/encounters/tasque' | relative_url }}">Tasques</a>. Notably, Tasque Manager's <span class="yellow">Mercy</span> gauge starts at 100%, allowing her to be spared instantly.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Hm? That's the number 2, not the number 4...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Have you gotten disorganized? Someone ought to whip you into shape!</d-text>
+		</d-box>
+		<p class="note">The Tasques jump out of the paintings, and Tasque Manager draws the party into an encounter against <a href="{{ '/encounters/tasquemanager' | relative_url }}">herself</a> and two <a href="{{ '/encounters/tasque' | relative_url }}">Tasques</a>. Notably, Tasque Manager's <span class="yellow">Mercy</span> gauge starts at 50%, allowing her to be spared more quickly.</p>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Incorrect. It seems your organization is lacking.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Someone ought to whip you into shape!</d-text>
+		</d-box>
+		<p class="note">The Tasques jump out of the paintings, and Tasque Manager draws the party into an encounter against <a href="{{ '/encounters/tasquemanager' | relative_url }}">herself</a> and two <a href="{{ '/encounters/tasque' | relative_url }}">Tasques</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="3" theme="dark">
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Incorrect. It seems your organization is lacking.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-speaker>Tasque Manager</d-speaker>
+			<d-text asterisk>Someone ought to whip you into shape!</d-text>
+		</d-box>
+		<p class="note">The Tasques jump out of the paintings, and Tasque Manager draws the party into an encounter against <a href="{{ '/encounters/tasquemanager' | relative_url }}">herself</a> and two <a href="{{ '/encounters/tasque' | relative_url }}">Tasques</a>.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="postfight">After fighting Tasque Manager</h3>
+	<p class="note">Tasque Manager and the Tasques in the paintings are absent from the room. Examining the paintings gives the following:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(The painting is empty.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of 1F</h2>
+
+	<p class="note">The area past Tasque Manager's room contains a door leading up to <a href="#kitchen">the second floor</a> via a teacup ride; this progresses the main plot.</p>
+
+	<p class="note">To the right of the 2F door is a traffic puzzle, past which is what appears to be a storage room of sorts, containing many Queen statues (posed like the Thinker), tables and chairs, blocky vases, stray teacups, and more.</p>
+
+	<hr>
+
+	<h3 id="hacker">Talking to the Hacker</h3>
+	<p>Present only if all three blue checkmarks were collected in Cyber Field.</p>
+
+	<h4 id="hackerpre">Before tripping the hidden switch</h4>
+	<p class="note">The Hacker is walking back and forth through the room. While walking past one vase, his head briefly turns from a regular cursor to an pointing hand, as if about to click on something interactive.</p>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>I'm the hacker. I got the feeling there's a secret backdoor in this room... but...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>Where could it be...? Hmmmmmmmmm....</d-text>
+	</d-box>
+
+	<h4 id="hackerpost">After tripping the hidden switch</h4>
+	<p class="note">The Hacker stands towards the far right of the room.</p>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>I'm retiring from hacking the main frame.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>I decided to use my powers for the good of society.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>I'm going to reverse engineer the code to Super SMashing Fighters.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>So I can put my favorite cartoon characters into the game.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>Hacking is hard work. Whoof. I need to drink a jpeg of water.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(He's using the app that lets you drink water from your phone.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="switch">Tripping the hidden switch</h3>
+	<p>The location of which is indicated by the Hacker.</p>
+	<p class="note">A thud sounds as something opens up.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(A secret switch...!)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You heard something opening.)</d-text>
+	</d-box>
+	<p class="note">Walking left reveals a path leading to the <a href="{{ '/story/chapter2/spamtonneo#secretroom' | relative_url}}">hidden entrance to the basement</a>, which must be explored to eventually fight the optional secret boss <a href="{{ '/encounters/spamtonneo' | relative_url}}">Spamton NEO</a>.</p>
+</section>
+
+<section class="d-section" id="kitchen">
+	<h2>Clearing vermin</h2>
+
+	<h3 id="kitchenpre">Entering the kitchen</h3>
+	<p class="note">Past the <a href="{{ '/locations/cyberworld/queenmansion/2f#dinnerpartyA' | relative_url }}">dinner party</a> at the start of 2F is a room with six Queen portaits. Two doors are located at the far end; the right door is initially closed:</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(Room has been closed due to kitchen vermin.)</d-text>
+	</d-box>
+
+	<p class="note">The party must head to the left door, behind which lies the kitchen., staffed by currently-panicking Swatchlings who can be talked to.</p>
+
+	<h4>Yellow Swatchling</h4>
+	<p>In front of the pile of platters.</p>
+	<d-box theme="dark">
+		<d-speaker class="y">Swatchling</d-speaker>
+		<d-text asterisk>Oh me, oh my! The kitchen is infested with... vermin!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="y">Swatchling</d-speaker>
+		<d-text asterisk>I knew we should have properly finished dumping all the cheese in that alleyway!</d-text>
+	</d-box>
+
+	<h4>Red Swatchling</h4>
+	<p>On the stoves.</p>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>(Ouch, ouch)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>The mouse can't get me up here!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>Even if the (ouch, ouch) stove is burning my feet!</d-text>
+	</d-box>
+
+	<h4>Blue Swatchling</h4>
+	<d-box theme="dark">
+		<d-speaker class="b">Swatchling</d-speaker>
+		<d-text asterisk>M-m-mouse!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="b">Swatchling</d-speaker>
+		<d-text asterisk>And it's n-not wearing a wig!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="mauswheel">After defeating Mauswheel</h3>
+	<p class="note">Heading towards the left, the party finds three Maice eating cheese on the stovetops. Upon noticing the party's approach, the Maice gather and begin spinning around, merging to form <a href="{{ '/encounters/mauswheel' | relative_url }}">Mauswheel</a>. Once Mauswheel is defeated (either peacefully or violently), the party returns to the kitchen and can speak to the Swatchlings again.</p>
+
+	<h4>Blue Swatchling</h4>
+	<d-box theme="dark">
+		<d-speaker class="b">Swatchling</d-speaker>
+		<d-text asterisk>Thanks for the help. We'll open up the <span class="yellow">EAST</span> dining hall now.</d-text>
+	</d-box>
+
+	<h4>Red Swatchling</h4>
+	<p>On the stoves.</p>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>(Ouch, ouch)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>How do I get down from here?</d-text>
+	</d-box>
+
+	<h4>Yellow Swatchling</h4>
+	<p>In front of the pile of platters. The only one no longer looking panicked.</p>
+	<d-box theme="dark">
+		<d-speaker class="y">Swatchling</d-speaker>
+		<d-text asterisk>Queen's making us prepare a massive feast for her upcoming guests.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="y">Swatchling</d-speaker>
+		<d-text asterisk>... I wonder if people can really eat platters, though.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dininghall">
+	<h2>Through the dining hall</h2>
+
+	<p class="note">The formerly-locked east door now opens to a large, empty room.</p>
+
+	<hr>
+
+	<h3 id="dininghall-door">Checking the doors</h3>
+	<p>Located at the far end of the room.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>It's locked...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>What's with this giant empty room anyway!?</d-text>
+	</d-box>
+	<p class="note">The monitors on either side of the doors turn on, showing Queen.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Welcome To My Extravagant Dining Bonanza</d-text>
+	</d-box>
+	<p class="note">48 tables bearing platters spawn in the air and fall onto the dark spots on the floor.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Only One Of These Delicious Platters Has The Key</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>I Am Sure Searching Will Be An Addicting Game of Chance</d-text>
+	</d-box>
+	<p class="note">The monitors turn off.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>H-how the hell are we gonna search all these!?</d-text>
+	</d-box>
+	<p class="note">Control is returned to the player, who may begin checking individual platters, each of which reveals itself to be empty.</p>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(The door is locked.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dininghall-reset">Checking 3 platters</h3>
+	<p class="note">After 3 platters are checked and revealed to be empty, the monitors turn on.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>ERROR: Results: Key Not Found</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="N"></d-sprite>
+		<d-text asterisk>Did You Mean: Give Up?</d-text>
+	</d-box>
+	<p class="note">The platters reset, respawning and falling to the ground once more. The monitors turn off.</p>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>All the platters got mixed up again!?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Second time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Hey, Kris, isn't there something else we can do!?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<p class="note">Dialogue ends.</p>
+	<hr class="hr2">
+	<p class="note">After the platters have been reset at least once, the player may begin exploring the room for the <a href="#dininghall-dog">hidden solution</a>.</p>
+
+	<hr>
+
+	<h3 id="dininghall-dog">Finding the hidden creature</h3>
+	<p class="note">As the party approaches one of the tables, it will shift as something hides under it; the table can be identified because its legs will not be visible after the creature hides underneath. Interacting with it causes the party to notice the creature:</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Hey, there's something under this one!</d-text>
+	</d-box>
+
+	<p class="note">The party lines up in front of the table, and the creature underneath is alerted. The table lifts up as the creature stands; its legs are visible underneath, resembling those of a <a href="{% include wikilink page='Annoying Dog' %}">small white dog</a>. The dog backs into the east wall, knocking the platter on its own table as well as the whole of the adjacent table-and-platter offscreen. The party members rush to stand in its way, headed by Susie.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Don't try to run away, you little...</d-text>
+	</d-box>
+
+	<p class="note">The dog darts forward; the party members all jump out of its way, but end up landing onto the table it's carrying, and Susie and Ralsei look stunned.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>HEY, WAIT A SEC!</d-text>
+	</d-box>
+
+	<p class="note">The dog begins racing back and forth between the north and south walls, bouncing off them and knocking all the tables in its way offscreen. The player can guide it left and right. Eventually, one of the platters it knocks into will fly open to reveal the key to the doors. The key hangs in the air for a second with a sparkling chime, and Ralsei turns to it.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>There's the key!!! Now we just have to--</d-text>
+	</d-box>
+
+	<p class="note">A pause. Then the dog darts forward, shattering the key to pieces.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>It BROKE IT?!</d-text>
+	</d-box>
+
+	<p class="note">The dog moves to the center of the room. Then it darts forward again, this time blasting clear through the doors. The screen fades to black, then fades to show the next room, where Swatchlings run frantically out of the dog's way as it charges to the end of a long hall. When it knocks into the far wall, the party is thrown off the table and to the ground; the dog then runs off towards the right, while platters fall from above to block the way down the long hall.</p>
+
+	<p class="note">Susie grins, posing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Hahah, was that awesome or what?!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>Umm, maybe minus the blatant destruction...</d-text>
+	</d-box>
+	<p class="note">Susie and Ralsei turn to Kris.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Let's go, Kris! We're almost at the third floor!</d-text>
+	</d-box>
+	<p class="note">Kris turns around to face the player, and control is returned to the player, who can head left past a corridor overlooking the torso and grin of GIGA Queen towards the teacup ride to floor 3.</p>
+</section>
+
+<section class="d-section" id="floor3">
+	<h2>Splitting up on 3F</h2>
+
+	<p class="note">Immediately in front of the entrance to 3F is a pair of bookshelves. Checking the left bookcase gives the following:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(There's a book here about preventing backtracking.)</d-text>
+	</d-box>
+
+	<p class="note">Upon heading further right, the party comes upon Berdly standing beside the right bookcase; the party members fan out as the camera pans to focus on them all.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="E"></d-sprite>
+		<d-text asterisk>Kris, Susan... Glad to see you arrive unwounded.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="6"></d-sprite>
+		<d-text asterisk>Now, let us hasten!</d-text>
+	</d-box>
+
+	<p class="note">Berdly walks up to the bookcase he's standing beside, and it slides open to reveal a passage behind it. Berdly steps to the side and turns to the others.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="7"></d-sprite>
+		<d-text asterisk>Through here is a secret passageway to the roof!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="4"></d-sprite>
+		<d-text asterisk>There, we can enrescue-fy Lady Noelle.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Uhh, okay.</d-text>
+	</d-box>
+
+	<p class="note">Susie walks up to the passage, then turns to Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Let's go, Kris.</d-text>
+	</d-box>
+
+	<p class="note">A pause. Berdly turns aside, facing the player, and Susie turns to him as he speaks.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="3"></d-sprite>
+		<d-text asterisk>Oh, Kris. Kris is...</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns to Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="4"></d-sprite>
+		<d-text asterisk>Kris! You and your <span class="yellow">lackey</span> distract Queen!</d-text>
+	</d-box>
+
+	<p class="note">Berdly steps forward in front of the passage.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="6"></d-sprite>
+		<d-text asterisk>Let's go, Susie! Just the two of us! Haha!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Fine, whatever!</d-text>
+	</d-box>
+
+	<p class="note">Berdly and Susie leave through the passage, and the bookcase slides shut behind them. The camera pans over to focus on Kris and Ralsei. Ralsei walks up to Kris, who turns around to face him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>Kris, do you think of me as your lackey...?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Of course"></d-option>
+		<d-option index="1" text="Of course not"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>R-really? I'm... I'm happy to hear that!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+			<d-text asterisk>(I've never been someone's lackey before...)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+			<d-text asterisk>H-huh...? Y-you mean...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+			<d-text asterisk>(Y-you think of me as more than a lackey...?)</d-text>
+		</d-box>
+	</d-option-panel>
+	<p class="note">Control is returned to the player. The path back down to 2F has disappeared, with a <a href="{{ '/misc/savepoints#mansion3f' | relative_url }}">SAVE point</a> floating where it once was:</p>
+	<d-box theme="dark">
+		<d-text asterisk>Susie has gone into a book hole with Berdly.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of book holes.</d-text>
+	</d-box>
+
+	<p class="note">Checking the bookcase Susie and Berdly left through gives the following:</p>
+	<d-box theme="dark">
+		<d-text asterisk>(There's a book here about secret passageway construction.)</d-text>
+	</d-box>
+
+	<p class="note">Kris and Ralsei may head onwards to the eastern path, where they come upon a <a href="{{ '/story/chapter2/acidtunnel' | relative_url}}">giant lake of acid</a>.</p>
+</section>
