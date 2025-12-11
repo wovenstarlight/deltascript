@@ -419,9 +419,9 @@ toc:
 		<d-text asterisk>[[OUR STORE is PERMANENTLY Closing Down!!]]</d-text>
 	</d-box>
 	<p class="note">The following choices are presented. In-game, "TRANSFER" is in significantly larger text, while "DO NOT" is tiny.</p>
-	<d-choices theme="dark">
+	<d-choices theme="dark" class="spam special">
 		<d-option index="0" text="TRANSFER"></d-option>
-		<d-option index="1" text="DO NOT"></d-option>
+		<d-option index="1" text="DO NOT" offset-y="2.5em"></d-option>
 	</d-choices>
 	<d-option-panel index="0" theme="dark">
 		<d-sprite speaker="Spamton" emotion="3" format="shop"></d-sprite>
@@ -628,3 +628,34 @@ toc:
 		<d-text asterisk>WHAT ABOUT MY DISK!?!?</d-text>
 	</d-box>
 </section>
+
+<style>
+.spam.special {
+	&::after { --size: 0.9rem !important }
+	--offset-x: -5.9em;
+	--offset-y: 1.15em;
+
+	d-option{
+		&::before {
+			--size: 0.9rem !important;
+			left: -1.25rem !important;
+		}
+		&[index="0"] {
+			font-size: 4em;
+			--option-offset-x: -1rem;
+			span {
+				display: block;
+				transform: scaleX(60%);
+				transform-origin: top left;
+			}
+
+			&::before { top: 0.75em !important }
+		}
+
+		&[index="1"] {
+			font-size: 0.5em;
+			&::before { top: -0.2em !important }
+		}
+	}
+}
+</style>

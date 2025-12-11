@@ -800,8 +800,10 @@ class DialogueChoicesOption extends HTMLElement {
 			.replaceAll(/(#|\\s)/g, ` ${BREAK}`)	// ...to spaces
 			.replaceAll("\\b", BREAK)	// ...to newlines without spaces
 			.replaceAll(/\\h(.)/g, (_, p1) => `<span class="hide">${p1}</span>`);	// ...and hide any characters involved in linebreaking
-		
-		let ltIndices = [];
+
+		const isSpecial = this.menu.classList.contains("special");
+
+			let ltIndices = [];
 		for (const match of label.matchAll(/<([\w-]+)/g)) {
 			// label from the opening tag onwards doesn't have a corresponding closing tag
 			if (label.slice(match.index + match[0].length).search(`</${match[1]}>`) < 0)
@@ -809,7 +811,13 @@ class DialogueChoicesOption extends HTMLElement {
 			 	ltIndices.push(match.index);
 		}
 		// Replace the <s with &lt;s
-		this.innerHTML = ltIndices.reverse().reduce((str, index) => str.slice(0, index) + "&lt;" + str.slice(index + 1), label);
+		this.innerHTML = `${
+			isSpecial ? "<span>" : ""
+		}${
+			ltIndices.reverse().reduce((str, index) => str.slice(0, index) + "&lt;" + str.slice(index + 1), label)
+		}${
+			isSpecial ? "</span>" : ""
+		}`;
 
 		// Add offsets where necessary
 		const styles = Object.entries({
