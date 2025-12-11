@@ -1306,8 +1306,8 @@ d-box, d-choices {
 			display: flex;
 			flex-direction: column;
 
-			/* ...but only main dialogue! if there are boxes with only small dialogue, leave them alone. */
-			&:has(d-text) {
+			/* ...but only main dialogue! as in, actual spoken dialogue, not wrappers for other d-boxes; leave those ones alone. */
+			&:has(> d-speaker, > d-sprite) {
 				padding-inline-start: 3vw;
 				& > d-speaker, & > d-sprite d-speaker {
 					position: relative;
