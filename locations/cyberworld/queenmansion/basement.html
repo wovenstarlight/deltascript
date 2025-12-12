@@ -43,11 +43,11 @@ toc:
     id: chestwest
     name: Western treasure chest
   -
+    id: lockeddoor
+    name: Locked door
+  -
     id: powersource
     name: Forcefield power source
-  -
-    id: lockeddoor
-    name: Unused locked door
   -
     id: forcefield
     name: Forcefield
@@ -80,6 +80,15 @@ toc:
 	<p class="note">The sole chest in the eastern room, as well as one of the two chests in the western room, are empty and hold only dust. The second of the two chests in the western room contains $1 and uses <a href="{{ '/misc/generic#treasurechest-standard' | relative_url }}">generic text for a treasure chest</a> <a href="{{ '/misc/generic#moneyget' | relative_url }}">containing money</a>.</p>
 </section>
 
+<section class="d-section" id="lockeddoor">
+	<h2>Locked door</h2>
+	<p>Present in the western area's first hallway. Becomes locked after powering down the forcefield.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>The door rattles but doesn't open.</d-text>
+	</d-box>
+</section>
+
 <section class="d-section" id="powersource">
 	<h2>Forcefield power source</h2>
 	<p>Present in the lower section of the western area.</p>
@@ -94,15 +103,6 @@ toc:
 	<h3>Subsequent times</h3>
 	<d-box theme="dark">
 		<d-text asterisk>(Nothing happened.)</d-text>
-	</d-box>
-</section>
-
-<section class="d-section" id="lockeddoor">
-	<h2>Unused locked door</h2>
-	<p>Unused text, for a locked door that would've been present in the western area's first hallway.</p>
-
-	<d-box theme="dark">
-		<d-text asterisk>The door rattles but doesn't open.</d-text>
 	</d-box>
 </section>
 
