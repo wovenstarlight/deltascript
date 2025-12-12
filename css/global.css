@@ -1932,6 +1932,7 @@ d-option-panel {
 	body:not(.compact) &:last-child {
 		margin-block-end: 0.2em;
 	}
+	body.compact &:has(+ :not(&, d-option)) { margin-block-end: 0.3em }
 
 	&:not([hidden]) {
 		border: var(--border-width) solid transparent;
