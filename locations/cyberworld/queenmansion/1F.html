@@ -1,0 +1,364 @@
+---
+title: Queen's mansion - 1F
+
+description: >
+  <p>Narration and dialogue for the first floor of the east wing of Queen's mansion.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /locations/cyberworld/queenmansion/entrance
+    name: Queen's mansion - Entrance
+  -
+    url: /locations/cyberworld/queenmansion/basement
+    name: Queen's mansion - Basement
+
+sources:
+  -
+    name: gml_Object_obj_queenart_red_Other_10
+    chapters: [2]
+    note: treasure chest
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2]
+    note: Swatchlings
+  -
+    name: gml_Object_obj_tasquepainting_Other_10
+    chapters: [2]
+    note: Tasque paintings
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [2]
+    note: Queen statues, storage/basement doors
+  -
+    name: gml_Object_obj_ch2_room_mansion_east_1f_e_Create_0
+    chapters: [2]
+    note: Hacker appearance conditions
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [2]
+    note: Hacker, switch
+  -
+    name: gml_Object_obj_mansion_keygen_lock_Other_10
+    chapters: [2]
+    note: KeyGen lock
+
+toc:
+  -
+    id: treasurechest
+    name: Treasure chest
+    subheadings:
+      -
+        id: treasurechest-closed
+        name: When closed
+      -
+        id: treasurechest-open
+        name: When open
+  -
+    id: swatchling
+    name: Swatchlings
+    subheadings:
+      -
+        id: swatchling1
+        name: First seven times
+      -
+        id: swatchling8
+        name: Eighth time onwards
+  -
+    id: tasquepainting
+    name: Tasque paintings
+    subheadings:
+      -
+        id: tasque1
+        name: Examining painting 1
+      -
+        id: tasque2
+        name: Examining painting 2
+      -
+        id: tasque3
+        name: Examining painting 3
+      -
+        id: tasque4
+        name: Examining painting 4
+      -
+        id: tasqueempty
+        name: Examining an empty painting
+  -
+    id: statue
+    name: Queen statues
+  -
+    id: hacker
+    name: Hacker
+    subheadings:
+      -
+        id: hackerpre
+        name: Before tripping the hidden switch
+      -
+        id: hackerpost
+        name: After tripping the hidden switch
+  -
+    id: switch
+    name: Hidden pathway switch
+  -
+    id: storagedoor
+    name: Storage room door
+  -
+    id: basementlock
+    name: Basement area lock
+    subheadings:
+      -
+        id: basementlockpre
+        name: Before purchasing the KeyGen
+      -
+        id: basementlockpost
+        name: After purchasing the KeyGen
+  -
+    id: basementdoor
+    name: Basement door
+    subheadings:
+      -
+        id: basementdoor1
+        name: First time
+      -
+        id: basementdoor2
+        name: Subsequent times
+---
+<section class="d-section" id="treasurechest">
+	<h2>Treasure chest</h2>
+	<p>Exclusive to the normal route.</p>
+	<p>Located behind a Queen portrait near the bottom of the first room to the east.</p>
+
+	<h3 id="treasurechest-closed">When closed</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(You found a ReviveMint!)</d-text>
+	</d-box>
+	<p class="note">Proceeds to the generic message for obtaining a <a href="#itemget">regular item</a>. If either the inventory or storage is not full, the <a href="{{ '/misc/darkitems#revivemint' | relative_url }}">Revive Mint</a> is obtained and the chest remains <a href="#treasurechest-open">open</a>. Otherwise, if both the inventory and storage are full, the chest closes back up; subsequent interactions will repeat this narration until space is made for this object.</p>
+
+	<hr>
+
+	<h3 id="treasurechest-open">When open</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(There's nothing here.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="swatchling">
+	<h2>Swatchlings</h2>
+	<p>Exclusive to the normal route.</p>
+	<p>Present in the pottery balancing room before the pottery balancing challenge has been completed.</p>
+
+	<h3 id="swatchling1">First seven times</h3>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Please do not race the pottery.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="swatchling8">Eighth time onwards</h3>
+	<d-box theme="dark">
+		<d-speaker>Swatchling</d-speaker>
+		<d-text asterisk>Yes, we see you. You are the master of balance.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="tasquepainting">
+	<h2>Tasque paintings</h2>
+	<p>Exclusive to the normal route.</p>
+
+	<h3 id="tasque1">Examining painting 1</h3>
+	<p>To the top.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(The painting is labelled "Task".)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tasque2">Examining painting 2</h3>
+	<p>To the right.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(The painting is labelled "Timberly".)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tasque3">Examining painting 3</h3>
+	<p>To the bottom.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(The painting is labelled "Tasq".)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tasque4">Examining painting 4</h3>
+	<p>To the left.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(The painting is labelled "Tasc".)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="tasqueempty">Examining an empty painting</h3>
+	<p>All four of the above paintings are emptied after <a href="{{ '/story/chapter2/mansion#tasquemanager' | relative_url }}">fighting Tasque Manager</a>.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(The painting is empty.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="statue">
+	<h2>Queen statues</h2>
+	<p>Exclusive to the normal route.</p>
+	<p>Located in the storage room to the east, past the traffic crossing.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(You became lost in the craftsmanship.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="hacker">
+	<h2>Hacker</h2>
+	<p>Exclusive to the normal route.</p>
+	<p>Present in the storage room, only if all three blue checkmarks were collected in Cyber Field.</p>
+
+	<h3 id="hackerpre">Before tripping the <a href="#switch">hidden switch</a></h3>
+	<p class="note">The Hacker is walking back and forth through the room. While walking past one vase, his head briefly turns from a regular cursor to an pointing hand, as if about to click on something interactive.</p>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>I'm the hacker. I got the feeling there's a secret backdoor in this room... but...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>Where could it be...? Hmmmmmmmmm....</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="hackerpost">After tripping the hidden switch</h3>
+	<p class="note">The Hacker stands towards the far right of the room.</p>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>I'm retiring from hacking the main frame.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>I decided to use my powers for the good of society.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>I'm going to reverse engineer the code to Super SMashing Fighters.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>So I can put my favorite cartoon characters into the game.</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>Hacking is hard work. Whoof. I need to drink a jpeg of water.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(He's using the app that lets you drink water from your phone.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="switch">
+	<h2>Hidden pathway switch</h2>
+	<p>Exclusive to the normal route.</p>
+	<p>Located in the storage room; its position is indicated by the Hacker, if present.</p>
+
+	<p class="note">A thud sounds as something opens up.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(A secret switch...!)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You heard something opening.)</d-text>
+	</d-box>
+	<p class="note">Walking left reveals a path leading to the hidden area leading to the basement.</p>
+</section>
+
+<section class="d-section" id="storagedoor">
+	<h2>Storage room door</h2>
+	<p>Exclusive to the Weird Route, as this door is open and can be passed through in the normal route.</p>
+	<p>Located in the hidden area, next to the <a href="#basementdoor">B1F door</a>.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's locked.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="basementlock">
+	<h2>Basement area lock</h2>
+	<p>Exclusive to the normal route.</p>
+	<p>Located in the hidden area, blocking the way to the <a href="#basementdoor">basement door</a>.</p>
+
+	<h3 id="basementlockpre">Before purchasing the <a href="{{ '/misc/darkitems#keygen' | relative_url }}">KeyGen</a></h3>
+	<d-box theme="dark">
+		<d-text asterisk>It has a lock that seems impossible to open.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="basementlockpost">After purchasing the KeyGen</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Kris used the KEYGEN.)</d-text>
+	</d-box>
+	<p class="note">The KeyGen is removed from the inventory, and the forcefield disappears with a mysterious jingle. The party can now reach the B1F door.</p>
+</section>
+
+<section class="d-section" id="basementdoor">
+	<h2>Basement door</h2>
+	<p>Exclusive to the Weird Route, as this door is open and can be passed through in the normal route (with special cutscenes for the <a href="{{ '/story/chapter2/spamtonneo#firstentry' | relative_url }}">first entry</a> and <a href="{{ '/story/chapter2/spamtonneo#basementleave' | relative_url }}">first exit</a>).</p>
+	<p>Located in the hidden area, next to the <a href="#storagedoor">storage room door</a>.</p>
+
+	<p class="note">The door is locked and cannot be entered, but may be interacted with. The drawing of Queen on the door is scratched out.</p>
+
+	<h3 id="basementdoor1">First time</h3>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WOAH!!! YOU SAUCY LITTLE [Sponge] YOU!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>DON'T BARGE IN WHEN A MAN IS [ch4nging Forms]!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>... WAIT! WAIT [ONE 2nd]! IS THAT MY [Esteem Custom3r]?!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>THANKS TO YOU AND THAT LIL [Hochi Mama]</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>I AM LIVING [Big]!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>SOON I'LL HAVE EVERY[One] IN THIS CITY EATING RIGHT OUT OF MY [$!$!]!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>HA HA HA! I SURE HOPE NO ONE SEALS THE [Fountain] AROUND NOW.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>HA HA HA! I SURE HOPE. I SURE HOPE.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="basementdoor2">Subsequent times</h3>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>KID! I'M BUSY BECOMING [God]. GO PLAY [Minecrap] OR SOMETHING!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>IT'S NOT MY JOB TO BE SOME KIDS' [Extra Boss]!</d-text>
+	</d-box>
+</section>
