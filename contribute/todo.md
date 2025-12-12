@@ -110,6 +110,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 				* `/2F#dinnerpartyA`
 				* `/3F`
 					* `/housepuzzles` (or `#housepuzzles`? see if there's enough 3F stuff to break down into subpages, ig) - the section in the middle of the acid lake that has all the house bridge puzzles, the one werewire and swatchling, and the maus puzzle
+				* `/4F#noelleroom`
 		* `/tvworld` - Chapter 3 dark world
 			* ~~`/greenroom`~~ DONE, including main area, all X-Rank rooms, backstage, hub, interstitial (west), and red carpet hall (south)
 		* `/darksanctuary` - Chapter 4 dark worlds. I think for this one we can include all three sanctuaries' subpages

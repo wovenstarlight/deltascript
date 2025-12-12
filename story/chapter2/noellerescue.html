@@ -1,0 +1,1226 @@
+---
+title: Susie rescues Noelle
+
+description: >
+  <p>Kris and Ralsei stop to think of Susie, who has left to rescue Noelle with Berdly's help.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_ch2_scene23a_Step_0
+    chapters: [2]
+    note: Kris/Ralsei
+  -
+    name: gml_Object_obj_ch2_scene23b_Step_0
+    chapters: [2]
+    note: Noelle's room
+  -
+    name: gml_Object_obj_ch2_scene23c_Step_0
+    chapters: [2]
+    note: ferris wheel
+  -
+    name: gml_Object_obj_ch2_scene23d_Step_0
+    chapters: [2]
+    note: post-ferris wheel
+  -
+    name: gml_Object_obj_ch2_scene23e_Step_0
+    chapters: [2]
+    note: Susie returns
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: choices
+  -
+    name: gml_Object_obj_savepoint_Other_10
+    chapters: [2]
+    note: SAVE point narration
+
+toc:
+  -
+    id: thinkofsusie
+    name: Thinking of Susie
+  -
+    id: noelleroom
+    name: Escaping Noelle's room
+  -
+    id: ferriswheel
+    name: On the ferris wheel
+  -
+    id: postferris
+    name: After riding the ferris wheel
+  -
+    id: return
+    name: Susie returns to the others
+---
+<section class="d-section" id="thinkofsusie">
+	<h2>Thinking of Susie</h2>
+
+	<p class="note">As Kris and Ralsei approach the path to the roof, the whistling of the wind already audible, they stop after a few steps and Ralsei walks in front of Kris, turning to face them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>... Kris...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="I"></d-sprite>
+		<d-text asterisk>... Are you wondering how Susie is doing right now?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Wondering"></d-option>
+		<d-option index="1" text="Don't care"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+			<d-text asterisk>Well then... why don't we close our eyes...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+			<d-text asterisk>... and think about what she's doing now?</d-text>
+		</d-box>
+		<p class="note">The screen fades to black, then lightens to show <a href="#noelleroom">Noelle in her personalized mansion room</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+			<d-text asterisk>... Err, are you sure?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+			<d-text asterisk>It might be interesting... you aren't wondering at all?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+			<d-text asterisk>Perhaps, if you could potentially see it, would you want to?</d-text>
+		</d-box>
+
+		<d-choices theme="dark">
+			<d-option index="0" text="Wondering"></d-option>
+			<d-option index="1" text="Really#don't care"></d-option>
+		</d-choices>
+		<d-option-panel index="0" theme="dark">
+			<d-box theme="dark">
+				<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+				<d-text asterisk>Well then... why don't we close our eyes...</d-text>
+			</d-box>
+			<d-box theme="dark">
+				<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+				<d-text asterisk>... and think about what she's doing now?</d-text>
+			</d-box>
+			<p class="note">The screen fades to black, then lightens to show <a href="#noelleroom">Noelle in her personalized mansion room</a>.</p>
+		</d-option-panel>
+		<d-option-panel index="1" theme="dark">
+			<d-box theme="dark">
+				<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+				<d-text asterisk>... Well then, I suppose if you aren't interested, that's that.</d-text>
+			</d-box>
+			<d-box theme="dark">
+				<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+				<d-text asterisk>Let's keep going, Kris.</d-text>
+			</d-box>
+			<p class="note">Skips directly to <a href="#return">Susie's return</a>.</p>
+		</d-option-panel>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="noelleroom">
+	<h2>Escaping Noelle's room</h2>
+
+	<p class="note">The black screen brightens to show Noelle's personalized mansion room, <a href="{% include wikilink page='Lost Girl' %}">her theme</a> playing. She is sitting in a four-poster bed set next to a window, turned to look outside at the baseball-styled "moon".</p>
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker> <!-- intended sprite 1 -->
+		<d-text asterisk>What a strange moon...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker> <!-- intended sprite 5 -->
+		<d-text asterisk>It's like nothing I've ever seen before.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker> <!-- intended sprite 1 -->
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker> <!-- intended sprite 9 -->
+		<d-text asterisk>This world...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Noelle</d-speaker> <!-- intended sprite A -->
+		<d-text asterisk>... I wish Dess could see this.</d-text>
+	</d-box>
+
+	<p class="note">Offscreen, a door clicks open. Noelle turns her head, looking over her shoulder at the rest of the room.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>.... Is somebody there?</d-text>
+	</d-box>
+
+	<p class="note">A pair of Werewires drop down on either side of Noelle's bed, and she turns around fully, looking at them with wide eyes.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="B"></d-sprite>
+		<d-text asterisk>W-wait, what are you...</d-text>
+	</d-box>
+
+	<p class="note">The Werewires take a step towards her, and she jolts, turning her head to the other Werewire.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>H-Hey, you can't capture someone who's already captured!!</d-text>
+	</d-box>
+
+	<p class="note">Two Rude Buster slashes fly in from offscreen left and strike the Werewires, knocking their wires loose and making the resulting Plugboys disappear. Noelle covers her face as they're struck, then peeks out from behind her hands once they're gone. The camera pans to follow her gaze as she looks towards the left side of the room, where a grinning Susie is standing in front of the door, axe raised and rippling with magic.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="E"></d-sprite>
+		<d-text asterisk>S... Susie!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+		<d-text asterisk>You... you saved me...?</d-text>
+	</d-box>
+
+	<p class="note">Susie puts her axe away and dusts off her hands.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Don't get used to it.</d-text>
+	</d-box>
+
+	<p class="note">Noelle smiles tightly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="N"></d-sprite>
+		<d-text asterisk>Umm, OK, I... I won't...!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="P"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">Susie walks forward, the camera following her; she stops beside Noelle's bed, and the two of them look at the moon together for a moment.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Cool moon.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Y... yeah.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>... b-but it's weird, isn't it?</d-text>
+	</d-box>
+
+	<p class="note">Noelle tilts her head slightly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="1"></d-sprite>
+		<d-text asterisk>How did we get here...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>No, what even is this place...?</d-text>
+	</d-box>
+
+	<p class="note">Susie jolts, spooked.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Uhhh, it's uhhh....</d-text>
+	</d-box>
+
+	<d-choices theme="dark">
+		<d-option index="0" text="Dark World"></d-option>
+		<d-option index="1" text="Evil Queen's#Castle"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">No effect; dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">No effect; dialogue continues.</p>
+	</d-option-panel>
+
+	<p class="note">Susie points at Noelle.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Uhhh... you're, uh... just having a dream!</d-text>
+	</d-box>
+
+	<p class="note">Noelle looks at her over her shoulder…</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>H... huh...?</d-text>
+	</d-box>
+
+	<p class="note">…then looks outside at the moon again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+		<d-text asterisk>Oh... Oh, that's right.</d-text>
+	</d-box>
+
+	<p class="note">She tilts her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Right... if YOU'RE here, it must be a dream...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>???????</d-text>
+	</d-box>
+
+	<p class="note">Noelle turns to Susie, smiling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>I MEAN, the real Susie probably wouldn't save me, would she...?</d-text>
+	</d-box>
+
+	<p class="note">She looks outside again, head tilted.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+		<d-text asterisk>She... probably doesn't care about me at all.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Huh?</d-text>
+	</d-box>
+
+	<p class="note">Susie scratches her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Why would you, uh... think that?</d-text>
+	</d-box>
+
+	<p class="note">Noelle turns to Susie, smiling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Umm, she doesn't care about anybody.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Well, FAIR, but...</d-text>
+	</d-box>
+
+	<p class="note">Noelle faces Susie properly as she speaks.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="3"></d-sprite>
+		<d-text asterisk>Didja ever wonder why Susie never... picked on you?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+		<d-text asterisk>(sigh)... All the time...</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to the left.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>MAYBE it's 'cause, when she first came to class.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>You lent her one of your pencils,</d-text>
+	</d-box>
+
+	<p class="note">A very brief pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Like, a dumb, uh, candycane-looking one or something.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>And, even though it DIDN'T actually taste like candy,</d-text>
+	</d-box>
+
+	<p class="note">A very brief pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>She, uh, remembered your smile, and, uh...</d-text>
+	</d-box>
+
+	<p class="note">A very brief pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Decided to spare you. Y'know.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>That's, um...</d-text>
+	</d-box>
+
+	<p class="note">Noelle begins laughing, a hand over her mouth.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Really specific.</d-text>
+	</d-box>
+
+	<p class="note">Susie scratches her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Yeah, well, uh,</d-text>
+	</d-box>
+
+	<p class="note">Noelle stops laughing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>... wait, did you say you ATE the pencil!?</d-text>
+	</d-box>
+
+	<p class="note">Susie jabs an unsteady finger at Noelle, who starts laughing again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>I MEAN, LOOK!</d-text>
+	</d-box>
+
+	<p class="note">Susie's finger stops wobbling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">She falters, head turning away as she speaks next, and Noelle freezes mid-laugh.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Uh, hey, so, do you... dream about me a lot?</d-text>
+	</d-box>
+
+	<p class="note">A pause. Then Noelle hurriedly gets off her bed and turns to the right with a smile, causing Susie to take a step back out of her way.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="M"></d-sprite>
+		<d-text asterisk>WELL, time for me to get back to my project, haha!</d-text>
+	</d-box>
+
+	<p class="note">Noelle turns around and puts a hand on Susie's shoulder with a smile; Susie's eyes widen.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="Q"></d-sprite>
+		<d-text asterisk>Okay, Susie, hit me with your ax and wake me up!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Z"></d-sprite>
+		<d-text asterisk>W-wait, no, I can't do that!</d-text>
+	</d-box>
+
+	<p class="note">Noelle gives her a confused look.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Huh? Why not? It's just a dream, so...</d-text>
+	</d-box>
+
+	<p class="note">Susie's eyes relax and she smiles again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>Umm, I mean...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Didn't you wanna... uh... hang out some more?</d-text>
+	</d-box>
+
+	<p class="note">Noelle lets go of Susie's shoulder and turns aside, facing the player, blushing and putting a hand to her mouth.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="L"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">She turns to Susie and looks up at her with a smile.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="O"></d-sprite>
+		<d-text asterisk>... I GUESS Berdly can wait a little longer.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Alright! Let's get out of here then.</d-text>
+	</d-box>
+
+	<p class="note">Susie walks past Noelle towards the right side of the room; Noelle follows, noticeably beaming. They stop near the right side of the room, but before reaching the edge.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>All we gotta do is head to the right over to this...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Uh... over here, on this, uh...</d-text>
+	</d-box>
+
+	<p class="note">They walk forward to the edge, the camera panning to show the lack of a wall. Instead, a giant ferris wheel carriage awaits. Noelle puts a hand to her mouth, blushing, while Susie stops smiling.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Heart. Covered. Ferris Wheel.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="M"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">Susie whirls around and looks exasperatedly at Noelle, who jolts in shock.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>What's the goddamn holdup!? Get ON already!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="M"></d-sprite>
+		<d-text asterisk>S-Sorry!</d-text>
+	</d-box>
+
+	<p class="note">The screen fades to black as they both head towards the ferris wheel carriage.</p>
+</section>
+
+<section class="d-section" id="ferriswheel">
+	<h2>On the ferris wheel</h2>
+
+	<p class="note">The screen brightens to show Cyber City in the distance; a slowly-spinning ferris wheel moves in from the left side of the screen, <a href="{% include wikilink page='Ferris Wheel' %}">bright music</a> playing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>(What... the hell am I supposed to do, uh, here.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>(Damn, Kris would know what to do!)</d-text>
+	</d-box>
+
+	<d-choices theme="dark" offset-x="10%">
+		<d-option index="0" text="Point and#hearts come out"></d-option>
+		<d-option index="1" text="Eat Moss"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">No effect; dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">No effect; dialogue continues.</p>
+	</d-option-panel>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="C"></d-sprite>
+		<d-text asterisk>(...Actually, uh, maybe Kris wouldn't know what to do...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>So, uh... Ferris wheels, huh.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Kinda makes you wonder what car they were built for.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>(It's... it's different than riding one with Kris...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="4"></d-sprite>
+		<d-text asterisk>... the hell's wrong, you scared of heights?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="M"></d-sprite>
+		<d-text asterisk>No! No, I... I love heights! Haha!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>You're, uh, shaking.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Well, um, maybe, I'm a little scared, but... I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>To be honest, I... I actually like... scary things.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>... what do you mean?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>When we were little, me and my sister would stay up...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>And go past our bedtime watching horror movies.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>At first I cried, but now... it's like... watching them...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Makes me feel... comforted...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Comforted?</d-text>
+		<d-box place="center-x">
+			<d-sprite speaker="Susie" emotion="3"></d-sprite>
+			<d-text>I guess I do like slime and blood...</d-text>
+		</d-box>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>It's scary, but I can just turn it off, right?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Now it's mostly... people, that are scary. Haha.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+		<d-text asterisk>You can just say you mean me.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Haha... umm... well... I guess y-you too, but...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>But that's... what's... NICE about you, y'know?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>Nice!? The hell does that mean???</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>You're the... good kind of scary.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="S"></d-sprite>
+		<d-text asterisk>You aren't afraid to... break the rules, y'know?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+		<d-text asterisk>... I wish I could do crazy stuff like you.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<d-choices theme="dark" offset-x="5%">
+		<d-option index="0" text="Do something#nuts"></d-option>
+		<d-option index="1" text="Do something#crazy"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">No effect; dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">No effect; dialogue continues.</p>
+	</d-option-panel>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>So, um...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>If YOU could do something crazy right now,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>What would you do?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>U-umm... Well, I... I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>I'd... I'd jump out the window!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Huh?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="Q"></d-sprite>
+		<d-text asterisk>It's a dream, right?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="S"></d-sprite>
+		<d-text asterisk>I'd grow big angel wings,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>And fly as far as I can, gazing back at it all...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>The skyline shining like Holiday lights.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>... that's kinda... beautiful?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>Wait, you wouldn't seriously jump out, would you!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="R"></d-sprite>
+		<d-text asterisk>Hahaha!! No promises!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>... Susie...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>What do YOU think looking out there?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>M... me? Umm...</d-text>
+	</d-box>
+
+	<d-choices theme="dark" offset-x="5%">
+		<d-option index="0" text="Say something#romantic"></d-option>
+		<d-option index="1" text="Say something#cool"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">No effect; dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">No effect; dialogue continues.</p>
+	</d-option-panel>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Uh... seeing everything small, makes me feel like, um...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>If I was Susiezilla or something, I could wreck the whole city.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Hahahaha!!! Susie!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Heh, what!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>... is being Susiezilla something you think about a lot?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Uhhh, like,</d-text>
+	</d-box>
+
+	<d-choices theme="dark">
+		<d-option index="0" text="Lie"></d-option>
+		<d-option index="1" text="Lie"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">No effect; dialogue continues.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">No effect; dialogue continues.</p>
+	</d-option-panel>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>No I just made it up now.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+		<d-text asterisk>... does your tail always do that when you lie?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>H... hey!! Don't look at that!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>I don't have a tail!! It's part of your dream!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Oh, right. S... sorry.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="R"></d-sprite>
+		<d-text asterisk>Guess I'll just have to check in real life, too.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>H-Hey!!! Don't!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>Hahaha!! Susie? Everything OK?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>LOOK, I just, uhhh -</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="M"></d-sprite>
+		<d-text asterisk>I just don't like people knowing about, it.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Umm, well...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>I think it's... a nice tail.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="M"></d-sprite>
+		<d-text asterisk>... whatever.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>(It's wagging...)</d-text>
+	</d-box>
+
+	<p class="note">The ferris wheel, rotating at the center of the screen, begins to move offscreen to the right, and the screen fades to black. A pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>... you stopped shaking.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+		<d-text asterisk>Guess I got comfortable.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>... me too.</d-text>
+	</d-box>
+
+	<p class="note">The music fades to silence.</p>
+</section>
+
+<section class="d-section" id="postferris">
+	<h2>After riding the ferris wheel</h2>
+
+	<p class="note">The black screen lightens to show Susie and Noelle standing on a narrow path after having gotten off the ferris wheel, still visible to the left. Susie has her hands behind her head and is grinning.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Well, that wasn't too bad.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>Y... yeah.</d-text>
+	</d-box>
+
+	<p class="note">Noelle turns aside, facing the player and blushing with a hand over her mouth as she looks away from Susie.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+		<d-text asterisk>... sigh.</d-text>
+	</d-box>
+
+	<p class="note">Susie lowers her hands and turns to Noelle.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="6"></d-sprite>
+		<d-text asterisk>If only I could dream like this every day...</d-text>
+	</d-box>
+
+	<p class="note">A pause. Susie turns aside, facing away from the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Maybe...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>It... doesn't have to be a dream. Y'know?</d-text>
+	</d-box>
+
+	<p class="note">Noelle lowers her hand and turns to Susie.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Susie...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Maybe... maybe someday we could...</d-text>
+	</d-box>
+
+	<p class="note">From the top right corner of the screen, Berdly flutters down with a rose held in his beak, accompanied by crescendoing music. Noelle and Susie look stunned as he appears. Once he lands, he and the girls face each other as <a href="{% include wikilink page='Berdly (Soundtrack)' %}">his theme</a> begins playing.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="6"></d-sprite>
+		<d-text asterisk>Noelle! My lady!! The Cavalry has arrived to rescue you!!</d-text>
+	</d-box>
+
+	<p class="note">Noelle turns aside, away from the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="H"></d-sprite>
+		<d-text asterisk>(Oh, the good part of the dream is over.)</d-text>
+	</d-box>
+
+	<p class="note">Susie and Noelle turn to each other.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>It's fine!!! Berdly's gonna help!! We're allies!!</d-text>
+	</d-box>
+
+	<p class="note">Berdly steps forward as Susie turns around.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="J"></d-sprite>
+		<d-text asterisk>Yes!! Don't worry, Noelle!! I'm stupid now!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to Noelle.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>(He's good!!!)</d-text>
+	</d-box>
+
+	<p class="note">Susie then walks to the edge of the narrow path they're standing on, and turns around to face the others, who similarly turn to her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Look, I gotta go save the day now, alright?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="N"></d-sprite>
+		<d-text asterisk>H... huh!? Umm... good luck, Susie!!</d-text>
+	</d-box>
+
+	<p class="note">Susie turns around.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Alright, nugget boy. it's up to you now.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="E"></d-sprite>
+		<d-text asterisk>Leave it to me, my dear Susan.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Yeah, whatever. May the smarts be with you.</d-text>
+	</d-box>
+
+	<p class="note">Without further ado, Susie jumps off the edge and drops down to the unseen levels below. Noelle and Berdly step forward to the edge to watch her fall; Berdly has lost his smile.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="0"></d-sprite>
+		<d-text asterisk>Ah... she left before I could...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="9"></d-sprite>
+		<d-text asterisk>....</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns to Noelle.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="9"></d-sprite>
+		<d-text asterisk>Noelle. It's hard to say this.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="5"></d-sprite>
+		<d-text asterisk>You've done so much for me, and I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="8"></d-sprite>
+		<d-text asterisk>Noelle... I'm sorry.</d-text>
+	</d-box>
+
+	<p class="note">Noelle turns to Berdly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="F"></d-sprite>
+		<d-text asterisk>Berdly...? You're... actually apologizing?</d-text>
+	</d-box>
+
+	<p class="note">She turns aside, facing the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="9"></d-sprite>
+		<d-text asterisk>... Thank you. I... I understand, you know?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>You've always... been nice to me when it's just the two of us.</d-text>
+	</d-box>
+
+	<p class="note">She turns to Berdly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+		<d-text asterisk>You just wanted to make a happy world for me.</d-text>
+	</d-box>
+
+	<p class="note">Noelle turns away from Berdly.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="H"></d-sprite>
+		<d-text asterisk>I'm... glad you realized, um... it sucked.</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns aside, facing the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="3"></d-sprite>
+		<d-text asterisk>Oh.</d-text>
+	</d-box>
+
+	<p class="note">Noelle turns to him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>Huh?</d-text>
+	</d-box>
+
+	<p class="note">Berdly looks at Noelle, smiling again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="I"></d-sprite>
+		<d-text asterisk>I mean, YES, I WAS, in a WAY,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="4"></d-sprite>
+		<d-text asterisk>Apologizing for THAT, but.</d-text>
+	</d-box>
+
+	<p class="note">He turns aside, facing the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="5"></d-sprite>
+		<d-text asterisk>I also wanted to apologize.</d-text>
+	</d-box>
+
+	<p class="note">He turns away from Noelle, slumping unhappily.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="G"></d-sprite>
+		<d-text asterisk>For leading you on.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="G"></d-sprite>
+		<!-- this box deliberately left blank -->
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="8"></d-sprite>
+		<d-text asterisk>I know you only always helped me out because, well...</d-text>
+	</d-box>
+
+	<p class="note">Berdly lifts his head, looking serious, and takes a step away. Then he slumps again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="H"></d-sprite>
+		<d-text asterisk>You had a crush on me, so...</d-text>
+	</d-box>
+
+	<p class="note">Noelle jolts in shock.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="I"></d-sprite>
+		<d-text asterisk>WHAT?</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns around to face her, taking a quick step towards her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="3"></d-sprite>
+		<d-text asterisk>O-oh, sorry! Please, don't be embarrassed!</d-text>
+	</d-box>
+
+	<p class="note">He turns aside, facing the player, while Noelle faces him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="4"></d-sprite>
+		<d-text asterisk>It's understandable. But, I... I have to tell you I...</d-text>
+	</d-box>
+
+	<p class="note">Berdly droops.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="5"></d-sprite>
+		<d-text asterisk>I really value your friendship, OK? So I...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="G"></d-sprite>
+		<d-text asterisk>I... felt I had to pretend to reciprocate those feelings...</d-text>
+	</d-box>
+
+	<p class="note">Noelle looks stunned.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="I"></d-sprite>
+		<d-text asterisk>WHAT? But I... I don't -- I never --</d-text>
+	</d-box>
+
+	<p class="note">Berdly turns and takes a step away from her.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="5"></d-sprite>
+		<d-text asterisk>Furthermore, I think I may have...</d-text>
+	</d-box>
+
+	<p class="note">A pause. He turns around.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="M"></d-sprite>
+		<d-text asterisk>Discovered someone else for me.</d-text>
+	</d-box>
+
+	<p class="note">Noelle jolts, still looking stunned.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="H"></d-sprite>
+		<d-text asterisk>HUH????????????</d-text>
+	</d-box>
+
+	<p class="note">Berdly walks right up to her, stopping beside her and turning aside to face the player.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="5"></d-sprite>
+		<d-text asterisk>Please don't be jealous.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="I"></d-sprite>
+		<d-text asterisk>OF????????????????<span class="break"></span>???????????????</d-text>
+	</d-box>
+
+	<p class="note">The music stops dead as Berdly speaks.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="4"></d-sprite>
+		<d-text asterisk>Susie</d-text>
+	</d-box>
+
+	<p class="note">Noelle whirls on Berdly and seizes him by the collar, shaking him back and forth; they jolt and the damage SFX plays with every word Noelle shouts:</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="K"></d-sprite>
+		<d-text asterisk>WHAT? WHAT? WHAT? WHAT? WHAT? WHAT? WHAT? WHAT? WHAT? WHAT? WHAT? WHAT?</d-text>
+	</d-box>
+
+	<p class="note">And with one last damage SFX, the screen cuts to black.</p>
+</section>
+
+<section class="d-section" id="return">
+	<h2>Susie returns to the others</h2>
+
+	<hr class="hr2">
+	<h3>If you didn't skip the ferris wheel scene</h3>
+	<p class="note">The black screen brightens to show Kris and Ralsei standing on the path to the roof, the whistling of the wind audible once more.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="I"></d-sprite>
+		<d-text asterisk>So that's why...</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>Geronimo!!</d-text>
+	</d-box>
+
+	<p class="note">Susie drops down from the top of the screen, landing on Ralsei and squashing him flat; she promptly stands up and holds out her arms like an athlete. After a brief pause, she takes a step towards Kris (squashing Ralsei further) and puts her hands behind her head.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Heh, miss me?</d-text>
+	</d-box>
+
+	<p class="note">Still flat on the ground, Ralsei lifts his head, looking mad.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="N"></d-sprite>
+		<d-text asterisk>Of course not!!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei's expression turns happy.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="H"></d-sprite>
+		<d-text asterisk>(Just kidding! That was sarcasm! I missed you!!)</d-text>
+	</d-box>
+
+	<p class="note">Susie drops her hands and turns aside, facing the player, with a smile.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Man, we gotta work on your delivery.</d-text>
+	</d-box>
+
+	<p class="note">Susie jumps off Ralsei; he stands, and both of them get in line behind Kris, who's turned around to watch them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Anyway, let's go!</d-text>
+	</d-box>
+
+	<p class="note">Control is returned to the player, who can stop at the newly-spawned SAVE point a short distance to the right:</p>
+	<d-box theme="dark">
+		<d-text asterisk>Everyone is together, but the wind blows coldly...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with a certain power.</d-text>
+	</d-box>
+
+	<p class="note">The player can then lead the party up a flight of stairs to 4F, where a <a href="{{ '/encounters/werewerewire' | relative_url }}">Werewerewire</a> guards the shortcut down to 3F and the door to <a href="{{ '/locations/cyberworld/queenmansion/4F#noelleroom' | relative_url }}">Noelle's room</a>. Past the Werewerewire awaits <a href="{{ '/story/chapter2/confrontingqueen' | relative_url }}">Queen</a>.</p>
+</section>
