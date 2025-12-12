@@ -1553,6 +1553,11 @@ d-sprite {
 		align-items: center;
 		margin-inline-end: 1ch;
 	}
+	d-box:not(:state(compact)) &[speaker=Noelle] {
+		img { --size: calc(var(--baseheight) - 1.75em) }
+		margin-block: 0 -0.5em;
+		margin-inline: -0.2em 0.1em;
+	}
 	d-box[theme=battlemenu]:not(:state(compact)) &[speaker=Tenna] {
 		img { --size: calc(var(--baseheight) - 0.25em) }
 		margin-block: -1.7em -2em;
