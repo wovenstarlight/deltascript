@@ -1,0 +1,279 @@
+---
+title: Queen's mansion - Entrance
+
+description: >
+  <p>Narration and dialogue for the entrance hall of Queen's mansion.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_obj_savepoint_Other_10
+    chapters: [2]
+    note: SAVE point
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: warp doors (narration)
+  -
+    name: gml_Object_obj_shortcut_door_Step_0
+    chapters: [2]
+    note: warp doors (selecting a location)
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [2]
+    note: bookcases, Rouxls interactions
+  -
+    name: gml_Object_obj_forcefield_Other_10
+    chapters: [2]
+    note: forcefield
+  -
+    name: gml_Object_obj_ch2_room_mansion_entrance_Step_0
+    chapters: [2]
+    note: Rouxls cutscene
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2]
+    note: Wig Robot
+
+toc:
+  -
+    id: savepoint
+    name: SAVE point
+  -
+    id: warpdoor
+    name: Warp door
+    subheadings:
+      -
+        id: warpdoor-normal
+        name: Normal route - Active
+        subheadings:
+          -
+            id: warpdoor-fallback
+            name: Unused fallback
+      -
+        id: warpdoor-weird
+        name: Weird Route - Inactive
+  -
+    id: bookcase
+    name: Bookcases
+  -
+    name: Weird Route exclusives
+    subheadings:
+      -
+        id: forcefield
+        name: Forcefields
+      -
+        id: rouxls
+        name: Rouxls Kaard
+        subheadings:
+          -
+            id: rouxls-cutscene
+            name: Initial cutscene
+          -
+            id: rouxls-interact
+            name: General interactions
+      -
+        id: wigrobot
+        name: Wig Robot
+---
+<section class="d-section" id="savepoint">
+	<h2>SAVE point</h2>
+	<p>Narration is exclusive to the normal route. No narration is used on the Weird Route.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>Looking at these legs fills you with a certain power.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="warpdoor">
+	<h2>Warp door</h2>
+	<p>Uses <a href="{{ '/misc/generic#warpdoor' | relative_url }}">generic text</a>.</p>
+
+	<h3 id="warpdoor-normal">Normal route - Active</h3>
+	<p class="note">The doorframe contains a red door, with multicolored light wisping out from the edges.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a door.)</d-text>
+		<d-text asterisk>(Where will you go?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Mansion"></d-option>
+		<d-option index="1" text="Cyber Field"></d-option>
+		<d-option index="2" text="Trash Zone"></d-option>
+		<d-option index="3" text="Cancel"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(Amazingly, you are already there.)</d-text>
+		</d-box>
+		<p class="note">Nothing happens.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(The door opened...)</d-text>
+		</d-box>
+		<p class="note">The screen cuts to black with the sound of a door opening. After a moment, the scene fades in to the Cyber Field crossroads, with the party standing outside the warp door present there.</p>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(The door opened...)</d-text>
+		</d-box>
+		<p class="note">The screen cuts to black with the sound of a door opening. After a moment, the scene fades in to the Trash Zone near the trash pile, with the party standing outside the warp door present there.</p>
+	</d-option-panel>
+	<d-option-panel index="3" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(You doorn't.)</d-text>
+		</d-box>
+		<p class="note">Nothing happens.</p>
+	</d-option-panel>
+
+	<hr class="hrhalf">
+
+	<h4 id="warpdoor-fallback">Unused fallback</h4>
+	<p>For choosing an option that's not accounted for by the code.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(But nothing happened.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="warpdoor-weird">Weird Route - Inactive</h3>
+	<p class="note">The doorframe is empty and dark.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a lone doorframe.)</d-text>
+		<d-text asterisk>(But for some reason, you can't see through it...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="bookcase">
+	<h2>Bookcases</h2>
+	<p>At the base of the eastern stairs. These open up to reveal shortcuts to 2F and 3F as the party reaches said floors on the normal route. On the Weird Route, these shortcuts are open from the start.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's a cybernetic bookshelf.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(There is a book here about shortcuts that open up later.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="forcefield">
+	<h2>Forcefields</h2>
+	<p>Exclusive to the Weird Route. Blocking the west and east staircases. Use <a href="{{ '/misc/generic#forcefield' | relative_url }}">generic text</a>.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It appears to be some kind of forcefield.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="rouxls">
+	<h2>Rouxls Kaard</h2>
+	<p>Present only on the Weird Route. A petrified statue wearing a pirate hat.</p>
+
+	<h3 id="rouxls-cutscene">Initial cutscene</h3>
+	<p class="note">Upon entering the mansion and advancing into the foyer, Susie and Ralsei break away from the party line to stand in front of the statue of Rouxls.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Huh...? Isn't this...</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to Ralsei. A slight pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Uhh, that guy from before?</d-text>
+	</d-box>
+
+	<p class="note">She turns to look at Rouxls again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Why is there a statue of him?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>It's... not a statue, Susie.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Huh?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+		<d-text asterisk>You see, each Dark Fountain creates a different "world."</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+		<d-text asterisk>A "world" whose Darkners reflect the will of its fountain.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+		<d-text asterisk>But, though those Darkners can exist in their own worlds...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+		<d-text asterisk>They might not "belong" if they go to another one.</d-text>
+	</d-box>
+
+	<p class="note">A pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Huh...</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to Ralsei.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>So if we just bring him back to the castle town...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">She turns back to Rouxls. A slight pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Do we, uh, have to do that?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>Umm, yes.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Whatever.</d-text>
+	</d-box>
+
+	<p class="note">Susie and Ralsei get back in line behind Kris, and control is returned to the player.</p>
+
+	<hr>
+
+	<h3 id="rouxls-interact">General interactions</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a familiar-looking statue.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="wigrobot">
+	<h2>Wig Robot</h2>
+	<p>Exclusive to the Weird Route. Stands to the left of the bookcases, near the base of the eastern stairs.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Wig Robot</d-speaker>
+		<d-text asterisk>It's terrible... The butlers are all trapped in the cafe...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Wig Robot</d-speaker>
+		<d-text asterisk>Queen is nowhere to be found, and...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Wig Robot</d-speaker>
+		<d-text asterisk>With no one to defend it, a strange force has taken over the mansion!</d-text>
+	</d-box>
+</section>
