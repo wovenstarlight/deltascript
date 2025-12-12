@@ -1,0 +1,348 @@
+---
+title: Queen's mansion - 4F
+
+description: >
+  <p>Narration and dialogue for the fourth floor of Queen's mansion, its roof.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_GlobalScript_scr_roomname
+    chapters: [2]
+    note: SAVE point names
+  -
+    name: gml_Object_obj_savepoint_Other_10
+    chapters: [2]
+    note: SAVE point narration
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [2]
+    note: Susie-like/ICE-E statues, Berdly
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [2]
+    note: other Noelle items
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: vending machine
+
+toc:
+  -
+    id: noelleroom
+    name: Noelle's room
+    subheadings:
+      -
+        id: statue
+        name: Susie-like statue
+      -
+        id: closet
+        name: Closet
+      -
+        id: bookcase
+        name: Bookcase
+      -
+        id: icee
+        name: ICE-E statue
+      -
+        id: calendar
+        name: Calendar
+      -
+        id: bed
+        name: Bed
+        subheadings:
+          -
+            id: bedstandard
+            name: Standard
+          -
+            id: bedinspector
+            name: If Kris had the LV1 Bed Inspector title and has inspected all prior beds in Chapter 2
+      -
+        id: wardrobe
+        name: Wardrobe
+  -
+    id: berdly
+    name: Berdly
+    subheadings:
+      -
+        id: berdly-nosusie
+        name: Without Susie in the party
+      -
+        id: berdly-susie
+        name: With Susie in the party
+  -
+    id: queen
+    name: Queen
+    subheadings:
+      -
+        id: queenpre
+        name: Before telling Queen about Castle Town
+      -
+        id: queenpost
+        name: After telling Queen about Castle Town
+  -
+    id: ralsei
+    name: Ralsei
+  -
+    id: vendingmachine
+    name: Vending machine
+---
+<section class="d-section" id="noelleroom">
+	<h2>Noelle's room</h2>
+
+	<h3 id="statue">Susie-like statue</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Woah, this statue rocks!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Hey, Ralsei, can we take this for my room?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>Huh? Umm... th-that would be stealing...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You stole the Susie-like Statue...)</d-text>
+	</d-box>
+	<p class="note">The statue disappears. It will now appear in <a href="{{ '/locations/closetworld/castle/susieroom#statue' | relative_url }}">Susie's room in Castle Town</a>.</p>
+
+	<hr>
+
+	<h3 id="closet">Closet</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(There are all sorts of clothes inside.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>(... huh, never seen Noelle wear anything like this...?)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bookcase">Bookcase</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(There are catalogues of search results.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Seems like most things couldn't be made into objects...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="icee">ICE-E statue</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(From the search 'is ice e real cryptid')</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a cross between ICE-E and something else...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Hey Kris, take this for your room.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>Umm, that would be stealing...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You stole the ICE-E statue for some reason.)</d-text>
+	</d-box>
+	<p class="note">The statue disappears. It will now appear in <a href="{{ '/locations/closetworld/castle/krisroom#icee' | relative_url }}">Kris's room in Castle Town</a>.</p>
+
+	<hr>
+
+	<h3 id="calendar">Calendar</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a calendar.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Every page is the last month, every day is the twenty-fifth.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bed">Bed</h3>
+	<h4 id="bedstandard">Standard</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a bed. Go to sleep?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+			<d-text asterisk>K-Kris, what if Noelle came in here...?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="5"></d-sprite>
+			<d-text asterisk>Yeah, what if she has ticks? Get out of there!</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(It's not your bed anyhow.)</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr class="hrhalf">
+
+	<h4 id="bedinspector">If Kris had the <a href="{{ '/misc/powermenu#lv1bedinspector' | relative_url }}">LV1 Bed Inspector title</a> and has inspected all prior beds in Chapter 2</h4>
+	<p>(That means all four beds in Castle Town, belonging to <a href="{{ '/locations/closetworld/castle/krisroom#bed2' | relative_url }}">Kris</a>, <a href="{{ '/locations/closetworld/castle/susieroom#bed2' | relative_url }}">Susie</a>, <a href="{{ '/locations/closetworld/castle/lancerroom#bed2' | relative_url }}">Lancer</a>, and <a href="{{ '/locations/closetworld/town/partydojo#bed' | relative_url }}">Clover</a>.)</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Noelle's bed.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You retained the title of Bed Inspector.)</d-text>
+	</d-box>
+	<p class="note">Kris gains the <a href="{{ '/misc/powermenu#lv2bedinspector' | relative_url }}">LV2 Bed Inspector title</a>.</p>
+
+	<hr>
+
+	<h3 id="wardrobe">Wardrobe</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a wardrobe.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="berdly">
+	<h2>Berdly</h2>
+	<p>Exclusive to the normal route. Present after the <a href="{{ '/story/chapter2/confrontingqueen' | relative_url }}">first fight against Queen</a>.</p>
+
+	<h3 id="berdly-nosusie">Without Susie in the party</h3>
+	<p>Immediately after the fight, when Susie has gone ahead.</p>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="I"></d-sprite>
+		<d-text asterisk>Kris, your deep concern for me... is dextrose.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="4"></d-sprite>
+		<d-text asterisk>But stay sanguine, my fellow bluebird.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="I"></d-sprite>
+		<d-text asterisk>I'll find some way to help you yet!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="I"></d-sprite>
+		<d-text asterisk>Kris... such insistence. Sorry but, I must turn you down.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="F"></d-sprite>
+		<d-text asterisk>I've chosen Susan's route, in the VN of life...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="berdly-susie">With Susie in the party</h3>
+	<p>After reentering the area.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="F"></d-sprite>
+		<d-text asterisk>Ahh, Susan. Returned to feast upon my sprightly visage?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="4"></d-sprite>
+		<d-text asterisk>What? You look awful.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="L"></d-sprite>
+		<d-text asterisk>(Ah, such dere... is tsun, to my ears.)</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="4"></d-sprite>
+		<d-text asterisk>What the hell are you saying?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="F"></d-sprite>
+		<d-text asterisk>(How about a kiss, for luck?)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>Stop mumbling!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Berdly" variant="dark" emotion="F"></d-sprite>
+		<d-text asterisk>(A kiss for me, to change RNG?)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="queen">
+	<h2>Queen</h2>
+	<p>Exclusive to the Weird Route. Present on the narrow path leading to the Dark Fountain, where GIGA Queen is fought on the normal route.</p>
+
+	<h3 id="queenpre">Before telling Queen about Castle Town</h3>
+	<d-box theme="dark">
+		<d-speaker>Queen</d-speaker>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="queenpost">After telling Queen about Castle Town</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Amazing So I Can Turn Your Castle Into My Mansion?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>(W-Wait, that's not what I'm saying...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="ralsei">
+	<h2>Ralsei</h2>
+	<p>Exclusive to the Weird Route. Present on the narrow path leading to the Dark Fountain, talking to Queen after Susie tells her about Castle Town.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Kris, the Fountain is waiting for you!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="vendingmachine">
+	<h2>Vending machine</h2>
+	<p>Exclusive to the Weird Route. Located on the path immediately before the Dark Fountain.</p>
+
+	<p class="note">Your current money total and inventory/storage space is displayed above the dialogue box.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a machine that sells pre-fountain refreshments.)</d-text>
+		<d-text asterisk>(1 bagel is $120. Buy?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<h3>If you have $120 or more, and the inventory and storage aren't both full</h3>
+		<p class="note">$120 is deducted from your total money, and a <a href="{{ '/misc/darkitems#cdbagel' | relative_url }}">CD Bagel</a> is added to your inventory/storage (as applicable) using <a href="{{ '/misc/generic#itemget' | relative_url }}">generic text</a>.</p>
+
+		<hr class="hrhalf">
+
+		<h3>If you have $120 or more, but the inventory and storage are both full</h3>
+		<d-box theme="dark">
+			<d-text asterisk>(You have too many <span class="yellow">ITEMs</span> to take <span class="yellow">CD Bagel</span>.)</d-text>
+		</d-box>
+
+		<hr class="hrhalf">
+
+		<h3>If you have less than $120</h3>
+		<d-box theme="dark">
+			<d-text asterisk>(You didn't have enough money. Which, is surprising.)</d-text> <!-- toby fox voice all that murder and robbery and you're STILL broke??? -->
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+</section>

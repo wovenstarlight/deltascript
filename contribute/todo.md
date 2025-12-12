@@ -86,6 +86,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 					* ~~`/susieroom`~~ DONE up to Chapter 4
 					* ~~`/krissusieroom` - Chapter 4 exclusive~~ DONE
 					* `/lancerroom`
+						* `#bed2`
 				* 3F
 					* `/queenroom`
 					* `/tennaroom`
@@ -96,6 +97,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 					* ~~`/seap`~~ DONE up to Chapter 4
 					* ~~`/cafe`~~ DONE up to Chapter 4
 					* `/partydojo` (see_also link to the Party Dojo section on the encounters index)
+						* `#bed` - clover's bed
 					* ~~`/topbakery`~~ DONE up to Chapter 4
 					* `/musicshop`
 					* `/tvstudio`
@@ -105,10 +107,9 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/cardkingdom` - Chapter 1 dark world
 		* `/cyberworld` - Chapter 2 dark world
 			* `/queenmansion`
-				* ~~`/1F`, `/guesthall`, `/colorcafe`, `/entrance`, `/2F`~~ DONE
+				* ~~`/1F`, `/guesthall`, `/colorcafe`, `/entrance`, `/2F`, `/4F`~~ DONE
 				* `/3F`
 					* `/housepuzzles` (or `#housepuzzles`? see if there's enough 3F stuff to break down into subpages, ig) - the section in the middle of the acid lake that has all the house bridge puzzles, the one werewire and swatchling, and the maus puzzle
-				* `/4F#noelleroom`
 		* `/tvworld` - Chapter 3 dark world
 			* ~~`/greenroom`~~ DONE, including main area, all X-Rank rooms, backstage, hub, interstitial (west), and red carpet hall (south)
 		* `/darksanctuary` - Chapter 4 dark worlds. I think for this one we can include all three sanctuaries' subpages
