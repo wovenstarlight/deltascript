@@ -1,0 +1,438 @@
+---
+title: Queen's mansion - 2F
+
+description: >
+  <p>Narration and dialogue for the second floor of Queen's mansion.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /locations/cyberworld/queenmansion/1F
+    name: Queen's mansion - 1F
+  -
+    url: /locations/cyberworld/queenmansion/3F
+    name: Queen's mansion - 3F
+
+sources:
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2]
+    note: dinner party section A, kitchen
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [2]
+    note: shortcut sign, supreme table, dining hall doors (sub)
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [2]
+    note: west/east doors
+  -
+    name: gml_Object_obj_controller_dining3_Step_0
+    chapters: [2]
+    note: dining hall doors (1st)
+
+toc:
+  -
+    id: dinnerpartyA
+    name: Dinner Party Section A
+    subheadings:
+      -
+        id: dinnerparty-swatchling
+        name: Swatchling
+      -
+        id: hacker
+        name: Hacker
+        subheadings:
+          -
+            id: hackerpre
+            name: Before finding the hidden path to the basement
+          -
+            id: hackerpost
+            name: After finding the hidden path to the basement
+      -
+        id: wigrobot
+        name: Wig Robot
+        subheadings:
+          -
+            id: wigrobotpre
+            name: Before collecting all three blue checkmarks
+          -
+            id: wigrobotpost
+            name: After collecting all three blue checkmarks
+      -
+        id: yesmanright
+        name: Yes Man (right)
+      -
+        id: yesmanleft
+        name: Yes Man (left)
+      -
+        id: mousemillian
+        name: Mousemillian
+      -
+        id: nubert
+        name: Nubert
+  -
+    id: shortcutsign
+    name: Sign for 1F shortcut
+  -
+    id: westdoor
+    name: West door
+  -
+    id: eastdoor
+    name: East door
+    subheadings:
+      -
+        id: eastdoorpre
+        name: Before clearing the kitchen of vermin
+      -
+        id: eastdoorpost
+        name: After solving the dining hall puzzle
+  -
+    id: kitchen
+    name: Kitchen
+    subheadings:
+      -
+        id: kitchen-yellow
+        name: Yellow Swatchling
+      -
+        id: kitchen-red
+        name: Red Swatchling
+      -
+        id: kitchen-blue
+        name: Blue Swatchling
+  -
+    id: dininghalldoors
+    name: Dining hall doors
+  -
+    id: supremetable
+    name: Supreme table
+  -
+    id: treasurechest
+    name: Treasure chest
+---
+<section class="d-section" id="dinnerpartyA">
+	<h2>Dinner Party Section A</h2>
+
+	<h3 id="dinnerparty-swatchling">Swatchling</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>Welcome to the 2F Dinner Party Section A.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>Please help yourself to anybody's food.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>Normally I'm terrified of mice, but it's OK because that one is wearing a wig.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="hacker">Hacker</h3>
+	<p>Present only if all three blue checkmarks were collected in Cyber Field.</p>
+	<h4 id="hackerpre">Before finding the <a href="{{ '/locations/cyberworld/queenmansion/1F#switch' | relative_url }}">hidden path to the basement</a></h4>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>Psst... I'm the Hacker. Nobody figured it out yet but it's me.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>There's an east treasure's hallway leading to BASEMENT on 1F...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>Come down there and I'll help you crack the code.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="hackerpost">After finding the hidden path to the basement</h4>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>Psst... Hey, it's me, the Hacker. No one figured it out but it's me.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>Keep it on the download.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="wigrobot">Wig Robot</h3>
+	<h4 id="wigrobotpre">Before collecting all three blue checkmarks</h4>
+	<p class="note">The seat across from the Wig Robot is empty.</p>
+	<d-box theme="dark">
+		<d-speaker>Wig Robot</d-speaker>
+		<d-text asterisk>There's supposed to be another guest here, but they're late.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Wig Robot</d-speaker>
+		<d-text asterisk>They called and said something about blue checkmarks...</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="wigrobotpost">After collecting all three blue checkmarks</h4>
+	<p class="note">The Hacker is present across from the Wig Robot.</p>
+	<d-box theme="dark">
+		<d-speaker>Wig Robot</d-speaker>
+		<d-text asterisk>This guy keeps telling everyone at the party he's a hacker.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Wig Robot</d-speaker>
+		<d-text asterisk>I don't know what to do with this information.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="yesmanright">Yes Man (right)</h3>
+	<d-box theme="dark">
+		<d-speaker>Yes Man</d-speaker>
+		<d-text asterisk>Yes! Yes! Queen is right!</d-text>
+		<d-text asterisk>Send error report!</d-text>
+		<d-text asterisk>Send error report!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="yesmanleft">Yes Man (left)</h3>
+	<d-box theme="dark">
+		<d-speaker>Yes Man</d-speaker>
+		<d-text asterisk>Couldn't agree more!</d-text>
+		<d-text asterisk>Send error report!</d-text>
+		<d-text asterisk>Send error report!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="mousemillian">Mousemillian</h3>
+	<h4>Standard</h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-speaker>Mousemillian</d-speaker>
+		<d-text asterisk>I am Mousemillian. I stand leagues and inches above all the other mice.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mousemillian</d-speaker>
+		<d-text asterisk>Only Nubert remains above me still...</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Mousemillian</d-speaker>
+		<d-text asterisk>Only Nubert remains above me still...</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>After solving the house puzzles on 3F, if the Maice earned any money</h4>
+	<p class="note">In the following dialogue, "<span class="white">&lt;#&gt;</span>" is the amount that the Maice earned.</p>
+	<d-box theme="dark">
+		<d-speaker>Mousemillian</d-speaker>
+		<d-text asterisk>(What have you done!?)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mousemillian</d-speaker>
+		<d-text asterisk>(You gave the other mice $&lt;#&gt; during that puzzle!)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mousemillian</d-speaker>
+		<d-text asterisk>(At this rate, EVERY mouse is going to be wearing a wig...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="nubert">Nubert</h3>
+	<d-box theme="dark">
+		<d-speaker>Nubert</d-speaker>
+		<d-text asterisk>Nubert's movin' up in the world.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="shortcutsign">
+	<h2>Sign for 1F shortcut</h2>
+	<p>Located in the room after Dinner Party Section A, on the wall in the left hall. (The door past it leads back to the <a href="{{ '/locations/cyberworld/queenmansion/entrance#bookcases' | relative_url }}">entrance hall</a>.)</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>Left: Shortcut to 1F</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="westdoor">
+	<h2>West door</h2>
+	<p>Leads to the kitchen. Exclusive to the Weird Route, as the door is open and can be entered without commentary on the normal route.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(Closed.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="eastdoor">
+	<h2>East door</h2>
+	<p>Leads to the large dining hall. Exclusive to the normal route, as the door is open and can be entered without commentary on the Weird Route.</p>
+
+	<h3 id="eastdoorpre">Before <a href="{{ '/story/chapter2/mansion#kitchen' | relative_url }}">clearing the kitchen of vermin</a></h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Room has been closed due to kitchen vermin.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="eastdoorpost">After <a href="{{ '/story/chapter2/mansion#dininghall' | relative_url }}">solving the dining hall puzzle</a></h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Room has been closed due to haters.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="kitchen">
+	<h2>Kitchen</h2>
+
+	<h3 id="kitchen-yellow">Yellow Swatchling</h3>
+	<p>Located in front of the pile of platters.</p>
+
+	<h4>Before fighting Mauswheel</h4>
+	<d-box theme="dark">
+		<d-speaker class="y">Swatchling</d-speaker>
+		<d-text asterisk>Oh me, oh my! The kitchen is infested with... vermin!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="y">Swatchling</d-speaker>
+		<d-text asterisk>I knew we should have properly finished dumping all the cheese in that alleyway!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>After fighting Mauswheel</h4>
+	<p class="note">Is the only one no longer looking panicked.</p>
+	<d-box theme="dark">
+		<d-speaker class="y">Swatchling</d-speaker>
+		<d-text asterisk>Queen's making us prepare a massive feast for her upcoming guests.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="y">Swatchling</d-speaker>
+		<d-text asterisk>... I wonder if people can really eat platters, though.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="kitchen-red">Red Swatchling</h3>
+	<p>Located on the stoves.</p>
+
+	<h4>Before fighting Mauswheel</h4>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>(Ouch, ouch)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>The mouse can't get me up here!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>Even if the (ouch, ouch) stove is burning my feet!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>After fighting Mauswheel</h4>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>(Ouch, ouch)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>How do I get down from here?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="kitchen-blue">Blue Swatchling</h3>
+	<p>Located in the middle of the kitchen.</p>
+
+	<h4>Before fighting Mauswheel</h4>
+	<d-box theme="dark">
+		<d-speaker class="b">Swatchling</d-speaker>
+		<d-text asterisk>M-m-mouse!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="b">Swatchling</d-speaker>
+		<d-text asterisk>And it's n-not wearing a wig!!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>After fighting Mauswheel</h4>
+	<d-box theme="dark">
+		<d-speaker class="b">Swatchling</d-speaker>
+		<d-text asterisk>Thanks for the help. We'll open up the <span class="yellow">EAST</span> dining hall now.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dininghalldoors">
+	<h2>Dining hall doors</h2>
+	<p>The double doors located at the far end of the large dining hall. Exclusive to the normal route, as the doors are open and can be entered without commentary on the Weird Route.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>It's locked...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>What's with this giant empty room anyway!?</d-text>
+	</d-box>
+	<p class="note">The monitors on either side of the doors turn on, showing Queen.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Welcome To My Extravagant Dining Bonanza</d-text>
+	</d-box>
+	<p class="note">48 tables bearing platters spawn in the air and fall onto the dark spots on the floor.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Only One Of These Delicious Platters Has The Key</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>I Am Sure Searching Will Be An Addicting Game of Chance</d-text>
+	</d-box>
+	<p class="note">The monitors turn off.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>H-how the hell are we gonna search all these!?</d-text>
+	</d-box>
+	<p class="note">Control is returned to the player, who can begin <a href="{{ '/story/chapter2/mansion#dininghall-reset' | relative_urle }}">checking individual platters</a>.</p>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(The door is locked.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="supremetable">
+	<h2>Supreme table</h2>
+	<p>Located in the area northeast of the large dining hall.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(The supreme table.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You won't be able to use this without the <span class="yellow">Throne of the Gods</span>...)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="treasurechest">
+	<h2>Treasure chest</h2>
+	<p>Located in the room with 14 platters; appears after all platters have been awoken to reveal themselves as Saucer UFOs.</p>
+
+	<p class="note">Contains a <a href="{{ '/misc/darkitems#glowshard' | relative_url }}">Glowshard</a> and uses <a href="{{ '/misc/generic#treasurechest-standard' | relative_url }}">generic text for a treasure chest</a> <a href="{{ '/misc/generic#itemget' | relative_url }}">containing a regular item</a>.</p>
+</section>
