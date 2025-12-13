@@ -1,0 +1,51 @@
+{% comment %} Fetch parent directories {% endcomment %}
+{%- assign len = page.dir.size | minus: 2 %}
+{%- assign crumbs = page.dir | slice: 1, len | split: "/" %}
+
+{%- case crumbs.first %}
+	{%- when "locations" %}
+		{%- assign numlinks = 3 %}
+	{%- when "story" %}
+		{%- assign numlinks = 2 %}
+	{%- else %}
+		{%- comment %} super high number to prevent crumbs on other pages {% endcomment %}
+		{%- assign numlinks = 99 %}
+{%- endcase %}
+
+{%- comment %} Only make crumbs if sufficient in number
+	(That is, don't make them on the /story or /locations/darkworld page, for example.)
+{% endcomment %}
+{%- if crumbs.size >= numlinks -%}
+
+<nav id="crumbs" aria-label="Breadcrumb">
+	{%- for crumb in crumbs limit: numlinks %}
+		{%- comment %} For all multi-dir paths, stack parent dirs up to the second-last {% endcomment %}
+		{%- assign mydex = forloop.index | minus: 1 %}
+		{%- if forloop.first %}
+			{%- assign mylink = "" %}
+		{%- else %}
+			{%- assign mylink = crumbs | slice: 0, mydex | join: "/" | prepend: "/" %}
+		{%- endif %}
+
+		{%- comment %} Then add the last directory for this link
+			(The last iteration i.e. last breadcrumb will be for the subsection this page belongs to.)
+		{% endcomment %}
+		{%- unless forloop.last %}
+			{%- assign mylink = mylink | append: "/" | append: crumb | append: "/" %}
+		{%- else %}
+			{%- assign mylink = mylink | append: "/#" | append: crumb %}
+		{%- endunless %}
+
+		{%- comment %} Finally, generate the link, pulling the formatted name if necessary {% endcomment -%}
+		<a href="{{ mylink | relative_url }}">
+			{%- if site.data.pagenames contains crumb -%}
+				{{ site.data.pagenames[crumb] }}
+			{%- else -%}
+				{{ crumb | capitalize }}
+			{%- endif -%}
+		</a>
+		{%- unless forloop.last %} » {% endunless %}
+	{%- endfor %}
+</nav>
+
+{%- endif %}

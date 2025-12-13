@@ -1,0 +1,42 @@
+# For properly-formatted names of directories that can't just have their first letter capitalized to be human-readable.
+# That means anything with spaces, multiple capital letters, or punctuation.
+
+#region Chapters
+chapter1: Chapter 1
+chapter2: Chapter 2
+chapter3: Chapter 3
+chapter4: Chapter 4
+chapter5: Chapter 5
+chapter6: Chapter 6
+chapter7: Chapter 7
+#endregion
+
+# region LOCATIONS
+# Light World
+lightworld: Light World
+dreemurrresidence: Dreemurr residence
+holidayresidence: Holiday residence
+
+# Closet Dark World
+closetworld: Closet Dark World
+castle: Ralsei's castle
+
+# Card Kingdom
+cardkingdom: Card Kingdom
+cardcastle: Card Castle
+
+# Cyber World
+cyberworld: Cyber World
+cyberfield: Cyber Field
+cybercity: Cyber City
+queenmansion: Queen's Mansion
+
+# TV World
+tvworld: TV World
+greenroom: Green Room
+
+# Dark Sanctuaries
+darksanctuary: Dark Sanctuary
+2ndsanctuary: 2nd Sanctuary
+3rdsanctuary: 3rd Sanctuary
+# endregion
