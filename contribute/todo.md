@@ -88,7 +88,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 					* ~~`/krissusieroom` - Chapter 4 exclusive~~ DONE
 					* ~~`/lancerroom`~~ DONE up to Chapter 4
 				* 3F
-					* `/3F` - hallway interactions
+					* ~~`/3F` - hallway interactions~~ DONE up to Chapter 4
 					* ~~`/queenroom`~~ DONE up to Chapter 4
 					* `/tennaroom`
 					* ~~`/ralseiroom`~~ DONE up to Chapter 4
