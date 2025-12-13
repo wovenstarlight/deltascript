@@ -85,8 +85,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 					* ~~`/krisroom`~~ DONE up to Chapter 4
 					* ~~`/susieroom`~~ DONE up to Chapter 4
 					* ~~`/krissusieroom` - Chapter 4 exclusive~~ DONE
-					* `/lancerroom`
-						* `#bed2`
+					* ~~`/lancerroom`~~ DONE up to Chapter 4
 				* 3F
 					* `/queenroom`
 					* `/tennaroom`

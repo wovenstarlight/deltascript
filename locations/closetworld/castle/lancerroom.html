@@ -1,0 +1,506 @@
+---
+title: Ralsei's castle - Lancer's room
+
+description: >
+  <p>Narration and dialogue for Lancer's room in Castle Town.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /locations/cardkingdom/cardcastle/lancerroom
+    name: Lancer's room in Card Castle
+  -
+    url: /locations/cardkingdom/cardcastle/2F
+    name: Outside hallway
+
+sources:
+  -
+    name: gml_Object_obj_readable_room_Other_10
+    chapters: [2, 4]
+    note: bed, holes, shovel, music player
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: choices
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2, 4]
+    note: Lancer, Mr. Elegance, bulldozer # also the conditions for Lancer's presence at the end of Chapter 2
+  -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [4]
+    note: Swatchling, Ponman, Hacker
+  -
+    name: gml_Object_obj_room_castle_lancer_Step_0
+    chapters: [4]
+    note: Lancer ch4 first
+
+toc:
+  -
+    id: bed
+    name: Bed
+    subheadings:
+      -
+        id: bed2
+        name: Chapter 2
+        subheadings:
+          -
+            id: bed2pre
+            name: Before going to Cyber World
+          -
+            id: bed2post
+            name: After returning from Cyber World
+      -
+        id: bed4
+        name: Chapter 4
+  -
+    id: holes
+    name: Holes
+    subheadings:
+      -
+        id: holes2
+        name: Chapter 2
+      -
+        id: holes4
+        name: Chapter 4
+  -
+    id: shovel
+    name: Shovel
+  -
+    id: musicplayer
+    name: Music player
+    subheadings:
+      -
+        id: musicplayer2
+        name: Chapter 2
+      -
+        id: musicplayer4
+        name: Chapter 4
+  -
+    id: lancer
+    name: Lancer
+    subheadings:
+      -
+        id: lancer2
+        name: Chapter 2
+        subheadings:
+          -
+            id: lancer2presus
+            name: Before checking Susie's room for the first time
+          -
+            id: lancer2precyber
+            name: Before going to Cyber World
+          -
+            id: lancer2post
+            name: After returning from Cyber World
+      -
+        id: lancer4
+        name: Chapter 4
+        subheadings:
+          -
+            id: lancer4workzone
+            name: First time, with 2 or more Cyber World Darkners recruited
+          -
+            id: lancer4enrich
+            name: Subsequent times (2 or more Cyber World Darkners recruited) / All times (less than 2 Cyber World Darkners recruited)
+  -
+    id: mrelegance
+    name: Mr. Elegance
+  -
+    id: swatchling
+    name: Swatchling
+  -
+    id: bulldozer
+    name: Bulldozer
+  -
+    id: ponman
+    name: Ponman
+  -
+    id: hacker
+    name: Hacker
+---
+<section class="d-section" id="bed">
+	<h2>Bed</h2>
+	<p>Located in the top left corner.</p>
+
+	<h3 id="bed2">Chapter 2</h3>
+	<h4 id="bed2pre">Before going to <a href="{{ '/locations/cyberworld/' | relative_url }}">Cyber World</a></h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Wow!! It's better than I remember!!!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>I even have my own bed now!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Now I don't have to sleep in a hole anymore!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>I thought you... already had a bed.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>No, that was for the bike.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="bed2post">After returning from Cyber World</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a bikeless bed.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="bed4">Chapter 4</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(A bouncy bed for a bouncy boy.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="holes">
+	<h2>Holes</h2>
+
+	<h3 id="holes2">Chapter 2</h3>
+	<p>Located across the bottom half of the room, and numbered from left to right for convenience.</p>
+
+	<h4>Hole 1</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(You found 20 Rupys in the hole!)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Unfortunately, that's not a useful currency here...)</d-text>
+	</d-box>
+
+	<h4>Hole 2</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a hole made recreationally.)</d-text>
+	</d-box>
+
+	<h4>Hole 3</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a hole. Presumably dug for fun.)</d-text>
+	</d-box>
+
+	<h4>Hole 4</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(There's salsa buried in the ground here.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="holes4">Chapter 4</h3>
+	<p>Clustered in the bottom left corner, at the foot of Lancer's bed.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(The holes have been organized in the corner to save space.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="shovel">
+	<h2>Shovel</h2>
+	<p>Present in Chapter 2; located near the right wall.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's some kind of digging implement.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="musicplayer">
+	<h2>Music player</h2>
+	<p>Located in the top right corner.</p>
+
+	<h3 id="musicplayer2">Chapter 2</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a music player.)</d-text>
+		<d-text asterisk>(Listen to the contents?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Listen"></d-option>
+		<d-option index="1" text="Do Not"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(...)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>(It's full of cartoon splat noises.)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(You did not listen.)</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="musicplayer4">Chapter 4</h3>
+	<p class="note">Queen's laugh sounds.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Seems like an evil laugh Greatest Hits compilation.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="lancer">
+	<h2>Lancer</h2>
+
+	<h3 id="lancer2">Chapter 2</h3>
+	<h4 id="lancer2presus">Before checking <a href="{{ '/locations/closetworld/castle/susieroom' | relative_url }}">Susie's room</a> for the first time</h4>
+	<p>Standing near the back wall.</p>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>This is the best room ever!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>How'd you know what I like??</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Err, I just sort of, had a hunch...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>The quasimodo of kindness, people!!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>I love that my floor is full of holes!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="lancer2precyber">Before going to Cyber World</h4>
+	<p>Standing near the back wall.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Lancer, you aren't gonna believe how sick my room is!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>A room as sick as you?! Woah!! I want to see!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>I'll keep digging holes until I reach your room!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Uhh, it's got a door, y'know.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>A door!? Wow, peachboy, you went all out!!!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>I love that my floor is full of holes!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="lancer2post">After returning from Cyber World</h4>
+	<p>Present only if 8 or fewer Cyber World Darkners were recruited. (Otherwise, he's outside in <a href="{{ '/locations/closetworld/castle/2F' | relative_url }}">the hallway</a> with Queen.)</p>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Lancer!! Hey, Lancer!! How you feeling!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>(huff, puff...) One-hundred percent, my purplish pal!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Uhh, you sure? You're breathing kinda heavy.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>Haha! Just a little winded from jumping from Kris's POCKET!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Feel free to clown around town. I'll be in your ITEMs!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>No idea what you mean, but, sure.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<hr class="hr2">
+	<h6>Normal route</h6>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Susie, Susie! Can you carry me on your back again?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h6>Weird Route</h6>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Susie, Susie! Can you carry me on your back?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+		<d-text asterisk>Heh, sure! If you can stay on when I'm at full speed!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Wow!! The Susie-train!! Castle Town's most exciting attraction!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="H"></d-sprite>
+		<d-text asterisk>YOU AND KRIS STOP FORMING A LINE!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="lancer4">Chapter 4</h3>
+	<p>Standing in the grassy east area, wearing a hard hat.</p>
+
+	<h4 id="lancer4workzone">First time, with 2 or more Cyber World Darkners recruited</h4>
+	<p class="note">Kris, Susie, and Ralsei line up in front of Lancer.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>Careful.com, pretty boy! This room site is a work zone!</d-text>
+	</d-box>
+	<p class="note">Ralsei reels in shock.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="W"></d-sprite>
+		<d-text asterisk>Wh... WHAT happened to the wall?</d-text>
+	</d-box>
+	<p class="note">He straightens up again to listen to Lancer's response.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>I don't know, but we're not stopping 'til we hit buried treasure.</d-text>
+		<d-box>
+			<d-sprite speaker="Susie" emotion="25"></d-sprite>
+			<d-text>Good idea</d-text>
+		</d-box>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="U"></d-sprite>
+		<d-text asterisk>H.. Wh... What treasure!?</d-text>
+	</d-box>
+	<p class="note">Queen steps into the room from the left; the party turns to face her.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="N"></d-sprite>
+		<d-text asterisk>Get A Load Of The Guy With No Meat Or Fruit In His Castle Walls</d-text>
+	</d-box>
+	<p class="note">Queen, Susie, and Lancer all laugh together as Ralsei flushes in embarrassment.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="C"></d-sprite>
+		<d-text asterisk>I... I'm sorry! I... I'm new at this!!! I'm new!!!</d-text>
+	</d-box>
+	<p class="note">Queen leaves the room, and control is returned to the player.</p>
+
+	<hr class="hrhalf">
+
+	<h4 id="lancer4enrich">Subsequent times (2 or more Cyber World Darkners recruited) / All times (less than 2 Cyber World Darkners recruited)</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="0"></d-sprite>
+		<d-text asterisk>Susie? Can you enrich my enclosure?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>Uhh, I can punch a hole in drywall and hide toys inside.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>Thank you. Someday, I will do the same for you...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="mrelegance">
+	<h2>Mr. Elegance</h2>
+	<p>Present in Chapter 4 to the grassy east side. Wearing a hard hat.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-speaker>Mr. Elegance</d-speaker>
+		<d-text asterisk>Me'n the prince-king are buildin' enrichment enclosures for'n the townsfolks.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="U"></d-sprite>
+		<d-text asterisk>Wow, what a great normal nice thing to do!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-speaker>Mr. Elegance</d-speaker>
+		<d-text asterisk>Maybe if'n I built a gosh-old isolation'in chamber, Mr. Society'n come back... N'heh.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="swatchling">
+	<h2>Swatchling</h2>
+	<p>Present in Chapter 4 to the grassy east side, if recruited in Chapter 2.</p>
+
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>Hmm? What am I doing, boss? Oh, just, er... g-gathering worms, you see...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>... Don't tell anyone, but I kind of want to work for that... Rouxls Kaard.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="bulldozer">
+	<h2>Bulldozer</h2>
+	<p>Present in Chapter 4 to the grassy east side.</p>
+
+	<p class="note">The bulldozer honks.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(The bulldozer is receiving enrichment from its surroundings.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="ponman">
+	<h2>Ponman</h2>
+	<p>Present in Chapter 4 to the grassy east side.</p> <!-- supposed to only be present if recruited, but recruit status automatically gets set for Ch1 enemies -->
+
+	<d-box theme="dark">
+		<d-text asterisk>(It is receiving enrichment from tamping the soft soil.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="hacker">
+	<h2>Hacker</h2>
+	<p>Present in Chapter 4 to the grassy east side, if all three blue checkmarks were collected in Cyber Field.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>Psst. It's me, da Hacker. I'm gathering gween gween's for a secret Life's Hack.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>Get a terrariam for your computer, and you can touch grass as you game.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>If you're a married from a girl, any Life's Hack, is a Wife's Hack.</d-text>
+	</d-box>
+</section>
