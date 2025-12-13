@@ -90,7 +90,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 				* 3F
 					* ~~`/3F` - hallway interactions~~ DONE up to Chapter 4
 					* ~~`/queenroom`~~ DONE up to Chapter 4
-					* `/tennaroom`
+					* ~~`/tennaroom`~~ DONE up to Chapter 4
 					* ~~`/ralseiroom`~~ DONE up to Chapter 4
 				* `/basement` - LIVING QUARTERS FOR BAD GUYS
 			* `/town` - Everything outside Ralsei's castle
