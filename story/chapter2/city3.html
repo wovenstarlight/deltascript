@@ -21,13 +21,17 @@ sources:
     chapters: [2]
     note: SAVE point narration
   -
-    name: gml_Object_obj_npc_room_Other_10
-    chapters: [2]
-    note: Noelle after "solving" mouse puzzle
-  -
     name: gml_Object_obj_controller_city_mice2_Step_0
     chapters: [2]
     note: mouse puzzle
+  -
+    name: gml_Object_obj_npc_facing_Other_10
+    chapters: [2]
+    note: Noelle after scared
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2]
+    note: Noelle after "solving" mouse puzzle
   -
     name: gml_GlobalScript_scr_text
     chapters: [2]
@@ -491,6 +495,81 @@ toc:
 	<d-box theme="dark">
 		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
 		<d-text asterisk>(How many more times am I gonna get hit by mice...?)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="mouse-noelle">Talking to Noelle after she's been scared at least once</h4>
+	<p>Once she's standing to the left of the puzzle.</p>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>Wh-why do those mice keep attacking me?!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="8"></d-sprite>
+		<d-text asterisk>What do I look like, the girl from the Nutcracker?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="They like you"></d-option>
+		<d-option index="1" text="Unknown"></d-option>
+		<d-option index="2" text="Yes"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>H-huh? No way! If that's the case...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text asterisk>Get them to just give me a lunchbox instead!</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="1"></d-sprite>
+			<d-text asterisk>(Only Kris would say "unknown", not "I don't know.")</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+			<d-text asterisk>(... then keep standing there like that.)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="0"></d-sprite>
+			<d-text asterisk>(...)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>(Are they waiting for me to stop mumbling?)</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+			<d-text asterisk>Then, Kris... m-maybe you can take your sword...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text asterisk>And be the hero that protects me from the mice?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="4"></d-sprite>
+			<d-text asterisk>(...)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+			<d-text asterisk>(Don't just stand there in silence...)</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="2"></d-sprite>
+		<d-text asterisk>(Y'know, I'm pretty sure I know how to solve this.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Noelle" emotion="3"></d-sprite>
+		<d-text asterisk>(Just, I d-don't think I can do it myself...)</d-text>
 	</d-box>
 
 	<hr class="hrhalf">
