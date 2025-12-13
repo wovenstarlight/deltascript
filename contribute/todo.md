@@ -82,7 +82,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 					* `/1F` - the entrance hall
 					* probably also the Dark Fountain area if that ever opens up
 				* 2F
-					* `/2F` - hallway interactions
+					* ~~`/2F` - hallway interactions~~ DONE up to Chapter 4
 					* ~~`/krisroom`~~ DONE up to Chapter 4
 					* ~~`/susieroom`~~ DONE up to Chapter 4
 					* ~~`/krissusieroom` - Chapter 4 exclusive~~ DONE

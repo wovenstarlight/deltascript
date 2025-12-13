@@ -1,0 +1,288 @@
+---
+title: Ralsei's castle - 2F hallway
+
+description: >
+  <p>Narration and dialogue for the second floor hallway of Ralsei's castle in Castle Town.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /locations/closetworld/castle/1F
+    name: 1F - Entrance hall{END_LINK} (downstairs)
+  -
+    url: /locations/closetworld/castle/krisroom
+    name: Kris's room
+  -
+    url: /locations/closetworld/castle/susieroom
+    name: Susie's room
+  -
+    url: /locations/closetworld/castle/lancerroom
+    name: Lancer's room
+  -
+    url: /locations/closetworld/castle/3F
+    name: 3F hallway{END_LINK} (upstairs)
+
+sources:
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [2]
+    note: staircase
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [2]
+    note: Lancer, Queen (9+/none)
+  -
+    name: gml_Object_obj_npc_facing_Other_10
+    chapters: [2]
+    note: Queen (1-8)
+  -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [2]
+    note: Rudinn
+
+toc:
+  -
+    id: upstairs
+    name: Staircase to 3F
+  -
+    id: queen
+    name: Queen
+    subheadings:
+      -
+        id: queenall
+        name: If 9 or more Cyber World Darkners were recruited
+      -
+        id: queensome
+        name: If between 1 and 8 Cyber World Darkners were recruited
+      -
+        id: queennone
+        name: If no Cyber World Darkners were recruited
+  -
+    id: lancer
+    name: Lancer
+  -
+    id: rudinn
+    name: Rudinn
+---
+<section class="d-section" id="upstairs">
+	<h2>Staircase to 3F</h2>
+	<p>Availabe to interact with only during Chapter 2, when it's boarded up. (And only if 8 or fewer Darkners were recruited from Cyber World, as <a href="#queen">Queen</a> and <a href="#lancer">Lancer</a> are blocking the way otherwise.)</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Hey Ralsei, what's up here?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Oh, just more rooms I'm renovating!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>... so is your room up there?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Er, yes! I still, um, haven't dusted it though...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Yeah, like we need to see your nerdy glasses collection anyway.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="G"></d-sprite>
+		<d-text asterisk>Sorry, work in progress!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="queen">
+	<h2>Queen</h2>
+	<p>Present at the end of Chapter 2, after returning from Cyber World, in front of the <a href="#upstairs">staircase to 3F</a>.</p>
+
+	<h3 id="queenall">If 9 or more Cyber World Darkners were recruited</h3>
+	<p>Lying on a recliner, and accompanied by <a href="#lancer">Lancer</a>.</p>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Welcome This Entire Castle Is Now My Room</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>U-umm, I was going to set up something upstairs.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Why I Already Have Everything I Could Ever Want</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="9"></d-sprite>
+		<d-text asterisk>Friendship, Fans, And A Small Round Boy</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Now Go And Play With Your Friends, Peachboy</d-text>
+		<d-box>
+			<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+			<d-text>Peachboy! Peachboy!</d-text>
+		</d-box>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Kris, Do Give Noelle My Regards</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Any Leftover Regards You Can Give To Berdly</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="queensome">If between 1 and 8 Cyber World Darkners were recruited</h3>
+	<p>Standing and looking down the hallway.</p>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Ralsei Will Soon Setup.EXE My Room For Me Upstairs</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="A"></d-sprite>
+		<d-text asterisk>Do Not Worry</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="P"></d-sprite>
+		<d-text asterisk>I Have A Long Spreadsheet Of Demands Ready Ha Ha</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Umm, I-I'll try my best!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Quick Q How Many Breakable Pots Do You Have</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="M"></d-sprite>
+		<d-text asterisk>I... Let me count and get back to you on that...</d-text>
+	</d-box>
+	
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Kris, Do Give Noelle My Regards</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="B"></d-sprite>
+		<d-text asterisk>Any Leftover Regards You Can Give To Berdly</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="queennone">If no Cyber World Darkners were recruited</h3>
+	<p>Standing and turned away from the player, gazing into the dark stairwell.</p>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Ralsei Will Soon Setup.EXE My Room For Me Upstairs</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Do Not Worry</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="P"></d-sprite>
+		<d-text asterisk>I Have A Long Spreadsheet Of Demands Ready Ha Ha</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Though, Even If I Have An Awesome Room</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="5"></d-sprite>
+		<d-text asterisk>Who Will Be There To Force To Enjoy It</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="5"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="A"></d-sprite>
+		<d-text asterisk>... I Wonder How Noelle Is Doing Now</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="A"></d-sprite>
+		<d-text asterisk>... I Wonder How Noelle Is Doing Now</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="lancer">
+	<h2>Lancer</h2>
+	<p>Present at the end of Chapter 2, after returning from Cyber World, if 9 or more Darkners were recruited there. Accompanies <a href="#queen">Queen</a>.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Susie, Kris! Toothpaste boy!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>Queen is teaching me all sorts of things about being a bad guy.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>She's like... How do I put this...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="2"></d-sprite>
+		<d-text asterisk>A third father to me.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="3"></d-sprite>
+		<d-text asterisk>A girldad, if you will...</d-text>
+		<d-box>
+			<d-sprite speaker="Ralsei" emotion="22"></d-sprite>
+			<d-text>You mean a mom?</d-text>
+		</d-box>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Go outside and play, Peachboy!</d-text>
+		<d-box>
+			<d-sprite speaker="Queen" emotion="12"></d-sprite>
+			<d-text>Peachboy Peachboy</d-text>
+		</d-box>
+	</d-box>
+</section>
+
+<section class="d-section" id="rudinn">
+	<h2>Rudinn</h2>
+	<p>Present at the end of Chapter 2 if 9 or more Cyber World Darkners were recruited; fanning Queen and Lancer with a big leaf.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>I keep ending up in this situation...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Can't say I'm a fan.... Or can I?</d-text>
+	</d-box>
+</section>
