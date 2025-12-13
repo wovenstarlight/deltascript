@@ -79,15 +79,17 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* `/castle` - Ralsei's castle
 				* `/courtyard` - front courtyard
 				* 1F
-					* `/entrancehall`
+					* `/1F` - the entrance hall
 					* probably also the Dark Fountain area if that ever opens up
 				* 2F
+					* `/2F` - hallway interactions
 					* ~~`/krisroom`~~ DONE up to Chapter 4
 					* ~~`/susieroom`~~ DONE up to Chapter 4
 					* ~~`/krissusieroom` - Chapter 4 exclusive~~ DONE
 					* ~~`/lancerroom`~~ DONE up to Chapter 4
 				* 3F
-					* `/queenroom`
+					* `/3F` - hallway interactions
+					* ~~`/queenroom`~~ DONE up to Chapter 4
 					* `/tennaroom`
 					* ~~`/ralseiroom`~~ DONE up to Chapter 4
 				* `/basement` - LIVING QUARTERS FOR BAD GUYS
