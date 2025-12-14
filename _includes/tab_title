@@ -1,0 +1,31 @@
+{%- comment -%} Base page title {%- endcomment -%}
+{%- if page.name != "index.html" -%}
+	{{- page.title |  strip_html -}}
+{%- endif %}
+
+
+{%- comment -%} Add disambiguation marker where applicable {%- endcomment -%}
+{%- if page.layout == "disambiguation" %} (disambiguation){%- endif -%}
+
+
+{%- comment -%} Get crumbs {%- endcomment -%}
+{%- assign len = page.dir.size | minus: 2 -%}
+{%- assign crumbs = page.dir | slice: 1, len | split: "/" -%}
+
+{% comment %} Generate crumbs from most recent to earliest ancestor {% endcomment %}
+{%- for crumb in crumbs reversed -%}
+	{%- unless page.name == "index.html" and forloop.first -%}
+		{%- comment -%} Don't generate for the most recent ancestor on index pages, since that'll essentially repeat the page title twice {%- endcomment -%}
+		{{- " | " -}}
+	{%- endunless -%}
+
+	{%- if site.data.pagenames contains crumb -%}
+		{{- site.data.pagenames[crumb] -}}
+	{%- else -%}
+		{{- crumb | capitalize -}}
+	{%- endif -%}
+{%- endfor -%}
+
+
+{%- comment -%} And finally, add the site title {%- endcomment -%}
+{{- " | " | append: site.title -}}
