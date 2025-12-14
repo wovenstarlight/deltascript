@@ -1,0 +1,202 @@
+---
+title: Courtyard
+
+description: >
+  <p>Narration and dialogue for the courtyard in front of Ralsei's castle.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /locations/closetworld/castle/1F
+    name: Floor 1F{END_LINK} - Entrance hall
+  -
+    url: /locations/closetworld/#town
+    name: Town{END_LINK} (to the south)
+
+sources:
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [1]
+    note: castle doors
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2]
+    note: Little Ball, Nubert, Royal Coat Rack
+  -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [2]
+    note: Trashy
+  -
+    name: gml_Object_obj_room_castle_front_Step_0
+    chapters: [4]
+    note: Shuttah
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [4]
+    note: choices
+
+toc:
+  -
+    id: door
+    name: Castle doors
+  -
+    id: littleball
+    name: Little Ball
+  -
+    id: nubert
+    name: Nubert
+  -
+    id: royalcoatrack
+    name: Royal Coat Rack
+  -
+    id: trashy
+    name: Trashy
+  -
+    id: shuttah
+    name: Shuttah
+---
+<section class="d-section" id="door">
+	<h2>Castle doors</h2>
+	<p>Available to interact with only in Chapter 1. From Chapter 2 onwards, the doors can be walked through into <a href="{{ '/locations/closetworld/castle/1F' | relative_url }}">the entrance hall on 1F</a> without commentary.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>Hey, Kris, I really think we should catch up with Susie.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>We can come back here after our adventure is over...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="8"></d-sprite>
+		<d-text asterisk>... and then I can bake you a yummy cake!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Kris, perhaps we should save the world first...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="0"></d-sprite>
+		<d-text asterisk>It seems a bit important.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="littleball">
+	<h2>Little Ball</h2>
+	<p>Present during Chapter 2. Located towards the left side.</p>
+
+	<h3>Standard</h3>
+	<d-box theme="dark">
+		<d-speaker>Little Ball</d-speaker>
+		<d-text asterisk>(It's a bit scary moving to a new place. But, as a ball...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Little Ball</d-speaker>
+		<d-text asterisk>(There's nothing to sphere except sphere itself.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>If 9 or more Cyber World Darkners were recruited</h3>
+	<p>Is accompanied by <a href="#nubert">Nubert</a>, whose wig the Little Ball is wearing.</p>
+	<d-box theme="dark">
+		<d-speaker>Little Ball</d-speaker>
+		<d-text asterisk>(With this windfall, I've ceased to be spherical.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Little Ball</d-speaker>
+		<d-text asterisk>(Nubert... you're one-of-a-kind.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="nubert">
+	<h2>Nubert</h2>
+	<p>Present at the end of Chapter 2, if 9 or more Cyber World Darkners were recruited. Located towards the left side, accompanying <a href="#littleball">Little Ball</a>.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Nubert</d-speaker>
+		<d-text asterisk>Nubert's had a wild ride. Time to settle down.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Nubert</d-speaker>
+		<d-text asterisk>Give my riches to the weak...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="royalcoatrack">
+	<h2>Royal Coat Rack</h2>
+	<p>Present during Chapter 2. Located to the top right.</p>
+
+	<h3>Before going to <a href="{{ '/locations/cyberworld/' | relative_url }}">Cyber World</a></h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Royal Coat Rack</d-speaker>
+		<d-text asterisk>Prince Ralsei, I will keep your hat a-racked until you need it!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Royal Coat Rack</d-speaker>
+		<d-text asterisk>Until then, please allow me to pretend to be a wizard! Hi-ya!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>After returning from Cyber World</h3>
+	<p>Is accompanied by <a href="#trashy">Trashy</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Royal Coat Rack</d-speaker>
+		<d-text asterisk>Ho ho!! Who is this guy!! He's scary!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="trashy">
+	<h2>Trashy</h2>
+	<p>Present at the end of Chapter 2. Located near the top right, accompanying the <a href="#royalcoatrack">Royal Coat Rack</a>.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>Oh boy, oh boy!! I'm Trashy!! Haha!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Trashy</d-speaker>
+		<d-text asterisk>I bet I'm gonna make a lot of new friends!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="shuttah">
+	<h2>Shuttah</h2>
+	<p>Present during Chapter 4, if recruited in Chapter 3. Is taking photos of Tasque, Poppup, Maus, and C. Round (the first three only present if recruited in Chapter 2), all wearing ribbons.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>Ooo la la. We are doing the wildlife fashion shoot!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Shuttah</d-speaker>
+		<d-text asterisk>So adirable, so admorable!</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Photo pose!"></d-option>
+		<d-option index="1" text="Nothing"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">Kris, Susie, and Ralsei line up in front of Shuttah and strike poses as Shuttah takes a photo of them and the wildlife. Control then returns to the player.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Shuttah takes a photo of the wildlife.</p>
+		<d-box theme="dark">
+			<d-speaker>Shuttah</d-speaker>
+			<d-text asterisk>So plorable, so pliable.</d-text>
+		</d-box>
+	</d-option-panel>
+</section>

@@ -78,7 +78,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/closetworld` - Supply closet dark world, contains Castle Town and ??????
 			* `/castle` - Ralsei's castle
 				* 1F
-					* `/courtyard` - front courtyard
+					* ~~`/courtyard` - front courtyard~~ DONE up to Chapter 4
 					* ~~`/1F` - the entrance hall~~ DONE up to Chapter 4
 					* probably also the Dark Fountain area if that ever opens up
 				* 2F
