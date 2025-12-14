@@ -1,0 +1,849 @@
+---
+title: Floor BF - Dungeon
+# LIVING QUARTERS FOR BAD GUYS
+
+description: >
+  <p>Narration and dialogue for the basement of Ralsei's castle.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /locations/closetworld/castle/1F
+    name: 1F - Entrance hall{END_LINK} (upstairs)
+
+sources:
+  -
+    name: gml_Object_obj_npc_king_Other_10
+    chapters: [2, 4]
+    note: King
+  -
+    name: gml_Object_obj_ch2_room_dungeon_2f_Step_0
+    chapters: [2]
+    note: Ch2 walking away from King
+  -
+    name: gml_Object_obj_ch2_room_dungeon_2f_ee_Step_0
+    chapters: [2]
+    note: Ch2 King/Queen reunion
+  -
+    name: gml_Object_obj_room_dungeon_2f_Step_0
+    chapters: [4]
+    note: Ch4 King and Tenna
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: choices
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2]
+    note: Goulden Sams, former kings, animals
+  -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [2]
+    note: C. Round
+
+toc:
+  -
+    id: king
+    name: King
+    subheadings:
+      -
+        id: king2pre
+        name: Chapter 2, before going to Cyber World
+      -
+        id: king2post
+        name: Chapter 2, after returning from Cyber World
+        subheadings:
+          -
+            id: king2postall
+            name: If 9 or more Cyber World Darkners were reruited
+          -
+            id: king2postnone
+            name: If 8 or fewer Cyber World Darkners were recruited
+      -
+        id: king4
+        name: Chapter 4
+        subheadings:
+          -
+            id: king4tenna
+            name: When first approaching, if Tenna has been brought to Castle Town
+          -
+            id: king4interact
+            name: Direct interactions
+  -
+    id: gouldensamleft
+    name: Goulden Sam (left)
+    subheadings:
+      -
+        id: gouldensamleft2
+        name: Chapter 2
+      -
+        id: gouldensamleft4
+        name: Chapter 4
+  -
+    id: gouldensamright
+    name: Goulden Sam (right)
+    subheadings:
+      -
+        id: gouldensamright2
+        name: Chapter 2
+      -
+        id: gouldensamright4
+        name: Chapter 4
+  -
+    id: kings
+    name: Former Kings
+    subheadings:
+      -
+        id: kings2
+        name: Chapter 2
+      -
+        id: kings4
+        name: Chapter 4
+  -
+    id: circusanimals
+    name: Circus Animals
+  -
+    id: crown
+    name: Crown
+  -
+    id: cround
+    name: C. Round
+    subheadings:
+      -
+        id: cround2
+        name: Chapter 2
+      -
+        id: cround4
+        name: Chapter 4
+---
+<section class="d-section" id="king">
+	<h2>King</h2>
+
+	<h3 id="king2pre">Chapter 2, before going to <a href="{{ '/locations/cyberworld/' | relative_url }}">Cyber World</a></h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>Ah... the Lightners.</d-text>
+	</d-box>
+	<p class="note">King looks over his shoulder at the party.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>... have you come to humiliate me...?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Hell yeah!"></d-option>
+		<d-option index="1" text="No..."></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="2"></d-sprite>
+			<d-text asterisk>Hell yeah!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="5"></d-sprite>
+			<d-text asterisk>EAT IT, old man!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="K"></d-sprite>
+			<d-text asterisk>... hey, why the hell does HE get a giant water thing?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="0"></d-sprite>
+			<d-text asterisk>... jealous, are you?</d-text>
+		</d-box>
+		<p class="note">King looks over at the water bottle.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="4"></d-sprite>
+			<d-text asterisk>Then gaze in envy, whelps!!</d-text>
+		</d-box>
+		<p class="note">He moves over to the bottle and begins drinking from it.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="4"></d-sprite>
+			<d-text asterisk>As I SUCKLE from this giant hamster bottle!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="4"></d-sprite>
+			<d-text asterisk>Ha ha ha!!</d-text>
+			<d-text asterisk>(Glub glub)</d-text>
+			<d-text asterisk>Feel despair!!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="B"></d-sprite>
+			<d-text asterisk>Uhhh, nevermind.</d-text>
+		</d-box>
+		<p class="note">King moves back to his original position.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+			<d-text asterisk>Mr. King, the Lightners returned everyone here safely.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="I"></d-sprite>
+			<d-text asterisk>If you're willing to reconsider, then...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="5"></d-sprite>
+			<d-text asterisk>What? Live in a kingdom ruled by YOU?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="0"></d-sprite>
+			<d-text asterisk>The Lightners' little patsy...?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="4"></d-sprite>
+			<d-text asterisk>Staying in this cell is far less humiliating.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="5"></d-sprite>
+			<d-text asterisk>Now, if you will excuse me.</d-text>
+		</d-box>
+		<p class="note">King looks into his cell.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="0"></d-sprite>
+			<d-text asterisk>My giant hamster wheel is getting cold.</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>We have NOTHING to discuss.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>While walking away after first speaking to King</h4>
+	<p class="note">The party members stop a short distance away from King and turn to look at him.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<p class="note">King looks over his shoulder at them.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>By the way...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="3"></d-sprite>
+		<d-text asterisk>Is my son... happy...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="g"></d-sprite>	<!-- updated index, originally R -->
+		<d-text asterisk>Like you CARE!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="g"></d-sprite>	<!-- updated index, originally R -->
+		<d-text asterisk>You were gonna throw him off a CLIFF!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>Ah. Your prejudice made my bluff too effective, I see.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>... besides, even IF I threw him, he would just...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>Bounce.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>My son... is...</d-text>
+	</d-box>
+	<p class="note">King looks away into his cell.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="8"></d-sprite>
+		<d-text asterisk>A bouncy little pumpkin.</d-text>
+		<d-box place="center-x" offset-x="-10%">
+			<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+			<d-text>Aww, cute!</d-text>
+		</d-box>
+		<d-box>
+			<d-sprite speaker="Susie" emotion="17"></d-sprite>
+			<d-text>WE'RE DONE<span class="break"></span> TALKING TO YOU!</d-text>
+		</d-box>
+	</d-box>
+
+
+	<hr>
+
+	<h3 id="king2post">Chapter 2, after returning from Cyber World</h3>
+	<h4 id="king2postall">If 9 or more Cyber World Darkners were reruited</h4>
+	<h5>First time</h5>
+	<p class="note">The party members line up in front of the bars close to King.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>You may have bested me. But...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="7"></d-sprite>
+		<d-text asterisk>You'll soon face someone... More fearsome...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="4"></d-sprite>
+		<d-text asterisk>More tyrannical than you could EVER imagine.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="1"></d-sprite>
+		<d-text asterisk>Queen? We already met her.</d-text>
+	</d-box>
+	<p class="note">King looks over his shoulder at the party.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="6"></d-sprite>
+		<d-text asterisk>WHAT!?</d-text>
+	</d-box>
+	<p class="note">The party members turn to the left as Queen walks in and looks into King's cell. A pause.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Wow Nice Hamster Wheel</d-text>
+	</d-box>
+	<p class="note">The King turns his head away from everyone, looking into his cell.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>So you, too, have come to humiliate me...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="O"></d-sprite>
+		<d-text asterisk>No I Am Serious It's Cool</d-text>
+	</d-box>
+	<p class="note">Queen walks to the right, stopping just beside King. The party members back out of her way. A pause. Then Queen begins laughing.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="B"></d-sprite>
+		<d-text asterisk>That Water Bottle However</d-text>
+	</d-box>
+	<p class="note">King begins drinking from the bottle.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="A"></d-sprite>
+		<d-text asterisk>DO NOT SPEAK ILL OF THE ROYAL WATER BOTTLE!</d-text>
+	</d-box>
+	<p class="note">He stops drinking and returns to his spot by the bars, looking over his shoulder at Queen; she turns left, holding a glass of acid.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="O"></d-sprite>
+		<d-text asterisk>It's Nothing Compared To The One At My Mansion</d-text>
+	</d-box>
+	<p class="note">King looks away.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>Hmph. Materialistic as always.</d-text>
+	</d-box>
+	<p class="note">Queen turns to face him, the glass gone.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>Materialism Evaluation Denied</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="C"></d-sprite>
+		<d-text asterisk>I Simply Give Myself: The Treatment I Deserve</d-text>
+	</d-box>
+	<p class="note">Queen turns away from the bars and laughs.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>You Slept Curled Up On A Dirty Throne Every Day</d-text>
+	</d-box>
+	<p class="note">King turns his head towards her, gnashing his teeth.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="A"></d-sprite>
+		<d-text asterisk>ENOUGH, WENCH!!!</d-text>
+	</d-box>
+	<p class="note">He calms, still looking over his shoulder at her for a moment, then looks away into his cell. Queen turns to him.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="B"></d-sprite>
+		<d-text asterisk>What purpose have you here... Queenie Beanie.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Just Thought I Would Send A Message, Kingy Wingy</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>That You Don't Have To Worry About Lancer</d-text>
+	</d-box>
+	<p class="note">She turns to the right and takes a few steps towards the party.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>I Will Be Looking After Him From Now On</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="5"></d-sprite>
+		<d-text asterisk>After All... I Am...</d-text>
+	</d-box>
+	<p class="note">Queen turns aside, facing the player.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>His Mother</d-text>
+	</d-box>
+	<p class="note">King turns his head towards her, gnashing his teeth.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="9"></d-sprite>
+		<d-text asterisk>When was that decided!?</d-text>
+	</d-box>
+	<p class="note">Queen turns to the left.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>Arbitrarily Right Now</d-text>
+	</d-box>
+	<p class="note">King looks away into his cell.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>.... hmph.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>Do what you please with the boy.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>But if he cries...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="8"></d-sprite>
+		<d-text asterisk>... Bounce him on the ground like a ball.</d-text>
+	</d-box>
+	<p class="note">A pause. Queen turns away from the bars.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>I Think It Is Time To Abort This Conversation</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="B"></d-sprite>
+		<d-text asterisk>... As you wish.</d-text>
+	</d-box>
+	<p class="note">Rouxls enters from the left, stopping outside the bars on King's other side.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="0"></d-sprite>
+		<d-text asterisk>Oho, quite sorry, mine Kinge...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="3"></d-sprite>
+		<d-text asterisk>Queene hath a nyew Man about Towne now!!</d-text>
+	</d-box>
+	<p class="note">A pause.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>Who?</d-text>
+	</d-box>
+	<p class="note">Queen turns to Rouxls.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="I"></d-sprite>
+		<d-text asterisk>Yeah Who</d-text>
+	</d-box>
+	<p class="note">A pause.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="6"></d-sprite>
+		<d-text asterisk>Er</d-text>
+	</d-box>
+	<p class="note">Rouxls takes a step away.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="1"></d-sprite>
+		<d-text asterisk>I think I</d-text>
+	</d-box>
+	<p class="note">Another step.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="6"></d-sprite>
+		<d-text asterisk>Left my puzzle on</d-text>
+	</d-box>
+	<p class="note">Rouxls flees the area as he speaks.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>POSTHASTE!!!</d-text>
+	</d-box>
+	<p class="note">A pause. Queen turns to King.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="L"></d-sprite>
+		<d-text asterisk>Who Was That??</d-text>
+	</d-box>
+	<p class="note">King looks over his shoulder at her.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>Sigh... That was my son's....</d-text>
+	</d-box>
+	<p class="note">King looks into his cell once more.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="C"></d-sprite>
+		<d-text asterisk>LESSER father.</d-text>
+	</d-box>
+	<p class="note">Queen begins laughing.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="N"></d-sprite>
+		<d-text asterisk>Cannot Calculate Someone Less Than You</d-text>
+	</d-box>
+	<p class="note">King turns his head, gnashing his teeth.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="A"></d-sprite>
+		<d-text asterisk>BEGONE!!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="0"></d-sprite>
+		<d-text asterisk>Bye Bye Kingy Wingy</d-text>
+	</d-box>
+	<p class="note">King looks sullenly into his cell as Queen begins walking away. She stops near the left edge of the screen and turns to him.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="D"></d-sprite>
+		<d-text asterisk>By The Way Did You Want Anything From The Store</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="8"></d-sprite>
+		<d-text asterisk>... cashews.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Queen" emotion="1"></d-sprite>
+		<d-text asterisk>Order Processed</d-text>
+	</d-box>
+	<p class="note">Queen leaves. The camera pans over to the party, and control is returned to the player.</p>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>We have NOTHING to discuss.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="king2postnone">If 8 or fewer Cyber World Darkners were recruited</h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>... talk to you? Hah.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="7"></d-sprite>
+		<d-text asterisk>You <span class="yellow">left them behind</span>, didn't you?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>Just as you left us...</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>Begone.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="king4">Chapter 4</h3>
+	<h4 id="king4tenna">When first approaching, if Tenna has been brought to Castle Town</h4>
+	<p class="note">Once they get close, the party gathers in front of the bars and the music goes silent. The bars and the party fade out of sight, clearly showing King inside his cell; Lancer is balanced atop his head.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+		<d-text asterisk>Don't cry, papa! This jokester will make your belly laugh like jelly!</d-text>
+	</d-box>
+	<p class="note">King turns his head to the left, Lancer turning with him.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="0"></d-sprite>
+		<d-text asterisk>A new court jester, eh...? Hm. Let us see it.</d-text>
+	</d-box>
+	<p class="note"><a href="{% include wikilink page='And Now For Today’s Sponsors…!' %}">Cheery music</a> starts playing as Tenna enters from the left, pointing from left to right.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Hey, KINGY-DOODLE!! IT'S ME!!! THE NEW FUNNY... MR. ANT TENNA!!</d-text>
+	</d-box>
+	<p class="note">Tenna starts repeatedly throwing his hands in the air.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>I can do dances!! Prances!! Practical jokes!! CLEAN YOUR SON'S EARS!!!</d-text>
+	</d-box>
+	<p class="note">Tenna stops, then moves forward with an air horn in hand that he squeaks twice in King's face. Facing silence, he shifts a little further forward and squeaks the air horn once more, but once again gets no response. After a slight pause, he points at Lancer and King, holding a mic to his face.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Hey, WHAT did the playing card say to the television!?</d-text>
+	</d-box>
+	<p class="note">A pause. King turns his head to look into his cell, Lancer turning along with him.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>Hm...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="4"></d-sprite>
+		<d-text asterisk>"Leave."</d-text>
+	</d-box>
+	<p class="note">The music cuts off abruptly as King looks at Tenna and speaks this last line. Tenna reels, stunned. After a long pause, he straightens up, resting a hand on his tie with a wide smile.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Ah. He, uh, he did, huh!</d-text>
+	</d-box>
+	<p class="note">Tenna takes a step back, adjusting his tie and flushing slightly.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Haha, tough audience today, uh, folks!</d-text>
+	</d-box>
+	<p class="note">He turns away, hands behind his back and head hanging low.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Maybe I was too modern, too relevant...</d-text>
+	</d-box>
+	<p class="note">He begins to walk away… but slips and falls head over heels.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>Wh-whoops!!! I tripped!!</d-text>
+	</d-box>
+	<p class="note">A pause. Then Lancer and King both burst into laughter. Tenna bolts to his feet and clutches his head, screen dark and thrashing about in distress.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>HEY!!! Don't laugh at my misfortune!!! I..!!</d-text>
+	</d-box>
+	<p class="note">He freezes when King speaks.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="4"></d-sprite>
+		<d-text asterisk>Good work, son. I LIKE this one.</d-text>
+	</d-box>
+	<p class="note">After a slight pause, Tenna goes up on his tiptoes with his hands pressed together by his head in delight, wobbling slightly.</p>
+	<d-box theme="dark">
+		<d-speaker>Tenna</d-speaker>
+		<d-text asterisk>A-heh! I mean, uh, they like me! They really like me!</d-text>
+	</d-box>
+	<p class="note">Bowing repeatedly, Tenna leaves to the left; Lancer follows after him, King watching them leave. Once they're gone, King looks away into the cell. The cell bars and the party members reappear, and with the Castle Town music restarting and the camera panning to focus on the party, control is returned to the player, who may now <a href="#king4interact">speak directly to King</a> or walk away.</p>
+
+	<hr class="hrhalf">
+
+	<h4 id="king4interact">Direct interactions</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="King" emotion="5"></d-sprite>
+		<d-text asterisk>... what?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Talk about#the knight"></d-option>
+		<d-option index="1" text="Leave"></d-option>
+		<d-option index="2" text="Jester" conditional></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<h4>First time</h4>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="0"></d-sprite>
+			<d-text asterisk>Soon you will meet your demise, by the Knight's hand...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="Y"></d-sprite>
+			<d-text asterisk>We lived, idiot.</d-text>
+		</d-box>
+		<p class="note">King jolts, twisting to look sharply at the party.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="6"></d-sprite>
+			<d-text asterisk>WHAT!? YOU met THE KNIGHT!?</d-text>
+		</d-box>
+		<p class="note">He looks away into his cell.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="0"></d-sprite>
+			<d-text asterisk>... Aheh. A rare show of mercy, I suppose.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="4"></d-sprite>
+			<d-text asterisk>With their full strength, you'd be SPLATTERED!! Hahaha!!</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="5"></d-sprite>
+			<d-text asterisk>...</d-text>
+		</d-box>
+		<p class="note">King looks over his shoulder at the party.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="1"></d-sprite>
+			<d-text asterisk>... What... were they like?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+			<d-text asterisk>Umm, they seemed a little...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="6"></d-sprite>
+			<d-text asterisk>A little? A little what?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="A"></d-sprite>
+			<d-text asterisk>You know. A little... y'know?</d-text>
+		</d-box>
+		<p class="note">King gnashes his teeth.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="6"></d-sprite>
+			<d-text asterisk>A little WHAT!? DRAW A PICTURE, WENCH!!!</d-text>
+		</d-box>
+		<p class="note">He stops gnashing his teeth and looks away into the cell.</p>
+
+		<hr class="hrhalf">
+
+		<h4>Subsequent times</h4>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+			<d-text asterisk>Umm, they seemed a little...</d-text>
+		</d-box>
+		<p class="note">King looks over his shoulder at the party.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="6"></d-sprite>
+			<d-text asterisk>A little? A little what?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="A"></d-sprite>
+			<d-text asterisk>You know. A little... y'know?</d-text>
+		</d-box>
+		<p class="note">King gnashes his teeth.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="6"></d-sprite>
+			<d-text asterisk>A little WHAT!? DRAW A PICTURE, WENCH!!!</d-text>
+		</d-box>
+		<p class="note">He stops gnashing his teeth and looks away into the cell.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="C"></d-sprite>
+			<d-text asterisk>Begone...</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<p class="note">Available only if <a href="{{ '/story/chapter1/jevil' | relative_url }}">Jevil</a> has been defeated, either peacefully or violently.</p>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="5"></d-sprite>
+			<d-text asterisk>It was he, the clown, that told me the Knight's brilliance...</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="0"></d-sprite>
+			<d-text asterisk>About the fountains' glory, and how I would rise to power.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="7"></d-sprite>
+			<d-text asterisk>Funny little man. How his jokes and dances made us chuckle.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="5"></d-sprite>
+			<d-text asterisk>A shame he had to be tricked away, by his closest companion.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="King" emotion="5"></d-sprite>
+			<d-text asterisk>The magician, Seam, whose smile has gone empty since that day.</d-text>
+		</d-box>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="gouldensamleft">
+	<h2>Goulden Sam (left)</h2>
+
+	<h3 id="gouldensamleft2">Chapter 2</h3>
+	<d-box theme="dark">
+		<d-speaker>Goulden Sam</d-speaker>
+		<d-text asterisk>(I'm Goulden Sam.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="gouldensamleft4">Chapter 4</h3>
+	<d-box theme="dark">
+		<d-speaker>Goulden Sam</d-speaker>
+		<d-text asterisk>I'm Goulden Sam.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Goulden Sam</d-speaker>
+		<d-text asterisk>I'm going to leave soon, too.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="gouldensamright">
+	<h2>Goulden Sam (right)</h2>
+
+	<h3 id="gouldensamright2">Chapter 2</h3>
+	<d-box theme="dark">
+		<d-speaker>Goulden Sam</d-speaker>
+		<d-text asterisk>(This is a nice prison!)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="gouldensamright4">Chapter 4</h3>
+	<d-box theme="dark">
+		<d-speaker>Goulden Sam</d-speaker>
+		<d-text asterisk>The kings and animals left to seek their fortune.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Goulden Sam</d-speaker>
+		<d-text asterisk>What a drag, what a drag.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="kings">
+	<h2>Former Kings</h2>
+
+	<h3 id="kings2">Chapter 2</h3>
+	<d-box theme="dark">
+		<d-speaker>King of Diamonds</d-speaker>
+		<d-text asterisk>We're still behind bars for some reason, but it's OK!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King of Diamonds</d-speaker>
+		<d-text asterisk>We've grown to love this hellish place, where we dress as animals!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="kings4">Chapter 4</h3>
+	<p class="note">Only the King of Diamonds remains in the cage.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>King of Diamonds</d-speaker>
+		<d-text asterisk>Hark! The other kings realized you can just... go out the back of this thing!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King of Diamonds</d-speaker>
+		<d-text asterisk>Pish and posh! Was I really the only one serious about being imprisoned!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>King of Diamonds</d-speaker>
+		<d-text asterisk>That's fine! Goulden Sam (the cage whose head you can talk to) and I are FINE!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>King of Diamonds</d-speaker>
+		<d-text asterisk>I was the only one serious about dressing up as an animal, too!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="circusanimals">
+	<h2>Circus Animals</h2>
+	<p>Present only in Chapter 2. Replaced in Chapter 4 by the <a href="#crown">crown</a>, after having left the cage.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Circus Animals</d-speaker>
+		<d-text asterisk>(We decided to dress as kings. It's cultural exchange.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="crown">
+	<h2>Crown</h2>
+	<p>Available only from Chapter 4 onwards. The only thing that remains of the <a href="#circusanimals">Circus Animals</a>.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(Only a single crown remains...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's not even one of the better crowns.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="cround">
+	<h2>C. Round</h2>
+
+	<h3 id="cround2">Chapter 2</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's violently protecting the jail.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="cround4">Chapter 4</h3>
+	<p class="note">C. Round is asleep.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's doing an absolutely reprehensible job of protecting the jail.)</d-text>
+	</d-box>
+</section>

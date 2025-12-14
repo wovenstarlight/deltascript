@@ -76,7 +76,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 			* Maybe just a general "Streets" page for the interactions that can't be tied to specific buildings
 	* Dark Worlds
 		* `/closetworld` - Supply closet dark world, contains Castle Town and ??????
-			* `/castle` - Ralsei's castle
+			* ~~`/castle` - Ralsei's castle~~ DONE up to Chapter 4
 				* 1F
 					* ~~`/courtyard` - front courtyard~~ DONE up to Chapter 4
 					* ~~`/1F` - the entrance hall~~ DONE up to Chapter 4
@@ -92,7 +92,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 					* ~~`/queenroom`~~ DONE up to Chapter 4
 					* ~~`/tennaroom`~~ DONE up to Chapter 4
 					* ~~`/ralseiroom`~~ DONE up to Chapter 4
-				* `/basement` - LIVING QUARTERS FOR BAD GUYS
+				* ~~`/dungeon` - LIVING QUARTERS FOR BAD GUYS~~ DONE up to Chapter 4
 			* `/town` - Everything outside Ralsei's castle
 				* Town square (maybe gets its own page for interactions?)
 					* ~~`/seap`~~ DONE up to Chapter 4
