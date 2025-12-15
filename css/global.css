@@ -877,7 +877,11 @@ body {
 	&:first-child, .selection-label + & { margin-block-start: 0 }
 	&:last-child { margin-block-end: 0 }
 
-	a:not(.kris, .susie, .ralsei, .noelle, :hover, :focus) { color: inherit }
+	a:not(
+		.kris, .susie, .ralsei, .noelle,
+		.red, .blue, .yellow, .green, .white, .black, .purple, .maroon, .orange, .lightblue, .pink, .lightgreen, .iceblue, .gray, .lightyellow,
+		:hover, :focus
+	) { color: inherit }
 }
 /* Forced line break */
 body:not(.compact) .break {
