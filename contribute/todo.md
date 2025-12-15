@@ -102,9 +102,12 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 					* ~~`/topbakery`~~ DONE up to Chapter 4
 					* `/musicshop`
 					* `/tvstudio`
-				* `/cliffs` - to the west
-				* ~~`/trainingground` - to the east~~ DONE up to Chapter 4
-				* ~~`/greatdoor` - to the far east~~ DONE up to Chapter 4
+				* west side
+					* ~~`/cliff` - to the west~~ DONE up to Chapter 4
+					* `/clifftops` - "??????" aka the initial area from Ch1
+				* east side
+					* ~~`/trainingground` - to the east~~ DONE up to Chapter 4
+					* ~~`/greatdoor` - to the far east~~ DONE up to Chapter 4
 		* `/cardkingdom` - Chapter 1 dark world
 		* `/cyberworld` - Chapter 2 dark world
 			* `/queenmansion`

@@ -1,0 +1,433 @@
+---
+title: Cliff
+
+description: >
+  <p>Narration and dialogue for the base of the cliff located to the west of Castle Town.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /locations/closetworld/town/square
+    name: Town square{END_LINK} (to east)
+  -
+    url: /locations/closetworld/town/clifftops
+    name: ??????{END_LINK} (above cliff)
+
+sources:
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [1, 2, 4]
+    note: cliff
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2, 4]
+    note: Mr. Society, Hacker, Pippins
+  -
+    name: gml_Object_obj_treasure_room_Create_0
+    chapters: [2]
+    note: treasure chest conditions
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2, 4]
+    note: choices
+
+toc:
+  -
+    id: cliff
+    name: 
+    subheadings:
+      -
+        id: cliff1
+        name: Chapter 1, after Ralsei joins the party
+      -
+        id: cliff2
+        name: Chapter 2
+        subheadings:
+          -
+            id: cliff2pre
+            name: Before retrieving the Card Kingdom Darkners
+          -
+            id: cliff2post
+            name: After retrieving the Card Kingdom Darkners
+          -
+            id: cliff2jevil
+            name: If Jevil's reward from Chapter 1 is pending
+      -
+        id: cliff4
+        name: Chapter 4
+        subheadings:
+          -
+            id: cliff4standard
+            name: Standard
+          -
+            id: cliff4items
+            name: If Shadow Crystal boss rewards from previous chapters are pending
+          -
+            id: cliff4itemspost
+            name: Immediately after taking all pending Shadow Crystal boss rewards
+  -
+    id: mrsociety
+    name: 
+    subheadings:
+      -
+        id: mrsociety2
+        name: Chapter 2
+  -
+    id: treasurechest
+    name: 
+    subheadings:
+      -
+        id: treasurechest2
+        name: Chapter 2
+  -
+    id: hacker
+    name: 
+    subheadings:
+      -
+        id: hacker2
+        name: Chapter 2
+      -
+        id: hacker4
+        name: Chapter 4
+  -
+    id: pippins
+    name: 
+    subheadings:
+      -
+        id: pippins4
+        name: Chapter 4
+---
+<section class="d-section" id="cliff">
+	<h2>Cliff</h2>
+
+	<h3 id="cliff1">Chapter 1, after Ralsei joins the party</h3>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="1"></d-sprite>
+		<d-text asterisk>Come to think of it, how did Lancer get up there...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" variant="hat" emotion="6"></d-sprite>
+		<d-text asterisk>I suppose he rode his bike up the side of the cliff...?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="cliff2">Chapter 2</h3>
+	<h4 id="cliff2pre">Before <a href="{{ '/story/chapter2/castletown#fetchquest' | relative_url }}">retrieving the Card Kingdom Darkners</a></h4>
+	<d-box theme="dark">
+		<d-text asterisk>(The rubble on the ground seems to have been dusted and polished.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Someone around here really cares about the details.)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="cliff2post">After retrieving the Card Kingdom Darkners</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(There's a hole in the wall...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(There's nothing inside.)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="cliff2jevil">If <a href="{{ '/story/chapter1/jevil' | relative_url }}">Jevil</a>'s reward from Chapter 1 is pending</h4>
+	<p>That is, if the following conditions are met:</p>
+	<ul>
+		<li>Chapter 1 was completed without defeating Jevil</li>
+		<li>This SAVE file was continued into Chapter 2</li>
+		<li>Jevil was then defeated in this SAVE slot</li>
+	</ul>
+	<p>This interaction becomes available only after retrieving the Card Kingdom Darkners. It remains available after returning from Cyber World only if Spamton NEO was defeated.</p>
+
+	<p class="note">Something is shining in the hole in the cliff.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Something is glimmering in the hole.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Look inside?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<h5>If the applicable equipment inventory is not full</h5>
+		<p>(Armor inventory if Jevil was pacified; weapon inventory if Jevil was defeated violently.)</p>
+		<d-box theme="dark">
+			<d-text asterisk>(You reached inside and found something alongside a strange piece of glass...)</d-text>
+		</d-box>
+		<hr class="hr2">
+		<h6>If the inventory doesn't contain a <a href="{{ '/misc/darkitems#shadowcrystal' | relative_url }}">Shadow Crystal</a></h6>
+		<d-box theme="dark">
+			<d-text asterisk>(You got ShadowCrystal.)</d-text>
+		</d-box>
+		<p class="note">A Shadow Crystal is added to the inventory.</p>
+		<hr class="hr3">
+		<h6>If the inventory contains a Shadow Crystal</h6>
+		<p class="note">The number of Crystals increases silently.</p>
+		<hr class="hr2">
+		<p class="note">Generic text for obtaining the reward plays:</p>
+		<ul class="note">
+			<li><a href="{{ '/misc/generic#armorget' | relative_url }}">armor variant</a> for the <a href="{{ '/misc/armor#jevilstail' | relative_url }}">Jevilstail</a>, if Jevil was pacified</li>
+			<li><a href="{{ '/misc/generic#weaponget' | relative_url }}">weapon variant</a> for the <a href="{{ '/misc/weapons#devilsknife' | relative_url }}">Devilsknife</a>, if Jevil was defeated violently</li>
+		</ul>
+		<p class="note">The glimmer within the hole disappears.</p>
+
+		<hr class="hrhalf">
+
+		<h5>If the applicable equipment inventory is full</h5>
+		<p class="note">Generic text for being unable to take the reward plays:</p>
+		<ul class="note">
+			<li><a href="{{ '/misc/generic#armorgetfail' | relative_url }}">armor variant</a> for the Jevilstail, if Jevil was pacified</li>
+			<li><a href="{{ '/misc/generic#weapongetfail' | relative_url }}">weapon variant</a> for the Devilsknife, if Jevil was defeated violently</li>
+		</ul>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+
+	<hr>
+
+	<h3 id="cliff4">Chapter 4</h3>
+	<h4 id="cliff4standard">Standard</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(The rubble on the ground seems to have been dusted and polished.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Someone around here really cares about the details.)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="cliff4items">If Shadow Crystal boss rewards from previous chapters are pending</h4>
+	<p>That is, if the following conditions are met:</p>
+	<ul>
+		<li>One or more previous chapters were completed without defeating the Shadow Crystal boss of that chapter</li>
+		<li>This SAVE file was continued into Chapter 4</li>
+		<li>One or more of the Shadow Crystal bosses from previous chapters were then defeated in this SAVE slot</li>
+	</ul>
+
+	<p class="note">Something is shining in the hole in the cliff.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Something is glimmering in the hole.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Look inside?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<h5>If there is room for at least one piece of the pending equipment</h5>
+		<d-box theme="dark">
+			<d-text asterisk>(You reached inside and found something alongside a strange piece of glass...)</d-text>
+		</d-box>
+		<hr class="hr2">
+		<h6>If the inventory doesn't contain a <a href="{{ '/misc/darkitems#shadowcrystal' | relative_url }}">Shadow Crystal</a></h6>
+		<d-box theme="dark">
+			<d-text asterisk>(You got ShadowCrystal.)</d-text>
+		</d-box>
+		<p class="note">One or more Shadow Crystals are added to the inventory.</p>
+		<hr class="hr3">
+		<h6>If the inventory contains a Shadow Crystal</h6>
+		<p class="note">The number of Crystals increases silently by the pending amount.</p>
+		<hr class="hr2">
+		<p class="note">Generic text for obtaining the pending reward(s) plays in order of corresponding chapters:</p>
+		<ul class="note">
+			<li><a href="{{ '/misc/generic#armorget' | relative_url }}">armor variant</a> for sparing or pacifying enemies
+				<ul>
+					<li>Jevil's <a href="{{ '/misc/armor#jevilstail' | relative_url }}">Jevilstail</a></li>
+					<li>Spamton NEO's <a href="{{ '/misc/armor#dealmaker' | relative_url }}">Dealmaker</a></li>
+				</ul>
+			</li>
+			<li><a href="{{ '/misc/generic#weaponget' | relative_url }}">weapon variant</a> for violently defeating enemies
+				<ul>
+					<li>Jevil's <a href="{{ '/misc/weapons#devilsknife' | relative_url }}">Devilsknife</a></li>
+					<li>Spamton NEO's <a href="{{ '/misc/weapons#puppetscarf' | relative_url }}">PuppetScarf</a></li>
+					<li>The Roaring Knight's <a href="{{ '/misc/weapons#blackknife' | relative_url }}">Black Knife</a></li>
+				</ul>
+			</li>
+		</ul>
+		<p class="note">Once the relevant inventory is full, the following rewards instead play the equipment-get failure messages (<a href="{{ '/misc/generic#armorgetfail' | relative_url }}">armor</a> or <a href="{{ '/misc/generic#weapongetfail' | relative_url }}">weapon</a> variants, as applicable) and are not added to the inventory. The cliff can be returned to repeatedly to get all pending rewards.</p>
+		<p class="note">Once all rewards have been taken, the glimmer within the hole disappears.</p>
+
+		<hr class="hrhalf">
+
+		<h5>If all applicable equipment inventories are full</h5>
+		<p>Such that not a single reward can be taken.</p>
+		<p class="note">Generic text for failure to take only the FIRST pending reward plays:</p>
+		<ul class="note">
+			<li><a href="{{ '/misc/generic#armorgetfail' | relative_url }}">armor variant</a> for the armors listed above</li>
+			<li><a href="{{ '/misc/generic#weapongetfail' | relative_url }}">weapon variant</a> for the weapons listed above</li>
+		</ul>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+
+	<hr class="hrhalf">
+
+	<h4 id="cliff4itemspost">Immediately after taking all pending Shadow Crystal boss rewards</h4>
+	<p>That is, before leaving and reentering the area.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(There's a hole in the wall...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(There's nothing inside.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="mrsociety">
+	<h2>Mr. Society</h2>
+	<p>Appears only at the start of Chapter 2, before going to <a href="{{ '/locations/cyberworld/' | relative_url }}">Cyber World</a>.</p>
+
+	<h3 id="mrsociety2">Chapter 2</h3>
+	<d-box theme="dark">
+		<d-speaker>Mr. Society</d-speaker>
+		<d-text asterisk>Oh, it's quite a wonderful town, really. Thank you!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Society</d-speaker>
+		<d-text asterisk>... so... why am I alone here?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Society</d-speaker>
+		<d-text asterisk>A bit of self-reflection, I suppose.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Society</d-speaker>
+		<d-text asterisk>I do realize I was quite a coward before...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Society</d-speaker>
+		<d-text asterisk>So... I wanted to say... well...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Society</d-speaker>
+		<d-text asterisk>I STILL AM!!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Society</d-speaker>
+		<d-text asterisk>My cards, I cannot handle society!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Society</d-speaker>
+		<d-text asterisk>For now, I'll be living at the top of this cliff!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Society</d-speaker>
+		<d-text asterisk>When I'm ready to meet society again, I will be back!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Society</d-speaker>
+		<d-text asterisk>Thank you, thank you for the wonderful home! I will NOT use it!</d-text>
+	</d-box>
+	<p class="note">Mr. Society floats up to the top of the cliff, vanishing offscreen.</p>
+</section>
+
+<section class="d-section" id="treasurechest">
+	<h2>Treasure chest</h2>
+
+	<h3 id="treasurechest2">Chapter 2</h3>
+	<p>Appears after returning from Cyber World if the following conditions are met:</p>
+	<ul>
+		<li>Spamton NEO was defeated, regardless of method and route</li>
+		<li>The applicable equipment inventory was full at the time of the victory</li>
+		<li>(Normal route only) The reward was not taken from the <a href="{{ '/locations/cyberworld/queenmansion/basement#chesteast' | relative_url }}">treasure chest</a> in the mansion basement</li>
+	</ul>
+
+	 <p class="note">Uses <a href="{{ '/misc/generic#treasurechest-standard' | relative_url }}">generic text for treasure chests</a>:</p>
+	<ul class="note">
+		<li><a href="{{ '/misc/generic#armorget' | relative_url }}">armor variant</a> for the <a href="{{ '/misc/armor#dealmaker' | relative_url }}">Dealmaker</a> if Spamton NEO was spared</li>
+		<li><a href="{{ '/misc/generic#weaponget' | relative_url }}">weapon variant</a> for the <a href="{{ '/misc/weapons#puppetscarf' | relative_url }}">PuppetScarf</a> if Spamton NEO was defeated</li>
+	</ul>
+</section>
+
+<section class="d-section" id="hacker">
+	<h2>Hacker</h2>
+	
+	<h3 id="hacker2">Chapter 2</h3>
+	<p>Appears only if all three blue checkmarks were collected in Cyber Field.</p>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>Thanks a lot for the lovely city.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>It's nearly as good as the one I made in Minecrap.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>I need to mine ten-hundred blocks of Bubsidian to make my dog 3 colors.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="hacker4">Chapter 4</h3>
+	<p>Appears only if <a href="#pippins">Pippins</a> was recruited in Chapter 3.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>I'm the Hacker. I'm a progamer, too. Keep it on the download.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>Shhh. I got the mods on deck. I'm about to win it big.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(He's using a notched controller to play what looks like a child's game)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Hacker</d-speaker>
+		<d-text asterisk>A progamer is someone that progams videogames, right?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="pippins">
+	<h2>Pippins</h2>
+	<p>Appears if recruited in Chapter 3.</p>
+
+	<h3 id="pippins4">Chapter 4</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>I'm trying to scam this guy using a children's game...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>... but his controller keeps "malfunctioning."</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>... Is this guy a genius? Is he onto me...?</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>(There's way too much heat here.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Pippins</d-speaker>
+		<d-text asterisk>(I'll go back to cheating Rouxls at Snakes and Ladders...)</d-text>
+	</d-box>
+</section>
