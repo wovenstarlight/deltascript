@@ -104,7 +104,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 					* `/tvstudio`
 				* west side
 					* ~~`/cliff` - to the west~~ DONE up to Chapter 4
-					* `/clifftops` - "??????" aka the initial area from Ch1
+					* ~~`/clifftops` - "??????" aka the initial area from Ch1~~ DONE
 				* east side
 					* ~~`/trainingground` - to the east~~ DONE up to Chapter 4
 					* ~~`/greatdoor` - to the far east~~ DONE up to Chapter 4
