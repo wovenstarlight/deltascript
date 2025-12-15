@@ -1,0 +1,654 @@
+---
+title: Training ground
+
+description: >
+  <p>Narration and dialogue for the training ground towards the east of Castle Town.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /locations/closetworld/town/square
+    name: Town square{END_LINK} (to west)
+  -
+    url: /locations/closetworld/town/greatdoor
+    name: Great Door{END_LINK} (to east)
+
+sources:
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [1, 2]
+    note: dummy, Worm Ch2, Mr. Elegance, mannequin, Addisons
+  -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [2, 4]
+    note: Worm Ch4, Sweet Cap'n Cakes, Rudinn, Swatchling
+  -
+    name: gml_Object_obj_ch2_castle_tutorial_Create_0
+    chapters: [2]
+    note: appearance conditions
+  -
+    name: gml_Object_obj_castle_tutorial_Create_0
+    chapters: [4]
+    note: appearance conditions
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2]
+    note: choices
+
+toc:
+  -
+    id: dummy
+    name: Dummy
+    subheadings:
+      -
+        id: dummy1
+        name: Chapter 1
+      -
+        id: dummy2
+        name: Chapter 2
+        subheadings:
+          -
+            id: dummy2pretransform
+            name: Before retrieving the Card Kingdom Darkners
+          -
+            id: dummy2precyber
+            name: After Castle Town transforms and before going to Cyber World
+          -
+            id: dummy2post
+            name: After returning from Cyber World
+      -
+        id: dummy4
+        name: Chapter 4
+  -
+    id: worm
+    name: Worm
+    subheadings:
+      -
+        id: worm2
+        name: Chapter 2
+        subheadings:
+          -
+            id: worm2pre
+            name: Before going to Cyber World
+          -
+            id: worm2post
+            name: After returning from Cyber World
+      -
+        id: worm4
+        name: Chapter 4
+  -
+    id: mrelegance
+    name: Mr. Elegance
+    subheadings:
+      -
+        id: mrelegance2
+        name: Chapter 2
+        subheadings:
+          -
+            id: mrelegance2initial
+            name: Initial 
+          -
+            id: mrelegance2society
+            name: After speaking to Mr. Society
+          -
+            id: mrelegance2post
+            name: After returning from Cyber World
+  -
+    id: mannequin
+    name: Mannequin
+  -
+    id: addison
+    name: Addisons
+    subheadings:
+      -
+        id: addison2
+        name: Chapter 2
+      -
+        id: addison4
+        name: Chapter 4
+        subheadings:
+          -
+            id: addison4op
+            name: Orange and pink
+          -
+            id: addison4yo
+            name: Yellow and orange
+          -
+            id: addison4by
+            name: Blue and yellow
+          -
+            id: addison4pb
+            name: Pink and blue
+  -
+    id: sweetcapncakes
+    name: Sweet Cap'n Cakes
+    subheadings:
+      -
+        id: sweet
+        name: Sweet
+      -
+        id: capn
+        name: Cap'n
+      -
+        id: kk
+        name: K_K
+  -
+    id: rudinn
+    name: Rudinn
+    subheadings:
+      -
+        id: rudinnalone
+        name: If Swatchling and Shadowguy weren't recruited
+      -
+        id: rudinnleader
+        name: If Swatchling, Shadowguy, or both were recruited
+  -
+    id: swatchling
+    name: Swatchling
+---
+<section class="d-section" id="dummy">
+	<h2>Dummy</h2>
+
+	<h3 id="dummy1">Chapter 1</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's just a dummy.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dummy2">Chapter 2</h3>
+	<h4 id="dummy2pretransform">Before <a href="{{ '/story/chapter2/castletown#fetchquest' | relative_url }}">retrieving the Card Kingdom Darkners</a></h4>
+	<h5>Before hugging the dummy</h5>
+	<d-box theme="dark">
+		<d-text asterisk>(... no one's looking.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Hug the dummy?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Hug"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>You hugged the dummy.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>Nothing wrong with a little extra fluffiness in your life.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>You did not hug the dummy.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>You won't take the path of fluffiness any longer.</d-text>
+		</d-box>
+	</d-option-panel>
+
+	<h5>After hugging the dummy</h5>
+	<d-box theme="dark">
+		<d-text asterisk>(You're all hugged out.)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="dummy2precyber">After Castle Town transforms and before going to <a href="{{ '/locations/cyberworld/' | relative_url }}">Cyber World</a></h4>
+	<p>Now accompanied by the <a href="#worm">Worm</a>.</p>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-text asterisk>(Looks like the clothes are nibbled. Take a bite?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Yes"></d-option>
+		<d-option index="1" text="No"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(You put your mouth against the mannequin's cheek...)</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Ralsei" emotion="U"></d-sprite>
+			<d-text asterisk>K... K.... Kris!?!??</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="4"></d-sprite>
+			<d-text asterisk>Don't bother. It tastes awful.</d-text>
+			<d-box>
+				<d-sprite speaker="Ralsei" emotion="30"></d-sprite>
+				<d-text>... and Susie?</d-text>
+			</d-box>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-sprite speaker="Susie" emotion="4"></d-sprite>
+			<d-text asterisk>Don't bother. It tastes awful.</d-text>
+			<d-box>
+				<d-sprite speaker="Ralsei" emotion="30"></d-sprite>
+				<d-text>... and Susie?</d-text>
+			</d-box>
+		</d-box>
+	</d-option-panel>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a mannequin dressed in poor taste.)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="dummy2post">After returning from Cyber World</h4>
+	<p class="note">The dummy is now stripped of its clothing, which has been put on the <a href="#mannequin">mannequin</a> instead.</p>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>Wh... who did this to my mannequin!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="N"></d-sprite>
+		<d-text asterisk>A-as your prince, I... I demand someone fix this!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="M"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>Umm, is... is anybody listening...?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Lancer" emotion="8"></d-sprite>
+		<d-text asterisk>I was listening~!</d-text>
+		<d-box place="center">
+			<d-sprite speaker="Ralsei" emotion="23"></d-sprite>
+			<d-text>Don't yell that from across town!!</d-text>
+		</d-box>
+		<d-box place="center-x">
+			<d-sprite speaker="Susie" emotion="7"></d-sprite>
+			<d-text>Hey Lancer!!</d-text>
+		</d-box>
+		<d-box>
+			<d-sprite speaker="Lancer" emotion="1"></d-sprite>
+			<d-text>Hi Susie!!</d-text>
+		</d-box>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>(If Noelle was here...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>(She'd probably dress it up like a Christmas tree.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>(... Huh? Why am I thinking that, anyway?)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dummy4">Chapter 4</h3>
+	<p class="note">The dummy now has a long nose, pinked cheeks, and a dollar-sign necklace.</p>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Damn, nice outfit, Ralsei?</d-text>
+		<d-box>
+			<d-sprite speaker="Ralsei" emotion="32"></d-sprite>
+			<d-text>I DIDN'T HAVE ANYTHING<span class="break"></span> TO DO WITH THIS!!!</d-text>
+		</d-box>
+	</d-box>
+</section>
+
+<section class="d-section" id="worm">
+	<h2>Worm</h2>
+
+	<h3 id="worm2">Chapter 2</h3>
+	<p>Present after the Card Kingdom Darkners are retrieved.</p>
+
+	<h4 id="worm2pre">Before going to Cyber World</h4>
+	<d-box theme="dark">
+		<d-speaker>Worm</d-speaker>
+		<d-text asterisk>Without trees, I must gain nutrients by eating clothes...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Worm</d-speaker>
+		<d-text asterisk>Such is the way of the worm.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="worm2post">After returning from Cyber World</h4>
+	<p>Now accompanied by an <a href="#addison2">Addison</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Worm</d-speaker>
+		<d-text asterisk>I'm a worm. I don't understand taxes and values.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="worm4">Chapter 4</h3>
+	<p class="note">Is chewing on a leaf.</p>
+	<d-box theme="dark">
+		<d-speaker>Worm</d-speaker>
+		<d-text asterisk>(Munf, munf...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Worm</d-speaker>
+		<d-text asterisk>Such is the way of the worm...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="mrelegance">
+	<h2>Mr. Elegance</h2>
+
+	<h3 id="mrelegance2">Chapter 2</h3>
+	<p>Present after the Card Kingdom Darkners are retrieved.</p>
+
+	<h4 id="mrelegance2initial">Initial </h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-speaker>Mr. Elegance</d-speaker>
+		<d-text asterisk>Whoa, horsies. You've'n brought us to a great new place.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Elegance</d-speaker>
+		<d-text asterisk>We'll'n be puttin' our own elbow grease into fixin' it, too.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Elegance</d-speaker>
+		<d-text asterisk>Well'n, maybe not elbow'n grease. That's gross.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Elegance</d-speaker>
+		<d-text asterisk>Nostril grease?</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Mr. Elegance</d-speaker>
+		<d-text asterisk>We'll'n be tryin' our best too. Greasily.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="mrelegance2society">After speaking to <a href="{{ '/locations/closetworld/town/cliffs#mrsociety2' | relative_url }}">Mr. Society</a></h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-speaker>Mr. Elegance</d-speaker>
+		<d-text asterisk>Mr. Society left, didn't he... Hm.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Elegance</d-speaker>
+		<d-text asterisk>I reckon I knew'n this would'n happen...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Elegance</d-speaker>
+		<d-text asterisk>It's not'n no fault of yours.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Elegance</d-speaker>
+		<d-text asterisk>He'll'n be back one day.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Mr. Elegance</d-speaker>
+		<d-text asterisk>It's not'n no fault of yours.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Elegance</d-speaker>
+		<d-text asterisk>He'll'n be back one day.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="mrelegance2post">After returning from Cyber World</h4>
+	<p class="note">The corner Mr. Elegance stands in now has red-and-black tiling.</p>
+	<d-box theme="dark">
+		<d-speaker>Mr. Elegance</d-speaker>
+		<d-text asterisk>We're'n building up the area to be a bit'n more board-like.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Mr. Elegance</d-speaker>
+		<d-text asterisk>The ponmen'll be happy, too.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="mannequin">
+	<h2>Mannequin</h2>
+	<p>Present in Chapter 2 after returning from Cyber World. Is wearing the Ralsei-like clothes formerly on the dummy.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(Looks like it costs money just to have a free sample.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="addison">
+	<h2>Addisons</h2>
+
+	<h3 id="addison2">Chapter 2</h3>
+	<p>A single blue Addison is standing beside the <a href="#mannequin">mannequin</a>.</p>
+	<d-box theme="dark">
+		<d-speaker class="b">Addison</d-speaker>
+		<d-text asterisk>This place is a great deal!! All kinds of new customers!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="b">Addison</d-speaker>
+		<d-text asterisk>Want a free sample? Just $4.99 to try a bite of these clothes!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="addison4">Chapter 4</h3>
+	<p>Appear only if the <a href="{{ '/misc/weapons#freezering' | relative_url }}">Freeze Ring</a> is not in the weapon inventory or equipped to Noelle.</p>
+	<p>The Addisons appear in certain color pairs, rotating through the following every time this area is reentered. In each pairing below, the first Addison listed is the one behind the stall labelled "AD", while the second Addison is standing next to the stall as a "customer".</p>
+
+	<h4 id="addison4op">Orange and pink</h4>
+	<h5>Orange Addison</h5>
+	<d-box theme="dark">
+		<d-speaker class="o">Addison</d-speaker>
+		<d-text asterisk>Looking for ORIGINALITY!? INNOVATION!? Then CLICK no further than ADDISON's...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="o">Addison</d-speaker>
+		<d-text asterisk>Our new "Fungadero" will have your whole FAMILY "Funning" around Town!</d-text>
+	</d-box>
+
+	<h5>Pink Addison</h5>
+	<d-box theme="dark">
+		<d-speaker class="p">Addison</d-speaker>
+		<d-text asterisk>This is a GREAT town! ALL my friends are here, and ready to BLOW BIG BUCKS!!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="p">Addison</d-speaker>
+		<d-text asterisk>... still, I can't help but feel like I haven't seen... What? Nothing! BUY!! BUY!!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="addison4yo">Yellow and orange</h4>
+	<h5>Yellow Addison</h5>
+	<d-box theme="dark">
+		<d-speaker class="y">Addison</d-speaker>
+		<d-text asterisk>Our next ad is a commercial for TENNA!! We're gonna be BIG SHOTS!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="y">Addison</d-speaker>
+		<d-text asterisk>Finally! Can't see THIS one going wrong!</d-text>
+	</d-box>
+
+	<h5>Orange Addison</h5>
+	<d-box theme="dark">
+		<d-speaker class="o">Addison</d-speaker>
+		<d-text asterisk>WOW!!! I can't believe this ORANGE-inal flavor!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="o">Addison</d-speaker>
+		<d-text asterisk>WHAT!? You say it contains 10% REAL "liquids!?" Talk about ALL NATURAL!!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="addison4by">Blue and yellow</h4>
+	<h5>Blue Addison</h5>
+	<d-box theme="dark">
+		<d-speaker class="b">Addison</d-speaker>
+		<d-text asterisk>ADDISON'S! RELIABLE sales! NO unwanted mail or SHORT FREAKS!</d-text>
+		<d-box place="center-x">
+			<d-sprite speaker="Susie" emotion="4"></d-sprite>
+			<d-text>Sorry Ralsei</d-text>
+		</d-box>
+		<d-box>
+			<d-sprite speaker="Ralsei" emotion="30"></d-sprite>
+			<d-text>That's okay!</d-text>
+		</d-box>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="b">Addison</d-speaker>
+		<d-text asterisk>We may be ADs, but WE have INTEGRITY!</d-text>
+		<d-box theme="dark">
+			<d-speaker class="b">Addison</d-speaker>
+			<d-text>Free poison! Drink here!</d-text>
+		</d-box>
+	</d-box>
+
+	<h5>Yellow Addison</h5>
+	<d-box theme="dark">
+		<d-speaker class="y">Addison</d-speaker>
+		<d-text asterisk>WOW!!! I can't believe I'm drinking ADDISON TEA!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="y">Addison</d-speaker>
+		<d-text asterisk>Tastes JUST as advertised!! I mean, literally! It tastes like an AD!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="addison4pb">Pink and blue</h4>
+	<h5>Pink Addison</h5>
+	<d-box theme="dark">
+		<d-speaker class="p">Addison</d-speaker>
+		<d-text asterisk>Now that we sell to ourselves, our sales numbers are higher than ever!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="p">Addison</d-speaker>
+		<d-text asterisk>Haha, profits?</d-text>
+		<d-box>
+			<d-speaker class="p">Addison</d-speaker>
+			<d-text>We don't talk about those here.</d-text>
+		</d-box>
+	</d-box>
+
+	<h5>Blue Addison</h5>
+	<d-box theme="dark">
+		<d-speaker class="b">Addison</d-speaker>
+		<d-text asterisk>Wow!!! This product is so... BUYABLE!! Deals SO good you'll... um, HUG yourself!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="1"></d-sprite>
+		<d-text asterisk>Myself? It would be better if someone else did it...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="sweetcapncakes">
+	<h2>Sweet Cap'n Cakes</h2>
+	<p>Present in Chapter 2 after returning from Cyber World, if 8 or fewer Darkners were recruited there. (If 9 or more Cyber World Darkners were recruited, the trio is instead inside their <a href="{{ '/locations/closetworld/town/musicshop' | relative_url }}">Music Shop</a>.)</p>
+
+	<h3 id="sweet">Sweet</h3>
+	<d-box theme="dark">
+		<d-speaker>Sweet</d-speaker>
+		<d-text asterisk="Sweet">This town's great!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Sweet</d-speaker>
+		<d-text asterisk="Sweet">Just, wish everyone else was here, too...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="capn">Cap'n</h3>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Cap'n</d-speaker>
+		<d-text asterisk="Cap'n">Yo, chief. If you <span class="yellow">recruit</span> enough fans for us,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Cap'n</d-speaker>
+		<d-text asterisk="Cap'n">We might be able to make our music shop again...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Cap'n</d-speaker>
+		<d-text asterisk="Cap'n">Hey, we might even give you a <span class="yellow">discount</span>!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Cap'n</d-speaker>
+		<d-text asterisk="Cap'n">Ya hear that, chief? Keep up the recruiting...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="kk">K_K</h3>
+	<d-box theme="dark">
+		<d-speaker>K_K</d-speaker>
+		<d-text asterisk="K_K">I got to keep my box.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="rudinn">
+	<h2>Rudinn</h2>
+	<p>Present in Chapter 4, waving a leaf as a fan.</p>
+
+	<h3 id="rudinnalone">If Swatchling and Shadowguy weren't recruited</h3>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>I'm trying to start a "fan club" but we don't have any members.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Think you could recruit anyone, chief...?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="rudinnleader">If Swatchling, Shadowguy, or both were recruited</h3>
+	<p>Is accompanied by the recruited individual(s), also waving leaves as fans.</p>
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Look guys, it's in the wrist. The wrist.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>You wanna be part of the Fan Club, you gotta be good at fanning!</d-text>
+	</d-box>
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Boss, you wanna learn how to fan? Or are you just a fan of fanning?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="swatchling">
+	<h2>Swatchling</h2>
+	<p>Present in Chapter 4 if recruited in Chapter 2. Is practicing fanning with <a href="#rudinn">Rudinn</a>.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>A powerful computer like Our Lady Grace needs powerful fans!</d-text>
+	</d-box>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>This is how ancient people cooled their computers... right?</d-text>
+	</d-box>
+</section>

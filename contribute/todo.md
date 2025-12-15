@@ -94,7 +94,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 					* ~~`/ralseiroom`~~ DONE up to Chapter 4
 				* ~~`/dungeon` - LIVING QUARTERS FOR BAD GUYS~~ DONE up to Chapter 4
 			* `/town` - Everything outside Ralsei's castle
-				* Town square (maybe gets its own page for interactions?)
+				* Town square
+					* `/square` - the central area with the save point
 					* ~~`/seap`~~ DONE up to Chapter 4
 					* ~~`/cafe`~~ DONE up to Chapter 4
 					* ~~`/partydojo`~~ DONE up to Chapter 4
@@ -102,7 +103,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 					* `/musicshop`
 					* `/tvstudio`
 				* `/cliffs` - to the west
-				* `/trainingground` - to the east
+				* ~~`/trainingground` - to the east~~ DONE up to Chapter 4
 				* `/greatdoor` - to the far east
 		* `/cardkingdom` - Chapter 1 dark world
 		* `/cyberworld` - Chapter 2 dark world
