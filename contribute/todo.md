@@ -97,8 +97,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 				* Town square (maybe gets its own page for interactions?)
 					* ~~`/seap`~~ DONE up to Chapter 4
 					* ~~`/cafe`~~ DONE up to Chapter 4
-					* `/partydojo` (see_also link to the Party Dojo section on the encounters index)
-						* `#bed` - clover's bed
+					* ~~`/partydojo`~~ DONE up to Chapter 4
 					* ~~`/topbakery`~~ DONE up to Chapter 4
 					* `/musicshop`
 					* `/tvstudio`
