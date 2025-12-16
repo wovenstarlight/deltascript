@@ -2,7 +2,7 @@
 https://
 {{- include.wiki | default: "deltarune" -}}
 .wiki/w/
-{{- include.page | replace: " ", "_" -}}
+{{- include.page | replace: " ", "_" | cgi_escape -}}
 {%- endcapture -%}
 
-{{ link | uri_escape }}
+{{ link }}
