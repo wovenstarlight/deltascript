@@ -34,6 +34,8 @@
 	--yellow: #ffff00;
 	--green: #00ff00;
 	--white: #fff;
+	--lightgray: #c0c0c0;
+	--darkgray: #404040;
 	--black: #000;
 	--purple: #800080;
 	--maroon: #800000;
@@ -110,6 +112,7 @@ body.dim {
 	--yellow: #bbbb00;
 	--green: #00bb00;
 	--white: #bbb;
+	--lightgray: #999;
 	--gray: #777;
 	--black: #000;
 	--purple: #5e005e;
@@ -166,6 +169,8 @@ body.dim {
 .cS, .pink { color: var(--pink) }
 .cV, .lightgreen { color: var(--lightgreen) }
 .cI, .iceblue { color: var(--iceblue) }
+.lightgray { color: var(--lightgray) }
+.darkgray { color: var(--darkgray) }
 .gray { color: var(--gray) }
 .lightyellow { color: var(--lightyellow) }
 .lightyellow-gacha { color: var(--lightyellow-gacha) }
@@ -894,6 +899,29 @@ body:not(.compact) .break {
 	width: 1.2ch;
 	vertical-align: -0.25ch;
 	margin-inline-start: -0.25ch;
+}
+/* Music Room layout/tracklist */
+.musicroom {
+	&:is(d-box) {
+		&:not(:state(compact)) {
+			width: calc(var(--basewidth) - 13em);
+			text-shadow: unset;
+			d-text:not(:first-child) { font-size: 0.7em }
+		}
+		.green {
+			line-height: 1.5;
+			margin-block: 0.2em;
+			filter: unset;
+			color: var(--green);
+			background: unset;
+		}
+	}
+	&:is(ol) {
+		font-family: var(--font-condensed);
+		padding-inline-start: 1em;
+		list-style-position: inside;
+		li::marker { content: counter(list-item) " - " }
+	}
 }
 /* #endregion */
 

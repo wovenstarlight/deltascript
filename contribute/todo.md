@@ -100,7 +100,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 					* ~~`/cafe`~~ DONE up to Chapter 4
 					* ~~`/partydojo`~~ DONE up to Chapter 4
 					* ~~`/topbakery`~~ DONE up to Chapter 4
-					* `/musicshop`
+					* ~~`/musicroom`~~ DONE up to Chapter 4
 					* `/tvstudio`
 				* west side
 					* ~~`/cliff` - to the west~~ DONE up to Chapter 4
