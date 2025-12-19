@@ -103,7 +103,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 					* ~~`/musicroom`~~ DONE up to Chapter 4
 					* `/tvstudio`
 						* ~~`/index` - main hall~~ DONE up to Chapter 4
-						* `/rhythmgame`
+						* ~~`/rhythmgame`~~ DONE up to Chapter 4
 						* `/mikezone`
 				* west side
 					* ~~`/cliff` - to the west~~ DONE up to Chapter 4
