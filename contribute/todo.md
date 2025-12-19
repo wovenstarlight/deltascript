@@ -102,6 +102,9 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 					* ~~`/topbakery`~~ DONE up to Chapter 4
 					* ~~`/musicroom`~~ DONE up to Chapter 4
 					* `/tvstudio`
+						* ~~`/index` - main hall~~ DONE up to Chapter 4
+						* `/rhythmgame`
+						* `/mikezone`
 				* west side
 					* ~~`/cliff` - to the west~~ DONE up to Chapter 4
 					* ~~`/clifftops` - "??????" aka the initial area from Ch1~~ DONE

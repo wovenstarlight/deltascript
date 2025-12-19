@@ -1,0 +1,170 @@
+---
+title: TV Studio
+
+description: >
+  <p>Narration and dialogue for the main hall of the TV Studio in Castle Town.</p>
+
+  <p>Accessible only if Tenna survived the events of Chapter 3.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /locations/closetworld/town/square
+    name: Town square{END_LINK} (outside)
+  -
+    url: /locations/closetworld/town/tvstudio/rhythmgame
+    name: Rhythm Game hall
+  -
+    url: /locations/closetworld/town/tvstudio/mikezone
+    name: MIKE ZONE
+
+sources:
+  -
+    name: gml_Object_obj_room_castle_tv_Create_0
+    chapters: [4]
+    note: presence conditions
+  -
+    name: gml_Object_obj_room_castle_tv_Step_0
+    chapters: [4]
+    note: Zapper
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [4]
+    note: desk note, sealed RV door, locked Mike's door, Mike hint
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [4]
+    note: choices
+
+toc:
+  -
+    id: zapper
+    name: Zapper
+  -
+    id: note
+    name: Note at empty desk
+  -
+    id: rhythmgamedoor
+    name: Rhythm Game door
+  -
+    id: mikedoor
+    name: Mike's door
+    subheadings:
+      -
+        id: mikedoor2
+        name: Chapter 2
+        subheadings:
+          -
+            id: mikedoor2sealed
+            name: When sealed
+          -
+            id: mikedoor2locked
+            name: When locked
+  -
+    id: hint
+    name: Hint to Mike's door
+---
+<section class="d-section" id="zapper">
+	<h2>Zapper</h2>
+	<p>Present at the desk if at least one TV World Darkner has been recruited. Otherwise, the desk is empty and has a <a href="#note">note</a> on it.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Hello, boss. Welcome to TV STUDIO.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Here you can play various MiniGames.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>They have no effect on anything, so just enjoy yourself and relax!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="note">
+	<h2>Note at empty desk</h2>
+	<p>Present instead of <a href="#zapper">Zapper</a> if all TV World Darkners weren't recruited.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(Now recruiting someone to be at this desk! Yikes!)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="rhythmgamedoor">
+	<h2>Rhythm Game door</h2>
+	<p>Available to interact with only if all TV World Darkners weren't recruited. Otherwise, the door can be walked through without commentary to enter the <a href="{{ '/locations/closetworld/town/tvstudio/rhythmgame' | relative_url }}">Rhythm Game hall</a>.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(Currently under construction!)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Would be done if there were more recruits from TV World!)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="mikedoor">
+	<h2>Mike's door</h2>
+
+	<h3 id="mikedoor2">Chapter 2</h3>
+
+	<h4 id="mikedoor2sealed">When sealed</h4>
+	<p>If Shadowguy, Pippins, and Zapper haven't all been recruited.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Mystery game! Currently under construction!)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="mikedoor2locked">When locked</h4>
+	<p>Initially labelled "MIKE" on both sides; turns into cat-themed doors after <a href="{{ '/story/chapter4/mike' | relative_url }}">fighting "Mike"</a> inside.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>"MIKE'S ROOM"</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>It seems to be locked with a code.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>Enter it?</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Enter code"></d-option>
+		<d-option index="1" text="Do not"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">A four-digit number entry box appears. Dialogue proceeds depending on the combination entered.</p>
+
+		<hr class="hrhalf">
+
+		<h5>Entering the wrong combination</h5>
+		<p class="note">An error buzzer plays as the numbers turn red.</p>
+		<d-box theme="dark">
+			<d-text asterisk>(... wrong combination!)</d-text>
+		</d-box>
+	
+		<hr class="hrhalf">
+	
+		<h5>Entering the right combination</h5>
+		<p>That being 6453 as per the <a href="#hint">hint note</a>.</p>
+		<p class="note">A success chime plays as the numbers turn yellow.</p>
+		<d-box theme="dark">
+			<d-text asterisk>(You entered the numbers knowingly.)</d-text>
+		</d-box>
+		<p class="note">The lock disappears, and the door can now be entered without commentary, leading to the <a href="{{ '/locations/closetworld/town/tvstudio/mikezone' | relative_url }}">MIKE ZONE</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">Dialogue ends.</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="hint">
+	<h2>Hint to Mike's door</h2>
+	<p>Located on the wall next to <a href="#mikedoor">Mike's door</a> at the end of Chapter 4, before the <a href="{{ '/story/chapter4/finalconfrontation' | relative_url }}">final confrontation</a>.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(The PASSWORD is 6453! Don't forget it...!)</d-text>
+	</d-box>
+</section>
