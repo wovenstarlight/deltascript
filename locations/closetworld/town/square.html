@@ -1,0 +1,1010 @@
+---
+title: Town square
+
+description: >
+  <p>Narration and dialogue for the central hub of Castle Town.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /locations/closetworld/town/cliff
+    name: Cliffs{END_LINK} (to west)
+  -
+    url: /locations/closetworld/town/trainingground
+    name: Training ground{END_LINK} (to east)
+  -
+    url: /locations/closetworld/castle/courtyard
+    name: Ralsei's castle{END_LINK} (to north)
+  -
+    url: /locations/lightworld/school/hallways
+    name: Hometown school hallways{END_LINK} (outside, to south)
+
+sources:
+  -
+    name: gml_GlobalScript_scr_roomname
+    chapters: [1, 2, 4]
+    note: SAVE point location names
+  -
+    name: gml_Object_obj_savepoint_Other_10
+    chapters: [1, 2, 4]
+    note: SAVE point narration
+  -
+    name: gml_Object_obj_readable_room1_Other_10
+    chapters: [1, 2, 4]
+    note: dark buildings, bakery sign, Music Room, TV Studio
+  -
+    name: gml_GlobalScript_scr_text
+    chapters: [2, 4]
+    note: manual
+    # via obj_npc_sign
+  -
+    name: gml_Object_obj_npc_room_Create_0
+    chapters: [2]
+    note: other interactions - conditions
+  -
+    name: gml_Object_obj_room_castle_town_Create_0
+    chapters: [4]
+    note: other interactions - conditions
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2, 4]
+    note: other interactions
+  -
+    name: gml_Object_obj_npc_room_animated_Other_10
+    chapters: [2, 4]
+    note: other interactions
+  -
+    name: gml_Object_obj_readable_nubert_Other_10
+    chapters: [4]
+    note: Nubert
+  -
+    name: gml_Object_obj_npc_zapper_Other_10
+    chapters: [4]
+    note: Nubert
+
+toc:
+  -
+    id: savepoint
+    name: SAVE point
+    subheadings:
+      -
+        id: savepoint1
+        name: Chapter 1
+        subheadings:
+          -
+            id: savepoint1pre
+            name: Before Ralsei joins the party
+          -
+            id: savepoint1post
+            name: After Ralsei joins the party
+      -
+        id: savepoint2
+        name: Chapter 2
+        subheadings:
+          -
+            id: savepoint2pre
+            name: Before retrieving the Card Kingdom Darkners
+          -
+            id: savepoint2card
+            name: After retrieving the Card Kingdom Darkners, before visiting Cyber World
+          -
+            id: savepoint2cyber
+            name: After returning from the Cyber World
+          -
+            id: savepoint2weird
+            name: After scaring Noelle in the hospital
+      -
+        id: savepoint4
+        name: Chapter 4
+        subheadings:
+          -
+            id: savepoint4any
+            name: If you didn't recruit everyone in previous chapters
+          -
+            id: savepoint4all
+            name: If you recruited everyone in previous chapters
+  -
+    id: darkbuildings
+    name: Dark buildings
+  -
+    id: manual
+    name: Manual
+  -
+    id: bakerysign
+    name: Sign for Top Bakery
+  -
+    id: musicroom
+    name: Music Room
+  -
+    id: tvstudio
+    name: TV Studio
+  -
+    id: rudinn
+    name: Rudinn (Town status tracker)
+    subheadings:
+      -
+        id: rudinn2
+        name: Chapter 2
+        subheadings:
+          -
+            id: rudinn2pre
+            name: Before visiting Cyber World
+          -
+            id: rudinn2post
+            name: After returning from Cyber World
+      -
+        id: rudinn4
+        name: Chapter 4
+  -
+    id: other2
+    name: Other interactions - Chapter 2
+    subheadings:
+      -
+        id: other2-rudinn
+        name: Rudinn
+      -
+        id: other2-rudinnranger
+        name: Rudinn Ranger
+      -
+        id: other2-virovirokun
+        name: Virovirokun
+      -
+        id: other2-hathy
+        name: Hathy
+      -
+        id: other2-bblock
+        name: B Block
+      -
+        id: other2-werewire
+        name: Werewire
+      -
+        id: other2-rabbick
+        name: Rabbick
+      -
+        id: other2-swatchling
+        name: Swatchling
+      -
+        id: other2-rouxls
+        name: Rouxls Kaard
+      -
+        id: other2-plugboy
+        name: Plugboy
+  -
+    id: other4
+    name: Other interactions - Chapter 4
+    subheadings:
+      -
+        id: other4-rudinnranger
+        name: Rudinn Ranger
+      -
+        id: other4-watercooler
+        name: Watercooler
+      -
+        id: other4-rudinn
+        name: Rudinn
+      -
+        id: other4-nubert
+        name: Nubert
+      -
+        id: other4-swatchling
+        name: Swatchling
+      -
+        id: other4-rabbick
+        name: Rabbick
+      -
+        id: other4-zapper
+        name: Zapper
+      -
+        id: other4-ribbick
+        name: Ribbick
+---
+<section class="d-section" id="savepoint">
+	<h2>SAVE point</h2>
+
+	<h3 id="savepoint1">Chapter 1</h3>
+	<p>The location is listed as "<span class="white fnt-condensed">Castle Town</span>".</p>
+
+	<h4 id="savepoint1pre">Before Ralsei joins the party</h4>
+	<d-box theme="dark">
+		<d-text asterisk>In front of you, a castle looms beneath the empty town.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>A black geyser emerges from it, piercing endlessly into the sky.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The power of this place shines within you.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="savepoint1post">After Ralsei joins the party</h4>
+	<d-box theme="dark">
+		<d-text asterisk>Ralsei, the lonely prince, is now your ally.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>The power of fluffy boys shines within you.</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="savepoint2">Chapter 2</h3>
+	<h4 id="savepoint2pre">Before <a href="{{ '/story/chapter2/castletown#fetchquest' | relative_url }}">retrieving the Card Kingdom Darkners</a></h4>
+	<p>The location is listed as "<span class="white fnt-condensed">Castle Town</span>".</p>
+	<d-box theme="dark">
+		<d-text asterisk>You look upon the castle you first saw yesterday...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of immediate nostalgia.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="savepoint2card">After retrieving the Card Kingdom Darkners, before <a href="{{ '/story/chapter2/intocyberworld' | relative_url }}">visiting Cyber World</a></h4>
+	<p>From this point onwards, the location is listed as "<span class="white fnt-condensed">My Castle Town</span>". This narration only plays upon the first interaction after entering this room.</p>
+	<d-box theme="dark">
+		<d-text asterisk>The castle town has transformed from the power of friendship.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with the power of friendship-based architecture.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="savepoint2cyber">After returning from the Cyber World</h4>
+	<p>May be overridden by <a href="#savepoint2weird">certain Weird Route narration</a>.</p>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-text asterisk>(You touched the light...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You thought about how you <span class="red">can't go back to the Cyber World</span> anymore.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You considered this carefully!)</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-text asterisk>After a long day, the town has grown once again.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>You are filled with a certain power...</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="savepoint2weird">After scaring Noelle in the hospital</h4>
+	<p>Exclusive to the Weird Route; plays if, after returning from Cyber World, you scared Noelle in the hospital by stepping towards her (moving right) thrice. Overrides the <a href="#savepoint2cyber">standard post-Cyber World narration</a>, including the warning about not being able to return to Cyber World.</p>
+	<!-- Triggers when sideb is in phase 4, i.e. when global.plot[915] === 20 -->
+
+	<d-box theme="dark">
+		<d-text asterisk>After a long day, you have returned to the castle town.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>But, you still feel the power in your hands...</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="savepoint4">Chapter 4</h3>
+	<p>This narration does not play on the Weird Route.</p>
+
+	<h4 id="savepoint4any">If you didn't recruit everyone in previous chapters</h4>
+	<p>Missing any of the Darkners from Card Kingdom, Cyber World, or TV World.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Once again you find yourself in a familiar town.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You are filled with the power of conspicuously normal music.)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="savepoint4all">If you recruited everyone in previous chapters</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Funky music emerges from the cafe and fills the town.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You are filled with the power of funky town.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="darkbuildings">
+	<h2>Dark buildings</h2>
+	<p>The largely-identical shops from before the <a href="{{ '/story/chapter2/castletown#fetchquest' | relative_url }}">Card Kingdom Darkners are brought to Castle Town</a>. The interaction counter is shared across all 4 interactive buildings.</p>
+
+	<h3>First time</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It looks like a shop, but the door is locked, and no one's inside...)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Subsequent times</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's locked.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="manual">
+	<h2>Manual</h2>
+	<p>A book on a pillar, located near the <a href="#savepoint">SAVE point</a>.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's a manual. Read a topic?)</d-text>
+	</d-box>
+	<d-choices theme="dark">
+		<d-option index="0" text="Recruits"></d-option>
+		<d-option index="1" text="Item storage"></d-option>
+		<d-option index="2" text="Controls"></d-option>
+		<d-option index="3" text="Do not read"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>If you SPARE or PACIFY enough enemies of the same type, they will be RECRUITed.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>RECRUITs will appear in your TOWN. Wonder what happens if you get them all...?</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>You can check the area's RECRUIT status at SAVE POINTS. Certain BOSSES are excluded.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>You will now have access to a STORAGE menu at SAVE POINTS.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>When you're out of space, ITEMs you find or BUY will be sent to your STORAGE.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>Feel free to put things inside you might not be able to use yet.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="2" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>Here is a reminder of the controls. Change them in the config menu.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>[CONFIRM]</d-text>
+			<d-text asterisk>Confirm and interact with things.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>[CANCEL]</d-text>
+			<d-text asterisk>Cancel. Hold to RUN. Shows all text instantly.</d-text>
+		</d-box>
+		<d-box theme="dark">
+			<d-text asterisk>[MENU]</d-text>
+			<d-text asterisk>Opens the menu. Hold down to quickly skip textboxes.</d-text>
+		</d-box>
+	</d-option-panel>
+	<d-option-panel index="3" theme="dark">
+		<d-box theme="dark">
+			<d-text asterisk>(There's no time to read books.)</d-text>
+		</d-box>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="bakerysign">
+	<h2>Sign for <a href="{{ '/locations/closetworld/town/topbakery' | relative_url }}">Top Bakery</a></h2>
+	<p>Appears alongside the bakery itself after the Card Kingdom Darkners are retrieved.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>Mama Miba! Welcome to TOP Bakery!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>Our special chefs spin baked goods at the TOP of their class!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="musicroom">
+	<h2><a href="{{ '/locations/closetworld/town/musicroom' | relative_url }}">Music Room</a></h2>
+	<p>Available for interaction in Chapter 4. Otherwise, the building can be entered without commentary.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(The Music Shop is closed! Everyone's busy this time!)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="tvstudio">
+	<h2><a href="{{ '/locations/closetworld/town/tvstudio/' | relative_url }}">TV Studio</a></h2>
+	<p>Available for interaction in Chapter 4 if Tenna didn't survive the events of Chapter 3. Otherwise, the building can be entered without commentary.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(Seems that the building isn't ready to open yet...)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Maybe there wasn't enough staff.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="rudinn">
+	<h2>Rudinn (Town status tracker)</h2>
+	<p>The Rudinn who tells you about how your town is doing. Consistently refers to the town using the player's name, as chosen during the <a href="{{ '/story/chapter1/wakingup#truename' | relative_url }}">vessel creation sequence</a>.</p>
+
+	<h3 id="rudinn2">Chapter 2</h3>
+	<p>Present in front of the <a href="{{ '/locations/closetworld/town/partydojo' | relative_url }}">Party Dojo</a>.</p>
+
+	<h4 id="rudinn2pre">Before <a href="{{ '/story/chapter2/intocyberworld' | relative_url }}">visiting Cyber World</a></h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Oho. Welcome to<span class="break"></span> &lt;PLAYER&gt;Town!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Or so I heard it's called.</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Come to think of it,</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Welcome to me too! Haha!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>I think we're gonna like living here!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="rudinn2post">After returning from Cyber World</h4>
+	<h5>First time</h5>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Oho. Welcome home.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Things have changed again here in<span class="break"></span> &lt;PLAYER&gt;Town!</d-text>
+	</d-box>
+
+	<h5>Subsequent times</h5>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>This is a dream that grows with love and care.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Don't be afraid to dream!</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="rudinn4">Chapter 4</h3>
+	<p>Rudinn's eyes are half-lidded, and its color has changed from green to blue.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Oho. Welcome home.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Things have changed again here in &lt;PLAYER&gt;Town!</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<h5>If all Darkners from Chapters 1–3 have been recruited</h5>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Your Town's love is <span class="yellow">Strong</span>.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Beauty grows in your heart. Let's see to a merciful life!</d-text>
+	</d-box>
+
+	<hr class="hr3">
+
+	<h5>If at least one Darkner from Chapters 1–3 was not recruited</h5>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Your Town's love is <span class="orange">Cracked</span>.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Perhaps you don't treasure this place so much.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>But it treasures you. Whatever you do.</d-text>
+	</d-box>
+
+	<hr class="hr3">
+
+	<h5>If you started a new SAVE file from Chapter 4</h5>
+	<p>As in, the current SAVE file was not continued from a previous chapter. Overrides the above dialogues.</p>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Your Town's love is <span class="yellow">Plain</span>.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>This is a familiar place, yet you look like you only just got here.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>From here, let your love grow. All right.</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Ah, do I look different? Sorry, I'm just me.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>My color must've faded. Pay it no mind!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="other2">
+	<h2>Other interactions - Chapter 2</h2>
+
+	<h3 id="other2-rudinn">Rudinn</h3>
+	<p>Present to the southwest.</p>
+
+	<h4>Standard</h4>
+	<p>Accompanied by <a href="#other2-rudinnranger">Rudinn Ranger</a>. (Can play before or after visiting Cyber World.)</p>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>This guy always seems like he's enjoying life more than me.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Maybe it's because he's a higher level...?</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Before going to Cyber World, if you got the <a href="{{ '/story/chapter1/king#postfight-violent' | relative_url }}">violent ending</a> in Chapter 1</h4>
+	<p>Accompanied by <a href="#other2-rudinnranger">Rudinn Ranger</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Is this guy seriously sucking up to you already? Even though you hurt us?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>He could at least wait until later today!</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>After returning from Cyber World, if Virovirokun was recruited</h4>
+	<p>Accompanied by <a href="#other2-virovirokun">Virovirokun</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>Ha ha! That's right! They took so long on their turn...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>What!? A horned girl? I never got to see her!</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="other2-rudinnranger">Rudinn Ranger</h3>
+	<p>Present to the southwest, accompanied by <a href="#other2-rudinn">Rudinn</a>. After returning from Cyber World, gets replaced by <a href="#other2-virovirokun">Virovirokun</a> if recruited there.</p>
+	<d-box theme="dark">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text asterisk>Thanks to you, commander, we've been liberated!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text asterisk>I hereby declare today National Ham Sandwich Day of Independence!</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="other2-virovirokun">Virovirokun</h3>
+	<p>Present to the southwest after returning from Cyber World, if recruited there. Accompanied by <a href="#other2-rudinn">Rudinn</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text asterisk>Uh-huh, uh-huh! I wonder if she'll be back...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Virovirokun</d-speaker>
+		<d-text asterisk>'ey boss! We're just reminiscing about fighting you!</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="other2-hathy">Hathy</h3>
+	<p>Present to the southeast.</p>
+
+	<h4>Standard</h4>
+	<p>(Can play before or after visiting Cyber World.)</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Seems like Hathy likes this place.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(She hopes you'll like it too.)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Before going to Cyber World, if you got the violent ending in Chapter 1</h4>
+	<d-box theme="dark">
+		<d-text asterisk>(Seems like Hathy likes this place.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You feel an aura of forgiveness...)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>If less than 4 Cyber World Darkners have been recruited, and Kris has the <a href="{{ '/misc/powermenu#lv1bedinspector' | relative_url }}">Bed Inspector title</a> from Chapter 1</h4>
+	<p>(Can play before or after visiting Cyber World.)</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Seems Hathy likes this place.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(She hopes you'll find enough beds to inspect.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(You'll lose your bed inspector title if you don't inspect enough beds.)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>After returning from Cyber World, if 4 or more Darkners were recruited there</h4>
+	<p>Overrides the Bed Inspector dialogue above.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(Hathy's happy to see so many new faces.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(Happy's hathy.)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="other2-bblock">B Block</h3>
+	<p>Present to the northwest. After returning from Cyber World, gets replaced by <a href="#other2-werewire">Werewire</a> if recruited there.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>B Block</d-speaker>
+		<d-text asterisk>Bow bow.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>B Block</d-speaker>
+		<d-text asterisk>(I'm bjust a block.)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>B Block</d-speaker>
+		<d-text asterisk>(I don't bget it.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>B Block</d-speaker>
+		<d-text asterisk>(Did bwe go somebwhere?)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="other2-werewire">Werewire</h3>
+	<p>Present to the northwest after returning from Cyber World, if recruited there.</p>
+	<d-box theme="dark">
+		<d-speaker>Werewire</d-speaker>
+		<d-text asterisk>Thanks for getting rid of Queen!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Werewire</d-speaker>
+		<d-text asterisk>... yeah, this form is much cooler, so I'm keeping it...</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="other2-rabbick">Rabbick</h3>
+	<p>Present to the northeast.</p>
+
+	<h4>Standard</h4>
+	<d-box theme="dark">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text asterisk>It's a clean start for us here!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text asterisk>(Sukkiri...)</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>After returning from Cyber World, if Swatchling was recruited</h4>
+	<p>Rabbick is accompanied by <a href="#other2-swatchling">Swatchling</a> and sweeping the ground in front of itself with a broom.</p>
+	<d-box theme="dark">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text asterisk>It's nice to make friends that like good clean fun!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text asterisk>(Sukkiri.)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="other2-swatchling">Swatchling</h3>
+	<p>Present to the northeast after returning from Cyber World, if recruited there. Accompanied by <a href="#other2-rabbick">Rabbick</a> and sweeping the ground in front of itself with a broom.</p>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>Young masters! Thank you for such a wide space to clean!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>The people here have such clean hearts as well.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>(Sukkiri.)</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="other2-rouxls">Rouxls Kaard</h3>
+	<p>Present to the south, just outside the <a href="{{ '/locations/closetworld/town/topbakery' | relative_url }}">Top Bakery</a>, before going to Cyber World.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="0"></d-sprite>
+		<d-text asterisk>Ah! Thou hast Transplantedeth us to Thine Castle Towne...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="2"></d-sprite>
+		<d-text asterisk>And, Trulye, a maginificenth Towne of Castles, it art!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="6"></d-sprite>
+		<d-text asterisk>But ho! Hmmm... Something art... Lackingth, it Feeleth.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="1"></d-sprite>
+		<d-text asterisk>Couldth thou guys... Perhapsth...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="6"></d-sprite>
+		<d-text asterisk>Bringe in an Evil Rulere.... Or some Thinge...?</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="0"></d-sprite>
+		<d-text asterisk>Lancer hath benounced me "Vice Fathere..."</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="5"></d-sprite>
+		<d-text asterisk>Forthhence, I do All the Cookinge and Cleaninge.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Rouxls" emotion="6"></d-sprite>
+		<d-text asterisk>Perhapsth, I shouldst seeketh a New Employere...</d-text>
+	</d-box>
+
+
+	<hr>
+
+
+	<h3 id="other2-plugboy">Plugboy</h3>
+	<p>Present to the center of town, standing between the Top Bakery and the <a href="{{ '/locations/closetworld/town/cafe' | relative_url }}">Café</a>, after returning from Cyber World if Werewire was recruited there.</p>
+	<d-box theme="dark">
+		<d-speaker>Plugboy</d-speaker>
+		<d-text asterisk>Wh... what a wonderful place... thank you...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Plugboy</d-speaker>
+		<d-text asterisk>This town, not that restaurant. It looks weird. I'm not going in...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="other4">
+	<h2>Other interactions - Chapter 4</h2>
+
+	<h3 id="other4-rudinnranger">Rudinn Ranger</h3>
+	<p>Present to the northwest if the Watercooler was recruited in Chapter 3. Accompanied by the <a href="#other4-watercooler">Watercooler</a> and <a href="#other4-rudinn">Rudinn</a>.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text asterisk>Oh, Commander! Ahem, what lovely amenities you have provided!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text asterisk>Would you like a sip of water? It's delicious, as expected.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Rudinn Ranger</d-speaker>
+		<d-text asterisk>I guarantee it! I just drank directly out of the tap!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="other4-watercooler">Watercooler</h3>
+	<p>Present to the northwest if recruited in Chapter 3. Accompanied by <a href="#other4-rudinnranger">Rudinn Ranger</a> and <a href="#other4-rudinn">Rudinn</a>.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It seems visibly agitated.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="other4-rudinn">Rudinn</h3>
+	<p>Present to the northwest if the Watercooler was recruited in Chapter 3. Accompanied by the <a href="#other4-watercooler">Watercooler</a> and <a href="#other4-rudinnranger">Rudinn Ranger</a>.</p>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>This guy really annoys me. Just because he's a higher level...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rudinn</d-speaker>
+		<d-text asterisk>... he thinks he can chat up the watercooler... get real.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="other4-nubert">Nubert</h3>
+	<p>Present at random locations, popping up out of the ground, if all Cyber World Darkners were recruited.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Nubert</d-speaker>
+		<d-text asterisk>You've been sparin' all Nubert's friends.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Nubert</d-speaker>
+		<d-text asterisk>Now they're your friends, too.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Nubert</d-speaker>
+		<d-text asterisk>That's good. When you spare people, this world moves up.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Nubert</d-speaker>
+		<d-text asterisk>... Nubert moves up too.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Nubert</d-speaker>
+		<d-text asterisk>When someone gets hurt, Nubert gets hurt, too.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Nubert</d-speaker>
+		<d-text asterisk>Let your heart look like me. Red, smiling.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="other4-swatchling">Swatchling</h3>
+	<p>Present to the northeast if Swatchling, Zapper, and Ribbick were all recruited. Accompanied by <a href="#other4-rabbick">Rabbick</a> and standing across from <a href="#other4-zapper">Zapper</a> and <a href="#other4-ribbick">Ribbick</a>. Rapidly sweeping with a broom.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>Oh, boss. You know I respect your decisions...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>But, this Zapper creature you recruited is a bit... much.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>I have everything handled, so why not let him retire?</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>He tried to wipe his face with my little bunny here...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>So now we are having a bit of a cleaning contest.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker class="r">Swatchling</d-speaker>
+		<d-text asterisk>... but he's such a CLOD, his very presence dirties the ground!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="other4-rabbick">Rabbick</h3>
+	<p>Present to the northeast if Swatchling, Zapper, and Ribbick were all recruited. Accompanying <a href="#other4-swatchling">Swatchling</a> and standing across from <a href="#other4-zapper">Zapper</a> and <a href="#other4-ribbick">Ribbick</a>. Waving a red flag.</p>
+	<d-box theme="dark">
+		<d-text asterisk>(It's doing its best to cheer Swatchling on.)</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Rabbick</d-speaker>
+		<d-text asterisk>(Doki-doki. Sukkiri.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="other4-zapper">Zapper</h3>
+	<p>Present to the northeast if Swatchling, Zapper, and Ribbick were all recruited. Accompanied by <a href="#other4-ribbick">Ribbick</a> and standing across from <a href="#other4-swatchling">Swatchling</a> and <a href="#other4-rabbick">Rabbick</a>.</p>
+
+	<h4>First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Boss, why don't ya let dis weakling retire, huh?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>He served me tea when I asked for somethin' TOUGH!!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>... Sorry, dis Swatcho guy I mean. Not Ralsei. He's fine.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>Oy, boss! Watch how good I am at cleanin'!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Zapper</d-speaker>
+		<d-text asterisk>I'm beatin' up the dust so bad it ain't come back!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="K"></d-sprite>
+		<d-text asterisk>(Damn, I should try that)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="other4-ribbick">Ribbick</h3>
+	<p>Present to the northeast if Swatchling, Zapper, and Ribbick were all recruited. Accompanying <a href="#other4-zapper">Zapper</a> ands standing across from <a href="#other4-swatchling">Swatchling</a> and <a href="#other4-rabbick">Rabbick</a>. Waving a blue flag.</p>
+	<d-box theme="dark">
+		<d-speaker>Ribbick</d-speaker>
+		<d-text asterisk>Ribbit, ribbit...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-text asterisk>(It's supporting Zapper out of fear.)</d-text>
+	</d-box>
+</section>

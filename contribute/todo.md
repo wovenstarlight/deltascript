@@ -95,7 +95,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 				* ~~`/dungeon` - LIVING QUARTERS FOR BAD GUYS~~ DONE up to Chapter 4
 			* `/town` - Everything outside Ralsei's castle
 				* Town square
-					* `/square` - the central area with the save point
+					* ~~`/square` - the central area with the save point~~ DONE up to Chapter 4
 					* ~~`/seap`~~ DONE up to Chapter 4
 					* ~~`/cafe`~~ DONE up to Chapter 4
 					* ~~`/partydojo`~~ DONE up to Chapter 4
