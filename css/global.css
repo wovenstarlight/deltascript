@@ -35,6 +35,7 @@
 	--green: #00ff00;
 	--white: #fff;
 	--lightgray: #c0c0c0;
+	--midgray: #808080;
 	--darkgray: #404040;
 	--black: #000;
 	--purple: #800080;
@@ -170,6 +171,7 @@ body.dim {
 .cV, .lightgreen { color: var(--lightgreen) }
 .cI, .iceblue { color: var(--iceblue) }
 .lightgray { color: var(--lightgray) }
+.midgray { color: var(--midgray) }
 .darkgray { color: var(--darkgray) }
 .gray { color: var(--gray) }
 .lightyellow { color: var(--lightyellow) }
