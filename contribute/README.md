@@ -81,7 +81,7 @@ Some `global.fe` indexes for certain characters got updated from Chapter 2 to Ch
 	* Sprite `T` (29) -> `i` (44)
 	* Sprite `U` (30) -> `B` (11)
 	* Sprite `a` (36) -> `j` (45)
-	* search using `"Susie".+emotion="(N|23|R|27|S|28|T|29|U|30|a|36)"`
+	* search using `"Susie".+emotion="(N|23|R|27|S|28|T|29|U|30|a|36)"`, and add "updated index, originally ?" afterwards
 
 ### Variable `global.typer`, or the `\\T?` command
 Indicates the speech sound to play as text is printed in the dialogue box, I think? Can be changed directly via setting `global.typer = #`, or by including an `\\T?` command in the dialogue string itself.
