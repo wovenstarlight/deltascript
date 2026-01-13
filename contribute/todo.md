@@ -133,10 +133,7 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* Rollercoasters fight up to DECEMBER flashback DONE
 		* [the unused gml_Object_obj_ch2_city04_Step_0 scene](https://youtu.be/cxiEOeztndw?t=1661)
 		* through the mansion, normal route
-			* Start of mansion to first Queen fight DONE
-			* 4f (roof)
-				* `/finalshowdown` - Battle against GIGA Queen, learning about the Roaring
-					* `#postfight`
+			* Start of mansion to second Queen fight DONE
 		* `/mansionweird` - through the mansion, weird route version. A lot shorter than the normal route mansion page, since you only really have to describe the scenery changes for a lot of it - I think you could combine basically this whole thing into one page…
 			* mansion foyer
 				* cutscene - rouxls

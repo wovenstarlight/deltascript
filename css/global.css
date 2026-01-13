@@ -925,6 +925,9 @@ body:not(.compact) .break {
 		li::marker { content: counter(list-item) " - " }
 	}
 }
+/* For hiding text in compact mode
+Usually for adjusting spacing to match in-game display in expanded mode */
+body.compact .hide { display: none }
 /* #endregion */
 
 /* #region Game styles */
@@ -1970,7 +1973,7 @@ d-option {
 		cursor: help;
 	}
 
-	body.compact & :is(.hide, .break) { display: none }
+	body.compact & .break { display: none }
 }
 /* Panel containing the result of choosing an option in a choice menu */
 d-option-panel {

@@ -16,7 +16,7 @@ sources:
   -
     name: gml_Object_obj_npc_sign_Other_10
     chapters: [2]
-    note: Susie-like/ICE-E statues, Berdly, Queen, Ralsei
+    note: Susie-like/ICE-E statues
   -
     name: gml_Object_obj_readable_room1_Other_10
     chapters: [2]
@@ -59,29 +59,6 @@ toc:
       -
         id: wardrobe
         name: Wardrobe
-  -
-    id: berdly
-    name: Berdly
-    subheadings:
-      -
-        id: berdly-nosusie
-        name: Without Susie in the party
-      -
-        id: berdly-susie
-        name: With Susie in the party
-  -
-    id: queen
-    name: Queen
-    subheadings:
-      -
-        id: queenpre
-        name: Before telling Queen about Castle Town
-      -
-        id: queenpost
-        name: After telling Queen about Castle Town
-  -
-    id: ralsei
-    name: Ralsei
   -
     id: vendingmachine
     name: Vending machine
@@ -204,107 +181,6 @@ toc:
 	<h3 id="wardrobe">Wardrobe</h3>
 	<d-box theme="dark">
 		<d-text asterisk>(It's a wardrobe.)</d-text>
-	</d-box>
-</section>
-
-<section class="d-section" id="berdly">
-	<h2>Berdly</h2>
-	<p>Exclusive to the normal route. Present after the <a href="{{ '/story/chapter2/queen' | relative_url }}">first fight against Queen</a>.</p>
-
-	<h3 id="berdly-nosusie">Without Susie in the party</h3>
-	<p>Immediately after the fight, when Susie has gone ahead.</p>
-	<h4>First time</h4>
-	<d-box theme="dark">
-		<d-sprite speaker="Berdly" variant="dark" emotion="I"></d-sprite>
-		<d-text asterisk>Kris, your deep concern for me... is dextrose.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-sprite speaker="Berdly" variant="dark" emotion="4"></d-sprite>
-		<d-text asterisk>But stay sanguine, my fellow bluebird.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-sprite speaker="Berdly" variant="dark" emotion="I"></d-sprite>
-		<d-text asterisk>I'll find some way to help you yet!</d-text>
-	</d-box>
-
-	<h4>Subsequent times</h4>
-	<d-box theme="dark">
-		<d-sprite speaker="Berdly" variant="dark" emotion="I"></d-sprite>
-		<d-text asterisk>Kris... such insistence. Sorry but, I must turn you down.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-sprite speaker="Berdly" variant="dark" emotion="F"></d-sprite>
-		<d-text asterisk>I've chosen Susan's route, in the VN of life...</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="berdly-susie">With Susie in the party</h3>
-	<p>After reentering the area.</p>
-
-	<h4>First time</h4>
-	<d-box theme="dark">
-		<d-sprite speaker="Berdly" variant="dark" emotion="F"></d-sprite>
-		<d-text asterisk>Ahh, Susan. Returned to feast upon my sprightly visage?</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-sprite speaker="Susie" emotion="4"></d-sprite>
-		<d-text asterisk>What? You look awful.</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-sprite speaker="Berdly" variant="dark" emotion="L"></d-sprite>
-		<d-text asterisk>(Ah, such dere... is tsun, to my ears.)</d-text>
-	</d-box>
-
-	<h4>Subsequent times</h4>
-	<d-box theme="dark">
-		<d-sprite speaker="Susie" emotion="4"></d-sprite>
-		<d-text asterisk>What the hell are you saying?</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-sprite speaker="Berdly" variant="dark" emotion="F"></d-sprite>
-		<d-text asterisk>(How about a kiss, for luck?)</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-sprite speaker="Susie" emotion="5"></d-sprite>
-		<d-text asterisk>Stop mumbling!</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-sprite speaker="Berdly" variant="dark" emotion="F"></d-sprite>
-		<d-text asterisk>(A kiss for me, to change RNG?)</d-text>
-	</d-box>
-</section>
-
-<section class="d-section" id="queen">
-	<h2>Queen</h2>
-	<p>Exclusive to the Weird Route. Present on the narrow path leading to the Dark Fountain, where GIGA Queen is fought on the normal route.</p>
-
-	<h3 id="queenpre">Before telling Queen about Castle Town</h3>
-	<d-box theme="dark">
-		<d-speaker>Queen</d-speaker>
-		<d-text asterisk>...</d-text>
-	</d-box>
-
-	<hr>
-
-	<h3 id="queenpost">After telling Queen about Castle Town</h3>
-	<d-box theme="dark">
-		<d-sprite speaker="Queen" emotion="1"></d-sprite>
-		<d-text asterisk>Amazing So I Can Turn Your Castle Into My Mansion?</d-text>
-	</d-box>
-	<d-box theme="dark">
-		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
-		<d-text asterisk>(W-Wait, that's not what I'm saying...)</d-text>
-	</d-box>
-</section>
-
-<section class="d-section" id="ralsei">
-	<h2>Ralsei</h2>
-	<p>Exclusive to the Weird Route. Present on the narrow path leading to the Dark Fountain, talking to Queen after Susie tells her about Castle Town.</p>
-
-	<d-box theme="dark">
-		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
-		<d-text asterisk>Kris, the Fountain is waiting for you!</d-text>
 	</d-box>
 </section>
 
