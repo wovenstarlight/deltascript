@@ -157,11 +157,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 				* head east for susie to reassure queen and head off
 				* queen/ralsei intxn
 				* pre fountain refreshments and save point
-		* `/fountain` - Sealing the fountain
-			* `#normalroute`
-			* `#weirdroute`
-				* `#weirdroute-postfight`
 		* Hometown scenes...?
+			* `/return` - library immediately post-fountain
 			* `/shelter` - End of chapter scene with Susie confronting Snowy/MK
 			* `/handwashing` - Kris runs the tap.
 		* actually… consider `/weirdroute` - a compilation page for all major route interactions
