@@ -1,0 +1,431 @@
+---
+title: Exploring Queen's mansion - Weird Route
+
+description: >
+  <p>Kris, Susie, and Ralsei head up through Queen's mansion and confront her on the roof.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /story/chapter2/mansion
+    name: Exploring Queen's mansion - Normal route{END_LINK} (storyline progression)
+  -
+    name: Location-specific interactions
+    sublist:
+      -
+        url: /locations/cyberworld/queenmansion/entrance
+        name: Mansion entrance
+      -
+        url: /locations/cyberworld/queenmansion/1F
+        name: Floor 1F
+      -
+        url: /locations/cyberworld/queenmansion/2F
+        name: Floor 2F
+      -
+        url: /locations/cyberworld/queenmansion/3F
+        name: Floor 3F
+      -
+        url: /locations/cyberworld/queenmansion/4F
+        name: Floor 4F
+
+sources:
+  -
+    name: gml_Object_obj_ch2_room_mansion_entrance_Step_0
+    chapters: [2]
+    note: Rouxls cutscene
+  -
+    name: gml_Object_obj_npc_sign_Other_10
+    chapters: [2]
+    note: Rouxls interaction, doors (basement, 2F kitchen)
+  -
+    name: gml_Object_obj_npc_room_Other_10
+    chapters: [2]
+    note: Wig Robot
+  -
+    name: gml_Object_obj_ch2_scene_sideb_noelleroom_Step_0
+    chapters: [2]
+    note: finding Noelle's room
+
+toc:
+  -
+    id: entrance
+    name: Entering the mansion - 1F
+    subheadings:
+      -
+        id: rouxls-cutscene
+        name: Spotting Rouxls Kaard
+      -
+        id: rouxls-interact
+        name: Interacting with the Rouxls statue
+      -
+        id: wigrobot
+        name: Interacting with the Wig Robot
+  -
+    id: hiddenroom
+    name: Hidden room
+    subheadings:
+      -
+        id: storagedoor
+        name: Storage room door
+      -
+        id: basementdoor
+        name: Basement door
+  -
+    id: floor2f3f
+    name: Heading up through the mansion - 2F and 3F
+  -
+    id: floor4f
+    name: Discovering Noelle's room - 4F
+---
+<section class="d-section" id="entrance">
+	<h2>Entering the mansion - 1F</h2>
+
+	<h3 id="rouxls-cutscene">Spotting Rouxls Kaard</h3>
+	<p class="note">Upon entering the mansion and advancing into the foyer, Susie and Ralsei break away from the party to stand in front of the statue of Rouxls.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Huh...? Isn't this...</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to Ralsei. A slight pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Uhh, that guy from before?</d-text>
+	</d-box>
+
+	<p class="note">She turns to look at Rouxls again.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Why is there a statue of him?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>It's... not a statue, Susie.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Huh?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+		<d-text asterisk>You see, each Dark Fountain creates a different "world."</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+		<d-text asterisk>A "world" whose Darkners reflect the will of its fountain.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+		<d-text asterisk>But, though those Darkners can exist in their own worlds...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="4"></d-sprite>
+		<d-text asterisk>They might not "belong" if they go to another one.</d-text>
+	</d-box>
+
+	<p class="note">A pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Huh...</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to Ralsei.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>So if we just bring him back to the castle town...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<p class="note">She turns back to Rouxls. A slight pause.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Do we, uh, have to do that?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>Umm, yes.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="0"></d-sprite>
+		<d-text asterisk>Whatever.</d-text>
+	</d-box>
+
+	<p class="note">Susie and Ralsei get back in line behind Kris, and control is returned to the player. The statue continues to block the way to the <a href="{{ '/locations/cyberworld/queenmansion/colorcafe' | relative_url }}">Color Cafe</a> and cannot be moved, preventing access to Swatch's shop on the Weird Route altogether.</p>
+
+	<hr>
+
+	<h3 id="rouxls-interact">Interacting with the Rouxls statue</h3>
+	<d-box theme="dark">
+		<d-text asterisk>(It's a familiar-looking statue.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="wigrobot">Interacting with the Wig Robot</h3>
+	<p>Stands to the left of the bookcases, near the base of the eastern stairs.</p>
+
+	<d-box theme="dark">
+		<d-speaker>Wig Robot</d-speaker>
+		<d-text asterisk>It's terrible... The butlers are all trapped in the cafe...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Wig Robot</d-speaker>
+		<d-text asterisk>Queen is nowhere to be found, and...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Wig Robot</d-speaker>
+		<d-text asterisk>With no one to defend it, a strange force has taken over the mansion!</d-text>
+	</d-box>
+
+	<hr>
+
+	<p class="note"><a href="{{ '/locations/cyberworld/queenmansion/entrance#forcefield' | relative_url }}">Forcefields</a> block the staircases towards the north of the room. The only available paths are shortcuts: one to the east leading to the <a href="#hiddenroom">hidden area</a> and one through a bookshelf leading <a href="#floor2f3f">upstairs</a>.</p>
+</section>
+
+<section class="d-section" id="hiddenroom">
+	<h2>Hidden room</h2>
+
+	<h3 id="storagedoor">Storage room door</h3>
+	<p>Located to the west of the room.</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(It's locked.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="basementdoor">Basement door</h3>
+	<p>Located to the east of the room. The path to this door is not barred by <a href="{{ '/locations/cyberworld/queenmansion/1F#basementlock' | relative_url }}">an impossible lock, as it is on the normal route</a>.</p>
+
+	<p class="note">The door is locked and cannot be entered, but may be interacted with. The drawing of Queen on the door is scratched out.</p>
+
+	<h4 id="basementdoor1">First time</h4>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>WOAH!!! YOU SAUCY LITTLE [Sponge] YOU!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>DON'T BARGE IN WHEN A MAN IS [ch4nging Forms]!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>... WAIT! WAIT [ONE 2nd]! IS THAT MY [Esteem Custom3r]?!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>THANKS TO YOU AND THAT LIL [Hochi Mama]</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>I AM LIVING [Big]!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>SOON I'LL HAVE EVERY[One] IN THIS CITY EATING RIGHT OUT OF MY [$!$!]!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>HA HA HA! I SURE HOPE NO ONE SEALS THE [Fountain] AROUND NOW.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>HA HA HA! I SURE HOPE. I SURE HOPE.</d-text>
+	</d-box>
+
+	<hr class="hrhalf">
+
+	<h4 id="basementdoor2">Subsequent times</h4>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>KID! I'M BUSY BECOMING [God]. GO PLAY [Minecrap] OR SOMETHING!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-speaker>Spamton</d-speaker>
+		<d-text asterisk>IT'S NOT MY JOB TO BE SOME KIDS' [Extra Boss]!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="floor2f3f">
+	<h2>Heading up through the mansion - 2F and 3F</h2>
+	<p class="note">The hallway portraits on floor 2F have been defaced, bearing Spamton's visage instead of Queen's, some captured mid-laugh. <a href="{{ '/encounters/mauswheel' | relative_url }}">Mauswheel</a> roams the corridors and can optionally be fought. A narration-less forcefield blocks the way to <a href="{{ '/locations/cyberworld/queenmansion/2F#dinnerpartyA' | relative_url }}">Dinner Party Section A</a>, entirely cutting off access to the east wing of 1F. The kitchen door to the west is closed, with interaction only giving the following text:</p>
+
+	<d-box theme="dark">
+		<d-text asterisk>(Closed.)</d-text>
+	</d-box>
+
+	<p class="note">The east dining hall door is open and can be entered; inside is a maze of <a href="{{ '/encounters/pipis' | relative_url }}">Pipis</a> which trigger encounters when touched. Past the maze and through the long hall at the far end, another forcefield blocks the way to the <a href="{{ '/locations/cyberworld/queenmansion/2F#supremetable' | relative_url }}">supreme table</a>. The only available path is to the west. Along this path await more Pipis (mounted on wheels and patrolling outside the locked <a href="{{ '/locations/cyberworld/queenmansion/2F#treasurechest' | relative_url}}">platter room</a>) as well as a hostile <a href="{{ '/encounters/tasquemanager' | relative_url }}">Tasque Manager</a>.</p>
+
+	<p class="note">Beyond Tasque Manager is the teacup ride up to <a href="#floor3f">3F</a>; notably, this ride lacks the teacup globules that drench the party on the normal route. 3F itself is entirely devoid of any interactive objects or entities. The only event on this floor is an optional encounter with a hostile <a href="{{ '/encounters/werewerewire' | relative_url }}">Werewerewire</a> to the west. At any time, the player may take the open-by-default shortcut leading <a href="#floor4f">upstairs</a>.</p>
+</section>
+
+<section class="d-section" id="floor4f">
+	<h2>Discovering Noelle's room - 4F</h2>
+	<p class="note">The path to the left is blocked by another silent forcefield. The party must proceed right; as they pass a closed door, Susie stops and turns to it, seeming to realize something.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>H... huh?</d-text>
+	</d-box>
+
+	<p class="note">Kris and Ralsei also turn to the door as Susie hurries up to it. After a pause, she turns back to them.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Hey, it says this is Noelle's room!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>Kris, let's go in and save her!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>And uh, y'know, teach her not to get in our way.</d-text>
+	</d-box>
+
+	<p class="note">A pause. Susie waits, but seems to receive no response.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="6"></d-sprite>
+		<d-text asterisk>... Kris?</d-text>
+	</d-box>
+
+	<p class="note">She turns to the door.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>Fine, I'll do it myself!</d-text>
+	</d-box>
+
+	<p class="note">She opens and walks through the door, slamming it shut behind her. A long pause. Then Ralsei turns to Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="0"></d-sprite>
+		<d-text asterisk>Kris...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="2"></d-sprite>
+		<d-text asterisk>Don't you wonder... how they're doing in there?</d-text>
+	</d-box>
+
+	<p class="note">He faces the door again. Another long pause. Once again, Ralsei turns to Kris:</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Umm, I said, don't you wonder...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="I"></d-sprite>
+		<d-text asterisk>... how Noelle and Susie are doing?</d-text>
+	</d-box>
+
+	<p class="note">He faces the door again. Another long pause. Once again, Ralsei turns to Kris:</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>Y-you're right, Kris, it has only been 30 seconds...</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>(I'll wait a minute first...)</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns to the door. A long moment passes; Ralsei transitions to dozing off at some point, while Kris remains standing and staring at the door. After a moment, Susie slams open the door, shocking Ralsei awake; she charges out, slamming the door shut behind herself, and stops in front of Kris with a smile.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Alright let's go!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei jolts.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="U"></d-sprite>
+		<d-text asterisk>H-huh? What!? W-wait -- wait!?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="U"></d-sprite>
+		<d-text asterisk>Wait, we were supposed to --</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>Hey, let's go!</d-text>
+	</d-box>
+
+	<p class="note">Ralsei turns to face Susie, jogging agitatedly in place.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="L"></d-sprite>
+		<d-text asterisk>W-wait! Wait, Susie!</d-text>
+	</d-box>
+
+	<p class="note">Susie turns to him.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>What, um, happened in there?</d-text>
+	</d-box>
+
+	<p class="note">Ralsei goes still when Susie speaks:</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="P"></d-sprite>
+		<d-text asterisk>What do you mean what happened?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="J"></d-sprite>
+		<d-text asterisk>U-umm... in there, with Noelle!</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="L"></d-sprite>
+		<d-text asterisk>Nothin.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>N... Nothing? Nothing at all?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="A"></d-sprite>
+		<d-text asterisk>Just told her everything is a dream.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Now she's feeling better.</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="K"></d-sprite>
+		<d-text asterisk>... anything else?</d-text>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="7"></d-sprite>
+		<d-text asterisk>No and let's go.</d-text>
+	</d-box>
+
+	<p class="note">Susie turns around to face Kris.</p>
+
+	<d-box theme="dark">
+		<d-sprite speaker="Susie" emotion="2"></d-sprite>
+		<d-text asterisk>Psst... I'll tell you later, Kris.</d-text>
+		<d-box place="center-x" offset-x="10%">
+			<d-sprite speaker="Ralsei" emotion="32"></d-sprite>
+			<d-text>HEY!</d-text>
+		</d-box>
+	</d-box>
+	<d-box theme="dark">
+		<d-sprite speaker="Ralsei" emotion="Q"></d-sprite>
+		<d-text asterisk>(Oh well, as long as Susie's happy... right?)</d-text>
+	</d-box>
+
+	<p class="note">Control is returned to the player. The door to Noelle's room cannot be interacted with, and the party must proceed eastwards past the electric plug obstacles and a large platform overlooking the fountain. The walkway on the other side leads to <a href="{{ '/story/chapter2/gigaqueen' | relative_url }}">Queen</a>.</p>
+</section>

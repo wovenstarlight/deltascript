@@ -130,33 +130,8 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* migrate prefight dialogue from `/encounters/kroundcardcastle`
 	* `/chapter2`
 		* `/field2` - Cyber Field story parts after SCC up to rollercoasters; subdivide as necessary
-		* Rollercoasters fight up to DECEMBER flashback DONE
-		* [the unused gml_Object_obj_ch2_city04_Step_0 scene](https://youtu.be/cxiEOeztndw?t=1661)
-		* through the mansion, normal route
-			* Start of mansion to second Queen fight DONE
-		* `/mansionweird` - through the mansion, weird route version. A lot shorter than the normal route mansion page, since you only really have to describe the scenery changes for a lot of it - I think you could combine basically this whole thing into one page…
-			* mansion foyer
-				* cutscene - rouxls
-				* NPC "oh no the butlers"
-				* B1F door - go play minecrap
-				* stairs are blocked by forcefields, 2f shortcut open
-			* 2f
-				* kitchen door - closed narration
-				* mauswheel outside
-				* pipis maze
-				* hostile tasque manager
-				* no tea in teacup ride
-			* 3f
-				* shortcuts to foyer and roof automatically open
-				* werewerewire to left, no narration
-				* acid river to east, no boat/narration
-			* 4f (roof)
-				* forcefield blocking left path
-				* heading right triggers noelle room cutscene
-				* proceed eastwards to find queen waiting on roof, false giga fight cutscene
-				* head east for susie to reassure queen and head off
-				* queen/ralsei intxn
-				* pre fountain refreshments and save point
+		* Rollercoasters fight up to fountain DONE
+		* insert somewhere: [the unused gml_Object_obj_ch2_city04_Step_0 scene](https://youtu.be/cxiEOeztndw?t=1661)
 		* Hometown scenes...?
 			* `/return` - library immediately post-fountain
 			* `/shelter` - End of chapter scene with Susie confronting Snowy/MK
