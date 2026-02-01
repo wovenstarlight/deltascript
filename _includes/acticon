@@ -1,5 +1,5 @@
 <img
 	class="acticon"
 	src="{{ include.chara | downcase | prepend: '/assets/images/faces/' | append: '/battle.png' | relative_url }}"
-	alt="With {{ include.chara }}"
+	alt="{%- unless include.nameonly -%} With {% endunless -%} {{ include.chara }}"
 >
