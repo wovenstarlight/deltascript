@@ -953,7 +953,8 @@ function setUp() {
 	})
 
 	// #region Compact mode
-	document.getElementById("toggle-compact").addEventListener("change", e => {
+	const toggleCompact = document.getElementById("toggle-compact");
+	toggleCompact.addEventListener("change", e => {
 		setAllCompact(e.currentTarget.checked);
 		localStorage.setItem("compactMode", e.currentTarget.checked ? "on" : "");
 	});
@@ -961,12 +962,13 @@ function setUp() {
 	if (localStorage.getItem("compactMode")?.length) {
 		// Compact mode has been set to ON
 		setAllCompact(true);
-		document.getElementById("toggle-compact").checked = true;
+		toggleCompact.checked = true;
 	}
 	// #endregion Compact mode
 
 	// #region Disable animations
-	document.getElementById("toggle-anim").addEventListener("change", e => {
+	const toggleAnim = document.getElementById("toggle-anim");
+	toggleAnim.addEventListener("change", e => {
 		!e.currentTarget.checked ? document.body.classList.add("noanim") : document.body.classList.remove("noanim");
 		localStorage.setItem("noAnimations", !e.currentTarget.checked ? "on" : "");
 	});
@@ -977,12 +979,13 @@ function setUp() {
 	if (localStorage.getItem("noAnimations")?.length) {
 		// Animations are DISABLED
 		document.body.classList.add("noanim");
-		document.getElementById("toggle-anim").checked = false;
+		toggleAnim.checked = false;
 	}
 	// #endregion Disable animations
 
 	// #region Dim mode
-	document.getElementById("toggle-dim").addEventListener("change", e => {
+	const toggleDim = document.getElementById("toggle-dim");
+	toggleDim.addEventListener("change", e => {
 		e.currentTarget.checked ? document.body.classList.add("dim") : document.body.classList.remove("dim");
 		localStorage.setItem("dimMode", e.currentTarget.checked ? "on" : "");
 	});
@@ -990,12 +993,13 @@ function setUp() {
 	if (localStorage.getItem("dimMode")?.length) {
 		// Dim mode has been set to ON
 		document.body.classList.add("dim");
-		document.getElementById("toggle-dim").checked = true;
+		toggleDim.checked = true;
 	}
 	// #endregion Dim mode
 
 	// #region Dyslexic-friendly font
-	document.getElementById("toggle-opendyslexic").addEventListener("change", e => {
+	const toggleDyslexia = document.getElementById("toggle-opendyslexic");
+	toggleDyslexia.addEventListener("change", e => {
 		if (e.currentTarget.checked) document.body.classList.add("dyslexic");
 		else document.body.classList.remove("dyslexic");
 
@@ -1005,24 +1009,58 @@ function setUp() {
 	if (localStorage.getItem("dyslexicMode")?.length) {
 		// Dyslexic mode has been set to ON
 		document.body.classList.add("dyslexic");
-		document.getElementById("toggle-opendyslexic").checked = true;
+		toggleDyslexia.checked = true;
 	}
 	// #endregion Dyslexic-friendly font
 
-	// Force-view all choices (if choices are present)
-	const choiceToggle = document.getElementById("open-choices");
+	// #region Show all choices (if present)
+	const toggleChoices = document.getElementById("open-choices");
 	if (document.querySelector("d-choices") !== null) {
-		choiceToggle.addEventListener("click", () => {
+		toggleChoices.addEventListener("click", () => {
 			document.querySelectorAll("d-choices").forEach(menu => menu.openAll());
 		});
 	}
 	// Deactivate choice toggle if no choices present
 	else {
-		choiceToggle.title = "No choices on this page";
-		choiceToggle.classList.add("gray");
-		choiceToggle.setAttribute("disabled", "disabled");
-		choiceToggle.append("*");
+		toggleChoices.title += " | No choices on this page";
+		toggleChoices.classList.add("gray");
+		toggleChoices.setAttribute("disabled", "disabled");
+		toggleChoices.append("*");
 	}
+	// #endregion Show all choices
+
+	// #region Keyboard shortcuts
+	
+	/* Add keyboard shortcuts:
+		Alt+C: compact mode
+		Alt+A: animations
+		Alt+M: dim colors
+		Alt+X: dyslexia font
+		Alt+Z: show all choices
+	*/
+	document.addEventListener("keydown", (e) => {
+		const key = e.key.toUpperCase();
+
+		// Cancel if the user is typing in a textbox
+		if (document.activeElement.tagName === 'INPUT' && document.activeElement.getAttribute("type") === "text") { return }
+
+		const myToggle = (
+			key === "C" ? toggleCompact
+			: key === "A" ? toggleAnim
+			: key === "M" ? toggleDim
+			: key === "X" ? toggleDyslexia
+			: null
+		);
+
+		if (myToggle !== null && e.altKey) {
+			myToggle.checked = !myToggle.checked;
+			myToggle.dispatchEvent(new Event("change"));
+		}
+		else if (key === "Z" && e.altKey) {
+			toggleChoices.click();
+		}
+	});
+	// #endregion Keyboard shortcuts
 	// #endregion Accessibility features
 
 	// #region Visual display
@@ -1208,9 +1246,9 @@ function setUp() {
 		hr:not([class])
 	`) !== null;
 	if (!globalAnims) {
-		(animToggle = document.querySelector("label[for='toggle-anim']")).title = "No animations on this page";
-		animToggle.classList.add("gray");
-		animToggle.append("*");
+		(animLabel = document.querySelector("label[for='toggle-anim']")).title += " | No animations on this page";
+		animLabel.classList.add("gray");
+		animLabel.append("*");
 	}
 
 	// Highlight the current page in the top navbar, if any

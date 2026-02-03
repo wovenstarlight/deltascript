@@ -7,27 +7,27 @@
 	<section class="d-section" id="menucontents" hidden>
 		<a href="#sitehead">Back to top</a>
 
-		<label for="toggle-compact" class="toggle">
+		<label for="toggle-compact" class="toggle" title="Alt + C">
 			<input type="checkbox" id="toggle-compact" class="visually-hidden">
 			Compact mode
 		</label>
 
-		<label for="toggle-dim" class="toggle">
+		<label for="toggle-dim" class="toggle" title="Alt + M">
 			<input type="checkbox" id="toggle-dim" class="visually-hidden">
 			Dim colors
 		</label>
 
-		<label for="toggle-anim" class="toggle">
+		<label for="toggle-anim" class="toggle" title="Alt + A">
 			<input type="checkbox" id="toggle-anim" class="visually-hidden" checked>
 			Animations
 		</label>
 
-		<label for="toggle-opendyslexic" class="toggle">
+		<label for="toggle-opendyslexic" class="toggle" title="Alt + X">
 			<input type="checkbox" id="toggle-opendyslexic" class="visually-hidden">
 			Dyslexia-friendly font
 		</label>
 
-		<button id="open-choices">
+		<button id="open-choices" title="Alt + Z">
 			Show all choices
 		</button>
 	</section>
