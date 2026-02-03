@@ -130,10 +130,9 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* migrate prefight dialogue from `/encounters/kroundcardcastle`
 	* `/chapter2`
 		* `/field2` - Cyber Field story parts after SCC up to rollercoasters; subdivide as necessary
-		* Rollercoasters fight up to fountain DONE
+		* Rollercoasters fight up to return to LW DONE
 		* insert somewhere: [the unused gml_Object_obj_ch2_city04_Step_0 scene](https://youtu.be/cxiEOeztndw?t=1661)
 		* Hometown scenes...?
-			* `/return` - library immediately post-fountain
 			* `/shelter` - End of chapter scene with Susie confronting Snowy/MK
 			* `/handwashing` - Kris runs the tap.
 		* actually… consider `/weirdroute` - a compilation page for all major route interactions
