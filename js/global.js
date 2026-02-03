@@ -964,6 +964,11 @@ function setUp() {
 		setAllCompact(true);
 		toggleCompact.checked = true;
 	}
+	if (document.querySelector("d-box, d-choices") === null) {
+		(labelCompact = document.querySelector("label[for='toggle-compact']")).title += " | No dialogue on this page";
+		labelCompact.classList.add("gray");
+		labelCompact.append("*");
+	}
 	// #endregion Compact mode
 
 	// #region Disable animations
