@@ -258,6 +258,16 @@
 			"</d-option-panel>",
 		]
 	},
+	"Choice script": {
+		"scope": "html,liquid",
+		"prefix": "scr-text",
+		"body": [
+			"#  -",
+			"#    name: gml_GlobalScript_scr_text",
+			"#    chapters: [$1]",
+			"#    note: choices"
+		]
+	},
 	// #endregion
 
 	// #region Editing
@@ -306,6 +316,16 @@
 		"scope": "html,liquid",
 		"prefix": "wiki-link",
 		"body": "{% include wikilink page='$1' %}"
+	},
+	"Source scripts": {
+		"scope": "html,liquid",
+		"prefix": ["gml", "source", "script"],
+		"body": [
+			"#  -",
+			"#    name: gml_${1|Object,GlobalScript,RoomCC|}_${2:name}_${3|Step_0,Other_10,Create_0,Draw_0|}",
+			"#    chapters: [$4]",
+			"#    note: $0"
+		]
 	}
 	// #endregion
 }
