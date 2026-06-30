@@ -67,7 +67,7 @@
 		"prefix": ["box-speaker", "dialogue-speaker"],
 		"body": [
 			"<d-box theme=\"${1|dark,light,plain,fade|}\">",
-			"\t<d-speaker>${2|Susie,Ralsei,Noelle,Lancer,Kris|}</d-speaker>",
+			"\t<d-speaker>${2|Susie,Ralsei,Noelle,Lancer,Berdly,Kris|}</d-speaker>",
 			"\t<d-text asterisk>$0</d-text>",
 			"</d-box>"
 		]
@@ -77,7 +77,7 @@
 		"prefix": ["box-sprite", "dialogue-sprite"],
 		"body": [
 			"<d-box theme=\"${1|dark,light,plain,fade|}\">",
-			"\t<d-sprite speaker=\"${2|Susie,Ralsei,Noelle,Lancer,Kris|}\" emotion=\"${3|0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z|}\"></d-sprite>",
+			"\t<d-sprite speaker=\"${2|Susie,Ralsei,Noelle,Lancer,Berdly,Kris|}\" emotion=\"${3|0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z|}\"></d-sprite>",
 			"\t<d-text asterisk>$0</d-text>",
 			"</d-box>"
 		]
@@ -121,7 +121,7 @@
 		"prefix": "battle-menu-sprite",
 		"body": [
 			"<d-box theme=\"battlemenu\">",
-			"\t<d-sprite speaker=\"${2|Susie,Ralsei,Noelle,Lancer,Kris|}\" emotion=\"${3|0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z|}\"></d-sprite>",
+			"\t<d-sprite speaker=\"${2|Susie,Ralsei,Noelle,Lancer,Berdly,Kris|}\" emotion=\"${3|0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z|}\"></d-sprite>",
 			"\t<d-text asterisk>$0</d-text>",
 			"</d-box>"
 		]
@@ -153,6 +153,28 @@
 			"<d-box theme=\"battledesc\">",
 			"\t<d-text>$0</d-text>",
 			"</d-box>"
+		]
+	},
+	"ACT icon": {
+		"scope": "html,liquid",
+		"prefix": "act-icon",
+		"body": "{% include acticon chara=\"${1|Susie,Ralsei,Noelle,Gerson,Kris|}\" -%}"
+	},
+	"Recruit profile": {
+		"scope": "html,liquid",
+		"prefix": ["profile", "recruit"],
+		"body": [
+			"{% include profile",
+			"\tname=\"$1\"",
+			"\tdesc=\"$2\"",
+			"\tlike=\"$3\"",
+			"\tdislike=\"$4\"",
+			"\tchapter=$5",
+			"\tlevel=$6",
+			"\tattack=$7",
+			"\tdefense=$8",
+			"\telement=\"$9\"",
+			"%}",
 		]
 	},
 	// #endregion
@@ -278,28 +300,6 @@
 			"</section>",
 			"",
 			"<section class=\"d-section\" id=\"$1\">",
-		]
-	},
-	"ACT icon": {
-		"scope": "html,liquid",
-		"prefix": "act-icon",
-		"body": "{% include acticon chara=\"${1|Susie,Ralsei,Noelle,Gerson,Kris|}\" -%}"
-	},
-	"Recruit profile": {
-		"scope": "html,liquid",
-		"prefix": ["profile", "recruit"],
-		"body": [
-			"{% include profile",
-			"\tname=\"$1\"",
-			"\tdesc=\"$2\"",
-			"\tlike=\"$3\"",
-			"\tdislike=\"$4\"",
-			"\tchapter=$5",
-			"\tlevel=$6",
-			"\tattack=$7",
-			"\tdefense=$8",
-			"\telement=\"$9\"",
-			"%}",
 		]
 	},
 	"Wiki link": {
