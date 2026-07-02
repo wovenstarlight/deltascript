@@ -3,15 +3,17 @@ title: Armor
 
 description: >
   <p>Names, descriptions, and reactions to armor equippable by the party members.</p>
+
+  <p>Susie initially refuses to wear ribbons, but agrees to wear them starting partway through Chapter 5.</p>
 # Want to get stuff from the latest chapter because that'll also have all the equipment from previous chapters
 
 sources:
   -
     name: gml_GlobalScript_scr_armorinfo
-    chapters: [2, 3, 4]
+    chapters: [1, 2, 3, 4, 5]
   -
     name: gml_Object_obj_darkcontroller_Step_0
-    chapters: [4]
+    chapters: [4, 5]
     note: additional party members' reactions
 
 credits: >
@@ -133,11 +135,41 @@ toc:
         id: powerband
         name: Power Band
       -
-        id: princessribbon
+        id: princessrbn
         name: Princess Ribbon
       -
         id: goldwidow
         name: Gold Widow
+  -
+    name: First seen in Chapter 5
+    subheadings:
+      -
+        id: monarchrbn
+        name: Monarch Ribbon
+      -
+        id: truetie
+        name: True Tie
+      -
+        id: dogwidow
+        name: Dog Widow
+      -
+        id: redribbon
+        name: Red Ribbon
+      -
+        id: netskiehat
+        name: Netskie Hat
+      -
+        id: sethspecs
+        name: Seth Specs
+      -
+        id: yellowhat
+        name: Yellow Hat
+      -
+        id: oglove
+        name: Orange Glove
+      -
+        id: greenapron
+        name: Green Apron
 ---
 {% comment %}
 The value of global.submenu controls which editor you're in:
@@ -163,6 +195,7 @@ wwho is who you're trying to equip the weapon/armor to
 	<p class="note">Susie's armor is not removed.</p>
 </section>
 
+<!-- #region Chapter 1 -->
 <section class="d-section" id="ambercard"> <!-- id 1 -->
 	<h2>Amber Card</h2>
 
@@ -244,22 +277,29 @@ wwho is who you're trying to equip the weapon/armor to
 	<h3 id="pinkribbon-react">Reactions</h3>
 
 	<h4 id="pinkribbon-react-susie">Susie</h4>
+	<h5>Before agreeing to wear ribbons</h5>
 	<p class="note">Cannot be equipped by Susie.</p>
 
-	<h5>Outside of Chapter 2</h5>
+	<h6>Outside of Chapter 2</h6>
 	<d-box theme="objreact">
 		<d-speaker>Susie</d-speaker>
 		<d-text>Nope. Not in 1st grade anymore.</d-text>
 	</d-box>
 
-	<h5>During Chapter 2</h5>
+	<h6>During Chapter 2</h6>
 	<d-box theme="objreact">
 		<d-speaker>Susie</d-speaker>
 		<d-text>I said NO! C'mon already!</d-text>
 	</d-box>
 
+	<h5>After agreeing to wear ribbons</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Fine. On my shoulder.</d-text>
+	</d-box>
+
 	<h4 id="pinkribbon-react-ralsei">Ralsei</h4>
-	<h5>Outside of Chapter 2</h5>
+	<h5>During Chapters 1, 3, and 4</h5>
 	<d-box theme="objreact">
 		<d-speaker>Ralsei</d-speaker>
 		<d-text>Um... D-do I look cute...?</d-text>
@@ -269,6 +309,12 @@ wwho is who you're trying to equip the weapon/armor to
 	<d-box theme="objreact">
 		<d-speaker>Ralsei</d-speaker>
 		<d-text>It's nice dressing up...</d-text>
+	</d-box>
+
+	<h5>During Chapter 5</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Um... d-do I look cute...?</d-text>
 	</d-box>
 
 	<h4 id="pinkribbon-react-noelle">Noelle</h4>
@@ -291,22 +337,29 @@ wwho is who you're trying to equip the weapon/armor to
 	<h3 id="whiteribbon-react">Reactions</h3>
 
 	<h4 id="whiteribbon-react-susie">Susie</h4>
+	<h5>Before agreeing to wear ribbons</h5>
 	<p class="note">Cannot be equipped by Susie.</p>
 
-	<h5>Outside of Chapter 2</h5>
+	<h6>Outside of Chapter 2</h6>
 	<d-box theme="objreact">
 		<d-speaker>Susie</d-speaker>
 		<d-text>Nope. Not in 1st grade anymore.</d-text>
 	</d-box>
 
-	<h5>During Chapter 2</h5>
+	<h6>During Chapter 2</h6>
 	<d-box theme="objreact">
 		<d-speaker>Susie</d-speaker>
 		<d-text>I said NO! C'mon already!</d-text>
 	</d-box>
 
+	<h5>After agreeing to wear ribbons</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Cool. A fist wrap.</d-text>
+	</d-box>
+
 	<h4 id="whiteribbon-react-ralsei">Ralsei</h4>
-	<h5>Outside of Chapter 2</h5>
+	<h5>During Chapters 1, 3, and 4</h5>
 	<d-box theme="objreact">
 		<d-speaker>Ralsei</d-speaker>
 		<d-text>Um... D-do I look cute...?</d-text>
@@ -315,7 +368,13 @@ wwho is who you're trying to equip the weapon/armor to
 	<h5>During Chapter 2</h5>
 	<d-box theme="objreact">
 		<d-speaker>Ralsei</d-speaker>
-		<d-text>It's nice being dressed up...</d-text>
+		<d-text>It's nice dressing up...</d-text>
+	</d-box>
+
+	<h5>During Chapter 5</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Um... d-do I look cute...?</d-text>
 	</d-box>
 
 	<h4 id="whiteribbon-react-noelle">Noelle</h4>
@@ -428,7 +487,9 @@ wwho is who you're trying to equip the weapon/armor to
 		<d-text>... (I like it...)</d-text>
 	</d-box>
 </section>
+<!-- #endregion Chapter 1 -->
 
+<!-- #region Chapter 2 -->
 <section class="d-section" id="silvercard"> <!-- id 8 -->
 	<h2>Silver Card</h2>
 
@@ -474,11 +535,17 @@ wwho is who you're trying to equip the weapon/armor to
 	<h3 id="twinribbon-react">Reactions</h3>
 
 	<h4 id="twinribbon-react-susie">Susie</h4>
+	<h5>Before agreeing to wear ribbons</h5>
 	<p class="note">Cannot be equipped by Susie.</p>
-
 	<d-box theme="objreact">
 		<d-speaker>Susie</d-speaker>
 		<d-text>... it gets worse and worse.</d-text>
+	</d-box>
+
+	<h5>After agreeing to wear ribbons</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>NOT the hair though.</d-text>
 	</d-box>
 
 	<h4 id="twinribbon-react-ralsei">Ralsei</h4>
@@ -546,9 +613,16 @@ wwho is who you're trying to equip the weapon/armor to
 	</d-box>
 
 	<h4 id="chainmail-react-ralsei">Ralsei</h4>
+	<h5>Chapters 1 to 4</h5>
 	<d-box theme="objreact">
 		<d-speaker>Ralsei</d-speaker>
 		<d-text>A letter?... For me...?</d-text>
+	</d-box>
+
+	<h5>Chapter 5</h5>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>A letter?... for me...?</d-text>
 	</d-box>
 
 	<h4 id="chainmail-react-noelle">Noelle</h4>
@@ -891,7 +965,9 @@ wwho is who you're trying to equip the weapon/armor to
 		<d-text>Queen... gave this to me.</d-text>
 	</d-box>
 </section>
+<!-- #endregion Chapter 2 -->
 
+<!-- #region Chapter 3 -->
 <section class="d-section" id="shadowmantle"> <!-- id 23 -->
 	<h2>Shadow Mantle</h2>
 	<p>Appears as "ShadowMantle" in-game.</p>
@@ -1058,11 +1134,17 @@ wwho is who you're trying to equip the weapon/armor to
 	<h3 id="blueribbon-react">Reactions</h3>
 
 	<h4 id="blueribbon-react-susie">Susie</h4>
+	<h5>Before agreeing to wear ribbons</h5>
 	<p class="note">Cannot be equipped by Susie.</p>
-
 	<d-box theme="objreact">
 		<d-speaker>Susie</d-speaker>
 		<d-text>ABSOLUTELY not.</d-text>
+	</d-box>
+
+	<h5>After agreeing to wear ribbons</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hey, ONLY on the arm.</d-text>
 	</d-box>
 
 	<h4 id="blueribbon-react-ralsei">Ralsei</h4>
@@ -1187,7 +1269,9 @@ wwho is who you're trying to equip the weapon/armor to
 		<d-text>Look, I'm like a gift!</d-text>
 	</d-box>
 </section>
+<!-- #endregion Chapter 3 -->
 
+<!-- #region Chapter 4 -->
 <section class="d-section" id="waferguard"> <!-- id 50 -->
 	<h2>Waferguard</h2>
 
@@ -1211,6 +1295,9 @@ wwho is who you're trying to equip the weapon/armor to
 		<d-speaker>Ralsei</d-speaker>
 		<d-text>It's got drool on it.</d-text>
 	</d-box>
+
+	<h5>During Chapter 4 only</h5>
+	<p>Accompanies Ralsei's reaction.</p>
 	<d-box theme="objreact">
 		<d-speaker>Susie</d-speaker>
 		<d-text>(Too bad)</d-text>
@@ -1289,34 +1376,40 @@ wwho is who you're trying to equip the weapon/armor to
 	</d-box>
 </section>
 
-<section class="d-section" id="princessribbon"> <!-- id 53 -->
+<section class="d-section" id="princessrbn"> <!-- id 53 -->
 	<h2>Princess Ribbon</h2>
 	<p>Appears as "PrincessRBN" in-game.</p>
 
-	<h3 id="princessribbon-description">Description</h3>
+	<h3 id="princessrbn-description">Description</h3>
 	<d-box theme="objmenu">
 		<d-text>Elegant lace ribbon with gloves,<span class="break"></span> delicate enough to see through. +4 DEF +2 ATK</d-text>
 	</d-box>
 
 	<hr>
 
-	<h3 id="princessribbon-react">Reactions</h3>
+	<h3 id="princessrbn-react">Reactions</h3>
 
-	<h4 id="princessribbon-react-susie">Susie</h4>
+	<h4 id="princessrbn-react-susie">Susie</h4>
+	<h5>Before agreeing to wear ribbons</h5>
 	<p class="note">Cannot be equipped by Susie.</p>
-
 	<d-box theme="objreact">
 		<d-speaker>Susie</d-speaker>
 		<d-text>Nah. Gloves don't fit.</d-text>
 	</d-box>
 
-	<h4 id="princessribbon-react-ralsei">Ralsei</h4>
+	<h5>After agreeing to wear ribbons</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Kris, wear the gloves.</d-text>
+	</d-box>
+
+	<h4 id="princessrbn-react-ralsei">Ralsei</h4>
 	<d-box theme="objreact">
 		<d-speaker>Ralsei</d-speaker>
 		<d-text>Cute! (Gloves don't fit)</d-text>
 	</d-box>
 
-	<h4 id="princessribbon-react-noelle">Noelle</h4>
+	<h4 id="princessrbn-react-noelle">Noelle</h4>
 	<d-box theme="objreact">
 		<d-speaker>Noelle</d-speaker>
 		<d-text>Kris, you can wear the gloves!</d-text>
@@ -1356,3 +1449,316 @@ wwho is who you're trying to equip the weapon/armor to
 		<d-text>E-Ew! Kris, get that away!</d-text>
 	</d-box>
 </section>
+<!-- #endregion Chapter 4 -->
+
+<!-- #region Chapter 5 -->
+<section class="d-section" id="monarchrbn"> <!-- id 30 -->
+	<h2>Monarch Ribbon</h2>
+	<p>Appears as "MonarchRBN" in-game.</p>
+
+	<h3 id="monarchrbn-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A ribbon like the wings of a butterfly.</d-text>
+		<d-text>Increases healing ability when equipped.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="monarchrbn-react">Reactions</h3>
+	<h4 id="monarchrbn-react-susie">Susie</h4>
+	<h5>Before agreeing to wear ribbons</h5>
+	<p class="note">Cannot be equipped to Susie.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I'll squash it.</d-text>
+	</d-box>
+
+	<h5>After agreeing to wear ribbons</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Got a taranchula one?</d-text>
+	</d-box>
+
+	<h4 id="monarchrbn-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>My horns are like antenna!</d-text>
+	</d-box>
+
+	<h4 id="monarchrbn-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>They're not ANTENNA!! They're ant-LERS!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="truetie"> <!-- id 31 -->
+	<h2>True Tie</h2>
+	<p>Appears as "TrueTie" in-game.</p>
+
+	<h3 id="truetie-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>The genuine tie worn by a forgotten TV star.</d-text>
+		<d-text>Defends against the Puppet&Cat element.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="truetie-react">Reactions</h3>
+	<h4 id="truetie-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>More hand-me-downs?</d-text>
+	</d-box>
+
+	<h4 id="truetie-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Ready for my close-up!</d-text>
+	</d-box>
+
+	<h4 id="truetie-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>What's next, a fedora?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dogwidow"> <!-- id 32 -->
+	<h2>Dog Widow</h2>
+	<p>Appears as "DogWidow" in-game.</p>
+
+	<h3 id="dogwidow-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A brooch in the shape of a golden pooch.</d-text>
+		<d-text>You lose almost all money after battle.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dogwidow-react">Reactions</h3>
+	<h4 id="dogwidow-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>This is annoying.</d-text>
+	</d-box>
+
+	<h4 id="dogwidow-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>This is annoying.</d-text>
+	</d-box>
+
+	<h4 id="dogwidow-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Pff... YOU should wear it, Kris.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="redribbon"> <!-- id 33 -->
+	<h2>Red Ribbon</h2>
+	<p>Appears as "RedRibbon" in-game.</p>
+
+	<h3 id="redribbon-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A ribbon with an inscription to drive<span class="break"></span> away resident spirits, if they don't pay.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="redribbon-react">Reactions</h3>
+
+	<h4 id="redribbon-react-susie">Susie</h4>
+	<h5>Before agreeing to wear ribbons</h5>
+	<p class="note">Cannot be equipped by Susie.</p>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Nah, I guess... not.</d-text>
+	</d-box>
+
+	<h5>After agreeing to equip ribbons</h5>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Kris's got the tab.</d-text>
+	</d-box>
+
+	<h4 id="redribbon-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Red and white...</d-text>
+	</d-box>
+
+	<h4 id="redribbon-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Umm, your dad's name is on this.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="netskiehat"> <!-- id 34 -->
+	<h2>Netskie Hat</h2>
+	<p>Appears as "NetskieHat" in-game.</p>
+
+	<h3 id="netskiehat-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A white-yellow hat for someone with fox<span class="break"></span> ears. Somehow you can wear more than one.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="netskiehat-react">Reactions</h3>
+
+	<h4 id="netskiehat-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Cool. Visible ears.</d-text>
+	</d-box>
+
+	<h4 id="netskiehat-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Fits my horns perfectly!</d-text>
+	</d-box>
+
+	<h4 id="netskiehat-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Does not. Fit my antlers.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="sethspecs"> <!-- id 35 -->
+	<h2>Seth Specs</h2>
+	<p>Appears as "SethSpecs" in-game.</p>
+
+	<h3 id="sethspecs-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>A tactician's glasses. Become invulnerable for<span class="break"></span> longer after being damaged.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="sethspecs-react">Reactions</h3>
+
+	<h4 id="sethspecs-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Easier than stealing Ralsei's.</d-text>
+	</d-box>
+
+	<h4 id="sethspecs-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>I'm ready to do your homework!</d-text>
+	</d-box>
+
+	<h4 id="sethspecs-react-noelle">Noelle</h4>
+	<p class="note">Cannot be equipped by Noelle.</p>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>That's too much like...</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="yellowhat"> <!-- id 36 -->
+	<h2>Yellow Hat</h2>
+	<p>Appears as "YellowHat" in-game.</p>
+
+	<h3 id="yellowhat-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>The hat of a just cowboy. Makes spells<span class="break"></span> 20% more effective.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="yellowhat-react">Reactions</h3>
+
+	<h4 id="yellowhat-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Get in Horse Mode, Ralsei.</d-text>
+	</d-box>
+
+	<h4 id="yellowhat-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Can Susie be the horse?</d-text>
+	</d-box>
+
+	<h4 id="yellowhat-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>(At least I'm not the horse)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="oglove"> <!-- id 37 -->
+	<h2>Orange Glove</h2>
+	<p>Appears as "O.Glove" in-game.</p>
+
+	<h3 id="oglove-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>The glove of a brave fighter.</d-text>
+		<d-text>Susie's SCYTHEMARE will cost less TP. </d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="oglove-react">Reactions</h3>
+
+	<h4 id="oglove-react-kris">Kris</h4>
+	<p class="note">Cannot be equipped by Kris.</p>
+
+	<h4 id="oglove-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Helps me hold the axe.</d-text>
+	</d-box>
+
+	<h4 id="oglove-react-ralsei">Ralsei</h4>
+	<p class="note">Cannot be equipped by Ralsei.</p>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Um... I need training, first.</d-text>
+	</d-box>
+
+	<h4 id="oglove-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>I'm used to gloves. I mean, um, oven mitts.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="greenapron"> <!-- id 38 -->
+	<h2>Green Apron</h2>
+	<p>Appears as "GreenApron" in-game.</p>
+
+	<h3 id="greenapron-description">Description</h3>
+	<d-box theme="objmenu">
+		<d-text>The apron of a kind chef. The wearer<span class="break"></span> recovers 16% of their max HP after defending.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="greenapron-react">Reactions</h3>
+
+	<h4 id="greenapron-react-susie">Susie</h4>
+	<d-box theme="objreact">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Arright, back to cooking fire.</d-text>
+	</d-box>
+
+	<h4 id="greenapron-react-ralsei">Ralsei</h4>
+	<d-box theme="objreact">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Horse devors, anyone?</d-text>
+	</d-box>
+
+	<h4 id="greenapron-react-noelle">Noelle</h4>
+	<d-box theme="objreact">
+		<d-speaker>Noelle</d-speaker>
+		<d-text>Kris, can you, um, tie the back for me...?</d-text>
+	</d-box>
+</section>
+<!-- #endregion Chapter 5 -->
