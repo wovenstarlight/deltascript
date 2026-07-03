@@ -81,6 +81,8 @@ class DialogueSpeaker extends HTMLElement {
 			case "knight":
 			// Chapter 4
 			case "titan":
+			// Chapter 5
+			case "flowery":
 				this.classList.add(speaking);
 				break;
 
@@ -89,7 +91,7 @@ class DialogueSpeaker extends HTMLElement {
 				this.classList.add("rouxls");
 				break;
 
-				case "jigsaw joe":
+			case "jigsaw joe":
 				this.classList.add("jigsawjoe");
 				break;
 
@@ -128,6 +130,17 @@ class DialogueSpeaker extends HTMLElement {
 			case "gerson":
 			case "old man":
 				this.classList.add("gerson");
+
+			// Chapter 5
+			case "aqua":
+			case "seth":
+			case "purple":
+			case "blue":
+			case "yellow":
+			case "green":
+			case "orange":
+				this.classList.add("flower", speaking.charAt(0));
+				break;
 
 			default:
 				break;
@@ -171,6 +184,7 @@ class DialogueSprite extends HTMLElement {
 			: speaker === "Toriel" ? "home"			// ...home clothes for Toriel
 			: speaker === "Asgore" ? "nocrown"		// ...crownless for Asgore
 			: speaker === "Rouxls" ? "nohat"		// ...hatless for Rouxls
+			: speaker === "Flowery" ? "standard"	// ...uninjured for Flowery
 			: "" );									// ...no variants for all others
 		const emotion = this.getAttribute("emotion");
 		const emotionIndex = emotionToIndex(emotion);

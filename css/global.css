@@ -94,6 +94,14 @@
 	--eram: #f26522;
 	/* Chapter 4 */
 	--gerson: #65aa26;
+	/* Chapter 5 */
+	--flowery: #fee502;
+	--flower-aqua: #46e3ff;
+	--flower-purple: #eb63eb;
+	--flower-blue: #00aef0;
+	--flower-yellow: #fff200;
+	--flower-orange: #ffa040;
+	--flower-green: #00a651;
 
 	--font-base: "DeltaFont", "Courier New", Courier, monospace;
 	--font-condensed: "DeltaFont Condensed", var(--font-base);
@@ -145,6 +153,11 @@ body.dim {
 	--swatchling-blue: #4067ff; /* CUSTOM-PICKED, NOT FROM SPRITE */
 	--lanino: #b89d64; /* CUSTOM-PICKED, NOT FROM SPRITE */
 	--elnina: #7497ca; /* CUSTOM-PICKED, NOT FROM SPRITE */
+	--flowery: #c29702; /* from injured sprite */
+	--flower-aqua: #2fa1b1; /* color-mixed from sprite's 2 shades of blue */
+	--flower-purple: #9f619f; /* CUSTOM-PICKED, NOT FROM SPRITE */
+	--flower-yellow: #ada400; /* CUSTOM-PICKED, NOT FROM SPRITE */
+	--flower-orange: #b6722e; /* CUSTOM-PICKED, NOT FROM SPRITE */
 }
 /* #region Color-specific classes */
 .cR, .red { color: var(--red) }
@@ -323,6 +336,16 @@ d-box[theme=battlemenu],
 }
 /* Chapter 4 */
 .gerson { color: var(--gerson) }
+/* Chapter 5 */
+.flowery { color: var(--flowery) }
+.flower {
+	&.a, &.c { color: var(--flower-aqua) }
+	&.s, &.p { color: var(--flower-purple) }
+	&.b { color: var(--flower-blue) }
+	&.y { color: var(--flower-yellow) }
+	&.g { color: var(--flower-green) }
+	&.o { color: var(--flower-orange) }
+}
 /* #endregion */
 /* #endregion */
 /* #region Font-specific classes */
@@ -1738,7 +1761,11 @@ d-text {
 	&[asterisk="K_K" i], &[asterisk="KK" i],
 	&[asterisk="Happy" i], &[asterisk="Nice" i],
 	&[asterisk="Mad" i], &[asterisk="Mean" i],
-	&[asterisk="Sad" i], &[asterisk="Shy" i] {
+	&[asterisk="Sad" i], &[asterisk="Shy" i],
+	&[asterisk="Aqua" i], &[asterisk="Cyan" i],
+	&[asterisk="Seth" i], &[asterisk="Purple" i],
+	&[asterisk="Green" i], &[asterisk="Orange" i],
+	&[asterisk="Blue" i], &[asterisk="Yellow" i] {
 		position: relative;
 		padding-inline-start: 1.25em;
 		text-indent: unset;
@@ -1798,6 +1825,12 @@ d-text {
 		background-image: url("../assets/images/faces/clover/sad.png");
 		content: "(Shy)";
 	}
+	&:is([asterisk="Aqua" i], [asterisk="Cyan" i])::before { background-image: url("../assets/images/faces/flowers/aqua.png") }
+	&:is([asterisk="Seth" i], [asterisk="Purple" i])::before { background-image: url("../assets/images/faces/flowers/seth.png") }
+	&[asterisk="Blue" i]::before { background-image: url("../assets/images/faces/flowers/blue.png") }
+	&[asterisk="Yellow" i]::before { background-image: url("../assets/images/faces/flowers/yellow.png") }
+	&[asterisk="Green" i]::before { background-image: url("../assets/images/faces/flowers/green.png") }
+	&[asterisk="Orange" i]::before { background-image: url("../assets/images/faces/flowers/orange.png") }
 
 	&.hideoverflow { white-space: pre }
 
