@@ -1683,6 +1683,14 @@ d-speaker {
 	color: var(--lightyellow);
 	text-shadow: none;
 	&::after { content: ":" }
+	&:has(~ d-speaker, ~ d-sprite)::after,
+	d-sprite:has(~ d-speaker, ~ d-sprite) &::after { content: "," }
+	&:has(+ d-speaker:last-of-type, + d-sprite:last-of-type)::after,
+	d-sprite:has(+ d-speaker:last-of-type, + d-sprite:last-of-type) &::after {
+		content: " &";
+		margin-inline-end: 0.5ch;
+		color: var(--midgray);
+	}
 	d-box:not([theme^=battletalk], [theme=objreact]):not(:state(compact)) &,
 	d-box[theme=battletalkround]:not(:state(compact)) &:is(.tenna, .susie, .ralsei, .lancer) {
 		position: absolute;
