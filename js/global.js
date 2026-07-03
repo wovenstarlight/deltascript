@@ -165,6 +165,7 @@ function emotionToIndex(emotion) {
 		code >= 48 && code <= 57 ? parseInt(emotion)	// Numeric form
 		: code >= 65 && code <= 90 ? code - 55			// A-Z; gets converted to the range 10-35
 		: code >= 97 && code <= 122 ? code - 61			// a-z; gets converted to the range 36-61
+		: code < 48 ? emotion.slice(1)					// A symbol, typically +, for text form
 		: 0	// fallback
 	);
 }
@@ -185,9 +186,15 @@ class DialogueSprite extends HTMLElement {
 			: speaker === "Asgore" ? "nocrown"		// ...crownless for Asgore
 			: speaker === "Rouxls" ? "nohat"		// ...hatless for Rouxls
 			: speaker === "Flowery" ? "standard"	// ...uninjured for Flowery
-			: "" );									// ...no variants for all others
-		const emotion = this.getAttribute("emotion");
-		const emotionIndex = emotionToIndex(emotion);
+			: "" ),									// ...no variants for all others
+			variantLabel = ["eyes", "hat", "crown"].includes(variant) ? `with ${variant}`
+				: ["noeyes", "nohat", "nocrown"].includes(variant) ? `without ${variant.slice(2)}`
+				: variant === "nohat/blood" ? "without hat, bloodied"
+				: ["light", "dark"].includes(variant) ? `${variant.charAt(0).toUpperCase()}${variant.slice(1)} World`
+				: ["home", "church", "pirate"].includes(variant) ? `${variant} clothes`
+				: variant;
+		const emotion = this.getAttribute("emotion"),
+			emotionIndex = emotionToIndex(emotion);
 		const src = (
 			`${BASE_URL}/assets/images/faces/${speaker.toLowerCase()
 			}${variant.length ? `/${variant}` : ""
@@ -199,8 +206,8 @@ class DialogueSprite extends HTMLElement {
 				speaker
 			}${
 				variant.length && emotion
-				? ` (${variant}, ver.${emotion})`
-				: emotion ? ` (ver.${emotion})`
+				? ` (${variant}, version ${typeof emotionIndex === "string" ? emotionIndex : emotion})`
+				: emotion ? ` (version ${typeof emotionIndex === "string" ? emotionIndex : emotion})`
 				: variant.length ? ` (${variant})`
 				: ""
 			}`
