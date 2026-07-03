@@ -169,8 +169,9 @@ class DialogueSprite extends HTMLElement {
 			: speaker === "Noelle" ? "uncropped"	// ...uncropped for Noelle
 			: speaker === "Berdly" ? "light"		// ...Light World for Berdly
 			: speaker === "Toriel" ? "home"			// ...home clothes for Toriel
+			: speaker === "Asgore" ? "nocrown"		// ...crownless for Asgore
 			: speaker === "Rouxls" ? "nohat"		// ...hatless for Rouxls
-			: "" )									// ...no variants for all others
+			: "" );									// ...no variants for all others
 		const emotion = this.getAttribute("emotion");
 		const emotionIndex = emotionToIndex(emotion);
 		const src = (
@@ -198,7 +199,7 @@ class DialogueSprite extends HTMLElement {
 			|| (speaker === "Rouxls" && variant === "shop")
 			|| (speaker === "Spamton" && emotionIndex !== 0)
 			|| (speaker === "Swatch" && emotionIndex === 0)
-			|| (speaker === "Tenna"/* && emotionIndex === 0 */)
+			|| (speaker === "Tenna"/* && emotionIndex === 0 (he only has the one!) */)
 		);
 		if (isGif) globalAnims = true;
 
