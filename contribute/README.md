@@ -45,28 +45,31 @@ Indicates which character's face sprites to display ("face character", probably)
 | :-: | - | - | - |
 | 0 | No sprite, only text | `\\F0` | Sometimes used as a reset before immediately switching to another character
 | 1 | Susie | `\\FS` | Has eyes showing/not showing variants
-| 2 | Ralsei | `\\FR` |
+| 2 | Ralsei | `\\FR` | Has with-hat/no-hat variants
 | 3 | Noelle | `\\FN` |
-| 4 | Toriel | `\\FT` | Has church variant
+| 4 | Toriel | `\\FT` | Has home/church variants
 | 5 | Lancer | `\\FL` |
 | 6 | Sans | `\\Fs` |
 | 9 | Undyne | `\\FU` |
-| 10 | Asgore | `\\FA` |
+| 10 | Asgore | `\\FA` | Has crownless/crowned variants
 | 11 | Alphys | `\\Fa` |
 | 12 | Berdly | `\\FB` | Has Light/Dark World variants
 | 13 | Catti | `\\Fi` |
-| 14 | Jockington |
+| 14 | Jockington | `\\FJ` |
 | 15 | Rudy | `\\Fr` |
-| 16 | Catty |
+| 16 | Catty | `\\Fk` |
 | 17 | Bratty | `\\Fy` |
 | 18 | Rouxls | `\\Fu` |
 | 19 | Burgerpants | `\\Fb` |
 | 20 | King of Spades | `\\FK` |
 | 21 | Queen | `\\FQ` |
 | 22 | Carol | `\\FC` |
+| 23 | Flowery | `\\FF` |
+| 24 | Flowery (injured) | `\\Ff` |
+| 25 | Blue |
 
 ### Variable `global.fe`, or the `\\E?` command
-Indicates which of a character's face sprites to display ("face emotion", probably). Can be changed directly via setting `global.fe = #`, or by including an `\\F?` command in the dialogue string itself.
+Indicates which of a character's face sprites to display ("face emotion", probably). Can be changed directly via setting `global.fe = #`, or by including an `\\E?` command in the dialogue string itself.
 
 Goes from `0-9`, followed by uppercase `A-Z` (representing 10-35), followed by lowercase `a-z` (representing 36-61). That ends up looking like `\\E0-\\E9`, `\\EA-\\EZ`, and `\\Ea-\\Ez`.
 
@@ -86,50 +89,59 @@ Some `global.fe` indexes for certain characters got updated from Chapter 2 to Ch
 ### Variable `global.typer`, or the `\\T?` command
 Indicates the speech sound to play as text is printed in the dialogue box, I think? Can be changed directly via setting `global.typer = #`, or by including an `\\T?` command in the dialogue string itself.
 
-| Value | Character | `\T?` code | Notes |
+| Value | Character | `\\T?` code | Notes |
 | :-: | - | - | - |
-| 2 | Silent | `\T1` |
+| 2 | Silent | `\\T1` |
 | 4 | In-combat default
-| 5 | Default (Light World) | `\T0` |
-| 6 | Default (Dark World)<br>Ralsei (hooded) | `\T0`<br>`\TR` |
-| 7 | Toriel | `\TT` |
-| 10 | Susie (Light World) | `\TS` |
-| 12 | Noelle (Light World) | `\TN` |
-| 13 | Berdly (Light World) | `\TB` |
-| 14 | Sans | `\Ts` |
-| 17 | Undyne | `\TU` |
-| 18 | Asgore | `\TA` |
-| 20 | Alphys | `\Ta` |
+| 5 | Default (Light World) | `\\T0` |
+| 6 | Default (Dark World)<br>Ralsei (hooded) | `\\T0`<br>`\\TR` |
+| 7 | Toriel | `\\TT` |
+| 10 | Susie (Light World) | `\\TS` |
+| 12 | Noelle (Light World) | `\\TN` |
+| 13 | Berdly (Light World) | `\\TB` |
+| 14 | Sans | `\\Ts` |
+| 17 | Undyne | `\\TU` |
+| 18 | Asgore | `\\TA` |
+| 20 | Alphys | `\\Ta` |
 | 21 | Temmie
 | 22 | Alphys (small text) | | add the attribute `small` to `d-text` to get the right font |
-| 23 | Noelle (small text) | `\Tn` | add the attribute `small` to `d-text` to get the right font |
-| 30 | Susie (Dark World) | `\TS` |
-| 31 | Ralsei | `\TR` |
-| 32 | Lancer | `\TL` |
-| 33 | King of Spades | `\TK` |
-| 35 | Jevil | `\TJ` |
-| 36 | Silent (Dark World)<br>King of Spades (Chapter 1, before the King fight) | -<br>`\TK` |
-| 40 | *None? Used as a reset, I think* | `\TX` |
-| 45 | Ralsei (in combat) | `\TR` |
-| 46 | Lancer (in combat) | `\TL` |
-| 47 | Susie (Dark World, in combat) | `\TS` |
-| 48 | King of Spades (in combat) | `\TK` |
+| 23 | Noelle (small text) | `\\Tn` | add the attribute `small` to `d-text` to get the right font |
+| 30 | Susie (Dark World) | `\\TS` |
+| 31 | Ralsei | `\\TR` |
+| 32 | Lancer | `\\TL` |
+| 33 | King of Spades | `\\TK` |
+| 35 | Jevil | `\\TJ` |
+| 36 | Silent (Dark World)<br>King of Spades (Chapter 1, before the King fight) | -<br>`\\TK` |
+| 40 | *None? Used as a reset, I think* | `\\TX` |
+| 45 | Ralsei (in combat) | `\\TR` |
+| 46 | Lancer (in combat) | `\\TL` |
+| 47 | Susie (Dark World, in combat) | `\\TS` |
+| 48 | King of Spades (in combat) | `\\TK` |
 | 50 | For speaker "balloon" or "enemy"?? (No clue.)
-| 55 | Rudy | `\Tr` |
-| 56 | Noelle (Dark World) | `\TN` |
-| 57 | Berdly (Dark World) | `\TB` |
-| 58 | Queen | `\TQ` |
-| 59 | Noelle (in combat, zone-irrelevant) | `\TN` |
-| 62 | Giga Queen (post-fight) | `\Tq` |
+| 55 | Rudy | `\\Tr` |
+| 56 | Noelle (Dark World) | `\\TN` |
+| 57 | Berdly (Dark World) | `\\TB` |
+| 58 | Queen | `\\TQ` |
+| 59 | Noelle (in combat, zone-irrelevant) | `\\TN` |
+| 62 | Giga Queen (post-fight) | `\\Tq` |
 | 66 | Spamton
-| 67 | Spamton Neo | `\Tp` |
+| 67 | Spamton Neo | `\\Tp` |
 | 68 | Spamton (in combat)
-| 77 | Berdly (in combat) | `\TB` |
-| 82 | Jackenstein (cute) | `\Tk` |
-| 83 | Jackenstein | `\Tj` |
-| 84 | Tenna | `\Tv` |
-| 85 | Gerson | `\Tg` |
-| 87 | Carol | `\TC` |
+| 77 | Berdly (in combat) | `\\TB` |
+| 82 | Jackenstein (cute) | `\\Tk` |
+| 83 | Jackenstein | `\\Tj` |
+| 84 | Tenna | `\\Tv` |
+| 85 | Gerson | `\\Tg` |
+| 87 | Carol | `\\TC` |
+| 88 | Flowery | `\\TF` |
+| 90 | Aqua | `\\T4` |
+| 91 | Seth | `\\T5` |
+| 92 | Yellow | `\\T6` |
+| 93 | Orange | `\\T7` |
+| 94 | Blue | `\\T8` |
+| 95 | Green | `\\T9` |
+| 97 | Pink | `\\TP` |
+| 98 | Orange's puppet | `\\TO` |
 | 666 | ~~Gaster~~ Voice | | used during vessel creation |
 
 ### scr_speaker() and other helper functions
