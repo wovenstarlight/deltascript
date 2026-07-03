@@ -12,28 +12,36 @@ see_also:
 sources:
   -
     name: gml_GlobalScript_scr_litemname
-    chapters: [1, 2, 3, 4]
+    chapters: [1, 2, 3, 4, 5]
     note: Names
   -
     name: gml_GlobalScript_scr_litemdesc
-    chapters: [1, 2, 3, 4]
+    chapters: [1, 2, 3, 4, 5]
     note: INFO text
   -
     name: gml_GlobalScript_scr_litemuseb
-    chapters: [1, 2, 3, 4]
+    chapters: [1, 2, 3, 4, 5]
     note: USE text
   -
     name: gml_GlobalScript_scr_lrecoitem
-    chapters: [1, 2, 3, 4]
+    chapters: [1, 2, 3, 4, 5]
     note: Bandage's healing message
   -
     name: gml_Object_obj_overworldc_Step_0
-    chapters: [1, 2, 3, 4]
+    chapters: [1, 2, 3, 4, 5]
     note: DROP text
   -
     name: gml_GlobalScript_scr_text
-    chapters: [1, 2, 3, 4]
+    chapters: [1, 2, 3, 4, 5]
     note: Ball of Junk's DROP warning
+  -
+    name: gml_Object_obj_ch5_LW02_Step_0
+    chapters: [5]
+    note: Toriel's reaction to Honey Toast DROP
+  -
+    name: gml_Object_obj_room_schoollobby_Step_0
+    chapters: [5]
+    note: Kris eating Honey Toast
 
 credits: >
   <p>Compiled by wovenstarlight.</p>
@@ -109,6 +117,24 @@ toc:
         id: quillpen
         name: Quill Pen
   -
+    name: First seen in Chapter 5
+    subheadings:
+      -
+        id: honeytoast
+        name: Honey Toast
+      -
+        id: bread
+        name: Bread
+      -
+        id: seeds
+        name: Seeds
+      -
+        id: pencil2
+        name: Pencil 2
+      -
+        id: petal
+        name: Petal
+  -
     id: fallbacks
     name: Fallbacks
     subheadings:
@@ -127,7 +153,7 @@ toc:
 	<h2>Standard text</h2>
 	<p>Text that's identical for all items, unless specified otherwise in their sections.</p>
 
-	<h3>Dropping an item</h3>
+	<h3 id="standard-drop">Dropping an item</h3>
 	<h4>Normal</h4>
 	<d-box theme="light">
 		<d-text asterisk>The &lt;Item&gt; was thrown away.</d-text>
@@ -163,13 +189,14 @@ toc:
 	<hr class="hrhalf">
 
 	<h4>Attempting to drop a weapon</h4>
-	<p>During Chapter 4.</p>
+	<p>Chapter 4 onwards</p>
 	<d-box theme="light">
 		<d-text asterisk>(Recently, seems like weapons can't be thrown away so easily.)</d-text>
 	</d-box>
 </section>
 
 
+<!-- #region Chapter 1 -->
 <section class="d-section" id="hotchocolate"> <!-- id 1 -->
 	<h2>Hot Chocolate</h2>
 
@@ -266,7 +293,7 @@ toc:
 	<p>Light World equivalent of your Dark World inventory.</p>
 
 	<h3>Info</h3>
-	<h4>During Chapter 1</h4>
+	<h4>Chapter 1</h4>
 	<d-box theme="light">
 		<d-text asterisk>"Ball of Junk" - A small ball of accumulated things.</d-text>
 	</d-box>
@@ -293,16 +320,18 @@ toc:
 	<hr>
 
 	<h3>Drop</h3>
-	<h4>During Chapter 1</h4>
+	<hr class="hr2">
+	<h4>Chapter 1</h4>
 	<d-box theme="light">
 		<d-text asterisk>You really didn't want to throw it away.</d-text>
 	</d-box>
+	<hr class="hr3">
 	<h4>Chapter 2 onwards</h4>
 	<d-box theme="light">
 		<d-text asterisk>You took it from your pocket.</d-text>
 		<d-text asterisk>You have a <span class="yellow">very, very, bad feeling</span> about throwing it away.</d-text>
 	</d-box>
-	<hr>
+	<hr class="hr2">
 	<d-box theme="light">
 		<d-text asterisk>Throw it away anyway?</d-text>
 	</d-box>
@@ -395,8 +424,10 @@ toc:
 	</d-box>
 	<p class="note">The Egg is removed from the inventory.</p>
 </section>
+<!-- #endregion Chapter 1 -->
 
 
+<!-- #region Chapter 2 -->
 <section class="d-section" id="cards"> <!-- id 9 -->
 	<h2>Cards</h2>
 
@@ -676,7 +707,7 @@ toc:
 	<h3>Attempting to drop</h3>
 	<p class="note">The Glass remains in your inventory.</p>
 
-	<h4>During Chapters 1-3</h4>
+	<h4>Chapters 1-3</h4>
 	<d-box theme="light">
 		<d-text asterisk>(You didn't quite understand why...)</d-text>
 	</d-box>
@@ -684,7 +715,7 @@ toc:
 		<d-text asterisk>(But, the thought of discarding it felt very wrong.)</d-text>
 	</d-box>
 
-	<h4>During Chapter 4</h4>
+	<h4>Chapter 4 onwards</h4>
 	<d-box theme="light">
 		<d-text asterisk>(For some reason you felt like if you throw it away...)</d-text>
 	</d-box>
@@ -719,6 +750,7 @@ toc:
 
 <section class="d-section" id="mechanicalpencil"> <!-- id 13 -->
 	<h2>Mechanical Pencil</h2>
+	<p>Appears as "Mech. Pencil" in-game.</p>
 	<p>Light World equivalent of the <a href="{{ '/misc/weapons#mechasaber' | relative_url }}">Mecha Saber</a>.</p>
 
 	<h3>Info</h3>
@@ -774,10 +806,13 @@ toc:
 	</d-box>
 	<p class="note">The Holiday Pencil switches places with the previously equipped weapon.</p>
 </section>
+<!-- #endregion Chapter 2 -->
 
 
+<!-- #region Chapter 3 -->
 <section class="d-section" id="cactusneedle"> <!-- id 16 -->
 	<h2>Cactus Needle</h2>
+	<p>Appears as "CactusNeedle" in-game.</p>
 	<p>Light World equivalent of the <a href="{{ '/misc/weapons#saber10' | relative_url }}">Saber 10</a>.</p>
 
 	<h3>Info</h3>
@@ -797,7 +832,8 @@ toc:
 
 
 <section class="d-section" id="blackshard"> <!-- id 17 -->
-	<h2>Black Shard</h2>
+	<h2>BlackShard</h2>
+	<p>Apepars as "BlackShard" in-game.</p>
 	<p>Light World equivalent of the <a href="{{ '/misc/weapons#blackshard' | relative_url }}">Black Shard (Dark World)</a>.</p>
 
 	<h3>Info</h3>
@@ -814,10 +850,13 @@ toc:
 	</d-box>
 	<p class="note">The BlackShard switches places with the previously equipped weapon.</p>
 </section>
+<!-- #endregion Chapter 3 -->
 
 
+<!-- #region Chapter 4 -->
 <section class="d-section" id="quillpen"> <!-- id 18 -->
 	<h2>Quill Pen</h2>
+	<p>Appears as "QuillPen" in-game.</p>
 	<p>Light World equivalent of the <a href="{{ '/misc/weapons#winglade' | relative_url }}">Winglade</a>.</p>
 
 	<h3>Info</h3>
@@ -834,6 +873,212 @@ toc:
 	</d-box>
 	<p class="note">The QuillPen switches places with the previously equipped weapon.</p>
 </section>
+<!-- #endregion Chapter 4 -->
+
+
+<!-- #region Chapter 5 -->
+<section class="d-section" id="honeytoast"> <!-- id 19 -->
+	<h2>Honey Toast</h2>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Honey Toast" - A food that a parent could eat.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>(You held it up in the air.)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If standing downstairs in the Dreemurr residence</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="5"></d-sprite>
+		<d-text asterisk>Kris, you are making crumbs.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>If standing near Asgore before the Festival starts</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="d"></d-sprite>
+		<d-text asterisk>What? Kris? You made toast, for me?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="Z"></d-sprite>
+		<d-text asterisk>Why, ahaha, you didn't have to do that!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="3"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Asgore ate the Honey Toast.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="5"></d-sprite>
+		<d-text asterisk>This always was one of your best dishes.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="6"></d-sprite>
+		<d-text asterisk>... remember how you two used to eat bread?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="4"></d-sprite>
+		<d-text asterisk>Fold it into quarters... take a couple bites, and...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="5"></d-sprite>
+		<d-text asterisk>See? It's kind of like a snowflake! Hahaha!</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="6"></d-sprite>
+		<d-text asterisk>"Too many crumbs", your mother said.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="5"></d-sprite>
+		<d-text asterisk>But crumbs can come in handy, too. Can't they, Kris?</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Asgore" emotion="1"></d-sprite>
+		<d-text asterisk>... well. Have a wonderful day.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Otherwise</h4>
+	<p class="note">Dialogue ends.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3>Drop</h3>
+	<p class="note">A <a href="#standard-drop">DROP message</a> plays as usual.</p>
+	<hr class="hr2">
+	<h4>If standing downstairs in the Dreemurr residence</h4>
+	<p class="note">Toriel lifts her head and Kris walks over to her. She frowns.</p>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="3"></d-sprite>
+		<d-text asterisk>Kris...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="D"></d-sprite>
+		<d-text asterisk>You know I didn't raise you to waste food...</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Toriel" emotion="F"></d-sprite>
+		<d-text asterisk>...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Entering the school without giving Toriel or Asgore the Honey Toast</h3>
+	<p class="note">Upon entering the school lobby, Kris stops.</p>
+	<d-box theme="light">
+		<d-text asterisk>(Your inventory feels lighter.)</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-text asterisk>(Also, there are crumbs around your face for some reason.)</d-text>
+	</d-box>
+	<p class="note">The Honey Toast is removed from the inventory.</p>
+</section>
+
+<section class="d-section" id="bread"> <!-- id 20 -->
+	<h2>Bread</h2>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Bread" - A loaf of bread. Tends to leave crumbs wherever it goes.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<h4>If Susie is in the party</h4>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="5"></d-sprite>
+		<d-text asterisk>Hey, don't eat that. Save it for later.</d-text>
+	</d-box>
+	<d-box theme="light">
+		<d-sprite speaker="Susie" emotion="9"></d-sprite>
+		<d-text asterisk>... y'know. Ice cream sandwiches.</d-text>
+	</d-box>
+
+	<hr class="hr15">
+
+	<h4>If Susie is not in the party</h4>
+	<d-box theme="light">
+		<d-text asterisk>(Bread.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Drop</h3>
+	<d-box theme="light">
+		<d-text asterisk>(Couldn't.)</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="seeds"> <!-- id 21 -->
+	<h2>Seeds</h2>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Seeds" - The seed of the golden flower.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>(You cannot use it right now.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Drop</h3>
+	<d-box theme="light">
+		<d-text asterisk>(The seeds stick to everything and cannot be thrown away.)</d-text>
+	</d-box>
+	<p class="note">The Seeds remain in your inventory.</p>
+</section>
+
+<section class="d-section" id="pencil2"> <!-- id 22 -->
+	<h2>Pencil 2</h2>
+	<p>Appears as "Pencil2" in-game.</p>
+	<p>Light World equivalent of the <a href="{{ '/misc/weapons#woodblade2' | relative_url }}">Wood Blade 2</a>.</p>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Pencil2" - 2 AT</d-text>
+		<d-text asterisk>It's a No. 2 Pencil. ... that<span class="break"></span> doesn't make it any stronger.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>You equipped the Pencil2.</d-text>
+	</d-box>
+	<p class="note">The Pencil2 switches places with the previously equipped weapon.</p>
+</section>
+
+<section class="d-section" id="petal"> <!-- id 23 -->
+	<h2>Petal</h2>
+	<p>Light World equivalent of the <a href="{{ '/misc/weapons#aquaknife' | relative_url }}">Aqua Knife</a>.</p>
+
+	<h3>Info</h3>
+	<d-box theme="light">
+		<d-text asterisk>"Petal" - 0 AT</d-text>
+		<d-text asterisk>A cyan colored petal. It's not<span class="break"></span> a weapon, but it's nice.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3>Use</h3>
+	<d-box theme="light">
+		<d-text asterisk>You equipped the Petal.</d-text>
+	</d-box>
+	<p class="note">The Petal switches places with the previously equipped weapon.</p>
+</section>
+<!-- #endregion Chapter 5 -->
 
 
 
@@ -866,7 +1111,7 @@ toc:
 	<hr>
 
 	<h3 id="unequippable">Unequippable item</h3>
-	<p>Available in Chapter 4. If Kris has the Light World equivalent of a weapon they can't equip, this message plays upon attempting to use the item.</p>
+	<p>Available from Chapter 4 onwards. If Kris has the Light World equivalent of a weapon they can't equip, this message plays upon attempting to use the item.</p>
 
 	<d-box theme="light">
 		<d-text asterisk>For some reason you couldn't equip it.</d-text>
