@@ -190,12 +190,12 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* gml_Object_obj_multiboss_controller_enemy1_Step_0/gml_Object_obj_multiboss_controller_enemy2_Step_0/gml_Object_obj_multiboss_controller_enemy3_Step_0 `/multibosscontroller` &LeftArrow; no idea what these are. test enemies?
 	* Figure out where these go because I don't have the brain power atm: ch3 gml_Object_obj_b1enemy_Step_0, allch gml_Object_obj_baseenemy_Step_0
 * Miscellaneous pages… `/misc`
-	* ~~`/darkitems` - Consumables, key items, etc. Descriptions, usage text and reactions from the party members. Shop descriptions too, if we can find them?~~ DONE up to Chapter 4
-	* ~~`/lightitems` - Light World items. Crosslink to Dark World equivalents.~~ DONE up to Chapter 4
+	* ~~`/darkitems` - Consumables, key items, etc. Descriptions, usage text and reactions from the party members. Shop descriptions too, if we can find them?~~ DONE up to Chapter 5
+	* ~~`/lightitems` - Light World items. Crosslink to Dark World equivalents.~~ DONE up to Chapter 5
 	* Equipment: Descriptions, reactions from the party members, shop descriptions. LW/DW equivalents. Originally intended to be at `/equipment` but goddamn it got long so we're splitting it up
-		* ~~`/weapons` - Attack equipment.~~ DONE up to Chapter 4
-		* ~~`/armor` - Defense equipment.~~ DONE up to Chapter 4
-	* ~~`/recruits` - Profiles for recruited enemies~~ DONE up to Chapter 4
+		* ~~`/weapons` - Attack equipment.~~ DONE up to Chapter 5
+		* ~~`/armor` - Defense equipment.~~ DONE up to Chapter 5
+	* ~~`/recruits` - Profiles for recruited enemies~~ DONE up to Chapter 5
 	* ~~`/savepoints` - Youuuu guessed it. Save point text. The power of X fills you and all that.~~ DONE up to Chapter 4
 	* Maybe something for general menu text…? the ui?
 		* ~~save point menu~~ DONE at `/savepoints#savemenu`
@@ -232,4 +232,4 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* ~~`/powermenu` - Titles, stats, spells~~ DONE up to Chapter 4
 	* ~~`/spells` - Spells listed in the POWER menu with overworld/battle descriptions and usage text~~ DONE up to Chapter 4
 	* Oh also. Death messages. Hello again ch3 Voice
-	* ~~`/UNUSED` - the mystery speaker~~ DONE up to Chapter 4
+	* ~~`/UNUSED` - the mystery speaker~~ DONE up to Chapter 5
