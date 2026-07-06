@@ -170,6 +170,71 @@ function emotionToIndex(emotion) {
 	);
 }
 
+/** Converts a numerical sprite code to the alphanumeric equivalent.
+ * 
+ * In other words, reverses the operation of {@link emotionToIndex}.
+ * @param {number} index A number corresponding to a sprite.
+ * @returns The alphanumeric code corresponding to the provided sprite index.
+ */
+function indexToEmotion(index) {
+	const i = parseInt(index),
+		e = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".charAt(i);
+	return `${e}${i !== index ? " (old)" : ""}`;
+}
+
+/** Maps sprite indices from older chapters to their equivalents in the newest chapter (CURRENTLY: Chapter 5).
+ * @type {Object.<string, Object.<number, { new: string, chapters: number[] }[]>>}
+ * 
+ * Some sprites get added/removed as chapters progress, especially in the main characters' cases, so this helps ensure that duplicates don't get hosted—instead, we just update which images the indices point at. */
+const UPDATED_SPRITES = {
+	"Susie": {
+		23: [{ new: 41,			chapters: [1, 2] }],
+		27: [{ new: 42,			chapters: [1, 2] }],
+		28: [{ new: 43,			chapters: [1, 2] }],
+		29: [{ new: 44,			chapters: [1, 2] }],
+		30: [{ new: 11,			chapters: [1, 2] }],
+		36: [{ new: 45,			chapters: [1, 2] }],
+		42: [{ new: 49,			chapters: [4] }],
+		43: [{ new: 50,			chapters: [4] }],
+		48: [{ new: "48_old",	chapters: [4] }],
+		49: [{ new: "49_old",	chapters: [4] }],
+		50: [{ new: "50_old",	chapters: [4] }],
+		51: [{ new: 48,			chapters: [4] }],
+	},
+	"Ralsei": {
+		44: [{ new: "44_old", 	chapters: [1, 2, 3, 4] }],
+		45: [{ new: "45_old", 	chapters: [1, 2, 3, 4] }],
+		46: [{ new: "46_old", 	chapters: [1, 2, 3, 4] }],
+		47: [{ new: "47_old", 	chapters: [1, 2, 3, 4] }],
+		48: [{ new: "48_old", 	chapters: [1, 2, 3, 4] }],
+		49: [{ new: "49_old", 	chapters: [1, 2, 3, 4] }],
+		50: [{ new: 44, 		chapters: [1, 2, 3, 4] }],
+		51: [{ new: 45, 		chapters: [1, 2, 3, 4] }],
+		52: [{ new: 46, 		chapters: [1, 2, 3, 4] }],
+	},
+	"Noelle": {
+		42: [{ new: "42_old",	chapters: [1, 2, 3, 4] }],
+		43: [{ new: "43_old",	chapters: [1, 2, 3, 4] }],
+		44: [{ new: "44_old",	chapters: [1, 2, 3, 4] }],
+		45: [{ new: "45_old",	chapters: [1, 2, 3, 4] }],
+		46: [{ new: "46_old",	chapters: [1, 2, 3, 4] }],
+		47: [{ new: "47_old",	chapters: [1, 2, 3, 4] }],
+		48: [{ new: 52, 		chapters: [1, 2, 3, 4] }],
+		49: [{ new: 53, 		chapters: [1, 2, 3, 4] }],
+		50: [{ new: 54, 		chapters: [1, 2, 3, 4] }],
+	},
+};
+
+/** Retrieves updated indices for character sprites where applicable (as defined in {@link UPDATED_SPRITES}), defaulting to the originally provided index.
+ * @param {number} index The sprite index originally provided.
+ * @param {string} character The name of the character who the sprite  belongs to.
+ * @param {number} chapter The chapter whose spritesheet should be referenced.
+ */
+function getUpdatedIndex(index, character, chapter) {
+	if (!UPDATED_SPRITES[character] || !UPDATED_SPRITES[character][index]) return index;
+	return UPDATED_SPRITES[character][index]?.find(map => map.chapters.includes(chapter))?.new ?? index;
+}
+
 /** A sprite for a dialogue box. Invisible when compact mode is enabled. */
 class DialogueSprite extends HTMLElement {
 	constructor() {
@@ -194,7 +259,7 @@ class DialogueSprite extends HTMLElement {
 				: ["home", "church", "pirate"].includes(variant) ? `${variant} clothes`
 				: variant;
 		const emotion = this.getAttribute("emotion"),
-			emotionIndex = emotionToIndex(emotion);
+			emotionIndex = getUpdatedIndex(emotionToIndex(emotion), speaker, parseInt(this.getAttribute("chapter")));
 		const src = (
 			`${BASE_URL}/assets/images/faces/${speaker.toLowerCase()
 			}${variant.length ? `/${variant}` : ""
@@ -205,11 +270,15 @@ class DialogueSprite extends HTMLElement {
 			`${
 				speaker
 			}${
-				variant.length && emotion
-				? ` (${variant}, version ${typeof emotionIndex === "string" ? emotionIndex : emotion})`
-				: emotion ? ` (version ${typeof emotionIndex === "string" ? emotionIndex : emotion})`
-				: variant.length ? ` (${variant})`
-				: ""
+				variant.length || emotion ? " (" : ""
+			}${
+				variantLabel
+			}${
+				variant.length && emotion ? ", " : ""
+			}${
+				`version ${indexToEmotion(emotionIndex)}`
+			}${
+				variant.length || emotion ? ")" : ""
 			}`
 		);
 		const isGif = (

@@ -76,15 +76,40 @@ Goes from `0-9`, followed by uppercase `A-Z` (representing 10-35), followed by l
 You can use the letters or enter numbers 10-61 into `<d-sprite emotion="#">`; either one is fine. Since you should be copying from the dialogue files directly, the `\\E?` code will often be in the dialogue string already, so you can just copy/paste the specific letter/digit in.
 
 ### Exceptions
-Some `global.fe` indexes for certain characters got updated from Chapter 2 to Chapter 3 onwards. Keep these in mind when formatting dialogue from Chapter 2!
+Some `global.fe` indexes for certain characters got updated as chapters progressed. Since the newest chapter's sprite sets are prioritized, this means that some sprite indexes for older chapters need to be marked as *being* from said older chapters when formatting dialogue. If you're ever unsure of whether a sprite got updated, go ahead and put a chapter marker on the `<d-sprite>` element to indicate which chapter certain dialogue comes from—better safe than sorry. For example, `<d-sprite speaker="Susie" emotion="N" chapter="2"></d-sprite>` will correctly output the angry Susie sprite from Chapter 2, as opposed to the Susie wearing a subdued smile from Chapter 3 onwards.
 * Susie
-	* Sprite `N` (23) -> `f` (41)
-	* Sprite `R` (27) -> `g` (42)
-	* Sprite `S` (28) -> `h` (43)
-	* Sprite `T` (29) -> `i` (44)
-	* Sprite `U` (30) -> `B` (11)
-	* Sprite `a` (36) -> `j` (45)
-	* search using `"Susie".+emotion="(N|23|R|27|S|28|T|29|U|30|a|36)"`, and add "updated index, originally ?" afterwards
+	* Sprite `N` (23) — Chapters 1–2
+	* Sprite `R` (27) — Chapters 1–2
+	* Sprite `S` (28) — Chapters 1–2
+	* Sprite `T` (29) — Chapters 1–2
+	* Sprite `U` (30) — Chapters 1–2
+	* Sprite `a` (36) — Chapters 1–2
+	* Sprite `g` (42) — Chapter 4
+	* Sprite `h` (43) — Chapter 4
+	* Sprite `m` (48) — Chapter 4
+	* Sprite `n` (49) — Chapter 4
+	* Sprite `o` (50) — Chapter 4
+	* Sprite `p` (51) — Chapter 4
+* Ralsei
+	* Sprite `i` (44) — Chapters 1–4
+	* Sprite `j` (45) — Chapters 1–4
+	* Sprite `k` (46) — Chapters 1–4
+	* Sprite `l` (47) — Chapters 1–4
+	* Sprite `m` (48) — Chapters 1–4
+	* Sprite `n` (49) — Chapters 1–4
+	* Sprite `o` (50) — Chapters 1–4
+	* Sprite `p` (51) — Chapters 1–4
+	* Sprite `q` (52) — Chapters 1–4
+* Noelle
+	* Sprite `g` (42) — chapters 1–4
+	* Sprite `h` (43) — chapters 1–4
+	* Sprite `i` (44) — chapters 1–4
+	* Sprite `j` (45) — chapters 1–4
+	* Sprite `k` (46) — chapters 1–4
+	* Sprite `l` (47) — chapters 1–4
+	* Sprite `m` (48) — chapters 1–4
+	* Sprite `n` (49) — chapters 1–4
+	* Sprite `o` (50) — chapters 1–4
 
 ### Variable `global.typer`, or the `\\T?` command
 Indicates the speech sound to play as text is printed in the dialogue box, I think? Can be changed directly via setting `global.typer = #`, or by including an `\\T?` command in the dialogue string itself.
