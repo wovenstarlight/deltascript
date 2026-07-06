@@ -185,7 +185,24 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* ~~Chapter 2~~ DONE
 	* ~~Chapter 3~~ DONE
 	* ~~Chapter 4~~ DONE
-	* ~~Party dojo~~ DONE up to Chapter 4
+	* Chapter 5
+		* gml_Object_obj_floradinn_enemy_Step_0 `/floradinn`
+		* gml_Object_obj_leafling_enemy_Step_0 `/leafling`
+		* gml_Object_obj_scarecrow_enemy_Step_0 `/shi`
+		* gml_Object_obj_shinobeetle_enemy_Step_0 `/shinobeetle`
+		* gml_Object_obj_kawkaw_enemy_Step_0 `/kawkaw`
+		* gml_Object_obj_sheary_enemy_Step_0 `/sheary`
+		* gml_Object_obj_netskie_enemy_Step_0 `/netskie`
+		* gml_Object_obj_aqua_enemy_Step_0 `/aqua`
+		* gml_Object_obj_purple_enemy_Step_0 `/seth`
+		* gml_Object_obj_yellow_enemy_Step_0 `/yellow`
+		* gml_Object_obj_blue_enemy_Step_0 `/blue`
+		* gml_Object_obj_orange_enemy_Step_0 `/orange`
+		* gml_Object_obj_green_enemy_Step_0 `/green`
+		* gml_Object_obj_flowery_enemy_Step_0 `/flowery`
+		* gml_Object_obj_pink_enemy_Create_0 `/pink` (dialogue instantiated in create, set to play in step)
+	* Party dojo
+		* …well, TECHNICALLY a bakery fight, but… gml_Object_obj_trashy_trio_Create_0 `/trashytrio` (create&step)
 	* gml_Object_obj_multiboss_enemy1_Step_0/gml_Object_obj_multiboss_enemy2_Step_0/gml_Object_obj_multiboss_enemy3_Step_0 `/multiboss` &LeftArrow; no idea what these are. test enemies?
 	* gml_Object_obj_multiboss_controller_enemy1_Step_0/gml_Object_obj_multiboss_controller_enemy2_Step_0/gml_Object_obj_multiboss_controller_enemy3_Step_0 `/multibosscontroller` &LeftArrow; no idea what these are. test enemies?
 	* Figure out where these go because I don't have the brain power atm: ch3 gml_Object_obj_b1enemy_Step_0, allch gml_Object_obj_baseenemy_Step_0
