@@ -1,6 +1,8 @@
 # For properly-formatted names of directories that can't just have their first letter capitalized to be human-readable.
 # That means anything with spaces, multiple capital letters, or punctuation.
 
+misc: Miscellaneous
+
 #region Chapters
 chapter1: Chapter 1
 chapter2: Chapter 2
