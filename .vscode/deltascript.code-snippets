@@ -327,6 +327,11 @@
 			"#    chapters: [$4]",
 			"#    note: $0"
 		]
+	},
+	"Tenna's poses": {
+		"scope": "html,liquid",
+		"prefix": ["pose", "tenna-pose"],
+		"body": "${1|<!--4187\\,spr_tenna_pose_podium--><p class=\"note\">Tenna keeps holding up his cue cards.</p>,<!--3839\\,spr_tenna_pose_podium_evil--><p class=\"note\">Tenna keeps holding up his cue cards.</p>,<!--3327\\,spr_tenna_laugh_pose--><p class=\"note\">Tenna spreads his hands\\, laughing.</p>,<!--201\\,spr_tenna_point_left--><p class=\"note\">Tenna points at the party members.</p>,<!--4241\\,spr_tenna_point_up--><p class=\"note\">Tenna points upwards\\, grinning.</p>,<!--4099\\,spr_tenna_point_at_screen--><p class=\"note\">Tenna points at the viewer.</p>,<!--3002\\,spr_tenna_nose_blossom--><p class=\"note\">Tenna presses his hands together by his face.</p>,<!--1991\\,spr_tenna_tie_adjust_a--><p class=\"note\">Tenna adjusts his tie.</p>,<!--2713\\,spr_tenna_tie_adjust_b--><p class=\"note\">Tenna adjusts his tie\\, flustered.</p>,<!--4628\\,spr_tenna_tie_adjust_c--><p class=\"note\">Tenna adjusts his tie with a tight\\, aggrieved smile.</p>,<!--4934\\,spr_tenna_hurt--><p class=\"note\">Tenna reels back\\, looking hurt.</p>,<!--2232\\,spr_tenna_hooray_armsup--><p class=\"note\">Tenna throws his hands in the air.</p>,<!--2592\\,spr_tenna_shocked--><p class=\"note\">Tenna looks shocked.</p>,<!--3370\\,spr_tenna_whisper_blush--><p class=\"note\">Tenna leans forward and whispers conspiratorially to the audience\\, blushing.</p>,<!--4539\\,spr_tenna_sad--><p class=\"note\">Tenna droops\\, distraught.</p>,<!--1998\\,spr_tenna_sad_turned_a--><p class=\"note\">Tenna turns to the side away from the player\\, head hanging low and hands limp at his sides.</p>,<!--1558\\,spr_tenna_sad_turned_b--><p class=\"note\">Tenna turns to the side away from the player\\, hands thrown in the air in dramatic upset.</p>,<!--773\\,spr_tenna_grasp--><p class=\"note\">Tenna clutches his head\\, screen going black.</p>,<!--2049\\,spr_tenna_pose_headlowered--><p class=\"note\">Tenna puts his hands behind his back and bows his head\\, screen going black.</p>,<!--2601\\,spr_tenna_laugh_pose_teeth--><p class=\"note\">Tenna spreads his hands\\, grin verging on a grimace.</p>,<!--666\\,spr_tenna_evil--><p class=\"note\">Tenna snarls ferociously.</p>|}"
 	}
 	// #endregion
 }
