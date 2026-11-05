@@ -17,6 +17,7 @@ gem "github-pages", group: :jekyll_plugins
 # group :jekyll_plugins do
 #   gem "jekyll-feed", "~> 0.12"
 # end
+gem "eventmachine", "1.2.7", git: "https://github.com/eventmachine/eventmachine.git", tag: "v1.2.7"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
