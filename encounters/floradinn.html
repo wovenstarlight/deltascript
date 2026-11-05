@@ -1,0 +1,428 @@
+---
+title: Floradinn encounter
+
+description: >
+  <p>Flavor text and dialogue for battles against Floradinn.</p>
+
+sources:
+  -
+    name: gml_Object_obj_floradinn_enemy_Step_0
+    chapters: [5]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [5]
+    note: ACT names
+  -
+    name: gml_Object_obj_floradinn_enemy_Draw_0
+    chapters: [5]
+    note: Flatter <span class="yellow">Mercy</span> amount
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [5]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-floradinn
+            name: With another Floradinn
+          -
+            id: encounter-floradinns
+            name: With two other Floradinns
+          -
+            id: encounter-leafling
+            name: With Leafling
+          -
+            id: encounter-shearynetskie
+            name: With Sheary and Netskie
+      -
+        id: ft-neutral
+        name: Neutral
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-neutral
+        name: Neutral
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: flatter
+        name: Flatter
+      -
+        id: flirts
+        act_icon: Susie
+        name: FlirtS
+      -
+        id: convince
+        act_icon: Ralsei
+        name: Convince
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(226|227|200|214|208|228)\b
+
+Other encounters:
+	- 226 (another Floradinn; this is the scripted Flowery encounter)
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4> <!--227-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Floradinn florads in!</d-text>
+	</d-box>
+
+	<h4 id="encounter-floradinn">With another Floradinn</h4> <!--200-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Floradinn florads in!</d-text>
+	</d-box>
+
+	<h4 id="encounter-floradinns">With two other Floradinns</h4> <!--214-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>It's a din of Floradinns!</d-text>
+	</d-box>
+
+	<h4 id="encounter-leafling">With Leafling</h4> <!--208-->
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Floradinn florads in!</d-text>
+		<d-text asterisk>Leafling floats by carefree.</d-text>
+	</d-box>
+
+	<h4 id="encounter-shearynetskie">With Sheary and Netskie</h4> <!--228-->
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Floradinn florads in!</d-text>
+		<d-text asterisk>Sheary cuts in!</d-text>
+		<d-text asterisk>Netskie unwraps itself from its big fluffy tail!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Floradinn is thinking out loud about your dad.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Floradinn mutters how it likes flowers, then remembers it's a flower and smiles.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Floradinn considers arranging itself beautifully with other enemies.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Floradinn has strong opinions about flowers.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Oddly, it doesn't actually smell like flowers. Just like vines or grass.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Floradinn is ready to close up and sleep.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Floradinn seems totally sapped.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Floradinn is in full blossom.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-neutral">Neutral</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Floradinn</d-speaker>
+		<d-text>I'm better than<span class="break"></span> a normal person.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Floradinn</d-speaker>
+		<d-text>Flowers over<span class="break"></span> boys.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Floradinn</d-speaker>
+		<d-text>Face my<span class="break"></span> Flower Cutter!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Floradinn</d-speaker>
+		<d-text>We are after<span class="break"></span> your dad!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Floradinn</d-speaker>
+		<d-text>Do it for<span class="break"></span> the vine.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless<span class="break"></span> analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Floradinn - Flowers are sweeter than diamonds... so it thinks.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="flatter">
+	<h2>Flatter</h2>
+
+	<h3 id="flatter-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>60%<span class="break"></span> Mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="flatter-ft">Flavor text</h3>
+	<p class="note">A large purple book appears and closes around Floradinn. When the book opens and disappears, Floradinn is noticeably flatter and wider.</p>
+	<hr class="hr2">
+	<h4>First time overall</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You pressed Floradinn in a book to make it MORE FLAT! The memories will last forever...</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You flattened Floradinn!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Floradinn gains 60% <span class="yellow">Mercy</span>. On subsequent turns, it will only use its <a href="{% include wikilink page='Floradinn#Attacks' %}">Flower Cutter attack</a>.</p>
+
+	<hr>
+
+	<h3 id="flatter-dialogue">Dialogue</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Floradinn</d-speaker>
+		<d-text>Flowers,<span class="break"></span> last longer<span class="break"></span> than diamonds!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="flirts">
+	<h2>{% include acticon chara="Susie" -%} FlirtS</h2>
+
+	<h3 id="flirts-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Romance<span class="break"></span> Mercy?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="flirts-ft">Flavor text</h3>
+	<h4>First time overall</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie gets ready to FLIRT!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Heh, watch THIS.<span class="break"></span> I'm way better<span class="break"></span> at this now...!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>'cept, I<span class="break"></span> guess... if...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>If me and Noelle are...<span class="break"></span> a thing...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>I should probably...<span class="break"></span> save my flirts, right?</d-text>
+	</d-box>
+	<p class="note">Susie looks away from Floradinn, embarrassed. Meanwhile, Kris dons a flower costume and flutters their hands.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie got psyched out! You just did a flower impression instead!</d-text>
+	</d-box>
+	<p class="note">Floradinn gains 100% <span class="yellow">Mercy</span>.</p>
+
+	<hr class="hr15">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie abstains from flirting!</d-text>
+	</d-box>
+	<p class="note">Susie looks away from Floradinn, embarrased, while Kris dons a flower costume and flutters their hands.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You did a flower impression!</d-text>
+	</d-box>
+	<p class="note">Floradinn gains 100% <span class="yellow">Mercy</span>.</p>
+
+	<hr>
+
+	<h3 id="flirts-dialogue">Dialogue</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Floradinn</d-speaker>
+		<d-text>Nice impression.<span class="break"></span> Reminds me of...<span class="break"></span> Flowers.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="convince">
+	<h2>{% include acticon chara="Ralsei" -%} Convince</h2>
+
+	<h3 id="itemnamehere-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>TIRE<span class="break"></span> enemy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="itemnamehere-ft">Flavor text</h3>
+	<h4>First time overall</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei tried to CONVINCE Floradinn!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>We don't want to<span class="break"></span> fight you, Floradinn!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>If you come to our side...<span class="break"></span> we can all be friends!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(Floradinn agreed!)</d-text>
+	</d-box>
+	<p class="note">Floradinn turns around, facing the same way as the party members.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(It's going to beat up everyone on its side!)</d-text>
+	</d-box>
+	<p class="note">Ralsei jolts in alarm.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text>Umm, w-wait!</d-text>
+		<d-text>Don't do that!!</d-text>
+	</d-box>
+	<p class="note">Floradinn turns back around, looking unhappy.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>(It seems confused... It became TIRED.)</d-text>
+	</d-box>
+	<p class="note">Floradinn becomes <span class="blue">Tired</span>.</p>
+
+	<hr class="hr15">
+
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei made a boring speech!</d-text>
+	</d-box>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Floradinn became increasingly TIRED!!</d-text>
+	</d-box>
+	<p class="note">Floradinn becomes <span class="blue">Tired</span>.</p>
+
+	<hr>
+
+	<h3 id="itemnamehere-dialogue">Dialogue</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Floradinn</d-speaker>
+		<d-text>I'm tired.<span class="break"></span> Can I just<span class="break"></span> beat someone up?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie sniffed wildly!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie blasts hose water!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie sneezes from pollen!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Floradinn gains 40% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei pretends to be a bee!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei waters daintily!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei combs petals!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Floradinn gains 40% <span class="yellow">Mercy</span>.</p>
+</section>
