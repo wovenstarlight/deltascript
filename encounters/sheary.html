@@ -1,0 +1,314 @@
+---
+title: Sheary encounter
+chapter: 5
+
+description: >
+  <p>Flavor text and dialogue for battles against Sheary.</p>
+
+sources:
+  -
+    name: gml_Object_obj_sheary_enemy_Step_0
+    chapters: [5]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [5]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [5]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_scissors_act_player_Step_0
+    chapters: [5]
+    note: out-of-bounds flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-sheary
+            name: With another Sheary
+          -
+            id: encounter-leafling
+            name: With Leafling
+          -
+            id: encounter-floradinnnetskie
+            name: With Floradinn and Netskie
+      -
+        id: ft-neutral
+        name: Neutral
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-turn1
+        name: First turn
+      -
+        id: dialogue-neutral
+        name: Neutral
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: saloncut
+        act_icon: [Susie, Ralsei]
+        name: SalonCut
+      -
+        id: valuecut
+        act_icon: Susie
+        name: ValueCut
+      -
+        id: hypercut
+        name: HyperCut
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(205|215|228)\b
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-sheary">With another Sheary</h4> <!--205-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sheary cuts in!</d-text>
+	</d-box>
+
+	<h4 id="encounter-leafling">With Leafling</h4> <!--215-->
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>A leaf and its cutter appeared!</d-text>
+	</d-box>
+
+	<h4 id="encounter-floradinnnetskie">With Floradinn and Netskie</h4> <!--228-->
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Floradinn florads in!</d-text>
+		<d-text asterisk>Sheary cuts in!</d-text>
+		<d-text asterisk>Netskie unwraps itself from its big fluffy tail!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sheary rotates like a barber pole.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sheary stocks gardening and paranormal magazines as reading material.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>A Floradinn comes by, sees there's 3 people in line, sighs, and leaves.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sheary briefly forgets they're not an overworld obstacle.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like freshly cut grass.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sheary looks ready to shear sheep.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sheary refuses to run. (It'd be dangerous.)</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Sheary dances spareably.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-turn1">First turn</h3>
+	<p>Always plays on the first turn of any Sheary encounter.</p>
+	<d-box theme="battletalklace">
+		<d-speaker>Sheary</d-speaker>
+		<d-text>Half-Off?<span class="break"></span> Off-Half?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-neutral">Neutral</h3>
+	<d-box theme="battletalklace">
+		<d-speaker>Sheary</d-speaker>
+		<d-text>Kris:<span class="break"></span> Short-Hair?<span class="break"></span> Long-Hair?<span class="break"></span> No-Where?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalklace">
+		<d-speaker>Sheary</d-speaker>
+		<d-text>Susie:<span class="break"></span> Wash-hair?<span class="break"></span> Hair-wash?<span class="break"></span> Car-wash?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalklace">
+		<d-speaker>Sheary</d-speaker>
+		<d-text>Ralsei:<span class="break"></span> Hot-Shave?<span class="break"></span> Hot-Wax?<span class="break"></span> Hot-Shock?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalklace">
+		<d-speaker>Sheary</d-speaker>
+		<d-text>Noelle:<span class="break"></span> Snow-Flake?<span class="break"></span> Snow-Flake?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless<span class="break"></span> analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SHEARY - An elegant dancer with sharp legs. Part of Blue's dance troupe, which Aqua also attends.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="saloncut">
+	<h2>{% include acticon chara="Susie" -%}{% include acticon chara="Ralsei" -%} SalonCut</h2>
+
+	<h3 id="saloncut-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Relaxed<span class="break"></span> cut</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="saloncut-ft">Flavor text</h3>
+	<h4>Instructions</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Press the directions to CUT on the dotted line!</d-text>
+	</d-box>
+	<p class="note">The party members wear doctor/nurse outfits, each holding out a pair of scissors. In the center of the screen, a dotted outline appears with a large pair of scissors situated somewhere on it. Inputting directions, as if moving the SOUL, will move the scissors to "cut" along the dotted line. A timer appears at the bottom and begins counting down once the player starts cutting. The timer lasts a little over 15 seconds or longer depending on the chosen outline.</p>
+	<p class="note">The ACT ends when the player's cutting line meets itself, and the party members switch to holding up paper crafts (a snowflake for Kris, an airplane for Susie, and a string of figures for Ralsei). Depending on the accuracy of the cut, Sheary can gain up to 100% <span class="yellow">Mercy</span>.</p>
+
+	<h4>Outcome</h4>
+	<h5>94% <span class="yellow">Mercy</span> or higher</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Amazing cutting skills!!!</d-text>
+	</d-box>
+
+	<h5>Between 80% and 93% <span class="yellow">Mercy</span></h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Great job!</d-text>
+	</d-box>
+
+	<h5>Between 40% and 79% <span class="yellow">Mercy</span></h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Not bad!</d-text>
+	</d-box>
+
+	<h5>39% <span class="yellow">Mercy</span> or lower</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Arts and crafts failure!</d-text>
+	</d-box>
+
+	<h5>If the scissors go outside the screen bounds</h5>
+	<p class="note">A audience gasp sounds and the ACT ends early, with Sheary not gaining any <span class="yellow">Mercy</span>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Truancy.</d-text>
+		<d-text asterisk>Failure.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="valuecut">
+	<h2>{% include acticon chara="Susie" -%} ValueCut</h2>
+
+	<h3 id="valuecut-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Cut<span class="break"></span> quick!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="valuecut-ft">Flavor text</h3>
+	<p>Identical to the <a href="#saloncut">{% include acticon chara="Susie" -%}{% include acticon chara="Ralsei" -%} SalonCut ACT</a>, but with a shorter timer starting from 13 seconds, and the party members do not wear any costumes.</p>
+</section>
+
+<section class="d-section" id="hypercut">
+	<h2>HyperCut</h2>
+
+	<h3 id="hypercut-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Cut<span class="break"></span> FAST!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="hypercut-ft">Flavor text</h3>
+	<p>Identical to the <a href="#saloncut">{% include acticon chara="Susie" -%}{% include acticon chara="Ralsei" -%} SalonCut ACT</a>, but with an even shorter timer starting from around 8.67 seconds, and the party members do not wear any costumes.</p>
+	<p>Additionally, <span class="yellow">Mercy</span> gained (excluding cases of truancy) is restricted to the range 25%–99%.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p class="note">Susie's hairstyle changes randomly to a ponytail, a ribbon-decorated look, or locs. Sheary gains 40% <span class="yellow">Mercy</span>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie received a haircut!</d-text>
+	</d-box>
+	<p class="note">Susie's hairstyle resets to her original look.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p class="note">Ralsei's hat changes randomly to a sombrero, a <a href="{{ '/misc/armor#netskiehat' | relative_url }}">Netskie Hat</a>, or a cap made of ice. Sheary gains 40% <span class="yellow">Mercy</span>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei received a haircut!</d-text>
+	</d-box>
+	<p class="note">Ralsei's hat resets to his original look.</p>
+</section>

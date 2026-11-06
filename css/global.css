@@ -1136,6 +1136,13 @@ d-box, d-choices {
 			d-speaker.ralsei ~ d-text { --mycolor: #13d26f }
 			d-speaker.lancer ~ d-text { --mycolor: #5585bd }
 		}
+		&[theme=battletalklace] {
+			border-image-source: url("../assets/images/ui/textbox/lacebubble.png");
+			body.dim & { border-image-source: url("../assets/images/ui/textbox/lacebubble_dim.png") }
+			border-image-slice: 14;
+			border-image-repeat: round;
+			--border-width: 1em;
+		}
 
 		&[theme=shopleft] { width: calc(var(--basewidth) - 10ch) }
 
