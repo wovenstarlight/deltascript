@@ -190,7 +190,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* gml_Object_obj_terracota_enemy_Step_0 `/terakota`
 		* gml_Object_obj_kawkaw_enemy_Step_0 `/kawkaw`
 		* gml_Object_obj_sheary_enemy_Step_0 `/sheary`
-		* gml_Object_obj_netskie_enemy_Step_0 `/netskie`
 		* gml_Object_obj_aqua_enemy_Step_0 `/aqua`
 		* gml_Object_obj_purple_enemy_Step_0 `/seth`
 		* gml_Object_obj_yellow_enemy_Step_0 `/yellow`

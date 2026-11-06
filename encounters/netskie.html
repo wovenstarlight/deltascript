@@ -1,0 +1,297 @@
+---
+title: Netskie encounter
+chapter: 5
+
+description: >
+  <p>Flavor text and dialogue for battles against Netskie.</p>
+
+sources:
+  -
+    name: gml_Object_obj_netskie_enemy_Step_0
+    chapters: [5]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [5]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [5]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-aqua
+            name: Solo, disguised as Aqua
+          -
+            id: encounter-floradinnsheary
+            name: With Floradinn and Sheary
+      -
+        id: ft-neutral
+        name: Neutral
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-neutral
+        name: Neutral
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: faker
+        act_icon: [Susie, Ralsei]
+        name: Faker
+      -
+        id: impression
+        name: Impression
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(206|228|229)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4> <!--206-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Netskie unwraps itself from its big fluffy tail!</d-text>
+	</d-box>
+
+	<h4 id="encounter-aqua">Solo, disguised as Aqua</h4> <!--229-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Netskie tricked you!</d-text>
+	</d-box>
+
+	<h4 id="encounter-floradinnsheary">With Floradinn and Sheary</h4> <!--228-->
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Floradinn florads in!</d-text>
+		<d-text asterisk>Sheary cuts in!</d-text>
+		<d-text asterisk>Netskie unwraps itself from its big fluffy tail!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Netskie swisches its big fluffy tail (which it has).</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Netskie stamps (kan) and stomps (kon).</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Netskie scratches where a heart had been carved in it.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Netskie does a tricky trick! (Kickflip?)</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like wood.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Netskie is snoring like a log.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Netskie is peeling.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Netskie laughs spareably.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-neutral">Neutral</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Netskie</d-speaker>
+		<d-text>Kon kon~<span class="break"></span> Kee kee~</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Netskie</d-speaker>
+		<d-text>(Swisches my big<span class="break"></span> fluffy $$$$-ing<span class="break"></span> tail)</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Netskie</d-speaker>
+		<d-text>(Stamp!)<span class="break"></span> Approved as<span class="break"></span> gullible...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Netskie</d-speaker>
+		<d-text>A fox would never<span class="break"></span> enjoy tricking<span class="break"></span> anyone~</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless<span class="break"></span> analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>NETSKIE - Tail looks like this <img src="{{ '/assets/images/story/talknetskie/kitsune_tail.gif' | relative_url }}" alt="A fluffy, fox-like tail swishing from side to side" style="vertical-align: top" /></d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="faker">
+	<h2>{% include acticon chara="Susie" -%}{% include acticon chara="Ralsei" -%} Faker</h2>
+
+	<h3 id="faker-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Touch fake<span class="break"></span> bullets</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="faker-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You tried to break the enemy's ruse!</d-text>
+		<d-text asterisk>Touch the FAKE BULLETS!</d-text>
+	</d-box>
+	<p class="note">Netskie gains 100% <span class="yellow">Mercy</span> / becomes <span class="blue">Tired</span> / is affected otherwise.</p>
+
+	<hr>
+
+	<h3 id="faker-dialogue">Dialogue</h3>
+	<p>Plays only the first time this ACT is used in a save file.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Netskie</d-speaker>
+		<d-text>I'M the Original!<span class="break"></span> Kon, kon, kee kee!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="impression">
+	<h2>Impression</h2>
+
+	<h3 id="impression-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Slight<span class="break"></span> Mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="impression-ft">Flavor text</h3>
+	<p>Displayed in a single dialogue box with other ACTs's flavor text if multiple are used in the same turn, in the order Kris → Susie → Ralsei.</p>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your Berdly impression!</d-text>
+	</d-box>
+	<p class="note">Kris crouches, arms against their side like a chicken.</p>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your Jockington impression!</d-text>
+	</d-box>
+	<p class="note">Kris wiggles from side to side, arms over their head.</p>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Your Susie impression!</d-text>
+	</d-box>
+	<p class="note">Kris lifts a fist, like Susie's team pose.</p>
+	<hr class="hr2">
+	<p class="note">Netskie gains 10% <span class="yellow">Mercy</span> if either Susie or Ralsei is up, or 30% <span class="yellow">Mercy</span> if both Susie and Ralsei are downed.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p>Displayed in a single dialogue box with other ACTs's flavor text if multiple are used in the same turn, in the order Kris → Susie → Ralsei.</p>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie's Lancer impression!</d-text>
+	</d-box>
+	<p class="note">Susie laughs while lying on her back and spinning around.</p>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie's Kris impression!</d-text>
+	</d-box>
+	<p class="note">Susie turns her back to the camera and folds her arms, like Kris's team pose.</p>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie's Ralsei impression!</d-text>
+	</d-box>
+	<p class="note">Susie tips to the side, arms out and wearing a big smile, like Ralsei's team pose.</p>
+	<hr class="hr2">
+	<p class="note">Netskie gains 10% <span class="yellow">Mercy</span> if either Kris or Ralsei is up, or 30% <span class="yellow">Mercy</span> if both Kris and Ralsei are downed.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p>Displayed in a single dialogue box with other ACTs's flavor text if multiple are used in the same turn, in the order Kris → Susie → Ralsei.</p>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei's Impressionist art!</d-text>
+	</d-box>
+	<p class="note">Ralsei holds up a painting, beaming.</p>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei's impression fossil!</d-text>
+	</d-box>
+	<p class="note">Ralsei holds up a fossil, beaming.</p>
+	<hr class="hr2">
+	<p class="note">Netskie gains 9% <span class="yellow">Mercy</span> if either Susie or Ralsei is up, or 29% <span class="yellow">Mercy</span> if both Susie and Ralsei are downed.</p>
+</section>
