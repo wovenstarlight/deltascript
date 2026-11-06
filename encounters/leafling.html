@@ -1,0 +1,432 @@
+---
+title: Leafling encounter
+chapter: 5
+
+description: >
+  <p>Flavor text and dialogue for battles against Leafling.</p>
+
+sources:
+  -
+    name: gml_Object_obj_leafling_enemy_Step_0
+    chapters: [5]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [5]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [5]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-leafling
+            name: With another Leafling
+          -
+            id: encounter-floradinn
+            name: With Floradinn
+          -
+            id: encounter-shinobeetle
+            name: With Shinobeetle
+          -
+            id: encounter-sheary
+            name: With Sheary
+      -
+        id: ft-neutral
+        name: Neutral
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+      -
+        id: ft-pindown
+        name: While pinned down
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-neutral
+        name: Neutral
+      -
+        id: dialogue-pindown
+        name: While pinned down
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: turbospin
+        name: TurboSpin
+      -
+        id: pindown
+        act_icon: Susie
+        name: PinDown
+      -
+        id: blowaway
+        act_icon: Ralsei
+        name: BlowAway
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(201|208|209|215)\b
+Then check that the obj whose file it appears in actually exists in the canonical rooms!
+
+Unused encounters with blank text:
+	- # (Other_enemy_name)
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-leafling">With another Leafling</h4> <!--201-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Leafling floats by carefree.</d-text>
+	</d-box>
+
+	<h4 id="encounter-floradinn">With Floradinn</h4> <!--208-->
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Floradinn florads in!</d-text>
+		<d-text asterisk>Leafling floats by carefree.</d-text>
+	</d-box>
+
+	<h4 id="encounter-shinobeetle">With Shinobeetle</h4> <!--209-->
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shinobeetle sneaks in!</d-text>
+		<d-text asterisk>Floradinn florads in!</d-text>
+	</d-box>
+
+	<h4 id="encounter-sheary">With Sheary</h4> <!--215-->
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>A leaf and its cutter appeared!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Leafling dances freely on the wind.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Leafling sings in dandelion language.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Leafling flies into a scenery object and gets stuck for a while.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Leafling plays with ribbons of sunshine.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like sunshine and green.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Leafling seems to be breathing oxygen and not CO2.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Leafling looks shriveled.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Leafling seems ready to be spared.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-pindown">While <a href="#pindown">pinned down</a></h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Leafling stays staring at its newspaper.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Leafling checks for work notifications on the weekend.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Leafling doesn't take a lunch break.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Leafling grunts that it's going to be late.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like burnt leaves.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-neutral">Neutral</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Leafling</d-speaker>
+		<d-text>Fly away,<span class="break"></span> fly away...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Leafling</d-speaker>
+		<d-text>Let the<span class="break"></span> breeze take you...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Leafling</d-speaker>
+		<d-text>Any way<span class="break"></span> the wind<span class="break"></span> blows...</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Leafling</d-speaker>
+		<d-text>Let's float,<span class="break"></span> float through<span class="break"></span> the sky... </d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Leafling</d-speaker>
+		<d-text>The world<span class="break"></span> revolves<span class="break"></span> with<span class="break"></span> freedom...</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-pindown">While <a href="#pindown">pinned down</a></h3>
+	<d-box theme="battletalk">
+		<d-speaker>Leafling</d-speaker>
+		<d-text>I'm too<span class="break"></span> busy for<span class="break"></span> this.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Leafling</d-speaker>
+		<d-text>I'll try<span class="break"></span> and pencil<span class="break"></span> it in.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Leafling</d-speaker>
+		<d-text>Sorry, I<span class="break"></span> have to<span class="break"></span> take a<span class="break"></span> call.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Leafling</d-speaker>
+		<d-text>Don't have<span class="break"></span> time to<span class="break"></span> talk now.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless<span class="break"></span> analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<h4 id="check-ft-standard">Standard</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Leafling - An irresponsibly carefree leaf. It doesn't realize it creates its own wind.</d-text>
+	</d-box>
+
+	<hr class="hr15">
+
+	<h4 id="check-ft-pindown">While <a href="#pindown">pinned down</a></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Leafling - A responsible leaf. The air feels stagnant around it.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="turbospin">
+	<h2>TurboSpin</h2>
+
+	<h3 id="turbospin-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>100% Mercy<span class="break"></span> to all</d-text>
+		<d-text class="orange">64% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="turbospin-ft">Flavor text</h3>
+	<p class="note">Kris and all Leaflings spin extremely fast. Susie looks towards Kris.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kris spun extremely fast!</d-text>
+	</d-box>
+	<p class="note">Kris and the Leaflings stop spinning. Susie reels, dizzy.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Stop it!! You're<span class="break"></span> making me dizzy!!</d-text>
+	</d-box>
+	<p class="note">Susie stops reeling. All enemies gain 100% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="pindown">
+	<h2>{% include acticon chara="Susie" -%} PinDown</h2>
+
+	<h3 id="pindown-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Make<span class="break"></span> TIRED</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="pindown-ft">Flavor text</h3>
+	<p class="note">Susie jumps, landing in a crouch on top of Leafling and squashing it.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie reminded Leafling of its responsibilities!</d-text>
+	</d-box>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hey, you gotta do<span class="break"></span> your group project<span class="break"></span> or whatever!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>Hurry! Your, uh, date<span class="break"></span> is waiting for you!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battletalk">
+		<d-speaker>Susie</d-speaker>
+		<d-text>The pizza place just<span class="break"></span> trashed dough and<span class="break"></span> it's still hot!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Dialogue diverges depending on how many times {% include acticon chara="Susie" -%} PinDown has been used on the targeted Leafling.</p>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<p class="note">Leafling gains a hat and briefcase.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Leafling became responsible... the wind no longer blows.</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... but, it was already responsible.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Susie jumps back to her spot in the lineup. Leafling gains 50% <span class="yellow">Mercy</span>. All enemies become <span class="blue">Tired</span>.</p>
+</section>
+
+<section class="d-section" id="blowaway">
+	<h2>{% include acticon chara="Ralsei" -%} BlowAway</h2>
+
+	<h3 id="blowaway-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Mash for<span class="break"></span> Mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="blowaway-ft">Flavor text</h3>
+	<h4 id="blowaway-ft-instructions">Instructions</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[CONFIRM] repeatedly to blow away!</d-text>
+	</d-box>
+	<p class="note">Kris and Ralsei strike their usual ACT poses while a 7-second timer begins to count down. Pressing [CONFIRM] causes Leafling to sway as dust flies off it.</p>
+
+	<h4 id="blowaway-ft-success">Successfully blowing away</h4>
+	<p class="note">Leafling gains 70% <span class="yellow">Mercy</span>.</p>
+	<h5>Standard</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It floated on the wind carefree!</d-text>
+	</d-box>
+
+	<h5>If Leafling was <a href="#pindown">pinned down</a></h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It floated on the wind carefree once again!</d-text>
+	</d-box>
+	<p class="note">Leafling's hat and briefcase blow away.</p>
+
+	<h4 id="blowaway-ft-timeout">Running out of time</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You ran out of time!</d-text>
+	</d-box>
+	<p class="note">Nothing happens.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p>Displayed in a single dialogue box with <span class="ralsei act">R-Action</span>'s flavor text if both are used in the same turn, in the order Susie → Ralsei.</p>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie blows on a dandelion!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie slacks off!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie takes the wind face on!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Leafling gains 35% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p>Displayed in a single dialogue box with <span class="susie act">S-Action</span>'s flavor text if both are used in the same turn, in the order Susie → Ralsei.</p>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei counts petals daintily!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei floats fuzzily!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei puts soil in his hat!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Leafling gains 35% <span class="yellow">Mercy</span>.</p>
+</section>
