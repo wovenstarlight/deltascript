@@ -3,7 +3,7 @@
 
 {%- include head -%}
 
-<body>
+<body {%- if page.chapter >= 5 %} class="chapter5"{%- endif -%}>
 	{%- include header -%}
 
 	{%- include config -%}
