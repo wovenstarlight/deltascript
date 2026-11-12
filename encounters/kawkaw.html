@@ -1,0 +1,311 @@
+---
+title: Kawkaw encounter
+chapter: 5
+
+description: >
+  <p>Flavor text and dialogue for battles against Kawkaw.</p>
+
+sources:
+  -
+    name: gml_Object_obj_kawkaw_enemy_Step_0
+    chapters: [5]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [5]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [5]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+          -
+            id: encounter-otherenemyname
+            name: With Other_enemy_name
+      -
+        id: ft-neutral
+        name: Neutral
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-neutral
+        name: Neutral
+      -
+        id: dialogue-specialcondition
+        name: Special_condition
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: hoop
+        name: Hoop
+      -
+        id: shooorcall
+        act_icon: [Susie, Ralsei]
+        name: ShooOrCall
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(202|204|210)\b
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-kawkaw">With another Kawkaw</h4> <!--204-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kawkaw wants to play!</d-text>
+	</d-box>
+
+	<h4 id="encounter-shi">With Shi</h4> <!--202,210(unused)-->
+	<p>(Also applied to an unused variant encounter with Shi and another Kawkaw.)</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shi blocks the way! (... sort of.)</d-text>
+		<d-text asterisk>Kawkaw wants to play!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kawkaw makes ueueueueue noises</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kawkaw wants to play with a throwing toy.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kawkaw pecks the ground looking for treats.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kawkaw gathers sticks for nest and fetch.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kawkaw is ready to sleep in a nest.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kawkaw is licking its wounds.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Kawkaw looks peaceful.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-shi">If <a href="{{ '/encounters/shi' | relative_url }}">Shi</a> is present</h3>
+	<p class="note">Overrides all above text.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shi wants Kawkaw to go!</d-text>
+		<d-text asterisk>Kawkaw wants to play with Shi!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<p>No written dialogue; Kawkaw instead uses random voice clips.</p>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless<span class="break"></span> analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>KAWKAW - It thinks battle is play. Loves scarecrows.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="hoop">
+	<h2>Hoop</h2>
+
+	<h3 id="hoop-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>60%<span class="break"></span> Mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="hoop-ft">Flavor text</h3>
+	<p class="note">Kris holds their arms out in front of themself in a hoop. Kawkaw ducks into the ground and emerges just in front of Kris, poking its beak through the hoop.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You put your arms into a hoop!</d-text>
+		<d-text asterisk>Kawkaw takes it as affection!</d-text>
+	</d-box>
+	<p class="note">Kris lowers one arm and uses their other hand to pet Kawkaw's beak as Kawkaw looks pleased and gains 60% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="shooorcall">
+	<h2>{% include acticon chara="Susie" -%}{% include acticon chara="Ralsei" -%} ShooOrCall</h2>
+
+	<h3 id="shooorcall-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Leave<span class="break"></span> or Love</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="shooorcall-ft">Flavor text</h3>
+	<h4>Instructions</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>[CONFIRM] repeatedly to Call Over!</d-text>
+		<d-text asterisk>[MENU] repeatedly to Shoo!</d-text>
+	</d-box>
+	<p class="note">A timer lasting around 7 seconds appears.</p>
+	<p class="note">Pressing [CONFIRM] makes all party members beckon Kawkaw closer; it happily scoots forward, approaching the party members.</p>
+	<p class="note">Pressing [MENU] makes all party members wave Kawkaw away; a large teardrop hangs from its distraught eye, both eye and tear growing bigger with every Shoo.</p>
+
+	<h4>Outcome</h4>
+	<h5>Successfully called over</h5>
+	<p class="note">Kawkaw gains 100% <span class="yellow">Mercy</span>. It ducks into the ground and pops up in front of each party member, licking them, before ducking down and sprouting back up in its original spot.</p>
+	<hr class="hr2">
+	<h6>Standard</h6>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It's overjoyed!</d-text>
+		<d-text asterisk>Sticky saliva made SOUL slower!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h6>If Shi is present</h6>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It's overjoyed!</d-text>
+		<d-text asterisk>Shi was not!</d-text>
+		<d-text asterisk>Sticky saliva made SOUL slower!</d-text>
+	</d-box>
+	<p class="note">Shi becomes <span class="blue">Tired</span>.</p>
+	<hr class="hr2">
+	<p class="note">The SOUL moves slower during the following attack phase, indicated by a wobbly jelly-like outline.</p>
+
+	<hr class="hr15">
+
+	<h5>Successfully shooed</h5>
+	<d-box theme="battlemenu">
+		<d-text asterisk>It was utterly rejected!</d-text>
+	</d-box>
+	<p class="note">Kawkaw flees the battle.</p>
+	<hr class="hr2">
+	<h6>If Shi is present</h6>
+	<d-box theme="battlemenu">
+	<d-text asterisk>Shi seemed happy...?</d-text>
+	</d-box>
+	<p class="note">Shi gains 60% <span class="yellow">Mercy</span>.</p>
+	<hr class="hr2">
+
+	<hr class="hr15">
+
+	<h5>Both shooed and called</h5>
+	<p>If both inputs are pressed, but neither one reaches the margin of success.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Everyone got mixed messages!</d-text>
+	</d-box>
+	<p class="note">All enemies become <span class="blue">Tired</span>, and Kawkaw gains some <span class="yellow">Mercy</span> proportional to the number of times "Shoo" or "Call" was pressed, whichever is greater.</p>
+
+	<hr class="hr15">
+
+	<h5>Ran out of time</h5>
+	<p class="note">Kawkaw returns to its original spot and expression, with a small question mark bubble appearing over its head.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ran out of time!</d-text>
+	</d-box>
+	<p class="note">All enemies become <span class="blue">Tired</span>.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p>Displayed in a single dialogue box with <span class="ralsei act">R-Action</span>'s flavor text if both are used in the same turn, in the order Susie → Ralsei.</p>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie cawed like a bird!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie pets aggressively!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie rides on Kawkaw's back!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Kawkaw gains 25% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p>Displayed in a single dialogue box with <span class="susie act">S-Action</span>'s flavor text if both are used in the same turn, in the order Susie → Ralsei.</p>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei offers shiny trinkets!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei pats on the head!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei sings in crow song!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Kawkaw gains 40% <span class="yellow">Mercy</span>.</p>
+</section>

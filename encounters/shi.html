@@ -18,6 +18,10 @@ sources:
     chapters: [5]
     note: initial flavor text
   -
+    name: gml_Object_obj_kawkaw_enemy_Draw_0
+    chapters: [5]
+    note: dialogue with Kawkaw
+  -
     name: gml_Object_obj_scarecrow_intimidate2_Draw_0
     chapters: [5]
     note: Intimidate ACT caption
@@ -213,6 +217,16 @@ Check for encounter instances with the following regex:
 	<d-box theme="battletalk">
 		<d-speaker>Shi</d-speaker>
 		<d-text>Oh, no! That,<span class="break"></span> green box!! Ugh!<span class="break"></span> What IS that?</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-kawkaw">If <a href="{{ '/encounters/kawkaw' | relative_url }}">Kawkaw</a> is present</h3>
+	<p>Overrides all above dialogue.</p>
+	<p class="note">Kawkaw digs into the ground and sprouts up in front of Shi, poking its beak happily at it while it reels in horror.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Shi</d-speaker>
+		<d-text>Ack! Get away you<span class="break"></span> stupid dog!</d-text>
 	</d-box>
 </section>
 
