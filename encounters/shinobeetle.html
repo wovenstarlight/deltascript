@@ -1,0 +1,335 @@
+---
+title: Shinobeetle encounter
+chapter: 5
+
+description: >
+  <p>Flavor text and dialogue for battles against Shinobeetle.</p>
+
+sources:
+  -
+    name: gml_Object_obj_shinobeetle_enemy_Step_0
+    chapters: [5]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [5]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [5]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-seth
+            name: With Seth
+          -
+            id: encounter-shinobeetle
+            name: With another Shinobeetle
+          -
+            id: encounter-floradinn
+            name: With Floradinn
+      -
+        id: ft-neutral
+        name: Neutral
+      -
+        id: ft-alone
+        name: When alone
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-neutral
+        name: Neutral
+      -
+        id: dialogue-alone
+        name: When alone
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: convince
+        name: Convince
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(232|203|209|213)\b
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-seth">With Seth</h4> <!--232-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shinobeetle is no longer alone!</d-text>
+	</d-box>
+
+	<h5>Unused variant</h5> <!--213-->
+	<p>Presumably a placeholder.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SETH AND 1 SHINOBEETLE</d-text>
+	</d-box>
+
+	<h4 id="encounter-shinobeetle">With another Shinobeetle</h4> <!--203-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shinobeetle sneaks in!</d-text>
+	</d-box>
+
+	<h4 id="encounter-floradinn">With Floradinn</h4> <!--209-->
+	<p>Unused.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shinobeetle sneaks in!</d-text>
+		<d-text asterisk>Floradinn florads in!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shinobeetle waits for the other enemies to pose, then copies them.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shinobeetle polishes its bronzed shurakins.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shinobeetle says "nin", then runs around on tiptoes.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shinobeetle spreads diatomaceous earth caltrops.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like roasted chestnuts.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-alone">When alone</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shinobeetle happily cuts a pizza with a non-ninja sai.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shinobeetle uses its regular alone-time smoke bombs.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shinobeetle creeps through shadows and cracks.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shinobeetle uses a kunai as a bookmark.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shinobeetle conceals its exhaustion with ninja techniques.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Shinobeetle flips on its back helplessly.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-neutral">Neutral</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Shinobeetle</d-speaker>
+		<d-text>The sound<span class="break"></span> of reeds,<span class="break"></span> helter and<span class="break"></span> skelter.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Shinobeetle</d-speaker>
+		<d-text>Blackbirds,<span class="break"></span> calling to<span class="break"></span> the dead<span class="break"></span> of night.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Shinobeetle</d-speaker>
+		<d-text>Rice,<span class="break"></span> where a<span class="break"></span> wedding<span class="break"></span> had been.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Shinobeetle</d-speaker>
+		<d-text>Love me...<span class="break"></span> DO!!!!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-alone">When alone</h3>
+	<h4>First turn</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Shinobeetle</d-speaker>
+		<d-text>Oh, am I alone?<span class="break"></span> Can I quit being<span class="break"></span> a ninja now?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Shinobeetle</d-speaker>
+		<d-text>Ah, I'm by<span class="break"></span> myself? That's<span class="break"></span> a relief!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Shinobeetle</d-speaker>
+		<d-text>Phew, it's just<span class="break"></span> me? Time to think<span class="break"></span> for yourself!</d-text>
+	</d-box>
+
+	<hr class="hr15">
+
+	<h4>Subsequent turns</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Shinobeetle</d-speaker>
+		<d-text>Peace<span class="break"></span> and<span class="break"></span> love!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Shinobeetle</d-speaker>
+		<d-text>Could I get<span class="break"></span> a little help<span class="break"></span> from my friends?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Shinobeetle</d-speaker>
+		<d-text>I'm happy<span class="break"></span> just to dance<span class="break"></span> with you!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless<span class="break"></span> analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>SHINOBEETLE - Only a ninja by Seth's command. The only thing keeping the ruse is peer pressure.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="convince">
+	<h2>Convince</h2>
+
+	<h3 id="convince-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>35%<span class="break"></span> Mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="convince-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You told Shinobeetle to come to your side!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>If more than one enemy is in the encounter</h4><!-- or is seth fight?-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>But, the enemy was too nervous!</d-text>
+	</d-box>
+	<p class="note">Shinobeetle gains 35% <span class="yellow">Mercy</span>.</p>
+	<hr class="hr3">
+	<h4>If Shinobeetle is alone</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... but, the enemy already wants to do that!</d-text>
+	</d-box>
+	<p class="note">Shinobeetle gains 35% <span class="yellow">Mercy</span>.</p>
+	<hr class="hr3">
+	<h4>Fifth use onwards</h4>
+	<p>Overrides the above variants.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You CONVINCED Shinobeetle... this time, with puppy dog eyes!</d-text>
+	</d-box>
+	<p class="note">Shinobeetle gains 100% <span class="yellow">Mercy</span>.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="convince-dialogue">Dialogue</h3>
+	<p>Only plays during the battle alongside Seth, the first time the "puppy dog eyes" flavor text is used.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Seth</d-speaker>
+		<d-text>Are you<span class="break"></span> really going<span class="break"></span> to let<span class="break"></span> that work!?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie flips over a beetle!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie encourages beetles to fight!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie catches bugs with her hands!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Shinobeetle gains 20% <span class="yellow">Mercy</span> if either Kris or Ralsei is up, or 50% <span class="yellow">Mercy</span> if both Kris and Ralsei are downed.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei unseals a cup jelly!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei pretends to be a root veg!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei listens to a white album!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Shinobeetle gains 20% <span class="yellow">Mercy</span> if either Kris or Susie is up, or 50% <span class="yellow">Mercy</span> if both Kris and Susie are downed.</p>
+</section>

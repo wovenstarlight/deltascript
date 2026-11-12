@@ -186,7 +186,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* ~~Chapter 3~~ DONE
 	* ~~Chapter 4~~ DONE
 	* Chapter 5
-		* gml_Object_obj_shinobeetle_enemy_Step_0 `/shinobeetle`
 		* gml_Object_obj_terracota_enemy_Step_0 `/terakota`
 		* gml_Object_obj_kawkaw_enemy_Step_0 `/kawkaw`
 		* gml_Object_obj_aqua_enemy_Step_0 `/aqua`
