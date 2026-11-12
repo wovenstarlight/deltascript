@@ -1,0 +1,301 @@
+---
+title: Game Over
+
+description: >
+  <p>Text displayed when all party members are DOWNed.</p>
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+sources:
+  -
+    name: gml_Object_DEVICE_FAILURE_Step_0
+    chapters: [1, 2, 3, 4, 5]
+  -
+    name: gml_Object_DEVICE_FAILURE_Step_0
+    chapters: [1, 2, 3, 4, 5]
+    note: initial window title
+  -
+    name: gml_Object_DEVICE_CHOICE_Step_0
+    chapters: [1, 2, 3, 4, 5]
+    note: options
+
+toc:
+  -
+    id: chapter1
+    name: Chapter 1
+  -
+    id: chapter2
+    name: Chapter 2 onwards
+    subheadings:
+      -
+        id: chapter2-initial
+        name: Initial
+      -
+        id: chapter2-susral
+        name: If Susie or Ralsei are in the party
+        subheadings:
+          -
+            id: chapter2-susie
+            name: Susie's dialogue
+          -
+            id: chapter2-ralsei
+            name: Ralsei's dialogue
+      -
+        id: chapter2-choice
+        name: Choice
+  -
+    id: knight
+    name: Battle against the Roaring Knight
+    subheadings:
+      -
+        id: knight1
+        name: First loss
+      -
+        id: knight2
+        name: Second loss
+        subheadings:
+          -
+            id: knight2-standard
+            name: Standard
+          -
+            id: knight2-mantle
+            name: If the Shadow Mantle is not equipped by any party member
+      -
+        id: knight-lowhp
+        name: If the Knight was brought to 80% HP or lower
+      -
+        id: knight3
+        name: Subsequent losses
+      -
+        id: knight-choice
+        name: Choice
+---
+<section class="d-section" id="chapter1">
+	<h2>Chapter 1</h2>
+
+	<p class="note">The screen cuts to black. A <a href="{% include wikilink page='Unlisted music tracks#AUDIO_DRONE' %}">droning sound</a> plays.</p>
+
+	<p class="note">If no Chapter 1 completion file is present, the window is titled "<span class="white">THE DEATH</span>".</p>
+
+	<hr class="hr2">
+	<h3>First time</h3>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">IT APPEARS YOU<span class="break"></span> HAVE REACHED<span class="double break"></span><span class="hide">&nbsp;&nbsp;</span> AN END.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">WILL YOU TRY AGAIN?</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h3>Subsequent times</h3>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">WILL YOU PERSIST?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-choices theme="fade">
+		<d-option index="0" text="YES"></d-option>
+		<d-option index="1" text="NO"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="fade">
+		<p class="note">The droning cuts to silence.</p>
+		<hr class="hr2">
+		<h3>First time only</h3>
+		<d-box theme="fade" class="glow space">
+			<d-speaker>Voice</d-speaker>
+			<d-text class="block-center-expand">THEN, THE FUTURE<span class="break"></span> IS IN YOUR HANDS.</d-text>
+		</d-box>
+		<hr class="hr2">
+		<p class="note">The screen fades to white, then cuts back to the most recent autosave.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="fade">
+		<p>If no Chapter 1 completion file exists, the window title changes to "<span class="white">THE DARK</span>".</p>
+		<d-box theme="fade" class="glow space">
+			<d-speaker>Voice</d-speaker>
+			<d-text class="block-center-expand">THEN THE WORLD<span class="break"></span> WAS COVERED<span class="break"></span> IN DARKNESS.</d-text>
+		</d-box>
+		<p class="note">The text disappears, leaving the screen a pitch black. <a href="{% include wikilink page='Darkness Falls' %}">Darkness Falls</a> begins playing; once the song plays to completion, the game ends (PC) / returns to the title screen or Chapter Select screen (console).</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="chapter2">
+	<h2>Chapter 2 onwards</h2>
+
+	<h3 id="chapter2-initial">Initial</h3>
+
+	<p class="note">The screen cuts to black, and large, elaborately-bordered text reading <span class="white">GAMEOVER</span> appears at the top. <a href="{% include wikilink page='Faint Courage' %}">Faint Courage</a> plays. If there are other party members besides Kris, <a href="#chapter2-susral">additional dialogue plays</a>. Otherwise, the screen proceeds to display <a href="#chapter2-choice">the choice</a>.</p>
+
+	<hr>
+
+	<h3 id="chapter2-susral">If Susie or Ralsei are in the party</h3>
+	<p class="note">The two variant dialogues below are randomly chosen from. A character's dialogue is not displayed if they are not in the party.</p>
+
+	<h4 id="chapter2-susie">Susie's dialogue</h4>
+	<d-box theme="fade">
+		<d-speaker>Susie</d-speaker>
+		<d-text class="block-center-expand">Come on,<span class="break"></span> that all you got!?</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Susie</d-speaker>
+		<d-text class="block-center-expand">Kris,<span class="break"></span> get up...!</d-text>
+	</d-box>
+
+	<hr class="hr15">
+
+	<h4 id="chapter2-ralsei">Ralsei's dialogue</h4>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text class="block-center-expand">This is not<span class="break"></span> your fate...!</d-text>
+	</d-box>
+	<d-box theme="fade">
+		<d-speaker>Ralsei</d-speaker>
+		<d-text class="block-center-expand">Please,<span class="break"></span> don't give up!</d-text>
+	</d-box>
+
+	<p class="note">In both cases, dialogue then proceeds to <a href="#chapter2-choice">the choice</a>.</p>
+
+	<hr>
+
+	<h3 id="chapter2-choice">Choice</h3>
+	<p class="note">Options appear towards the bottom of the screen:</p>
+	<d-choices theme="fade">
+		<d-option index="0" text="CONTINUE"></d-option>
+		<d-option index="1" text="GIVE UP"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="fade">
+		<p class="note">The screen fades to white, then cuts back to the most recent autosave.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="fade">
+		<p class="note">The <span class="white">GAMEOVER</span> text disappears.</p>
+		<d-box theme="fade" class="glow space">
+			<d-speaker>Voice</d-speaker>
+			<d-text class="block-center-expand">THEN THE WORLD<span class="break"></span> WAS COVERED<span class="break"></span> IN DARKNESS.</d-text>
+		</d-box>
+		<p class="note">This text also disappears, leaving the screen a pitch black. <a href="{% include wikilink page='Darkness Falls' %}">Darkness Falls</a> begins playing; once the song plays to completion, the game ends (PC) / returns to the title screen or Chapter Select screen (console).</p>
+	</d-option-panel>
+</section>
+
+<section class="d-section" id="knight">
+	<h2>Battle against the <a href="{{ '/encounters/knight' | relative_url }}">Roaring Knight</a></h2>
+	<p>Chapter 3's exception to the usual Game Over process.</p>
+
+	<p>Before completing Chapter 3 at least once, a Game Over against the Roaring Knight does not result in the usual Game Over screen, instead proceeding to the cutscene immediately after.</p>
+
+	<p>Once a Chapter 3 completion file has been obtained, successive Game Overs against the Knight instead use the messages in this section.</p>
+
+	<hr>
+
+	<h3 id="knight1">First loss</h3>
+	<p class="note">The screen cuts to black. Rather than shattering, the SOUL moves towards the top of the screen. Droning begins to sound as text appears underneath:</p>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">
+			<span class="hide">&nbsp; &nbsp;</span>VERY<span class="double break"></span> INTERESTING.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">YOUR LOSS HERE<span class="double break"></span> <span class="hide">&nbsp; &nbsp;</span> IS ALL<span class="double break"></span> BUT GUARANTEED.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">
+			<span class="hide">&nbsp; &nbsp;</span>AND YET<span class="double break"></span> YOU PERSIST...</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">
+			IF YOU ARE SO<span class="break"></span> DETERMINED<span class="break"></span> TO TRY ONCE MORE</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">
+			<span class="hide">&nbsp; &nbsp; &nbsp;&nbsp;</span>THEN<span class="double break"></span> SHALL WE HASTEN?</d-text>
+	</d-box>
+	<p class="note">Dialogue proceeds to <a href="#knight-choice">the choice</a>.</p>
+
+	<hr>
+
+	<h3 id="knight2">Second loss</h3>
+	<p class="note">The screen cuts to black. Rather than shattering, the SOUL moves towards the top of the screen. Droning begins to sound as text appears underneath, varying depending on the party's equipment.</p>
+
+	<hr class="hr2">
+
+	<h4 id="knight2-standard">Standard</h4>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">AND SO, YOU<span class="break"></span> MEET WITH THE<span class="break"></span> SAME FATE.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">SHALL YOU TRY<span class="break"></span> ONCE MORE?</d-text>
+	</d-box>
+
+	<hr class="hr3">
+
+	<h4 id="knight2-mantle">If the <a href="{{ '/misc/armors#shadowmantle' | relative_url }}">Shadow Mantle</a> is not equipped by any party member</h4>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">
+			<span class="hide">&nbsp; &nbsp;</span>VERY<span class="double break"></span> INTERESTING.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">YOU ARE MISSING<span class="break"></span> SOMETHING<span class="break"></span> IMPORTANT.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">YOU WON'T WIN<span class="break"></span> LIKE THIS.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">STILL...<span class="break"></span> WILL YOU<span class="break"></span> PERSIST?</d-text>
+	</d-box>
+
+	<hr class="hr2">
+
+	<p class="note">Dialogue proceeds to <a href="#knight-choice">the choice</a>.</p>
+
+	<hr>
+
+	<h3 id="knight-lowhp">If the Knight was brought to 80% HP or lower</h3>
+	<p>Plays only the first time this condition is met. Overrides all other dialogues.</p>
+	<p class="note">The screen cuts to black. Rather than shattering, the SOUL moves towards the top of the screen. Droning begins to sound as text appears underneath:</p>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">INCREDIBLE.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">I FELT IT THERE<span class="double break">&nbsp;&nbsp;</span> SHINING.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">YOUR POWER.</d-text>
+	</d-box>
+	<d-box theme="fade" class="glow space">
+		<d-speaker>Voice</d-speaker>
+		<d-text class="block-center-expand">A LITTLE FURTHER.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="knight3">Subsequent losses</h3>
+	<p class="note">The screen cuts to black. Rather than shattering, the SOUL moves towards the top of the screen. Droning begins to sound as <a href="#knight-choice">the choice</a> appears without additional commentary.</p>
+
+	<hr>
+
+	<h3 id="knight-choice">Choice</h3>
+	<p class="note">After a pause, the following choices appear:</p>
+	<d-choices theme="fade" offset="10%">
+		<d-option index="0" text="GO BACK#(FIGHT AGAIN)"></d-option>
+		<d-option index="1" text="GO FORWARD#(MOVE ON)"></d-option>
+	</d-choices>
+	<d-option-panel index="0" theme="dark">
+		<p class="note">The droning cuts off and the screen fades to white, then back in to the TV World's Dark Fountain with the Knight and battle-ready party. After the first loss only, the Knight repeats its roar. The Knight summons its sword and once again <a href="{{ '/encounters/knight' | relative_url }}">draws the party into an encounter</a>.</p>
+	</d-option-panel>
+	<d-option-panel index="1" theme="dark">
+		<p class="note">The screen fades to black, then back in on the encounter but with the battle UI gone. All party members are DOWNed or SWOONed while the Knight still floats to the right. <a href="{{ '/story/chapter3/finalact#exit' | relative_url }}">The scene progresses to its end.</a></p>
+	</d-option-panel>
+</section>
