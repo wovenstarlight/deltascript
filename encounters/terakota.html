@@ -1,0 +1,257 @@
+---
+title: Terakota encounter
+chapter: 5
+
+description: >
+  <p>Flavor text and dialogue for battles against Terakota.</p>
+
+sources:
+  -
+    name: gml_Object_obj_terracota_enemy_Step_0
+    chapters: [5]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [5]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [5]
+    note: initial flavor text
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+        subheadings:
+          -
+            id: encounter-solo
+            name: Solo
+      -
+        id: ft-neutral
+        name: Neutral
+      -
+        id: ft-tired
+        name: Tired
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-spareable
+        name: Spareable
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-neutral
+        name: Neutral
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: wateringcan
+        act_icon: [Susie, Ralsei]
+        name: WateringCan
+      -
+        id: slowercan
+        name: SlowerCan
+      -
+        id: saction
+        class: susie act
+        name: S-Action
+      -
+        id: raction
+        class: ralsei act
+        name: R-Action
+---
+{% comment %}
+Check for encounter instances with the following regex:
+(encounterno = |myencounter = |scr_encountersetup\(|scr_battle\()(207)\b
+{% endcomment %}
+
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3>
+	<h4 id="encounter-solo">Solo</h4> <!--207-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>Terakota stomps towards you!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Terakota thunders with each step.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Terakota offers a battle prayer to the Great Pumpkin.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Terakota attempts to dig bedrock.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Birds (from the song Weird Birds) land on Terakota peacefully.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">2.97% (3/101) chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like fresh soil.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-tired">Tired</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Terakota's eyes (?) blink slowly.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Terakota's armor pH is out of wack.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-spareable">Spareable</h3>
+	<p class="note">Plays immediately upon reaching 100% <span class="yellow">Mercy</span>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The enemy bloomed!</d-text>
+	</d-box>
+	<p class="note">Terakota is automatically spared.</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-neutral">Neutral</h3>
+	<h4>First turn of first encounter overall</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Terakota</d-speaker>
+		<d-text>PROTECT<span class="break"></span> ... KING</d-text>
+	</d-box>
+
+	<hr class="hr15">
+
+	<h4>Subsequent turns and encounters</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Terakota</d-speaker>
+		<d-text>GOLDHAIR<span class="break"></span> GIVE WATER<span class="break"></span> ... FRAIND</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Terakota</d-speaker>
+		<d-text>HUMAN...<span class="break"></span> DIGGING<span class="break"></span> ... <span class="break"></span> NO GOOD</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Terakota</d-speaker>
+		<d-text>LITTLE<span class="break"></span> DIRT<span class="break"></span> NEVER<span class="break"></span> HURT</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless<span class="break"></span> analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>TERAKOTA - A thick exterior. But it's what's inside that counts.</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="wateringcan">
+	<h2>{% include acticon chara="Susie" -%}{% include acticon chara="Ralsei" -%} WateringCan</h2>
+
+	<h3 id="wateringcan-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Waters<span class="break"></span> plants</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="wateringcan-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Use watering can droplets to turn all pots green!</d-text>
+	</d-box>
+	<p class="note">During the subsequent attack phase, the SOUL has a small watering can on top of it which periodically releases drops of water. 5 pots appear along the bottom of the bullet board; dripping water into a pot turns it green, and turning all pots green automatically spares Terakota.</p>
+</section>
+
+<section class="d-section" id="slowercan">
+	<h2>SlowerCan</h2>
+
+	<h3 id="slowercan-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Waters<span class="break"></span> slower</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="slowercan-ft">Flavor text</h3>
+	<p class="note">Identical to <a href="#wateringcan">{% include acticon chara="Susie" -%}{% include acticon chara="Ralsei" -%} WateringCan</a>, but the watering can releases droplets more slowly.</p>
+</section>
+
+<section class="d-section" id="saction">
+	<h2 class="susie act">S-Action</h2>
+
+	<h3 id="saction-ft">Flavor text</h3>
+	<p>Displayed in a single dialogue box with <span class="ralsei act">R-Action</span>'s flavor text if both are used in the same turn, in the order Susie → Ralsei.</p>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie ate dirt unharmed!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie lifted pots!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie lifted weeds!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Terakota gains 18% <span class="yellow">Mercy</span>.</p>
+</section>
+
+<section class="d-section" id="raction">
+	<h2 class="ralsei act">R-Action</h2>
+
+	<h3 id="raction-ft">Flavor text</h3>
+	<p>Displayed in a single dialogue box with <span class="susie act">S-Action</span>'s flavor text if both are used in the same turn, in the order Susie → Ralsei.</p>
+	<p class="note">At random:</p>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei alters soil pH!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei does the worm!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei acts stone!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">Terakota gains 18% <span class="yellow">Mercy</span>.</p>
+</section>
