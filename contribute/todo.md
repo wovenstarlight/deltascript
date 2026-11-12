@@ -186,7 +186,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 	* ~~Chapter 3~~ DONE
 	* ~~Chapter 4~~ DONE
 	* Chapter 5
-		* gml_Object_obj_aqua_enemy_Step_0 `/aqua`
 		* gml_Object_obj_purple_enemy_Step_0 `/seth`
 		* gml_Object_obj_yellow_enemy_Step_0 `/yellow`
 		* gml_Object_obj_blue_enemy_Step_0 `/blue`

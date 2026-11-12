@@ -1,0 +1,673 @@
+---
+title: Aqua encounter
+chapter: 5
+
+description: >
+  <p>Flavor text and dialogue for the solo battle against Aqua in the Quiet Glade.</p>
+
+sources:
+  -
+    name: gml_Object_obj_aqua_enemy_Step_0
+    chapters: [5]
+  -
+    name: gml_GlobalScript_scr_monstersetup
+    chapters: [5]
+    note: ACT names
+  -
+    name: gml_GlobalScript_scr_encountersetup
+    chapters: [5]
+    note: initial flavor text
+  -
+    name: gml_Object_obj_aqua_enemy_Create_0
+    chapters: [5]
+    note: bored flavor text, attack <span class="yellow">Mercy</span>
+  -
+    name: gml_Object_obj_aqua_enemy_Other_11
+    chapters: [5]
+    note: using Omega Knife attack
+
+credits: >
+  <p>Compiled by wovenstarlight.</p>
+
+see_also:
+  -
+    url: /encounters/aquaseth
+    name: Aqua and Seth
+
+toc:
+  -
+    id: flavortext
+    name: General flavor text
+    subheadings:
+      -
+        id: encounter
+        name: Initial encounter
+      -
+        id: ft-neutral
+        name: Neutral
+      -
+        id: ft-act
+        name: After using specific ACTs
+        subheadings:
+          -
+            id: ft-act-check
+            name: Check
+          -
+            id: ft-act-spin
+            name: Spin
+          -
+            id: ft-act-dance
+            name: Dance
+          -
+            id: ft-act-care
+            name: Care
+          -
+            id: ft-act-coolpose
+            name: Coolpose
+          -
+            id: ft-act-flatter
+            name: Flatter
+      -
+        id: ft-lowhp
+        name: Low HP
+      -
+        id: ft-bored
+        name: Bored
+  -
+    id: dialogue
+    name: General dialogue
+    subheadings:
+      -
+        id: dialogue-neutral
+        name: Neutral
+      -
+        id: dialogue-damage
+        name: First time taking damage
+      -
+        id: ft-bored
+        name: Bored
+  -
+    name: ACTs
+    subheadings:
+      -
+        id: check
+        name: Check
+      -
+        id: spin
+        name: Spin
+      -
+        id: dance
+        name: Dance
+      -
+        id: care
+        name: Care
+      -
+        id: coolpose
+        name: Coolpose
+      -
+        id: flatter
+        name: Flatter
+  -
+    id: end
+    name: End of fight
+    subheadings:
+      -
+        id: end-nonviolent
+        name: If Aqua has gained 100% <span class="yellow">Mercy</span>
+      -
+        id: end-violent
+        name: If Aqua is at 20% HP or below
+---
+<section class="d-section" id="flavortext">
+	<h2>General flavor text</h2>
+
+	<h3 id="encounter">Initial encounter</h3> <!--220-->
+	<d-box theme="battlemenu">
+		<d-text asterisk>A mysterious festival begins.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-neutral">Neutral</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ribbons flutter in soft chaos.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Petals fall, and dance.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battlemenu">
+		<d-text asterisk>Playful knives juggle in the air.</d-text>
+	</d-box>
+	<hr class="hr2">
+	<p class="note">3% chance:</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Smells like hydrangea.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-act">After using specific ACTs</h3>
+	<h4 id="ft-act-check"><a href="#check">Check</a></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The enemy analyzes the stats of random things.</d-text>
+	</d-box>
+
+	<hr class="hr15">
+
+	<h4 id="ft-act-spin"><a href="#spin">Spin</a></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The enemy revolves. The world revolves, too.</d-text>
+	</d-box>
+
+	<hr class="hr15">
+
+	<h4 id="ft-act-dance"><a href="#dance">Dance</a></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The enemy dances, dances, falls, and dances.</d-text>
+	</d-box>
+
+	<hr class="hr15">
+
+	<h4 id="ft-act-care"><a href="#care">Care</a></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The enemy makes a patient's wristband out of a ribbon.</d-text>
+	</d-box>
+
+	<hr class="hr15">
+
+	<h4 id="ft-act-coolpose"><a href="#coolpose">Coolpose</a></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The enemy invents several million new poses.</d-text>
+	</d-box>
+
+	<hr class="hr15">
+
+	<h4 id="ft-act-flatter"><a href="#flatter">Flatter</a></h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The enemy praises herself under her breath for every action.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-lowhp">Low HP</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>The enemy seems damaged, but having fun.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-bored">Bored</h3>
+	<p>Uses a counter that is added to every time any ACT is used more than once.</p>
+
+	<h4 id="ft-bored1">First repetition</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... but the enemy was not amused.</d-text>
+	</d-box>
+	<p class="note">Followed by the <a href="#dialogue-bored1">corresponding dialogue</a>.</p>
+
+	<h4 id="ft-bored2">Second repetition</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... but the enemy seemed bored.</d-text>
+	</d-box>
+	<p class="note">Followed by the <a href="#dialogue-bored2">corresponding dialogue</a>.</p>
+
+	<h4 id="ft-bored3">Third repetition</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... but the enemy seemed very bored.</d-text>
+	</d-box>
+	<p class="note">Followed by the <a href="#dialogue-bored3">corresponding dialogue</a>.</p>
+</section>
+
+<section class="d-section" id="dialogue">
+	<h2>General dialogue</h2>
+
+	<h3 id="dialogue-neutral">Neutral</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Are we playing<span class="break"></span> a game?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Is the world<span class="break"></span> revolving,<span class="break"></span> like they say?</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Uee hee hee!<span class="break"></span> It's so much<span class="break"></span> fun!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Let's play<span class="break"></span> knife throwing<span class="break"></span> game!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dialogue-damage">First time taking damage</h3>
+	<p class="note">Aqua gains 20% <span class="yellow">Mercy</span>.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Uuu, what is this!?<span class="break"></span> "Pain?" How funny!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Did you know?<span class="break"></span> You should try<span class="break"></span> some too!</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="ft-bored">Bored</h3>
+	<p>Uses a counter that is added to every time any ACT is used more than once.</p>
+
+	<h4 id="ft-bored1">First repetition</h4>
+	<p class="note">Follows the <a href="#ft-bored1">corresponding flavor text</a>.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Didn't we play<span class="break"></span> that old game<span class="break"></span> already?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Let's<span class="break"></span> do something else!</d-text>
+	</d-box>
+
+	<h4 id="ft-bored2">Second repetition</h4>
+	<p class="note">Follows the <a href="#ft-bored2">corresponding flavor text</a>.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>What a dull<span class="break"></span> game.</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Wouldn't you rather<span class="break"></span> play with something<span class="break"></span> sharp!?</d-text>
+	</d-box>
+
+	<h4 id="ft-bored3">Third repetition</h4>
+	<p class="note">Follows the <a href="#ft-bored3">corresponding flavor text</a>.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Hum, is that all you<span class="break"></span> can do?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>After all,<span class="break"></span> humans are actually<span class="break"></span> a little boring!</d-text>
+	</d-box>
+	<p class="note">Proceeds to the <a href="#end-nonviolent">end of the encounter</a>.</p>
+
+	<hr>
+
+	<h3 id="dialogue-spareable">Upon reaching 100% <span class="yellow">Mercy</span></h3>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Uee hee hee,<span class="break"></span> this is all<span class="break"></span> so much fun!</d-text>
+	</d-box>
+	<p class="note">Proceeds to the <a href="#end-nonviolent">end of the encounter</a>.</p>
+</section>
+
+<section class="d-section" id="check">
+	<h2>Check</h2>
+
+	<h3 id="check-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>Useless<span class="break"></span> analysis</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="check-ft">Flavor text</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You analyzed the enemy!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<p class="note">Aqua gains 20% <span class="yellow">Mercy</span>.</p>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<p>Uses the <a href="#ft-bored">bored flavor text</a>.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="check-dialogue">Dialogue</h3>
+	<h4>First time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Uuu, looking,<span class="break"></span> thinking! Just<span class="break"></span> like my friend!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>I'll CHECK too!<span class="break"></span> Let's see...</d-text>
+	</d-box>
+	<p class="note">In the below message, both cases of &lt;#&gt; are replaced by Kris's actual Attack and Defense stats at the time of this encounter, as seen in the <a href="{{ '/misc/powermenu' | relative_url }}">POWER menu</a>.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Kris, a human!<span class="break"></span> Attack is &lt;#&gt;!<span class="break"></span> Defense is &lt;#&gt;!<span class="break"></span> Magic is... none!<span class="break"></span> Has a knife!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h5>If any Ribbon is equipped to Kris</h5>
+	<details class="note">
+		<summary>Applicable items:</summary>
+		<ul>
+			<li><a href="{{ '/misc/armor#pinkribbon' | relative_url }}">Pink Ribbon</a></li>
+			<li><a href="{{ '/misc/armor#whiteribbon' | relative_url }}">White Ribbon</a></li>
+			<li><a href="{{ '/misc/armor#twinribbon' | relative_url }}">Twin Ribbon</a></li>
+			<li><a href="{{ '/misc/armor#blueribbon' | relative_url }}">Blue Ribbon</a></li>
+			<li><a href="{{ '/misc/armor#princessrbn' | relative_url }}">Princess Ribbon</a></li>
+			<li><a href="{{ '/misc/armor#monarchrbn' | relative_url }}">Monarch Ribbon</a></li>
+			<li><a href="{{ '/misc/armor#redribbon' | relative_url }}">Red Ribbon</a></li>
+		</ul>
+	</details>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Uuu, you're<span class="break"></span> wearing a ribbon,<span class="break"></span> holding a knife...<span class="break"></span> and blue...?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Uuu, who's who?<span class="break"></span> I'm confused now!<span class="break"></span> Uee hee hee hee!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h5>Otherwise</h5>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Huh!? You have<span class="break"></span> a knife too!?<span class="break"></span> Why don't you<span class="break"></span> use it...?</d-text>
+	</d-box>
+	<hr class="hr2">
+
+	<hr class="hr15">
+
+	<h4>Second time</h4>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Uuu, CHECKing,<span class="break"></span> LOOKing, again,<span class="break"></span> and again!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Just like my friend!<span class="break"></span> ... boring!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="spin">
+	<h2>Spin</h2>
+
+	<h3 id="spin-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>20%<span class="break"></span> mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="spin-ft">Flavor text</h3>
+	<p class="note">Kris pirouettes.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You spun in place!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<p class="note">Aqua begins spinning as well and gains 20% <span class="yellow">Mercy</span>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... the enemy spun around, too!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<p>Uses the <a href="#ft-bored">bored flavor text</a>.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="spin-dialogue">Dialogue</h3>
+	<p>Plays after the first use only.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Hee hee! What's going<span class="break"></span> on!? Is the whole<span class="break"></span> world revolving!?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="dance">
+	<h2>Dance</h2>
+
+	<h3 id="dance-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>20%<span class="break"></span> mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="dance-ft">Flavor text</h3>
+	<p class="note">Kris begins dancing.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You danced with enthusiasm!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<p class="note">Aqua begins dancing as well and gains 20% <span class="yellow">Mercy</span>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... the enemy danced, too!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<p>Uses the <a href="#ft-bored">bored flavor text</a>.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="dance-dialogue">Dialogue</h3>
+	<p>Plays after the first use only.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Haha! Your feet are<span class="break"></span> making such strange<span class="break"></span> music!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="care">
+	<h2>Care</h2>
+
+	<h3 id="care-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>20%<span class="break"></span> mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="care-ft">Flavor text</h3>
+	<p class="note">Kris wears a nurse outfit.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You showed tender loving care!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<p class="note">Aqua begins laughing and gains 20% <span class="yellow">Mercy</span>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... the enemy laughed!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<p>Uses the <a href="#ft-bored">bored flavor text</a>.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="care-dialogue">Dialogue</h3>
+	<p>Plays after the first use only.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>HAHA! What is that!?<span class="break"></span> Can humans change<span class="break"></span> their shape so!?</d-text>
+	</d-box>
+	<p class="note">Aqua stops laughing, looking grave.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>...</d-text>
+	</d-box>
+	<p class="note">Aqua smiles.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>I knew that!!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="coolpose">
+	<h2>Coolpose</h2>
+
+	<h3 id="coolpose-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>20%<span class="break"></span> mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="coolpose-ft">Flavor text</h3>
+	<p class="note">Kris turns their back to the camera and folds their arms.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You struck a cool pose!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<p class="note">Aqua puts her hands on her hips and gains 20% <span class="yellow">Mercy</span>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... the enemy posed back!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<p>Uses the <a href="#ft-bored">bored flavor text</a>.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="coolpose-dialogue">Dialogue</h3>
+	<p>Plays after the first use only.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Oh, I get it!<span class="break"></span> Posey, posey!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Are we part of<span class="break"></span> a team now, too!?</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="flatter">
+	<h2>Flatter</h2>
+
+	<h3 id="flatter-description">Description</h3>
+	<d-box theme="battledesc">
+		<d-text>20%<span class="break"></span> mercy</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="flatter-ft">Flavor text</h3>
+	<p class="note">Kris points at Aqua per their usual ACT pose, continuing to hold out their finger as she responds.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>You flattered the enemy's fighting style!</d-text>
+	</d-box>
+	<hr class="hr2">
+	<h4>First time</h4>
+	<p class="note">Aqua copies Kris's ACTing gesture and gains 20% <span class="yellow">Mercy</span>.</p>
+	<d-box theme="battlemenu">
+		<d-text asterisk>... the enemy flattered, too!</d-text>
+	</d-box>
+	<hr class="hr3">
+	<h4>Subsequent times</h4>
+	<p>Uses the <a href="#ft-bored">bored flavor text</a>.</p>
+	<hr class="hr2">
+
+	<hr>
+
+	<h3 id="flatter-dialogue">Dialogue</h3>
+	<p>Plays after the first use only.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Hee hee, is that<span class="break"></span> how you fight? So,<span class="break"></span> if I praise enough,<span class="break"></span> I'll win too?</d-text>
+	</d-box>
+	<p class="note">Aqua beams.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>I'm the best!<span class="break"></span> I'm the best!<span class="break"></span> Hee hee,<span class="break"></span> I'm winning!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="end">
+	<h2>End of fight</h2>
+	<p>Plays immediately before Aqua's attack phase as soon as either of the below conditions are met, following any ACT-specific dialogue for that turn.</p>
+
+	<h3 id="end-nonviolent">If Aqua has gained 100% <span class="yellow">Mercy</span> or grown too bored</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Here, I'll do<span class="break"></span> something,<span class="break"></span> and you copy!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>My magic, my<span class="break"></span> Omega, can you<span class="break"></span> follow!?</d-text>
+	</d-box>
+	<p class="note">Aqua uses her Omega Knife attack. Once it ends, she speaks again, beginning to laugh:</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Uee hee hee!!<span class="break"></span> Now, your turn,<span class="break"></span> your turn!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Magic, magic,<span class="break"></span> Omega, magic!</d-text>
+	</d-box>
+	<p class="note">She continues laughing for a moment. Then her smile drops, the music cutting short.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>... what?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>You can't do it!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Uuu, how boring...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>No more battle!</d-text>
+	</d-box>
+	<p class="note">The encounter ends.</p>
+
+	<hr>
+
+	<h3 id="end-violent">If Aqua is at 20% HP or below</h3>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Uuu, this is<span class="break"></span> fun, fun!!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Seth</d-speaker>
+		<d-text>Wh-what are you<span class="break"></span> doing!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Playing a game!<span class="break"></span> Do you want to<span class="break"></span> play, too!?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Seth</d-speaker>
+		<d-text>What!? NO!!<span class="break"></span> If you keep<span class="break"></span> fighting, you'll<span class="break"></span> end up...</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Uuu? What, what?<span class="break"></span> End up what?<span class="break"></span> Is it another<span class="break"></span> type of game...?</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Seth</d-speaker>
+		<d-text>N-No, I'm just<span class="break"></span> worried that...</d-text>
+	</d-box>
+	<p class="note">Aqua begins laughing.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Don't worry, you<span class="break"></span> can play too!!</d-text>
+	</d-box>
+	<d-box theme="battletalk">
+		<d-speaker>Seth</d-speaker>
+		<d-text>That's not what<span class="break"></span> I'm saying!!!<span class="break"></span> Just give up!!<span class="break"></span> I'm going to<span class="break"></span> retreat, too!</d-text>
+	</d-box>
+	<p class="note">Aqua stops laughing and puts her hands on her hips.</p>
+	<d-box theme="battletalk">
+		<d-speaker>Aqua</d-speaker>
+		<d-text>Uuu, okay...</d-text>
+	</d-box>
+	<p class="note">The encounter ends.</p>
+</section>
