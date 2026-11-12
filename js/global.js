@@ -133,6 +133,7 @@ class DialogueSpeaker extends HTMLElement {
 
 			// Chapter 5
 			case "aqua":
+			case "cyan":
 			case "seth":
 			case "purple":
 			case "blue":
@@ -140,6 +141,10 @@ class DialogueSpeaker extends HTMLElement {
 			case "green":
 			case "orange":
 				this.classList.add("flower", speaking.charAt(0));
+				break;
+
+			case "pink":
+				this.classList.add("mewmew");
 				break;
 
 			default:
@@ -322,6 +327,24 @@ customElements.define("d-sprite", DialogueSprite);
 class DialogueText extends HTMLElement {
 	constructor() {
 		super()
+	}
+
+	#wrapFlowers() {
+		const asterisk = this.getAttribute("asterisk");
+		if (
+			[	// regular flowers
+				"aqua",		"cyan",
+				"seth",		"purple",
+				"blue",		"yellow",
+				"green",	"orange",
+			].includes(asterisk?.toLowerCase())
+			|| this.parentElement.firstElementChild.classList.contains("mewmew")	// big sis
+		)
+			this.innerHTML = `<span class="txt">${this.innerHTML}</span>`;
+	}
+
+	connectedCallback() {
+		setTimeout(() => this.#wrapFlowers(), 0);
 	}
 }
 customElements.define("d-text", DialogueText);

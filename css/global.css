@@ -94,14 +94,25 @@
 	--eram: #f26522;
 	/* Chapter 4 */
 	--gerson: #65aa26;
-	/* Chapter 5 */
+	/* Chapter 5
+	 6 flowers' colors picked from asterisk icons; 7 tints from scr_texttype
+	 */
 	--flowery: #fee502;
 	--flower-aqua: #46e3ff;
 	--flower-purple: #eb63eb;
 	--flower-blue: #00aef0;
 	--flower-yellow: #fff200;
-	--flower-orange: #ffa040;
 	--flower-green: #00a651;
+	--flower-orange: #ffa040;
+	--flower-pink: #ff8a90;
+	--flower-pink-ghost: #c0aedb;
+	--flower-aqua-tint: #84f9ff;
+	--flower-purple-tint: #e2a8fc;
+	--flower-blue-tint: #86a7ff;
+	--flower-yellow-tint: #fff8a1;
+	--flower-green-tint: #aeffbc;
+	--flower-orange-tint: #ffac87;
+	--flower-pink-tint: #ff8a90;
 
 	--font-base: "DeltaFont", "Courier New", Courier, monospace;
 	--font-condensed: "DeltaFont Condensed", var(--font-base);
@@ -154,10 +165,13 @@ body.dim {
 	--lanino: #b89d64; /* CUSTOM-PICKED, NOT FROM SPRITE */
 	--elnina: #7497ca; /* CUSTOM-PICKED, NOT FROM SPRITE */
 	--flowery: #c29702; /* from injured sprite */
-	--flower-aqua: #2fa1b1; /* color-mixed from sprite's 2 shades of blue */
-	--flower-purple: #9f619f; /* CUSTOM-PICKED, NOT FROM SPRITE */
-	--flower-yellow: #ada400; /* CUSTOM-PICKED, NOT FROM SPRITE */
-	--flower-orange: #b6722e; /* CUSTOM-PICKED, NOT FROM SPRITE */
+	--flower-aqua: #00a9c7; /* color-mixed from sprite's 2 shades of blue */
+	--flower-purple: #a349a4;
+	--flower-blue: #5060eb;
+	--flower-yellow: #ffa600;
+	--flower-orange: #f9784d;
+	--flower-pink: #a73c5c;
+	--flower-pink-ghost: #635d86;
 }
 /* #region Color-specific classes */
 .cR, .red { color: var(--red) }
@@ -207,7 +221,14 @@ d-box[theme=battlemenu],
 	.cS, .pink,
 	.cV, .lightgreen,
 	.cI, .iceblue,
-	.gray, .lightyellow {
+	.gray, .lightyellow,
+	d-text:is(
+		[asterisk="Aqua" i], [asterisk="Cyan" i],
+		[asterisk="Seth" i], [asterisk="Purple" i],
+		[asterisk="Blue" i], [asterisk="Yellow" i],
+		[asterisk="Green" i], [asterisk="Orange" i],
+	) .txt,
+	.mewmew .txt, .mewmew::before {
 		text-shadow: none;
 		background: var(--mycolor) linear-gradient(rgb(from var(--white) r g b / 0.8), rgb(from var(--mycolor) r g b / 0));
 		background-clip: text;
@@ -228,6 +249,16 @@ d-box[theme=battlemenu],
 	.cI, .iceblue { --mycolor: var(--iceblue) }
 	.gray { --mycolor: var(--gray) }
 	.lightyellow { --mycolor: var(--lightyellow) }
+	d-text {
+		/* lighter versions for the flowers' actual dialogue */
+		&:is([asterisk="Aqua" i], [asterisk="Cyan" i]) .txt { --mycolor: var(--flower-aqua-tint) }
+		&:is([asterisk="Seth" i], [asterisk="Purple" i]) .txt { --mycolor: var(--flower-purple-tint) }
+		&:is([asterisk="Blue" i]) .txt { --mycolor: var(--flower-blue-tint) }
+		&:is([asterisk="Yellow" i]) .txt { --mycolor: var(--flower-yellow-tint) }
+		&:is([asterisk="Green" i]) .txt { --mycolor: var(--flower-green-tint) }
+		&:is([asterisk="Orange" i]) .txt { --mycolor: var(--flower-orange-tint) }
+		&.mewmew { --mycolor: var(--flower-pink-tint) }
+	}
 }
 /* Health bar colors */
 .health {
@@ -346,6 +377,7 @@ d-box[theme=battlemenu],
 	&.g { color: var(--flower-green) }
 	&.o { color: var(--flower-orange) }
 }
+.mewmew { color: var(--flower-pink) }
 /* #endregion */
 /* #endregion */
 /* #region Font-specific classes */
@@ -1100,6 +1132,15 @@ d-box, d-choices {
 				--lanino: #b45c1c; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readability from #fcce6c */
 				--elnina: #2f66b7; /* darkened for readability from #9bc3fe */
 				--gerson: #3d7a06; /* darkened for readability from #65aa26 */
+				--flowery: #736a3c;
+				--flower-aqua: #186062;
+				--flower-purple: #a349a4;
+				--flower-blue: #5060eb;
+				--flower-yellow: #d98200;
+				--flower-green: #286b29; /* from green's sign */
+				--flower-orange: #f9784d;
+				--flower-pink: #a73c5c;
+				--flower-pink-ghost: #635d86;
 
 				body.dim & {
 					--sweet: #604800; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readability from #e9c040 */
@@ -1108,6 +1149,11 @@ d-box, d-choices {
 					--tenna: #7a223a;
 					--lanino: #7b3502; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readbility from above*/
 					--elnina: #174891; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readbility from above*/
+					--flower-purple: #673295;
+					--flower-blue: #384fb8; /* from spr_blue_flowers */
+					--flower-orange: #9d4e34;	/* blended from sprite mid shades*/
+					--flower-pink: #48012e;
+					--flower-pink-ghost: #171b32;
 				}
 			}
 		}
