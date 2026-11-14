@@ -16,15 +16,19 @@ see_also:
 sources:
   -
     name: gml_GlobalScript_scr_spellinfo
-    chapters: [1, 2, 3, 4]
+    chapters: [1, 2, 3, 4, 5]
     note: spell descriptions
   -
     name: gml_GlobalScript_scr_spell
-    chapters: [1, 2, 3, 4]
+    chapters: [1, 2, 3, 4, 5]
     note: spell effects
   -
+    name: gml_GlobalScript_scr_spelltext
+    chapters: [1, 2, 3, 4, 5]
+    note: usage flavor text
+  -
     name: gml_GlobalScript_scr_gamestart
-    chapters: [1, 2, 3, 4]
+    chapters: [1, 2, 3, 4, 5]
     note: character assignments
   -
     name: gml_GlobalScript_scr_monstersetup
@@ -92,6 +96,15 @@ toc:
       -
         id: betterheal
         name: Better Heal
+  -
+    name: First seen in Chapter 5
+    subheadings:
+      -
+        id: revivesong
+        name: Revive Song
+      -
+        id: scythemare
+        name: Scythemare
 ---
 <section class="d-section" id="rudesword"> <!-- id 1 -->
 	<h2>Rude Sword</h2>
@@ -154,7 +167,7 @@ toc:
 	<d-box theme="battlemenu">
 		<d-text asterisk>&lt;Character&gt; cast HEAL PRAYER!</d-text>
 	</d-box>
-	<p class="note">Heals a single party member.</p>
+	<p class="note">Heals a single party member. Heals slightly more if the caster has equipped the <a href="{{ '/misc/armor#yellowhat' | relative_url}}">Yellow Hat</a>.</p>
 </section>
 
 <section class="d-section" id="pacify"> <!-- id 3 -->
@@ -168,9 +181,16 @@ toc:
 	</d-box>
 
 	<h4 id="pacify-description-battle">In battle</h4>
+	<h5>Standard</h5>
 	<d-box theme="battledesc">
 		<d-text>Spare TIRED foe</d-text>
 		<d-text class="orange">16% TP</d-text>
+	</d-box>
+
+	<h5>With the <a href="{{ '/misc/weapons#blueshoes' | relative_url }}">Blue Shoes</a> equipped</h5>
+	<p class="note">No longer costs TP.</p>
+	<d-box theme="battledesc">
+		<d-text>Spare TIRED foe</d-text>
 	</d-box>
 
 	<hr>
@@ -240,7 +260,7 @@ toc:
 	<d-box theme="battlemenu">
 		<d-text asterisk>Susie used RUDE BUSTER!</d-text>
 	</d-box>
-	<p class="note">Deals damage to a single enemy.</p>
+	<p class="note">Deals damage to a single enemy. Heals slightly more if Susie has equipped the <a href="{{ '/misc/armor#yellowhat' | relative_url}}">Yellow Hat</a>.</p>
 </section>
 
 <section class="d-section" id="redbuster"> <!-- id 5 -->
@@ -277,7 +297,11 @@ toc:
 <section class="d-section" id="dualheal"> <!-- id 6 -->
 	<h2>{% include acticon chara="Susie" -%}/{% include acticon chara="Ralsei" -%} Dual Heal</h2>
 	<p>Can only be cast through Kris's ACT menu. Appears as "{% include acticon chara="Ralsei" -%} DualHeal" (Chapters 1 & 2) / "{% include acticon chara="Susie" -%} {% include acticon chara="Ralsei" -%} DualHeal" (Chapter 4 onwards) in-game.</p>
-	<p>Available to Ralsei during the battles against King and Queen, and to Susie & Ralsei during the battles against the Titan Spawn and Titan.</p>
+	<p>Available to:</p>
+	<ol>
+		<li>Ralsei during the battles against King (Chapter 1) and Queen (Chapter 2)</li>
+		<li>Susie & Ralsei during the battles against the Titan Spawn and Titan (Chapter 4)</li>
+	</ol>
 
 	<h3 id="dualheal-description">Description</h3>
 	<h4 id="dualheal-description-overworld">Overworld</h4>
@@ -350,6 +374,12 @@ toc:
 	<d-box theme="objmenu">
 		<d-text>Execute various behaviors.</d-text>
 		<d-text>It can't be considered magic.</d-text>
+	</d-box>
+
+	<h5>Chapter 5</h5>
+	<d-box theme="objmenu">
+		<d-text>It's not magic, is it?</d-text>
+		<d-text>No, not something like this.</d-text>
 	</d-box>
 
 	<h4 id="act-description-battle">In battle</h4>
@@ -476,7 +506,7 @@ toc:
 	<d-box theme="battlemenu">
 		<d-text asterisk>Susie cast ULTIMATEHEAL!</d-text>
 	</d-box>
-	<p class="note">Heals a single party member.</p>
+	<p class="note">Heals a single party member. Heals slightly more if Susie has equipped the <a href="{{ '/misc/armor#yellowhat' | relative_url}}">Yellow Hat</a>.</p>
 </section>
 
 <section class="d-section" id="ultraheal"> <!-- id 11 -->
@@ -495,7 +525,7 @@ toc:
 		<d-text>Best healing</d-text>
 		<d-text class="orange">90% TP</d-text>
 	</d-box>
-	<p class="note">Cost is reduced by 1% TP per use for the first 5 uses, leading to a minimum cost of 85% TP.</p>
+	<p class="note">Cost is reduced by 1% TP per use for the first 5 uses, bottoming out at a minimum cost of 85% TP.</p>
 
 	<hr>
 
@@ -503,33 +533,54 @@ toc:
 	<d-box theme="battlemenu">
 		<d-text asterisk>Susie cast ULTRAHEAL!</d-text>
 	</d-box>
-	<p class="note">Heals a single party member.</p>
+	<p class="note">Heals a single party member. Heals slightly more if Susie has equipped the <a href="{{ '/misc/armor#yellowhat' | relative_url}}">Yellow Hat</a>.</p>
 </section>
 
 <section class="d-section" id="okheal"> <!-- id 11 -->
 	<h2>OK Heal</h2>
-	<p>Available to Susie at the start of Chapter 4 up to meeting Ralsei in the Dark Sanctuary, and from healing Jackenstein onwards. Appears as "OKHeal" in-game.</p>
+	<p>Available to Susie at the start of Chapter 4 up to meeting Ralsei in the Dark Sanctuary, and from healing Jackenstein onwards. Appears as "OKHeal" in-game. Renamed to "Heal" at the start of Chapter 5.</p>
 
 	<h3 id="okheal-description">Description</h3>
 	<h4 id="okheal-description-overworld">Overworld</h4>
+	<h5>Chapter 4</h5>
 	<d-box theme="objmenu">
 		<d-text>It's not the best healing spell, but<span class="break"></span> it may have its uses.</d-text>
 	</d-box>
 
+	<h5>Chapter 5 onwards</h5>
+	<d-box theme="objmenu">
+		<d-text>A healing spell that has grown<span class="break"></span> with practice and confidence.</d-text>
+	</d-box>
+
 	<h4 id="okheal-description-battle">In battle</h4>
+	<h5>Chapter 4</h5>
 	<d-box theme="battledesc">
 		<d-text>OK<span class="break"></span> healing</d-text>
 		<d-text class="orange">85% TP</d-text>
 	</d-box>
-	<p class="note">Cost is reduced by 1% TP after 1, 4, 7, 10, and 13 uses (including any uses during Chapter 3), leading to a minimum cost of 80% TP.</p>
+	<p class="note">Cost is reduced by 1% TP after using this spell multiple times (including any uses during previous Chapters), bottoming out at a minimum cost of 80% TP.</p>
+
+	<h5>Chapter 5 onwards</h5>
+	<d-box theme="battledesc">
+		<d-text>Heal<span class="break"></span> ally</d-text>
+		<d-text class="orange">85% TP</d-text>
+	</d-box>
+	<p class="note">Cost is reduced by 1% TP after using this spell multiple times (including any uses during previous Chapters), bottoming out at a minimum cost of 80% TP.</p>
 
 	<hr>
 
 	<h3 id="okheal-usage">Usage</h3>
+	<p class="note">Heals a single party member. Heals more if the party member is DOWNed. Heals slightly more if Susie has equipped the <a href="{{ '/misc/armor#yellowhat' | relative_url}}">Yellow Hat</a>.</p>
+
+	<h4>Chapter 4</h4>
 	<d-box theme="battlemenu">
 		<d-text asterisk>Susie cast OKHEAL!</d-text>
 	</d-box>
-	<p class="note">Heals a single party member.</p>
+
+	<h4>Chapter 5 onwards</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie cast HEAL!</d-text>
+	</d-box>
 </section>
 
 <section class="d-section" id="heal"> <!-- id 11 -->
@@ -569,13 +620,79 @@ toc:
 		<d-text>Heal<span class="break"></span> ally</d-text>
 		<d-text class="orange">80% TP</d-text>
 	</d-box>
-	<p class="note">Cost is reduced by 1% TP after 1, 4, 7, 10, and 13 uses (including any uses during Chapter 3), leading to a minimum cost of 75% TP.</p>
+	<p class="note">after using this spell multiple times (including any uses during previous Chapters), bottoming out at a minimum cost of 75% TP.</p>
 
 	<hr>
 
 	<h3 id="betterheal-usage">Usage</h3>
+	<p class="note">Heals a single party member. Heals more if the party member is DOWNed. Heals significantly more if Susie has equipped the <a href="{{ '/misc/armor#yellowhat' | relative_url}}">Yellow Hat</a>.</p>
+
+	<h4>Chapter 4</h4>
 	<d-box theme="battlemenu">
-		<d-text asterisk>Susie cast BetterHeal!</d-text>
+		<d-text asterisk>Susie cast BETTERHEAL!</d-text>
 	</d-box>
-	<p class="note">Heals a single party member.</p>
+
+	<h4>Chapter 5 onwards</h4>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie cast HEAL!</d-text>
+	</d-box>
+</section>
+
+<section class="d-section" id="revivesong"> <!-- id 12 -->
+	<h2>Revive Song</h2>
+	<p>Available to Ralsei from Chapter 5 onwards. Appears as "ReviveSong" in-game.</p>
+
+	<h3 id="revivesong-description">Description</h3>
+	<h4 id="revivesong-description-overworld">Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Revives a DOWNed ally and heals them.</d-text>
+		<d-text>Otherwise, heals a lot of HP.</d-text>
+	</d-box>
+
+	<h4 id="revivesong-description-battle">In battle</h4>
+	<d-box theme="battledesc">
+		<d-text>Revive<span class="break"></span> ally</d-text>
+		<d-text class="orange">85% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="revivesong-usage">Usage</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Ralsei cast REVIVESONG!</d-text>
+	</d-box>
+	<p class="note">Revives a single DOWNed party member, or heals a single party member. Heals more if the caster has equipped the <a href="{{ '/misc/armor#yellowhat' | relative_url}}">Yellow Hat</a>.</p>
+</section>
+
+<section class="d-section" id="scythemare"> <!-- id 13 -->
+	<h2>Scythemare</h2>
+	<p>Available to Susie from Chapter 5 onwards.</p>
+
+	<h3 id="scythemare-description">Description</h3>
+	<h4 id="scythemare-description-overworld">Overworld</h4>
+	<d-box theme="objmenu">
+		<d-text>Inflicts all enemies with bad dreams.</d-text>
+		<d-text>All TIRED enemies will be SPAREd.</d-text>
+	</d-box>
+
+	<h4 id="scythemare-description-battle">In battle</h4>
+	<h5>Standard</h5>
+	<d-box theme="battledesc">
+		<d-text>Spare all<span class="break"></span> TIRED foes</d-text>
+		<d-text class="orange">40% TP</d-text>
+	</d-box>
+
+	<h5>With the <a href="{{ '/misc/armor#oglove' | relative_url }}">Orange Glove</a> equipped to any party member</h5>
+	<d-box theme="battledesc">
+		<d-text>Spare all<span class="break"></span> TIRED foes</d-text>
+		<d-text class="orange">20% TP</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="scythemare-usage">Usage</h3>
+	<d-box theme="battlemenu">
+		<d-text asterisk>Susie cast SCYTHEMARE!</d-text>
+	</d-box>
+	<p class="note">Spares any <span class="blue">Tired</span> enemies.</p>
 </section>

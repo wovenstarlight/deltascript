@@ -249,6 +249,6 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 				4. Trying to sell nothing #mynothing (Empty slot)
 		* DONE up to Chapter 4: item/equipment/money get, treasure chests, warp doors, vending machines
 	* ~~`/powermenu` - Titles, stats, spells~~ DONE up to Chapter 4
-	* ~~`/spells` - Spells listed in the POWER menu with overworld/battle descriptions and usage text~~ DONE up to Chapter 4
+	* ~~`/spells` - Spells listed in the POWER menu with overworld/battle descriptions and usage text~~ DONE up to Chapter 5
 	* ~~`/gameover` - Death messages~~ DONE up to Chapter 5
 	* ~~`/UNUSED` - the mystery speaker~~ DONE up to Chapter 5
