@@ -11,15 +11,15 @@ credits: >
 sources:
   -
     name: gml_Object_obj_darkcontroller_Draw_0
-    chapters: [1, 2, 3, 4]
+    chapters: [1, 2, 3, 4, 5]
     note: layout, titles, stats
   -
     name: gml_GlobalScript_scr_gamestart
-    chapters: [1, 2, 3, 4]
+    chapters: [1, 2, 3, 4, 5]
     note: spell assignments
   -
     name: gml_GlobalScript_scr_spellinfo
-    chapters: [1, 2, 3, 4]
+    chapters: [1, 2, 3, 4, 5]
     note: spell TP costs
 
 see_also:
@@ -190,6 +190,9 @@ toc:
           -
             id: noelletitles2
             name: Chapter 2
+          -
+            id: noelletitles5
+            name: Chapter 5
       -
         id: noellestats
         name: Stats
@@ -204,6 +207,22 @@ toc:
           -
             id: noellespells2
             name: Chapter 2
+  -
+    id: flowery
+    name: Flowery
+    subheadings:
+      -
+        id: flowerytitles
+        name: Titles
+      -
+        id: flowerystats
+        name: Stats
+      -
+        id: floweryspells
+        name: Spells
+      -
+        id: floweryequipment
+        name: Equipment
 ---
 <section class="d-section" id="layout">
 	<h2>Layout</h2>
@@ -1046,6 +1065,18 @@ toc:
 		<d-text>Neither chaotic nor<span class="break"></span> lawful to moss.</d-text>
 	</d-box>
 
+	<hr class="hrhalf">
+
+	<h4 id="noelletitles5">
+		<a id="lv5mistletoe"></a>
+		Chapter 5
+	</h4>
+	<p>Unseen in-game as Noelle never enters the Dark World in Chapter 5, but documented for completion.</p>
+	<d-box theme="powertitle">
+		<d-text>LV5 Mistletoe</d-text>
+		<d-text>Things got<span class="break"></span> serious today.</d-text>
+	</d-box>
+
 	<hr>
 
 	<h3 id="noellestats">Stats</h3>
@@ -1101,4 +1132,81 @@ toc:
 			<td class="spellcost">16% {% include spell_variable_cost %}</td>
 		</tr>
 	</table>
+</section>
+
+<section class="d-section" id="flowery">
+	<h2>Flowery</h2>
+	<p>Appears temporarily as a party member during Chapter 5, during which time his stats and abilities can be checked in the POWER/EQUIP menus.</p>
+
+	<h3 id="flowerytitles">Titles</h3>
+	<d-box theme="powertitle">
+		<d-text>LV99 Roommate</d-text>
+		<d-text>Your dad's his<span class="break"></span> best friend.</d-text>
+	</d-box>
+
+	<hr>
+
+	<h3 id="flowerystats">Stats</h3>
+	<p>Unlike other party members, Flowery's stats are fixed at the following values.</p>
+	<dl class="powerstats">
+		<dt>{% include staticon name="sword" -%} <span class="statlabel">Attack:</span></dt>
+		<dd>99</dd>
+		<dt>{% include staticon name="shield" -%} <span class="statlabel">Defense:</span></dt>
+		<dd>99</dd>
+		<dt>{% include staticon name="magic" -%} <span class="statlabel">Magic:</span></dt>
+		<dd>99</dd>
+		<dt>{% include staticon name="flowery" -%} <span class="statlabel">Flowers:</span></dt>
+		<dd>99</dd>
+		<dt>{% include staticon name="flowery" -%} <span class="statlabel shrink75">Floweriness:</span></dt>
+		<dd>{% include staticon name="floweryhead" alt="3" %}{% include staticon name="floweryhead" %}{% include staticon name="floweryhead" %}</dd>
+		<dt>{% include staticon name="flowery" -%} <span class="statlabel">Guts:</span></dt>
+		<dd>{% include staticon name="floweryhead" alt="5" %}{% include staticon name="floweryhead" %}{% include staticon name="floweryhead" %}{% include staticon name="floweryhead" %}{% include staticon name="floweryhead" %}</dd>
+	</dl>
+
+	<hr>
+
+	<h3 id="floweryspells">Spells</h3>
+	<p>Unlike other party members, Flowery's spells cannot be checked for their effects.</p>
+	<table class="powerspells">
+		<tr class="visually-hidden">
+			<th>Name</th>
+			<th>TP cost</th>
+		</tr>
+		<tr>
+			<td class="spellname shrink85">Sanfrandisco</td>
+			<td class="spellcost">0%</td>
+		</tr>
+		<tr>
+			<td class="spellname">MyJarona</td>
+			<td class="spellcost">99%</td>
+		</tr>
+		<tr>
+			<td class="spellname">Ez2Dance</td>
+			<td class="spellcost">22%</td>
+		</tr>
+		<tr>
+			<td class="spellname">PrismRush</td>
+			<td class="spellcost">111%</td>
+		</tr>
+		<tr>
+			<td class="spellname">Afinihug</td>
+			<td class="spellcost">222%</td>
+		</tr>
+		<tr>
+			<td class="spellname">HoneyKiss</td>
+			<td class="spellcost">333%</td>
+		</tr>
+	</table>
+
+	<hr>
+
+	<h3 id="floweryequipment">Equipment</h3>
+	<p>Unlike other party members, Flowery's equipment cannot be altered, and is fixed to the following values.</p>
+	<dl class="flowery equipment">
+		<dt>Weapon</dt>
+		<dd>{% include staticon name="flowery" -%} <span class="equiplabel">WinningSmile</span></dd>
+		<dt>Armor</dt>
+		<dd>{% include staticon name="shield" -%} <span class="equiplabel">PetalMantle</span></dd>
+		<dd>{% include staticon name="shield" -%} <span class="equiplabel">SundayBest</span></dd>
+	</dl>
 </section>

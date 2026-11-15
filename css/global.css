@@ -2110,7 +2110,7 @@ d-option-panel {
 	body:not(.noanim) & { animation: rotate 15s linear infinite }
 }
 /* #region POWER menu */
-.powerstats, .powerspells {
+.powerstats, .powerspells, .equipment {
 	font-family: var(--font-condensed);
 	line-height: 1.2;
 	display: grid;
@@ -2142,15 +2142,9 @@ d-option-panel {
 /* Party members' stat menus */
 .powerstats {
 	width: fit-content;
-	grid-template-columns: 11.5ch 3ch;
+	grid-template-columns: 11.5ch 3.5ch;
 
-	body:not(.compact) & {
-		&::before { background: url("../assets/images/ui/statmenu/stats.png") center / contain no-repeat }
-		dt:has(
-			img[src*=guts], /* Guts */
-			+ dd > img[src*=dog_sleep] /* Dog */
-		) .statlabel::after { content: ":" }
-	}
+	body:not(.compact) &::before { background: url("../assets/images/ui/statmenu/stats.png") center / contain no-repeat }
 	body:not(.compact).dim &::before { background-image: url("../assets/images/ui/statmenu/stats_dim.png") }
 	
 	body.compact & {
@@ -2179,6 +2173,9 @@ d-option-panel {
 			align-items: center;
 		}
 		&:has(.staticon[src*=guts]) { margin-inline-start: -3ch }
+		&:has(.staticon[src*=floweryhead]) { gap: 0.1em }
+		&:has(.staticon[src*=floweryhead]:last-child:nth-child(3)) { margin-inline-start: -0.2ch }
+		&:has(.staticon[src*=floweryhead]:last-child:nth-child(5)) { margin-inline-start: -1.4ch }
 	}
 
 	dt .staticon, img[src*=dog_sleep] { width: 100% }
@@ -2197,13 +2194,18 @@ d-option-panel {
 			height: auto;
 		}
 		body.dim & { filter: brightness(73%) }
+		
+		&[src*=floweryhead] {
+			width: 1ch;
+			height: auto;
+			flex-shrink: 0;
+		}
 	}
 }
 /* Party members' spell menus */
 .powerspells {
 	width: calc(var(--basewidth) - 11.4em);
 	max-width: calc(100% - var(--border-width));
-	color: hsl(from var(--white) h s calc(l / 2));
 
 	position: relative;
 	&::after {
@@ -2247,6 +2249,83 @@ d-option-panel {
 		a:not(:hover, :focus) {
 			color: inherit;
 			text-decoration: none;
+		}
+	}
+}
+.equipment {
+	gap: 0.1ch 1.25ch;
+	align-items: stretch;
+	justify-content: start;
+	color: var(--white);
+
+	body:not(.compact) & {
+		width: calc(var(--basewidth) - 19ch);
+		padding-inline: 1ch;
+	}
+	body:not(.compact) &::before { background: url("../assets/images/ui/statmenu/equipped.png") center / contain no-repeat }
+	body:not(.compact).dim &::before { background-image: url("../assets/images/ui/statmenu/equipped_dim.png") }
+
+	dt {
+		grid-column: 1;
+		color: transparent;
+		width: 1.5ch;
+		position: relative;
+
+		&::before, &::after {
+			display: block;
+			width: 2.5ch;
+			height: 2.5ch;
+			position: absolute;
+			inset-inline-start: 50%;
+			inset-block-start: 50%;
+			transform: translate(-50%, -50%);
+			background-size: auto 2.5ch;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		&:first-of-type::before,
+		&:last-of-type::before,
+		&:last-of-type::after { content: "" }
+		&:first-of-type::before {
+			inset-block-start: unset;
+			inset-block-end: 0;
+			transform: translateX(-50%);
+			background-image: url("../assets/images/ui/statmenu/equip/sword.png");
+		}
+		&:last-of-type::before {
+			background-image: url("../assets/images/ui/statmenu/equip/armor1.png");
+		}
+		&:last-of-type::after {
+			inset-block-start: 150%;
+			background-image: url("../assets/images/ui/statmenu/equip/armor2.png");
+		}
+	}
+	&.susie dt:first-of-type::before { background-image: url("../assets/images/ui/statmenu/equip/axe.png") }
+	&.ralsei dt:first-of-type::before { background-image: url("../assets/images/ui/statmenu/equip/scarf.png") }
+	&.noelle dt:first-of-type::before { background-image: url("../assets/images/ui/statmenu/equip/ring.png") }
+	&.flowery dt:first-of-type::before { background-image: url("../assets/images/ui/statmenu/equip/flowery.png") }
+
+	dd {
+		grid-column: 2;
+		margin: 0;
+		&:has(.staticon) {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.staticon {
+		dd & {
+			width: 1.5ch;
+			height: auto;
+			margin-inline-end: 0.2ch;
+		}
+		body.dim & { filter: brightness(73%) }
+		
+		&[src*=floweryhead] {
+			width: 1ch;
+			height: auto;
+			flex-shrink: 0;
 		}
 	}
 }
