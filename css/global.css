@@ -456,7 +456,7 @@ hr {
 		body:not(.noanim) &::before { background-image: url("/deltascript/assets/images/savepoint.gif") }
 	}
 
-	&.hrhalf {
+	&.hrhalf, &.hr15 {
 		color: var(--gray);
 		margin-inline-start: 0;
 		margin-block: 1em;
