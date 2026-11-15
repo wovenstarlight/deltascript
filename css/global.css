@@ -2169,11 +2169,6 @@ d-option-panel {
 		grid-column: 2;
 
 		&.blank { color: hsl(from var(--white) h s calc(l / 4)) } /* specifically, it uses c_dkgray which is #404040; we're matching that relatively so as not to have to introduce a new color */
-
-		&.shrink80 {
-			transform-origin: top left;
-			transform: scaleX(80%);
-		}
 	}
 
 	dd {
@@ -2254,6 +2249,13 @@ d-option-panel {
 			text-decoration: none;
 		}
 	}
+}
+/* Text shrinkage */
+.statlabel, .spellname {
+	&[class*=shrink] { transform-origin: top left }
+	&.shrink85 { transform: scaleX(85%) }
+	&.shrink80 { transform: scaleX(80%) }
+	&.shrink75 { transform: scaleX(75%) }
 }
 /* #endregion */
 /* Character icons for ACTs */
