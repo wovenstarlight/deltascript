@@ -174,6 +174,10 @@ Brainstorming what pages we'd want. This is a changeable list! Feel free to add 
 		* `/mike` - Getting into Mike's room in TV Studio
 			* `#postfight`
 	* `/chapter5`
+		* `/ultimatum` - flowery letting asgore through to the fountain + telling the party to meet him at top of castle `gml_Object_obj_ch5_DW22_Step_0`
+		* `/jailbreak` - getting out of jail `gml_Object_obj_ch5_DW19B_Step_0`
+		* `/pink` - meeting+fighting pink `gml_Object_obj_dw_pink_encounter_Step_0`
+		* `/egg` - `gml_Object_obj_room_man_Step_0`
 	* `/chapter6`
 	* `/chapter7`
 * `/encounters` - Check descriptions, ACT descriptions, etc. This is probably gonna have a ton of subpages, I'd guess one for every potential enemy. At the very least, the big story-critical encounters (e.g. all boss fights) would need their own subpages which the `/story` pages could then link to.
