@@ -10,6 +10,10 @@
 	</title>
 	<meta name="description" content="{{ page.description | default: site.description | strip_html | strip }}">
 	<link rel="stylesheet" href="{{ 'css/global.css' | relative_url }}">
+	{%- assign sheets = page.stylesheets | default: page.css -%}
+	{%- for sheet in sheets -%}
+	<link rel="stylesheet" href="{{ sheet | prepend: 'css/' | append: '.css' | relative_url }}">
+	{%- endfor -%}
 	<script>const BASE_URL = "{{ site.baseurl }}";</script>
 	<script src="{{ 'js/global.js' | relative_url }}"></script>
 	<link rel="shortcut icon" href="{{  '/assets/images/logo-book.png' | relative_url }}" type="image/x-icon">
