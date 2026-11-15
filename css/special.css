@@ -1,0 +1,237 @@
+/******************************************************************************
+*********** Styles for rare or chapter-specific special formatting ************
+******************************************************************************/
+
+/* For simultaneous talk bubbles in encounters */
+.boxgroup {
+	display: flex;
+	flex-wrap: wrap;
+	& > d-box { margin-inline-start: 0 !important }
+
+	&:has(
+		[theme^=battletalk] :is(
+			[asterisk="Happy" i], [asterisk="Nice" i],
+			[asterisk="Mad" i], [asterisk="Mean" i],
+			[asterisk="Sad" i], [asterisk="Shy" i]
+		)
+	) {
+		margin-block-start: 0.75em;
+	}
+
+	body:not(.compact) & {
+		margin-inline-start: 1em;
+	}
+
+	body.compact & {
+		margin-inline-start: min(1em, 3vw);
+		gap: 0 min(1em, 3vw);
+		&:has(> :nth-child(2))::before,
+		&:has(> :nth-child(3))::after {
+			content: "/";
+			color: gray;
+		}
+		& > :first-child { order: 0 }
+		&::before { order: 1 }
+		& > :nth-child(2) { order: 2 }
+		&::after { order: 3 }
+		& > :nth-child(3) { order: 4 }
+	}
+}
+
+/* #region Winglade in-combat dialogue */
+@keyframes rotate {
+	0% { transform: rotate(0deg) }
+	100% { transform: rotate(360deg) }
+}
+
+.winglade {
+	--size: 12em;
+	width: var(--size);
+	height: var(--size);
+	font-family: var(--font-dotum);
+	body.dyslexic & { font-weight: bold }
+	body:not(.noanim) & { animation: rotate 15s linear infinite }
+}
+/* #endregion Winglade */
+
+/* Character icons for ACTs */
+.acticon {
+	height: 0.75em;
+	width: auto;
+	vertical-align: baseline;
+	margin-inline-end: 0.2ch;
+}
+
+/* #region Chapter 3 */
+/* TV World - Ball Machine - gacha menu */
+.gachamenu {
+	line-height: 1.2;
+	width: fit-content;
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 0 2ch;
+
+	body:not(.compact) & {
+		font-size: 1.2em;
+		background-color: var(--black);
+		background-clip: padding-box;
+		border: solid transparent var(--border-width);
+		border-image: url("../assets/images/ui/textbox/dark.gif") 16 / var(--border-width)
+	}
+	body:not(.compact).dim & { border-image-source: url("../assets/images/ui/textbox/dark_dim.gif") }
+
+	tbody, tr { display: contents }
+
+	.lightyellow { color: var(--lightyellow-gacha) }
+
+	th {
+		font-weight: normal;
+		text-align: end;
+	}
+
+	tr:nth-child(2) td { margin-block-end: 1.2em }
+	td:nth-child(2) { text-align: end }
+
+	td:only-child {
+		grid-column: 1 / span 2;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 2.4em;
+	}
+
+	svg {
+		color: #808080;
+		width: 1ch;
+		padding-inline-end: calc(1ch * 0.125);
+		height: auto;
+	}
+}
+
+/* #region Tenna's text sprites */
+@keyframes funnyshake {
+	0% { transform: translate(0, 0) }
+	10% { transform: translate(1px, 1px) }
+	20% { transform: translate(1px, -1px) }
+	30% { transform: translate(0, 1px) }
+	40% { transform: translate(0, 0) }
+	50% { transform: translate(-1px, -1px) }
+	60% { transform: translate(-1px, 0) }
+	70% { transform: translate(0, -1px) }
+	80% { transform: translate(0, 0) }
+	90% { transform: translate(-1px, 1px) }
+}
+
+funny-text {
+	display: contents;
+
+	button {
+		background: none;
+		border: none;
+		font: inherit;
+		color: inherit;
+		cursor: pointer;
+	}
+	button, figure {
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+	}
+	& > :is(button, figure) { position: relative }
+	&:not(.fullwidth) > :is(button, figure) { width: var(--width, 100%) }
+	&.fullwidth > :is(button, figure) { width: 100% }
+	img {
+		user-select: text;
+		display: block;
+
+		/* Full height/width positioning */
+		.left & { object-position: left }
+		.center & { object-position: center }
+		.right & { object-position: right }
+
+		body:not(.noanim) &.shaking {
+			animation-name: funnyshake;
+			animation-duration: 0.3333s;
+			animation-timing-function: steps(10, jump-none);
+			animation-iteration-count: infinite;
+		}
+	}
+	figcaption {
+		color: transparent;
+		font-family: var(--font-condensed);
+		text-shadow: none;
+		user-select: none;
+	}
+
+	body:not(.compact) & {
+		& > :is(button, figure) {
+			top: var(--offset-y, 0em);
+			margin-inline-start: var(--offset-x, 0em);
+		}
+		img {
+			width: var(--width, 100%);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+			margin-block: -0.25em;
+
+			.fullheight & {
+				height: calc(var(--baseheight) - 1.7em);
+				object-fit: contain;
+			}
+		}
+
+		/* Conspiratorial whispers: Two lines */
+		&:is([name=alligator], [name=city_feet], [name=gentle]) > :is(button, figure) { vertical-align: top }
+	}
+
+	body.compact & {
+		--img-height: 2.5em;
+
+		button, figure {
+			vertical-align: baseline;
+			height: var(--img-height);
+			width: fit-content;
+			margin: -0.3em 0 -0.7em;
+		}
+		img {
+			height: var(--img-height);
+			width: auto;
+			object-fit: contain;
+		}
+		figcaption {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		/* Conspiratorial whispers: Any length */
+		&:is([name=coffee], [name=know_tv], [name=tan], [name=alligator], [name=city_feet], [name=gentle]) {
+			vertical-align: top;
+			top: 0.4em;
+		}
+		/* Conspiratorial whispers: One line */
+		&:is([name=coffee], [name=know_tv], [name=tan]) { --img-height: 1.125em }
+		/* Conspiratorial whispers: Two lines */
+		&:is([name=alligator], [name=city_feet], [name=gentle]) {
+			--img-height: 2.25em;
+			margin-block-end: 0.4em;
+		}
+	}
+
+	/* Special styling for the introductory "AMAZING" funny text */
+	d-text:has(&[name=amazing_01]) {
+		body:not(.compact) & { position: relative }
+		body.compact & .hide { display: none }
+	}
+	&[name=amazing_01] button {
+		position: absolute;
+		--offset-y: -0.4em;
+		--offset-x: 0.5ch;
+	}
+}
+/* #endregion Tenna's text sprites */
+/* #endregion Chapter 3 */

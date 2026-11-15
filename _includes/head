@@ -10,6 +10,8 @@
 	</title>
 	<meta name="description" content="{{ page.description | default: site.description | strip_html | strip }}">
 	<link rel="stylesheet" href="{{ 'css/global.css' | relative_url }}">
+	<link rel="stylesheet" href="{{ 'css/themes.css' | relative_url }}">
+	<link rel="stylesheet" href="{{ 'css/special.css' | relative_url }}">
 	{%- assign sheets = page.stylesheets | default: page.css -%}
 	{%- for sheet in sheets -%}
 	<link rel="stylesheet" href="{{ sheet | prepend: 'css/' | append: '.css' | relative_url }}">

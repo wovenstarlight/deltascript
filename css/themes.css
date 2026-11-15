@@ -1,0 +1,1126 @@
+/******************************************************************************
+************** General themes for game dialogue and flavor text ***************
+******************************************************************************/
+
+/* Dialogue boxes and choice menus */
+d-box, d-choices {
+	&:not(:state(compact)) {
+		/* Space out
+		 * Increase spacing between neighboring boxes to account for border outset */
+		margin: 0.2em 0.5em;
+		:is(p, ul, ol) + & { margin-block-start: 0.5em }
+		&:has(+ h2, + h3, + h4, + h5, + h6) { margin-block-end: 1em }
+
+		padding: 0.1em 0.2em;
+		font-size: 1.2em;
+		body.dyslexic &:not(
+			[theme=objreact],
+			[theme^=battletalk],
+			[theme=caller]
+		) { font-size: 1.3186em }
+		line-height: 1;
+		min-height: var(--baseheight);
+		width: var(--basewidth);
+		max-width: calc(100% - var(--border-width));
+		background-color: var(--black);
+		background-clip: padding-box;
+		border: var(--border-width) solid transparent;
+		border-image: url("../assets/images/ui/textbox/light.png") 16 / var(--border-width);
+		body.dim &:not([theme]), body.dim &[theme=light] { border-image-source: url("../assets/images/ui/textbox/light_dim.png") }
+
+		&[theme=dark], &[theme^=power], &[theme^=shop], &[theme=save] {
+			border-image-source: url("../assets/images/ui/textbox/dark.gif");
+			body.dim & { border-image-source: url("../assets/images/ui/textbox/dark_dim.gif") }
+		}
+
+		&[theme=plain],
+		&[theme^=obj],
+		&[theme=battlemenu], &[theme=battledesc],
+		&[theme=eightbit], &[theme="8bit"] {
+			border-image-source: url("../assets/images/ui/textbox/plain.png");
+			&:has(.hideoverflow, d-box) { clip-path: xywh(0.25em 0.25em calc(100% - 0.5em) calc(100% - 0.5em)) }
+		}
+
+		&[theme^=obj], &[theme=battlemenu] { width: calc(var(--basewidth) + 4em) }
+
+		body.dyslexic &[theme^=obj] { width: calc(var(--basewidth) + 10em) }
+
+		&[theme^=obj], &[theme^=power], &[theme=battledesc], &[theme=shopdesc] {
+			font-family: var(--font-condensed);
+		}
+
+		&[theme=objreact] {
+			display: flex;
+			align-items: center;
+			min-height: unset;
+			padding: 0;
+			width: calc(var(--basewidth) + 6em);
+			body.dyslexic & { width: calc(var(--basewidth) + 12.5em) }
+
+			d-speaker {
+				display: block;
+				font-size: 0;
+
+				&::before {
+					content: "";
+					display: block;
+					margin: -0.5rem 0;
+					--size: 2rem;
+					width: var(--size);
+					height: var(--size);
+					background: center / contain no-repeat;
+				}
+
+				&.kris::before { background-image: url("../assets/images/faces/kris/battle.png") }
+				&.susie::before { background-image: url("../assets/images/faces/susie/battle.png") }
+				&.ralsei::before { background-image: url("../assets/images/faces/ralsei/battle.png") }
+				&.noelle::before { background-image: url("../assets/images/faces/noelle/battle.png") }
+			}
+
+			d-text { margin-inline-start: 1ch }
+		}
+
+		&[theme=powertitle] {
+			width: calc(var(--basewidth) - 11.4em);
+			position: relative;
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: calc(-0.975 * var(--border-width));
+				left: 0;
+				width: 100%;
+				height: 0.75em;
+				background: url("../assets/images/ui/statmenu/char.png") center / contain no-repeat;
+			}
+			body.dim &::before { background-image: url("../assets/images/ui/statmenu/char_dim.png") }
+		}
+
+		&[theme=battlemenu] > d-text { max-width: calc(var(--basewidth) - 2.4em) }
+		&[theme=battlemenu] > d-sprite:not([speaker=Tenna]) + d-text { max-width: calc(var(--basewidth) - 6.4em - 1ch) }
+
+		&[theme=battledesc] {
+			width: calc(var(--basewidth) - 16.5em);
+			color: var(--gray);
+			d-text.orange {
+				grid-row: 3;
+				align-self: end;
+			}
+		}
+
+		&[theme^=battletalk] {
+			min-height: unset;
+			height: fit-content;
+			width: fit-content;
+			margin: 0.5em 1em;
+			padding: 0.2em 0.3em;
+			display: flex;
+			flex-direction: column;
+			background-color: var(--white);
+			color: var(--black);
+			font-size: 1em;
+			font-family: var(--font-dotum);
+			body.dyslexic & { font-weight: bold }
+
+			d-speaker {
+				--lightyellow: color-mix(in srgb, var(--orange), var(--black));
+				display: block;
+				margin-block-end: 0.4em;
+
+				--kris: #3b4380; /* blended for readability from too-dark DW hair #0b0b3b and too-light DW shadow #6a7bc4 */
+				--susie: #88176a;
+				--ralsei: #38705e;
+				--noelle: #b15d34; /* darkened for readability from LW skintone #d87d50 */
+				--berdly: #36394b;
+				--lancer: #406080;
+				--queen: #1263bc;
+				--rouxls: #3620b0; /* CUSTOM-PICKED, NOT FROM SPRITE; lightened for readability from #0f0062 */
+				--jigsawjoe: #283f64;
+				--jevil: #3c3c97; /* darkened for readbility from #6d6dc0 */
+				--sweet: #b69325; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readability from #e9c040 */
+				--capn: #615eb9; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readability from #6c6ab3 */
+				--kk: #3e7d4a;
+				--addison-pink: #a24b68; /* darkened for readability from #ffaec9 */
+				--addison-yellow: #9f9600; /* darkened for readability from #fff200 */
+				--lanino: #b45c1c; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readability from #fcce6c */
+				--elnina: #2f66b7; /* darkened for readability from #9bc3fe */
+				--gerson: #3d7a06; /* darkened for readability from #65aa26 */
+
+				body.dim & {
+					--sweet: #604800; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readability from #e9c040 */
+					--capn: #154e75; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readability from #6c6ab3 */
+					--kk: #1b551f;
+					--tenna: #7a223a;
+					--lanino: #7b3502; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readbility from above*/
+					--elnina: #174891; /* CUSTOM-PICKED, NOT FROM SPRITE; darkened for readbility from above*/
+				}
+			}
+		}
+		&[theme=battletalk] {
+			border-image-source: url("../assets/images/ui/textbox/bubble.png");
+			body.dim & { border-image-source: url("../assets/images/ui/textbox/bubble_dim.png") }
+			border-image-slice: 6;
+			--border-width: 0.375em;
+		}
+		&[theme=battletalkround] {
+			border-image-source: url("../assets/images/ui/textbox/roundbubble.png");
+			body.dim & { border-image-source: url("../assets/images/ui/textbox/roundbubble_dim.png") }
+			border-image-slice: 9;
+			border-width: calc(var(--border-width) - 0.6em);
+			text-align: center;
+			d-text { line-height: 1.2em }
+			/* Positions and colors defined in gml_Object_obj_tennatalkbubble_Draw_0 */
+			d-speaker:is(.tenna, .susie, .ralsei, .lancer) ~ d-text {
+				text-shadow:
+					0 1px rgb(from var(--mycolor) r g b / 0.25),
+					1px 1px rgb(from var(--mycolor) r g b / 0.25),
+					1px 0 rgb(from var(--mycolor) r g b / 0.25);
+			}
+			d-speaker.tenna ~ d-text { --mycolor: #ffff00 }
+			d-speaker.susie ~ d-text { --mycolor: #830c74 }
+			d-speaker.ralsei ~ d-text { --mycolor: #13d26f }
+			d-speaker.lancer ~ d-text { --mycolor: #5585bd }
+		}
+
+		&[theme=shopleft] { width: calc(var(--basewidth) - 10ch) }
+
+		&[theme=shopright], &[theme=shopdesc] { width: calc(var(--basewidth) - 14.2em) }
+
+		&[theme=shopright] { padding-inline: 0.4em }
+
+		&[theme=fade], &[theme=prophecy] {
+			border: unset;
+			max-width: calc(100% - 3 * var(--border-width));
+			--background-color: var(--black);
+			background-color: var(--background-color);
+
+			margin: calc(var(--border-width) + 0.2em) calc(var(--border-width) + 0.5em);
+			:is([theme=fade], [theme=prophecy], d-option-panel) + & { margin-block-start: calc((2 * var(--border-width)) + 0.2em) }
+			:is(h2, h3, h4, h5, h6, p, ul, ol) + & { margin-block-start: calc(var(--border-width) + 1rem) }
+			&:has(+ h2, + h3, + h4, + h5, + h6, + p, + ul, + ol) { margin-block-end: calc(var(--border-width) + 1rem) }
+			&:has(+ hr) { margin-block-end: calc(var(--border-width) + 2rem) }
+			&:has(
+				d-option:nth-child(2):last-child,
+				d-option:nth-child(3):last-child,
+				d-option:nth-child(4):last-child
+			) + d-option-panel + d-option-panel:not([hidden]),
+			&:has(
+				d-option:nth-child(3):last-child,
+				d-option:nth-child(4):last-child
+			) + d-option-panel + d-option-panel + d-option-panel:not([hidden]),
+			&:has(d-option:nth-child(4):last-child) + d-option-panel + d-option-panel + d-option-panel + d-option-panel:not([hidden]) {
+				margin-block-start: 0;
+			}
+
+			box-shadow:
+				0 0
+				calc(0.6 * var(--border-width))	/* blur */
+				calc(0.6 * var(--border-width))	/* spread */
+				var(--background-color);
+		}
+		&[theme=fade] {
+			width: calc(var(--basewidth) - 2em);
+			min-height: calc(var(--baseheight) - 2em);
+
+			&.invert {
+				--background-color: var(--white);
+				color: var(--black);
+			}
+		}
+		&[theme=prophecy] {
+			min-height: unset;
+			::selection {
+				color: var(--black);
+				background-color: var(--iceblue);
+			}
+		}
+
+		&[theme=caller] {
+			--border-width: 1rem;
+			border-image-source: url("../assets/images/ui/textbox/spikebubble.png");
+			border-image-repeat: stretch round;
+			border-image-slice: 12 8;
+			min-height: calc(var(--baseheight) + 1em);
+			width: fit-content;
+			margin: 1em;
+			padding: 0.5em 1em;
+			display: flex;
+			flex-direction: column;
+			font-family: var(--font-dotum);
+			body.dyslexic & { font-weight: bold }
+			font-size: 1em;
+		}
+
+		&[theme=eightbit], &[theme="8bit"] {
+			width: calc(var(--basewidth) - 4.39em);
+			font-family: var(--font-8bit);
+
+			&.quiz {
+				background-color: #00a2e8;
+				border-image-slice: 12;
+				border-image-source: url("../assets/images/ui/textbox/quiz.png");
+				body.dim & {
+					border-color: #1263bc;
+					border-image-source: url("../assets/images/ui/textbox/quiz_dim.png")
+				}
+				&.doom {
+					background-color: #882222;
+					border-image-source: url("../assets/images/ui/textbox/quiz_doom.png");
+					body.dim & { border-image-source: url("../assets/images/ui/textbox/quiz_doom_dim.png") }
+				}
+			}
+		}
+
+		&[theme=save] {
+			margin-inline: auto;
+			padding-block: 0;
+			display: grid;
+			grid-template-columns: 1fr auto auto;
+			gap: 0.25em 1.5ch;
+			--mywidth: calc(var(--basewidth) - 7em);
+
+			&.savev1 {
+				width: var(--mywidth);
+
+				&.saved .option { grid-column: 1 / span 3 }
+
+				.location { margin-block-end: 0.75em }
+				.option:nth-child(odd) { margin-inline-start: 2ch }
+			}
+			&.savev2 {
+				width: calc(var(--mywidth) + 3ch);
+				.location {
+					text-align: center;
+					margin-block: 0.75em;
+				}
+				.option:nth-child(odd) { margin-inline-start: 3.5ch }
+			}
+			&.savev1, &.savev2 {
+				.name, .level, .time { margin-block-start: -0.2em }
+				.option:nth-child(even) { grid-column: 2 / span 2 }
+				.option:nth-last-child(2) { margin-block-end: -0.2em }
+			}
+
+			&.savefull {
+				width: calc(var(--mywidth) + 6ch);
+				grid-template-columns: 7ch 1fr 7ch;
+
+				hr { max-width: unset }
+
+				d-text:first-child, d-text:nth-child(2), d-text:nth-child(3) { margin-block-start: -0.3em }
+				.time { justify-self: end }
+				.name, .location, .saved, .blank, .option { justify-self: center }
+				.location, .saved, .blank, .option { grid-column: 1 / span 3 }
+				.saved, .blank {
+					min-height: 3em;
+					display: flex;
+					align-items: center;
+				}
+			}
+			&.top {
+				min-height: unset;
+				margin-block-end: 0.5em;
+
+				d-text:last-child { margin-block-end: -0.5em }
+			}
+			&.bottom {
+				.level { margin-inline-start: 2ch }
+				.blank::before { top: 1.05em }
+			}
+
+			d-text {
+				grid-column: unset;
+				grid-row: unset;
+				&:last-child { margin-block-end: -0.3em }
+			}
+			.location { grid-column: 1 / span 3 }
+
+			hr {
+				--margin: 0.77em;
+				margin: 0 calc(-1 * var(--margin));
+				width: calc((2 * var(--margin)) + 100%);
+			}
+		}
+
+		@media (max-width: 30rem) {
+			font-size: 1em;
+			body.dyslexic &[theme] { font-size: 0.9em }
+
+			/* For boxes with small dialogues, add spacing so dialogue doesn't overlap. ...too much, at least. */
+			&:has(d-box) { padding-block-end: 2.25em }
+			/* has top>center OR top>bottom/default OR center>bottom/default */
+			&:has(d-box[place~=top]):has(d-box[place~=center], d-box[place~=center-y], d-box[place~=bottom], d-box:not([place~=top], [place~=center], [place~=bottom])),
+			&:has(d-box[place~=center], d-box[place~=center-y]):has(d-box[place~=bottom], d-box:not([place~=top], [place~=center], [place~=bottom])) { padding-block-end: 3.75em }
+			/* has top, center, AND bottom/default */
+			&:has(d-box[place~=top]):has(d-box[place~=center], d-box[place~=center-y]):has(d-box[place~=bottom], d-box:not([place~=top], [place~=center], [place~=bottom])) { padding-block-end: 5.5em }
+		}
+
+		img {
+			&:is(.fullheight, .fullwidth) { display: block }
+			&.fullheight {
+				height: 100%;
+				grid-row: 1 / span 3;
+			}
+			&.fullwidth {
+				width: 100%;
+				grid-column: 1 / span 2;
+
+				&.center { justify-self: center }
+			}
+			&.fullwidth.fullheight { object-fit: contain }
+		}
+
+		&:not([theme=objreact], [theme^=battletalk]) {
+			&:has(
+				> d-speaker.kris,
+				> d-speaker.susie,
+				> d-speaker.ralsei,
+				> d-speaker.noelle
+			) {
+				position: relative;
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: -0.25em;
+					left: -2.1em;
+					border: 0.2em solid var(--black);
+					--size: 1.75em;
+					width: var(--size);
+					height: var(--size);
+					background: var(--black) center / 80% no-repeat;
+					border-radius: 25%;
+				}
+			}
+			&:has(> d-speaker.kris)::before { background-image: url("../assets/images/faces/kris/battle.png") }
+			&:has(> d-speaker.susie)::before { background-image: url("../assets/images/faces/susie/battle.png") }
+			&:has(> d-speaker.ralsei)::before { background-image: url("../assets/images/faces/ralsei/battle.png") }
+			&:has(> d-speaker.noelle)::before { background-image: url("../assets/images/faces/noelle/battle.png") }
+		}
+		&:is([theme=light], [theme=dark]):has(
+			> d-speaker.kris,
+			> d-speaker.susie,
+			> d-speaker.ralsei,
+			> d-speaker.noelle
+		)::before {
+			border-color: var(--white);
+		}
+		&[theme=fade]:has(
+			> d-speaker.kris,
+			> d-speaker.susie,
+			> d-speaker.ralsei,
+			> d-speaker.noelle
+		)::before {
+			top: -0.05em;
+			left: -1.9em;
+			box-shadow: 0 0 0.2em 0.1em var(--black);
+			border: none;
+		}
+	}
+
+	&:state(compact) {
+		margin: 0 0 0 min(1em, 3vw);
+		gap: 0 0.5ch;
+		&:not(:has(d-speaker, d-sprite)) { gap: 0 }
+		align-items: baseline;
+
+		/* On smaller screens, stack dialogue instead */
+		@media (max-width: 30rem) {
+			display: flex;
+			flex-direction: column;
+
+			/* ...but only main dialogue! as in, actual spoken dialogue, not wrappers for other d-boxes; leave those ones alone. */
+			&:has(> d-speaker, > d-sprite) {
+				padding-inline-start: 3vw;
+				& > d-speaker, & > d-sprite d-speaker {
+					position: relative;
+					left: -3vw;
+				}
+			}
+
+			d-text ~ d-box { padding-inline-start: 3ch }
+		}
+
+		&[theme=save] {
+			width: fit-content;
+
+			hr { margin-block: 0.5em }
+			.option:nth-child(5), &.bottom { margin-block-start: 1em }
+		}
+	}
+
+	&.glow :is(d-text, d-option) {
+		text-shadow:
+			0 0.125ch rgb(from currentColor r g b / var(--intensity, 0.15)),
+			0.125ch 0 rgb(from currentColor r g b / var(--intensity, 0.15)),
+			0 -0.125ch rgb(from currentColor r g b / var(--intensity, 0.15)),
+			-0.125ch 0 rgb(from currentColor r g b / var(--intensity, 0.15)),
+			0.125ch 0.125ch rgb(from currentColor r g b / var(--intensity, 0.15)),
+			-0.125ch -0.125ch rgb(from currentColor r g b / var(--intensity, 0.15)),
+			-0.125ch 0.125ch rgb(from currentColor r g b / var(--intensity, 0.15)),
+			0.125ch -0.125ch rgb(from currentColor r g b / var(--intensity, 0.15));
+			body:not(.noanim) & { animation: glowpulse 1.5s ease infinite alternate-reverse }
+	}
+	&.space :is(d-text, d-option) { letter-spacing: 0.5ch }
+
+	&[theme=prophecy] {
+		text-align: center;
+		align-items: center;
+	}
+
+	&[theme=save] {
+		font-family: var(--font-condensed);
+
+		.option, &.bottom d-text { margin-inline-start: 2ch }
+
+		&:where(.savev1, .savev2):not(.saved) .option:where(
+			:nth-child(5):not(:has(~ .option:hover)), /* first option in the menu, by default */
+			:hover /* subsequent options, if hovered */
+		),
+		&.bottom:not(:has(.saved)) :where(
+			.level:hover,
+			.level:has(+ .name:hover, + .name + .time:hover, + .name + .time + .location:hover),
+			.blank:hover,
+			.blank:nth-child(6):not(:has(~ :hover)),
+			.option:hover
+		) {
+			position: relative;
+			&::before {
+				content: "";
+				background: url("../assets/images/heart16.png") center / contain no-repeat;
+				width: var(--size);
+				height: var(--size);
+				position: absolute;
+				top: 0.25em;
+				right: 100%;
+				margin-inline-end: 0.5ch;
+				--size: 0.7em;
+			}
+		}
+
+		&.bottom:not(:has(.saved)) :where(
+			.level:hover,
+			.level:has(+ .name:hover, + .name + .time:hover, + .name + .time + .location:hover),
+			.blank:hover,
+			.blank:nth-child(6):not(:has(~ :hover)),
+			.option:hover
+		),
+		&.bottom:not(:has(.saved)) :where(
+			.level:hover + .name,
+			.level:hover + .name + .time,
+			.level:hover + .name + .time + .location,
+			.name:hover, .time:hover, .location:hover,
+			.name:hover + .time,
+			.name:hover + .time + .location,
+			.time:hover + .location,
+			.name:has(+ .time:hover, + .time + .location:hover),
+			.time:has(+ .location:hover)
+		),
+		&.saved, .saved { color: var(--yellow) }
+
+		&.bottom:not(:has(.saved)) d-text:hover ~ .blank{
+			color: inherit;
+			&::before { content: unset }
+		}
+
+		hr {
+			grid-column: 1 / span 3;
+			border: none;
+			background: url("../assets/images/ui/textbox/dark_top.png") center / contain repeat;
+			&::before { content: unset }
+		}
+	}
+}
+
+/* #region Basic dialogue */
+/* Dialogue boxes only */
+d-box {
+	display: grid;
+	grid-template-columns: auto 1fr;
+
+	&:has(&) { position: relative }
+
+	&:not(:state(compact)) {
+		/* Align text towards start */
+		grid-template-rows: auto auto 1fr;
+		word-break: keep-all;
+
+		d-box {
+			position: absolute;
+			font-size: 0.6em;
+			font-family: var(--font-condensed);
+			/* Reset full-size features */
+			background-color: transparent;
+			border-image: unset;
+			border-inline-width: 0;
+			margin: 0;
+			width: max-content;
+			text-shadow: none;
+			/* Center content */
+			align-items: center;
+
+			d-sprite img { --size: 3.2em }
+
+			d-text:first-of-type { margin-block-start: 0.5em }
+
+			/* Specify placements (defaulting to bottom right) */
+			&:not([place]), &:not([place~=bottom], [place~=top]),
+			&[place~=bottom] {
+				bottom: calc(-2.4em - var(--offset-y, 0em));
+			}
+			&:not([place]), &:not([place~=right], [place~=left]),
+			&[place~=right] {
+				right: calc(-1 * var(--offset-x, 0em));
+			}
+			&[place~=top] {
+				top: calc(-2.4em + var(--offset-y, 0em));
+			}
+			&[place~=left] {
+				left: var(--offset-x, 0em);
+			}
+			d-text[asterisk] + &[place~=left] {
+				left: calc(2.08em + var(--offset-x, 0em));
+			}
+			d-sprite[speaker] ~ &[place~=left] {
+				left: calc(8.6em + var(--offset-x, 0em));
+			}
+			&[place~=center-x] {
+				left: calc(50% + var(--offset-x, 0em));
+				transform: translateX(-50%);
+			}
+			&[place~=center-y] {
+				top: calc(50% + var(--offset-y, 0em));
+				transform: translateY(-50%);
+			}
+			&[place~=center] {
+				left: calc(50% + var(--offset-x, 0em));
+				top: calc(50% + var(--offset-y, 0em));
+				transform: translate(-50%, -50%);
+			}
+			d-text[asterisk] + &[place~=center-x],
+			d-text[asterisk] + &[place~=center] {
+				left: calc(50% + 1.04em + var(--offset-x, 0em));
+			}
+			d-sprite[speaker] ~ &[place~=center-x],
+			d-sprite[speaker] ~ &[place~=center] {
+				left: calc(50% + 4.3em + var(--offset-x, 0em));
+			}
+
+			@media (min-width: 30rem) {
+				&[place~=bottom][place~=center-x] { bottom: calc(-1.7em - var(--offset-y, 0em)) }
+				&[place~=top][place~=center-x] { top: calc(-1.7em + var(--offset-y, 0em)) }
+			}
+		}
+
+		body.dyslexic & & { font-size: 0.6em }
+
+		@media (max-width: 30rem) {
+			body.dyslexic & & { font-size: 0.5em }
+			d-box d-text { font-size: 1.25em }
+		}
+
+		&[theme=battlemenu] d-box:not(
+			[place],
+			[place~=bottom],
+			[place~=top]
+		):has(d-sprite),
+		&[theme=battlemenu] d-box[place~=bottom]:has(d-sprite) {
+			bottom: -3.6em;
+			d-sprite img { --size: 4.75em }
+		}
+	}
+
+	&:state(compact) & {
+		grid-column: 2;
+		margin-inline-start: 0;
+		& d-speaker::before {
+			content: "(";
+			color: var(--white);
+		}
+		& > :last-child::after { content: ")" }
+	}
+
+	&:has(> d-box:first-child) {
+		gap: 0;
+
+		d-speaker::before,
+		d-box > :last-child::after { content: unset }
+	}
+
+	/* When multiple sprites are present, adjust columns */
+	&:has(> d-sprite + d-sprite) {
+		&:not(:state(compact)) { grid-template-columns: auto 1fr auto }
+		&:state(compact) { grid-template-columns: auto auto 1fr }
+	}
+}
+
+/* Talksprites */
+d-sprite {
+	grid-row: 1 / span 3;
+	grid-column: 1;
+	d-box:state(compact) & { display: contents }
+
+	/* Center sprite */
+	d-box:not(:state(compact)) & {
+		display: flex;
+		align-items: center;
+		margin-inline-end: 1ch;
+	}
+	d-box:not(:state(compact)) &[speaker=Noelle] {
+		img { --size: calc(var(--baseheight) - 1.75em) }
+		margin-block: 0 -0.5em;
+		margin-inline: -0.2em 0.1em;
+	}
+	d-box[theme=battlemenu]:not(:state(compact)) &[speaker=Tenna] {
+		img { --size: calc(var(--baseheight) - 0.25em) }
+		margin-block: -1.7em -2em;
+		margin-inline: -0.25em 0;
+	}
+
+	/* When multiple sprites are present, move them to the right */
+	d-box:not(:state(compact)) & + & {
+		grid-column: 3;
+		margin-inline-end: 0;
+		margin-inline-start: 1ch;
+	}
+
+	img {
+		--size: 4em;
+		width: var(--size);
+		height: var(--size);
+		object-fit: contain;
+		font-family: var(--font-condensed);
+		body:not(.noanim) &[src$=".gif"] + &[src$=".png"],
+		body.noanim &[src$=".gif"],
+		d-box:state(compact) & { display: none }
+	}
+
+	&[format=shop] {
+		font-size: 1.2em;
+		@media (max-width: 30rem) { font-size: 1em }
+
+		img {
+			display: block;
+			width: 100%;
+			margin: 0 0.5em;
+			height: auto;
+			object-position: center;
+			max-width: var(--basewidth);
+			max-height: 8em;
+		}
+
+		&:has(+ d-box[theme=shopleft]) img { max-width: calc(var(--basewidth) - 10ch) }
+		&:has(+ d-box[theme=shopright]) img { max-width: calc(var(--basewidth) - 14.2em) }
+
+		body.compact & { display: none }
+	}
+
+}
+
+/* Speaker labels */
+d-speaker {
+	color: var(--lightyellow);
+	text-shadow: none;
+	&::after { content: ":" }
+	&:has(~ d-speaker, ~ d-sprite)::after,
+	d-sprite:has(~ d-speaker, ~ d-sprite) &::after { content: "," }
+	&:has(+ d-speaker:last-of-type, + d-sprite:last-of-type)::after,
+	d-sprite:has(+ d-speaker:last-of-type, + d-sprite:last-of-type) &::after {
+		content: " &";
+		margin-inline-end: 0.5ch;
+		color: var(--midgray);
+	}
+	d-box:not([theme^=battletalk], [theme=objreact]):not(:state(compact)) &,
+	d-box[theme=battletalkround]:not(:state(compact)) &:is(.tenna, .susie, .ralsei, .lancer) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 1rem;
+		opacity: 0;
+		pointer-events: none;
+	}
+	d-box:not(:state(compact)) d-sprite > & { display: none }
+	d-box:state(compact) & {
+		grid-column: 1;
+		grid-row: 1 / span 3;
+	}
+
+	/* When multiple speakers are present, chain their tags */
+	d-box:state(compact) d-sprite + d-sprite & { grid-column: 2 }
+}
+
+/* Single line of text within a dialogue box
+ * Automatically formats with asterisks, fonts, and speaker icons
+ */
+d-text {
+	grid-column: 2;
+	line-height: 1.4;
+
+	/* Compact mode only: Move d-text to end after multiple speaker tags */
+	d-box:state(compact) d-sprite + d-sprite ~ & { grid-column: 3 }
+
+	&[font=tiny] {
+		font-family: var(--font-tiny);
+		max-width: 10.6em;
+	}
+
+	&[font=sans] {
+		font-family: var(--font-sans);
+	}
+
+	:is([theme^=obj], [theme^=power], [theme=battledesc], [theme=shopdesc]) & {
+		font-family: var(--font-condensed);
+	}
+
+	:is([theme^=battletalk], [theme=caller]) & {
+		font-family: var(--font-dotum);
+		body.dyslexic & { font-weight: bold }
+	}
+
+	&[font=eightbit], &[font="8bit"],
+	:is([theme=eightbit], [theme="8bit"]) & {
+		font-family: var(--font-8bit);
+	}
+
+	[theme=prophecy] & {
+		font-family: var(--font-prophecy);
+		background: #42d0ff url("../assets/images/story/prophecy.png") repeat center / var(--prophecy-size) auto;
+		background-clip: text;
+		color: rgb(from #42d0ff r g b / 0.5);
+		body:not(.noanim) & { animation: bgshift 10s linear infinite }
+		body:not(.dim) & { filter: brightness(1.75) saturate(1.5) }
+		body.dyslexic & { font-size: 0.66em }
+	}
+	body:not(.noanim) [theme=prophecy]:nth-child(odd) &:nth-child(even),
+	body:not(.noanim) [theme=prophecy]:nth-child(even) &:nth-child(odd) { animation-delay: 3s }
+
+	&[asterisk] {
+		padding-inline-start: 2ch;
+		text-indent: -2ch;
+
+		&::before {
+			content: "*";
+			margin-inline-end: 1ch;
+		}
+	}
+
+	&[asterisk="Sweet" i],
+	&[asterisk="Cap'n" i], &[asterisk="Capn" i],
+	&[asterisk="K_K" i], &[asterisk="KK" i],
+	&[asterisk="Happy" i], &[asterisk="Nice" i],
+	&[asterisk="Mad" i], &[asterisk="Mean" i],
+	&[asterisk="Sad" i], &[asterisk="Shy" i],
+	&[asterisk="Aqua" i], &[asterisk="Cyan" i],
+	&[asterisk="Seth" i], &[asterisk="Purple" i],
+	&[asterisk="Green" i], &[asterisk="Orange" i],
+	&[asterisk="Blue" i], &[asterisk="Yellow" i] {
+		position: relative;
+		padding-inline-start: 1.25em;
+		text-indent: unset;
+
+		&::before {
+			text-shadow: none;
+			position: absolute;
+			top: 0.05em;
+			left: -0.35em;
+			content: "";
+			color: transparent;
+			width: var(--size, 1.25em);
+			height: var(--size, 1.25em);
+			background: center / contain no-repeat;
+		}
+	}
+	body:not(.compact) [theme^=battletalk] &:is(
+		[asterisk="Happy" i], [asterisk="Nice" i],
+		[asterisk="Mad" i], [asterisk="Mean" i],
+		[asterisk="Sad" i], [asterisk="Shy" i]
+	) {
+		padding-inline-start: 0;
+		&::before {
+			filter: drop-shadow(0 0 2px var(--black));
+			--size: 2em;
+			top: -1.5em;
+			left: -1.5em;
+		}
+	}
+
+	&:is([asterisk="Sweet" i])::before {
+		background-image: url("../assets/images/faces/sweetcapncakes/sweet.gif");
+		content: "(Sweet)";
+	}
+	&:is([asterisk="Cap'n" i], [asterisk="Capn" i])::before {
+		background-image: url("../assets/images/faces/sweetcapncakes/capn.gif");
+		content: "(Cap'n)";
+	}
+	&:is([asterisk="K_K" i], [asterisk="KK" i])::before {
+		background-image: url("../assets/images/faces/sweetcapncakes/kk.gif");
+		content: "(K_K)";
+	}
+	body.noanim & {
+		&:is([asterisk="Sweet" i])::before { background-image: url("../assets/images/faces/sweetcapncakes/sweet.png") }
+		&:is([asterisk="Cap'n" i], [asterisk="Capn" i])::before { background-image: url("../assets/images/faces/sweetcapncakes/capn.png") }
+		&:is([asterisk="K_K" i], [asterisk="KK" i])::before { background-image: url("../assets/images/faces/sweetcapncakes/kk.png") }
+	}
+	&:is([asterisk="Happy" i], [asterisk="Nice" i])::before {
+		background-image: url("../assets/images/faces/clover/happy.png");
+		content: "(Nice)";
+	}
+	&:is([asterisk="Mad" i], [asterisk="Mean" i])::before {
+		background-image: url("../assets/images/faces/clover/mad.png");
+		content: "(Mean)";
+	}
+	&:is([asterisk="Sad" i], [asterisk="Shy" i])::before {
+		background-image: url("../assets/images/faces/clover/sad.png");
+		content: "(Shy)";
+	}
+	&:is([asterisk="Aqua" i], [asterisk="Cyan" i])::before { background-image: url("../assets/images/faces/flowers/aqua.png") }
+	&:is([asterisk="Seth" i], [asterisk="Purple" i])::before { background-image: url("../assets/images/faces/flowers/seth.png") }
+	&[asterisk="Blue" i]::before { background-image: url("../assets/images/faces/flowers/blue.png") }
+	&[asterisk="Yellow" i]::before { background-image: url("../assets/images/faces/flowers/yellow.png") }
+	&[asterisk="Green" i]::before { background-image: url("../assets/images/faces/flowers/green.png") }
+	&[asterisk="Orange" i]::before { background-image: url("../assets/images/faces/flowers/orange.png") }
+
+	&.hideoverflow { white-space: pre }
+
+	img.inline {
+		height: 1em;
+		width: auto;
+		vertical-align: text-bottom;
+	}
+}
+/* #endregion Basic dialogue */
+
+/* #region Animations */
+@keyframes glowpulse {	/* used for Voice dialogue */
+	0% { --intensity: 0.1 }
+	10% { --intensity: 0.11 }
+	20% { --intensity: 0.12 }
+	30% { --intensity: 0.13 }
+	40% { --intensity: 0.14 }
+	50% { --intensity: 0.15 }
+	60% { --intensity: 0.16 }
+	70% { --intensity: 0.17 }
+	80% { --intensity: 0.18 }
+	90% { --intensity: 0.19 }
+	100% { --intensity: 0.2 }
+}
+
+@keyframes bgshift {	/* used for prophecy windows */
+	0% { background-position-x: 0 }
+	100% { background-position-x: var(--prophecy-size) }
+}
+/* #endregion Animations */
+
+/* #region Choice menus */
+/* Menu */
+d-choices {
+	&:not(:state(compact)) {
+		display: block;
+		--side-width: 5em;
+		padding: 0;
+		position: relative;
+		margin-block-end: 0;
+
+		/* Heart-shaped selector icon
+		To be displayed when none of the options are being considered or selected */
+		&:not(:has(d-option:hover), :focus-within, :has([aria-expanded="true"])),
+		&[noninteractive], &:state(forced):not(:has(d-option:hover), :focus-within) {
+			&::after {
+				content: "";
+				background: url("../assets/images/heart.png") center / contain no-repeat;
+				width: var(--size);
+				height: var(--size);
+				position: absolute;
+				left: calc(9em + var(--offset-x, 0em));
+				top: calc(1.7em + var(--offset-y, 0em));
+				--size: 0.75em;
+			}
+			&[theme=battlemenu]::after { left: calc(11em + var(--offset-x, 0em)) }
+			&:is([theme=eightbit], [theme="8bit"])::after {
+				background-image: url("../assets/images/heart_8bit.png");
+				--size: 0.7em;
+				top: calc(1.85em + var(--offset-y, 0em));
+			}
+		}
+	}
+
+	/* Option sizing WITHIN a menu (fullsize mode) */
+	d-option {
+		width: max-content;
+		position: absolute;
+		line-height: 1.2;
+
+		/* Left/right */
+		&[index="0"], &[index="1"] {
+			top: calc(50% + var(--option-offset-y, 0em));
+			transform: translateY(-50%);
+		}
+		/* Up/down */
+		&[index="2"], &[index="3"] {
+			left: calc(50% + var(--option-offset-x, 0em));
+			transform: translateX(-50%);
+			z-index: 1;
+		}
+
+		&[index="0"] { left: calc(1.24em + var(--option-offset-x, 0em)); z-index: 0 }
+		&[index="1"] { right: calc(0.15em - var(--option-offset-x, 0em)); z-index: 2 }
+		&[index="2"] { top: calc(-0.1em + var(--option-offset-y, 0em)) }
+		&[index="3"] { bottom: calc(-0.2em - var(--option-offset-y, 0em)) }
+	}
+
+	/* For 8-bit choice menus with at most 2 children, scrunch the kids together */
+	&:is([theme=eightbit], [theme="8bit"]):has(> :nth-child(1):last-child, > :nth-child(2):last-child) d-option {
+		&[index="0"] { left: 4.74em }
+		&[index="1"] { right: 4.65em }
+	}
+
+	/* Asterisk marker */
+	.conditional {
+		position: absolute;
+		left: calc(100% + 0.2em);
+		top: 0;
+	}
+
+	/* In compact mode, all the options get moved alongside their tabs; hide the resulting empty menu */
+	&:state(compact) { display: none }
+}
+
+/* Options */
+d-option {
+	display: block;
+	font-family: var(--font-condensed);
+
+	/* Selectable options */
+	d-choices:not([noninteractive]) &,
+	:not(d-choices) > &:has(+ d-option-panel) {
+		cursor: pointer;
+
+		&:hover, &:focus,
+		&[aria-expanded=true] {
+			color: var(--yellow);
+		}
+		/* Heart-shaped hover indicator */
+		&::before {
+			content: "";
+			background: center / contain no-repeat;
+			width: var(--size);
+			height: var(--size);
+			position: absolute;
+			left: -0.5em;
+			top: calc(50% - (0.55 * var(--size)));
+			--size: 0.75em;
+		}
+		&:is(:hover, :focus)::before,
+		&[aria-expanded=true]::before {
+			background-image: url("../assets/images/heart.png");
+		}
+	}
+
+	/* Adjust placement of heart-shaped hover indicator inside choice menus */
+	d-choices:not([noninteractive]) &::before {
+		left: -1.75ch;
+		top: 0.15em;
+	}
+
+	/* Adjust in 8-bit menus */
+	d-choices:is([theme=eightbit], [theme="8bit"]) &,
+	&:is([theme=eightbit], [theme="8bit"]) {
+		font-family: var(--font-8bit);
+		&:is(:hover, :focus)::before,
+		&[aria-expanded=true]::before {
+			background-image: url("../assets/images/heart_8bit.png");
+		}
+	}
+	d-choices:is([theme=eightbit], [theme="8bit"]):not([noninteractive]) &::before { left: -1.4ch }
+
+	/* Hide the hearts/highlights when choices are forced open */
+	d-choices:state(forced) &:not(:hover, :focus) {
+		color: var(--white);
+		&::before { content: unset }
+	}
+
+	/* Non-selectable options */
+	d-choices[noninteractive] &,
+	/* Options with no linked panels */
+	:not(d-choices) > &:not(:has(+ d-option-panel)) {
+		cursor: not-allowed;
+	}
+
+	/* Compact mode */
+	:not(d-choices) > & {
+		position: relative;
+		border: var(--border-width) solid transparent;
+		border-block-width: calc(var(--border-width) * 0.5);
+		border-image: url("../assets/images/ui/textbox/light_transparent.png") 16 / var(--border-width) / calc(0.25 * var(--border-width));
+		body.dim & { border-image-source: url("../assets/images/ui/textbox/light_transparent_dim.png") }
+		/* Spacing */
+		margin: 0.3em;
+		d-option-panel:state(collapsed) + & { margin-block-start: 0 }	/* Let the previous option handle spacing between options */
+		&:has(+ d-option-panel:state(collapsed) + :not(d-option)),
+		&:has(+ d-option-panel:state(collapsed):last-child) { margin-block-end: 0 }	/* For the last option in a menu, let the next element handle spacing between this option and that */
+		/* Heart-shaped hover indicator */
+		padding-inline-start: 0.8em;
+		&::before { --size: 0.6em }
+
+		.conditional {
+			float: inline-end;
+		}
+	}
+
+	/* Asterisk marker */
+	.conditional {
+		color: var(--gray);
+		padding: 0.5em;
+		margin: -0.5em;
+		cursor: help;
+	}
+
+	body.compact & .break { display: none }
+}
+
+/* Result panel */
+d-option-panel {
+	display: block;
+
+	/* Last panel handles the end margin for <d-choices> */
+	body:not(.compact) &:has(+ :not(&)),
+	body:not(.compact) &:last-child {
+		margin-block-end: 0.2em;
+	}
+	body.compact &:has(+ :not(&, d-option)) { margin-block-end: 0.3em }
+
+	&:not([hidden]) {
+		border: var(--border-width) solid transparent;
+		border-image: url("../assets/images/ui/textbox/light_transparent.png") 16 / var(--border-width);
+		body.dim &:not([theme]), body.dim &[theme=light] { border-image-source: url("../assets/images/ui/textbox/light_transparent_dim.png") }
+		&[theme=dark] { border-image-source: url("../assets/images/ui/textbox/dark_transparent.gif") }
+		body.dim &[theme=dark] { border-image-source: url("../assets/images/ui/textbox/dark_transparent_dim.gif") }
+
+		/* Spacing */
+		padding: 0.1em;
+		margin: 0;
+		body:not(.compact) &:not(:state(collapsed)) { margin-block-start: 0.2em }
+		body:not(.compact) & { margin-inline-start: min(1.2em, 3vw) }
+		body.compact & { margin-inline-start: min(0.8em, 2vw) }
+	}
+
+	/* Expanded mode: hide collapsed panels, and labels when panels aren't forced */
+	body:not(.compact) &:not(:state(forced)) .selection-label,
+	/* Compact mode: hide collapsed panels, and labels regardless (the toggles will act as labels instead) */
+	body.compact & .selection-label {
+		display: none;
+	}
+
+	.selection-label {
+		color: var(--gray);
+		font-style: italic;
+		font-family: var(--font-condensed);
+
+		.break { display: none }
+	}
+
+	/* First child will always be selection-label */
+	& > :nth-child(2) { margin-block-start: 0 !important }
+	& > :last-child { margin-block-end: 0 !important }
+}
+/* #endregion Choice menus */
