@@ -1,2 +1,14 @@
 environment: development
 port: 1225
+
+defaults:
+  - # Global layout; I'm not sure how to extend the array in YAML
+    scope:
+      path: ""
+    values:
+      layout: "page"
+  -
+    scope:
+      path: "assets/images/faces"
+    values:
+      gallery: true

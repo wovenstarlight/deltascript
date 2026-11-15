@@ -1,0 +1,94 @@
+---
+title: Sprite gallery
+
+description:
+  <p>For viewing all sprites, so you can find the one you need.</p>
+---
+<style>
+.images {
+	display: grid;
+	--size: 125px;
+	grid-template-columns: repeat(auto-fit, minmax(var(--size), 1fr));
+	gap: 0.25em;
+}
+
+.sprite {
+	width: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: thin solid var(--gray);
+	padding: 0.25em;
+
+	img {
+		display: block;
+		width: var(--size);
+		height: var(--size);
+		background: var(--black);
+		object-fit: contain;
+		padding: 0.1em;
+		border: none;
+	}
+	
+	figcaption {
+		font-family: monospace;
+		text-align: center;
+	}
+}
+
+body.noanim .gif,
+body:not(.noanim) .gif + .png {
+	display: none
+}
+</style>
+
+{% assign images = site.static_files | where: "gallery", true | group_by_exp: "item", "item.path | split: '/' | slice: 4 | first" %}
+{% for data in images %}
+<section class="d-section" id="{{ data.name }}">
+	<h2>{{ data.name | slice: 0 | upcase }}{{ data.name | slice: 1, 100 }}</h2>
+
+	{% assign subdirs = data.items.last.path | split: "/" | slice: 5, 10 | size %}
+	{% if subdirs > 1 %}
+		{% assign groups = data.items | group_by_exp: "item", "item.path | split: '/' | slice: 5 | first" %}
+	{% else %}
+		{% assign groups = data.items | group_by: "mynothing" %}
+	{% endif %}
+
+	{% for group in groups %}
+		<h3>
+			{{ group.name | slice: 0 | upcase }}{{ group.name | slice: 1, 100 | replace: ".png", "" | default: "Standard" }}
+		</h3>
+		<div class="images">
+			{% assign bypath = group.items | group_by_exp: "item", "item.path | replace: item.extname, ''" %}
+
+			{% assign ordering = "" | split: "" %}
+			{% for path in bypath %}
+				{% assign padded = path.items.last.basename | prepend: "000" | slice: -3, 3 %}
+				{% assign index = path.name | split: "/" | slice: 5, 10 | join: "/" | replace: path.items.last.basename, padded | append: ":" | append: forloop.index0 %}
+				{% assign ordering = ordering | push: index %}
+			{% endfor %}
+			{% assign ordering = ordering | sort %}
+
+			{% for sortkey in ordering %}
+				{% assign i = sortkey | split: ":" | last %}
+				{% assign imgset = bypath | slice: i | first %}
+				{% for img in imgset.items %}
+					<figure class="sprite {{ img.extname | slice: 1, 5 }}">
+						<img src="{{ img.path | relative_url }}" alt="{{ img.basename }}" class="sprite">
+						<figcaption>{{ img.path | split: "/" | slice: 5, 10 | join: "/" }}</figcaption>
+					</figure>
+				{% endfor %}
+			{% endfor %}
+		</div>
+	{% endfor %}
+</section>
+{% endfor %}
+
+<script>
+	document.querySelectorAll("figure.sprite").forEach(fig => {
+		fig.addEventListener("click", () => {
+			navigator.clipboard.writeText(fig.firstElementChild.getAttribute("src"));
+		})
+	})
+</script>
