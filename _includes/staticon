@@ -1,3 +1,42 @@
+{% comment %}
+1:	sword
+2:	axe
+3:	scarf
+4:	shield
+5:	magic
+6:	downright
+7:	upright
+8:	down
+9:	guts
+10:	cheer
+11:	cheerdog
+12:	fluff
+13:	devil
+14:	ring
+15:	sweet
+16:	exclamation
+17:	snow
+18:	shard
+19:	cutter
+20:	sleep
+21:	flowery
+22:	specs
+23:	glove
+24:	shoe
+25:	hat
+26:	apron
+27:	knife
+28:	up
+
+EQUIP VERSIONS:
+0: sword
+1: axe
+2: scarf
+3: armor1
+4: armor2
+5: ring
+{% endcomment -%}
+
 {% if include.name == "grass" -%}
 	{% assign ext = ".gif" -%}
 {% else -%}
