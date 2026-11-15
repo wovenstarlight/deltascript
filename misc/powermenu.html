@@ -63,29 +63,32 @@ toc:
           -
             id: kristitles4
             name: Chapter 4
+          -
+            id: kristitles5
+            name: Chapter 5
       -
         id: krisstats
         name: Stats
         subheadings:
           -
             id: krisstats1
-            name: Chapter 1
-          -
-            id: krisstats2
-            name: Chapter 2
+            name: Chapters 1 and 2
           -
             id: krisstats3
             name: Chapter 3
           -
             id: krisstats4
             name: Chapter 4
+          -
+            id: krisstats5
+            name: Chapter 5
       -
         id: krisspells
         name: Spells
         subheadings:
           -
             id: krisspells1
-            name: Chapters 1 to 4
+            name: Chapters 1 to 5
   -
     id: susie
     name: Susie
@@ -106,6 +109,9 @@ toc:
           -
             id: susietitles4
             name: Chapter 4
+          -
+            id: susietitles5
+            name: Chapter 5
       -
         id: susiestats
         name: Stats
@@ -121,7 +127,7 @@ toc:
             name: Chapter 3
           -
             id: susiestats4
-            name: Chapter 4
+            name: Chapters 4 and 5
       -
         id: susiespells
         name: Spells
@@ -138,6 +144,9 @@ toc:
           -
             id: susiespells4
             name: Chapter 4
+          -
+            id: susiespells5
+            name: Chapter 5
   -
     id: ralsei
     name: Ralsei
@@ -158,6 +167,9 @@ toc:
           -
             id: ralseititles4
             name: Chapter 4
+          -
+            id: ralseititles5
+            name: Chapter 5
       -
         id: ralseistats
         name: Stats
@@ -394,44 +406,62 @@ toc:
 		<d-text>Broken off,<span class="break"></span> but still locked.</d-text>
 	</d-box>
 
+	<hr class="hrhalf">
+
+	<h4 id="kristitles5">Chapter 5</h4>
+
+	<h5 id="lv5bluerose">Initial</h5>
+	<d-box theme="powertitle">
+		<d-text>LV5 Blue Rose</d-text>
+		<d-text>Quiet, yet<span class="break"></span> flirtatious.</d-text>
+	</d-box>
+
+	<h5 id="lv5darkrose">After <a href="{{ '/story/chapter5/ultimatum' | relative_url }}">Flowery delivers his ultimatum</a></h5>
+	<d-box theme="powertitle">
+		<d-text>LV5 Dark Rose</d-text>
+		<d-text>Conveys<span class="break"></span> departure.</d-text>
+	</d-box>
+
+	<h5 id="lv5pinkrose">After <a href="{{ '/story/chapter5/pink' | relative_url }}">defeating Pink</a></h5>
+	<d-box theme="powertitle">
+		<d-text>LV5 Pink Rose</d-text>
+		<d-text>Flirtatious, and<span class="break"></span> flirtatious.</d-text>
+	</d-box>
+
+	<h5 id="lv5shatteredrose">If on the Weird Route</h5>
+	<d-box theme="powertitle">
+		<d-text>LV5 Shattered Rose</d-text>
+		<d-text>Only one knows<span class="break"></span> the rose's meaning.</d-text>
+	</d-box>
+
+	<h5 id="lv5lastmoss">After <a href="{{ '/story/chapter5/jailbreak' | relative_url }}">eating the jail moss</a> and finding all moss in previous chapters</h5>
+	<d-box theme="powertitle">
+		<d-text>LV5 Last Moss</d-text>
+		<d-text>A mossliker's<span class="break"></span> final form.</d-text>
+	</d-box>
+
+	<h5 id="lv5walkerstar">After speaking to Starwalker at Top of Castle</h5>
+	<p>Requires you to have spoken to Starwalker in Chapter 1.</p>
+	<d-box theme="powertitle">
+		<d-text>LV5 Walkerstar</d-text>
+		<d-text>Starwalker's<span class="break"></span> walking buddy.</d-text>
+	</d-box>
+
+	<h5 id="lv5egg">While <a href="{{ '/story/chapter5/egg' | relative_url }}">in between</a></h5>
+	<d-box theme="powertitle">
+		<d-text>LV1</d-text>
+	</d-box>
+	<!-- #endregion -->
+
 	<hr>
 
 	<h3 id="krisstats">Stats</h3>
-	<h4 id="krisstats1">Chapter 1</h4>
-	<h5>Standard</h5>
+	<h4 id="krisstats1">
+		<a id="krisstats2"></a>
+		Chapters 1 and 2
+	</h4>
 	<dl class="powerstats">
 		<dt><span class="statlabel blank">???</span></dt>
-		<dt><span class="statlabel blank">???</span></dt>
-		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts:</span></dt>
-		<dd>{% include staticon name="guts" alt="1" %}</dd>
-	</dl>
-
-	<h5>2% chance with another character in the party</h5>
-	<p>Appears only after switching to another party member's profile, then switching back to Kris's.</p>
-	<dl class="powerstats">
-		<dt><span class="statlabel">Dog:</span></dt>
-		<dd><img src="{{ '/assets/images/ui/statmenu/dog_sleep.gif' | relative_url }}" alt="Annoying Dog sleeping"></dd>
-		<dt><span class="statlabel blank">???</span></dt>
-		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts:</span></dt>
-		<dd>{% include staticon name="guts" alt="1" %}</dd>
-	</dl>
-
-	<hr class="hrhalf">
-
-	<h4 id="krisstats2">Chapter 2</h4>
-	<h5>Standard</h5>
-	<dl class="powerstats">
-		<dt><span class="statlabel blank">???</span></dt>
-		<dt><span class="statlabel blank">???</span></dt>
-		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts:</span></dt>
-		<dd>{% include staticon name="guts" alt="1" %}</dd>
-	</dl>
-
-	<h5>4% chance with another character in the party</h5>
-	<p>Appears only after switching to another party member's profile, then switching back to Kris's.</p>
-	<dl class="powerstats">
-		<dt><span class="statlabel">Dog</span></dt>
-		<dd><img src="{{ '/assets/images/ui/statmenu/dog_sleep.gif' | relative_url }}" alt="Annoying Dog sleeping"></dd>
 		<dt><span class="statlabel blank">???</span></dt>
 		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts:</span></dt>
 		<dd>{% include staticon name="guts" alt="1" %}</dd>
@@ -440,38 +470,22 @@ toc:
 	<hr class="hrhalf">
 
 	<h4 id="krisstats3">Chapter 3</h4>
-	<h5>Stat 1</h5>
-	<h6>Standard</h6>
+	<h5>Standard</h5>
 	<dl class="powerstats">
 		<dt><span class="statlabel blank">???</span></dt>
-	</dl>
-
-	<h6>4% chance with another character in the party</h6>
-	<p>Appears only after switching to another party member's profile, then switching back to Kris's.</p>
-	<dl class="powerstats">
-		<dt><span class="statlabel">Dog</span></dt>
-		<dd><img src="{{ '/assets/images/ui/statmenu/dog_sleep.gif' | relative_url }}" alt="Annoying Dog sleeping"></dd>
+		<dt><span class="statlabel blank">???</span></dt>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts:</span></dt>
+		<dd>{% include staticon name="guts" alt="2" %}{% include staticon name="guts" %}</dd>
 	</dl>
 
 	<hr class="hr2">
 
-	<h5>Stat 2</h5>
-	<h6>If no kills have been made on the Sword Route</h6>
-	<dl class="powerstats">
-		<dt><span class="statlabel blank">???</span></dt>
-	</dl>
-
-	<h6>If at least one kill has been made on the Sword Route</h6>
+	<h5>If at least one kill has been made on the Sword Route</h5>
 	<p class="note">"&lt;#&gt;" is the number of kills made, from 1 up to a maximum of 9999. (Though there aren't that many enemies in the Sword Route levels, so it stops much earlier.)</p>
 	<dl class="powerstats">
+		<dt><span class="statlabel blank">???</span></dt>
 		<dt><span class="staticon noicon" aria-hidden="true">*</span></dt>
 		<dd>&lt;#&gt;</dd>
-	</dl>
-
-	<hr class="hr2">
-
-	<h5>Stat 3</h5>
-	<dl class="powerstats">
 		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts:</span></dt>
 		<dd>{% include staticon name="guts" alt="2" %}{% include staticon name="guts" %}</dd>
 	</dl>
@@ -479,51 +493,76 @@ toc:
 	<hr class="hrhalf">
 
 	<h4 id="krisstats4">Chapter 4</h4>
-	<h5>Stat 1</h5>
+	<h5>Standard</h5>
 	<dl class="powerstats">
 		<dt><span class="statlabel blank">???</span></dt>
+		<dt><span class="statlabel blank">???</span></dt>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts:</span></dt>
+		<dd>{% include staticon name="guts" alt="3" %}{% include staticon name="guts" %}{% include staticon name="guts" %}</dd>
 	</dl>
 
 	<hr class="hr2">
 
-	<h5>Stat 2</h5>
-	<h6>Standard</h6>
+	<h5>After encountering <a href="{{ '/encounters/titanspawn' | relative_url }}">Titan Spawn</a></h5>
+	<p class="note">"&lt;#&gt;" is the number of Spawn slain/purified (as applicable), from 1 up to a maximum of 9999.</p>
+	<h6>If any Spawn were defeated violently</h6>
 	<dl class="powerstats">
 		<dt><span class="statlabel blank">???</span></dt>
-	</dl>
-	<h6>If any <a href="{{ '/encounters/titanspawn' | relative_url }}">Titan Spawn</a> have been defeated violently</h6>
-	<p class="note">"&lt;#&gt;" is the number of Spawn killed, from 1 up to a maximum of 9999.</p>
-	<dl class="powerstats">
 		<dt><span class="staticon noicon" aria-hidden="true">*</span> <span class="statlabel">Slain</span></dt>
 		<dd>&lt;#&gt;</dd>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts:</span></dt>
+		<dd>{% include staticon name="guts" alt="3" %}{% include staticon name="guts" %}{% include staticon name="guts" %}</dd>
 	</dl>
-	<h6>If any Titan Spawn have been purified</h6>
-	<p class="note">"&lt;#&gt;" is the number of Spawn purified, from 1 up to a maximum of 9999.</p>
+
+	<h6>If any Spawn were purified</h6>
 	<dl class="powerstats">
+		<dt><span class="statlabel blank">???</span></dt>
 		<dt><span class="staticon noicon" aria-hidden="true">*</span> <span class="statlabel">Purify</span></dt>
 		<dd>&lt;#&gt;</dd>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts:</span></dt>
+		<dd>{% include staticon name="guts" alt="3" %}{% include staticon name="guts" %}{% include staticon name="guts" %}</dd>
 	</dl>
-	<h6>4% chance with another character in the party</h6>
-	<p>Appears only after switching to another party member's profile, then switching back to Kris's.</p>
+
+	<hr class="hrhalf">
+
+	<h4 id="krisstats5">Chapter 5</h4>
+	<h5>Standard</h5>
+	<dl class="powerstats">
+		<dt><span class="statlabel blank">???</span></dt>
+		<dt><span class="statlabel blank">???</span></dt>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts:</span></dt>
+		<dd>{% include staticon name="guts" alt="3" %}{% include staticon name="guts" %}{% include staticon name="guts" %}</dd>
+	</dl>
+
+	<hr class="hr2">
+
+	<h5>After obtaining the <a href="{{ '/misc/darkitems#petalfeather' | relative_url }}">Petal Feather</a></h5>
+	<p class="note">"&lt;#&gt;" is the number of times Kris has jumped/attacked in platforming mode.</p>
+	<dl class="powerstats">
+		<dt>{% include staticon name="up" -%} <span class="statlabel">Jumps:</span></dt>
+		<dd>&lt;#&gt;</dd>
+		<dt>{% include staticon name="sword" -%} <span class="statlabel">Slashes:</span></dt>
+		<dd>&lt;#&gt;</dd>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts:</span></dt>
+		<dd>{% include staticon name="guts" alt="3" %}{% include staticon name="guts" %}{% include staticon name="guts" %}</dd>
+	</dl>
+
+	<hr class="hrhalf">
+
+	<h4 id="krisstatsdog">Dog stat</h4>
+	<p>Has a rare chance (2% in Chapter 1, 4% from Chapter 2 onwards) to replace one of Kris's cosmetic stats when switching back to Kris's profile from another party member's.</p>
+	<p>Typically appears in the first cosmetic stat slot, except in Chapter 4, where it appears in the second.</p>
 	<dl class="powerstats">
 		<dt><span class="statlabel">Dog</span></dt>
 		<dd><img src="{{ '/assets/images/ui/statmenu/dog_sleep.gif' | relative_url }}" alt="Annoying Dog sleeping"></dd>
-	</dl>
-
-	<hr class="hr2">
-
-	<h5>Stat 3</h5>
-	<dl class="powerstats">
-		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts:</span></dt>
-		<dd>{% include staticon name="guts" alt="3" %}{% include staticon name="guts" %}{% include staticon name="guts" %}</dd>
 	</dl>
 
 	<hr>
 
 	<h3 id="krisspells">Spells</h3>
 	<h4 id="krisspells1">
-		<a id="krisspells2"></a><a id="krisspells3"></a><a id="krisspells4"></a>
-		Chapters 1 to 4
+		<a id="krisspells2"></a><a id="krisspells3"></a><a id="krisspells4"></a><a id="krisspells5"></a>
+		Chapters 1 to 5
 	</h4>
 	<table class="powerspells">
 		<tr class="visually-hidden">
@@ -610,6 +649,22 @@ toc:
 		<d-text>Faces fate<span class="break"></span> with the blade.</d-text>
 	</d-box>
 
+	<hr class="hrhalf">
+
+	<h4 id="susietitles5">Chapter 5</h4>
+
+	<h5 id="lv5violentviolet">Initial</h5>
+	<d-box theme="powertitle">
+		<d-text>LV5 Violent Violet</d-text>
+		<d-text>For that special<span class="break"></span> someone.</d-text>
+	</d-box>
+
+	<h5 id="lv5darkvinesus">After <a href="{{ '/story/chapter5/ultimatum' | relative_url }}">Flowery delivers his ultimatum</a></h5>
+	<d-box theme="powertitle">
+		<d-text>LV5 Dark Vine</d-text>
+		<d-text>Assists in sealing<span class="break"></span> the Fountain.</d-text>
+	</d-box>
+
 	<hr>
 
 	<h3 id="susiestats">Stats</h3>
@@ -687,7 +742,10 @@ toc:
 
 	<hr class="hrhalf">
 
-	<h4 id="susiestats4">Chapter 4</h4>
+	<h4 id="susiestats4">
+		<a id="susiestats5"></a>
+		Chapters 4 and 5
+	</h4>
 	<p class="note">"&lt;#&gt;" is a value representing Susie's healing ability, determined by the formulas below. The value <code>heal_use</code> referenced in each formula is the number of times Susie has used her healing, capped at a maximum of 15.</p>
 	<ul class="note">
 		<li>Before defeating the <a href="{{ '/encounters/hammerofjustice' | relative_url }}">Hammer of Justice</a> and the <a href="{{ '/encounters/soundofjustice' | relative_url }}">Sound of Justice</a>: 15 + 5× Susie's Magic stat + 2× <code>heal_use</code></li>
@@ -816,6 +874,30 @@ toc:
 			<td class="spellcost">80% {% include spell_variable_cost %}</td>
 		</tr>
 	</table>
+
+	<hr class="hrhalf">
+
+	<h4 id="susiespells5">Chapter 5</h4>
+	<p>"Heal" has the function and TP cost of either <a href="{{ '/misc/spells#okheal' | relative_url }}">OK Heal</a> or <a href="{{ '/misc/spells#betterheal' | relative_url }}">Better Heal</a>, depending on whether or not the Hammer of Justice was defeated.</p>
+
+	<table class="powerspells">
+		<tr class="visually-hidden">
+			<th>Name</th>
+			<th>TP cost</th>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#rudebuster' | relative_url }}">Rude Buster</a></td>
+			<td class="spellcost">50% {% include spell_variable_cost %}</td>
+		</tr>
+		<tr>
+			<td class="spellname">Heal</td>
+			<td class="spellcost">85% {% include spell_variable_cost %}</td>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#scythemare' | relative_url }}">Scythemare</a></td>
+			<td class="spellcost">40% {% include spell_variable_cost %}</td>
+		</tr>
+	</table>
 </section>
 
 
@@ -927,6 +1009,22 @@ toc:
 		<d-text>Boy with stool<span class="break"></span> like abilities.</d-text>
 	</d-box>
 
+	<hr class="hrhalf">
+
+	<h4 id="ralseititles5">Chapter 5</h4>
+
+	<h5 id="lv5artemisia">Initial</h5>
+	<d-box theme="powertitle">
+		<d-text>LV5 Artemisia</d-text>
+		<d-text>Goes well with tea.</d-text>
+	</d-box>
+
+	<h5 id="lv5darkvineral">After <a href="{{ '/story/chapter5/ultimatum' | relative_url }}">Flowery delivers his ultimatum</a></h5>
+	<d-box theme="powertitle">
+		<d-text>LV5 Dark Vine</d-text>
+		<d-text>Watering their<span class="break"></span> own thorns.</d-text>
+	</d-box>
+
 	<hr>
 
 	<h3 id="ralseistats">Stats</h3>
@@ -1013,6 +1111,31 @@ toc:
 		<dd aria-label="0"></dd>
 	</dl>
 
+	<hr class="hrhalf">
+
+	<h4 id="ralseistats5">Chapter 5</h4>
+	<h5>Standard</h5>
+	<dl class="powerstats">
+		<dt>{% include staticon name="cheer" -%} <span class="statlabel">Kindness</span></dt>
+		<dd>100</dd>
+		<dt>{% include staticon name="fluff" -%} <span class="statlabel shrink80">Fluffiness</span></dt>
+		<dd>{% include staticon name="fluff" alt="1" %}</dd>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts:</span></dt>
+		<dd aria-label="0"></dd>
+	</dl>
+
+	<hr class="hr2">
+
+	<h5>2% chance</h5>
+	<dl class="powerstats">
+		<dt>{% include staticon name="cheerdog" -%} <span class="statlabel">Dogness</span></dt>
+		<dd>1</dd>
+		<dt>{% include staticon name="fluff" -%} <span class="statlabel shrink80">Fluffiness</span></dt>
+		<dd>{% include staticon name="fluff" alt="1" %}</dd>
+		<dt>{% include staticon name="guts" -%} <span class="statlabel">Guts:</span></dt>
+		<dd aria-label="0"></dd>
+	</dl>
+
 	<hr>
 
 	<h3 id="ralseispells">Spells</h3>
@@ -1032,6 +1155,28 @@ toc:
 		<tr>
 			<td class="spellname"><a href="{{ '/misc/spells#healprayer' | relative_url }}">Heal Prayer</a></td>
 			<td class="spellcost">32%</td>
+		</tr>
+	</table>
+
+	<hr class="hrhalf">
+
+	<h4 id="ralseispells5">Chapter 5</h4>
+	<table class="powerspells">
+		<tr class="visually-hidden">
+			<th>Name</th>
+			<th>TP cost</th>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#pacify' | relative_url }}">Pacify</a></td>
+			<td class="spellcost">16%</td>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#healprayer' | relative_url }}">Heal Prayer</a></td>
+			<td class="spellcost">32%</td>
+		</tr>
+		<tr>
+			<td class="spellname"><a href="{{ '/misc/spells#revivesong' | relative_url }}">ReviveSong</a></td>
+			<td class="spellcost">85%</td>
 		</tr>
 	</table>
 </section>
@@ -1115,7 +1260,7 @@ toc:
 	<hr>
 
 	<h3 id="noellespells">Spells</h3>
-	<h3 id="noellespells2">Chapter 2</h3>
+	<h4 id="noellespells2">Chapter 2</h4>
 	<table class="powerspells">
 		<tr class="visually-hidden">
 			<th>Name</th>
