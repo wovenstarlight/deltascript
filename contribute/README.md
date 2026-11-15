@@ -75,7 +75,7 @@ Goes from `0-9`, followed by uppercase `A-Z` (representing 10-35), followed by l
 
 You can use the letters or enter numbers 10-61 into `<d-sprite emotion="#">`; either one is fine. Since you should be copying from the dialogue files directly, the `\\E?` code will often be in the dialogue string already, so you can just copy/paste the specific letter/digit in.
 
-### Exceptions
+#### Exceptions
 Some `global.fe` indexes for certain characters got updated as chapters progressed. Since the newest chapter's sprite sets are prioritized, this means that some sprite indexes for older chapters need to be marked as *being* from said older chapters when formatting dialogue. If you're ever unsure of whether a sprite got updated, go ahead and put a chapter marker on the `<d-sprite>` element to indicate which chapter certain dialogue comes from—better safe than sorry. For example, `<d-sprite speaker="Susie" emotion="N" chapter="2"></d-sprite>` will correctly output the angry Susie sprite from Chapter 2, as opposed to the Susie wearing a subdued smile from Chapter 3 onwards.
 * Susie
 	* Sprite `N` (23) — Chapters 1–2
@@ -114,11 +114,13 @@ Some `global.fe` indexes for certain characters got updated as chapters progress
 ### Variable `global.typer`, or the `\\T?` command
 Indicates the speech sound to play as text is printed in the dialogue box, I think? Can be changed directly via setting `global.typer = #`, or by including an `\\T?` command in the dialogue string itself.
 
+(See also gml_GlobalScript_scr_texttype for dialogue colors.)
+
 | Value | Character | `\\T?` code | Notes |
 | :-: | - | - | - |
 | 2 | Silent | `\\T1` |
 | 4 | In-combat default
-| 5 | Default (Light World) | `\\T0` |
+| 5 | Default (Light World) | `\\T0`<br>`\\Tj`, `\\Ty`, `\\Ti`, `\\Tk` (Ch5) |
 | 6 | Default (Dark World)<br>Ralsei (hooded) | `\\T0`<br>`\\TR` |
 | 7 | Toriel | `\\TT` |
 | 10 | Susie (Light World) | `\\TS` |
@@ -136,29 +138,33 @@ Indicates the speech sound to play as text is printed in the dialogue box, I thi
 | 32 | Lancer | `\\TL` |
 | 33 | King of Spades | `\\TK` |
 | 35 | Jevil | `\\TJ` |
-| 36 | Silent (Dark World)<br>King of Spades (Chapter 1, before the King fight) | -<br>`\\TK` |
+| 36 | Silent (Dark World)<br>King of Spades<br>*unknown* (Ch5) | -<br>`\\TK`<br>`\\T+` | <br>Chapter 1, before the King fight<br>&nbsp; |
 | 40 | *None? Used as a reset, I think* | `\\TX` |
 | 45 | Ralsei (in combat) | `\\TR` |
 | 46 | Lancer (in combat) | `\\TL` |
 | 47 | Susie (Dark World, in combat) | `\\TS` |
 | 48 | King of Spades (in combat) | `\\TK` |
-| 50 | For speaker "balloon" or "enemy"?? (No clue.)
+| 50 | Misc. enemy (in combat) || sometimes referenced as speaker("balloon") or speaker("enemy") |
 | 55 | Rudy | `\\Tr` |
 | 56 | Noelle (Dark World) | `\\TN` |
 | 57 | Berdly (Dark World) | `\\TB` |
 | 58 | Queen | `\\TQ` |
 | 59 | Noelle (in combat, zone-irrelevant) | `\\TN` |
+| 60 | Ralsei (game over) |
+| 61 | Susie (game over) |
 | 62 | Giga Queen (post-fight) | `\\Tq` |
 | 66 | Spamton
 | 67 | Spamton Neo | `\\Tp` |
 | 68 | Spamton (in combat)
 | 77 | Berdly (in combat) | `\\TB` |
 | 82 | Jackenstein (cute) | `\\Tk` |
-| 83 | Jackenstein | `\\Tj` |
+| 83 | Jackenstein | `\\Tj`<br>`\\Tf` (Ch5) |
 | 84 | Tenna | `\\Tv` |
 | 85 | Gerson | `\\Tg` |
+| 86 | Flowery | `\\Th` | text bleep instead of voice clips |
 | 87 | Carol | `\\TC` |
 | 88 | Flowery | `\\TF` |
+| 89 | Asgore (Dark World) | `\\TA` |
 | 90 | Aqua | `\\T4` |
 | 91 | Seth | `\\T5` |
 | 92 | Yellow | `\\T6` |
