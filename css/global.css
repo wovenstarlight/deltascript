@@ -2147,10 +2147,7 @@ d-option-panel {
 	body:not(.compact) &::before { background: url("../assets/images/ui/statmenu/stats.png") center / contain no-repeat }
 	body:not(.compact).dim &::before { background-image: url("../assets/images/ui/statmenu/stats_dim.png") }
 	
-	body.compact & {
-		gap: 0 1ch;
-		.statlabel:not(.blank)::after { content: ":" }
-	}
+	body.compact & { gap: 0 1ch }
 
 	dt {
 		grid-column: 1;
