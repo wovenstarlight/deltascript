@@ -1117,7 +1117,7 @@ d-box, d-choices {
 		&[theme=battletalkround] {
 			border-image-source: url("../assets/images/ui/textbox/roundbubble.png");
 			body.dim & { border-image-source: url("../assets/images/ui/textbox/roundbubble_dim.png") }
-			border-image-slice: 10;
+			border-image-slice: 9;
 			border-width: calc(var(--border-width) - 0.6em);
 			text-align: center;
 			d-text { line-height: 1.2em }
