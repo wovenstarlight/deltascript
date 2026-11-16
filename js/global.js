@@ -163,9 +163,9 @@ function emotionToIndex(emotion) {
 	const code = emotion.charCodeAt(0);
 	return (
 		code >= 48 && code <= 57 ? parseInt(emotion)	// Numeric form
+		: emotion.length > 1 ? emotion					// a proper name, not an alphabetic index
 		: code >= 65 && code <= 90 ? code - 55			// A-Z; gets converted to the range 10-35
 		: code >= 97 && code <= 122 ? code - 61			// a-z; gets converted to the range 36-61
-		: code < 48 ? emotion.slice(1)					// A symbol, typically +, for text form
 		: 0	// fallback
 	);
 }
@@ -183,56 +183,70 @@ function indexToEmotion(index) {
 }
 
 /** Maps sprite indices from older chapters to their equivalents in the newest chapter (CURRENTLY: Chapter 5).
- * @type {Object.<string, Object.<number, { new: string, chapters: number[] }[]>>}
+ * @type {Object.<string, Object.<number, Object.<number, number|string>>>}
  * 
- * Some sprites get added/removed as chapters progress, especially in the main characters' cases, so this helps ensure that duplicates don't get hosted—instead, we just update which images the indices point at. */
+ * Some sprites get added/removed as chapters progress, especially in the main characters' cases, so this helps ensure that duplicates don't get hosted—instead, we just update which images the indices point at.
+ * Format is Character > Old_Chapter > Old_Sprite: Current_Sprite
+ */
 const UPDATED_SPRITES = {
-	"Susie": {
-		23: [{ new: 41,			chapters: [1, 2] }],
-		27: [{ new: 42,			chapters: [1, 2] }],
-		28: [{ new: 43,			chapters: [1, 2] }],
-		29: [{ new: 44,			chapters: [1, 2] }],
-		30: [{ new: 11,			chapters: [1, 2] }],
-		36: [{ new: 45,			chapters: [1, 2] }],
-		42: [{ new: 49,			chapters: [4] }],
-		43: [{ new: 50,			chapters: [4] }],
-		48: [{ new: "48_old",	chapters: [4] }],
-		49: [{ new: "49_old",	chapters: [4] }],
-		50: [{ new: "50_old",	chapters: [4] }],
-		51: [{ new: 48,			chapters: [4] }],
+	Susie: {	// eyes variant
+		2: {
+			23: 41,	// e.g. this line means "Chapter 2's sprite 23(N) is Chapter 5's sprite 41(f)"
+			27: 42,
+			28: 43,
+			29: 44,
+			30: 11,
+			36: 45,
+		},
+		4: {
+			48: "48_ch4",
+			49: "49_ch4",
+			50: "50_ch4",
+			51: 48,
+			52: 49,
+			53: 50,
+		},
 	},
-	"Ralsei": {
-		44: [{ new: "44_old", 	chapters: [1, 2, 3, 4] }],
-		45: [{ new: "45_old", 	chapters: [1, 2, 3, 4] }],
-		46: [{ new: "46_old", 	chapters: [1, 2, 3, 4] }],
-		47: [{ new: "47_old", 	chapters: [1, 2, 3, 4] }],
-		48: [{ new: "48_old", 	chapters: [1, 2, 3, 4] }],
-		49: [{ new: "49_old", 	chapters: [1, 2, 3, 4] }],
-		50: [{ new: 44, 		chapters: [1, 2, 3, 4] }],
-		51: [{ new: 45, 		chapters: [1, 2, 3, 4] }],
-		52: [{ new: 46, 		chapters: [1, 2, 3, 4] }],
+	Ralsei: {	// nohat variant
+		4: {
+			44: "44_ch4",
+			45: "45_ch4",
+			46: "46_ch4",
+			47: "47_ch4",
+			48: "48_ch4",
+			49: "49_ch4",
+			50: 44,
+			51: 45,
+			52: 46,
+		},
 	},
-	"Noelle": {
-		42: [{ new: "42_old",	chapters: [1, 2, 3, 4] }],
-		43: [{ new: "43_old",	chapters: [1, 2, 3, 4] }],
-		44: [{ new: "44_old",	chapters: [1, 2, 3, 4] }],
-		45: [{ new: "45_old",	chapters: [1, 2, 3, 4] }],
-		46: [{ new: "46_old",	chapters: [1, 2, 3, 4] }],
-		47: [{ new: "47_old",	chapters: [1, 2, 3, 4] }],
-		48: [{ new: 52, 		chapters: [1, 2, 3, 4] }],
-		49: [{ new: 53, 		chapters: [1, 2, 3, 4] }],
-		50: [{ new: 54, 		chapters: [1, 2, 3, 4] }],
+	Noelle: {
+		4: {
+			42: "42_ch4",
+			43: "43_ch4",
+			44: "44_ch4",
+			45: "45_ch4",
+			46: "46_ch4",
+			47: "47_ch4",
+			48: 52,
+			49: 53,
+			50: 54,
+		},
 	},
 };
 
 /** Retrieves updated indices for character sprites where applicable (as defined in {@link UPDATED_SPRITES}), defaulting to the originally provided index.
  * @param {number} index The sprite index originally provided.
- * @param {string} character The name of the character who the sprite  belongs to.
+ * @param {string} character The name of the character to whom the sprite belongs.
  * @param {number} chapter The chapter whose spritesheet should be referenced.
  */
 function getUpdatedIndex(index, character, chapter) {
-	if (!UPDATED_SPRITES[character] || !UPDATED_SPRITES[character][index]) return index;
-	return UPDATED_SPRITES[character][index]?.find(map => map.chapters.includes(chapter))?.new ?? index;
+	// If at any point, there's no data for:
+	// - the specified character
+	// - the specified chapter
+	// - the requested index
+	// ...short-circuit and return index as per normal
+	return UPDATED_SPRITES[character]?.[chapter]?.[index] ?? index;
 }
 
 /** A sprite for a dialogue box. Invisible when compact mode is enabled. */
