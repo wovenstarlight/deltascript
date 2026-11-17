@@ -235,3 +235,10 @@ funny-text {
 }
 /* #endregion Tenna's text sprites */
 /* #endregion Chapter 3 */
+
+/* Sprites in Check text */
+img.check {
+	height: 0.8em;
+	width: auto;
+	vertical-align: baseline;
+}
